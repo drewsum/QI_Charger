@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 6
+Sheet 1 8
 Title ""
 Date ""
 Rev ""
@@ -43,5 +43,17 @@ S 1780 2540 500  150
 U 5C1D5CE8
 F0 "Source Selection" 50
 F1 "Source_Selection.sch" 50
+$EndSheet
+$Sheet
+S 1780 2840 500  150 
+U 5C1DE177
+F0 "Status LEDs 1" 50
+F1 "Status_LEDs_1.sch" 50
+$EndSheet
+$Sheet
+S 1780 3140 500  150 
+U 5C1DE17A
+F0 "OLED Display" 50
+F1 "OLED_Display.sch" 50
 $EndSheet
 $EndSCHEMATC

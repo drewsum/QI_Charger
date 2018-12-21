@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 6
+Sheet 5 8
 Title "Electronic Display Logic Board"
 Date "2018-12-15"
 Rev "A"
@@ -289,18 +289,6 @@ F 7 "RMCF0603FT1K00CT-ND" H 6940 5220 60  0001 C CNN "Digi-Key PN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Ferrite_Bead L?
-U 1 1 5BB0BDEE
-P 8190 3090
-F 0 "L?" V 8040 3115 50  0000 C CNN
-F 1 "600R 0.5A" V 8340 3090 50  0000 C CNN
-F 2 "Inductors_SMD:L_0603" V 8120 3090 50  0001 C CNN
-F 3 "~" H 8190 3090 50  0001 C CNN
-F 4 "732-2389-1-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
-	1    8190 3090
-	0    1    1    0   
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG?
 U 1 1 5BB0EBE2
 P 5180 2160
@@ -365,10 +353,6 @@ F 3 "" H 5760 2140 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5760 2140 5760 2220
-Wire Wire Line
-	6980 2620 6980 3390
-Wire Wire Line
-	7080 2620 7080 3290
 $Comp
 L Custom_Library:R_Custom R?
 U 1 1 5BBF0F91
@@ -387,8 +371,6 @@ $EndComp
 Wire Wire Line
 	6150 3570 6150 3290
 Connection ~ 6150 3290
-Wire Wire Line
-	6150 3290 7080 3290
 Wire Wire Line
 	6980 3570 6980 3390
 $Comp
@@ -435,9 +417,6 @@ Wire Wire Line
 	9980 3830 9980 3760
 Wire Wire Line
 	9980 3760 9680 3760
-Wire Wire Line
-	7080 3290 8610 3290
-Connection ~ 7080 3290
 Wire Wire Line
 	6980 3390 8610 3390
 Connection ~ 6980 3390
@@ -700,8 +679,6 @@ F 3 "" H 5160 5870 50  0001 C CNN
 	1    5160 5870
 	1    0    0    -1  
 $EndComp
-Text Label 3510 6590 0    50   ~ 0
-POS5_USB_PGOOD
 Wire Wire Line
 	3470 6590 4290 6590
 $Comp
@@ -766,18 +743,6 @@ F 7 "RMCF0603FT27R0CT-ND" H 5880 3790 60  0001 C CNN "Digi-Key PN"
 	0    1    1    0   
 $EndComp
 $Comp
-L Custom_Library:TPD3S014DBVR U?
-U 1 1 5C1D73FD
-P 6730 2220
-F 0 "U?" H 7030 1870 50  0000 L CNN
-F 1 "TPD3S014DBVR" H 6730 2570 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 6880 1670 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tpd3s014.pdf" H 6880 1470 50  0001 L CNN
-F 4 "296-38835-1-ND" H 6880 1570 50  0001 L CNN "Digi-Key PN"
-	1    6730 2220
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5C1DADF5
 P 9980 3830
@@ -808,17 +773,6 @@ F 1 "GND" H 7900 2370 50  0000 C CNN
 F 2 "" H 7900 2520 50  0001 C CNN
 F 3 "" H 7900 2520 50  0001 C CNN
 	1    7900 2520
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C1DAFB3
-P 6730 2620
-F 0 "#PWR?" H 6730 2370 50  0001 C CNN
-F 1 "GND" H 6730 2470 50  0000 C CNN
-F 2 "" H 6730 2620 50  0001 C CNN
-F 3 "" H 6730 2620 50  0001 C CNN
-	1    6730 2620
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -986,4 +940,12 @@ F 3 "" H 3620 3790 50  0001 C CNN
 	1    3620 3790
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6150 3290 8610 3290
+Text Notes 6040 2480 0    50   ~ 0
+Figure out current limit scheme\nTry to find a load switch rated for ~~2A?
+Text Notes 7840 2910 0    50   ~ 0
+Need 3A rated ferrite bead
+Text Label 3510 6590 0    50   ~ 0
+POS5_USB_PGOOD
 $EndSCHEMATC
