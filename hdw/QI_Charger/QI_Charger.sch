@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 9
+Sheet 1 10
 Title ""
 Date ""
 Rev ""
@@ -67,5 +67,11 @@ S 1780 3740 500  150
 U 5C1E3A0B
 F0 "QI Controller" 50
 F1 "QI_Controller.sch" 50
+$EndSheet
+$Sheet
+S 1780 4040 500  150 
+U 5C1E146B
+F0 "Temperature Sensors" 50
+F1 "Temperature_Sensors.sch" 50
 $EndSheet
 $EndSCHEMATC

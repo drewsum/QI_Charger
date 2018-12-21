@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 8 9
+Sheet 8 10
 Title ""
 Date "2018-10-01"
 Rev "A"
@@ -326,4 +326,8 @@ F 3 "" H 6970 4990 50  0001 C CNN
 	1    6970 4990
 	1    0    0    -1  
 $EndComp
+Text Label 4170 3530 0    50   ~ 0
+OLED_I2C_SDA
+Text Label 4170 3630 0    50   ~ 0
+OLED_I2C_SCL
 $EndSCHEMATC
