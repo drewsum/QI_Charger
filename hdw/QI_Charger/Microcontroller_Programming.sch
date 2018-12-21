@@ -52,17 +52,6 @@ Wire Wire Line
 	1790 1990 1270 1990
 NoConn ~ 1270 2290
 $Comp
-L power:+3.3V #PWR?
-U 1 1 5BBE4D2A
-P 1790 1820
-F 0 "#PWR?" H 1790 1670 50  0001 C CNN
-F 1 "+3.3V" H 1790 1960 50  0000 C CNN
-F 2 "" H 1790 1820 50  0001 C CNN
-F 3 "" H 1790 1820 50  0001 C CNN
-	1    1790 1820
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Custom_Library:C_Custom C?
 U 1 1 5BC13497
 P 2460 2030
@@ -86,17 +75,6 @@ F 1 "GND" H 2460 2030 50  0000 C CNN
 F 2 "" H 2460 2180 50  0001 C CNN
 F 3 "" H 2460 2180 50  0001 C CNN
 	1    2460 2180
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5BC134A4
-P 2460 1880
-F 0 "#PWR?" H 2460 1730 50  0001 C CNN
-F 1 "+3.3V" H 2460 2020 50  0000 C CNN
-F 2 "" H 2460 1880 50  0001 C CNN
-F 3 "" H 2460 1880 50  0001 C CNN
-	1    2460 1880
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -131,17 +109,6 @@ F 5 "50V" H 7400 2830 50  0000 R CNN "Voltage"
 F 6 "X7R" H 7400 2730 50  0000 R CNN "Dielectric"
 F 7 "311-1344-1-ND" H 7975 3330 60  0001 C CNN "Digi-Key PN"
 	1    7550 2830
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5BC1583F
-P 7550 1870
-F 0 "#PWR?" H 7550 1720 50  0001 C CNN
-F 1 "+3.3V" H 7550 2010 50  0000 C CNN
-F 2 "" H 7550 1870 50  0001 C CNN
-F 3 "" H 7550 1870 50  0001 C CNN
-	1    7550 1870
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -314,19 +281,54 @@ Wire Wire Line
 	6510 2250 6710 2250
 Wire Wire Line
 	5320 2770 5220 2770
+Wire Wire Line
+	4670 2720 4670 2770
+Wire Wire Line
+	4670 2770 4820 2770
+Text Notes 4500 2130 0    50   ~ 0
+Consider replacing with little logic open drain inverter
 $Comp
-L power:+3.3V #PWR?
-U 1 1 5BE0F966
+L power:+5V #PWR?
+U 1 1 5C1E843D
+P 7550 1870
+F 0 "#PWR?" H 7550 1720 50  0001 C CNN
+F 1 "+5V" H 7550 2010 50  0000 C CNN
+F 2 "" H 7550 1870 50  0001 C CNN
+F 3 "" H 7550 1870 50  0001 C CNN
+	1    7550 1870
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C1E8465
 P 4670 2720
 F 0 "#PWR?" H 4670 2570 50  0001 C CNN
-F 1 "+3.3V" H 4670 2860 50  0000 C CNN
+F 1 "+5V" H 4670 2860 50  0000 C CNN
 F 2 "" H 4670 2720 50  0001 C CNN
 F 3 "" H 4670 2720 50  0001 C CNN
 	1    4670 2720
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4670 2720 4670 2770
-Wire Wire Line
-	4670 2770 4820 2770
+$Comp
+L power:+5V #PWR?
+U 1 1 5C1E849C
+P 2460 1880
+F 0 "#PWR?" H 2460 1730 50  0001 C CNN
+F 1 "+5V" H 2460 2020 50  0000 C CNN
+F 2 "" H 2460 1880 50  0001 C CNN
+F 3 "" H 2460 1880 50  0001 C CNN
+	1    2460 1880
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C1E850A
+P 1790 1820
+F 0 "#PWR?" H 1790 1670 50  0001 C CNN
+F 1 "+5V" H 1790 1960 50  0000 C CNN
+F 2 "" H 1790 1820 50  0001 C CNN
+F 3 "" H 1790 1820 50  0001 C CNN
+	1    1790 1820
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
