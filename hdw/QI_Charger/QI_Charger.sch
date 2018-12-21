@@ -21,25 +21,25 @@ F0 "POS12 Input" 50
 F1 "POS12_Input.sch" 50
 $EndSheet
 $Sheet
-S 1780 1840 500  150 
+S 1780 1640 500  150 
 U 5C1D5CB6
 F0 "Microcontroller Programming" 50
 F1 "Microcontroller_Programming.sch" 50
 $EndSheet
 $Sheet
-S 1780 2340 500  150 
+S 1780 1940 500  150 
 U 5C1D5CCA
 F0 "Microcontroller" 50
 F1 "Microcontroller.sch" 50
 $EndSheet
 $Sheet
-S 1780 2840 500  150 
+S 1780 2240 500  150 
 U 5C1D5CD8
 F0 "USB" 50
 F1 "USB.sch" 50
 $EndSheet
 $Sheet
-S 1780 3340 500  150 
+S 1780 2540 500  150 
 U 5C1D5CE8
 F0 "Source Selection" 50
 F1 "Source_Selection.sch" 50
