@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 8
+Sheet 4 9
 Title ""
 Date ""
 Rev ""
@@ -14,4 +14,154 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L Custom_Library:PIC18(L)F27K40T-I_ML U?
+U 1 1 5C1E0C04
+P 5230 2990
+F 0 "U?" H 5980 2040 50  0000 R CNN
+F 1 "PIC18F27K40T-I_ML" H 5230 2990 50  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-28-1EP_6x6mm_Pitch0.65mm" H 5230 2990 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/PIC18LF27_47K40-Data-Sheet-40001844E.pdf" H 5230 2990 50  0001 C CNN
+F 4 "PIC18F27K40T-I/MLCT-ND" H 5230 2990 50  0001 C CNN "Digi-Key PN"
+	1    5230 2990
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C1E0C6D
+P 5230 4120
+F 0 "#PWR?" H 5230 3870 50  0001 C CNN
+F 1 "GND" H 5230 3970 50  0000 C CNN
+F 2 "" H 5230 4120 50  0001 C CNN
+F 3 "" H 5230 4120 50  0001 C CNN
+	1    5230 4120
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5230 4120 5230 4080
+Wire Wire Line
+	5230 4080 5330 4080
+Wire Wire Line
+	5330 4080 5330 4040
+Connection ~ 5230 4080
+Wire Wire Line
+	5230 4080 5230 4040
+Wire Wire Line
+	5230 4080 5130 4080
+Wire Wire Line
+	5130 4080 5130 4040
+$Comp
+L power:+5V #PWR?
+U 1 1 5C1E0CD9
+P 5230 1940
+F 0 "#PWR?" H 5230 1790 50  0001 C CNN
+F 1 "+5V" H 5230 2080 50  0000 C CNN
+F 2 "" H 5230 1940 50  0001 C CNN
+F 3 "" H 5230 1940 50  0001 C CNN
+	1    5230 1940
+	1    0    0    -1  
+$EndComp
+Text GLabel 6130 3790 2    50   Input ~ 0
+~MCLR
+Text GLabel 4330 3790 0    50   BiDi ~ 0
+ICSPDAT
+Text GLabel 4330 3690 0    50   Input ~ 0
+ICSPCLK
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C1E299E
+P 4750 5310
+AR Path="/5C1D5CD8/5C1E299E" Ref="C?"  Part="1" 
+AR Path="/5C1D5CCA/5C1E299E" Ref="C?"  Part="1" 
+F 0 "C?" H 4775 5410 50  0000 L CNN
+F 1 "0.1uF" H 4775 5210 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4788 5160 50  0001 C CNN
+F 3 "" H 4775 5410 50  0001 C CNN
+F 4 "0603" H 4600 5410 50  0000 R CNN "display_footprint"
+F 5 "50V" H 4600 5310 50  0000 R CNN "Voltage"
+F 6 "X7R" H 4600 5210 50  0000 R CNN "Dielectric"
+F 7 "311-1344-1-ND" H 5175 5810 60  0001 C CNN "Digi-Key PN"
+	1    4750 5310
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C1E29D8
+P 5070 5310
+AR Path="/5C1D5CD8/5C1E29D8" Ref="C?"  Part="1" 
+AR Path="/5C1D5CCA/5C1E29D8" Ref="C?"  Part="1" 
+F 0 "C?" H 5095 5410 50  0000 L CNN
+F 1 "10nF" H 5095 5210 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5108 5160 50  0001 C CNN
+F 3 "" H 5095 5410 50  0001 C CNN
+F 4 "0603" H 4920 5410 50  0001 R CNN "display_footprint"
+F 5 "50V" H 4920 5310 50  0001 R CNN "Voltage"
+F 6 "X7R" H 4920 5210 50  0001 R CNN "Dielectric"
+	1    5070 5310
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C1E2E7C
+P 5390 5310
+AR Path="/5C1D5CD8/5C1E2E7C" Ref="C?"  Part="1" 
+AR Path="/5C1D5CCA/5C1E2E7C" Ref="C?"  Part="1" 
+F 0 "C?" H 5415 5410 50  0000 L CNN
+F 1 "1nF" H 5415 5210 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5428 5160 50  0001 C CNN
+F 3 "" H 5415 5410 50  0001 C CNN
+F 4 "0603" H 5240 5410 50  0001 R CNN "display_footprint"
+F 5 "50V" H 5240 5310 50  0001 R CNN "Voltage"
+F 6 "X7R" H 5240 5210 50  0001 R CNN "Dielectric"
+	1    5390 5310
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C1E2F5C
+P 5070 5080
+F 0 "#PWR?" H 5070 4930 50  0001 C CNN
+F 1 "+5V" H 5070 5220 50  0000 C CNN
+F 2 "" H 5070 5080 50  0001 C CNN
+F 3 "" H 5070 5080 50  0001 C CNN
+	1    5070 5080
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5070 5080 5070 5120
+Wire Wire Line
+	5070 5120 4750 5120
+Wire Wire Line
+	4750 5120 4750 5160
+Connection ~ 5070 5120
+Wire Wire Line
+	5070 5120 5070 5160
+Wire Wire Line
+	5070 5120 5390 5120
+Wire Wire Line
+	5390 5120 5390 5160
+Wire Wire Line
+	5070 5540 5070 5500
+Wire Wire Line
+	5070 5500 4750 5500
+Wire Wire Line
+	4750 5500 4750 5460
+Connection ~ 5070 5500
+Wire Wire Line
+	5070 5500 5070 5460
+Wire Wire Line
+	5070 5500 5390 5500
+Wire Wire Line
+	5390 5500 5390 5460
+$Comp
+L power:GND #PWR?
+U 1 1 5C1E3568
+P 5070 5540
+F 0 "#PWR?" H 5070 5290 50  0001 C CNN
+F 1 "GND" H 5070 5390 50  0000 C CNN
+F 2 "" H 5070 5540 50  0001 C CNN
+F 3 "" H 5070 5540 50  0001 C CNN
+	1    5070 5540
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

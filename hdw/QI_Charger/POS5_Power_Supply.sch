@@ -2,9 +2,9 @@ EESchema Schematic File Version 4
 LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
-$Descr A 11000 8500
+$Descr A4 11693 8268
 encoding utf-8
-Sheet 2 9
+Sheet 1 9
 Title ""
 Date ""
 Rev ""

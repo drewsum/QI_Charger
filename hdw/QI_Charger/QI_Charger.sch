@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 8
+Sheet 1 9
 Title ""
 Date ""
 Rev ""
@@ -55,5 +55,17 @@ S 1780 3140 500  150
 U 5C1DE17A
 F0 "OLED Display" 50
 F1 "OLED_Display.sch" 50
+$EndSheet
+$Sheet
+S 1780 3440 500  150 
+U 5C1E3A08
+F0 "POS5 Power Supply" 50
+F1 "POS5_Power_Supply.sch" 50
+$EndSheet
+$Sheet
+S 1780 3740 500  150 
+U 5C1E3A0B
+F0 "QI Controller" 50
+F1 "QI_Controller.sch" 50
 $EndSheet
 $EndSCHEMATC
