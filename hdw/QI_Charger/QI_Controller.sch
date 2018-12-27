@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 10 14
+Sheet 9 12
 Title ""
 Date ""
 Rev ""
@@ -1167,7 +1167,7 @@ AR Path="/5BB27BF7/5C20A569" Ref="R?"  Part="1"
 AR Path="/5C1DE17A/5C20A569" Ref="R?"  Part="1" 
 AR Path="/5C1E3A0B/5C20A569" Ref="R?"  Part="1" 
 F 0 "R?" H 3960 6710 50  0000 R CNN
-F 1 "100k" V 4040 6710 50  0000 C CNN
+F 1 "100k" V 4040 6710 40  0000 C CNN
 F 2 "Resistors_SMD:R_0603" H 4040 6710 50  0001 C CNN
 F 3 "" H 4040 6710 50  0001 C CNN
 F 4 "0603" H 4140 6790 50  0000 L CNN "display_footprint"

@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 14
+Sheet 1 12
 Title ""
 Date ""
 Rev ""
@@ -37,12 +37,6 @@ S 1780 2240 500  150
 U 5C1D5CD8
 F0 "USB UART Bridge" 50
 F1 "USB_UART_Bridge.sch" 50
-$EndSheet
-$Sheet
-S 1780 2540 500  150 
-U 5C1D5CE8
-F0 "Source Selection" 50
-F1 "Source_Selection.sch" 50
 $EndSheet
 $Sheet
 S 1780 2840 500  150 
@@ -79,12 +73,6 @@ S 1780 4340 500  150
 U 5C1F3323
 F0 "USB UART Isolation" 50
 F1 "USB_UART_Isolation.sch" 50
-$EndSheet
-$Sheet
-S 1780 4640 500  150 
-U 5C1F3887
-F0 "USB Power Input" 50
-F1 "USB_Power_Input.sch" 50
 $EndSheet
 $Sheet
 S 1780 4940 500  150 
