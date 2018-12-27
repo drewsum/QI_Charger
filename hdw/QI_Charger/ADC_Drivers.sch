@@ -1,0 +1,752 @@
+EESchema Schematic File Version 4
+LIBS:QI_Charger-cache
+EELAYER 26 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 13 13
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:OPA340NA U?
+U 1 1 5C32C263
+P 1560 1830
+F 0 "U?" H 1510 2080 50  0000 L CNN
+F 1 "OPA340NA" H 1510 1980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1460 1630 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa340.pdf" H 1560 2030 50  0001 C CNN
+	1    1560 1830
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C32CC87
+P 1460 1530
+F 0 "#PWR?" H 1460 1380 50  0001 C CNN
+F 1 "+5V" H 1460 1670 50  0000 C CNN
+F 2 "" H 1460 1530 50  0001 C CNN
+F 3 "" H 1460 1530 50  0001 C CNN
+	1    1460 1530
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C32CCC3
+P 1460 2130
+F 0 "#PWR?" H 1460 1880 50  0001 C CNN
+F 1 "GND" H 1460 1980 50  0000 C CNN
+F 2 "" H 1460 2130 50  0001 C CNN
+F 3 "" H 1460 2130 50  0001 C CNN
+	1    1460 2130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C32D79F
+P 1160 2900
+AR Path="/5BAAE16C/5C32D79F" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C32D79F" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C32D79F" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C32D79F" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C32D79F" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C32D79F" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C32D79F" Ref="C?"  Part="1" 
+F 0 "C?" H 1185 3000 50  0000 L CNN
+F 1 "0.1uF" H 1185 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1198 2750 50  0001 C CNN
+F 3 "" H 1185 3000 50  0001 C CNN
+F 4 "0603" H 1010 3000 50  0000 R CNN "display_footprint"
+F 5 "50V" H 1010 2900 50  0000 R CNN "Voltage"
+F 6 "X7R" H 1010 2800 50  0000 R CNN "Dielectric"
+F 7 "311-1344-1-ND" H 1585 3400 60  0001 C CNN "Digi-Key PN"
+	1    1160 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C32D7AA
+P 1460 2900
+AR Path="/5BAAE16C/5C32D7AA" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C32D7AA" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C32D7AA" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C32D7AA" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C32D7AA" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C32D7AA" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C32D7AA" Ref="C?"  Part="1" 
+F 0 "C?" H 1485 3000 50  0000 L CNN
+F 1 "10nF" H 1485 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1498 2750 50  0001 C CNN
+F 3 "" H 1485 3000 50  0001 C CNN
+F 4 "0603" H 1310 3000 50  0001 R CNN "display_footprint"
+F 5 "50V" H 1310 2900 50  0001 R CNN "Voltage"
+F 6 "X7R" H 1310 2800 50  0001 R CNN "Dielectric"
+F 7 "1276-1921-1-ND" H 1885 3400 60  0001 C CNN "Digi-Key PN"
+	1    1460 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C32D7B5
+P 1760 2900
+AR Path="/5BAAE16C/5C32D7B5" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C32D7B5" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C32D7B5" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C32D7B5" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C32D7B5" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C32D7B5" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C32D7B5" Ref="C?"  Part="1" 
+F 0 "C?" H 1785 3000 50  0000 L CNN
+F 1 "1nF" H 1785 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1798 2750 50  0001 C CNN
+F 3 "" H 1785 3000 50  0001 C CNN
+F 4 "0603" H 1610 3000 50  0001 R CNN "display_footprint"
+F 5 "50V" H 1610 2900 50  0001 R CNN "Voltage"
+F 6 "X7R" H 1610 2800 50  0001 R CNN "Dielectric"
+F 7 "1276-1018-1-ND" H 2185 3400 60  0001 C CNN "Digi-Key PN"
+	1    1760 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1460 3130 1460 3090
+Wire Wire Line
+	1460 3090 1160 3090
+Wire Wire Line
+	1160 3090 1160 3050
+Connection ~ 1460 3090
+Wire Wire Line
+	1460 3090 1460 3050
+Wire Wire Line
+	1460 3090 1760 3090
+Wire Wire Line
+	1760 3090 1760 3050
+Wire Wire Line
+	1460 2670 1460 2710
+Wire Wire Line
+	1160 2750 1160 2710
+Wire Wire Line
+	1160 2710 1460 2710
+Wire Wire Line
+	1760 2710 1760 2750
+Connection ~ 1460 2710
+Wire Wire Line
+	1460 2710 1460 2750
+Wire Wire Line
+	1460 2710 1760 2710
+$Comp
+L power:GND #PWR?
+U 1 1 5C32D7CA
+P 1460 3130
+AR Path="/5C1D5C9E/5C32D7CA" Ref="#PWR?"  Part="1" 
+AR Path="/5C3165D8/5C32D7CA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1460 2880 50  0001 C CNN
+F 1 "GND" H 1460 2980 50  0000 C CNN
+F 2 "" H 1460 3130 50  0001 C CNN
+F 3 "" H 1460 3130 50  0001 C CNN
+	1    1460 3130
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C32D7D0
+P 1460 2670
+AR Path="/5C1D5C9E/5C32D7D0" Ref="#PWR?"  Part="1" 
+AR Path="/5C3165D8/5C32D7D0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1460 2520 50  0001 C CNN
+F 1 "+5V" H 1460 2810 50  0000 C CNN
+F 2 "" H 1460 2670 50  0001 C CNN
+F 3 "" H 1460 2670 50  0001 C CNN
+	1    1460 2670
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1260 1930 1180 1930
+Wire Wire Line
+	1180 1930 1180 2380
+Wire Wire Line
+	1180 2380 1940 2380
+Wire Wire Line
+	1940 2380 1940 1830
+Wire Wire Line
+	1940 1830 1860 1830
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5C32F198
+P 2280 1830
+F 0 "R?" V 2180 1830 50  0000 C CNN
+F 1 "499" V 2280 1830 50  0000 C CNN
+F 2 "" H 2280 1830 50  0001 C CNN
+F 3 "" H 2280 1830 50  0001 C CNN
+F 4 "0603" V 2380 1830 50  0000 C CNN "display_footprint"
+F 5 "1%" V 2480 1830 50  0000 C CNN "Tolerance"
+F 6 "1/10W" V 2580 1830 50  0000 C CNN "Wattage"
+F 7 "PN" H 2580 2230 60  0001 C CNN "Digi-Key PN"
+	1    2280 1830
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1940 1830 2130 1830
+Connection ~ 1940 1830
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C32FD96
+P 2910 2070
+AR Path="/5BAAE16C/5C32FD96" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C32FD96" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C32FD96" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C32FD96" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C32FD96" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C32FD96" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C32FD96" Ref="C?"  Part="1" 
+F 0 "C?" H 2935 2170 50  0000 L CNN
+F 1 "10nF" H 2935 1970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2948 1920 50  0001 C CNN
+F 3 "" H 2935 2170 50  0001 C CNN
+F 4 "1276-1921-1-ND" H 3335 2570 60  0001 C CNN "Digi-Key PN"
+F 5 "0603" H 2760 2170 50  0000 R CNN "display_footprint"
+F 6 "50V" H 2760 2070 50  0000 R CNN "Voltage"
+F 7 "X7R" H 2760 1970 50  0000 R CNN "Dielectric"
+	1    2910 2070
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C32FE99
+P 2910 2220
+F 0 "#PWR?" H 2910 1970 50  0001 C CNN
+F 1 "GND" H 2910 2070 50  0000 C CNN
+F 2 "" H 2910 2220 50  0001 C CNN
+F 3 "" H 2910 2220 50  0001 C CNN
+	1    2910 2220
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2910 1920 2910 1830
+Wire Wire Line
+	2910 1830 2430 1830
+Text GLabel 2990 1830 2    50   Output ~ 0
+POS12_ISNS_ADC
+Wire Wire Line
+	2990 1830 2910 1830
+Connection ~ 2910 1830
+Text GLabel 1260 1730 0    50   Input ~ 0
+POS12_ISNS
+Text GLabel 4430 1730 0    50   Input ~ 0
+QI_ISNS
+$Comp
+L Amplifier_Operational:OPA340NA U?
+U 1 1 5C3B2762
+P 4730 1830
+F 0 "U?" H 4680 2080 50  0000 L CNN
+F 1 "OPA340NA" H 4680 1980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4630 1630 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa340.pdf" H 4730 2030 50  0001 C CNN
+	1    4730 1830
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C3B2769
+P 4630 1530
+F 0 "#PWR?" H 4630 1380 50  0001 C CNN
+F 1 "+5V" H 4630 1670 50  0000 C CNN
+F 2 "" H 4630 1530 50  0001 C CNN
+F 3 "" H 4630 1530 50  0001 C CNN
+	1    4630 1530
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B276F
+P 4630 2130
+F 0 "#PWR?" H 4630 1880 50  0001 C CNN
+F 1 "GND" H 4630 1980 50  0000 C CNN
+F 2 "" H 4630 2130 50  0001 C CNN
+F 3 "" H 4630 2130 50  0001 C CNN
+	1    4630 2130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B2779
+P 4330 2900
+AR Path="/5BAAE16C/5C3B2779" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B2779" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B2779" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B2779" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B2779" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B2779" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B2779" Ref="C?"  Part="1" 
+F 0 "C?" H 4355 3000 50  0000 L CNN
+F 1 "0.1uF" H 4355 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4368 2750 50  0001 C CNN
+F 3 "" H 4355 3000 50  0001 C CNN
+F 4 "0603" H 4180 3000 50  0000 R CNN "display_footprint"
+F 5 "50V" H 4180 2900 50  0000 R CNN "Voltage"
+F 6 "X7R" H 4180 2800 50  0000 R CNN "Dielectric"
+F 7 "311-1344-1-ND" H 4755 3400 60  0001 C CNN "Digi-Key PN"
+	1    4330 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B2784
+P 4630 2900
+AR Path="/5BAAE16C/5C3B2784" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B2784" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B2784" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B2784" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B2784" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B2784" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B2784" Ref="C?"  Part="1" 
+F 0 "C?" H 4655 3000 50  0000 L CNN
+F 1 "10nF" H 4655 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4668 2750 50  0001 C CNN
+F 3 "" H 4655 3000 50  0001 C CNN
+F 4 "0603" H 4480 3000 50  0001 R CNN "display_footprint"
+F 5 "50V" H 4480 2900 50  0001 R CNN "Voltage"
+F 6 "X7R" H 4480 2800 50  0001 R CNN "Dielectric"
+F 7 "1276-1921-1-ND" H 5055 3400 60  0001 C CNN "Digi-Key PN"
+	1    4630 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B278F
+P 4930 2900
+AR Path="/5BAAE16C/5C3B278F" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B278F" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B278F" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B278F" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B278F" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B278F" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B278F" Ref="C?"  Part="1" 
+F 0 "C?" H 4955 3000 50  0000 L CNN
+F 1 "1nF" H 4955 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4968 2750 50  0001 C CNN
+F 3 "" H 4955 3000 50  0001 C CNN
+F 4 "0603" H 4780 3000 50  0001 R CNN "display_footprint"
+F 5 "50V" H 4780 2900 50  0001 R CNN "Voltage"
+F 6 "X7R" H 4780 2800 50  0001 R CNN "Dielectric"
+F 7 "1276-1018-1-ND" H 5355 3400 60  0001 C CNN "Digi-Key PN"
+	1    4930 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4630 3130 4630 3090
+Wire Wire Line
+	4630 3090 4330 3090
+Wire Wire Line
+	4330 3090 4330 3050
+Connection ~ 4630 3090
+Wire Wire Line
+	4630 3090 4630 3050
+Wire Wire Line
+	4630 3090 4930 3090
+Wire Wire Line
+	4930 3090 4930 3050
+Wire Wire Line
+	4630 2670 4630 2710
+Wire Wire Line
+	4330 2750 4330 2710
+Wire Wire Line
+	4330 2710 4630 2710
+Wire Wire Line
+	4930 2710 4930 2750
+Connection ~ 4630 2710
+Wire Wire Line
+	4630 2710 4630 2750
+Wire Wire Line
+	4630 2710 4930 2710
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B27A4
+P 4630 3130
+AR Path="/5C1D5C9E/5C3B27A4" Ref="#PWR?"  Part="1" 
+AR Path="/5C3165D8/5C3B27A4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4630 2880 50  0001 C CNN
+F 1 "GND" H 4630 2980 50  0000 C CNN
+F 2 "" H 4630 3130 50  0001 C CNN
+F 3 "" H 4630 3130 50  0001 C CNN
+	1    4630 3130
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C3B27AA
+P 4630 2670
+AR Path="/5C1D5C9E/5C3B27AA" Ref="#PWR?"  Part="1" 
+AR Path="/5C3165D8/5C3B27AA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4630 2520 50  0001 C CNN
+F 1 "+5V" H 4630 2810 50  0000 C CNN
+F 2 "" H 4630 2670 50  0001 C CNN
+F 3 "" H 4630 2670 50  0001 C CNN
+	1    4630 2670
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4430 1930 4350 1930
+Wire Wire Line
+	4350 1930 4350 2380
+Wire Wire Line
+	4350 2380 5110 2380
+Wire Wire Line
+	5110 2380 5110 1830
+Wire Wire Line
+	5110 1830 5030 1830
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5C3B27B9
+P 5450 1830
+F 0 "R?" V 5350 1830 50  0000 C CNN
+F 1 "499" V 5450 1830 50  0000 C CNN
+F 2 "" H 5450 1830 50  0001 C CNN
+F 3 "" H 5450 1830 50  0001 C CNN
+F 4 "0603" V 5550 1830 50  0000 C CNN "display_footprint"
+F 5 "1%" V 5650 1830 50  0000 C CNN "Tolerance"
+F 6 "1/10W" V 5750 1830 50  0000 C CNN "Wattage"
+F 7 "PN" H 5750 2230 60  0001 C CNN "Digi-Key PN"
+	1    5450 1830
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5110 1830 5300 1830
+Connection ~ 5110 1830
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B27C6
+P 6080 2070
+AR Path="/5BAAE16C/5C3B27C6" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B27C6" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B27C6" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B27C6" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B27C6" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B27C6" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B27C6" Ref="C?"  Part="1" 
+F 0 "C?" H 6105 2170 50  0000 L CNN
+F 1 "10nF" H 6105 1970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6118 1920 50  0001 C CNN
+F 3 "" H 6105 2170 50  0001 C CNN
+F 4 "1276-1921-1-ND" H 6505 2570 60  0001 C CNN "Digi-Key PN"
+F 5 "0603" H 5930 2170 50  0000 R CNN "display_footprint"
+F 6 "50V" H 5930 2070 50  0000 R CNN "Voltage"
+F 7 "X7R" H 5930 1970 50  0000 R CNN "Dielectric"
+	1    6080 2070
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B27CD
+P 6080 2220
+F 0 "#PWR?" H 6080 1970 50  0001 C CNN
+F 1 "GND" H 6080 2070 50  0000 C CNN
+F 2 "" H 6080 2220 50  0001 C CNN
+F 3 "" H 6080 2220 50  0001 C CNN
+	1    6080 2220
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6080 1920 6080 1830
+Wire Wire Line
+	6080 1830 5600 1830
+Text GLabel 6160 1830 2    50   Output ~ 0
+QI_ISNS_ADC
+Wire Wire Line
+	6160 1830 6080 1830
+Connection ~ 6080 1830
+$Comp
+L Amplifier_Operational:OPA340NA U?
+U 1 1 5C3B5E40
+P 7900 1830
+F 0 "U?" H 7850 2080 50  0000 L CNN
+F 1 "OPA340NA" H 7850 1980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7800 1630 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa340.pdf" H 7900 2030 50  0001 C CNN
+	1    7900 1830
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C3B5E47
+P 7800 1530
+F 0 "#PWR?" H 7800 1380 50  0001 C CNN
+F 1 "+5V" H 7800 1670 50  0000 C CNN
+F 2 "" H 7800 1530 50  0001 C CNN
+F 3 "" H 7800 1530 50  0001 C CNN
+	1    7800 1530
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B5E4D
+P 7800 2130
+F 0 "#PWR?" H 7800 1880 50  0001 C CNN
+F 1 "GND" H 7800 1980 50  0000 C CNN
+F 2 "" H 7800 2130 50  0001 C CNN
+F 3 "" H 7800 2130 50  0001 C CNN
+	1    7800 2130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B5E57
+P 7500 2900
+AR Path="/5BAAE16C/5C3B5E57" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B5E57" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B5E57" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B5E57" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B5E57" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B5E57" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B5E57" Ref="C?"  Part="1" 
+F 0 "C?" H 7525 3000 50  0000 L CNN
+F 1 "0.1uF" H 7525 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7538 2750 50  0001 C CNN
+F 3 "" H 7525 3000 50  0001 C CNN
+F 4 "0603" H 7350 3000 50  0000 R CNN "display_footprint"
+F 5 "50V" H 7350 2900 50  0000 R CNN "Voltage"
+F 6 "X7R" H 7350 2800 50  0000 R CNN "Dielectric"
+F 7 "311-1344-1-ND" H 7925 3400 60  0001 C CNN "Digi-Key PN"
+	1    7500 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B5E62
+P 7800 2900
+AR Path="/5BAAE16C/5C3B5E62" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B5E62" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B5E62" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B5E62" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B5E62" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B5E62" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B5E62" Ref="C?"  Part="1" 
+F 0 "C?" H 7825 3000 50  0000 L CNN
+F 1 "10nF" H 7825 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7838 2750 50  0001 C CNN
+F 3 "" H 7825 3000 50  0001 C CNN
+F 4 "0603" H 7650 3000 50  0001 R CNN "display_footprint"
+F 5 "50V" H 7650 2900 50  0001 R CNN "Voltage"
+F 6 "X7R" H 7650 2800 50  0001 R CNN "Dielectric"
+F 7 "1276-1921-1-ND" H 8225 3400 60  0001 C CNN "Digi-Key PN"
+	1    7800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B5E6D
+P 8100 2900
+AR Path="/5BAAE16C/5C3B5E6D" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B5E6D" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B5E6D" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B5E6D" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B5E6D" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B5E6D" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B5E6D" Ref="C?"  Part="1" 
+F 0 "C?" H 8125 3000 50  0000 L CNN
+F 1 "1nF" H 8125 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8138 2750 50  0001 C CNN
+F 3 "" H 8125 3000 50  0001 C CNN
+F 4 "0603" H 7950 3000 50  0001 R CNN "display_footprint"
+F 5 "50V" H 7950 2900 50  0001 R CNN "Voltage"
+F 6 "X7R" H 7950 2800 50  0001 R CNN "Dielectric"
+F 7 "1276-1018-1-ND" H 8525 3400 60  0001 C CNN "Digi-Key PN"
+	1    8100 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3130 7800 3090
+Wire Wire Line
+	7800 3090 7500 3090
+Wire Wire Line
+	7500 3090 7500 3050
+Connection ~ 7800 3090
+Wire Wire Line
+	7800 3090 7800 3050
+Wire Wire Line
+	7800 3090 8100 3090
+Wire Wire Line
+	8100 3090 8100 3050
+Wire Wire Line
+	7800 2670 7800 2710
+Wire Wire Line
+	7500 2750 7500 2710
+Wire Wire Line
+	7500 2710 7800 2710
+Wire Wire Line
+	8100 2710 8100 2750
+Connection ~ 7800 2710
+Wire Wire Line
+	7800 2710 7800 2750
+Wire Wire Line
+	7800 2710 8100 2710
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B5E82
+P 7800 3130
+AR Path="/5C1D5C9E/5C3B5E82" Ref="#PWR?"  Part="1" 
+AR Path="/5C3165D8/5C3B5E82" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7800 2880 50  0001 C CNN
+F 1 "GND" H 7800 2980 50  0000 C CNN
+F 2 "" H 7800 3130 50  0001 C CNN
+F 3 "" H 7800 3130 50  0001 C CNN
+	1    7800 3130
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C3B5E88
+P 7800 2670
+AR Path="/5C1D5C9E/5C3B5E88" Ref="#PWR?"  Part="1" 
+AR Path="/5C3165D8/5C3B5E88" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7800 2520 50  0001 C CNN
+F 1 "+5V" H 7800 2810 50  0000 C CNN
+F 2 "" H 7800 2670 50  0001 C CNN
+F 3 "" H 7800 2670 50  0001 C CNN
+	1    7800 2670
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1930 7520 1930
+Wire Wire Line
+	7520 1930 7520 2380
+Wire Wire Line
+	7520 2380 8280 2380
+Wire Wire Line
+	8280 2380 8280 1830
+Wire Wire Line
+	8280 1830 8200 1830
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5C3B5E97
+P 8620 1830
+F 0 "R?" V 8520 1830 50  0000 C CNN
+F 1 "499" V 8620 1830 50  0000 C CNN
+F 2 "" H 8620 1830 50  0001 C CNN
+F 3 "" H 8620 1830 50  0001 C CNN
+F 4 "0603" V 8720 1830 50  0000 C CNN "display_footprint"
+F 5 "1%" V 8820 1830 50  0000 C CNN "Tolerance"
+F 6 "1/10W" V 8920 1830 50  0000 C CNN "Wattage"
+F 7 "PN" H 8920 2230 60  0001 C CNN "Digi-Key PN"
+	1    8620 1830
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8280 1830 8470 1830
+Connection ~ 8280 1830
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5C3B5EA4
+P 9250 2070
+AR Path="/5BAAE16C/5C3B5EA4" Ref="C?"  Part="1" 
+AR Path="/5BB181D8/5C3B5EA4" Ref="C?"  Part="1" 
+AR Path="/5BB2595E/5C3B5EA4" Ref="C?"  Part="1" 
+AR Path="/5BAAE0FA/5C3B5EA4" Ref="C?"  Part="1" 
+AR Path="/5BB86F23/5C3B5EA4" Ref="C?"  Part="1" 
+AR Path="/5C1D5C9E/5C3B5EA4" Ref="C?"  Part="1" 
+AR Path="/5C3165D8/5C3B5EA4" Ref="C?"  Part="1" 
+F 0 "C?" H 9275 2170 50  0000 L CNN
+F 1 "10nF" H 9275 1970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9288 1920 50  0001 C CNN
+F 3 "" H 9275 2170 50  0001 C CNN
+F 4 "1276-1921-1-ND" H 9675 2570 60  0001 C CNN "Digi-Key PN"
+F 5 "0603" H 9100 2170 50  0000 R CNN "display_footprint"
+F 6 "50V" H 9100 2070 50  0000 R CNN "Voltage"
+F 7 "X7R" H 9100 1970 50  0000 R CNN "Dielectric"
+	1    9250 2070
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C3B5EAB
+P 9250 2220
+F 0 "#PWR?" H 9250 1970 50  0001 C CNN
+F 1 "GND" H 9250 2070 50  0000 C CNN
+F 2 "" H 9250 2220 50  0001 C CNN
+F 3 "" H 9250 2220 50  0001 C CNN
+	1    9250 2220
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 1920 9250 1830
+Wire Wire Line
+	9250 1830 8770 1830
+Text GLabel 9330 1830 2    50   Output ~ 0
+POS12_ADC
+Wire Wire Line
+	9330 1830 9250 1830
+Connection ~ 9250 1830
+$Comp
+L power:GND #PWR?
+U 1 1 5C3BC716
+P 7030 2110
+F 0 "#PWR?" H 7030 1860 50  0001 C CNN
+F 1 "GND" H 7030 1960 50  0000 C CNN
+F 2 "" H 7030 2110 50  0001 C CNN
+F 3 "" H 7030 2110 50  0001 C CNN
+	1    7030 2110
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5C3BC7F4
+P 7030 1350
+F 0 "#PWR?" H 7030 1200 50  0001 C CNN
+F 1 "+12V" H 7030 1490 50  0000 C CNN
+F 2 "" H 7030 1350 50  0001 C CNN
+F 3 "" H 7030 1350 50  0001 C CNN
+	1    7030 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7030 1730 7030 1650
+Wire Wire Line
+	7030 1730 7030 1810
+Connection ~ 7030 1730
+Wire Wire Line
+	7030 1730 7600 1730
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5C3C3789
+P 7030 1960
+AR Path="/5BB2595E/5C3C3789" Ref="R?"  Part="1" 
+AR Path="/5BAAE0FA/5C3C3789" Ref="R?"  Part="1" 
+AR Path="/5BB86F23/5C3C3789" Ref="R?"  Part="1" 
+AR Path="/5C1D5C9E/5C3C3789" Ref="R?"  Part="1" 
+AR Path="/5C3165D8/5C3C3789" Ref="R?"  Part="1" 
+F 0 "R?" H 6970 1960 50  0000 R CNN
+F 1 "5.1k" V 7030 1960 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 7030 1960 50  0001 C CNN
+F 3 "" H 7030 1960 50  0001 C CNN
+F 4 "YAG3621CT-ND" H 7330 2360 60  0001 C CNN "Digi-Key PN"
+F 5 "0603" H 7110 2040 50  0000 L CNN "display_footprint"
+F 6 "1%" H 7110 1960 50  0000 L CNN "Tolerance"
+F 7 "1/10W" H 7110 1880 50  0000 L CNN "Wattage"
+	1    7030 1960
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5C3C5207
+P 7030 1500
+AR Path="/5BB27BA3/5C3C5207" Ref="R?"  Part="1" 
+AR Path="/5BB27BE1/5C3C5207" Ref="R?"  Part="1" 
+AR Path="/5C1F3323/5C3C5207" Ref="R?"  Part="1" 
+AR Path="/5C3165D8/5C3C5207" Ref="R?"  Part="1" 
+F 0 "R?" H 6950 1500 50  0000 R CNN
+F 1 "10k" V 7030 1500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 7030 1500 50  0001 C CNN
+F 3 "" H 7030 1500 50  0001 C CNN
+F 4 "0603" H 7130 1580 50  0000 L CNN "display_footprint"
+F 5 "1%" H 7130 1500 50  0000 L CNN "Tolerance"
+F 6 "1/10W" H 7140 1420 50  0000 L CNN "Wattage"
+F 7 "RHM10KADCT-ND" H 7330 1900 60  0001 C CNN "Digi-Key PN"
+	1    7030 1500
+	1    0    0    1   
+$EndComp
+$EndSCHEMATC

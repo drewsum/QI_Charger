@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 12
+Sheet 1 13
 Title ""
 Date ""
 Rev ""
@@ -79,5 +79,11 @@ S 1780 4940 500  150
 U 5C24B664
 F0 "QI Interface" 50
 F1 "QI_Interface.sch" 50
+$EndSheet
+$Sheet
+S 1780 5260 500  150 
+U 5C3165D8
+F0 "ADC Drivers" 50
+F1 "ADC_Drivers.sch" 50
 $EndSheet
 $EndSCHEMATC
