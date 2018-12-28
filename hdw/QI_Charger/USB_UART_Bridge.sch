@@ -917,20 +917,6 @@ POS5_USB_PGOOD
 Wire Wire Line
 	3470 6590 4290 6590
 $Comp
-L Graphic:SYM_ESD_Large #SYM?
-U 1 1 5C009D69
-P 3530 2350
-AR Path="/5BAAE0FA/5C009D69" Ref="#SYM?"  Part="1" 
-AR Path="/5BAAE1F3/5C009D69" Ref="#SYM?"  Part="1" 
-AR Path="/5C1D5CD8/5C009D69" Ref="#SYM?"  Part="1" 
-F 0 "#SYM?" H 3530 2550 50  0001 C CNN
-F 1 "SYM_ESD_Large" H 3530 2100 50  0001 C CNN
-F 2 "" H 3525 2320 50  0001 C CNN
-F 3 "~" H 3525 2320 50  0001 C CNN
-	1    3530 2350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Custom_Library:C_Custom C?
 U 1 1 5C037C42
 P 3540 7550

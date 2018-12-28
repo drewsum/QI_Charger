@@ -159,7 +159,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 4960 4580 4960
 Text GLabel 3120 4960 0    50   Input ~ 0
-QI_STANDBY
+QI_Standby
 Wire Wire Line
 	3120 4960 3200 4960
 Connection ~ 3200 4960
@@ -338,8 +338,6 @@ Text GLabel 4580 3460 0    50   Output ~ 0
 QI_LED_R
 Text GLabel 4580 3560 0    50   Output ~ 0
 QI_LED_G
-Text GLabel 4580 3660 0    50   Output ~ 0
-QI_LED_BUZZ
 Text GLabel 4580 3360 0    50   Input ~ 0
 QI_NTC
 $Comp
@@ -1145,7 +1143,7 @@ $EndComp
 $Comp
 L Custom_Library:C_Custom C?
 U 1 1 5C20B307
-P 4730 7170
+P 4830 7170
 AR Path="/5BB27BA3/5C20B307" Ref="C?"  Part="1" 
 AR Path="/5BB27B84/5C20B307" Ref="C?"  Part="1" 
 AR Path="/5BB27B24/5C20B307" Ref="C?"  Part="1" 
@@ -1153,26 +1151,26 @@ AR Path="/5BB27BB5/5C20B307" Ref="C?"  Part="1"
 AR Path="/5BB27BF7/5C20B307" Ref="C?"  Part="1" 
 AR Path="/5C1DE17A/5C20B307" Ref="C?"  Part="1" 
 AR Path="/5C1E3A0B/5C20B307" Ref="C?"  Part="1" 
-F 0 "C?" H 4755 7270 50  0000 L CNN
-F 1 "0.1uF" H 4755 7070 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 4768 7020 50  0001 C CNN
-F 3 "" H 4755 7270 50  0001 C CNN
-F 4 "0603" H 4580 7270 50  0000 R CNN "display_footprint"
-F 5 "50V" H 4580 7170 50  0000 R CNN "Voltage"
-F 6 "X7R" H 4580 7070 50  0000 R CNN "Dielectric"
-F 7 "490-8020-1-ND" H 5155 7670 60  0001 C CNN "Digi-Key PN"
-	1    4730 7170
+F 0 "C?" H 4855 7270 50  0000 L CNN
+F 1 "0.1uF" H 4855 7070 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4868 7020 50  0001 C CNN
+F 3 "" H 4855 7270 50  0001 C CNN
+F 4 "0603" H 4680 7270 50  0000 R CNN "display_footprint"
+F 5 "50V" H 4680 7170 50  0000 R CNN "Voltage"
+F 6 "X7R" H 4680 7070 50  0000 R CNN "Dielectric"
+F 7 "490-8020-1-ND" H 5255 7670 60  0001 C CNN "Digi-Key PN"
+	1    4830 7170
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5C20B50B
-P 4730 7320
-F 0 "#PWR?" H 4730 7070 50  0001 C CNN
-F 1 "GND" H 4730 7170 50  0000 C CNN
-F 2 "" H 4730 7320 50  0001 C CNN
-F 3 "" H 4730 7320 50  0001 C CNN
-	1    4730 7320
+P 4830 7320
+F 0 "#PWR?" H 4830 7070 50  0001 C CNN
+F 1 "GND" H 4830 7170 50  0000 C CNN
+F 2 "" H 4830 7320 50  0001 C CNN
+F 3 "" H 4830 7320 50  0001 C CNN
+	1    4830 7320
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1189,9 +1187,7 @@ $EndComp
 Wire Wire Line
 	4040 7020 4040 6930
 Wire Wire Line
-	4730 7020 4730 6930
-Wire Wire Line
-	4730 6930 4040 6930
+	4830 7020 4830 6930
 Connection ~ 4040 6930
 Wire Wire Line
 	4040 6930 4040 6860
@@ -1551,4 +1547,7 @@ F 3 "" H 1280 3380 50  0001 C CNN
 	1    1280 3380
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4040 6930 4830 6930
+NoConn ~ 4580 3660
 $EndSCHEMATC

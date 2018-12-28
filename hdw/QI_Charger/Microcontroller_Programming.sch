@@ -285,8 +285,6 @@ Wire Wire Line
 	4670 2720 4670 2770
 Wire Wire Line
 	4670 2770 4820 2770
-Text Notes 4500 2130 0    50   ~ 0
-Consider replacing with little logic open drain inverter
 $Comp
 L power:+5V #PWR?
 U 1 1 5C1E843D
