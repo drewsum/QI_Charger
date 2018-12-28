@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 13
+Sheet 4 14
 Title ""
 Date ""
 Rev ""
@@ -165,18 +165,6 @@ F 3 "" H 5070 5270 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y?
-U 1 1 5C1E3F6F
-P 9340 4950
-F 0 "Y?" H 9340 5100 50  0000 C CNN
-F 1 "32.768kHz" H 9340 4800 50  0000 C CNN
-F 2 "Crystals:Crystal_SMD_G8-2pin_3.2x1.5mm" H 9340 4950 50  0001 C CNN
-F 3 "~" H 9340 4950 50  0001 C CNN
-F 4 "G83270021CT-ND" H 9340 4950 50  0001 C CNN "Digi-Key PN"
-	1    9340 4950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Crystal_GND24 Y?
 U 1 1 5C1D74C7
 P 7350 4950
@@ -286,78 +274,6 @@ Connection ~ 7900 4950
 Wire Wire Line
 	6800 4750 6800 4950
 Connection ~ 6800 4950
-$Comp
-L Custom_Library:C_Custom C?
-U 1 1 5C1DB314
-P 8790 5300
-AR Path="/5C1D5CD8/5C1DB314" Ref="C?"  Part="1" 
-AR Path="/5C1D5CCA/5C1DB314" Ref="C?"  Part="1" 
-F 0 "C?" H 8815 5400 50  0000 L CNN
-F 1 "12.5pF" H 8815 5200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 8828 5150 50  0001 C CNN
-F 3 "" H 8815 5400 50  0001 C CNN
-F 4 "0603" H 8640 5400 50  0000 R CNN "display_footprint"
-F 5 "50V" H 8640 5300 50  0000 R CNN "Voltage"
-F 6 "NP0" H 8640 5200 50  0000 R CNN "Dielectric"
-	1    8790 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Custom_Library:C_Custom C?
-U 1 1 5C1DB31E
-P 9890 5300
-AR Path="/5C1D5CD8/5C1DB31E" Ref="C?"  Part="1" 
-AR Path="/5C1D5CCA/5C1DB31E" Ref="C?"  Part="1" 
-F 0 "C?" H 9915 5400 50  0000 L CNN
-F 1 "12.5pF" H 9915 5200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 9928 5150 50  0001 C CNN
-F 3 "" H 9915 5400 50  0001 C CNN
-F 4 "0603" H 9740 5400 50  0000 R CNN "display_footprint"
-F 5 "50V" H 9740 5300 50  0000 R CNN "Voltage"
-F 6 "NP0" H 9740 5200 50  0000 R CNN "Dielectric"
-	1    9890 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C1DB325
-P 9890 5450
-F 0 "#PWR?" H 9890 5200 50  0001 C CNN
-F 1 "GND" H 9890 5300 50  0000 C CNN
-F 2 "" H 9890 5450 50  0001 C CNN
-F 3 "" H 9890 5450 50  0001 C CNN
-	1    9890 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5C1DB32B
-P 8790 5450
-F 0 "#PWR?" H 8790 5200 50  0001 C CNN
-F 1 "GND" H 8790 5300 50  0000 C CNN
-F 2 "" H 8790 5450 50  0001 C CNN
-F 3 "" H 8790 5450 50  0001 C CNN
-	1    8790 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9890 5150 9890 4950
-Wire Wire Line
-	9890 4950 9490 4950
-Wire Wire Line
-	9190 4950 8790 4950
-Wire Wire Line
-	8790 4950 8790 5150
-Text GLabel 9890 4750 1    50   UnSpc ~ 0
-PIC_SOSC2
-Text GLabel 8790 4750 1    50   UnSpc ~ 0
-PIC_SOSC1
-Wire Wire Line
-	9890 4750 9890 4950
-Connection ~ 9890 4950
-Wire Wire Line
-	8790 4750 8790 4950
-Connection ~ 8790 4950
 $Comp
 L Custom_Library:R_Custom R?
 U 1 1 5C1DDC4E
@@ -703,18 +619,14 @@ Text GLabel 4330 3390 0    50   Input ~ 0
 QI_Charge
 Text GLabel 4330 3290 0    50   Input ~ 0
 QI_Idle
-Text GLabel 4330 2290 0    50   Input ~ 0
+Text GLabel 6130 2290 2    50   Input ~ 0
 POS12_ISNS_ADC
 Text GLabel 4330 2590 0    50   Input ~ 0
 POS5_ADC
 Text GLabel 4330 2690 0    50   Input ~ 0
 QI_ISNS_ADC
-Text GLabel 4330 2190 0    50   Input ~ 0
+Text GLabel 6130 2190 2    50   Input ~ 0
 POS12_ADC
-Text GLabel 6130 2290 2    50   UnSpc ~ 0
-PIC_SOSC2
-Text GLabel 6130 2190 2    50   UnSpc ~ 0
-PIC_SOSC1
 Text GLabel 6130 2390 2    50   Output ~ 0
 QI_Standby
 $Comp
@@ -941,4 +853,8 @@ F 3 "" H 3250 7430 50  0001 C CNN
 $EndComp
 Text GLabel 2660 7010 0    50   Input ~ 0
 ICSPDAT
+Text GLabel 4330 2190 0    50   Input ~ 0
+Cap_Touch_Left
+Text GLabel 4330 2290 0    50   Input ~ 0
+Cap_Touch_Right
 $EndSCHEMATC

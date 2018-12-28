@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 13
+Sheet 1 14
 Title ""
 Date ""
 Rev ""
@@ -85,5 +85,11 @@ S 1780 5260 500  150
 U 5C3165D8
 F0 "ADC Drivers" 50
 F1 "ADC_Drivers.sch" 50
+$EndSheet
+$Sheet
+S 1780 5650 500  150 
+U 5C26E09A
+F0 "Capacitive Touch Sensors" 50
+F1 "Capacitive_Touch_Sensors.sch" 50
 $EndSheet
 $EndSCHEMATC
