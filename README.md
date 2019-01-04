@@ -1,6 +1,6 @@
 # QI_Charger
 
-A DIY QI Wireless Phone Charger
+A DIY QI Wireless Phone Charger with Digital Monitoring
 
 Made with KiCad 5.0.2
 
