@@ -14,9 +14,6 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 
-# Netlist files (exported from Eeschema)
-*.net
-
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
