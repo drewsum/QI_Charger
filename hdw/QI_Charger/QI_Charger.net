@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Drew Maatman\\Documents\\KiCad Projects\\Projects\\QI_Charger\\hdw\\QI_Charger\\QI_Charger.sch")
-    (date "1/6/2019 7:11:14 PM")
+    (date "1/7/2019 4:40:47 PM")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -639,7 +639,7 @@
       (tstamp 5C2754C7))
     (comp (ref J401)
       (value PICKIT3)
-      (footprint Electronic_Display_Footprint_Lib:PICKIT3_Header)
+      (footprint "Custom Footprints Library:PICKIT3_Header")
       (datasheet ~)
       (libsource (lib Connector_Generic) (part Conn_01x06) (description "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names "/Microcontroller Programming/") (tstamps /5C1D5CB6/))

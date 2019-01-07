@@ -20,7 +20,7 @@ U 1 1 5BB4A695
 P 1070 1990
 F 0 "J401" H 1160 1980 50  0000 L CNN
 F 1 "PICKIT3" H 1160 1900 50  0000 L CNN
-F 2 "Electronic_Display_Footprint_Lib:PICKIT3_Header" H 1070 1990 50  0001 C CNN
+F 2 "Custom Footprints Library:PICKIT3_Header" H 1070 1990 50  0001 C CNN
 F 3 "~" H 1070 1990 50  0001 C CNN
 	1    1070 1990
 	-1   0    0    -1  
