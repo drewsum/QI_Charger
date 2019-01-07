@@ -1551,8 +1551,9 @@ U 1 1 5C2F369A
 P 8770 3700
 F 0 "J1301" H 8770 3800 50  0000 C CNN
 F 1 "PAD" H 8770 3600 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_single_SMD_5x10mm" H 8770 3700 50  0001 C CNN
+F 2 "Custom Footprints Library:Wuerth_7461096_M4_Shank_9pos" H 8770 3700 50  0001 C CNN
 F 3 "~" H 8770 3700 50  0001 C CNN
+F 4 "732-3214-ND" H 8770 3700 50  0001 C CNN "Digi-Key PN"
 	1    8770 3700
 	-1   0    0    -1  
 $EndComp
@@ -1567,8 +1568,9 @@ U 1 1 5C2F9D16
 P 8770 4400
 F 0 "J1302" H 8770 4500 50  0000 C CNN
 F 1 "PAD" H 8770 4300 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_single_SMD_5x10mm" H 8770 4400 50  0001 C CNN
+F 2 "Custom Footprints Library:Wuerth_7461096_M4_Shank_9pos" H 8770 4400 50  0001 C CNN
 F 3 "~" H 8770 4400 50  0001 C CNN
+F 4 "732-3214-ND" H 8770 4400 50  0001 C CNN "Digi-Key PN"
 	1    8770 4400
 	-1   0    0    -1  
 $EndComp
