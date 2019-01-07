@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:\\Users\\Drew Maatman\\Documents\\KiCad Projects\\Projects\\QI_Charger\\hdw\\QI_Charger\\QI_Charger.sch")
-    (date "1/6/2019 7:03:44 PM")
+    (date "1/6/2019 7:11:14 PM")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -359,7 +359,7 @@
       (tstamp 5C025CB2))
     (comp (ref U202)
       (value INA138)
-      (footprint Package_TO_SOT_SMD:SOT-23-5)
+      (footprint TO_SOT_Packages_SMD:SOT-23-5)
       (datasheet http://www.ti.com/lit/ds/symlink/ina138.pdf)
       (fields
         (field (name "Digi-Key PN") INA138NACT-ND))
@@ -630,7 +630,7 @@
       (tstamp 5C269D8C))
     (comp (ref U301)
       (value TPS62130)
-      (footprint Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm)
+      (footprint Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm)
       (datasheet http://www.ti.com/lit/ds/symlink/tps62130.pdf)
       (fields
         (field (name "Digi-Key PN") 296-37878-1-ND))
@@ -985,7 +985,7 @@
       (tstamp 5C27B236))
     (comp (ref U601)
       (value OPA340NA)
-      (footprint Package_TO_SOT_SMD:SOT-23-5)
+      (footprint TO_SOT_Packages_SMD:SOT-23-5)
       (datasheet http://www.ti.com/lit/ds/symlink/opa340.pdf)
       (fields
         (field (name "Digi-Key PN") 296-26275-1-ND))
@@ -1049,7 +1049,7 @@
       (tstamp 5C32FD96))
     (comp (ref U603)
       (value OPA340NA)
-      (footprint Package_TO_SOT_SMD:SOT-23-5)
+      (footprint TO_SOT_Packages_SMD:SOT-23-5)
       (datasheet http://www.ti.com/lit/ds/symlink/opa340.pdf)
       (fields
         (field (name "Digi-Key PN") 296-26275-1-ND))
@@ -1113,7 +1113,7 @@
       (tstamp 5C3B27C6))
     (comp (ref U604)
       (value OPA340NA)
-      (footprint Package_TO_SOT_SMD:SOT-23-5)
+      (footprint TO_SOT_Packages_SMD:SOT-23-5)
       (datasheet http://www.ti.com/lit/ds/symlink/opa340.pdf)
       (fields
         (field (name "Digi-Key PN") 296-26275-1-ND))
@@ -1199,7 +1199,7 @@
       (tstamp 5C3C5207))
     (comp (ref U602)
       (value OPA340NA)
-      (footprint Package_TO_SOT_SMD:SOT-23-5)
+      (footprint TO_SOT_Packages_SMD:SOT-23-5)
       (datasheet http://www.ti.com/lit/ds/symlink/opa340.pdf)
       (fields
         (field (name "Digi-Key PN") 296-26275-1-ND))
@@ -2380,7 +2380,7 @@
       (tstamp 5C2E6306))
     (comp (ref U1201)
       (value LM73-1)
-      (footprint Package_TO_SOT_SMD:SOT-23-6)
+      (footprint TO_SOT_Packages_SMD:SOT-23-6)
       (datasheet http://www.ti.com/lit/ds/symlink/lm73.pdf)
       (fields
         (field (name "Digi-Key PN") LM73CIMK-1/NOPBCT-ND))
@@ -2444,7 +2444,7 @@
       (tstamp 5C27692C))
     (comp (ref U1202)
       (value LM73-1)
-      (footprint Package_TO_SOT_SMD:SOT-23-6)
+      (footprint TO_SOT_Packages_SMD:SOT-23-6)
       (datasheet http://www.ti.com/lit/ds/symlink/lm73.pdf)
       (fields
         (field (name "Digi-Key PN") LM73CIMK-1/NOPBCT-ND))
@@ -2508,7 +2508,7 @@
       (tstamp 5C276A5F))
     (comp (ref U1203)
       (value LM73-1)
-      (footprint Package_TO_SOT_SMD:SOT-23-6)
+      (footprint TO_SOT_Packages_SMD:SOT-23-6)
       (datasheet http://www.ti.com/lit/ds/symlink/lm73.pdf)
       (fields
         (field (name "Digi-Key PN") LM73CIMK-1/NOPBCT-ND))
@@ -3005,7 +3005,7 @@
       (tstamp 5C20B307))
     (comp (ref U1301)
       (value INA138)
-      (footprint Package_TO_SOT_SMD:SOT-23-5)
+      (footprint TO_SOT_Packages_SMD:SOT-23-5)
       (datasheet http://www.ti.com/lit/ds/symlink/ina138.pdf)
       (fields
         (field (name "Digi-Key PN") INA138NACT-ND))
