@@ -751,7 +751,7 @@ Wire Wire Line
 	8520 2270 8440 2270
 Connection ~ 8060 2270
 Wire Wire Line
-	9370 2270 8520 2270
+	9370 2270 8990 2270
 Connection ~ 8520 2270
 $Comp
 L Custom_Library:R_Custom R?
@@ -870,4 +870,61 @@ F 3 "" H 9980 2190 50  0001 C CNN
 	1    9980 2190
 	1    0    0    -1  
 $EndComp
+$Comp
+L Custom_Library:TP TP?
+U 1 1 5C358180
+P 1230 3170
+AR Path="/5C1D5CD8/5C358180" Ref="TP?"  Part="1" 
+AR Path="/5C1D5C9E/5C358180" Ref="TP201"  Part="1" 
+F 0 "TP201" H 1230 3320 50  0000 C CNN
+F 1 "TP" H 1230 3320 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x01_Pitch2.54mm" H 1230 3170 60  0001 C CNN
+F 3 "" H 1230 3170 60  0000 C CNN
+	1    1230 3170
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0383
+U 1 1 5C35BB80
+P 1230 3170
+F 0 "#PWR0383" H 1230 2920 50  0001 C CNN
+F 1 "GND" H 1230 3020 50  0000 C CNN
+F 2 "" H 1230 3170 50  0001 C CNN
+F 3 "" H 1230 3170 50  0001 C CNN
+	1    1230 3170
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:TP TP?
+U 1 1 5C35D7C8
+P 2980 2190
+AR Path="/5C1D5CD8/5C35D7C8" Ref="TP?"  Part="1" 
+AR Path="/5C1D5C9E/5C35D7C8" Ref="TP202"  Part="1" 
+F 0 "TP202" H 2980 2340 50  0000 C CNN
+F 1 "TP" H 2980 2340 50  0001 C CNN
+F 2 "Custom Footprints Library:Test_Point" H 2980 2190 60  0001 C CNN
+F 3 "" H 2980 2190 60  0000 C CNN
+	1    2980 2190
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2980 2190 2980 2270
+$Comp
+L Custom_Library:TP TP?
+U 1 1 5C361228
+P 8990 2200
+AR Path="/5C1D5CD8/5C361228" Ref="TP?"  Part="1" 
+AR Path="/5C1D5C9E/5C361228" Ref="TP203"  Part="1" 
+F 0 "TP203" H 8990 2350 50  0000 C CNN
+F 1 "TP" H 8990 2350 50  0001 C CNN
+F 2 "Custom Footprints Library:Test_Point" H 8990 2200 60  0001 C CNN
+F 3 "" H 8990 2200 60  0000 C CNN
+	1    8990 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8990 2200 8990 2270
+Connection ~ 8990 2270
+Wire Wire Line
+	8990 2270 8520 2270
 $EndSCHEMATC

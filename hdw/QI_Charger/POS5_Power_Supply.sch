@@ -716,4 +716,20 @@ F 3 "~" H 8460 2410 50  0001 C CNN
 	1    8460 2410
 	-1   0    0    1   
 $EndComp
+$Comp
+L Custom_Library:TP TP?
+U 1 1 5C3650A7
+P 7050 2420
+AR Path="/5C1D5CD8/5C3650A7" Ref="TP?"  Part="1" 
+AR Path="/5C1D5C9E/5C3650A7" Ref="TP?"  Part="1" 
+AR Path="/5C1E3A08/5C3650A7" Ref="TP301"  Part="1" 
+F 0 "TP301" H 7050 2570 50  0000 C CNN
+F 1 "TP" H 7050 2570 50  0001 C CNN
+F 2 "Custom Footprints Library:Test_Point" H 7050 2420 60  0001 C CNN
+F 3 "" H 7050 2420 60  0000 C CNN
+	1    7050 2420
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2420 7050 2490
 $EndSCHEMATC
