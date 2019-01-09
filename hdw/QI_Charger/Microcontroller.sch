@@ -167,118 +167,6 @@ F 3 "" H 5070 5270 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal_GND24 Y501
-U 1 1 5C1D74C7
-P 7350 4950
-F 0 "Y501" H 7475 5150 50  0000 L CNN
-F 1 "16MHz" H 7475 5075 50  0000 L CNN
-F 2 "Crystals:Crystal_SMD_TXC_7M-4pin_3.2x2.5mm" H 7350 4950 50  0001 C CNN
-F 3 "http://www.txccorp.com/download/products/quartz_crystals/2015TXC_7M_17.pdf" H 7350 4950 50  0001 C CNN
-F 4 "887-1125-1-ND" H 7350 4950 50  0001 C CNN "Digi-Key PN"
-	1    7350 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0149
-U 1 1 5C1D7E92
-P 7350 4750
-F 0 "#PWR0149" H 7350 4500 50  0001 C CNN
-F 1 "GND" H 7350 4600 50  0000 C CNN
-F 2 "" H 7350 4750 50  0001 C CNN
-F 3 "" H 7350 4750 50  0001 C CNN
-	1    7350 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0150
-U 1 1 5C1D7EC2
-P 7350 5150
-F 0 "#PWR0150" H 7350 4900 50  0001 C CNN
-F 1 "GND" H 7350 5000 50  0000 C CNN
-F 2 "" H 7350 5150 50  0001 C CNN
-F 3 "" H 7350 5150 50  0001 C CNN
-	1    7350 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Custom_Library:C_Custom C?
-U 1 1 5C1D88FA
-P 6800 5300
-AR Path="/5C1D5CD8/5C1D88FA" Ref="C?"  Part="1" 
-AR Path="/5C1D5CCA/5C1D88FA" Ref="C509"  Part="1" 
-F 0 "C509" H 6825 5400 50  0000 L CNN
-F 1 "18pF" H 6825 5200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 6838 5150 50  0001 C CNN
-F 3 "" H 6825 5400 50  0001 C CNN
-F 4 "0603" H 6650 5400 50  0000 R CNN "display_footprint"
-F 5 "50V" H 6650 5300 50  0000 R CNN "Voltage"
-F 6 "NP0" H 6650 5200 50  0000 R CNN "Dielectric"
-F 7 "311-1061-1-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
-	1    6800 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Custom_Library:C_Custom C?
-U 1 1 5C1D895D
-P 7900 5300
-AR Path="/5C1D5CD8/5C1D895D" Ref="C?"  Part="1" 
-AR Path="/5C1D5CCA/5C1D895D" Ref="C510"  Part="1" 
-F 0 "C510" H 7925 5400 50  0000 L CNN
-F 1 "18pF" H 7925 5200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7938 5150 50  0001 C CNN
-F 3 "" H 7925 5400 50  0001 C CNN
-F 4 "0603" H 7750 5400 50  0000 R CNN "display_footprint"
-F 5 "50V" H 7750 5300 50  0000 R CNN "Voltage"
-F 6 "NP0" H 7750 5200 50  0000 R CNN "Dielectric"
-F 7 "311-1061-1-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
-	1    7900 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0151
-U 1 1 5C1D8AB5
-P 7900 5450
-F 0 "#PWR0151" H 7900 5200 50  0001 C CNN
-F 1 "GND" H 7900 5300 50  0000 C CNN
-F 2 "" H 7900 5450 50  0001 C CNN
-F 3 "" H 7900 5450 50  0001 C CNN
-	1    7900 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0152
-U 1 1 5C1D8AD0
-P 6800 5450
-F 0 "#PWR0152" H 6800 5200 50  0001 C CNN
-F 1 "GND" H 6800 5300 50  0000 C CNN
-F 2 "" H 6800 5450 50  0001 C CNN
-F 3 "" H 6800 5450 50  0001 C CNN
-	1    6800 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7900 5150 7900 4950
-Wire Wire Line
-	7900 4950 7500 4950
-Wire Wire Line
-	7200 4950 6800 4950
-Wire Wire Line
-	6800 4950 6800 5150
-Text GLabel 4330 2790 0    50   UnSpc ~ 0
-PIC_OSC2
-Text GLabel 4330 2890 0    50   UnSpc ~ 0
-PIC_OSC1
-Text GLabel 7900 4750 1    50   UnSpc ~ 0
-PIC_OSC2
-Text GLabel 6800 4750 1    50   UnSpc ~ 0
-PIC_OSC1
-Wire Wire Line
-	7900 4750 7900 4950
-Connection ~ 7900 4950
-Wire Wire Line
-	6800 4750 6800 4950
-Connection ~ 6800 4950
-$Comp
 L Custom_Library:R_Custom R?
 U 1 1 5C1DDC4E
 P 3200 3120
@@ -859,9 +747,9 @@ F 3 "" H 3250 7430 50  0001 C CNN
 $EndComp
 Text GLabel 2660 7010 0    50   Input ~ 0
 ICSPDAT
-Text GLabel 6130 2190 2    50   Input ~ 0
+Text GLabel 4330 2890 0    50   Input ~ 0
 Cap_Touch_Left
-Text GLabel 6130 2290 2    50   Input ~ 0
+Text GLabel 4330 2790 0    50   Input ~ 0
 Cap_Touch_Right
 $Comp
 L Custom_Library:I2C_Address DOC501
@@ -874,4 +762,6 @@ F 3 "" H 2720 4400 60  0001 C CNN
 	1    2720 4050
 	1    0    0    -1  
 $EndComp
+NoConn ~ 6130 2190
+NoConn ~ 6130 2290
 $EndSCHEMATC
