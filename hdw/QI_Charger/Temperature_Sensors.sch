@@ -748,4 +748,10 @@ F 3 "" H 2370 7280 60  0001 C CNN
 	1    2370 6930
 	1    0    0    -1  
 $EndComp
+Text Notes 4200 2680 0    50   ~ 0
+Placed near QI Controller
+Text Notes 4200 4870 0    50   ~ 0
+Placed near +5V Power supply
+Text Notes 4200 7140 0    50   ~ 0
+Placed away from power dissipating components
 $EndSCHEMATC

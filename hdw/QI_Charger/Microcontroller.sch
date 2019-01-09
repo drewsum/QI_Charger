@@ -625,13 +625,13 @@ Text GLabel 4330 3390 0    50   Input ~ 0
 QI_Charge
 Text GLabel 4330 3290 0    50   Input ~ 0
 QI_Idle
-Text GLabel 6130 2290 2    50   Input ~ 0
+Text GLabel 4330 2290 0    50   Input ~ 0
 POS12_ISNS_ADC
 Text GLabel 4330 2590 0    50   Input ~ 0
 POS5_ADC
 Text GLabel 4330 2690 0    50   Input ~ 0
 QI_ISNS_ADC
-Text GLabel 6130 2190 2    50   Input ~ 0
+Text GLabel 4330 2190 0    50   Input ~ 0
 POS12_ADC
 Text GLabel 6130 2390 2    50   Output ~ 0
 QI_Standby
@@ -859,9 +859,9 @@ F 3 "" H 3250 7430 50  0001 C CNN
 $EndComp
 Text GLabel 2660 7010 0    50   Input ~ 0
 ICSPDAT
-Text GLabel 4330 2190 0    50   Input ~ 0
+Text GLabel 6130 2190 2    50   Input ~ 0
 Cap_Touch_Left
-Text GLabel 4330 2290 0    50   Input ~ 0
+Text GLabel 6130 2290 2    50   Input ~ 0
 Cap_Touch_Right
 $Comp
 L Custom_Library:I2C_Address DOC501
