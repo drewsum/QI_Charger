@@ -20,7 +20,7 @@ U 1 1 5C32D114
 P 4160 1830
 F 0 "U1201" H 3660 2280 50  0000 L CNN
 F 1 "LM73-1" H 3660 2180 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4610 2180 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4610 2180 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm73.pdf" H 3760 2280 50  0001 C CNN
 F 4 "LM73CIMK-1/NOPBCT-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
 	1    4160 1830
@@ -230,7 +230,7 @@ U 1 1 5C276A02
 P 4160 4080
 F 0 "U1202" H 3660 4530 50  0000 L CNN
 F 1 "LM73-1" H 3660 4430 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4610 4430 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4610 4430 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm73.pdf" H 3760 4530 50  0001 C CNN
 F 4 "LM73CIMK-1/NOPBCT-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
 	1    4160 4080
@@ -441,7 +441,7 @@ U 1 1 5C276E40
 P 4160 6330
 F 0 "U1203" H 3660 6780 50  0000 L CNN
 F 1 "LM73-1" H 3660 6680 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4610 6680 50  0001 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4610 6680 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm73.pdf" H 3760 6780 50  0001 C CNN
 F 4 "LM73CIMK-1/NOPBCT-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
 	1    4160 6330
@@ -748,4 +748,10 @@ F 3 "" H 2370 7280 60  0001 C CNN
 	1    2370 6930
 	1    0    0    -1  
 $EndComp
+Text Notes 4200 2680 0    50   ~ 0
+Placed near QI Controller
+Text Notes 4200 4870 0    50   ~ 0
+Placed near +5V Power supply
+Text Notes 4200 7140 0    50   ~ 0
+Placed away from power dissipating components
 $EndSCHEMATC
