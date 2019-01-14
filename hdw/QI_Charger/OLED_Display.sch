@@ -341,4 +341,30 @@ F 3 "" H 4980 4570 60  0001 C CNN
 	1    4980 4220
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J701
+U 1 1 5C3D2BE7
+P 2150 3580
+F 0 "J701" H 2150 3780 50  0000 C CNN
+F 1 "I2C" H 2150 3380 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2150 3580 50  0001 C CNN
+F 3 "~" H 2150 3580 50  0001 C CNN
+	1    2150 3580
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 3480 0    50   BiDi ~ 0
+I2C_SDA
+Text GLabel 1950 3580 0    50   Input ~ 0
+I2C_SCL
+$Comp
+L power:GND #PWR0701
+U 1 1 5C3D2D89
+P 1950 3680
+F 0 "#PWR0701" H 1950 3430 50  0001 C CNN
+F 1 "GND" H 1950 3530 50  0000 C CNN
+F 2 "" H 1950 3680 50  0001 C CNN
+F 3 "" H 1950 3680 50  0001 C CNN
+	1    1950 3680
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

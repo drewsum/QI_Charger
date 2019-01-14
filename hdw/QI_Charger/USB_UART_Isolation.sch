@@ -318,4 +318,32 @@ F 3 "" H 3210 3280 50  0001 C CNN
 	1    3210 3280
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5C3D4B51
+P 2900 4510
+AR Path="/5C1DE17A/5C3D4B51" Ref="J?"  Part="1" 
+AR Path="/5C1F3323/5C3D4B51" Ref="J901"  Part="1" 
+F 0 "J901" H 2900 4710 50  0000 C CNN
+F 1 "UART" H 2900 4310 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2900 4510 50  0001 C CNN
+F 3 "~" H 2900 4510 50  0001 C CNN
+	1    2900 4510
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0901
+U 1 1 5C3D4D2F
+P 2700 4610
+F 0 "#PWR0901" H 2700 4360 50  0001 C CNN
+F 1 "GND" H 2700 4460 50  0000 C CNN
+F 2 "" H 2700 4610 50  0001 C CNN
+F 3 "" H 2700 4610 50  0001 C CNN
+	1    2700 4610
+	1    0    0    -1  
+$EndComp
+Text GLabel 2700 4510 0    60   UnSpc ~ 0
+USB_UART_TX
+Text GLabel 2700 4410 0    60   UnSpc ~ 0
+USB_UART_RX
 $EndSCHEMATC
