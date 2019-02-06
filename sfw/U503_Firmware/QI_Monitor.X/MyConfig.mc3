@@ -503,7 +503,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Interrupt Module" name="UseHighLowPriority"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCAP" settingAlias="IOCAP6"/>
@@ -1143,7 +1143,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG2L"/>
-         <value>227</value>
+         <value>225</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB6" alias="set"/>
@@ -1375,7 +1375,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCFRQ" settingAlias="HFFRQ"/>
-         <value>4_MHz</value>
+         <value>64_MHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSELA0"/>
@@ -1639,7 +1639,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2L" settingAlias="PWRTE"/>
-         <value>OFF</value>
+         <value>ON</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG1L" settingAlias="FEXTOSC" alias="XT"/>
@@ -1815,7 +1815,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="HFIntOscClockInHz"/>
-         <value>4000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PMD" registerAlias="PMD3" settingAlias="CCP2MD"/>
@@ -1827,7 +1827,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CustomIRFC"/>
-         <value>4_MHz</value>
+         <value>64_MHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="T1CKIPPS" settingAlias="T1CKIPPS"/>
@@ -2127,7 +2127,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG3L" settingAlias="WDTCPS"/>
-         <value>WDTCPS_31</value>
+         <value>WDTCPS_6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAP" settingAlias="IOCAP3" alias="enabled"/>
@@ -2447,7 +2447,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1" settingAlias="NOSC"/>
-         <value>EXTOSC</value>
+         <value>HFINTOSC</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCCP" settingAlias="IOCCP2"/>
@@ -2763,7 +2763,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1"/>
-         <value>112</value>
+         <value>96</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD1" settingAlias="TMR1MD" alias="TMR1 disabled"/>
@@ -2839,7 +2839,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CustomFOSC"/>
-         <value>EXTOSC operating per FEXTOSC bits (device manufacturing default)</value>
+         <value>HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="MDCARLPPS" settingAlias="MDCARLPPS"/>
@@ -3227,7 +3227,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="packageId"/>
-         <value>SOIC28</value>
+         <value>QFN28</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="scsTimer1"/>
@@ -3239,7 +3239,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG1L"/>
-         <value>116</value>
+         <value>4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA0" alias="output"/>
@@ -3567,7 +3567,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="WWDT" name="wwdtPeriod"/>
-         <value>2.11406</value>
+         <value>0.06606</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSELC0" alias="digital"/>
@@ -3799,7 +3799,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CurrentSystemClockInHz"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RB2PPS"/>
@@ -3927,7 +3927,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG3L"/>
-         <value>31</value>
+         <value>6</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2H" settingAlias="STVREN"/>
@@ -3943,7 +3943,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG4H" settingAlias="LVP"/>
-         <value>ON</value>
+         <value>OFF</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG5L" settingAlias="CP" alias="OFF"/>
@@ -4099,7 +4099,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCFRQ"/>
-         <value>2</value>
+         <value>8</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSELA2"/>
@@ -4411,7 +4411,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG1L" settingAlias="RSTOSC"/>
-         <value>EXTOSC</value>
+         <value>HFINTOSC_64MHZ</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG6L" settingAlias="EBTR7" alias="ON"/>
@@ -4695,7 +4695,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG4H"/>
-         <value>55</value>
+         <value>23</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="SLRCONB" settingAlias="SLRB2"/>
@@ -5279,7 +5279,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FOSCClockValue"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUB" settingAlias="WPUB4" alias="set"/>
@@ -5607,7 +5607,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="IOCI" settingAlias="enable"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA7"/>
@@ -5754,5 +5754,42 @@
          <value>1</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap"/>
+   <generatedFileHashHistoryMap class="java.util.HashMap">
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>0afb8d9cf27d6ebe34a21dd75adb8c62fa34e4e1345f24b391c589d7e5f71eca</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>e439e3c6ba30fa153b48905ea073488026d2eec7771b3604b87dac9f6f3b6590</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.h</file>
+         <hash>c572a136020145012ca1c260dcfc23508c5b547ba8ec5f33d7cbc497a0e62ff8</hash>
+      </entry>
+      <entry>
+         <file>main.c</file>
+         <hash>3558cb8987accf9a194ba583ba3361c83cccd0b5d7dd1be93da5a11215c8edde</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.c</file>
+         <hash>fe5f3236146ff06ec5e7d1d6d4c75c7b417b661d9ac8f1b31080d30db9585781</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>e770398c093ac22e880bdc9a3e5103f5006d51fecf13efcfd74d03d16f56ff71</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.c</file>
+         <hash>ba5c1cc0ef742de6bedeb37ad340aa3e5d2f9f3904fe43a13b3762f28aee510e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>38123f6aa8c1501fbf4c0d2bd4363c9ec60b4e02ab8cfabc85dd3e7a5410ac06</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>81ba1de86db872536c256d7493e08fd1ea380ae2c4ad664f23b398827ccfce55</hash>
+      </entry>
+   </generatedFileHashHistoryMap>
 </config>
