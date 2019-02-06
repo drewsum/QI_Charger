@@ -21,3 +21,27 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+*.bak
+*.bck
+*.c.un~
+*.c~
+*.h.un~
+*.h~
+..gitignore.un~
+.gitignore~
+*.raw
+*.op.raw
+*.log
+*.plt
+
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+

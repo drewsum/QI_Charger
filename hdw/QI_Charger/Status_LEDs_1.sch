@@ -1390,18 +1390,6 @@ F 3 "" H 1620 6060 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Custom_Library:74LVC1G07_Power U1103
-U 1 1 5C2E542E
-P 1620 6160
-F 0 "U1103" H 1720 6260 50  0000 L CNN
-F 1 "74LVC1G07" H 1720 6060 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-353_SC-70-5" H 1620 6160 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1620 6160 50  0001 C CNN
-F 4 "296-8486-1-ND" H 1620 6160 50  0001 C CNN "Digi-Key PN"
-	1    1620 6160
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5C2E62FA
 P 1220 6580
@@ -1444,4 +1432,16 @@ Wire Wire Line
 Connection ~ 1220 6160
 Wire Wire Line
 	1140 6160 1220 6160
+$Comp
+L Custom_Library:74LVC1G06_Power U1103
+U 1 1 5C578CC2
+P 1620 6160
+F 0 "U1103" H 1720 6310 50  0000 L CNN
+F 1 "74LVC1G06" H 1720 6060 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-353_SC-70-5" H 1620 6210 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74lvc1g06.pdf" H 1620 6160 50  0001 C CNN
+F 4 "296-8484-1-ND" H 1620 6160 50  0001 C CNN "Digi-Key PN"
+	1    1620 6160
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
