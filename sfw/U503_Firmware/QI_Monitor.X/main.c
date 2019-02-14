@@ -43,17 +43,17 @@
 
 #include "mcc_generated_files/mcc.h"
 
+#include "pin_macros.h"
+#include "terminal_control.h"
+
 /*
                          Main application
  */
 void main(void)
 {
     // Initialize the device
+    // These are MCC auto-generated functions
     SYSTEM_Initialize();
-
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
 
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
