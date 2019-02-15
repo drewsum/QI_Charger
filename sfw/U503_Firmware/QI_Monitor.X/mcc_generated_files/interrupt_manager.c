@@ -56,16 +56,33 @@ void  INTERRUPT_Initialize (void)
 
     // Assign peripheral interrupt priority vectors
 
+    // TXI - high priority
+    IPR3bits.TX2IP = 1;
+
+    // RCI - high priority
+    IPR3bits.RC2IP = 1;
+
     // IOCI - high priority
     IPR0bits.IOCIP = 1;
 
+
+    // INT1I - low priority
+    IPR0bits.INT1IP = 0;    
 
 }
 
 void __interrupt() INTERRUPT_InterruptManagerHigh (void)
 {
    // interrupt handler
-    if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
+    if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
+    {
+        EUSART2_TxDefaultInterruptHandler();
+    }
+    else if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
+    {
+        EUSART2_RxDefaultInterruptHandler();
+    }
+    else if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
     {
         PIN_MANAGER_IOC();
     }
@@ -75,6 +92,18 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
     }
 }
 
+void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
+{
+    // interrupt handler
+    if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
+    {
+        INT1_ISR();
+    }
+    else
+    {
+        //Unhandled Interrupt
+    }
+}
 /**
  End of File
 */
