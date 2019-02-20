@@ -68,10 +68,9 @@ void ringBufferLUT(char * line) {
         terminalTextAttributes(GREEN, BLACK, NORMAL);
         
         // Grab and print device ID from flash
-        printf("Device ID stored in Flash is: 0x%X. This corresponds to a device "
-                "part number of %s\n\r",
-                getDeviceID(),
-                getDeviceIDString(getDeviceID()));
+        printf("Device ID stored in Flash is: %s (0x%04X)\n\r",
+                getDeviceIDString(getDeviceID()),
+                getDeviceID());
 
         terminalTextAttributesReset();
 
@@ -341,7 +340,7 @@ void ringBufferLUT(char * line) {
             printf("Unsupported or mis-entered command\n\r");
             terminalTextAttributes(YELLOW, BLACK, NORMAL);
             printf("Commands are case sensitive, backspace is supported, command history is not supported\n\r");
-            printf("Call 'Help' for list of supported command sets, or 'Help All' for list of all supported commands\n\r");
+            printf("Call 'Help' for list of supported commands\n\r");
             terminalTextAttributesReset();
         
         }

@@ -63,6 +63,9 @@ void main(void)
     // These are MCC auto-generated instructions
     SYSTEM_Initialize();
 
+    // Assign heartbeat timer handler to TMR0 ISR
+    TMR0_SetInterruptHandler(heartbeatTimerHandler);
+
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
 
@@ -75,12 +78,27 @@ void main(void)
 
     // print boot message
     terminalTextAttributes(GREEN, BLACK, NORMAL);
-    printf("QI Charger Booting...\n\r");
+    printf("QI Charger with Digital Monitoring\n\r"
+            "Boot Complete\n\r");
     
-    // Assign heartbeat timer handler to TMR0 ISR
-    TMR0_SetInterruptHandler(heartbeatTimerHandler);
-    printf("Heartbeat Timer Initialized\n\r");
+    // Set text color based on cause of reset
+    if (    reset_cause != Power_On_Reset) {
     
+        terminalTextAttributes(RED, BLACK, NORMAL);
+        
+    }
+    
+    else {
+     
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        
+    }
+    
+    // Print cause of reset
+    printf("Cause of most recent device reset was: %s\n\r", getCauseOfResetString(reset_cause));
+
+    
+        
     // Reset virtual COM port text attributes
     terminalTextAttributesReset();
     
