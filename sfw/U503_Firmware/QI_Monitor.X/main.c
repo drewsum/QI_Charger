@@ -45,14 +45,22 @@
 
 #include "pin_macros.h"
 #include "terminal_control.h"
+#include "heartbeat_timer.h"
+#include "ring_buffer_interface.h"
+#include "ring_buffer_LUT.h"
+#include "cause_of_reset.h"
 
 /*
                          Main application
  */
 void main(void)
 {
+
+    // Determine the cause of the most recent reset, save to enum
+    reset_cause = getCauseOfReset();
+    
     // Initialize the device
-    // These are MCC auto-generated functions
+    // These are MCC auto-generated instructions
     SYSTEM_Initialize();
 
     // Enable high priority global interrupts
@@ -60,11 +68,32 @@ void main(void)
 
     // Enable low priority global interrupts.
     INTERRUPT_GlobalInterruptLowEnable();
+    
+    // Setup virtual COM port terminal
+    terminalClearScreen();
+    terminalSetCursorHome();
 
+    // print boot message
+    terminalTextAttributes(GREEN, BLACK, NORMAL);
+    printf("QI Charger Booting...\n\r");
+    
+    // Assign heartbeat timer handler to TMR0 ISR
+    TMR0_SetInterruptHandler(heartbeatTimerHandler);
+    printf("Heartbeat Timer Initialized\n\r");
+    
+    // Reset virtual COM port text attributes
+    terminalTextAttributesReset();
+    
     // Endless loop
-    while (1)
-    {
-        // Add your application code
+    while (1) {
+        
+        // Check eusart ready flag
+        if (eusart2RxStringReady) {
+         
+            terminal_ringBufferPull();
+            
+        }
+        
     }
 }
 /**

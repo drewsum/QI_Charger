@@ -66,6 +66,9 @@ void  INTERRUPT_Initialize (void)
     IPR0bits.IOCIP = 1;
 
 
+    // TMRI - low priority
+    IPR0bits.TMR0IP = 0;    
+
     // INT1I - low priority
     IPR0bits.INT1IP = 0;    
 
@@ -95,7 +98,11 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
 void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
 {
     // interrupt handler
-    if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
+    if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
+    {
+        TMR0_ISR();
+    }
+    else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
     {
         INT1_ISR();
     }

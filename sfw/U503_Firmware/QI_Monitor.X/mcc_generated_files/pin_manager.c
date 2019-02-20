@@ -108,7 +108,6 @@ void PIN_MANAGER_Initialize(void)
     PIE0bits.IOCIE = 1; 
     
 	
-    RB6PPS = 0x0B;   //RB6->EUSART2:TX2;    
     INT0PPS = 0x06;   //RA6->EXT_INT:INT0;    
     RC4PPS = 0x0B;   //RC4->EUSART2:TX2;    
     INT1PPS = 0x07;   //RA7->EXT_INT:INT1;    

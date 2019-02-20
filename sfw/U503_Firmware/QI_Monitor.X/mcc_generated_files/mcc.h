@@ -53,6 +53,8 @@
 #include <stdbool.h>
 #include "interrupt_manager.h"
 #include "ext_int.h"
+#include "memory.h"
+#include "tmr0.h"
 #include "eusart2.h"
 
 

@@ -2,6 +2,7 @@
 #include <xc.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 
 #include "terminal_control.h"
 // #include "usb_uart.h"

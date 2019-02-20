@@ -70,12 +70,12 @@
 #pragma config XINST = OFF    // Extended Instruction Set Enable bit->Extended Instruction Set and Indexed Addressing Mode disabled
 
 // CONFIG3L
-#pragma config WDTCPS = WDTCPS_6    // WDT Period Select bits->Divider ratio 1:2048
-#pragma config WDTE = OFF    // WDT operating mode->WDT Disabled
+#pragma config WDTCPS = WDTCPS_11    // WDT Period Select bits->Divider ratio 1:65536
+#pragma config WDTE = NSLEEP    // WDT operating mode->WDT enabled while sleep=0, suspended when sleep=1
 
 // CONFIG3H
 #pragma config WDTCWS = WDTCWS_7    // WDT Window Select bits->window always open (100%); software control; keyed access not required
-#pragma config WDTCCS = SC    // WDT input clock selector->Software Control
+#pragma config WDTCCS = LFINTOSC    // WDT input clock selector->WDT reference clock is the 31.0 kHz LFINTOSC
 
 // CONFIG4L
 #pragma config WRT0 = OFF    // Write Protection Block 0->Block 0 (000800-003FFFh) not write-protected
