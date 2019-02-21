@@ -9,6 +9,7 @@
 #include "device_IDs.h"
 #include "heartbeat_timer.h"
 #include "cause_of_reset.h"
+#include "adc_postprocessing.h"
 
 void ringBufferLUT(char * line) {
 
@@ -251,52 +252,68 @@ void ringBufferLUT(char * line) {
 //    }
     
     
-//    // Report POS3P3 ADC Conversion Result
-//    else if((0 == strcmp(line, "Measure POS3P3?"))) {
-//
-//        terminalTextAttributes(CYAN, BLACK, NORMAL);
-//        printf("+3.3V rail measured as +%.3f Volts\n\r", POS3P3_ADC_Result);
-//        terminalTextAttributesReset();
-//        
-//    }
-//    
-//    // Report POS12 ADC Conversion Result
-//    else if((0 == strcmp(line, "Measure POS12?"))) {
-//     
-//        terminalTextAttributes(CYAN, BLACK, NORMAL);
-//        printf("+12V rail measured as +%.3f Volts\n\r", POS12_ADC_Result);
-//        terminalTextAttributesReset();
-//        
-//    }
-//    
-//    // Report Die temp ADC Conversion Result
-//    else if((0 == strcmp(line, "Measure Die Temp?"))) {
-//     
-//        terminalTextAttributes(CYAN, BLACK, NORMAL);
-//        printf("Die Temperature measured as %.3fC\n\r", Temp_ADC_Result);
-//        terminalTextAttributesReset();
-//
-//        
-//        
-//    }
-//    
-//    // Report FVR buffer 1 ADC Conversion Result
-//    else if((0 == strcmp(line, "Measure FVR?"))) {
-//     
-//        terminalTextAttributes(CYAN, BLACK, NORMAL);
-//        printf("Fixed Voltage Reference Buffer 1 measured as %.3f Volts\n\r", FVR_ADC_Result);
-//        terminalTextAttributesReset();
-//        
-//    }
-//    
-//    // Report VSS ADC Conversion Result
-//    else if((0 == strcmp(line, "Measure AVSS?"))) {
-//     
-//        terminalTextAttributes(CYAN, BLACK, NORMAL);
-//        printf("AVSS measured as %.3f Volts\n\r", AVSS_ADC_Result);
-//        terminalTextAttributesReset();
-//        
-//    }    
+    // Report POS3P3 ADC Conversion Result
+    else if((0 == strcmp(line, "Measure POS5?"))) {
+
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("+5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report POS12 ADC Conversion Result
+    else if((0 == strcmp(line, "Measure POS12?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("+12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report Die temp ADC Conversion Result
+    else if((0 == strcmp(line, "Measure Die Temp?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Die Temperature measured as %+.3fC\n\r", adc_results.die_temp_adc_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report POS12 current
+    else if ((0 == strcmp(line, "Measure POS12 Current?"))) {
+        
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("+12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report !I current
+    else if ((0 == strcmp(line, "Measure QI Current?"))) {
+        
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report FVR buffer 1 ADC Conversion Result
+    else if((0 == strcmp(line, "Measure FVR?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report VSS ADC Conversion Result
+    else if((0 == strcmp(line, "Measure AVSS?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
+        terminalTextAttributesReset();
+        
+    }    
     
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
@@ -316,6 +333,13 @@ void ringBufferLUT(char * line) {
                 "    Device On Time?: Prints the device on time since last device reset\n\r"
                 "    Enable QI: Enabled QI wireless power conversion\n\r"
                 "    Disable QI: Disables QI wireless power conversion\n\r"
+                "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
+                "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
+                "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
+                "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
+                "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
+                "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
+                "    Measure Die Temp?: Prints the ADC conversion result for the device die temperature\n\r"
                 );
         
         printf("\n\rHelp messages and neutral responses appear in yellow\n\r");

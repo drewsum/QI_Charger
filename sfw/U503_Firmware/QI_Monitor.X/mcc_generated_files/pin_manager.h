@@ -59,6 +59,110 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set POS12_ADC aliases
+#define POS12_ADC_TRIS                 TRISAbits.TRISA0
+#define POS12_ADC_LAT                  LATAbits.LATA0
+#define POS12_ADC_PORT                 PORTAbits.RA0
+#define POS12_ADC_WPU                  WPUAbits.WPUA0
+#define POS12_ADC_OD                   ODCONAbits.ODCA0
+#define POS12_ADC_ANS                  ANSELAbits.ANSELA0
+#define POS12_ADC_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define POS12_ADC_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define POS12_ADC_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define POS12_ADC_GetValue()           PORTAbits.RA0
+#define POS12_ADC_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define POS12_ADC_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define POS12_ADC_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
+#define POS12_ADC_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
+#define POS12_ADC_SetPushPull()        do { ODCONAbits.ODCA0 = 0; } while(0)
+#define POS12_ADC_SetOpenDrain()       do { ODCONAbits.ODCA0 = 1; } while(0)
+#define POS12_ADC_SetAnalogMode()      do { ANSELAbits.ANSELA0 = 1; } while(0)
+#define POS12_ADC_SetDigitalMode()     do { ANSELAbits.ANSELA0 = 0; } while(0)
+
+// get/set POS12_ISNS_ADC aliases
+#define POS12_ISNS_ADC_TRIS                 TRISAbits.TRISA1
+#define POS12_ISNS_ADC_LAT                  LATAbits.LATA1
+#define POS12_ISNS_ADC_PORT                 PORTAbits.RA1
+#define POS12_ISNS_ADC_WPU                  WPUAbits.WPUA1
+#define POS12_ISNS_ADC_OD                   ODCONAbits.ODCA1
+#define POS12_ISNS_ADC_ANS                  ANSELAbits.ANSELA1
+#define POS12_ISNS_ADC_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
+#define POS12_ISNS_ADC_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
+#define POS12_ISNS_ADC_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
+#define POS12_ISNS_ADC_GetValue()           PORTAbits.RA1
+#define POS12_ISNS_ADC_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
+#define POS12_ISNS_ADC_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
+#define POS12_ISNS_ADC_SetPullup()          do { WPUAbits.WPUA1 = 1; } while(0)
+#define POS12_ISNS_ADC_ResetPullup()        do { WPUAbits.WPUA1 = 0; } while(0)
+#define POS12_ISNS_ADC_SetPushPull()        do { ODCONAbits.ODCA1 = 0; } while(0)
+#define POS12_ISNS_ADC_SetOpenDrain()       do { ODCONAbits.ODCA1 = 1; } while(0)
+#define POS12_ISNS_ADC_SetAnalogMode()      do { ANSELAbits.ANSELA1 = 1; } while(0)
+#define POS12_ISNS_ADC_SetDigitalMode()     do { ANSELAbits.ANSELA1 = 0; } while(0)
+
+// get/set RA2 procedures
+#define RA2_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define RA2_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define RA2_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define RA2_GetValue()              PORTAbits.RA2
+#define RA2_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define RA2_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define RA2_SetPullup()             do { WPUAbits.WPUA2 = 1; } while(0)
+#define RA2_ResetPullup()           do { WPUAbits.WPUA2 = 0; } while(0)
+#define RA2_SetAnalogMode()         do { ANSELAbits.ANSELA2 = 1; } while(0)
+#define RA2_SetDigitalMode()        do { ANSELAbits.ANSELA2 = 0; } while(0)
+
+// get/set RA3 procedures
+#define RA3_SetHigh()            do { LATAbits.LATA3 = 1; } while(0)
+#define RA3_SetLow()             do { LATAbits.LATA3 = 0; } while(0)
+#define RA3_Toggle()             do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0)
+#define RA3_GetValue()              PORTAbits.RA3
+#define RA3_SetDigitalInput()    do { TRISAbits.TRISA3 = 1; } while(0)
+#define RA3_SetDigitalOutput()   do { TRISAbits.TRISA3 = 0; } while(0)
+#define RA3_SetPullup()             do { WPUAbits.WPUA3 = 1; } while(0)
+#define RA3_ResetPullup()           do { WPUAbits.WPUA3 = 0; } while(0)
+#define RA3_SetAnalogMode()         do { ANSELAbits.ANSELA3 = 1; } while(0)
+#define RA3_SetDigitalMode()        do { ANSELAbits.ANSELA3 = 0; } while(0)
+
+// get/set POS5_ADC aliases
+#define POS5_ADC_TRIS                 TRISAbits.TRISA4
+#define POS5_ADC_LAT                  LATAbits.LATA4
+#define POS5_ADC_PORT                 PORTAbits.RA4
+#define POS5_ADC_WPU                  WPUAbits.WPUA4
+#define POS5_ADC_OD                   ODCONAbits.ODCA4
+#define POS5_ADC_ANS                  ANSELAbits.ANSELA4
+#define POS5_ADC_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
+#define POS5_ADC_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
+#define POS5_ADC_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
+#define POS5_ADC_GetValue()           PORTAbits.RA4
+#define POS5_ADC_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
+#define POS5_ADC_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
+#define POS5_ADC_SetPullup()          do { WPUAbits.WPUA4 = 1; } while(0)
+#define POS5_ADC_ResetPullup()        do { WPUAbits.WPUA4 = 0; } while(0)
+#define POS5_ADC_SetPushPull()        do { ODCONAbits.ODCA4 = 0; } while(0)
+#define POS5_ADC_SetOpenDrain()       do { ODCONAbits.ODCA4 = 1; } while(0)
+#define POS5_ADC_SetAnalogMode()      do { ANSELAbits.ANSELA4 = 1; } while(0)
+#define POS5_ADC_SetDigitalMode()     do { ANSELAbits.ANSELA4 = 0; } while(0)
+
+// get/set QI_ISNS_ADC aliases
+#define QI_ISNS_ADC_TRIS                 TRISAbits.TRISA5
+#define QI_ISNS_ADC_LAT                  LATAbits.LATA5
+#define QI_ISNS_ADC_PORT                 PORTAbits.RA5
+#define QI_ISNS_ADC_WPU                  WPUAbits.WPUA5
+#define QI_ISNS_ADC_OD                   ODCONAbits.ODCA5
+#define QI_ISNS_ADC_ANS                  ANSELAbits.ANSELA5
+#define QI_ISNS_ADC_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define QI_ISNS_ADC_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define QI_ISNS_ADC_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define QI_ISNS_ADC_GetValue()           PORTAbits.RA5
+#define QI_ISNS_ADC_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define QI_ISNS_ADC_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define QI_ISNS_ADC_SetPullup()          do { WPUAbits.WPUA5 = 1; } while(0)
+#define QI_ISNS_ADC_ResetPullup()        do { WPUAbits.WPUA5 = 0; } while(0)
+#define QI_ISNS_ADC_SetPushPull()        do { ODCONAbits.ODCA5 = 0; } while(0)
+#define QI_ISNS_ADC_SetOpenDrain()       do { ODCONAbits.ODCA5 = 1; } while(0)
+#define QI_ISNS_ADC_SetAnalogMode()      do { ANSELAbits.ANSELA5 = 1; } while(0)
+#define QI_ISNS_ADC_SetDigitalMode()     do { ANSELAbits.ANSELA5 = 0; } while(0)
+
 // get/set RA6 procedures
 #define RA6_SetHigh()            do { LATAbits.LATA6 = 1; } while(0)
 #define RA6_SetLow()             do { LATAbits.LATA6 = 0; } while(0)

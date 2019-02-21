@@ -49,6 +49,7 @@
 #include "ring_buffer_interface.h"
 #include "ring_buffer_LUT.h"
 #include "cause_of_reset.h"
+#include "adc_postprocessing.h"
 
 /*
                          Main application
@@ -66,6 +67,12 @@ void main(void)
     // Assign heartbeat timer handler to TMR0 ISR
     TMR0_SetInterruptHandler(heartbeatTimerHandler);
 
+    // Assign ADC acquisitionTimerHandler to TMR2 ISR
+    TMR2_SetInterruptHandler(ADC_acquisitionTimerHandler);
+    
+    // Call ADC callback upon ADCC interrupt
+    ADCC_SetADTIInterruptHandler(ADC_PostProcessingHandler);
+    
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
 
