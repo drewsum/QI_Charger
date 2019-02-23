@@ -85,7 +85,7 @@ uint8_t qi_isns_average_index = 0;
 double adc_result_scaling;
 
 // This is an offset added to the die temperature ADC conversion result
-double Temp_ADC_Offset = 0.0;
+const float temp_adc_offset = 373.31;
 
 // This is the ADC postprocessing handler function
 // it operates on raw ADC data to convert it to meaningful measurements

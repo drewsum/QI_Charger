@@ -59,6 +59,8 @@ void FVR_Initialize(void)
 {
     // FVRRDY disabled; CDAFVR off; FVREN enabled; TSRNG Hi_range; ADFVR 4x; TSEN enabled; 
     FVRCON = 0xB3;
+    FVRCONbits.TSRNG = 1;
+    FVRCONbits.TSEN = 1;
 }
 
 bool FVR_IsOutputReady(void)

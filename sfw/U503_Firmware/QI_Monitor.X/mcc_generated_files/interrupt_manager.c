@@ -116,10 +116,15 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     {
         TMR0_ISR();
     }
+    else if(PIE0bits.INT0IE == 1 && PIR0bits.INT0IF == 1)
+    {
+        INT0_ISR();
+    }
     else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
     {
         INT1_ISR();
     }
+    
     else
     {
         //Unhandled Interrupt

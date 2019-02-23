@@ -98,8 +98,7 @@ void ADC_PostProcessingHandler(void) {
             break;
             
         case channel_Temp:
-            adc_results.die_temp_adc_result = ((0.659 - (adc_results.pos5_adc_result/4.0) * (1.0 - ADCC_GetConversionResult()/1023.0)) / .00132) - 40.0 + Temp_ADC_Offset;
-            
+            adc_results.die_temp_adc_result = ((0.659 - (5.0 / 4.0) * (1.0 - ADCC_GetFilterValue()/1023.0)) / .00132) - 40.0 + temp_adc_offset;
             next_adc_channel = channel_VSS;
             break;
             

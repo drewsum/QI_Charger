@@ -274,7 +274,7 @@ void ringBufferLUT(char * line) {
     else if((0 == strcmp(line, "Measure Die Temp?"))) {
      
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Die Temperature measured as %+.3fC\n\r", adc_results.die_temp_adc_result);
+        printf("Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
         terminalTextAttributesReset();
         
     }

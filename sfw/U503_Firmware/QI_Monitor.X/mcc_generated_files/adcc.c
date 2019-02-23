@@ -100,7 +100,7 @@ void ADCC_Initialize(void)
     // ADACQ 255; 
     ADACQ = 0xFF;
     
-
+    
     // Clear the ADC Threshold interrupt flag
     PIR1bits.ADTIF = 0;
     // Enabling ADCC threshold interrupt.
@@ -112,7 +112,7 @@ void ADCC_Initialize(void)
 void ADCC_StartConversion(adcc_channel_t channel)
 {
     // select the A/D channel
-    ADPCH = channel;      
+    ADPCH = channel;
   
     // Turn on the ADC module
     ADCON0bits.ADON = 1;

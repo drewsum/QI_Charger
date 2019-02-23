@@ -103,12 +103,27 @@ void main(void)
     
     // Print cause of reset
     printf("Cause of most recent device reset was: %s\n\r", getCauseOfResetString(reset_cause));
-        
-    // Reset virtual COM port text attributes
-    terminalTextAttributesReset();
-    
+
+    terminalTextAttributes(GREEN, BLACK, NORMAL);    
     // Enable QI power conversion
     QI_STANDBY_PIN = 0;
+    printf("QI Wireless Power Conversion Enabled\n\r");
+
+    terminalTextAttributes(YELLOW, BLACK, NORMAL);
+    printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
+    terminalTextAttributes(GREEN, BLACK, NORMAL);
+    printf("System parameters and affirmative responses appear in green\n\r");
+    terminalTextAttributes(CYAN, BLACK, NORMAL);
+    printf("Measurement responses appear in cyan\n\r");
+    terminalTextAttributes(RED, BLACK, NORMAL);
+    printf("Errors and negative responses appear in red\n\r");
+    terminalTextAttributesReset();
+    printf("User input appears in white\n\r");
+    terminalTextAttributes(YELLOW, BLACK, NORMAL);
+    printf("\n\rCall 'Help' for list of supported commands\n\r");
+
+    // Reset virtual COM port text attributes
+    terminalTextAttributesReset();
     
     // Endless loop
     while (1) {
