@@ -1,9 +1,11 @@
 
 #include <xc.h>
 #include <float.h>
+#include <math.h>
 
 #include "adc_postprocessing.h"
 #include "mcc_generated_files/adcc.h"
+#include "mcc_generated_files/tmr2.h"
 
 // This is the ADC postprocessing handler function
 // it operates on raw ADC data to convert it to meaningful measurements
@@ -56,19 +58,47 @@ void ADC_PostProcessingHandler(void) {
             break;
             
         case POS12_ISNS_ADC:
-            adc_results.pos12_isns_adc_result = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 0.501002004 - adc_results.avss_adc_result) * adc_result_scaling;
+            
+            pos12_isns_average_buffer[pos12_isns_average_index] = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 0.501002004 - adc_results.avss_adc_result) * adc_result_scaling;
+            pos12_isns_average_index++;
+            
+            // If we've gathered set number of samples for averaging, reset count
+            if (pos12_isns_average_index == POS12_ISNS_AVG_COUNT) {
+                pos12_isns_average_index = 0;
+            }
+            
+            // Compute average of last few POS12_ISNS conversions, and scale
+            adc_results.pos12_isns_adc_result = 0.0;
+            for (uint8_t i = 0; i < POS12_ISNS_AVG_COUNT; i++) {
+                adc_results.pos12_isns_adc_result += fabs(pos12_isns_average_buffer[i]);
+            }
+            adc_results.pos12_isns_adc_result /= (float) POS12_ISNS_AVG_COUNT;
             
             next_adc_channel = QI_ISNS_ADC;
             break;
             
         case QI_ISNS_ADC:
-            adc_results.pos12_isns_adc_result = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 1.004016064 - adc_results.avss_adc_result) * adc_result_scaling;
+
+            qi_isns_average_buffer[qi_isns_average_index] = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 1.004016064 - adc_results.avss_adc_result) * adc_result_scaling;
+            qi_isns_average_index++;
+            
+            // If we've gathered set number of samples for averaging, reset count
+            if (qi_isns_average_index == QI_ISNS_AVG_COUNT) {
+                qi_isns_average_index = 0;
+            }
+            
+            // Compute average of last few QI_ISNS conversions, and scale
+            adc_results.qi_isns_adc_result = 0.0;
+            for (uint8_t i = 0; i < QI_ISNS_AVG_COUNT; i++) {
+                adc_results.qi_isns_adc_result += fabs(qi_isns_average_buffer[i]);
+            }
+            adc_results.qi_isns_adc_result /= (float) QI_ISNS_AVG_COUNT;
             
             next_adc_channel = channel_Temp;
             break;
             
         case channel_Temp:
-            adc_results.die_temp_adc_result = ((0.659 - (adc_results.pos5_adc_result/4.0) * (1 - ADCC_GetConversionResult()/1023.0)) / .00132) - 40.0 + Temp_ADC_Offset;
+            adc_results.die_temp_adc_result = ((0.659 - (adc_results.pos5_adc_result/4.0) * (1.0 - ADCC_GetConversionResult()/1023.0)) / .00132) - 40.0 + Temp_ADC_Offset;
             
             next_adc_channel = channel_VSS;
             break;
@@ -89,7 +119,13 @@ void ADC_PostProcessingHandler(void) {
 //        error_handler.ADC_general_error_flag = true;
 //    }
     
-
+    // Run post-processing calculations
+    adc_calculations.input_power = adc_results.pos12_adc_result * adc_results.pos12_isns_adc_result;
+    adc_calculations.output_power = adc_results.pos5_adc_result * adc_results.qi_isns_adc_result;
+    adc_calculations.efficiency = (adc_calculations.output_power / adc_calculations.input_power) * 100.0;
+    
+    // Re-start Acq timer
+    TMR2_StartTimer();
     
 }
 
@@ -97,6 +133,11 @@ void ADC_PostProcessingHandler(void) {
 // It sets up to ADC to make conversions at a fixed rate
 void ADC_acquisitionTimerHandler(void) {
  
+    // Stop Acq timer and clear to be safe, give time for floating point math when
+    // ADC conversion is done
+    TMR2_StopTimer();
+    TMR2 = 0;
+    
     // Empty sampling cap
     ADCC_DischargeSampleCapacitor();
     

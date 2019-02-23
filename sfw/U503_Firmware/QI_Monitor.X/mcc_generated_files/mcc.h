@@ -54,10 +54,10 @@
 #include "interrupt_manager.h"
 #include "tmr2.h"
 #include "tmr0.h"
-#include "fvr.h"
 #include "adcc.h"
-#include "ext_int.h"
+#include "fvr.h"
 #include "memory.h"
+#include "ext_int.h"
 #include "eusart2.h"
 
 

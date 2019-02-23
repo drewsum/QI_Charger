@@ -164,31 +164,16 @@ void TMR2_LoadPeriodRegister(uint8_t periodVal)
 
 void TMR2_ISR(void)
 {
-    static volatile unsigned int CountCallBack = 0;
 
     // clear the TMR2 interrupt flag
     PIR4bits.TMR2IF = 0;
 
-    // callback function - called every 5th pass
-    if (++CountCallBack >= TMR2_INTERRUPT_TICKER_FACTOR)
-    {
-        // ticker function call
-        TMR2_CallBack();
-
-        // reset ticker counter
-        CountCallBack = 0;
-    }
-}
-
-void TMR2_CallBack(void)
-{
-    // Add your custom callback code here
-    // this code executes every TMR2_INTERRUPT_TICKER_FACTOR periods of TMR2
     if(TMR2_InterruptHandler)
     {
         TMR2_InterruptHandler();
     }
 }
+
 
 void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
     TMR2_InterruptHandler = InterruptHandler;

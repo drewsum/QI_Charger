@@ -35,6 +35,17 @@
 
 #include "mcc_generated_files/adcc.h"
 
+// The number of POS12_ISNS ADC acquisitions to average
+#define POS12_ISNS_AVG_COUNT        16
+// A scaling factor for the averaged POS12_ISNS_ADC conversion
+#define POS12_ISNS_AVG_SCALING_FACT  1.0
+
+// The number of POS12_ISNS ADC acquisitions to average
+#define QI_ISNS_AVG_COUNT        16
+// A scaling factor for the averaged POS12_ISNS_ADC conversion
+#define QI_ISNS_AVG_SCALING_FACT  1.0
+
+
 // Global variables
 adcc_channel_t next_adc_channel = channel_VSS;                      // The next channel for the ADC to convert
 
@@ -50,6 +61,25 @@ struct adc_results_t {
     double die_temp_adc_result;             // ADC conversion result for die temperature
     
 } adc_results;
+
+// This structure holds calculations based off of ADC measurement results
+struct adc_calculations_t {
+    
+    float input_power;                     // POS12 * POS12_ISNS
+    float output_power;                    // POS5 * QI_ISNS
+    float efficiency;                      // output_power / input_power * 100.0
+    
+} adc_calculations;
+
+// This array holds POS12_ISNS_AVG_COUNT values for averaging POS12_ISNS
+double pos12_isns_average_buffer[POS12_ISNS_AVG_COUNT];
+// This uint8_t keeps track of which average index we're saving data into for pos12_isns_average
+uint8_t pos12_isns_average_index = 0;
+
+// This array holds QI_ISNS_AVG_COUNT values for averaging QI_ISNS
+double qi_isns_average_buffer[QI_ISNS_AVG_COUNT];
+// This uint8_t keeps track of which average index we're saving data into for qi_isns_average
+uint8_t qi_isns_average_index = 0;
 
 // This is a scaling factor that is applied to all ADC conversion results
 double adc_result_scaling;

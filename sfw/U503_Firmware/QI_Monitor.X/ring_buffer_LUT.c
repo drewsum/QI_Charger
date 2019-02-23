@@ -315,6 +315,33 @@ void ringBufferLUT(char * line) {
         
     }    
     
+    // Report input power calculation
+    else if ((0 == strcmp(line, "Measure Input Power?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report output power calculation
+    else if ((0 == strcmp(line, "Measure Output Power?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report efficiency calculation
+    else if ((0 == strcmp(line, "Measure Efficiency?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
+        terminalTextAttributesReset();
+        
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
@@ -337,6 +364,9 @@ void ringBufferLUT(char * line) {
                 "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
                 "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
                 "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
+                "    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
+                "    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
+                "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
                 "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
                 "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
                 "    Measure Die Temp?: Prints the ADC conversion result for the device die temperature\n\r"

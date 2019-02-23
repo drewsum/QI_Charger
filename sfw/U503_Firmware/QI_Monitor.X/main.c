@@ -103,11 +103,12 @@ void main(void)
     
     // Print cause of reset
     printf("Cause of most recent device reset was: %s\n\r", getCauseOfResetString(reset_cause));
-
-    
         
     // Reset virtual COM port text attributes
     terminalTextAttributesReset();
+    
+    // Enable QI power conversion
+    QI_STANDBY_PIN = 0;
     
     // Endless loop
     while (1) {
