@@ -56,7 +56,7 @@ void ringBufferLUT(char * line) {
     }
 
     // Identification string
-    else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
+    else if((0 == strcmp(line, "*IDN?"))) {
 
         terminalTextAttributes(GREEN, BLACK, NORMAL);
         printf("QI Charger with Digital Monitoring, by Drew Maatman\n\r");
@@ -190,32 +190,8 @@ void ringBufferLUT(char * line) {
                 printf("    General ADC error\n\r");
             }
             
-            if (error_handler.AVSS_ADC_error_flag) {
-                printf("    AVSS\n\r");
-            }
-            
             if (error_handler.FVR_ADC_error_flag) {
                 printf("    FVR\n\r");
-            }
-            
-            if (error_handler.QI_ISNS_ADC_error_flag) {
-                printf("    QI ISNS\n\r");
-            }
-            
-            if (error_handler.POS12_ISNS_ADC_error_flag) {
-                printf("    POS12 ISNS\n\r");
-            }
-            
-            if (error_handler.POS12_ADC_error_flag) {
-                printf("    POS12\n\r");
-            }
-            
-            if (error_handler.POS5_ADC_error_flag) {
-                printf("    POS5\n\r");
-            }
-            
-            if (error_handler.Temp_ADC_error_flag) {
-                printf("    Die Temp\n\r");
             }
             
             terminalTextAttributes(YELLOW, BLACK, NORMAL);

@@ -40,12 +40,6 @@
 // Error handling structure
 struct error_struct {
     
-    bool POS12_ISNS_ADC_error_flag;
-    bool QI_ISNS_ADC_error_flag;
-    bool POS12_ADC_error_flag;
-    bool POS5_ADC_error_flag;
-    bool AVSS_ADC_error_flag;
-    bool Temp_ADC_error_flag;
     bool FVR_ADC_error_flag;
     bool ADC_general_error_flag;
     bool I2C_General_error_flag;

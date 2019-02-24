@@ -104,8 +104,6 @@ void PIN_MANAGER_Initialize(void)
 
 
    
-    // Enable IOCI interrupt 
-    PIE0bits.IOCIE = 1; 
     
 	
     SSP2DATPPS = 0x0C;   //RB4->MSSP2:SDA2;    

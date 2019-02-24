@@ -7,12 +7,17 @@
 
 #include "pin_macros.h"
 
+#include "mcc_generated_files/mcc.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
 
+    INTERRUPT_GlobalInterruptHighDisable();
+    INTERRUPT_GlobalInterruptLowDisable();
+    
     // Toggle heartbeat LED
-    HEARTBEAT_LED_PIN = !(HEARTBEAT_LED_PIN);
+    HEARTBEAT_LED_PIN = ~(HEARTBEAT_LED_PIN);
     
     // Increment on time
     device_on_time++;
@@ -20,6 +25,13 @@ void heartbeatTimerHandler(void) {
     // Kick the dog
     CLRWDT();
     
+    INTERRUPT_GlobalInterruptHighEnable();
+    INTERRUPT_GlobalInterruptLowEnable();
+    
+    TMR0 = 0;
+    
+    // clear the TMR0 interrupt flag
+    PIR0bits.TMR0IF = 0;
     
 }
 

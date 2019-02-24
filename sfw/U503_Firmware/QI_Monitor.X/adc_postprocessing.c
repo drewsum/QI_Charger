@@ -24,13 +24,7 @@ void ADC_PostProcessingHandler(void) {
         case channel_VSS:
             
             adc_results.avss_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0);
-            
-            if (adc_results.avss_adc_result > 0.01) {
-             
-                error_handler.AVSS_ADC_error_flag = true;
-                
-            }
-            
+                        
             next_adc_channel = channel_FVR_buf1;
             
             break;
@@ -54,23 +48,11 @@ void ADC_PostProcessingHandler(void) {
         case POS5_ADC:
             adc_results.pos5_adc_result = (((ADCC_GetFilterValue()) * (5.0/1023.0)) * 2.0 - adc_results.avss_adc_result) * adc_result_scaling;
             
-            if (adc_results.pos5_adc_result > 5.5 || adc_results.pos5_adc_result < 4.5) {
-             
-                error_handler.POS5_ADC_error_flag = true;
-                
-            }
-            
             next_adc_channel = POS12_ADC;
             break;
             
         case POS12_ADC:
             adc_results.pos12_adc_result = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 2.96078 - adc_results.avss_adc_result) * adc_result_scaling;
-            
-            if (adc_results.pos12_adc_result > 13.2 || adc_results.pos12_adc_result < 10.8) {
-             
-                error_handler.POS12_ADC_error_flag = true;
-                
-            }
             
             next_adc_channel = POS12_ISNS_ADC;
             break;
@@ -83,19 +65,12 @@ void ADC_PostProcessingHandler(void) {
             // If we've gathered set number of samples for averaging, reset count
             if (pos12_isns_average_index == POS12_ISNS_AVG_COUNT) {
                 pos12_isns_average_index = 0;
-            }
-            
-            // Compute average of last few POS12_ISNS conversions, and scale
-            adc_results.pos12_isns_adc_result = 0.0;
-            for (uint8_t i = 0; i < POS12_ISNS_AVG_COUNT; i++) {
-                adc_results.pos12_isns_adc_result += fabs(pos12_isns_average_buffer[i]);
-            }
-            adc_results.pos12_isns_adc_result /= (float) POS12_ISNS_AVG_COUNT;
-            
-            if (adc_results.pos12_isns_adc_result > 1.2 || adc_results.pos12_isns_adc_result < 0.0) {
-             
-                error_handler.POS12_ISNS_ADC_error_flag = true;
-                
+                // Compute average of last few POS12_ISNS conversions, and scale
+                adc_results.pos12_isns_adc_result = 0.0;
+                for (uint8_t i = 0; i < POS12_ISNS_AVG_COUNT; i++) {
+                    adc_results.pos12_isns_adc_result += fabs(pos12_isns_average_buffer[i]);
+                }
+                adc_results.pos12_isns_adc_result /= (float) POS12_ISNS_AVG_COUNT;
             }
             
             next_adc_channel = QI_ISNS_ADC;
@@ -109,19 +84,12 @@ void ADC_PostProcessingHandler(void) {
             // If we've gathered set number of samples for averaging, reset count
             if (qi_isns_average_index == QI_ISNS_AVG_COUNT) {
                 qi_isns_average_index = 0;
-            }
-            
-            // Compute average of last few QI_ISNS conversions, and scale
-            adc_results.qi_isns_adc_result = 0.0;
-            for (uint8_t i = 0; i < QI_ISNS_AVG_COUNT; i++) {
-                adc_results.qi_isns_adc_result += fabs(qi_isns_average_buffer[i]);
-            }
-            adc_results.qi_isns_adc_result /= (float) QI_ISNS_AVG_COUNT;
-            
-            if (adc_results.qi_isns_adc_result > 2.5 || adc_results.qi_isns_adc_result < 0.0) {
-             
-                error_handler.QI_ISNS_ADC_error_flag = true;
-                
+                // Compute average of last few QI_ISNS conversions, and scale
+                adc_results.qi_isns_adc_result = 0.0;
+                for (uint8_t i = 0; i < QI_ISNS_AVG_COUNT; i++) {
+                    adc_results.qi_isns_adc_result += fabs(qi_isns_average_buffer[i]);
+                }
+                adc_results.qi_isns_adc_result /= (float) QI_ISNS_AVG_COUNT;
             }
             
             next_adc_channel = channel_Temp;
@@ -129,12 +97,6 @@ void ADC_PostProcessingHandler(void) {
             
         case channel_Temp:
             adc_results.die_temp_adc_result = ((0.659 - (5.0 / 4.0) * (1.0 - ADCC_GetFilterValue()/1023.0)) / .00132) - 40.0 + temp_adc_offset;
-            
-            if (adc_results.die_temp_adc_result > 100.0 || adc_results.die_temp_adc_result < 0.0) {
-             
-                error_handler.Temp_ADC_error_flag = true;
-                
-            }
             
             next_adc_channel = channel_VSS;
             break;

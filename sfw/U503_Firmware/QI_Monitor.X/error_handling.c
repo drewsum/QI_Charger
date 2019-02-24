@@ -13,14 +13,8 @@ bool getADCError(void) {
  
     // If an ADC error has been detected
     if (    error_handler.ADC_general_error_flag    ||
-            error_handler.AVSS_ADC_error_flag       ||
-            error_handler.FVR_ADC_error_flag        ||
-            error_handler.QI_ISNS_ADC_error_flag    ||
-            error_handler.POS12_ISNS_ADC_error_flag ||
-            error_handler.POS12_ADC_error_flag      ||
-            error_handler.POS5_ADC_error_flag       ||
-            error_handler.Temp_ADC_error_flag       ) {
-     
+            error_handler.FVR_ADC_error_flag        ) {
+        
         return true;
         
     }
@@ -80,12 +74,6 @@ void updateErrorLEDs(void) {
 void clearADCErrors(void) {
     
     // Clear error flags in error handler structure
-    error_handler.QI_ISNS_ADC_error_flag      = false;
-    error_handler.POS12_ISNS_ADC_error_flag   = false;
-    error_handler.POS12_ADC_error_flag        = false;
-    error_handler.POS5_ADC_error_flag         = false;
-    error_handler.AVSS_ADC_error_flag         = false;
-    error_handler.Temp_ADC_error_flag         = false;
     error_handler.FVR_ADC_error_flag          = false;
     error_handler.ADC_general_error_flag      = false;
     
