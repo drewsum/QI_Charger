@@ -50,6 +50,8 @@
 #include "ring_buffer_LUT.h"
 #include "cause_of_reset.h"
 #include "adc_postprocessing.h"
+#include "error_handling.h"
+#include "LM73_I2C.h"
 
 /*
                          Main application
@@ -83,6 +85,9 @@ void main(void)
     terminalClearScreen();
     terminalSetCursorHome();
 
+    // Setup I2C temp sensors
+    LM73TempSensorInitialize();
+    
     // print boot message
     terminalTextAttributes(GREEN, BLACK, NORMAL);
     printf("QI Charger with Digital Monitoring\n\r"
@@ -134,6 +139,9 @@ void main(void)
             terminal_ringBufferPull();
             
         }
+        
+        // Update error LEDs based on error handler state
+        updateErrorLEDs();
         
     }
 }

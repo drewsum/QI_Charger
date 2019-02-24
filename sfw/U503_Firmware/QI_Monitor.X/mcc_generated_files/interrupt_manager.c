@@ -78,6 +78,12 @@ void  INTERRUPT_Initialize (void)
     // INT1I - low priority
     IPR0bits.INT1IP = 0;    
 
+    // BCLI - low priority
+    IPR3bits.BCL2IP = 0;    
+
+    // SSPI - low priority
+    IPR3bits.SSP2IP = 0;    
+
 }
 
 void __interrupt() INTERRUPT_InterruptManagerHigh (void)
@@ -124,7 +130,14 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     {
         INT1_ISR();
     }
-    
+    else if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
+    {
+        I2C2_BusCollisionISR();
+    }
+    else if(PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
+    {
+        I2C2_ISR();
+    }
     else
     {
         //Unhandled Interrupt

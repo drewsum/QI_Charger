@@ -6,6 +6,7 @@
 #include "adc_postprocessing.h"
 #include "mcc_generated_files/adcc.h"
 #include "mcc_generated_files/tmr2.h"
+#include "error_handling.h"
 
 // This is the ADC postprocessing handler function
 // it operates on raw ADC data to convert it to meaningful measurements
@@ -24,12 +25,11 @@ void ADC_PostProcessingHandler(void) {
             
             adc_results.avss_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0);
             
-//            if ((adc_results.avss_adc_result > 0.01) || ADCC_HasAccumulatorOverflowed()) {
-//             
-//                // error_handler.AVSS_ADC_error_flag = true;
-//                return;
-//                
-//            }
+            if (adc_results.avss_adc_result > 0.01) {
+             
+                error_handler.AVSS_ADC_error_flag = true;
+                
+            }
             
             next_adc_channel = channel_FVR_buf1;
             
@@ -41,6 +41,12 @@ void ADC_PostProcessingHandler(void) {
             adc_results.fvr_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0) + adc_results.avss_adc_result;
             adc_result_scaling = 4.096/adc_results.fvr_adc_result;
             
+            if (adc_results.fvr_adc_result > 5.0 || adc_results.fvr_adc_result < 3.9) {
+             
+                error_handler.FVR_ADC_error_flag = true;
+                
+            }
+            
             next_adc_channel = POS5_ADC;
             
             break;
@@ -48,11 +54,23 @@ void ADC_PostProcessingHandler(void) {
         case POS5_ADC:
             adc_results.pos5_adc_result = (((ADCC_GetFilterValue()) * (5.0/1023.0)) * 2.0 - adc_results.avss_adc_result) * adc_result_scaling;
             
+            if (adc_results.pos5_adc_result > 5.5 || adc_results.pos5_adc_result < 4.5) {
+             
+                error_handler.POS5_ADC_error_flag = true;
+                
+            }
+            
             next_adc_channel = POS12_ADC;
             break;
             
         case POS12_ADC:
             adc_results.pos12_adc_result = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 2.96078 - adc_results.avss_adc_result) * adc_result_scaling;
+            
+            if (adc_results.pos12_adc_result > 13.2 || adc_results.pos12_adc_result < 10.8) {
+             
+                error_handler.POS12_ADC_error_flag = true;
+                
+            }
             
             next_adc_channel = POS12_ISNS_ADC;
             break;
@@ -74,6 +92,12 @@ void ADC_PostProcessingHandler(void) {
             }
             adc_results.pos12_isns_adc_result /= (float) POS12_ISNS_AVG_COUNT;
             
+            if (adc_results.pos12_isns_adc_result > 1.2 || adc_results.pos12_isns_adc_result < 0.0) {
+             
+                error_handler.POS12_ISNS_ADC_error_flag = true;
+                
+            }
+            
             next_adc_channel = QI_ISNS_ADC;
             break;
             
@@ -94,29 +118,42 @@ void ADC_PostProcessingHandler(void) {
             }
             adc_results.qi_isns_adc_result /= (float) QI_ISNS_AVG_COUNT;
             
+            if (adc_results.qi_isns_adc_result > 2.5 || adc_results.qi_isns_adc_result < 0.0) {
+             
+                error_handler.QI_ISNS_ADC_error_flag = true;
+                
+            }
+            
             next_adc_channel = channel_Temp;
             break;
             
         case channel_Temp:
             adc_results.die_temp_adc_result = ((0.659 - (5.0 / 4.0) * (1.0 - ADCC_GetFilterValue()/1023.0)) / .00132) - 40.0 + temp_adc_offset;
+            
+            if (adc_results.die_temp_adc_result > 100.0 || adc_results.die_temp_adc_result < 0.0) {
+             
+                error_handler.Temp_ADC_error_flag = true;
+                
+            }
+            
             next_adc_channel = channel_VSS;
             break;
             
         // Default case, there was an error
         // This should not happen
         default:
-//            error_handler.ADC_general_error_flag = true;
+            error_handler.ADC_general_error_flag = true;
             break;
         
     }
     
-//    if (ADCC_GetCurrentCountofConversions() != 255) {
-//        error_handler.ADC_general_error_flag = true;
-//    }
-//    
-//    if (ADCC_HasAccumulatorOverflowed()) {
-//        error_handler.ADC_general_error_flag = true;
-//    }
+    if (ADCC_GetCurrentCountofConversions() != 255) {
+        error_handler.ADC_general_error_flag = true;
+    }
+    
+    if (ADCC_HasAccumulatorOverflowed()) {
+        error_handler.ADC_general_error_flag = true;
+    }
     
     // Run post-processing calculations
     adc_calculations.input_power = adc_results.pos12_adc_result * adc_results.pos12_isns_adc_result;

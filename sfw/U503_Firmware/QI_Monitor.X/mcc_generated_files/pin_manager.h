@@ -187,6 +187,46 @@
 #define RA7_SetAnalogMode()         do { ANSELAbits.ANSELA7 = 1; } while(0)
 #define RA7_SetDigitalMode()        do { ANSELAbits.ANSELA7 = 0; } while(0)
 
+// get/set SDA2 aliases
+#define SDA2_TRIS                 TRISBbits.TRISB4
+#define SDA2_LAT                  LATBbits.LATB4
+#define SDA2_PORT                 PORTBbits.RB4
+#define SDA2_WPU                  WPUBbits.WPUB4
+#define SDA2_OD                   ODCONBbits.ODCB4
+#define SDA2_ANS                  ANSELBbits.ANSELB4
+#define SDA2_SetHigh()            do { LATBbits.LATB4 = 1; } while(0)
+#define SDA2_SetLow()             do { LATBbits.LATB4 = 0; } while(0)
+#define SDA2_Toggle()             do { LATBbits.LATB4 = ~LATBbits.LATB4; } while(0)
+#define SDA2_GetValue()           PORTBbits.RB4
+#define SDA2_SetDigitalInput()    do { TRISBbits.TRISB4 = 1; } while(0)
+#define SDA2_SetDigitalOutput()   do { TRISBbits.TRISB4 = 0; } while(0)
+#define SDA2_SetPullup()          do { WPUBbits.WPUB4 = 1; } while(0)
+#define SDA2_ResetPullup()        do { WPUBbits.WPUB4 = 0; } while(0)
+#define SDA2_SetPushPull()        do { ODCONBbits.ODCB4 = 0; } while(0)
+#define SDA2_SetOpenDrain()       do { ODCONBbits.ODCB4 = 1; } while(0)
+#define SDA2_SetAnalogMode()      do { ANSELBbits.ANSELB4 = 1; } while(0)
+#define SDA2_SetDigitalMode()     do { ANSELBbits.ANSELB4 = 0; } while(0)
+
+// get/set SCL2 aliases
+#define SCL2_TRIS                 TRISBbits.TRISB5
+#define SCL2_LAT                  LATBbits.LATB5
+#define SCL2_PORT                 PORTBbits.RB5
+#define SCL2_WPU                  WPUBbits.WPUB5
+#define SCL2_OD                   ODCONBbits.ODCB5
+#define SCL2_ANS                  ANSELBbits.ANSELB5
+#define SCL2_SetHigh()            do { LATBbits.LATB5 = 1; } while(0)
+#define SCL2_SetLow()             do { LATBbits.LATB5 = 0; } while(0)
+#define SCL2_Toggle()             do { LATBbits.LATB5 = ~LATBbits.LATB5; } while(0)
+#define SCL2_GetValue()           PORTBbits.RB5
+#define SCL2_SetDigitalInput()    do { TRISBbits.TRISB5 = 1; } while(0)
+#define SCL2_SetDigitalOutput()   do { TRISBbits.TRISB5 = 0; } while(0)
+#define SCL2_SetPullup()          do { WPUBbits.WPUB5 = 1; } while(0)
+#define SCL2_ResetPullup()        do { WPUBbits.WPUB5 = 0; } while(0)
+#define SCL2_SetPushPull()        do { ODCONBbits.ODCB5 = 0; } while(0)
+#define SCL2_SetOpenDrain()       do { ODCONBbits.ODCB5 = 1; } while(0)
+#define SCL2_SetAnalogMode()      do { ANSELBbits.ANSELB5 = 1; } while(0)
+#define SCL2_SetDigitalMode()     do { ANSELBbits.ANSELB5 = 0; } while(0)
+
 // get/set IO_RB6 aliases
 #define IO_RB6_TRIS                 TRISBbits.TRISB6
 #define IO_RB6_LAT                  LATBbits.LATB6

@@ -65,8 +65,8 @@ void TMR2_Initialize(void)
 {
     // Set TMR2 to the options selected in the User Interface
 
-    // T2CS FOSC/4; 
-    T2CLKCON = 0x01;
+    // T2CS LFINTOSC; 
+    T2CLKCON = 0x04;
 
     // T2PSYNC Synchronized; T2MODE Software control; T2CKPOL Rising Edge; T2CKSYNC Synchronized; 
     T2HLT = 0xA0;
@@ -74,8 +74,8 @@ void TMR2_Initialize(void)
     // T2RSEL T2CKIPPS pin; 
     T2RST = 0x00;
 
-    // PR2 155; 
-    T2PR = 0x9B;
+    // PR2 1; 
+    T2PR = 0x01;
 
     // TMR2 0; 
     T2TMR = 0x00;

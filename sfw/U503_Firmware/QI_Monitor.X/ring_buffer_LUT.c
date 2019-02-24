@@ -10,6 +10,7 @@
 #include "heartbeat_timer.h"
 #include "cause_of_reset.h"
 #include "adc_postprocessing.h"
+#include "error_handling.h"
 
 void ringBufferLUT(char * line) {
 
@@ -143,113 +144,153 @@ void ringBufferLUT(char * line) {
         terminalTextAttributesReset();
         
     }
-
     
-//    // Report POS3P3 ADC Conversion Result
-//    else if((0 == strcmp(line, "ADC Errors?"))) {
-//     
-//        if (getADCError()) {
-//            
-//            terminalTextAttributes(RED, BLACK, NORMAL);
-//            printf("ADC error(s) detected!\n\r");
-//            printf("The following channels caused an ADC error:\n\r");
-//            
-//            if (error_handler.ADC_general_error_flag) {
-//                printf("    General ADC error\n\r");
-//            }
-//            
-//            if (error_handler.AVSS_ADC_error_flag) {
-//                printf("    AVSS\n\r");
-//            }
-//            
-//            if (error_handler.FVR_ADC_error_flag) {
-//                printf("    FVR\n\r");
-//            }
-//            
-//            if (error_handler.ISNS_ADC_error_flag) {
-//                printf("    ISNS\n\r");
-//            }
-//            
-//            if (error_handler.POS12_ADC_error_flag) {
-//                printf("    POS12\n\r");
-//            }
-//            
-//            if (error_handler.POS3P3_ADC_error_flag) {
-//                printf("    POS3P3\n\r");
-//            }
-//            
-//            if (error_handler.Temp_ADC_error_flag) {
-//                printf("    Die Temp\n\r");
-//            }
-//            
-//            terminalTextAttributes(YELLOW, BLACK, NORMAL);
-//            printf("Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
-//            terminalTextAttributesReset();
-//            
-//        }
-//        
-//        else {
-//         
-//            terminalTextAttributes(GREEN, BLACK, NORMAL);
-//            printf("No ADC error(s) detected\n\r");
-//            terminalTextAttributesReset();
-//        
-//        }
-//        
-//    }
-//    
-//    // Clear ADC error
-//    else if((0 == strcmp(line, "Clear ADC Errors"))) {
-//     
-//        clearADCErrors();
-//        
-//        terminalTextAttributes(GREEN, BLACK, NORMAL);
-//        printf("ADC Error(s) cleared\n\r");
-//        terminalTextAttributesReset();
-//        
-//    }
+    // Clear ADC error
+    else if((0 == strcmp(line, "Clear ADC Errors"))) {
+     
+        clearADCErrors();
+        
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("ADC Error(s) cleared\n\r");
+        terminalTextAttributesReset();
+        
+    }
     
-//    // Report POS3P3 ADC Conversion Result
-//    else if((0 == strcmp(line, "Comm Errors?"))) {
-//       
-//        if (getCOMMError()) {
-//        
-//            terminalTextAttributes(RED, BLACK, NORMAL);
-//            printf("Communications error(s) detected! Interfaces causing error(s):\n\r");
-//            
-//            if (error_handler.I2C_COMM_error_flag) {
-//                printf("    OLED Display I2C\n\r");
-//            }
-//            
-//            if (error_handler.USB_UART_COMM_error_flag) {
-//                printf("    USB UART (this interface)\n\r");
-//            }
-//            
-//            terminalTextAttributes(YELLOW, BLACK, NORMAL);
-//            printf("Call 'Clear Comm Errors' to clear communications error(s)\n\r");
-//            terminalTextAttributesReset();
-//        
-//        }
-//        
-//        else {
-//            
-//            terminalTextAttributes(GREEN, BLACK, NORMAL);
-//            printf("No communications error(s) detected\n\r");
-//            terminalTextAttributesReset();
-//            
-//        }   
-//    }
-//    
-//        // Report POS3P3 ADC Conversion Result
-//    else if((0 == strcmp(line, "Clear Comm Errors"))) {
-//    
-//        clearCOMMErrors();
-//        
-//        terminalTextAttributes(GREEN, BLACK, NORMAL);
-//        printf("Communications error(s) cleared\n\r");
-//        terminalTextAttributesReset();
-//    
-//    }
+    
+    else if((0 == strcmp(line, "Clear I2C Errors"))) {
+    
+        clearI2CErrors();
+        
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("I2C error(s) cleared\n\r");
+        terminalTextAttributesReset();
+    
+    }
+    
+    // Report POS3P3 ADC Conversion Result
+    else if((0 == strcmp(line, "Clear UART Errors"))) {
+    
+        clearUARTErrors();
+        
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("UART error(s) cleared\n\r");
+        terminalTextAttributesReset();
+    
+    }
+    
+    else if ((0 == strcmp(line, "Error Status?"))) {
+     
+        if (getADCError()) {
+            
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("ADC error(s) detected!\n\r");
+            printf("The following channels caused an ADC error:\n\r");
+            
+            if (error_handler.ADC_general_error_flag) {
+                printf("    General ADC error\n\r");
+            }
+            
+            if (error_handler.AVSS_ADC_error_flag) {
+                printf("    AVSS\n\r");
+            }
+            
+            if (error_handler.FVR_ADC_error_flag) {
+                printf("    FVR\n\r");
+            }
+            
+            if (error_handler.QI_ISNS_ADC_error_flag) {
+                printf("    QI ISNS\n\r");
+            }
+            
+            if (error_handler.POS12_ISNS_ADC_error_flag) {
+                printf("    POS12 ISNS\n\r");
+            }
+            
+            if (error_handler.POS12_ADC_error_flag) {
+                printf("    POS12\n\r");
+            }
+            
+            if (error_handler.POS5_ADC_error_flag) {
+                printf("    POS5\n\r");
+            }
+            
+            if (error_handler.Temp_ADC_error_flag) {
+                printf("    Die Temp\n\r");
+            }
+            
+            terminalTextAttributes(YELLOW, BLACK, NORMAL);
+            printf("Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
+        else {
+         
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("No ADC error(s) detected\n\r");
+            terminalTextAttributesReset();
+        
+        }
+        
+        if (getI2CError()) {
+         
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("The following I2C Errors were detected:\n\r");
+            
+            if (error_handler.I2C_General_error_flag) {
+                printf("    I2C General Error\n\r");
+            }
+            
+            if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
+                printf("    I2C Ambient Temp Sensor Error\n\r");
+            }
+            
+            if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
+                printf("    I2C POS5 Temp Sensor Error\n\r");
+            }
+            
+            if (error_handler.I2C_QI_Temp_Sense_error_flag) {
+                printf("    I2C QI Temp Sensor Error\n\r");
+            }
+            
+            if (error_handler.I2C_OLED_error_flag) {
+                printf("    I2C OLED Display Error\n\r");
+            }
+            
+            terminalTextAttributes(YELLOW, BLACK, NORMAL);
+            printf("Call 'Clear I2C Errors' to clear communications error(s)\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
+        else {
+            
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("No I2C error(s) detected\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
+        if (getUARTError()) {
+        
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("USB UART Error Detected\n\r");
+            
+            terminalTextAttributes(YELLOW, BLACK, NORMAL);
+            printf("Call 'Clear UART Errors' to clear communications error(s)\n\r");
+            terminalTextAttributesReset();
+        
+        }
+        
+        else {
+            
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("No UART error(s) detected\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
+    }
     
     
     // Report POS3P3 ADC Conversion Result
@@ -370,6 +411,10 @@ void ringBufferLUT(char * line) {
                 "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
                 "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
                 "    Measure Die Temp?: Prints the ADC conversion result for the device die temperature\n\r"
+                "    Error Status? Prints if any system faults have been detected\n\r"
+                "    Clear UART Errors: Clears UART error flags\n\r"
+                "    Clear I2C Errors: Clears I2C error flags\n\r"
+                "    Clear ADC Errors: Clears ADC error flags\n\r"
                 );
         
         printf("\n\rHelp messages and neutral responses appear in yellow\n\r");

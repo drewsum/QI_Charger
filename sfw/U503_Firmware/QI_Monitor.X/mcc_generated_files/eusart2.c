@@ -48,6 +48,7 @@
   Section: Included Files
 */
 #include "eusart2.h"
+#include "../error_handling.h"
 
 /**
   Section: Macro Declarations
@@ -211,6 +212,7 @@ void EUSART2_Receive_ISR(void)
 
         RC2STAbits.CREN = 0;
         RC2STAbits.CREN = 1;
+        error_handler.USB_UART_COMM_error_flag = true;
     }
 
     // buffer overruns are ignored
