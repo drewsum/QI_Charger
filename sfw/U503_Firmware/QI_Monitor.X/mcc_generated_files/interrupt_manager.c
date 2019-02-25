@@ -75,6 +75,9 @@ void  INTERRUPT_Initialize (void)
     // INT1I - low priority
     IPR0bits.INT1IP = 0;    
 
+    // INT2I - low priority
+    IPR0bits.INT2IP = 0;    
+
     // BCLI - low priority
     IPR3bits.BCL2IP = 0;    
 
@@ -115,13 +118,13 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     {
         TMR2_ISR();
     }
-    else if(PIE0bits.INT0IE == 1 && PIR0bits.INT0IF == 1)
-    {
-        INT0_ISR();
-    }
     else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
     {
         INT1_ISR();
+    }
+    else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
+    {
+        INT2_ISR();
     }
     else if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
     {

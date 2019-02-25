@@ -52,6 +52,7 @@
 #include "adc_postprocessing.h"
 #include "error_handling.h"
 #include "LM73_I2C.h"
+#include "cap_touch_int.h"
 
 /*
                          Main application
@@ -74,6 +75,12 @@ void main(void)
     
     // Call ADC callback upon ADCC interrupt
     ADCC_SetADTIInterruptHandler(ADC_PostProcessingHandler);
+    
+    // Assign Left Pushbutton Handler to INT1
+    INT1_SetInterruptHandler(leftCapTouchHandler);
+    
+    // Assign Right Pushbutton Handler to INT2
+    INT2 _SetInterruptHandler(rightCapTouchHandler);
     
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
@@ -129,6 +136,8 @@ void main(void)
 
     // Reset virtual COM port text attributes
     terminalTextAttributesReset();
+    
+    // LM73AcquisitionHandler();
     
     // Endless loop
     while (1) {

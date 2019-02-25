@@ -52,8 +52,28 @@
 #define LM73_CONFIG_REG_DATA        0b01000000
 #define LM73_STATUS_REG_DATA        0b11100000
 
+// This structure holds raw 14 bit signed temperature sensor data
+struct LM73_data_t {
+
+    uint8_t QI_data_raw[2];
+    
+} LM73_data;
+
+// This structure holds calculated temperatures
+struct LM73_temp_results_t {
+    
+    double QI_temp_result;
+    
+} LM73_temp_results;
+
 // This function initializes the three temperature sensors
 void LM73TempSensorInitialize(void);
+
+// This function accesses temperature sensor data over I2C
+void LM73AcquisitionHandler(void);
+
+// This function converts raw data from the LM73 to a floating point number
+void LM73Convert(void);
 
 #endif	/* _LM73_I2C_H */
 

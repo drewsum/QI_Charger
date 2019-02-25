@@ -88,3 +88,50 @@ void LM73TempSensorInitialize(void) {
     
 }
 
+// This function accesses temperature sensor data over I2C
+void LM73AcquisitionHandler(void) {
+
+    static I2C2_TRANSACTION_REQUEST_BLOCK LM73_trb[2];
+    
+    I2C2_MasterWriteTRBBuild(&LM73_trb[0], LM73_TEMP_REG, 1, QI_TEMP_SENSE_ADDR);
+    I2C2_MasterReadTRBBuild(&LM73_trb[1], LM73_data.QI_data_raw[0], 2, QI_TEMP_SENSE_ADDR);
+    I2C2_MasterTRBInsert(1, &LM73_trb[0], &LM73_I2C_Status);
+    
+    while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
+    if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
+            LM73_I2C_Status == I2C2_STUCK_START ||
+            LM73_I2C_Status == I2C2_MESSAGE_ADDRESS_NO_ACK ||
+            LM73_I2C_Status == I2C2_DATA_NO_ACK ||
+            LM73_I2C_Status == I2C2_LOST_STATE      ) {
+        error_handler.I2C_QI_Temp_Sense_error_flag = true;
+    }
+    
+    // Convert acquired data to floating point variables
+    // LM73Convert();
+    
+}
+
+// This function converts raw data from the LM73 to a floating point number
+//void LM73Convert(void) {
+// 
+//    uint16_t QI_Conv, POS5_Conv, Ambient_Conv;
+//    
+//    // Move bitfield into proper positions
+//    // QI_Conv = LM73_data.QI_temp_raw[0] << 6 | LM73_data.QI_temp_raw[1] >> 2;
+//    QI_Conv = LM73_data.QI_temp_raw >> 2;
+//    
+//    // Get rid of sign bit in conversion
+//    QI_Conv = QI_Conv & 0x1FFF;
+//
+//    // Determine sign
+//    // Negative case
+//    if ((LM73_data.QI_temp_raw >> 14) == 1) {
+//        QI_Conv = ~(QI_Conv);
+//        LM73_temp_results.QI_temp_result = -0.03125 * QI_Conv;
+//    }
+//    // Positive case
+//    else {
+//        LM73_temp_results.QI_temp_result = 0.03125 * QI_Conv;
+//    }
+//    
+//}

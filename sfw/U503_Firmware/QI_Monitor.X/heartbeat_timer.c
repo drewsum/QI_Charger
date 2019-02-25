@@ -13,9 +13,6 @@
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
 
-    INTERRUPT_GlobalInterruptHighDisable();
-    INTERRUPT_GlobalInterruptLowDisable();
-    
     // Toggle heartbeat LED
     HEARTBEAT_LED_PIN = ~(HEARTBEAT_LED_PIN);
     
@@ -25,9 +22,7 @@ void heartbeatTimerHandler(void) {
     // Kick the dog
     CLRWDT();
     
-    INTERRUPT_GlobalInterruptHighEnable();
-    INTERRUPT_GlobalInterruptLowEnable();
-    
+    // Clear Timer 0
     TMR0 = 0;
     
     // clear the TMR0 interrupt flag

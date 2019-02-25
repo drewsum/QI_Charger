@@ -11,6 +11,7 @@
 #include "cause_of_reset.h"
 #include "adc_postprocessing.h"
 #include "error_handling.h"
+#include "LM73_I2C.h"
 
 void ringBufferLUT(char * line) {
 
@@ -359,6 +360,15 @@ void ringBufferLUT(char * line) {
         
     }
     
+    // Report QI Temperature
+    else if ((0 == strcmp(line, "Measure QI Temp?"))) {
+    
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
+        terminalTextAttributesReset();
+        
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
@@ -387,6 +397,7 @@ void ringBufferLUT(char * line) {
                 "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
                 "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
                 "    Measure Die Temp?: Prints the ADC conversion result for the device die temperature\n\r"
+                "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
                 "    Error Status? Prints if any system faults have been detected\n\r"
                 "    Clear UART Errors: Clears UART error flags\n\r"
                 "    Clear I2C Errors: Clears I2C error flags\n\r"
