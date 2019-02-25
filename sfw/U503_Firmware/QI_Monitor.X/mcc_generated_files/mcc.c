@@ -56,6 +56,7 @@ void SYSTEM_Initialize(void)
     I2C2_Initialize();
     FVR_Initialize();
     ADCC_Initialize();
+    TMR3_Initialize();
     TMR2_Initialize();
     EXT_INT_Initialize();
     TMR0_Initialize();

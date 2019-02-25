@@ -12,6 +12,7 @@
 #include "adc_postprocessing.h"
 #include "error_handling.h"
 #include "LM73_I2C.h"
+#include "NXQ_charge_state.h"
 
 void ringBufferLUT(char * line) {
 
@@ -369,6 +370,27 @@ void ringBufferLUT(char * line) {
         
     }
     
+    else if ((0 == strcmp(line, "Charge Status?"))) {
+     
+        if (nxq_charge_state == Error) {
+         
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("QI Charger is in Error State\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
+        else {
+         
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
+            printf("Idle = %d and Charge = %d\n\r", QI_IDLE_PIN, QI_CHARGE_PIN);
+            terminalTextAttributesReset();
+            
+        }
+        
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
@@ -387,6 +409,7 @@ void ringBufferLUT(char * line) {
                 "    Device On Time?: Prints the device on time since last device reset\n\r"
                 "    Enable QI: Enabled QI wireless power conversion\n\r"
                 "    Disable QI: Disables QI wireless power conversion\n\r"
+                "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
                 "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
                 "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
                 "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"

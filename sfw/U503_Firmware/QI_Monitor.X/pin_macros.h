@@ -48,7 +48,11 @@
 #define POS5_SW_SNS_PIN         PORTBbits.RB0
 #define QI_SW_SNS_PIN           PORTBbits.RB1
 #define QI_IDLE_PIN             PORTBbits.RB2
+#define QI_IDLE_PIN_RISE        IOCBPbits.IOCBP2
+#define QI_IDLE_PIN_FALL        IOCBNbits.IOCBN2
 #define QI_CHARGE_PIN           PORTBbits.RB3
+#define QI_CHARGE_PIN_RISE      IOCBPbits.IOCBP3
+#define QI_CHARGE_PIN_FALL      IOCBNbits.IOCBN3
 #define HEARTBEAT_LED_PIN       LATBbits.LATB6
 #define OTHER_ERROR_LED_PIN     LATBbits.LATB7
 

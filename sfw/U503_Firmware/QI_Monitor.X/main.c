@@ -53,6 +53,7 @@
 #include "error_handling.h"
 #include "LM73_I2C.h"
 #include "cap_touch_int.h"
+#include "NXQ_charge_state.h"
 
 /*
                          Main application
@@ -80,7 +81,18 @@ void main(void)
     INT1_SetInterruptHandler(leftCapTouchHandler);
     
     // Assign Right Pushbutton Handler to INT2
-    INT2 _SetInterruptHandler(rightCapTouchHandler);
+    INT2_SetInterruptHandler(rightCapTouchHandler);
+    
+    // Assign QI Idle IOC Handler to IOC B2
+    IOCBF2_SetInterruptHandler(QIIdleIOCHandler);
+    
+    // Assign QI Charge IOC Handler to IOC B3
+    IOCBF3_SetInterruptHandler(QIChargeIOCHandler);
+    
+    // Assign idle detection handler to TMR3 ISR
+    TMR3_SetInterruptHandler(QIIdleTimerHandler);
+    TMR3_StopTimer();
+    TMR3_Reload();
     
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
