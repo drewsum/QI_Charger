@@ -90,9 +90,9 @@ void main(void)
     IOCBF3_SetInterruptHandler(QIChargeIOCHandler);
     
     // Assign idle detection handler to TMR3 ISR
-    TMR3_SetInterruptHandler(QIIdleTimerHandler);
-    TMR3_StopTimer();
-    TMR3_Reload();
+    TMR6_SetInterruptHandler(QIIdleTimerHandler);
+    TMR6_StopTimer();
+    TMR6_WriteTimer(0);
     
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();

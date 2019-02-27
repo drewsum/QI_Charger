@@ -1,11 +1,11 @@
 
 #include <xc.h>
 
+#include <stdio.h>
+
 #include "NXQ_charge_state.h"
 
 #include "pin_macros.h"
-
-#include "mcc_generated_files/tmr3.h"
 
 // This function returns a string that matches the NXQ charge state enum
 char * getNXQChargeStateString(void) {
@@ -38,59 +38,73 @@ char * getNXQChargeStateString(void) {
 
 // This is the QI_Idle signal IOC handler
 void QIIdleIOCHandler(void) {
- 
-    TMR3_StopTimer();
-    TMR3_Reload();
-    
-    if (QI_IDLE_PIN_RISE && QI_CHARGE_PIN == 0 
-            && (nxq_charge_state == Charging || nxq_charge_state == Fully_Charged)) {
+       
+    if (QI_IDLE_PIN_FALL == 1) {
      
-        nxq_charge_state = Error;
+        printf("Starting TMR6\n\r");
+        
+        TMR6_StartTimer();
         
     }
-        
+    
     QI_IDLE_PIN_RISE = 0;
     QI_IDLE_PIN_FALL = 0;
-    
-    TMR3_StartTimer();
-    
+     
 }
 
 // This is the QI_Charge signal IOC handler
 void QIChargeIOCHandler(void) {
- 
-    TMR3_StopTimer();
-    TMR3_Reload();
+    
+    printf("Charge IOC ISR\n\r");
+    
+    TMR6_StopTimer();
+    TMR6_WriteTimer(0);
     
     if (QI_CHARGE_PIN_FALL && QI_IDLE_PIN == 1) {
-     
+    
+        printf("Charging\n\r");
+        
         nxq_charge_state = Charging;
         
     }
     
-    else if ((nxq_charge_state == Charging || nxq_charge_state == Idle) && QI_IDLE_PIN == 1) {
+    else if ((nxq_charge_state == Charging || nxq_charge_state == Idle) && QI_CHARGE_PIN_RISE && QI_IDLE_PIN == 1) {
         
         nxq_charge_state = Fully_Charged;
         
     }
-    
+        
     QI_CHARGE_PIN_RISE = 0;
     QI_CHARGE_PIN_FALL = 0;
-    
-    TMR3_StartTimer();
+    IOCBFbits.IOCBF3 = 0;
     
 }
 
-// This function should be called by a 1250 ms timer that is started on the falling edge on both IDLE and CHARGE signals
+// This function should be called by a 800 ms timer that is started on the falling edge on both IDLE and CHARGE signals
 void QIIdleTimerHandler(void) {
- 
-    if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) {
      
-        nxq_charge_state = Idle;
+    if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
+     
+        printf("Error\n\r");
+        
+        nxq_charge_state = Error;
         
     }
     
-    TMR3_StopTimer();
-    TMR3_Reload();
+    else if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) {
+     
+        printf("Idle\n\r");
+        nxq_charge_state = Idle;
+        QI_CHARGE_PIN_RISE = 0;
+        QI_CHARGE_PIN_FALL = 0;
+        QI_IDLE_PIN_RISE = 0;
+        QI_IDLE_PIN_FALL = 0;
+        IOCBFbits.IOCBF2 = 0;
+        IOCBFbits.IOCBF3 = 0;
+        
+    }
+    
+    TMR6_StopTimer();
+    TMR6_WriteTimer(0);
     
 }

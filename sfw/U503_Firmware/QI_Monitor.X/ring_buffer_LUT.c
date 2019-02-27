@@ -384,7 +384,6 @@ void ringBufferLUT(char * line) {
          
             terminalTextAttributes(GREEN, BLACK, NORMAL);
             printf("QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
-            printf("Idle = %d and Charge = %d\n\r", QI_IDLE_PIN, QI_CHARGE_PIN);
             terminalTextAttributesReset();
             
         }

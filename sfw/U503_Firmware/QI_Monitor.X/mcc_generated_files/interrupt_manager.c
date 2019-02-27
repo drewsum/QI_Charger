@@ -88,7 +88,7 @@ void  INTERRUPT_Initialize (void)
     IPR3bits.SSP2IP = 0;    
 
     // TMRI - low priority
-    IPR4bits.TMR3IP = 0;    
+    IPR4bits.TMR6IP = 0;    
 
 }
 
@@ -144,9 +144,9 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     {
         I2C2_ISR();
     }
-    else if(PIE4bits.TMR3IE == 1 && PIR4bits.TMR3IF == 1)
+    else if(PIE4bits.TMR6IE == 1 && PIR4bits.TMR6IF == 1)
     {
-        TMR3_ISR();
+        TMR6_ISR();
     }
     else
     {

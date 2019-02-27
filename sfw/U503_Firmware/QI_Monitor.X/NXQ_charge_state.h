@@ -8,6 +8,8 @@
 
 #include "pin_macros.h"
 
+#include "mcc_generated_files/tmr6.h"
+
 // 
 enum nxq_charge_state_t {
     
@@ -27,7 +29,7 @@ void QIIdleIOCHandler(void);
 // This is the QI_Charge signal IOC handler
 void QIChargeIOCHandler(void);
 
-// This function should be called by a 750 ms timer that is started on the falling edge on both IDLE and CHARGE signals
+// This function should be called by a 750 ms timer that is started on the falling edge on CHARGE signal
 void QIIdleTimerHandler(void);
 
 #endif	/* _NXQ_CHARGE_STATE_H */
