@@ -70,13 +70,13 @@ void QIChargeIOCHandler(void) {
 // This function should be called by a 800 ms timer that is started on the falling edge on both IDLE and CHARGE signals
 void QIIdleTimerHandler(void) {
      
-    if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
+    if (QI_IDLE_PIN == 1) {
      
         nxq_charge_state = Error;
         
     }
     
-    else if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) {
+    else if (QI_IDLE_PIN == 0) {
      
         nxq_charge_state = Idle;
         
