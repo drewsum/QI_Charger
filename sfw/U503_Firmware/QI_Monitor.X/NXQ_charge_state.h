@@ -8,7 +8,7 @@
 
 #include "pin_macros.h"
 
-#include "mcc_generated_files/tmr6.h"
+#include "mcc_generated_files/tmr3.h"
 
 // 
 enum nxq_charge_state_t {

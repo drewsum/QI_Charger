@@ -1,8 +1,6 @@
 
 #include <xc.h>
 
-#include <stdio.h>
-
 #include "NXQ_charge_state.h"
 
 #include "pin_macros.h"
@@ -41,7 +39,7 @@ void QIIdleIOCHandler(void) {
        
     if (QI_IDLE_PIN_FALL == 1) {
         
-        TMR6_StartTimer();
+        TMR3_StartTimer();
         
     }
          
@@ -50,8 +48,8 @@ void QIIdleIOCHandler(void) {
 // This is the QI_Charge signal IOC handler
 void QIChargeIOCHandler(void) {
     
-    TMR6_StopTimer();
-    TMR6_WriteTimer(0);
+    TMR3_StopTimer();
+    TMR3_Reload();
     
     if (QI_CHARGE_PIN_FALL && QI_IDLE_PIN == 1) {
         
@@ -70,19 +68,19 @@ void QIChargeIOCHandler(void) {
 // This function should be called by a 800 ms timer that is started on the falling edge on both IDLE and CHARGE signals
 void QIIdleTimerHandler(void) {
      
-    if (QI_IDLE_PIN == 1) {
+    if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
      
         nxq_charge_state = Error;
         
     }
     
-    else if (QI_IDLE_PIN == 0) {
+    else if (QI_IDLE_PIN == 0 && QI_CHARGE_PIN == 0) {
      
         nxq_charge_state = Idle;
         
     }
     
-    TMR6_StopTimer();
-    TMR6_WriteTimer(0);
+    TMR3_StopTimer();
+    TMR3_Reload();
     
 }

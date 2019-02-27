@@ -57,6 +57,9 @@ void  INTERRUPT_Initialize (void)
     // Assign peripheral interrupt priority vectors
 
     // TMRI - high priority
+    IPR4bits.TMR3IP = 1;
+
+    // TMRI - high priority
     IPR0bits.TMR0IP = 1;
 
     // RCI - high priority
@@ -87,15 +90,16 @@ void  INTERRUPT_Initialize (void)
     // SSPI - low priority
     IPR3bits.SSP2IP = 0;    
 
-    // TMRI - low priority
-    IPR4bits.TMR6IP = 0;    
-
 }
 
 void __interrupt() INTERRUPT_InterruptManagerHigh (void)
 {
    // interrupt handler
-    if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
+    if(PIE4bits.TMR3IE == 1 && PIR4bits.TMR3IF == 1)
+    {
+        TMR3_ISR();
+    }
+    else if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
     {
         TMR0_ISR();
     }
@@ -143,10 +147,6 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     else if(PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
     {
         I2C2_ISR();
-    }
-    else if(PIE4bits.TMR6IE == 1 && PIR4bits.TMR6IF == 1)
-    {
-        TMR6_ISR();
     }
     else
     {

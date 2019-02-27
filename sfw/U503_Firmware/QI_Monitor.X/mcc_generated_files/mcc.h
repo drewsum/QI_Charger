@@ -53,11 +53,11 @@
 #include <stdbool.h>
 #include "interrupt_manager.h"
 #include "i2c2.h"
-#include "tmr6.h"
+#include "tmr3.h"
 #include "tmr2.h"
 #include "tmr0.h"
-#include "fvr.h"
 #include "adcc.h"
+#include "fvr.h"
 #include "ext_int.h"
 #include "memory.h"
 #include "eusart2.h"
