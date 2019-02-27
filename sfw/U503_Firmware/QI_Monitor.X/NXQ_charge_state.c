@@ -40,29 +40,20 @@ char * getNXQChargeStateString(void) {
 void QIIdleIOCHandler(void) {
        
     if (QI_IDLE_PIN_FALL == 1) {
-     
-        printf("Starting TMR6\n\r");
         
         TMR6_StartTimer();
         
     }
-    
-    QI_IDLE_PIN_RISE = 0;
-    QI_IDLE_PIN_FALL = 0;
-     
+         
 }
 
 // This is the QI_Charge signal IOC handler
 void QIChargeIOCHandler(void) {
     
-    printf("Charge IOC ISR\n\r");
-    
     TMR6_StopTimer();
     TMR6_WriteTimer(0);
     
     if (QI_CHARGE_PIN_FALL && QI_IDLE_PIN == 1) {
-    
-        printf("Charging\n\r");
         
         nxq_charge_state = Charging;
         
@@ -73,10 +64,6 @@ void QIChargeIOCHandler(void) {
         nxq_charge_state = Fully_Charged;
         
     }
-        
-    QI_CHARGE_PIN_RISE = 0;
-    QI_CHARGE_PIN_FALL = 0;
-    IOCBFbits.IOCBF3 = 0;
     
 }
 
@@ -85,22 +72,13 @@ void QIIdleTimerHandler(void) {
      
     if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
      
-        printf("Error\n\r");
-        
         nxq_charge_state = Error;
         
     }
     
     else if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) {
      
-        printf("Idle\n\r");
         nxq_charge_state = Idle;
-        QI_CHARGE_PIN_RISE = 0;
-        QI_CHARGE_PIN_FALL = 0;
-        QI_IDLE_PIN_RISE = 0;
-        QI_IDLE_PIN_FALL = 0;
-        IOCBFbits.IOCBF2 = 0;
-        IOCBFbits.IOCBF3 = 0;
         
     }
     
