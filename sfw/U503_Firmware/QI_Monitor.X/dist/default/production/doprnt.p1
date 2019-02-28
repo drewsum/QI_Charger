@@ -1,0 +1,1650 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"396 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v __npowers_ `Cd ~T0 @X0 -> 0 `x e ]
+[v __powers_ `Cd ~T0 @X0 -> 0 `x e ]
+[v F10 `(v ~T0 @X0 0 tf1`uc ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
+[s S1 `*uc 1 `*F10 1 ]
+[n S1 __prbuf ptr func ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\ctype.h
+[v _isdigit `(b ~T0 @X0 0 ef1`uc ]
+"13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdarg.h
+[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
+[p i ___va_arg ]
+"402 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[v __tdiv_to_l_ `(ul ~T0 @X0 0 ef2`f`f ]
+"400
+[v __div_to_l_ `(ul ~T0 @X0 0 ef2`d`d ]
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;errno.h: 29: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
+[; ;ctype.h: 4: extern __bit isalpha(char);
+[; ;ctype.h: 5: extern __bit isupper(char);
+[; ;ctype.h: 6: extern __bit islower(char);
+[; ;ctype.h: 7: extern __bit isdigit(char);
+[; ;ctype.h: 8: extern __bit isxdigit(char);
+[; ;ctype.h: 9: extern __bit isspace(char);
+[; ;ctype.h: 10: extern __bit ispunct(char);
+[; ;ctype.h: 11: extern __bit isalnum(char);
+[; ;ctype.h: 12: extern __bit isprint(char);
+[; ;ctype.h: 13: extern __bit isgraph(char);
+[; ;ctype.h: 14: extern __bit iscntrl(char);
+[; ;ctype.h: 17: extern char toupper(char);
+[; ;ctype.h: 18: extern char tolower(char);
+[; ;stdlib.h: 7: typedef unsigned short wchar_t;
+[; ;stdlib.h: 15: typedef struct {
+[; ;stdlib.h: 16: int rem;
+[; ;stdlib.h: 17: int quot;
+[; ;stdlib.h: 18: } div_t;
+[; ;stdlib.h: 19: typedef struct {
+[; ;stdlib.h: 20: unsigned rem;
+[; ;stdlib.h: 21: unsigned quot;
+[; ;stdlib.h: 22: } udiv_t;
+[; ;stdlib.h: 23: typedef struct {
+[; ;stdlib.h: 24: long quot;
+[; ;stdlib.h: 25: long rem;
+[; ;stdlib.h: 26: } ldiv_t;
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: unsigned long quot;
+[; ;stdlib.h: 29: unsigned long rem;
+[; ;stdlib.h: 30: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 73: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 75: extern int rand(void);
+[; ;stdlib.h: 76: extern void srand(unsigned int);
+[; ;stdlib.h: 77: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 78: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 79: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 80: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 81: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 85: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 86: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 87: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 88: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 93: extern void * malloc(size_t);
+[; ;stdlib.h: 94: extern void free(void *);
+[; ;stdlib.h: 95: extern void * realloc(void *, size_t);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
+[; ;stdlib.h: 104: extern int atexit(void (*)(void));
+[; ;stdlib.h: 105: extern char * getenv(const char *);
+[; ;stdlib.h: 106: extern char ** environ;
+[; ;stdlib.h: 107: extern int system(char *);
+[; ;stdlib.h: 108: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 109: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 110: extern int abs(int);
+[; ;stdlib.h: 111: extern long labs(long);
+[; ;stdlib.h: 113: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 114: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 119: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 120: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 122: extern char * ftoa(float f, int * status);
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 36: extern char * strcat(char *, const char *);
+[; ;string.h: 37: extern char * strcpy(char *, const char *);
+[; ;string.h: 38: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 40: extern char * strdup(const char *);
+[; ;string.h: 41: extern char * strtok(char *, const char *);
+[; ;string.h: 44: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 45: extern int strcmp(const char *, const char *);
+[; ;string.h: 46: extern int stricmp(const char *, const char *);
+[; ;string.h: 47: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 49: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 50: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 51: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 52: extern size_t strspn(const char *, const char *);
+[; ;string.h: 53: extern char * strstr(const char *, const char *);
+[; ;string.h: 54: extern char * stristr(const char *, const char *);
+[; ;string.h: 55: extern char * strerror(int);
+[; ;string.h: 56: extern size_t strlen(const char *);
+[; ;string.h: 57: extern char * strchr(const char *, int);
+[; ;string.h: 58: extern char * strichr(const char *, int);
+[; ;string.h: 59: extern char * strrchr(const char *, int);
+[; ;string.h: 60: extern char * strrichr(const char *, int);
+[; ;math.h: 30: extern double fabs(double);
+[; ;math.h: 31: extern double floor(double);
+[; ;math.h: 32: extern double ceil(double);
+[; ;math.h: 33: extern double modf(double, double *);
+[; ;math.h: 34: extern double sqrt(double);
+[; ;math.h: 35: extern double atof(const char *);
+[; ;math.h: 36: extern double sin(double) ;
+[; ;math.h: 37: extern double cos(double) ;
+[; ;math.h: 38: extern double tan(double) ;
+[; ;math.h: 39: extern double asin(double) ;
+[; ;math.h: 40: extern double acos(double) ;
+[; ;math.h: 41: extern double atan(double);
+[; ;math.h: 42: extern double atan2(double, double) ;
+[; ;math.h: 43: extern double log(double);
+[; ;math.h: 44: extern double log10(double);
+[; ;math.h: 45: extern double pow(double, double) ;
+[; ;math.h: 46: extern double exp(double) ;
+[; ;math.h: 47: extern double sinh(double) ;
+[; ;math.h: 48: extern double cosh(double) ;
+[; ;math.h: 49: extern double tanh(double);
+[; ;math.h: 50: extern double eval_poly(double, const double *, int);
+[; ;math.h: 51: extern double frexp(double, int *);
+[; ;math.h: 52: extern double ldexp(double, int);
+[; ;math.h: 53: extern double fmod(double, double);
+[; ;math.h: 54: extern double trunc(double);
+[; ;math.h: 55: extern double round(double);
+"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
+[p n 350 ]
+"358
+[v _dpowers `Cul ~T0 @X0 -> 0 `x s ]
+[i _dpowers
+:U ..
+-> -> -> 1 `i `l `ul
+-> -> -> 10 `i `l `ul
+-> -> -> 100 `i `l `ul
+-> -> -> 1000 `i `l `ul
+-> -> -> 10000 `i `l `ul
+"360
+-> -> 100000 `l `ul
+-> -> 1000000 `l `ul
+-> -> 10000000 `l `ul
+-> -> 100000000 `l `ul
+"363
+-> -> 1000000000 `l `ul
+..
+]
+[; ;doprnt.c: 358: const static unsigned long dpowers[] = {1, 10, 100, 1000, 10000,
+[; ;doprnt.c: 360: 100000, 1000000, 10000000, 100000000,
+[; ;doprnt.c: 361: 1000000000
+[; ;doprnt.c: 363: };
+"366
+[v _hexpowers `Cul ~T0 @X0 -> 0 `x s ]
+[i _hexpowers
+:U ..
+-> -> -> 1 `i `l `ul
+-> -> -> 16 `i `l `ul
+-> -> -> 256 `i `l `ul
+-> -> -> 4096 `i `l `ul
+"368
+-> -> 65536 `l `ul
+-> -> 1048576 `l `ul
+-> -> 16777216 `l `ul
+"370
+-> -> 268435456 `l `ul
+..
+]
+[; ;doprnt.c: 366: const static unsigned long hexpowers[] = {1, 0x10, 0x100, 0x1000,
+[; ;doprnt.c: 368: 0x10000, 0x100000, 0x1000000, 0x10000000
+[; ;doprnt.c: 370: };
+[; ;doprnt.c: 396: extern const double _powers_[], _npowers_[];
+[; ;doprnt.c: 400: extern unsigned long _div_to_l_(double, double);
+[; ;doprnt.c: 402: extern unsigned long _tdiv_to_l_(float, float);
+"417
+[v _fround `(d ~T0 @X0 1 sf1`uc ]
+"418
+{
+[; ;doprnt.c: 416: static double
+[; ;doprnt.c: 417: fround(unsigned char prec)
+[; ;doprnt.c: 418: {
+[e :U _fround ]
+"417
+[v _prec `uc ~T0 @X0 1 r1 ]
+"418
+[f ]
+[; ;doprnt.c: 421: if(prec>=110)
+"421
+[e $ ! >= -> _prec `i -> 110 `i 7  ]
+[; ;doprnt.c: 422: return 0.5 * _npowers_[prec/100U+18U] * _npowers_[(prec%100U)/10U+9U] * _npowers_[prec%10U];
+"422
+[e ) * * * .0.5 *U + &U __npowers_ * -> + / -> _prec `ui -> 100 `ui -> 18 `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> + / % -> _prec `ui -> 100 `ui -> 10 `ui -> 9 `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> % -> _prec `ui -> 10 `ui `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 6  ]
+[e $U 8  ]
+"423
+[e :U 7 ]
+[; ;doprnt.c: 423: else if(prec > 10)
+[e $ ! > -> _prec `i -> 10 `i 9  ]
+[; ;doprnt.c: 424: return 0.5 * _npowers_[prec/10U+9U] * _npowers_[prec%10U];
+"424
+[e ) * * .0.5 *U + &U __npowers_ * -> + / -> _prec `ui -> 10 `ui -> 9 `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> % -> _prec `ui -> 10 `ui `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 6  ]
+[e :U 9 ]
+"425
+[e :U 8 ]
+[; ;doprnt.c: 425: return 0.5 * _npowers_[prec];
+[e ) * .0.5 *U + &U __npowers_ * -> _prec `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 6  ]
+[; ;doprnt.c: 426: }
+"426
+[e :UE 6 ]
+}
+"433
+[v _scale `(d ~T0 @X0 1 sf1`c ]
+"434
+{
+[; ;doprnt.c: 432: static double
+[; ;doprnt.c: 433: scale(signed char scl)
+[; ;doprnt.c: 434: {
+[e :U _scale ]
+"433
+[v _scl `c ~T0 @X0 1 r1 ]
+"434
+[f ]
+[; ;doprnt.c: 436: if(scl < 0) {
+"436
+[e $ ! < -> _scl `i -> 0 `i 11  ]
+{
+[; ;doprnt.c: 437: scl = -scl;
+"437
+[e = _scl -> -U -> _scl `i `c ]
+[; ;doprnt.c: 438: if(scl>=110)
+"438
+[e $ ! >= -> _scl `i -> 110 `i 12  ]
+[; ;doprnt.c: 439: return _npowers_[(unsigned char)(scl/100+18)] * _npowers_[(unsigned char)((scl%100)/10+9)] * _npowers_[(unsigned char)(scl%10)];
+"439
+[e ) * * *U + &U __npowers_ * -> -> + / -> _scl `i -> 100 `i -> 18 `i `uc `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> + / % -> _scl `i -> 100 `i -> 10 `i -> 9 `i `uc `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> % -> _scl `i -> 10 `i `uc `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 10  ]
+[e $U 13  ]
+"440
+[e :U 12 ]
+[; ;doprnt.c: 440: else if(scl > 10)
+[e $ ! > -> _scl `i -> 10 `i 14  ]
+[; ;doprnt.c: 441: return _npowers_[(unsigned char)(scl/10+9)] * _npowers_[(unsigned char)(scl%10)];
+"441
+[e ) * *U + &U __npowers_ * -> -> + / -> _scl `i -> 10 `i -> 9 `i `uc `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> % -> _scl `i -> 10 `i `uc `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 10  ]
+[e :U 14 ]
+"442
+[e :U 13 ]
+[; ;doprnt.c: 442: return _npowers_[(unsigned char)scl];
+[e ) *U + &U __npowers_ * -> -> _scl `uc `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 10  ]
+"443
+}
+[e :U 11 ]
+[; ;doprnt.c: 443: }
+[; ;doprnt.c: 444: if(scl>=110)
+"444
+[e $ ! >= -> _scl `i -> 110 `i 15  ]
+[; ;doprnt.c: 445: return _powers_[(unsigned char)(scl/100+18)] * _powers_[(unsigned char)((scl%100)/10+9)] * _powers_[(unsigned char)(scl%10)];
+"445
+[e ) * * *U + &U __powers_ * -> -> + / -> _scl `i -> 100 `i -> 18 `i `uc `ux -> -> # *U &U __powers_ `ui `ux *U + &U __powers_ * -> -> + / % -> _scl `i -> 100 `i -> 10 `i -> 9 `i `uc `ux -> -> # *U &U __powers_ `ui `ux *U + &U __powers_ * -> -> % -> _scl `i -> 10 `i `uc `ux -> -> # *U &U __powers_ `ui `ux ]
+[e $UE 10  ]
+[e $U 16  ]
+"446
+[e :U 15 ]
+[; ;doprnt.c: 446: else if(scl > 10)
+[e $ ! > -> _scl `i -> 10 `i 17  ]
+[; ;doprnt.c: 447: return _powers_[(unsigned char)(scl/10+9)] * _powers_[(unsigned char)(scl%10)];
+"447
+[e ) * *U + &U __powers_ * -> -> + / -> _scl `i -> 10 `i -> 9 `i `uc `ux -> -> # *U &U __powers_ `ui `ux *U + &U __powers_ * -> -> % -> _scl `i -> 10 `i `uc `ux -> -> # *U &U __powers_ `ui `ux ]
+[e $UE 10  ]
+[e :U 17 ]
+"448
+[e :U 16 ]
+[; ;doprnt.c: 448: return _powers_[(unsigned char)scl];
+[e ) *U + &U __powers_ * -> -> _scl `uc `ux -> -> # *U &U __powers_ `ui `ux ]
+[e $UE 10  ]
+[; ;doprnt.c: 449: }
+"449
+[e :UE 10 ]
+}
+"466
+[v __doprnt `(i ~T0 @X0 1 ef3`*S1`*Cuc`**v ]
+"467
+{
+[; ;doprnt.c: 463: int
+[; ;doprnt.c: 466: _doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
+[; ;doprnt.c: 467: {
+[e :U __doprnt ]
+"466
+[v _pb `*S1 ~T0 @X0 1 r1 ]
+[v _f `*Cuc ~T0 @X0 1 R2 ]
+[v _ap `**v ~T0 @X0 1 R3 ]
+"467
+[f ]
+"507
+[v _c `uc ~T0 @X0 1 a ]
+"509
+[v _width `i ~T0 @X0 1 a ]
+"512
+[v _prec `i ~T0 @X0 1 a ]
+"520
+[v _flag `us ~T0 @X0 1 a ]
+"527
+[v _d `uc ~T0 @X0 1 a ]
+"528
+[v _fval `d ~T0 @X0 1 a ]
+"529
+[v _eexp `i ~T0 @X0 1 a ]
+"535
+[u S18 `ul 1 `d 1 ]
+[n S18 . vd integ ]
+"538
+[v _tmpval `S18 ~T0 @X0 1 a ]
+"540
+[v _val `ul ~T0 @X0 1 a ]
+"541
+[v _len `ui ~T0 @X0 1 a ]
+"542
+[v _cp `*Cuc ~T0 @X0 1 a ]
+[; ;doprnt.c: 507: char c;
+[; ;doprnt.c: 509: int width;
+[; ;doprnt.c: 512: int prec;
+[; ;doprnt.c: 520: unsigned short flag;
+[; ;doprnt.c: 527: char d;
+[; ;doprnt.c: 528: double fval;
+[; ;doprnt.c: 529: int eexp;
+[; ;doprnt.c: 535: union {
+[; ;doprnt.c: 536: unsigned long vd;
+[; ;doprnt.c: 537: double integ;
+[; ;doprnt.c: 538: } tmpval;
+[; ;doprnt.c: 540: unsigned long val;
+[; ;doprnt.c: 541: unsigned len;
+[; ;doprnt.c: 542: const char * cp;
+[; ;doprnt.c: 548: while((c = *f++)) {
+"548
+[e $U 20  ]
+[e :U 21 ]
+{
+[; ;doprnt.c: 550: if(c != '%')
+"550
+[e $ ! != -> _c `ui -> 37 `ui 23  ]
+[; ;doprnt.c: 552: {
+"552
+{
+[; ;doprnt.c: 553: do { if(pb->func) (pb->func(c)); else ((*pb->ptr++ = c)); } while(0);
+"553
+[e :U 26 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 27  ]
+[e ( *U . *U _pb 1 (1 _c ]
+[e $U 28  ]
+[e :U 27 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x _c ]
+[e :U 28 ]
+}
+[e :U 25 ]
+[; ;doprnt.c: 554: continue;
+"554
+[e $U 20  ]
+"555
+}
+[e :U 23 ]
+[; ;doprnt.c: 555: }
+[; ;doprnt.c: 558: width = 0;
+"558
+[e = _width -> 0 `i ]
+[; ;doprnt.c: 560: flag = 0;
+"560
+[e = _flag -> -> 0 `i `us ]
+[; ;doprnt.c: 562: for(;;) {
+"562
+{
+[e :U 29 ]
+{
+[; ;doprnt.c: 563: switch(*f) {
+"563
+[e $U 33  ]
+{
+[; ;doprnt.c: 572: case ' ':
+"572
+[e :U 34 ]
+[; ;doprnt.c: 573: flag |= 0x01;
+"573
+[e =| _flag -> -> 1 `i `us ]
+[; ;doprnt.c: 574: f++;
+"574
+[e ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x ]
+[; ;doprnt.c: 575: continue;
+"575
+[e $U 31  ]
+[; ;doprnt.c: 579: case '+':
+"579
+[e :U 35 ]
+[; ;doprnt.c: 580: flag |= 0x02;
+"580
+[e =| _flag -> -> 2 `i `us ]
+[; ;doprnt.c: 581: f++;
+"581
+[e ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x ]
+[; ;doprnt.c: 582: continue;
+"582
+[e $U 31  ]
+[; ;doprnt.c: 591: case '0':
+"591
+[e :U 36 ]
+[; ;doprnt.c: 592: flag |= 0x04;
+"592
+[e =| _flag -> -> 4 `i `us ]
+[; ;doprnt.c: 593: f++;
+"593
+[e ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x ]
+[; ;doprnt.c: 594: continue;
+"594
+[e $U 31  ]
+"596
+}
+[; ;doprnt.c: 596: }
+[e $U 32  ]
+"563
+[e :U 33 ]
+[e [\ *U _f , $ -> -> 32 `ui `uc 34
+ , $ -> -> 43 `ui `uc 35
+ , $ -> -> 48 `ui `uc 36
+ 32 ]
+"596
+[e :U 32 ]
+[; ;doprnt.c: 597: break;
+"597
+[e $U 30  ]
+"598
+}
+[e :U 31 ]
+[; ;doprnt.c: 598: }
+[e $U 29  ]
+[e :U 30 ]
+}
+[; ;doprnt.c: 601: if(flag & 0x02)
+"601
+[e $ ! != & -> _flag `ui -> -> 2 `i `ui -> -> 0 `i `ui 37  ]
+[; ;doprnt.c: 602: flag &= ~0x01;
+"602
+[e =& _flag -> ~ -> 1 `i `us ]
+[e :U 37 ]
+[; ;doprnt.c: 609: if(isdigit((unsigned)*f)) {
+"609
+[e $ ! ( _isdigit (1 -> -> *U _f `ui `uc 38  ]
+{
+[; ;doprnt.c: 610: width = 0;
+"610
+[e = _width -> 0 `i ]
+[; ;doprnt.c: 611: do {
+"611
+[e :U 41 ]
+{
+[; ;doprnt.c: 612: width *= 10;
+"612
+[e =* _width -> 10 `i ]
+[; ;doprnt.c: 613: width += *f++ - '0';
+"613
+[e =+ _width -> - -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `ui -> 48 `ui `i ]
+"614
+}
+[; ;doprnt.c: 614: } while(isdigit((unsigned)*f));
+[e $ ( _isdigit (1 -> -> *U _f `ui `uc 41  ]
+[e :U 40 ]
+"620
+}
+[e :U 38 ]
+[; ;doprnt.c: 620: }
+[; ;doprnt.c: 623: if(*f == '.') {
+"623
+[e $ ! == -> *U _f `ui -> 46 `ui 42  ]
+{
+[; ;doprnt.c: 624: flag |= 0x4000;
+"624
+[e =| _flag -> -> 16384 `i `us ]
+[; ;doprnt.c: 625: f++;
+"625
+[e ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x ]
+[; ;doprnt.c: 639: {
+"639
+{
+[; ;doprnt.c: 640: prec = 0;
+"640
+[e = _prec -> 0 `i ]
+[; ;doprnt.c: 641: while(isdigit((unsigned)*f))
+"641
+[e $U 43  ]
+[e :U 44 ]
+[; ;doprnt.c: 642: prec = prec*10 + *f++ - '0';
+"642
+[e = _prec -> - -> + * _prec -> 10 `i -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `i `ui -> 48 `ui `i ]
+[e :U 43 ]
+"641
+[e $ ( _isdigit (1 -> -> *U _f `ui `uc 44  ]
+[e :U 45 ]
+"643
+}
+"644
+}
+[; ;doprnt.c: 643: }
+[; ;doprnt.c: 644: } else {
+[e $U 46  ]
+[e :U 42 ]
+{
+[; ;doprnt.c: 645: prec = 0;
+"645
+[e = _prec -> 0 `i ]
+[; ;doprnt.c: 647: flag |= 0x1000;
+"647
+[e =| _flag -> -> 4096 `i `us ]
+"649
+}
+[e :U 46 ]
+[; ;doprnt.c: 649: }
+[; ;doprnt.c: 652: loop:
+"652
+[e :U 47 ]
+[; ;doprnt.c: 654: switch(c = *f++) {
+"654
+[e $U 49  ]
+{
+[; ;doprnt.c: 656: case 0:
+"656
+[e :U 50 ]
+[; ;doprnt.c: 657: goto alldone;
+"657
+[e $U 51  ]
+[; ;doprnt.c: 660: case 'l':
+"660
+[e :U 52 ]
+[; ;doprnt.c: 662: flag |= 0x10;
+"662
+[e =| _flag -> -> 16 `i `us ]
+[; ;doprnt.c: 663: goto loop;
+"663
+[e $U 47  ]
+[; ;doprnt.c: 681: case 'f':
+"681
+[e :U 53 ]
+[; ;doprnt.c: 682: flag |= 0x400;
+"682
+[e =| _flag -> -> 1024 `i `us ]
+[; ;doprnt.c: 683: break;
+"683
+[e $U 48  ]
+[; ;doprnt.c: 716: case 'd':
+"716
+[e :U 54 ]
+"717
+[e :U 55 ]
+[; ;doprnt.c: 717: case 'i':
+[; ;doprnt.c: 718: break;
+"718
+[e $U 48  ]
+[; ;doprnt.c: 731: case 'X':
+"731
+[e :U 56 ]
+"737
+[e :U 57 ]
+[; ;doprnt.c: 737: case 'x':
+[; ;doprnt.c: 740: flag |= 0x80;
+"740
+[e =| _flag -> -> 128 `i `us ]
+[; ;doprnt.c: 742: break;
+"742
+[e $U 48  ]
+[; ;doprnt.c: 747: case 's':
+"747
+[e :U 58 ]
+[; ;doprnt.c: 753: cp = (*(const char * *)__va_arg((*(const char * **)ap), (const char *)0));
+"753
+[e = _cp *U -> ( ___va_arg , (. -> *U -> _ap `***Cuc `*v -> -> 0 `i `*Cuc `**Cuc ]
+[; ;doprnt.c: 759: if(!cp)
+"759
+[e $ ! ! != _cp -> -> 0 `i `*Cuc 59  ]
+[; ;doprnt.c: 760: cp = "(null)";
+"760
+[e = _cp :s 1C ]
+[e :U 59 ]
+[; ;doprnt.c: 764: len = 0;
+"764
+[e = _len -> -> 0 `i `ui ]
+[; ;doprnt.c: 765: while(cp[len])
+"765
+[e $U 60  ]
+[e :U 61 ]
+[; ;doprnt.c: 766: len++;
+"766
+[e ++ _len -> -> 1 `i `ui ]
+[e :U 60 ]
+"765
+[e $ != -> *U + _cp * -> _len `ux -> -> # *U _cp `ui `ux `i -> -> -> 0 `i `Cuc `i 61  ]
+[e :U 62 ]
+[; ;doprnt.c: 769: dostring:
+"769
+[e :U 63 ]
+[; ;doprnt.c: 772: if(prec && prec < len)
+"772
+[e $ ! && != _prec -> 0 `i < -> _prec `ui _len 64  ]
+[; ;doprnt.c: 773: len = prec;
+"773
+[e = _len -> _prec `ui ]
+[e :U 64 ]
+[; ;doprnt.c: 776: if(width > len)
+"776
+[e $ ! > -> _width `ui _len 65  ]
+[; ;doprnt.c: 777: width -= len;
+"777
+[e =- _width -> _len `i ]
+[e $U 66  ]
+"778
+[e :U 65 ]
+[; ;doprnt.c: 778: else
+[; ;doprnt.c: 779: width = 0;
+"779
+[e = _width -> 0 `i ]
+[e :U 66 ]
+[; ;doprnt.c: 783: while(width--)
+"783
+[e $U 67  ]
+[e :U 68 ]
+[; ;doprnt.c: 784: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"784
+[e :U 72 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 73  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 74  ]
+[e :U 73 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 74 ]
+}
+[e :U 71 ]
+[e :U 67 ]
+"783
+[e $ != -- _width -> 1 `i -> 0 `i 68  ]
+[e :U 69 ]
+[; ;doprnt.c: 786: while(len--)
+"786
+[e $U 75  ]
+[e :U 76 ]
+[; ;doprnt.c: 787: do { if(pb->func) (pb->func(*cp++)); else ((*pb->ptr++ = *cp++)); } while(0);
+"787
+[e :U 80 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 81  ]
+[e ( *U . *U _pb 1 (1 *U ++ _cp * -> -> 1 `i `x -> -> # *U _cp `i `x ]
+[e $U 82  ]
+[e :U 81 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x *U ++ _cp * -> -> 1 `i `x -> -> # *U _cp `i `x ]
+[e :U 82 ]
+}
+[e :U 79 ]
+[e :U 75 ]
+"786
+[e $ != -- _len -> -> 1 `i `ui -> -> 0 `i `ui 76  ]
+[e :U 77 ]
+[; ;doprnt.c: 793: continue;
+"793
+[e $U 20  ]
+[; ;doprnt.c: 803: case 'c':
+"803
+[e :U 83 ]
+[; ;doprnt.c: 818: c = (*(int *)__va_arg((*(int **)ap), (int)0));
+"818
+[e = _c -> *U -> ( ___va_arg , (. -> *U -> _ap `**i `*v -> 0 `i `*i `uc ]
+[; ;doprnt.c: 821: default:
+"821
+[e :U 84 ]
+[; ;doprnt.c: 824: cp = (char *)&c;
+"824
+[e = _cp -> &U _c `*Cuc ]
+[; ;doprnt.c: 825: len = 1;
+"825
+[e = _len -> -> 1 `i `ui ]
+[; ;doprnt.c: 826: goto dostring;
+"826
+[e $U 63  ]
+[; ;doprnt.c: 836: case 'u':
+"836
+[e :U 85 ]
+[; ;doprnt.c: 837: flag |= 0xC0;
+"837
+[e =| _flag -> -> 192 `i `us ]
+[; ;doprnt.c: 838: break;
+"838
+[e $U 48  ]
+"841
+}
+[; ;doprnt.c: 841: }
+[e $U 48  ]
+"654
+[e :U 49 ]
+[e [\ = _c *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x , $ -> -> 0 `i `uc 50
+ , $ -> -> 108 `ui `uc 52
+ , $ -> -> 102 `ui `uc 53
+ , $ -> -> 100 `ui `uc 54
+ , $ -> -> 105 `ui `uc 55
+ , $ -> -> 88 `ui `uc 56
+ , $ -> -> 120 `ui `uc 57
+ , $ -> -> 115 `ui `uc 58
+ , $ -> -> 99 `ui `uc 83
+ , $ -> -> 117 `ui `uc 85
+ 84 ]
+"841
+[e :U 48 ]
+[; ;doprnt.c: 844: if(flag & (0x700)) {
+"844
+[e $ ! != & -> _flag `ui -> -> 1792 `i `ui -> -> 0 `i `ui 86  ]
+{
+[; ;doprnt.c: 846: if(flag & 0x1000)
+"846
+[e $ ! != & -> _flag `ui -> -> 4096 `i `ui -> -> 0 `i `ui 87  ]
+[; ;doprnt.c: 848: prec = 6;
+"848
+[e = _prec -> 6 `i ]
+[e :U 87 ]
+[; ;doprnt.c: 849: fval = (*(double *)__va_arg((*(double **)ap), (double)0));
+"849
+[e = _fval *U -> ( ___va_arg , (. -> *U -> _ap `**d `*v -> -> 0 `i `d `*d ]
+[; ;doprnt.c: 850: if(fval < 0.0) {
+"850
+[e $ ! < _fval .0.0 88  ]
+{
+[; ;doprnt.c: 851: fval = -fval;
+"851
+[e = _fval -U _fval ]
+[; ;doprnt.c: 852: flag |= 0x03;
+"852
+[e =| _flag -> -> 3 `i `us ]
+"853
+}
+[e :U 88 ]
+[; ;doprnt.c: 853: }
+[; ;doprnt.c: 854: eexp = 0;
+"854
+[e = _eexp -> 0 `i ]
+[; ;doprnt.c: 855: if( fval!=0) {
+"855
+[e $ ! != _fval -> -> 0 `i `d 89  ]
+{
+[; ;doprnt.c: 856: (void)(*(&eexp) = (unsigned char)((*(unsigned long *)&fval >> 23) & 255) - 126);
+"856
+[e = *U &U _eexp - -> -> & >> *U -> &U _fval `*ul -> 23 `i -> -> -> 255 `i `l `ul `uc `i -> 126 `i ]
+[; ;doprnt.c: 857: eexp--;
+"857
+[e -- _eexp -> 1 `i ]
+[; ;doprnt.c: 858: eexp *= 3;
+"858
+[e =* _eexp -> 3 `i ]
+[; ;doprnt.c: 859: eexp /= 10;
+"859
+[e =/ _eexp -> -> 10 `uc `i ]
+[; ;doprnt.c: 860: if(eexp < 0)
+"860
+[e $ ! < _eexp -> 0 `i 90  ]
+[; ;doprnt.c: 861: eexp--;
+"861
+[e -- _eexp -> 1 `i ]
+[e :U 90 ]
+[; ;doprnt.c: 865: tmpval.integ = scale(-eexp);
+"865
+[e = . _tmpval 1 ( _scale (1 -> -U _eexp `c ]
+[; ;doprnt.c: 866: tmpval.integ *= fval;
+"866
+[e =* . _tmpval 1 _fval ]
+[; ;doprnt.c: 867: if(tmpval.integ < 1.0)
+"867
+[e $ ! < . _tmpval 1 .1.0 91  ]
+[; ;doprnt.c: 868: eexp--;
+"868
+[e -- _eexp -> 1 `i ]
+[e $U 92  ]
+"869
+[e :U 91 ]
+[; ;doprnt.c: 869: else if(tmpval.integ >= 10.0)
+[e $ ! >= . _tmpval 1 .10.0 93  ]
+[; ;doprnt.c: 870: eexp++;
+"870
+[e ++ _eexp -> 1 `i ]
+[e :U 93 ]
+"871
+[e :U 92 ]
+}
+[e :U 89 ]
+[; ;doprnt.c: 871: }
+[; ;doprnt.c: 1131: if(prec <= 12)
+"1131
+[e $ ! <= _prec -> 12 `i 94  ]
+[; ;doprnt.c: 1132: fval += fround((unsigned int)prec);
+"1132
+[e =+ _fval ( _fround (1 -> -> _prec `ui `uc ]
+[e :U 94 ]
+[; ;doprnt.c: 1135: if((eexp > 9)||(fval != 0 && (unsigned long)fval == 0 && eexp > 1)) {
+"1135
+[e $ ! || > _eexp -> 9 `i && && != _fval -> -> 0 `i `d == -> _fval `ul -> -> -> 0 `i `l `ul > _eexp -> 1 `i 95  ]
+{
+[; ;doprnt.c: 1139: if(tmpval.integ < 4.294967296){
+"1139
+[e $ ! < . _tmpval 1 .4.294967296 96  ]
+{
+[; ;doprnt.c: 1140: eexp -= (sizeof dpowers/sizeof dpowers[0])-1;
+"1140
+[e =- _eexp -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 1 `i `ui `i ]
+"1141
+}
+[; ;doprnt.c: 1141: }else{
+[e $U 97  ]
+[e :U 96 ]
+{
+[; ;doprnt.c: 1142: eexp -= (sizeof dpowers/sizeof dpowers[0])-2;
+"1142
+[e =- _eexp -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 2 `i `ui `i ]
+"1143
+}
+[e :U 97 ]
+[; ;doprnt.c: 1143: }
+[; ;doprnt.c: 1144: tmpval.integ = scale(eexp);
+"1144
+[e = . _tmpval 1 ( _scale (1 -> _eexp `c ]
+[; ;doprnt.c: 1145: val = ((sizeof(double)== 3) ? _tdiv_to_l_(fval,tmpval.integ) : _div_to_l_(fval,tmpval.integ));
+"1145
+[e = _val ? == -> # `d `ui -> -> 3 `i `ui : ( __tdiv_to_l_ (2 , -> _fval `f -> . _tmpval 1 `f ( __div_to_l_ (2 , _fval . _tmpval 1 ]
+[; ;doprnt.c: 1148: fval = 0.0;
+"1148
+[e = _fval .0.0 ]
+"1149
+}
+[; ;doprnt.c: 1149: } else {
+[e $U 98  ]
+[e :U 95 ]
+{
+[; ;doprnt.c: 1150: val = (unsigned long)fval;
+"1150
+[e = _val -> _fval `ul ]
+[; ;doprnt.c: 1151: fval -= (double)val;
+"1151
+[e =- _fval -> _val `d ]
+[; ;doprnt.c: 1152: eexp = 0;
+"1152
+[e = _eexp -> 0 `i ]
+"1153
+}
+[e :U 98 ]
+[; ;doprnt.c: 1153: }
+[; ;doprnt.c: 1155: for(c = 1 ; c != (sizeof dpowers/sizeof dpowers[0]) ; c++)
+"1155
+{
+[e = _c -> -> 1 `i `uc ]
+[e $ != -> _c `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 99  ]
+[e $U 100  ]
+"1156
+[e :U 99 ]
+[; ;doprnt.c: 1156: if(val < dpowers[c])
+[e $ ! < _val *U + &U _dpowers * -> _c `ux -> -> # *U &U _dpowers `ui `ux 102  ]
+[; ;doprnt.c: 1157: break;
+"1157
+[e $U 100  ]
+[e :U 102 ]
+"1155
+[e ++ _c -> -> 1 `i `uc ]
+[e $ != -> _c `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 99  ]
+[e :U 100 ]
+"1161
+}
+[; ;doprnt.c: 1161: width -= prec + c + eexp;
+[e =- _width + + _prec -> _c `i _eexp ]
+[; ;doprnt.c: 1162: if(
+[; ;doprnt.c: 1166: prec)
+"1166
+[e $ ! != _prec -> 0 `i 103  ]
+[; ;doprnt.c: 1167: width--;
+"1167
+[e -- _width -> 1 `i ]
+[e :U 103 ]
+[; ;doprnt.c: 1168: if(flag & 0x03)
+"1168
+[e $ ! != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 104  ]
+[; ;doprnt.c: 1169: width--;
+"1169
+[e -- _width -> 1 `i ]
+[e :U 104 ]
+[; ;doprnt.c: 1172: if(flag & 0x04) {
+"1172
+[e $ ! != & -> _flag `ui -> -> 4 `i `ui -> -> 0 `i `ui 105  ]
+{
+[; ;doprnt.c: 1174: if(flag & 0x02)
+"1174
+[e $ ! != & -> _flag `ui -> -> 2 `i `ui -> -> 0 `i `ui 106  ]
+[; ;doprnt.c: 1178: do { if(pb->func) (pb->func(flag & 0x01 ? '-' : '+')); else ((*pb->ptr++ = flag & 0x01 ? '-' : '+')); } while(0);
+"1178
+[e :U 109 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 110  ]
+[e ( *U . *U _pb 1 (1 -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e $U 111  ]
+[e :U 110 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e :U 111 ]
+}
+[e :U 108 ]
+[e $U 112  ]
+"1180
+[e :U 106 ]
+[; ;doprnt.c: 1180: else
+[; ;doprnt.c: 1183: if(flag & 0x01)
+"1183
+[e $ ! != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui 113  ]
+[; ;doprnt.c: 1184: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"1184
+[e :U 116 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 117  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 118  ]
+[e :U 117 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 118 ]
+}
+[e :U 115 ]
+[e :U 113 ]
+"1187
+[e :U 112 ]
+[; ;doprnt.c: 1187: while(width > 0) {
+[e $U 119  ]
+[e :U 120 ]
+{
+[; ;doprnt.c: 1188: do { if(pb->func) (pb->func('0')); else ((*pb->ptr++ = '0')); } while(0);
+"1188
+[e :U 124 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 125  ]
+[e ( *U . *U _pb 1 (1 -> -> 48 `ui `uc ]
+[e $U 126  ]
+[e :U 125 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 48 `ui `uc ]
+[e :U 126 ]
+}
+[e :U 123 ]
+[; ;doprnt.c: 1189: width--;
+"1189
+[e -- _width -> 1 `i ]
+"1190
+}
+[e :U 119 ]
+"1187
+[e $ > _width -> 0 `i 120  ]
+[e :U 121 ]
+"1192
+}
+[; ;doprnt.c: 1190: }
+[; ;doprnt.c: 1192: } else
+[e $U 127  ]
+[e :U 105 ]
+[; ;doprnt.c: 1194: {
+"1194
+{
+[; ;doprnt.c: 1199: while(width > 0) {
+"1199
+[e $U 128  ]
+[e :U 129 ]
+{
+[; ;doprnt.c: 1200: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"1200
+[e :U 133 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 134  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 135  ]
+[e :U 134 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 135 ]
+}
+[e :U 132 ]
+[; ;doprnt.c: 1201: width--;
+"1201
+[e -- _width -> 1 `i ]
+"1202
+}
+[e :U 128 ]
+"1199
+[e $ > _width -> 0 `i 129  ]
+[e :U 130 ]
+[; ;doprnt.c: 1202: }
+[; ;doprnt.c: 1205: if(flag & 0x02)
+"1205
+[e $ ! != & -> _flag `ui -> -> 2 `i `ui -> -> 0 `i `ui 136  ]
+[; ;doprnt.c: 1209: do { if(pb->func) (pb->func(flag & 0x01 ? '-' : '+')); else ((*pb->ptr++ = flag & 0x01 ? '-' : '+')); } while(0);
+"1209
+[e :U 139 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 140  ]
+[e ( *U . *U _pb 1 (1 -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e $U 141  ]
+[e :U 140 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e :U 141 ]
+}
+[e :U 138 ]
+[e $U 142  ]
+"1211
+[e :U 136 ]
+[; ;doprnt.c: 1211: else if(flag & 0x01)
+[e $ ! != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui 143  ]
+[; ;doprnt.c: 1212: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"1212
+[e :U 146 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 147  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 148  ]
+[e :U 147 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 148 ]
+}
+[e :U 145 ]
+[e :U 143 ]
+"1214
+[e :U 142 ]
+}
+[e :U 127 ]
+[; ;doprnt.c: 1214: }
+[; ;doprnt.c: 1215: while(c--) {
+"1215
+[e $U 149  ]
+[e :U 150 ]
+{
+[; ;doprnt.c: 1219: {
+"1219
+{
+[; ;doprnt.c: 1220: tmpval.vd = val/dpowers[c];
+"1220
+[e = . _tmpval 0 / _val *U + &U _dpowers * -> _c `ux -> -> # *U &U _dpowers `ui `ux ]
+[; ;doprnt.c: 1221: tmpval.vd %= 10;
+"1221
+[e =% . _tmpval 0 -> -> 10 `uc `ul ]
+[; ;doprnt.c: 1222: do { if(pb->func) (pb->func('0' + tmpval.vd)); else ((*pb->ptr++ = '0' + tmpval.vd)); } while(0);
+"1222
+[e :U 154 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 155  ]
+[e ( *U . *U _pb 1 (1 -> + -> -> 48 `ui `ul . _tmpval 0 `uc ]
+[e $U 156  ]
+[e :U 155 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> + -> -> 48 `ui `ul . _tmpval 0 `uc ]
+[e :U 156 ]
+}
+[e :U 153 ]
+"1223
+}
+"1225
+}
+[e :U 149 ]
+"1215
+[e $ != -> -- _c -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 150  ]
+[e :U 151 ]
+[; ;doprnt.c: 1223: }
+[; ;doprnt.c: 1225: }
+[; ;doprnt.c: 1226: while(eexp > 0) {
+"1226
+[e $U 157  ]
+[e :U 158 ]
+{
+[; ;doprnt.c: 1227: do { if(pb->func) (pb->func('0')); else ((*pb->ptr++ = '0')); } while(0);
+"1227
+[e :U 162 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 163  ]
+[e ( *U . *U _pb 1 (1 -> -> 48 `ui `uc ]
+[e $U 164  ]
+[e :U 163 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 48 `ui `uc ]
+[e :U 164 ]
+}
+[e :U 161 ]
+[; ;doprnt.c: 1228: eexp--;
+"1228
+[e -- _eexp -> 1 `i ]
+"1229
+}
+[e :U 157 ]
+"1226
+[e $ > _eexp -> 0 `i 158  ]
+[e :U 159 ]
+[; ;doprnt.c: 1229: }
+[; ;doprnt.c: 1230: if(prec > (int)((sizeof dpowers/sizeof dpowers[0])-2))
+"1230
+[e $ ! > _prec -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 2 `i `ui `i 165  ]
+[; ;doprnt.c: 1231: c = (sizeof dpowers/sizeof dpowers[0])-2;
+"1231
+[e = _c -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 2 `i `ui `uc ]
+[e $U 166  ]
+"1232
+[e :U 165 ]
+[; ;doprnt.c: 1232: else
+[; ;doprnt.c: 1233: c = (char)prec;
+"1233
+[e = _c -> _prec `uc ]
+[e :U 166 ]
+[; ;doprnt.c: 1234: prec -= (int)c;
+"1234
+[e =- _prec -> _c `i ]
+[; ;doprnt.c: 1238: if(c)
+"1238
+[e $ ! != -> _c `i -> -> -> 0 `i `uc `i 167  ]
+[; ;doprnt.c: 1240: do { if(pb->func) (pb->func('.')); else ((*pb->ptr++ = '.')); } while(0);
+"1240
+[e :U 170 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 171  ]
+[e ( *U . *U _pb 1 (1 -> -> 46 `ui `uc ]
+[e $U 172  ]
+[e :U 171 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 46 `ui `uc ]
+[e :U 172 ]
+}
+[e :U 169 ]
+[e :U 167 ]
+[; ;doprnt.c: 1246: val = (unsigned long)(fval * scale((signed char)c));
+"1246
+[e = _val -> * _fval ( _scale (1 -> _c `c `ul ]
+[; ;doprnt.c: 1247: while(c--) {
+"1247
+[e $U 173  ]
+[e :U 174 ]
+{
+[; ;doprnt.c: 1248: tmpval.vd = val/dpowers[c];
+"1248
+[e = . _tmpval 0 / _val *U + &U _dpowers * -> _c `ux -> -> # *U &U _dpowers `ui `ux ]
+[; ;doprnt.c: 1249: tmpval.vd %= 10;
+"1249
+[e =% . _tmpval 0 -> -> 10 `uc `ul ]
+[; ;doprnt.c: 1250: do { if(pb->func) (pb->func('0' + tmpval.vd)); else ((*pb->ptr++ = '0' + tmpval.vd)); } while(0);
+"1250
+[e :U 178 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 179  ]
+[e ( *U . *U _pb 1 (1 -> + -> -> 48 `ui `ul . _tmpval 0 `uc ]
+[e $U 180  ]
+[e :U 179 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> + -> -> 48 `ui `ul . _tmpval 0 `uc ]
+[e :U 180 ]
+}
+[e :U 177 ]
+[; ;doprnt.c: 1251: val %= dpowers[c];
+"1251
+[e =% _val *U + &U _dpowers * -> _c `ux -> -> # *U &U _dpowers `ui `ux ]
+"1252
+}
+[e :U 173 ]
+"1247
+[e $ != -> -- _c -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 174  ]
+[e :U 175 ]
+[; ;doprnt.c: 1252: }
+[; ;doprnt.c: 1254: while(prec) {
+"1254
+[e $U 181  ]
+[e :U 182 ]
+{
+[; ;doprnt.c: 1255: do { if(pb->func) (pb->func('0')); else ((*pb->ptr++ = '0')); } while(0);
+"1255
+[e :U 186 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 187  ]
+[e ( *U . *U _pb 1 (1 -> -> 48 `ui `uc ]
+[e $U 188  ]
+[e :U 187 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 48 `ui `uc ]
+[e :U 188 ]
+}
+[e :U 185 ]
+[; ;doprnt.c: 1256: prec--;
+"1256
+[e -- _prec -> 1 `i ]
+"1257
+}
+[e :U 181 ]
+"1254
+[e $ != _prec -> 0 `i 182  ]
+[e :U 183 ]
+[; ;doprnt.c: 1257: }
+[; ;doprnt.c: 1264: continue;
+"1264
+[e $U 20  ]
+"1265
+}
+[e :U 86 ]
+[; ;doprnt.c: 1265: }
+[; ;doprnt.c: 1270: if((flag & (0xC0)) == 0x00)
+"1270
+[e $ ! == & -> _flag `ui -> -> 192 `i `ui -> -> 0 `i `ui 189  ]
+[; ;doprnt.c: 1272: {
+"1272
+{
+[; ;doprnt.c: 1274: if(flag & 0x10)
+"1274
+[e $ ! != & -> _flag `ui -> -> 16 `i `ui -> -> 0 `i `ui 190  ]
+[; ;doprnt.c: 1275: val = (*(long *)__va_arg((*(long **)ap), (long)0));
+"1275
+[e = _val -> *U -> ( ___va_arg , (. -> *U -> _ap `**l `*v -> -> 0 `i `l `*l `ul ]
+[e $U 191  ]
+"1276
+[e :U 190 ]
+[; ;doprnt.c: 1276: else
+[; ;doprnt.c: 1278: val = (long)(*(int *)__va_arg((*(int **)ap), (int)0));
+"1278
+[e = _val -> -> *U -> ( ___va_arg , (. -> *U -> _ap `**i `*v -> 0 `i `*i `l `ul ]
+[e :U 191 ]
+[; ;doprnt.c: 1280: if((long)val < 0) {
+"1280
+[e $ ! < -> _val `l -> -> 0 `i `l 192  ]
+{
+[; ;doprnt.c: 1281: flag |= 0x03;
+"1281
+[e =| _flag -> -> 3 `i `us ]
+[; ;doprnt.c: 1282: val = -val;
+"1282
+[e = _val -U _val ]
+"1283
+}
+[e :U 192 ]
+"1285
+}
+[; ;doprnt.c: 1283: }
+[; ;doprnt.c: 1285: }
+[e $U 193  ]
+"1287
+[e :U 189 ]
+[; ;doprnt.c: 1287: else
+[; ;doprnt.c: 1292: {
+"1292
+{
+[; ;doprnt.c: 1300: if(flag & 0x10)
+"1300
+[e $ ! != & -> _flag `ui -> -> 16 `i `ui -> -> 0 `i `ui 194  ]
+[; ;doprnt.c: 1301: val = (*(unsigned long *)__va_arg((*(unsigned long **)ap), (unsigned long)0));
+"1301
+[e = _val *U -> ( ___va_arg , (. -> *U -> _ap `**ul `*v -> -> 0 `i `ul `*ul ]
+[e $U 195  ]
+"1302
+[e :U 194 ]
+[; ;doprnt.c: 1302: else
+[; ;doprnt.c: 1305: val = (*(unsigned *)__va_arg((*(unsigned **)ap), (unsigned)0));
+"1305
+[e = _val -> *U -> ( ___va_arg , (. -> *U -> _ap `**ui `*v -> -> 0 `i `ui `*ui `ul ]
+[e :U 195 ]
+"1306
+}
+[e :U 193 ]
+[; ;doprnt.c: 1306: }
+[; ;doprnt.c: 1309: if(prec == 0 && val == 0)
+"1309
+[e $ ! && == _prec -> 0 `i == _val -> -> -> 0 `i `l `ul 196  ]
+[; ;doprnt.c: 1310: prec++;
+"1310
+[e ++ _prec -> 1 `i ]
+[e :U 196 ]
+[; ;doprnt.c: 1313: switch((unsigned char)(flag & (0xC0))) {
+"1313
+[e $U 198  ]
+{
+[; ;doprnt.c: 1318: case 0x00:
+"1318
+[e :U 199 ]
+"1321
+[e :U 200 ]
+[; ;doprnt.c: 1321: case 0xC0:
+[; ;doprnt.c: 1324: for(c = 1 ; c != sizeof dpowers/sizeof dpowers[0] ; c++)
+"1324
+{
+[e = _c -> -> 1 `i `uc ]
+[e $ != -> _c `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 201  ]
+[e $U 202  ]
+"1325
+[e :U 201 ]
+[; ;doprnt.c: 1325: if(val < dpowers[c])
+[e $ ! < _val *U + &U _dpowers * -> _c `ux -> -> # *U &U _dpowers `ui `ux 204  ]
+[; ;doprnt.c: 1326: break;
+"1326
+[e $U 202  ]
+[e :U 204 ]
+"1324
+[e ++ _c -> -> 1 `i `uc ]
+[e $ != -> _c `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 201  ]
+[e :U 202 ]
+"1328
+}
+[; ;doprnt.c: 1328: break;
+[e $U 197  ]
+[; ;doprnt.c: 1333: case 0x80:
+"1333
+[e :U 205 ]
+[; ;doprnt.c: 1335: for(c = 1 ; c != sizeof hexpowers/sizeof hexpowers[0] ; c++)
+"1335
+{
+[e = _c -> -> 1 `i `uc ]
+[e $ != -> _c `ui / -> # _hexpowers `ui -> # *U + &U _hexpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _hexpowers `ui `ux `ui 206  ]
+[e $U 207  ]
+"1336
+[e :U 206 ]
+[; ;doprnt.c: 1336: if(val < hexpowers[c])
+[e $ ! < _val *U + &U _hexpowers * -> _c `ux -> -> # *U &U _hexpowers `ui `ux 209  ]
+[; ;doprnt.c: 1337: break;
+"1337
+[e $U 207  ]
+[e :U 209 ]
+"1335
+[e ++ _c -> -> 1 `i `uc ]
+[e $ != -> _c `ui / -> # _hexpowers `ui -> # *U + &U _hexpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _hexpowers `ui `ux `ui 206  ]
+[e :U 207 ]
+"1339
+}
+[; ;doprnt.c: 1339: break;
+[e $U 197  ]
+"1355
+}
+[; ;doprnt.c: 1355: }
+[e $U 197  ]
+"1313
+[e :U 198 ]
+[e [\ -> & -> _flag `ui -> -> 192 `i `ui `uc , $ -> -> 0 `i `uc 199
+ , $ -> -> 192 `i `uc 200
+ , $ -> -> 128 `i `uc 205
+ 197 ]
+"1355
+[e :U 197 ]
+[; ;doprnt.c: 1358: if(c < prec)
+"1358
+[e $ ! < -> _c `i _prec 210  ]
+[; ;doprnt.c: 1359: c = prec;
+"1359
+[e = _c -> _prec `uc ]
+[e $U 211  ]
+"1360
+[e :U 210 ]
+[; ;doprnt.c: 1360: else if(prec < c)
+[e $ ! < _prec -> _c `i 212  ]
+[; ;doprnt.c: 1361: prec = c;
+"1361
+[e = _prec -> _c `i ]
+[e :U 212 ]
+"1364
+[e :U 211 ]
+[; ;doprnt.c: 1364: if(width && flag & 0x03)
+[e $ ! && != _width -> 0 `i != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 213  ]
+[; ;doprnt.c: 1365: width--;
+"1365
+[e -- _width -> 1 `i ]
+[e :U 213 ]
+[; ;doprnt.c: 1367: if(flag & 0x4000) {
+"1367
+[e $ ! != & -> _flag `ui -> -> 16384 `i `ui -> -> 0 `i `ui 214  ]
+{
+[; ;doprnt.c: 1368: if(width > prec)
+"1368
+[e $ ! > _width _prec 215  ]
+[; ;doprnt.c: 1369: width -= prec;
+"1369
+[e =- _width _prec ]
+[e $U 216  ]
+"1370
+[e :U 215 ]
+[; ;doprnt.c: 1370: else
+[; ;doprnt.c: 1371: width = 0;
+"1371
+[e = _width -> 0 `i ]
+[e :U 216 ]
+"1372
+}
+[e :U 214 ]
+[; ;doprnt.c: 1372: }
+[; ;doprnt.c: 1400: if(width > c)
+"1400
+[e $ ! > _width -> _c `i 217  ]
+[; ;doprnt.c: 1401: width -= c;
+"1401
+[e =- _width -> _c `i ]
+[e $U 218  ]
+"1402
+[e :U 217 ]
+[; ;doprnt.c: 1402: else
+[; ;doprnt.c: 1403: width = 0;
+"1403
+[e = _width -> 0 `i ]
+[e :U 218 ]
+[; ;doprnt.c: 1406: if(flag & 0x04) {
+"1406
+[e $ ! != & -> _flag `ui -> -> 4 `i `ui -> -> 0 `i `ui 219  ]
+{
+[; ;doprnt.c: 1408: if(flag & 0x02)
+"1408
+[e $ ! != & -> _flag `ui -> -> 2 `i `ui -> -> 0 `i `ui 220  ]
+[; ;doprnt.c: 1409: do { if(pb->func) (pb->func(flag & 0x01 ? '-' : '+')); else ((*pb->ptr++ = flag & 0x01 ? '-' : '+')); } while(0);
+"1409
+[e :U 223 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 224  ]
+[e ( *U . *U _pb 1 (1 -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e $U 225  ]
+[e :U 224 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e :U 225 ]
+}
+[e :U 222 ]
+[e $U 226  ]
+"1415
+[e :U 220 ]
+[; ;doprnt.c: 1415: else
+[; ;doprnt.c: 1418: if(flag & 0x01)
+"1418
+[e $ ! != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui 227  ]
+[; ;doprnt.c: 1419: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"1419
+[e :U 230 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 231  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 232  ]
+[e :U 231 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 232 ]
+}
+[e :U 229 ]
+[e :U 227 ]
+"1434
+[e :U 226 ]
+[; ;doprnt.c: 1434: if(width)
+[e $ ! != _width -> 0 `i 233  ]
+[; ;doprnt.c: 1435: do
+"1435
+[e :U 236 ]
+[; ;doprnt.c: 1436: do { if(pb->func) (pb->func('0')); else ((*pb->ptr++ = '0')); } while(0);
+"1436
+[e :U 239 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 240  ]
+[e ( *U . *U _pb 1 (1 -> -> 48 `ui `uc ]
+[e $U 241  ]
+[e :U 240 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 48 `ui `uc ]
+[e :U 241 ]
+}
+[e :U 238 ]
+[; ;doprnt.c: 1437: while(--width);
+"1437
+[e $ != =- _width -> 1 `i -> 0 `i 236  ]
+[e :U 235 ]
+[e :U 233 ]
+"1439
+}
+[; ;doprnt.c: 1439: } else
+[e $U 242  ]
+[e :U 219 ]
+[; ;doprnt.c: 1441: {
+"1441
+{
+[; ;doprnt.c: 1443: if(width
+[; ;doprnt.c: 1447: )
+"1447
+[e $ ! != _width -> 0 `i 243  ]
+[; ;doprnt.c: 1448: do
+"1448
+[e :U 246 ]
+[; ;doprnt.c: 1449: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"1449
+[e :U 249 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 250  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 251  ]
+[e :U 250 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 251 ]
+}
+[e :U 248 ]
+[; ;doprnt.c: 1450: while(--width);
+"1450
+[e $ != =- _width -> 1 `i -> 0 `i 246  ]
+[e :U 245 ]
+[e :U 243 ]
+[; ;doprnt.c: 1453: if(flag & 0x02)
+"1453
+[e $ ! != & -> _flag `ui -> -> 2 `i `ui -> -> 0 `i `ui 252  ]
+[; ;doprnt.c: 1454: do { if(pb->func) (pb->func(flag & 0x01 ? '-' : '+')); else ((*pb->ptr++ = flag & 0x01 ? '-' : '+')); } while(0);
+"1454
+[e :U 255 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 256  ]
+[e ( *U . *U _pb 1 (1 -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e $U 257  ]
+[e :U 256 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> ? != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui : -> 45 `ui -> 43 `ui `uc ]
+[e :U 257 ]
+}
+[e :U 254 ]
+[e $U 258  ]
+"1462
+[e :U 252 ]
+[; ;doprnt.c: 1462: else if(flag & 0x01)
+[e $ ! != & -> _flag `ui -> -> 1 `i `ui -> -> 0 `i `ui 259  ]
+[; ;doprnt.c: 1463: do { if(pb->func) (pb->func(' ')); else ((*pb->ptr++ = ' ')); } while(0);
+"1463
+[e :U 262 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 263  ]
+[e ( *U . *U _pb 1 (1 -> -> 32 `ui `uc ]
+[e $U 264  ]
+[e :U 263 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x -> -> 32 `ui `uc ]
+[e :U 264 ]
+}
+[e :U 261 ]
+[e :U 259 ]
+"1488
+[e :U 258 ]
+}
+[e :U 242 ]
+[; ;doprnt.c: 1488: }
+[; ;doprnt.c: 1493: while(prec--) {
+"1493
+[e $U 265  ]
+[e :U 266 ]
+{
+[; ;doprnt.c: 1495: switch((unsigned char)(flag & (0xC0)))
+"1495
+[e $U 269  ]
+[; ;doprnt.c: 1497: {
+"1497
+{
+[; ;doprnt.c: 1502: case 0x00:
+"1502
+[e :U 270 ]
+"1505
+[e :U 271 ]
+[; ;doprnt.c: 1505: case 0xC0:
+[; ;doprnt.c: 1508: c = (val / dpowers[prec]) % 10 + '0';
+"1508
+[e = _c -> + % / _val *U + &U _dpowers * -> -> _prec `ui `ux -> -> # *U &U _dpowers `ui `ux -> -> -> 10 `i `l `ul -> -> 48 `ui `ul `uc ]
+[; ;doprnt.c: 1510: break;
+"1510
+[e $U 268  ]
+[; ;doprnt.c: 1516: case 0x80:
+"1516
+[e :U 272 ]
+[; ;doprnt.c: 1518: {
+"1518
+{
+"1519
+[v _idx `uc ~T0 @X0 1 a ]
+[; ;doprnt.c: 1519: unsigned char idx = (val / hexpowers[prec]) & 0xF;
+[e = _idx -> & / _val *U + &U _hexpowers * -> -> _prec `ui `ux -> -> # *U &U _hexpowers `ui `ux -> -> -> 15 `i `l `ul `uc ]
+[; ;doprnt.c: 1523: c = "0123456789ABCDEF"[idx];
+"1523
+[e = _c *U + :s 2C * -> _idx `ux -> -> # *U :s 2C `ui `ux ]
+"1527
+}
+[; ;doprnt.c: 1527: }
+[; ;doprnt.c: 1529: break;
+"1529
+[e $U 268  ]
+"1542
+}
+[; ;doprnt.c: 1542: }
+[e $U 268  ]
+"1495
+[e :U 269 ]
+[e [\ -> & -> _flag `ui -> -> 192 `i `ui `uc , $ -> -> 0 `i `uc 270
+ , $ -> -> 192 `i `uc 271
+ , $ -> -> 128 `i `uc 272
+ 268 ]
+"1542
+[e :U 268 ]
+[; ;doprnt.c: 1543: do { if(pb->func) (pb->func(c)); else ((*pb->ptr++ = c)); } while(0);
+"1543
+[e :U 275 ]
+{
+[e $ ! != . *U _pb 1 -> -> 0 `i `*F10 276  ]
+[e ( *U . *U _pb 1 (1 _c ]
+[e $U 277  ]
+[e :U 276 ]
+[e = *U ++ . *U _pb 0 * -> -> 1 `i `x -> -> # *U . *U _pb 0 `i `x _c ]
+[e :U 277 ]
+}
+[e :U 274 ]
+"1544
+}
+[e :U 265 ]
+"1493
+[e $ != -- _prec -> 1 `i -> 0 `i 266  ]
+[e :U 267 ]
+"1552
+}
+[e :U 20 ]
+"548
+[e $ != -> = _c *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `i -> -> -> 0 `i `uc `i 21  ]
+[e :U 22 ]
+[; ;doprnt.c: 1544: }
+[; ;doprnt.c: 1552: }
+[; ;doprnt.c: 1554: alldone:
+"1554
+[e :U 51 ]
+[; ;doprnt.c: 1559: return 0;
+"1559
+[e ) -> 0 `i ]
+[e $UE 19  ]
+[; ;doprnt.c: 1560: }
+"1560
+[e :UE 19 ]
+}
+[a 2C 48 49 50 51 52 53 54 55 56 57 65 66 67 68 69 70 0 ]
+[a 1C 40 110 117 108 108 41 0 ]

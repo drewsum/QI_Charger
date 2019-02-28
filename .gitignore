@@ -21,3 +21,17 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+*.bak
+*.bck
+*.c.un~
+*.c~
+*.h.un~
+*.h~
+..gitignore.un~
+.gitignore~
+*.raw
+*.op.raw
+*.log
+*.plt
+
