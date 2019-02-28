@@ -5,6 +5,8 @@
 #include "device_IDs.h"
 #include "error_handling.h"
 #include "NXQ_charge_state.h"
+#include "adc_postprocessing.h"
+#include "LM73_I2C.h"
 
 const uint8_t OledFont[][8] = 
 {
@@ -422,7 +424,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "POS12 Voltage:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos12_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -437,7 +439,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "POS5 Voltage:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos5_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -452,7 +454,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "POS12 Current:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.pos12_isns_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -467,7 +469,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "QI Current:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.qi_isns_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -482,7 +484,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Input Power:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.input_power);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -497,7 +499,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Output Power:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.output_power);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -512,7 +514,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Efficiency:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3f%%", adc_calculations.efficiency);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -527,7 +529,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "QI Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.QI_temp_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -542,7 +544,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.POS5_temp_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -557,7 +559,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Ambient Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.Ambient_temp_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -572,7 +574,7 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", adc_results.die_temp_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
