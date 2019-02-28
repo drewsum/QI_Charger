@@ -12,6 +12,12 @@
 // This function initializes the three temperature sensors
 void LM73TempSensorInitialize(void) {
     
+    // Disable cap touch interrupts
+    PIE0bits.INT1IE = 0;
+    PIE0bits.INT2IE = 0;
+    
+    while(I2C_STATUS == I2C2_MESSAGE_PENDING);
+    
     // Write config data to config register on QI temp sensor
     uint8_t length;    
     uint8_t output_data_array[2];
@@ -85,12 +91,22 @@ void LM73TempSensorInitialize(void) {
             I2C_STATUS == I2C2_LOST_STATE      ) {
         error_handler.I2C_Ambient_Temp_Sense_error_flag = true;
     }
+ 
+    // Enable cap touch interrupts
+    PIE0bits.INT1IE = 1;
+    PIE0bits.INT2IE = 1;
     
 }
 
 // This function accesses temperature sensor data over I2C
 void LM73AcquisitionHandler(void) {
 
+    // Disable cap touch interrupts
+    PIE0bits.INT1IE = 0;
+    PIE0bits.INT2IE = 0;
+    
+    while(I2C_STATUS == I2C2_MESSAGE_PENDING);
+    
     // QI Temp Sensor
     // Write temp reg addr to read back temp sensor data
     I2C2_MasterWrite(LM73_TEMP_REG, 1, QI_TEMP_SENSE_ADDR, &I2C_STATUS);
@@ -222,5 +238,9 @@ void LM73Convert(void) {
         Ambient_Conv = Ambient_Conv & 0x1FFF;
         LM73_temp_results.Ambient_temp_result = 0.03125 * Ambient_Conv;
     }
+    
+    // Enable cap touch interrupts
+    PIE0bits.INT1IE = 1;
+    PIE0bits.INT2IE = 1;
     
 }

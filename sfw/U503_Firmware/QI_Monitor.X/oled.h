@@ -62,6 +62,10 @@ struct OLED_RAM_Buffer_t {
     char line3[17];
 } OLED_RAM_Buffer;
 
+// These macros set the maximum and minimum OLED_Frame values for normal operation (after boot)
+#define OLED_FRAME_MAX      19
+#define OLED_FRAME_MIN      4
+
 // Current OLED frame enumeration
 typedef enum {
 
