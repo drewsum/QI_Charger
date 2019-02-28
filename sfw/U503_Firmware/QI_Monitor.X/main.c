@@ -41,6 +41,9 @@
     SOFTWARE.
 */
 
+#include <string.h>
+#include <stdio.h>
+
 #include "mcc_generated_files/mcc.h"
 
 #include "pin_macros.h"
@@ -54,6 +57,7 @@
 #include "LM73_I2C.h"
 #include "cap_touch_int.h"
 #include "NXQ_charge_state.h"
+#include "oled.h"
 
 /*
                          Main application
@@ -63,6 +67,9 @@ void main(void)
 
     // Determine the cause of the most recent reset, save to enum
     reset_cause = getCauseOfReset();
+    
+    // Shine RESET LED for a little bit
+    __delay_ms(250);
     
     // Initialize the device
     // These are MCC auto-generated instructions
@@ -93,7 +100,7 @@ void main(void)
     TMR3_SetInterruptHandler(QIIdleTimerHandler);
     TMR3_StopTimer();
     TMR3_Reload();
-    
+        
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
 
@@ -104,6 +111,13 @@ void main(void)
     terminalClearScreen();
     terminalSetCursorHome();
 
+    OLED_Init();
+    OLED_Clear();
+    
+    // Start OLED state machine, force callback
+    OLED_Frame = OLED_Boot_Frame_1;
+    OLED_updateHandler();
+    
     // Setup I2C temp sensors
     LM73TempSensorInitialize();
     
@@ -149,12 +163,19 @@ void main(void)
     // Reset virtual COM port text attributes
     terminalTextAttributesReset();
     
+    // See if we're starting idle or fully charged
+    if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) nxq_charge_state = QI_Idle;
+    else if (QI_CHARGE_PIN == 1 && QI_IDLE_PIN == 1) nxq_charge_state = QI_Fully_Charged;
+    
     // Endless loop
     while (1) {
         
         // If received terminal data is ready, process it
         if (eusart2RxStringReady) terminal_ringBufferPull();
             
+        // If the OLED needs to be updated, update it
+        if (OLED_update_flag) OLED_updateHandler();
+        
         // If new LM73 is requested, get it
         if (LM73_start_flag) LM73AcquisitionHandler();
         

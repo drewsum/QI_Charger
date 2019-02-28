@@ -11,6 +11,8 @@
 
 #include "LM73_I2C.h"
 
+#include "oled.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
@@ -25,6 +27,8 @@ void heartbeatTimerHandler(void) {
     CLRWDT();
     
     LM73_start_flag = true;
+    
+    if (device_on_time % OLED_update_time == 0) OLED_update_flag = true;
     
 }
 

@@ -10,19 +10,19 @@ char * getNXQChargeStateString(void) {
  
     switch (nxq_charge_state) {
      
-        case Idle:
+        case QI_Idle:
             return "idle";
             break;
             
-        case Charging:
+        case QI_Charging:
             return "charging";
             break;
             
-        case Fully_Charged:
+        case QI_Fully_Charged:
             return "fully charged";
             break;
             
-        case Error:
+        case QI_Error:
             return "error";
             break;
             
@@ -34,11 +34,41 @@ char * getNXQChargeStateString(void) {
     
 }
 
-// This is the QI_Idle signal IOC handler
+// This function returns a capitalized string that matches the NXQ charge state enum
+char * getNXQChargeStateStringCaps(void) {
+ 
+    switch (nxq_charge_state) {
+     
+        case QI_Idle:
+            return "Idle";
+            break;
+            
+        case QI_Charging:
+            return "Charging";
+            break;
+            
+        case QI_Fully_Charged:
+            return "Fully Charged";
+            break;
+            
+        case QI_Error:
+            return "Error";
+            break;
+            
+        default:
+            return "Undefined";
+            break;
+            
+    }
+    
+}
+
+// This is the QI_QI_Idle signal IOC handler
 void QIIdleIOCHandler(void) {
        
     if (QI_IDLE_PIN_FALL == 1) {
         
+        TMR3_Reload();
         TMR3_StartTimer();
         
     }
@@ -47,21 +77,15 @@ void QIIdleIOCHandler(void) {
 
 // This is the QI_Charge signal IOC handler
 void QIChargeIOCHandler(void) {
-    
-    TMR3_StopTimer();
-    TMR3_Reload();
-    
+        
     if (QI_CHARGE_PIN_FALL && QI_IDLE_PIN == 1) {
         
-        nxq_charge_state = Charging;
+        nxq_charge_state = QI_Charging;
         
     }
-    
-    else if ((nxq_charge_state == Charging || nxq_charge_state == Idle) && QI_CHARGE_PIN_RISE && QI_IDLE_PIN == 1) {
-        
-        nxq_charge_state = Fully_Charged;
-        
-    }
+  
+    TMR3_Reload();
+    TMR3_StartTimer();
     
 }
 
@@ -70,13 +94,19 @@ void QIIdleTimerHandler(void) {
      
     if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
      
-        nxq_charge_state = Error;
+        nxq_charge_state = QI_Error;
         
     }
     
     else if (QI_IDLE_PIN == 0 && QI_CHARGE_PIN == 0) {
      
-        nxq_charge_state = Idle;
+        nxq_charge_state = QI_Idle;
+        
+    }
+    
+    else if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 1) {
+        
+        nxq_charge_state = QI_Fully_Charged;
         
     }
     

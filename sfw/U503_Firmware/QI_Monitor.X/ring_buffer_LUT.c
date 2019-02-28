@@ -390,7 +390,7 @@ void ringBufferLUT(char * line) {
     
     else if ((0 == strcmp(line, "Charge Status?"))) {
      
-        if (nxq_charge_state == Error) {
+        if (nxq_charge_state == QI_Error) {
          
             terminalTextAttributes(RED, BLACK, NORMAL);
             printf("QI Charger is in Error State\n\r");
@@ -398,10 +398,18 @@ void ringBufferLUT(char * line) {
             
         }
         
-        else {
-         
+        else if (nxq_charge_state == QI_Fully_Charged) {
+        
             terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
+            printf("QI wireless power converter has fully charged phone\n\r");
+            terminalTextAttributesReset();
+            
+        }
+            
+        else {
+            
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("QI wireless power converter is %s\n\r", getNXQChargeStateString());
             terminalTextAttributesReset();
             
         }

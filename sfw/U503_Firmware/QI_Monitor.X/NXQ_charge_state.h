@@ -13,12 +13,15 @@
 // 
 enum nxq_charge_state_t {
     
-    Idle            = 0,
-    Charging        = 1,
-    Fully_Charged   = 2,
-    Error           = 3
+    QI_Idle            = 0,
+    QI_Charging        = 1,
+    QI_Fully_Charged   = 2,
+    QI_Error           = 3
     
 } nxq_charge_state;
+
+// This function returns a capitalized string that matches the NXQ charge state enum
+char * getNXQChargeStateStringCaps(void);
 
 // This function returns a string that matches the NXQ charge state enum
 char * getNXQChargeStateString(void);

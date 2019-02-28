@@ -56,10 +56,10 @@
 #include "tmr3.h"
 #include "tmr2.h"
 #include "tmr0.h"
-#include "adcc.h"
 #include "fvr.h"
-#include "ext_int.h"
+#include "adcc.h"
 #include "memory.h"
+#include "ext_int.h"
 #include "eusart2.h"
 
 
