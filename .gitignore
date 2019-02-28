@@ -35,13 +35,3 @@ _autosave-*
 *.log
 *.plt
 
-**/nbproject/private/
-**/nbproject/Makefile-*.mk
-**/nbproject/Package-*.bash
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-
-sfw/U503_Firmware/QI_Monitor.X/nbproject/Makefile-genesis.properties
