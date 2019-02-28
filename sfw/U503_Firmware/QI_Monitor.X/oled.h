@@ -65,12 +65,27 @@ struct OLED_RAM_Buffer_t {
 // Current OLED frame enumeration
 typedef enum {
 
-    OLED_Boot_Frame_1,
-    OLED_Boot_Frame_2,
-    OLED_Boot_Frame_3,
-    OLED_Boot_Frame_4,
-    OLED_Charge_Status,
-    OLED_Idle
+    OLED_Boot_Frame_1           = 0,
+    OLED_Boot_Frame_2           = 1,
+    OLED_Boot_Frame_3           = 2,
+    OLED_Boot_Frame_4           = 3,
+    OLED_Charge_Status          = 4,
+    OLED_POS12_Voltage          = 5,
+    OLED_POS5_Voltage           = 6,
+    OLED_POS12_Current          = 7,
+    OLED_QI_Current             = 8,
+    OLED_Input_Power            = 9,
+    OLED_Output_Power           = 10,
+    OLED_Efficiency             = 11,
+    OLED_QI_Temp                = 12,
+    OLED_POS5_Temp              = 13,
+    OLED_Ambient_Temp           = 14,
+    OLED_Micro_Temp             = 15,
+    OLED_Dev_On_Time            = 16,
+    OLED_Cause_Of_Reset         = 17,
+    OLED_Dev_Rev_ID             = 18,
+    OLED_COM_PORT_SET           = 19,
+    OLED_Idle                   = 20
 
 } OLED_Frame_t;
 
