@@ -52,19 +52,20 @@
 #define LM73_CONFIG_REG_DATA        0b01000000
 #define LM73_STATUS_REG_DATA        0b11100000
 
-// This structure holds raw 14 bit signed temperature sensor data
-struct LM73_data_t {
-
-    uint8_t QI_data_raw[2];
-    
-} LM73_data;
-
-// This structure holds calculated temperatures
+// This structure holds calculated temperatures and raw 14 bit conversion results
 struct LM73_temp_results_t {
     
     double QI_temp_result;
+    double POS5_temp_result;
+    double Ambient_temp_result;
+    uint8_t QI_data_raw[2];
+    uint8_t POS5_data_raw[2];
+    uint8_t Ambient_data_raw[2];
     
 } LM73_temp_results;
+
+// This is a flag that starts the acquisition of data from the LM73 sensors
+bool LM73_start_flag;
 
 // This function initializes the three temperature sensors
 void LM73TempSensorInitialize(void);

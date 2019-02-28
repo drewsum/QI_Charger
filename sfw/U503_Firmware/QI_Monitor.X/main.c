@@ -120,7 +120,7 @@ void main(void)
     }
     
     else {
-     
+    
         terminalTextAttributes(GREEN, BLACK, NORMAL);
         
     }
@@ -149,17 +149,14 @@ void main(void)
     // Reset virtual COM port text attributes
     terminalTextAttributesReset();
     
-    // LM73AcquisitionHandler();
-    
     // Endless loop
     while (1) {
         
-        // Check eusart ready flag
-        if (eusart2RxStringReady) {
-         
-            terminal_ringBufferPull();
+        // If received terminal data is ready, process it
+        if (eusart2RxStringReady) terminal_ringBufferPull();
             
-        }
+        // If new LM73 is requested, get it
+        if (LM73_start_flag) LM73AcquisitionHandler();
         
         // Update error LEDs based on error handler state
         updateErrorLEDs();

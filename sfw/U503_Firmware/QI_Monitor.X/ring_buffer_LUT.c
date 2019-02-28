@@ -293,7 +293,7 @@ void ringBufferLUT(char * line) {
     else if((0 == strcmp(line, "Measure Die Temp?"))) {
      
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
+        printf("Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
         terminalTextAttributesReset();
         
     }
@@ -370,6 +370,24 @@ void ringBufferLUT(char * line) {
         
     }
     
+    // Report POS5 Temperature
+    else if ((0 == strcmp(line, "Measure POS5 Temp?"))) {
+    
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("+5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
+        terminalTextAttributesReset();
+        
+    }
+    
+    // Report Ambient Temperature
+    else if ((0 == strcmp(line, "Measure Ambient Temp?"))) {
+    
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
+        terminalTextAttributesReset();
+        
+    }
+    
     else if ((0 == strcmp(line, "Charge Status?"))) {
      
         if (nxq_charge_state == Error) {
@@ -418,8 +436,10 @@ void ringBufferLUT(char * line) {
                 "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
                 "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
                 "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
-                "    Measure Die Temp?: Prints the ADC conversion result for the device die temperature\n\r"
+                "    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
                 "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
+                "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
+                "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
                 "    Error Status? Prints if any system faults have been detected\n\r"
                 "    Clear UART Errors: Clears UART error flags\n\r"
                 "    Clear I2C Errors: Clears I2C error flags\n\r"

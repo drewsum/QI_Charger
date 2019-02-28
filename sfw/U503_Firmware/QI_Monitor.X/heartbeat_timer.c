@@ -9,6 +9,8 @@
 
 #include "mcc_generated_files/mcc.h"
 
+#include "LM73_I2C.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
@@ -22,11 +24,7 @@ void heartbeatTimerHandler(void) {
     // Kick the dog
     CLRWDT();
     
-    // Clear Timer 0
-    TMR0 = 0;
-    
-    // clear the TMR0 interrupt flag
-    PIR0bits.TMR0IF = 0;
+    LM73_start_flag = true;
     
 }
 

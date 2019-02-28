@@ -91,12 +91,19 @@ void LM73TempSensorInitialize(void) {
 // This function accesses temperature sensor data over I2C
 void LM73AcquisitionHandler(void) {
 
-    static I2C2_TRANSACTION_REQUEST_BLOCK LM73_trb[2];
-    
-    I2C2_MasterWriteTRBBuild(&LM73_trb[0], LM73_TEMP_REG, 1, QI_TEMP_SENSE_ADDR);
-    I2C2_MasterReadTRBBuild(&LM73_trb[1], LM73_data.QI_data_raw[0], 2, QI_TEMP_SENSE_ADDR);
-    I2C2_MasterTRBInsert(1, &LM73_trb[0], &LM73_I2C_Status);
-    
+    // QI Temp Sensor
+    // Write temp reg addr to read back temp sensor data
+    I2C2_MasterWrite(LM73_TEMP_REG, 1, QI_TEMP_SENSE_ADDR, &LM73_I2C_Status);
+    while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
+    if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
+            LM73_I2C_Status == I2C2_STUCK_START ||
+            LM73_I2C_Status == I2C2_MESSAGE_ADDRESS_NO_ACK ||
+            LM73_I2C_Status == I2C2_DATA_NO_ACK ||
+            LM73_I2C_Status == I2C2_LOST_STATE      ) {
+        error_handler.I2C_QI_Temp_Sense_error_flag = true;
+    }
+    // Read two bytes from temp reg
+    I2C2_MasterRead(LM73_temp_results.QI_data_raw, 2, QI_TEMP_SENSE_ADDR, &LM73_I2C_Status);
     while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
     if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
             LM73_I2C_Status == I2C2_STUCK_START ||
@@ -106,32 +113,114 @@ void LM73AcquisitionHandler(void) {
         error_handler.I2C_QI_Temp_Sense_error_flag = true;
     }
     
+    // POS5 Temp Sensor
+    // Write temp reg addr to read back temp sensor data
+    I2C2_MasterWrite(LM73_TEMP_REG, 1, POS5_TEMP_SENSE_ADDR, &LM73_I2C_Status);
+    while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
+    if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
+            LM73_I2C_Status == I2C2_STUCK_START ||
+            LM73_I2C_Status == I2C2_MESSAGE_ADDRESS_NO_ACK ||
+            LM73_I2C_Status == I2C2_DATA_NO_ACK ||
+            LM73_I2C_Status == I2C2_LOST_STATE      ) {
+        error_handler.I2C_POS5_Temp_Sense_error_flag = true;
+    }
+    // Read two bytes from temp reg
+    I2C2_MasterRead(LM73_temp_results.POS5_data_raw, 2, POS5_TEMP_SENSE_ADDR, &LM73_I2C_Status);
+    while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
+    if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
+            LM73_I2C_Status == I2C2_STUCK_START ||
+            LM73_I2C_Status == I2C2_MESSAGE_ADDRESS_NO_ACK ||
+            LM73_I2C_Status == I2C2_DATA_NO_ACK ||
+            LM73_I2C_Status == I2C2_LOST_STATE      ) {
+        error_handler.I2C_POS5_Temp_Sense_error_flag = true;
+    }
+    
+    // Ambient Temp Sensor
+    // Write temp reg addr to read back temp sensor data
+    I2C2_MasterWrite(LM73_TEMP_REG, 1, AMBIENT_TEMP_SENSE_ADDR, &LM73_I2C_Status);
+    while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
+    if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
+            LM73_I2C_Status == I2C2_STUCK_START ||
+            LM73_I2C_Status == I2C2_MESSAGE_ADDRESS_NO_ACK ||
+            LM73_I2C_Status == I2C2_DATA_NO_ACK ||
+            LM73_I2C_Status == I2C2_LOST_STATE      ) {
+        error_handler.I2C_Ambient_Temp_Sense_error_flag = true;
+    }
+    // Read two bytes from temp reg
+    I2C2_MasterRead(LM73_temp_results.Ambient_data_raw, 2, AMBIENT_TEMP_SENSE_ADDR, &LM73_I2C_Status);
+    while(LM73_I2C_Status == I2C2_MESSAGE_PENDING);
+    if (    LM73_I2C_Status == I2C2_MESSAGE_FAIL ||
+            LM73_I2C_Status == I2C2_STUCK_START ||
+            LM73_I2C_Status == I2C2_MESSAGE_ADDRESS_NO_ACK ||
+            LM73_I2C_Status == I2C2_DATA_NO_ACK ||
+            LM73_I2C_Status == I2C2_LOST_STATE      ) {
+        error_handler.I2C_Ambient_Temp_Sense_error_flag = true;
+    }
+    
     // Convert acquired data to floating point variables
-    // LM73Convert();
+    LM73Convert();
+    
+    LM73_start_flag = false;
     
 }
 
 // This function converts raw data from the LM73 to a floating point number
-//void LM73Convert(void) {
-// 
-//    uint16_t QI_Conv, POS5_Conv, Ambient_Conv;
-//    
-//    // Move bitfield into proper positions
-//    // QI_Conv = LM73_data.QI_temp_raw[0] << 6 | LM73_data.QI_temp_raw[1] >> 2;
-//    QI_Conv = LM73_data.QI_temp_raw >> 2;
-//    
-//    // Get rid of sign bit in conversion
-//    QI_Conv = QI_Conv & 0x1FFF;
-//
-//    // Determine sign
-//    // Negative case
-//    if ((LM73_data.QI_temp_raw >> 14) == 1) {
-//        QI_Conv = ~(QI_Conv);
-//        LM73_temp_results.QI_temp_result = -0.03125 * QI_Conv;
-//    }
-//    // Positive case
-//    else {
-//        LM73_temp_results.QI_temp_result = 0.03125 * QI_Conv;
-//    }
-//    
-//}
+void LM73Convert(void) {
+ 
+    uint16_t QI_Conv, POS5_Conv, Ambient_Conv;
+    
+    // Move bitfield into proper positions
+    QI_Conv = LM73_temp_results.QI_data_raw[0] << 6 | LM73_temp_results.QI_data_raw[1] >> 2;
+
+    // Determine sign
+    // Negative case
+    if ((LM73_temp_results.QI_data_raw[0] >> 6) == 1) {
+        QI_Conv = ~(QI_Conv);
+        // Get rid of sign bit in conversion
+        QI_Conv = QI_Conv & 0x1FFF;
+        LM73_temp_results.QI_temp_result = -0.03125 * QI_Conv;
+    }
+    // Positive case
+    else {
+        // Get rid of sign bit in conversion
+        QI_Conv = QI_Conv & 0x1FFF;
+        LM73_temp_results.QI_temp_result = 0.03125 * QI_Conv;
+    }
+    
+    // Move bitfield into proper positions
+    POS5_Conv = LM73_temp_results.POS5_data_raw[0] << 6 | LM73_temp_results.POS5_data_raw[1] >> 2;
+
+    // Determine sign
+    // Negative case
+    if ((LM73_temp_results.POS5_data_raw[0] >> 6) == 1) {
+        POS5_Conv = ~(POS5_Conv);
+        // Get rid of sign bit in conversion
+        POS5_Conv = POS5_Conv & 0x1FFF;
+        LM73_temp_results.POS5_temp_result = -0.03125 * POS5_Conv;
+    }
+    // Positive case
+    else {
+        // Get rid of sign bit in conversion
+        POS5_Conv = POS5_Conv & 0x1FFF;
+        LM73_temp_results.POS5_temp_result = 0.03125 * POS5_Conv;
+    }
+    
+    // Move bitfield into proper positions
+    Ambient_Conv = LM73_temp_results.Ambient_data_raw[0] << 6 | LM73_temp_results.Ambient_data_raw[1] >> 2;
+
+    // Determine sign
+    // Negative case
+    if ((LM73_temp_results.Ambient_data_raw[0] >> 6) == 1) {
+        Ambient_Conv = ~(Ambient_Conv);
+        // Get rid of sign bit in conversion
+        Ambient_Conv = Ambient_Conv & 0x1FFF;
+        LM73_temp_results.Ambient_temp_result = -0.03125 * Ambient_Conv;
+    }
+    // Positive case
+    else {
+        // Get rid of sign bit in conversion
+        Ambient_Conv = Ambient_Conv & 0x1FFF;
+        LM73_temp_results.Ambient_temp_result = 0.03125 * Ambient_Conv;
+    }
+    
+}
