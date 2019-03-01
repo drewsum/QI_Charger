@@ -1,4 +1,8 @@
 
+#include <string.h>
+#include <stdio.h>
+
+
 #include "oled.h"
 
 #include "cause_of_reset.h"

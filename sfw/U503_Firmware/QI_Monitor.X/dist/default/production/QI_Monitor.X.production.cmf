@@ -214,7 +214,7 @@ text178 CODE 0 1A38C 1A38C 14 1
 text179 CODE 0 1A558 1A558 4 1
 text180 CODE 0 1A3A0 1A3A0 14 1
 mediumconst MEDIUMCONST 0 E2FC E2FC 1D04 1
-$C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+$C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 idloc IDLOC 0 200000 200000 10 1
 init CODE 0 C0 C0 4 1
 reset_vec CODE 0 0 0 4 1
@@ -1718,42 +1718,42 @@ A0 intcodelo CODE >155:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Q
 17A98 text91 CODE >96:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
 17A9C text91 CODE >97:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
 17A9E text91 CODE >99:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
-192B2 text90 CODE >115:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-192B6 text90 CODE >120:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-192BC text90 CODE >121:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-192C0 text90 CODE >126:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-192E0 text90 CODE >128:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-192EA text90 CODE >134:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19310 text90 CODE >135:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19316 text90 CODE >139:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B34 text89 CODE >167:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B34 text89 CODE >169:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B3A text89 CODE >171:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B40 text89 CODE >173:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B46 text89 CODE >175:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B4C text89 CODE >177:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B52 text89 CODE >179:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B58 text89 CODE >181:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B5E text89 CODE >183:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B64 text89 CODE >185:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B6A text89 CODE >187:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B70 text89 CODE >189:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B76 text89 CODE >191:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B7C text89 CODE >193:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B82 text89 CODE >195:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B88 text89 CODE >197:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B8E text89 CODE >199:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B94 text89 CODE >201:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18B9A text89 CODE >203:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BA0 text89 CODE >205:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BA6 text89 CODE >207:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BAC text89 CODE >209:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BB2 text89 CODE >211:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BB8 text89 CODE >213:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BBE text89 CODE >215:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BC4 text89 CODE >217:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BCA text89 CODE >220:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18BCC text89 CODE >223:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+192B2 text90 CODE >119:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+192B6 text90 CODE >124:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+192BC text90 CODE >125:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+192C0 text90 CODE >130:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+192E0 text90 CODE >132:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+192EA text90 CODE >138:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19310 text90 CODE >139:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19316 text90 CODE >143:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B34 text89 CODE >171:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B34 text89 CODE >173:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B3A text89 CODE >175:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B40 text89 CODE >177:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B46 text89 CODE >179:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B4C text89 CODE >181:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B52 text89 CODE >183:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B58 text89 CODE >185:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B5E text89 CODE >187:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B64 text89 CODE >189:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B6A text89 CODE >191:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B70 text89 CODE >193:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B76 text89 CODE >195:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B7C text89 CODE >197:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B82 text89 CODE >199:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B88 text89 CODE >201:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B8E text89 CODE >203:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B94 text89 CODE >205:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18B9A text89 CODE >207:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BA0 text89 CODE >209:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BA6 text89 CODE >211:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BAC text89 CODE >213:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BB2 text89 CODE >215:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BB8 text89 CODE >217:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BBE text89 CODE >219:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BC4 text89 CODE >221:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BCA text89 CODE >224:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18BCC text89 CODE >227:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 187FC text88 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 187FC text88 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 18804 text88 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
@@ -1765,46 +1765,46 @@ A0 intcodelo CODE >155:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Q
 18878 text88 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 18880 text88 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 188A2 text88 CODE >35:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
-185C2 text87 CODE >236:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-185C6 text87 CODE >238:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-185D4 text87 CODE >240:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-185D8 text87 CODE >242:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-185D8 text87 CODE >248:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-185DC text87 CODE >250:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18610 text87 CODE >252:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1862C text87 CODE >257:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1864E text87 CODE >259:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18658 text87 CODE >265:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1867E text87 CODE >266:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-18684 text87 CODE >269:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BAC text86 CODE >271:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BAC text86 CODE >273:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BB6 text86 CODE >275:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BBE text86 CODE >277:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BC4 text86 CODE >275:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BD6 text86 CODE >273:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19BE8 text86 CODE >284:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-194FC text85 CODE >286:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-194FC text85 CODE >288:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-194FE text85 CODE >290:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1952A text85 CODE >288:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19A5E text84 CODE >225:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19A62 text84 CODE >227:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19A6C text84 CODE >229:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19A7A text84 CODE >231:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19AA0 text84 CODE >234:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19022 text83 CODE >318:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19022 text83 CODE >320:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1902E text83 CODE >321:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19032 text83 CODE >322:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1903E text83 CODE >323:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1904C text83 CODE >324:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19058 text83 CODE >325:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19066 text83 CODE >326:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19072 text83 CODE >327:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-19080 text83 CODE >328:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1908C text83 CODE >329:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1909A text83 CODE >331:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+185C2 text87 CODE >240:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+185C6 text87 CODE >242:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+185D4 text87 CODE >244:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+185D8 text87 CODE >246:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+185D8 text87 CODE >252:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+185DC text87 CODE >254:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18610 text87 CODE >256:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1862C text87 CODE >261:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1864E text87 CODE >263:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18658 text87 CODE >269:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1867E text87 CODE >270:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+18684 text87 CODE >273:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BAC text86 CODE >275:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BAC text86 CODE >277:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BB6 text86 CODE >279:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BBE text86 CODE >281:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BC4 text86 CODE >279:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BD6 text86 CODE >277:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19BE8 text86 CODE >288:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+194FC text85 CODE >290:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+194FC text85 CODE >292:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+194FE text85 CODE >294:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1952A text85 CODE >292:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19A5E text84 CODE >229:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19A62 text84 CODE >231:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19A6C text84 CODE >233:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19A7A text84 CODE >235:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19AA0 text84 CODE >238:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19022 text83 CODE >322:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19022 text83 CODE >324:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1902E text83 CODE >325:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19032 text83 CODE >326:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1903E text83 CODE >327:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1904C text83 CODE >328:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19058 text83 CODE >329:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19066 text83 CODE >330:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19072 text83 CODE >331:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+19080 text83 CODE >332:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1908C text83 CODE >333:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1909A text83 CODE >335:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 19EE0 text82 CODE >118:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
 19EE4 text82 CODE >134:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
 19EEC text82 CODE >136:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
@@ -2430,162 +2430,162 @@ A0 intcodelo CODE >155:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Q
 19834 text53 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
 1983A text53 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
 1983E text53 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
-13A26 text52 CODE >335:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A26 text52 CODE >337:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A2A text52 CODE >341:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A2E text52 CODE >344:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A42 text52 CODE >345:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A58 text52 CODE >346:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A6E text52 CODE >347:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A8C text52 CODE >348:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A90 text52 CODE >349:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A96 text52 CODE >350:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A9A text52 CODE >352:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13A9C text52 CODE >356:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13AA0 text52 CODE >360:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13AB4 text52 CODE >362:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13AD6 text52 CODE >363:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13AEC text52 CODE >366:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B02 text52 CODE >368:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B3A text52 CODE >369:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B50 text52 CODE >371:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B54 text52 CODE >372:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B58 text52 CODE >379:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B5C text52 CODE >381:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B70 text52 CODE >382:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B86 text52 CODE >383:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13B9C text52 CODE >384:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BB2 text52 CODE >386:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BB6 text52 CODE >387:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BBA text52 CODE >394:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BBE text52 CODE >396:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BD2 text52 CODE >397:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BE8 text52 CODE >398:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13BFE text52 CODE >399:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C14 text52 CODE >401:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C18 text52 CODE >402:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C1C text52 CODE >409:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C20 text52 CODE >411:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C34 text52 CODE >412:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C4A text52 CODE >413:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C64 text52 CODE >414:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C7A text52 CODE >416:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C7E text52 CODE >417:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C84 text52 CODE >418:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C88 text52 CODE >420:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C8A text52 CODE >424:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13C8E text52 CODE >426:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13CA2 text52 CODE >427:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13CC8 text52 CODE >428:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13CDE text52 CODE >429:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13CF4 text52 CODE >431:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13CF8 text52 CODE >432:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13CFC text52 CODE >439:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D00 text52 CODE >441:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D14 text52 CODE >442:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D3A text52 CODE >443:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D50 text52 CODE >444:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D66 text52 CODE >446:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D6A text52 CODE >447:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D6E text52 CODE >454:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D72 text52 CODE >456:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13D86 text52 CODE >457:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DAC text52 CODE >458:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DC2 text52 CODE >459:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DD8 text52 CODE >461:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DDC text52 CODE >462:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DE0 text52 CODE >469:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DE4 text52 CODE >471:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13DF8 text52 CODE >472:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E1E text52 CODE >473:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E34 text52 CODE >474:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E4A text52 CODE >476:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E4E text52 CODE >477:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E52 text52 CODE >484:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E56 text52 CODE >486:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E6A text52 CODE >487:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13E90 text52 CODE >488:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13EA6 text52 CODE >489:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13EBC text52 CODE >491:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13EC0 text52 CODE >492:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13EC4 text52 CODE >499:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13EC8 text52 CODE >501:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13EDC text52 CODE >502:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F02 text52 CODE >503:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F18 text52 CODE >504:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F2E text52 CODE >506:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F32 text52 CODE >507:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F36 text52 CODE >514:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F3A text52 CODE >516:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F4E text52 CODE >517:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F74 text52 CODE >518:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13F8A text52 CODE >519:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FA0 text52 CODE >521:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FA4 text52 CODE >522:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FA8 text52 CODE >529:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FAC text52 CODE >531:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FC0 text52 CODE >532:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FE6 text52 CODE >533:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-13FFC text52 CODE >534:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14012 text52 CODE >536:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14016 text52 CODE >537:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1401A text52 CODE >544:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1401E text52 CODE >546:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14032 text52 CODE >547:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14058 text52 CODE >548:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1406E text52 CODE >549:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14084 text52 CODE >551:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14088 text52 CODE >552:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1408C text52 CODE >559:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14090 text52 CODE >561:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-140A4 text52 CODE >562:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-140CA text52 CODE >563:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-140E0 text52 CODE >564:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-140F6 text52 CODE >566:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-140FA text52 CODE >567:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-140FE text52 CODE >574:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14102 text52 CODE >576:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14116 text52 CODE >577:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1413C text52 CODE >578:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14152 text52 CODE >579:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14168 text52 CODE >581:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1416C text52 CODE >582:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14170 text52 CODE >589:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14174 text52 CODE >591:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14188 text52 CODE >592:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1419E text52 CODE >593:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-141B4 text52 CODE >594:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-141CA text52 CODE >596:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-141CE text52 CODE >597:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-141D2 text52 CODE >604:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-141D6 text52 CODE >606:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-141EA text52 CODE >607:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14200 text52 CODE >608:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1421E text52 CODE >609:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14234 text52 CODE >611:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14238 text52 CODE >612:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1423C text52 CODE >619:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14240 text52 CODE >623:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14254 text52 CODE >625:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14276 text52 CODE >626:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1428C text52 CODE >629:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-142A2 text52 CODE >631:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-142DA text52 CODE >632:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-142F0 text52 CODE >634:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-142F4 text52 CODE >635:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-142F8 text52 CODE >642:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-142FC text52 CODE >644:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14310 text52 CODE >645:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14326 text52 CODE >646:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1433C text52 CODE >647:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14352 text52 CODE >649:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14356 text52 CODE >650:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1435A text52 CODE >658:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1435E text52 CODE >660:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14360 text52 CODE >664:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-14364 text52 CODE >666:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1436A text52 CODE >667:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
-1436C text52 CODE >337:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A26 text52 CODE >339:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A26 text52 CODE >341:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A2A text52 CODE >345:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A2E text52 CODE >348:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A42 text52 CODE >349:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A58 text52 CODE >350:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A6E text52 CODE >351:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A8C text52 CODE >352:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A90 text52 CODE >353:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A96 text52 CODE >354:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A9A text52 CODE >356:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13A9C text52 CODE >360:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13AA0 text52 CODE >364:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13AB4 text52 CODE >366:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13AD6 text52 CODE >367:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13AEC text52 CODE >370:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B02 text52 CODE >372:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B3A text52 CODE >373:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B50 text52 CODE >375:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B54 text52 CODE >376:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B58 text52 CODE >383:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B5C text52 CODE >385:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B70 text52 CODE >386:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B86 text52 CODE >387:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13B9C text52 CODE >388:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BB2 text52 CODE >390:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BB6 text52 CODE >391:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BBA text52 CODE >398:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BBE text52 CODE >400:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BD2 text52 CODE >401:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BE8 text52 CODE >402:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13BFE text52 CODE >403:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C14 text52 CODE >405:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C18 text52 CODE >406:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C1C text52 CODE >413:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C20 text52 CODE >415:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C34 text52 CODE >416:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C4A text52 CODE >417:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C64 text52 CODE >418:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C7A text52 CODE >420:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C7E text52 CODE >421:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C84 text52 CODE >422:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C88 text52 CODE >424:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C8A text52 CODE >428:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13C8E text52 CODE >430:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13CA2 text52 CODE >431:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13CC8 text52 CODE >432:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13CDE text52 CODE >433:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13CF4 text52 CODE >435:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13CF8 text52 CODE >436:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13CFC text52 CODE >443:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D00 text52 CODE >445:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D14 text52 CODE >446:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D3A text52 CODE >447:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D50 text52 CODE >448:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D66 text52 CODE >450:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D6A text52 CODE >451:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D6E text52 CODE >458:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D72 text52 CODE >460:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13D86 text52 CODE >461:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DAC text52 CODE >462:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DC2 text52 CODE >463:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DD8 text52 CODE >465:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DDC text52 CODE >466:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DE0 text52 CODE >473:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DE4 text52 CODE >475:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13DF8 text52 CODE >476:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E1E text52 CODE >477:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E34 text52 CODE >478:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E4A text52 CODE >480:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E4E text52 CODE >481:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E52 text52 CODE >488:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E56 text52 CODE >490:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E6A text52 CODE >491:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13E90 text52 CODE >492:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13EA6 text52 CODE >493:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13EBC text52 CODE >495:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13EC0 text52 CODE >496:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13EC4 text52 CODE >503:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13EC8 text52 CODE >505:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13EDC text52 CODE >506:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F02 text52 CODE >507:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F18 text52 CODE >508:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F2E text52 CODE >510:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F32 text52 CODE >511:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F36 text52 CODE >518:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F3A text52 CODE >520:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F4E text52 CODE >521:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F74 text52 CODE >522:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13F8A text52 CODE >523:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FA0 text52 CODE >525:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FA4 text52 CODE >526:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FA8 text52 CODE >533:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FAC text52 CODE >535:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FC0 text52 CODE >536:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FE6 text52 CODE >537:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+13FFC text52 CODE >538:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14012 text52 CODE >540:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14016 text52 CODE >541:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1401A text52 CODE >548:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1401E text52 CODE >550:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14032 text52 CODE >551:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14058 text52 CODE >552:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1406E text52 CODE >553:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14084 text52 CODE >555:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14088 text52 CODE >556:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1408C text52 CODE >563:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14090 text52 CODE >565:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+140A4 text52 CODE >566:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+140CA text52 CODE >567:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+140E0 text52 CODE >568:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+140F6 text52 CODE >570:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+140FA text52 CODE >571:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+140FE text52 CODE >578:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14102 text52 CODE >580:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14116 text52 CODE >581:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1413C text52 CODE >582:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14152 text52 CODE >583:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14168 text52 CODE >585:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1416C text52 CODE >586:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14170 text52 CODE >593:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14174 text52 CODE >595:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14188 text52 CODE >596:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1419E text52 CODE >597:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+141B4 text52 CODE >598:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+141CA text52 CODE >600:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+141CE text52 CODE >601:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+141D2 text52 CODE >608:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+141D6 text52 CODE >610:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+141EA text52 CODE >611:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14200 text52 CODE >612:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1421E text52 CODE >613:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14234 text52 CODE >615:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14238 text52 CODE >616:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1423C text52 CODE >623:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14240 text52 CODE >627:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14254 text52 CODE >629:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14276 text52 CODE >630:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1428C text52 CODE >633:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+142A2 text52 CODE >635:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+142DA text52 CODE >636:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+142F0 text52 CODE >638:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+142F4 text52 CODE >639:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+142F8 text52 CODE >646:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+142FC text52 CODE >648:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14310 text52 CODE >649:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14326 text52 CODE >650:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1433C text52 CODE >651:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14352 text52 CODE >653:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14356 text52 CODE >654:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1435A text52 CODE >662:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1435E text52 CODE >664:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14360 text52 CODE >668:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+14364 text52 CODE >670:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1436A text52 CODE >671:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+1436C text52 CODE >341:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 1A490 text51 CODE >307:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 1A490 text51 CODE >308:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 1A49C text51 CODE >309:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
@@ -3358,79 +3358,79 @@ A0 intcodelo CODE >155:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\Q
 17850 text0 CODE >177:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 1785A text0 CODE >180:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 17864 text0 CODE >183:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
-18C66 cinit CODE >30558:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C66 cinit CODE >30560:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C66 cinit CODE >30563:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C66 cinit CODE >30755:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C68 cinit CODE >30756:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C6A cinit CODE >30757:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C6C cinit CODE >30758:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C6E cinit CODE >30759:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C70 cinit CODE >30760:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C72 cinit CODE >30761:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C76 cinit CODE >30762:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C7A cinit CODE >30763:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C7A cinit CODE >30764:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C7C cinit CODE >30765:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C80 cinit CODE >30766:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C82 cinit CODE >30767:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C84 cinit CODE >30768:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C86 cinit CODE >30772:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C88 cinit CODE >30773:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C8A cinit CODE >30774:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C8C cinit CODE >30775:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C8E cinit CODE >30776:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C90 cinit CODE >30777:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C92 cinit CODE >30778:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C94 cinit CODE >30779:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C98 cinit CODE >30783:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C9A cinit CODE >30784:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C9C cinit CODE >30785:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18C9E cinit CODE >30786:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CA0 cinit CODE >30787:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CA2 cinit CODE >30788:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CA4 cinit CODE >30789:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CA6 cinit CODE >30790:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CAA cinit CODE >30794:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CAE cinit CODE >30795:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CB0 cinit CODE >30796:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CB0 cinit CODE >30797:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CB2 cinit CODE >30798:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CB4 cinit CODE >30799:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CB6 cinit CODE >30802:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CBA cinit CODE >30803:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CBE cinit CODE >30804:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CBE cinit CODE >30805:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CC0 cinit CODE >30806:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CC2 cinit CODE >30807:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CC4 cinit CODE >30808:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CC6 cinit CODE >30809:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CC8 cinit CODE >30810:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CCA cinit CODE >30813:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CCE cinit CODE >30814:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CD0 cinit CODE >30815:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CD0 cinit CODE >30816:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CD2 cinit CODE >30817:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CD4 cinit CODE >30818:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CD6 cinit CODE >30821:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CDA cinit CODE >30822:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CDC cinit CODE >30823:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CDC cinit CODE >30824:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CDE cinit CODE >30825:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CE0 cinit CODE >30826:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CE2 cinit CODE >30829:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CE4 cinit CODE >30830:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CE6 cinit CODE >30833:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CEA cinit CODE >30834:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CEC cinit CODE >30835:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CEC cinit CODE >30836:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CEE cinit CODE >30837:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CF0 cinit CODE >30838:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CF2 cinit CODE >30844:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CF2 cinit CODE >30846:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CF4 cinit CODE >30847:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CF6 cinit CODE >30848:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
-18CF8 cinit CODE >30849:C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.
+18C66 cinit CODE >30558:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C66 cinit CODE >30560:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C66 cinit CODE >30563:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C66 cinit CODE >30755:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C68 cinit CODE >30756:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C6A cinit CODE >30757:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C6C cinit CODE >30758:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C6E cinit CODE >30759:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C70 cinit CODE >30760:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C72 cinit CODE >30761:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C76 cinit CODE >30762:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C7A cinit CODE >30763:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C7A cinit CODE >30764:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C7C cinit CODE >30765:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C80 cinit CODE >30766:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C82 cinit CODE >30767:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C84 cinit CODE >30768:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C86 cinit CODE >30772:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C88 cinit CODE >30773:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C8A cinit CODE >30774:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C8C cinit CODE >30775:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C8E cinit CODE >30776:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C90 cinit CODE >30777:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C92 cinit CODE >30778:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C94 cinit CODE >30779:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C98 cinit CODE >30783:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C9A cinit CODE >30784:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C9C cinit CODE >30785:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18C9E cinit CODE >30786:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CA0 cinit CODE >30787:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CA2 cinit CODE >30788:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CA4 cinit CODE >30789:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CA6 cinit CODE >30790:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CAA cinit CODE >30794:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CAE cinit CODE >30795:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CB0 cinit CODE >30796:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CB0 cinit CODE >30797:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CB2 cinit CODE >30798:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CB4 cinit CODE >30799:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CB6 cinit CODE >30802:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CBA cinit CODE >30803:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CBE cinit CODE >30804:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CBE cinit CODE >30805:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CC0 cinit CODE >30806:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CC2 cinit CODE >30807:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CC4 cinit CODE >30808:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CC6 cinit CODE >30809:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CC8 cinit CODE >30810:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CCA cinit CODE >30813:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CCE cinit CODE >30814:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CD0 cinit CODE >30815:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CD0 cinit CODE >30816:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CD2 cinit CODE >30817:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CD4 cinit CODE >30818:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CD6 cinit CODE >30821:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CDA cinit CODE >30822:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CDC cinit CODE >30823:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CDC cinit CODE >30824:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CDE cinit CODE >30825:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CE0 cinit CODE >30826:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CE2 cinit CODE >30829:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CE4 cinit CODE >30830:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CE6 cinit CODE >30833:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CEA cinit CODE >30834:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CEC cinit CODE >30835:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CEC cinit CODE >30836:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CEE cinit CODE >30837:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CF0 cinit CODE >30838:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CF2 cinit CODE >30844:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CF2 cinit CODE >30846:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CF4 cinit CODE >30847:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CF6 cinit CODE >30848:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
+18CF8 cinit CODE >30849:C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -3477,7 +3477,7 @@ strncpy@cp 112 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.produc
 strncpy@to 10C 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\QI_Monitor.X.production.o
 _adc_result_scaling C8 0 BANK0 1 bssBANK0 dist/default/production\QI_Monitor.X.production.o
-__mediumconst E2FC 0 MEDIUMCONST 0 mediumconst C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+__mediumconst E2FC 0 MEDIUMCONST 0 mediumconst C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\QI_Monitor.X.production.o
 _ADCC_StopConversion 1A554 0 CODE 0 text176 dist/default/production\QI_Monitor.X.production.o
 I2C2_MasterWrite@trBlock 2BC 0 BANK2 1 bssBANK2 dist/default/production\QI_Monitor.X.production.o
@@ -3511,7 +3511,7 @@ _WPUA F10 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _WPUB F18 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _WPUC F20 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _WPUE F2D 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+___sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 _fabs 19C9E 0 CODE 0 text171 dist/default/production\QI_Monitor.X.production.o
 _line 3C0 0 BANK3 1 bssBANK3 dist/default/production\QI_Monitor.X.production.o
 _main 17620 0 CODE 0 text0 dist/default/production\QI_Monitor.X.production.o
@@ -3519,7 +3519,7 @@ __end_of_clearUARTErrors 1A4D4 0 CODE 0 text14 dist/default/production\QI_Monito
 btemp 5E 0 COMRAM 1 temp dist/default/production\QI_Monitor.X.production.o
 __end_of_FLASH_ReadByte 1A2BE 0 CODE 0 text81 dist/default/production\QI_Monitor.X.production.o
 __end_of_FLASH_ReadWord 19B28 0 CODE 0 text80 dist/default/production\QI_Monitor.X.production.o
-start C0 0 CODE 0 init C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+start C0 0 CODE 0 init C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 ?_getNXQChargeStateString 10C 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
 i2___lwdiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/production\QI_Monitor.X.production.o
 ___flmul@aexp 127 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
@@ -3606,11 +3606,11 @@ _getUARTError 1A528 0 CODE 0 text18 dist/default/production\QI_Monitor.X.product
 __size_ofi1_TMR3_StopTimer 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _TMR2_Stop 1A548 0 CODE 0 text113 dist/default/production\QI_Monitor.X.production.o
 __end_of_OLED_Init 18BCE 0 CODE 0 text89 dist/default/production\QI_Monitor.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
-intlevel0 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
-intlevel1 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
-intlevel2 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
-intlevel3 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+__accesstop 60 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
+intlevel0 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
+intlevel1 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
+intlevel2 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
+intlevel3 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 __size_of_EUSART2_SetTxInterruptHandler 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __ptext100 1A4F8 0 CODE 0 text100 dist/default/production\QI_Monitor.X.production.o
 __ptext101 1964C 0 CODE 0 text101 dist/default/production\QI_Monitor.X.production.o
@@ -3780,8 +3780,8 @@ _TMR0_DefaultInterruptHandler 1A564 0 CODE 0 text132 dist/default/production\QI_
 _I2C2_Initialize 19D4C 0 CODE 0 text42 dist/default/production\QI_Monitor.X.production.o
 ___awdiv@dividend 112 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
 FLASH_ReadWord@flashAddr 110 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 _I2C2_ISR 173B2 0 CODE 0 text125 dist/default/production\QI_Monitor.X.production.o
 __size_ofi2___fleq 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_ofi2___flge 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
@@ -4204,7 +4204,7 @@ __size_of___xxtofl 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __end_of_getUserID 19DB6 0 CODE 0 text7 dist/default/production\QI_Monitor.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\QI_Monitor.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\QI_Monitor.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 _BAUD2CON E9F 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 ___xxtofl@arg 116 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
 ___xxtofl@exp 115 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
@@ -4736,8 +4736,8 @@ i1TMR3_WriteTimer@timerVal 100 0 BANK1 1 cstackBANK1 dist/default/production\QI_
 __size_of_ADCC_StartConversion 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 i2___llmod@dividend E 0 COMRAM 1 cstackCOMRAM dist/default/production\QI_Monitor.X.production.o
 I2C2_ISR@i2c_address FB 0 BANK0 1 bssBANK0 dist/default/production\QI_Monitor.X.production.o
-stackhi E87 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
-stacklo 440 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+stackhi E87 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
+stacklo 440 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 __end_ofi1_TMR3_Reload 1A4AC 0 CODE 0 text107 dist/default/production\QI_Monitor.X.production.o
 i2__doprnt@width 9D 0 BANK0 1 cstackBANK0 dist/default/production\QI_Monitor.X.production.o
 _EXT_INT_Initialize 19D14 0 CODE 0 text44 dist/default/production\QI_Monitor.X.production.o
@@ -5012,7 +5012,7 @@ __Ltext96 0 0 ABS 0 text96 dist/default/production\QI_Monitor.X.production.o
 __Ltext97 0 0 ABS 0 text97 dist/default/production\QI_Monitor.X.production.o
 __Ltext98 0 0 ABS 0 text98 dist/default/production\QI_Monitor.X.production.o
 __Ltext99 0 0 ABS 0 text99 dist/default/production\QI_Monitor.X.production.o
-__ramtop F00 0 RAM 0 ramtop C:\Users\DREWMA~1\AppData\Local\Temp\s3a0.o
+__ramtop F00 0 RAM 0 ramtop C:\Users\DREWMA~1\AppData\Local\Temp\sbo0.o
 _sprintf 19872 0 CODE 0 text54 dist/default/production\QI_Monitor.X.production.o
 _pos12_isns_average_buffer 340 0 BANK3 1 bssBANK3 dist/default/production\QI_Monitor.X.production.o
 LM73Convert@POS5_Conv 138 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o

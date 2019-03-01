@@ -316,7 +316,7 @@ OLED_COM_PORT_SET 19
 OLED_Idle 20
 ]
 "97 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.h
-[e E9664 . `uc
+[e E9725 . `uc
 I2C2_MESSAGE_COMPLETE 0
 I2C2_MESSAGE_FAIL 1
 I2C2_MESSAGE_PENDING 2
@@ -369,7 +369,7 @@ QI_Fully_Charged 2
 QI_Error 3
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9841 . `uc
+[e E9902 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -802,21 +802,21 @@ CONCEALED 5
 [v _QIChargeIOCHandler QIChargeIOCHandler `(v  1 e 1 0 ]
 "93
 [v _QIIdleTimerHandler QIIdleTimerHandler `(v  1 e 1 0 ]
-"115 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"119 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_Command OLED_Command `(v  1 e 1 0 ]
-"167
+"171
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
-"225
+"229
 [v _OLED_YX OLED_YX `(v  1 e 1 0 ]
-"236
+"240
 [v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
-"271
+"275
 [v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
-"286
+"290
 [v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
-"318
+"322
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
-"335
+"339
 [v _OLED_updateHandler OLED_updateHandler `(v  1 e 1 0 ]
 "6 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.c
 [v _terminal_ringBufferPull terminal_ringBufferPull `(v  1 e 1 0 ]
@@ -1811,7 +1811,7 @@ CONCEALED 5
 [v _TMR3_InterruptHandler TMR3_InterruptHandler `*.38(v  1 e 3 0 ]
 "21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.h
 [v _nxq_charge_state nxq_charge_state `E10194  1 e 1 0 ]
-"11 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"15 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OledFont OledFont `C[96][8]uc  1 e 768 0 ]
 [s S2444 OLED_RAM_Buffer_t 68 `[17]uc 1 line0 17 0 `[17]uc 1 line1 17 17 `[17]uc 1 line2 17 34 `[17]uc 1 line3 17 51 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
@@ -2176,14 +2176,14 @@ CONCEALED 5
 [v ADCC_SetADTIInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
 "309
 } 0
-"335 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"339 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_updateHandler OLED_updateHandler `(v  1 e 1 0 ]
 {
-"367
+"371
 [v OLED_updateHandler@rev_id_str rev_id_str `[17]uc  1 a 17 182 ]
-"361
+"365
 [v OLED_updateHandler@dev_id_str dev_id_str `[17]uc  1 a 17 165 ]
-"671
+"675
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
@@ -2489,49 +2489,49 @@ CONCEALED 5
 [v getCauseOfResetStringSmall@r r `E9577  1 a 1 14 ]
 "146
 } 0
-"318 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"322 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
 {
-"331
+"335
 } 0
-"225
+"229
 [v _OLED_YX OLED_YX `(v  1 e 1 0 ]
 {
 [v OLED_YX@Row Row `uc  1 a 1 wreg ]
 [v OLED_YX@Row Row `uc  1 a 1 wreg ]
 [v OLED_YX@Column Column `uc  1 p 1 32 ]
-"227
+"231
 [v OLED_YX@Row Row `uc  1 a 1 36 ]
-"234
+"238
 } 0
-"286
+"290
 [v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
 {
 [v OLED_WriteString@s s `*.34uc  1 p 2 45 ]
-"295
+"299
 } 0
-"271
+"275
 [v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
 {
-"275
+"279
 [v OLED_Clear@col col `ui  1 a 2 47 ]
-"273
+"277
 [v OLED_Clear@row row `ui  1 a 2 45 ]
-"284
+"288
 } 0
-"236
+"240
 [v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
 {
 [v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
-"246
-[v OLED_PutChar@data_array data_array `[9]uc  1 a 9 32 ]
 "250
+[v OLED_PutChar@data_array data_array `[9]uc  1 a 9 32 ]
+"254
 [v OLED_PutChar@input_base input_base `*.32Cuc  1 a 2 41 ]
-"236
+"240
 [v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
-"238
+"242
 [v OLED_PutChar@ch ch `uc  1 a 1 44 ]
-"269
+"273
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 [v _memmove memmove `(*.39v  1 e 2 0 ]
@@ -2546,22 +2546,22 @@ CONCEALED 5
 [v memmove@n n `ui  1 p 2 16 ]
 "37
 } 0
-"167 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"171 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
 {
-"223
+"227
 } 0
-"115
+"119
 [v _OLED_Command OLED_Command `(v  1 e 1 0 ]
 {
 [v OLED_Command@temp temp `uc  1 a 1 wreg ]
-"119
+"123
 [v OLED_Command@data_array data_array `[2]uc  1 a 2 30 ]
-"115
+"119
 [v OLED_Command@temp temp `uc  1 a 1 wreg ]
-"120
+"124
 [v OLED_Command@temp temp `uc  1 a 1 28 ]
-"139
+"143
 } 0
 "13 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
 [v _LM73TempSensorInitialize LM73TempSensorInitialize `(v  1 e 1 0 ]

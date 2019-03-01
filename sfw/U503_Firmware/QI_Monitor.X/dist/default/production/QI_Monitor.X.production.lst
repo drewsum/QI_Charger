@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Thu Feb 28 17:57:39 2019
+                                                                                               Thu Feb 28 18:29:27 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	18F27K40
@@ -17417,7 +17417,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17066                           
  17067 ;; *************** function _OLED_updateHandler *****************
  17068 ;; Defined at:
- 17069 ;;		line 335 in file "oled.c"
+ 17069 ;;		line 339 in file "oled.c"
  17070 ;; Parameters:    Size  Location     Type
  17071 ;;		None
  17072 ;; Auto vars:     Size  Location     Type
@@ -17464,19 +17464,19 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17108  013A26                     _OLED_updateHandler:
  17109                           	opt callstack 13
  17110                           
- 17111                           ;oled.c: 337: switch (OLED_Frame) {
+ 17111                           ;oled.c: 341: switch (OLED_Frame) {
  17112                           
  17113                           ;incstack = 0
  17114  013A26  EFB6  F0A1         	goto	l18920
  17115  013A2A                     l18586:
  17116                           
  17117                           ; BSR set to: 1
- 17118                           ;oled.c: 341: OLED_update_flag = 0;
+ 17118                           ;oled.c: 345: OLED_update_flag = 0;
  17119  013A2A  0E00               	movlw	0
  17120  013A2C  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17121                           
  17122                           ; BSR set to: 1
- 17123                           ;oled.c: 344: strcpy(OLED_RAM_Buffer.line0, "QI Charger w/");
+ 17123                           ;oled.c: 348: strcpy(OLED_RAM_Buffer.line0, "QI Charger w/");
  17124  013A2E  0E28               	movlw	low _OLED_RAM_Buffer
  17125  013A30  6F0F               	movwf	strcpy@to& (0+255),b
  17126  013A32  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17487,7 +17487,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17131  013A3C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17132  013A3E  EC15  F0CC         	call	_strcpy	;wreg free
  17133                           
- 17134                           ;oled.c: 345: strcpy(OLED_RAM_Buffer.line1, "Digital Monitor");
+ 17134                           ;oled.c: 349: strcpy(OLED_RAM_Buffer.line1, "Digital Monitor");
  17135  013A42  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17136  013A44  0101               	movlb	1	; () banked
  17137  013A46  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17499,7 +17499,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17143  013A52  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17144  013A54  EC15  F0CC         	call	_strcpy	;wreg free
  17145                           
- 17146                           ;oled.c: 346: strcpy(OLED_RAM_Buffer.line2, "Cause of Reset:");
+ 17146                           ;oled.c: 350: strcpy(OLED_RAM_Buffer.line2, "Cause of Reset:");
  17147  013A58  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17148  013A5A  0101               	movlb	1	; () banked
  17149  013A5C  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17511,7 +17511,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17155  013A68  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17156  013A6A  EC15  F0CC         	call	_strcpy	;wreg free
  17157                           
- 17158                           ;oled.c: 347: strcpy(OLED_RAM_Buffer.line3, getCauseOfResetStringSmall(reset_cause));
+ 17158                           ;oled.c: 351: strcpy(OLED_RAM_Buffer.line3, getCauseOfResetStringSmall(reset_cause));
  17159  013A6E  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17160  013A70  0101               	movlb	1	; () banked
  17161  013A72  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17524,31 +17524,31 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17168  013A84  C10D  F112         	movff	?_getCauseOfResetStringSmall+1,strcpy@from+1
  17169  013A88  EC15  F0CC         	call	_strcpy	;wreg free
  17170                           
- 17171                           ;oled.c: 348: OLED_UpdateFromRAMBuffer();
+ 17171                           ;oled.c: 352: OLED_UpdateFromRAMBuffer();
  17172  013A8C  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17173                           
- 17174                           ;oled.c: 349: OLED_Frame = OLED_Boot_Frame_2;
+ 17174                           ;oled.c: 353: OLED_Frame = OLED_Boot_Frame_2;
  17175  013A90  0E01               	movlw	1
  17176  013A92                     L3:
  17177  013A92  0101               	movlb	1	; () banked
  17178  013A94  6FE8               	movwf	_OLED_Frame& (0+255),b
  17179                           
  17180                           ; BSR set to: 1
- 17181                           ;oled.c: 350: OLED_update_time = 3;
+ 17181                           ;oled.c: 354: OLED_update_time = 3;
  17182  013A96  0E03               	movlw	3
  17183  013A98  6FF1               	movwf	_OLED_update_time& (0+255),b
  17184                           
- 17185                           ;oled.c: 352: break;
+ 17185                           ;oled.c: 356: break;
  17186  013A9A  0012               	return	
  17187  013A9C                     l18602:
  17188                           
  17189                           ; BSR set to: 1
- 17190                           ;oled.c: 356: OLED_update_flag = 0;
+ 17190                           ;oled.c: 360: OLED_update_flag = 0;
  17191  013A9C  0E00               	movlw	0
  17192  013A9E  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17193                           
  17194                           ; BSR set to: 1
- 17195                           ;oled.c: 360: strcpy(OLED_RAM_Buffer.line0, "Device ID:");
+ 17195                           ;oled.c: 364: strcpy(OLED_RAM_Buffer.line0, "Device ID:");
  17196  013AA0  0E28               	movlw	low _OLED_RAM_Buffer
  17197  013AA2  6F0F               	movwf	strcpy@to& (0+255),b
  17198  013AA4  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17559,7 +17559,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17203  013AAE  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17204  013AB0  EC15  F0CC         	call	_strcpy	;wreg free
  17205                           
- 17206                           ;oled.c: 361: char dev_id_str[17];;oled.c: 362: sprintf(dev_id_str,"0x%X",getDeviceID())
+ 17206                           ;oled.c: 365: char dev_id_str[17];;oled.c: 366: sprintf(dev_id_str,"0x%X",getDeviceID())
       +                          ;
  17207  013AB4  0EA5               	movlw	low OLED_updateHandler@dev_id_str
  17208  013AB6  0101               	movlb	1	; () banked
@@ -17575,7 +17575,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17218  013ACE  C118  F195         	movff	?_getDeviceID+1,?_sprintf+5
  17219  013AD2  EC39  F0CC         	call	_sprintf	;wreg free
  17220                           
- 17221                           ;oled.c: 363: strcpy(OLED_RAM_Buffer.line1, dev_id_str);
+ 17221                           ;oled.c: 367: strcpy(OLED_RAM_Buffer.line1, dev_id_str);
  17222  013AD6  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17223  013AD8  0101               	movlb	1	; () banked
  17224  013ADA  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17587,7 +17587,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17230  013AE6  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17231  013AE8  EC15  F0CC         	call	_strcpy	;wreg free
  17232                           
- 17233                           ;oled.c: 366: strcpy(OLED_RAM_Buffer.line2, "Revision ID:");
+ 17233                           ;oled.c: 370: strcpy(OLED_RAM_Buffer.line2, "Revision ID:");
  17234  013AEC  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17235  013AEE  0101               	movlb	1	; () banked
  17236  013AF0  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17599,7 +17599,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17242  013AFC  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17243  013AFE  EC15  F0CC         	call	_strcpy	;wreg free
  17244                           
- 17245                           ;oled.c: 367: char rev_id_str[17];;oled.c: 368: sprintf(rev_id_str, "%c%03d", (char) get
+ 17245                           ;oled.c: 371: char rev_id_str[17];;oled.c: 372: sprintf(rev_id_str, "%c%03d", (char) get
       +                          MajorRevisionID() + 65, getMinorRevisionID());
  17246  013B02  0EB6               	movlw	low OLED_updateHandler@rev_id_str
  17247  013B04  0101               	movlb	1	; () banked
@@ -17627,7 +17627,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17269  013B34  6B97               	clrf	(?_sprintf+7)& (0+255),b
  17270  013B36  EC39  F0CC         	call	_sprintf	;wreg free
  17271                           
- 17272                           ;oled.c: 369: strcpy(OLED_RAM_Buffer.line3, rev_id_str);
+ 17272                           ;oled.c: 373: strcpy(OLED_RAM_Buffer.line3, rev_id_str);
  17273  013B3A  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17274  013B3C  0101               	movlb	1	; () banked
  17275  013B3E  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17639,21 +17639,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17281  013B4A  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17282  013B4C  EC15  F0CC         	call	_strcpy	;wreg free
  17283                           
- 17284                           ;oled.c: 371: OLED_UpdateFromRAMBuffer();
+ 17284                           ;oled.c: 375: OLED_UpdateFromRAMBuffer();
  17285  013B50  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17286                           
- 17287                           ;oled.c: 372: OLED_Frame = OLED_Boot_Frame_3;
+ 17287                           ;oled.c: 376: OLED_Frame = OLED_Boot_Frame_3;
  17288  013B54  0E02               	movlw	2
  17289  013B56  D79D               	goto	L3
  17290  013B58                     l18622:
  17291                           
  17292                           ; BSR set to: 1
- 17293                           ;oled.c: 379: OLED_update_flag = 0;
+ 17293                           ;oled.c: 383: OLED_update_flag = 0;
  17294  013B58  0E00               	movlw	0
  17295  013B5A  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17296                           
  17297                           ; BSR set to: 1
- 17298                           ;oled.c: 381: strcpy(OLED_RAM_Buffer.line0, "COM Port Setup:");
+ 17298                           ;oled.c: 385: strcpy(OLED_RAM_Buffer.line0, "COM Port Setup:");
  17299  013B5C  0E28               	movlw	low _OLED_RAM_Buffer
  17300  013B5E  6F0F               	movwf	strcpy@to& (0+255),b
  17301  013B60  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17664,7 +17664,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17306  013B6A  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17307  013B6C  EC15  F0CC         	call	_strcpy	;wreg free
  17308                           
- 17309                           ;oled.c: 382: strcpy(OLED_RAM_Buffer.line1, "115.2 kbs");
+ 17309                           ;oled.c: 386: strcpy(OLED_RAM_Buffer.line1, "115.2 kbs");
  17310  013B70  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17311  013B72  0101               	movlb	1	; () banked
  17312  013B74  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17676,7 +17676,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17318  013B80  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17319  013B82  EC15  F0CC         	call	_strcpy	;wreg free
  17320                           
- 17321                           ;oled.c: 383: strcpy(OLED_RAM_Buffer.line2, "8bit, no parity");
+ 17321                           ;oled.c: 387: strcpy(OLED_RAM_Buffer.line2, "8bit, no parity");
  17322  013B86  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17323  013B88  0101               	movlb	1	; () banked
  17324  013B8A  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17688,7 +17688,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17330  013B96  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17331  013B98  EC15  F0CC         	call	_strcpy	;wreg free
  17332                           
- 17333                           ;oled.c: 384: strcpy(OLED_RAM_Buffer.line3, "1 stp, no flow");
+ 17333                           ;oled.c: 388: strcpy(OLED_RAM_Buffer.line3, "1 stp, no flow");
  17334  013B9C  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17335  013B9E  0101               	movlb	1	; () banked
  17336  013BA0  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17700,21 +17700,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17342  013BAC  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17343  013BAE  EC15  F0CC         	call	_strcpy	;wreg free
  17344                           
- 17345                           ;oled.c: 386: OLED_UpdateFromRAMBuffer();
+ 17345                           ;oled.c: 390: OLED_UpdateFromRAMBuffer();
  17346  013BB2  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17347                           
- 17348                           ;oled.c: 387: OLED_Frame = OLED_Boot_Frame_4;
+ 17348                           ;oled.c: 391: OLED_Frame = OLED_Boot_Frame_4;
  17349  013BB6  0E03               	movlw	3
  17350  013BB8  D76C               	goto	L3
  17351  013BBA                     l18638:
  17352                           
  17353                           ; BSR set to: 1
- 17354                           ;oled.c: 394: OLED_update_flag = 0;
+ 17354                           ;oled.c: 398: OLED_update_flag = 0;
  17355  013BBA  0E00               	movlw	0
  17356  013BBC  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17357                           
  17358                           ; BSR set to: 1
- 17359                           ;oled.c: 396: strcpy(OLED_RAM_Buffer.line0, "Boot Complete");
+ 17359                           ;oled.c: 400: strcpy(OLED_RAM_Buffer.line0, "Boot Complete");
  17360  013BBE  0E28               	movlw	low _OLED_RAM_Buffer
  17361  013BC0  6F0F               	movwf	strcpy@to& (0+255),b
  17362  013BC2  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17725,7 +17725,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17367  013BCC  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17368  013BCE  EC15  F0CC         	call	_strcpy	;wreg free
  17369                           
- 17370                           ;oled.c: 397: strcpy(OLED_RAM_Buffer.line1, "QI Enabled");
+ 17370                           ;oled.c: 401: strcpy(OLED_RAM_Buffer.line1, "QI Enabled");
  17371  013BD2  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17372  013BD4  0101               	movlb	1	; () banked
  17373  013BD6  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17737,7 +17737,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17379  013BE2  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17380  013BE4  EC15  F0CC         	call	_strcpy	;wreg free
  17381                           
- 17382                           ;oled.c: 398: strcpy(OLED_RAM_Buffer.line2, "More Settings");
+ 17382                           ;oled.c: 402: strcpy(OLED_RAM_Buffer.line2, "More Settings");
  17383  013BE8  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17384  013BEA  0101               	movlb	1	; () banked
  17385  013BEC  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17749,7 +17749,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17391  013BF8  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17392  013BFA  EC15  F0CC         	call	_strcpy	;wreg free
  17393                           
- 17394                           ;oled.c: 399: strcpy(OLED_RAM_Buffer.line3, "via USB, 'Help'");
+ 17394                           ;oled.c: 403: strcpy(OLED_RAM_Buffer.line3, "via USB, 'Help'");
  17395  013BFE  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17396  013C00  0101               	movlb	1	; () banked
  17397  013C02  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17761,21 +17761,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17403  013C0E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17404  013C10  EC15  F0CC         	call	_strcpy	;wreg free
  17405                           
- 17406                           ;oled.c: 401: OLED_UpdateFromRAMBuffer();
+ 17406                           ;oled.c: 405: OLED_UpdateFromRAMBuffer();
  17407  013C14  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17408                           
- 17409                           ;oled.c: 402: OLED_Frame = OLED_Charge_Status;
+ 17409                           ;oled.c: 406: OLED_Frame = OLED_Charge_Status;
  17410  013C18  0E04               	movlw	4
  17411  013C1A  D73B               	goto	L3
  17412  013C1C                     l18654:
  17413                           
  17414                           ; BSR set to: 1
- 17415                           ;oled.c: 409: OLED_update_flag = 0;
+ 17415                           ;oled.c: 413: OLED_update_flag = 0;
  17416  013C1C  0E00               	movlw	0
  17417  013C1E  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17418                           
  17419                           ; BSR set to: 1
- 17420                           ;oled.c: 411: strcpy(OLED_RAM_Buffer.line0, "Charge Status:");
+ 17420                           ;oled.c: 415: strcpy(OLED_RAM_Buffer.line0, "Charge Status:");
  17421  013C20  0E28               	movlw	low _OLED_RAM_Buffer
  17422  013C22  6F0F               	movwf	strcpy@to& (0+255),b
  17423  013C24  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17786,7 +17786,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17428  013C2E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17429  013C30  EC15  F0CC         	call	_strcpy	;wreg free
  17430                           
- 17431                           ;oled.c: 412: strcpy(OLED_RAM_Buffer.line1, " ");
+ 17431                           ;oled.c: 416: strcpy(OLED_RAM_Buffer.line1, " ");
  17432  013C34  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17433  013C36  0101               	movlb	1	; () banked
  17434  013C38  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17798,7 +17798,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17440  013C44  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17441  013C46  EC15  F0CC         	call	_strcpy	;wreg free
  17442                           
- 17443                           ;oled.c: 413: strcpy(OLED_RAM_Buffer.line2, getNXQChargeStateStringCaps());
+ 17443                           ;oled.c: 417: strcpy(OLED_RAM_Buffer.line2, getNXQChargeStateStringCaps());
  17444  013C4A  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17445  013C4C  0101               	movlb	1	; () banked
  17446  013C4E  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17809,7 +17809,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17451  013C5C  C10D  F112         	movff	?_getNXQChargeStateStringCaps+1,strcpy@from+1
  17452  013C60  EC15  F0CC         	call	_strcpy	;wreg free
  17453                           
- 17454                           ;oled.c: 414: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17454                           ;oled.c: 418: strcpy(OLED_RAM_Buffer.line3, " ");
  17455  013C64  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17456  013C66  0101               	movlb	1	; () banked
  17457  013C68  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17821,31 +17821,31 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17463  013C74  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17464  013C76  EC15  F0CC         	call	_strcpy	;wreg free
  17465                           
- 17466                           ;oled.c: 416: OLED_UpdateFromRAMBuffer();
+ 17466                           ;oled.c: 420: OLED_UpdateFromRAMBuffer();
  17467  013C7A  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17468                           
- 17469                           ;oled.c: 417: OLED_Frame = OLED_Charge_Status;
+ 17469                           ;oled.c: 421: OLED_Frame = OLED_Charge_Status;
  17470  013C7E  0E04               	movlw	4
  17471  013C80                     L4:
  17472  013C80  0101               	movlb	1	; () banked
  17473  013C82  6FE8               	movwf	_OLED_Frame& (0+255),b
  17474                           
  17475                           ; BSR set to: 1
- 17476                           ;oled.c: 418: OLED_update_time = 2;
+ 17476                           ;oled.c: 422: OLED_update_time = 2;
  17477  013C84  0E02               	movlw	2
  17478  013C86  6FF1               	movwf	_OLED_update_time& (0+255),b
  17479                           
- 17480                           ;oled.c: 420: break;
+ 17480                           ;oled.c: 424: break;
  17481  013C88  0012               	return	
  17482  013C8A                     l18670:
  17483                           
  17484                           ; BSR set to: 1
- 17485                           ;oled.c: 424: OLED_update_flag = 0;
+ 17485                           ;oled.c: 428: OLED_update_flag = 0;
  17486  013C8A  0E00               	movlw	0
  17487  013C8C  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17488                           
  17489                           ; BSR set to: 1
- 17490                           ;oled.c: 426: strcpy(OLED_RAM_Buffer.line0, "POS12 Voltage:");
+ 17490                           ;oled.c: 430: strcpy(OLED_RAM_Buffer.line0, "POS12 Voltage:");
  17491  013C8E  0E28               	movlw	low _OLED_RAM_Buffer
  17492  013C90  6F0F               	movwf	strcpy@to& (0+255),b
  17493  013C92  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17856,7 +17856,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17498  013C9C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17499  013C9E  EC15  F0CC         	call	_strcpy	;wreg free
  17500                           
- 17501                           ;oled.c: 427: sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos12_adc_result);
+ 17501                           ;oled.c: 431: sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos12_adc_result);
  17502  013CA2  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17503  013CA4  0101               	movlb	1	; () banked
  17504  013CA6  6F90               	movwf	sprintf@wh& (0+255),b
@@ -17872,7 +17872,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17514  013CC0  C0EE  F197         	movff	_adc_results+15,?_sprintf+7
  17515  013CC4  EC39  F0CC         	call	_sprintf	;wreg free
  17516                           
- 17517                           ;oled.c: 428: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17517                           ;oled.c: 432: strcpy(OLED_RAM_Buffer.line2, " ");
  17518  013CC8  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17519  013CCA  0101               	movlb	1	; () banked
  17520  013CCC  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17884,7 +17884,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17526  013CD8  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17527  013CDA  EC15  F0CC         	call	_strcpy	;wreg free
  17528                           
- 17529                           ;oled.c: 429: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17529                           ;oled.c: 433: strcpy(OLED_RAM_Buffer.line3, " ");
  17530  013CDE  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17531  013CE0  0101               	movlb	1	; () banked
  17532  013CE2  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17896,21 +17896,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17538  013CEE  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17539  013CF0  EC15  F0CC         	call	_strcpy	;wreg free
  17540                           
- 17541                           ;oled.c: 431: OLED_UpdateFromRAMBuffer();
+ 17541                           ;oled.c: 435: OLED_UpdateFromRAMBuffer();
  17542  013CF4  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17543                           
- 17544                           ;oled.c: 432: OLED_Frame = OLED_POS12_Voltage;
+ 17544                           ;oled.c: 436: OLED_Frame = OLED_POS12_Voltage;
  17545  013CF8  0E05               	movlw	5
  17546  013CFA  D7C2               	goto	L4
  17547  013CFC                     l18686:
  17548                           
  17549                           ; BSR set to: 1
- 17550                           ;oled.c: 439: OLED_update_flag = 0;
+ 17550                           ;oled.c: 443: OLED_update_flag = 0;
  17551  013CFC  0E00               	movlw	0
  17552  013CFE  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17553                           
  17554                           ; BSR set to: 1
- 17555                           ;oled.c: 441: strcpy(OLED_RAM_Buffer.line0, "POS5 Voltage:");
+ 17555                           ;oled.c: 445: strcpy(OLED_RAM_Buffer.line0, "POS5 Voltage:");
  17556  013D00  0E28               	movlw	low _OLED_RAM_Buffer
  17557  013D02  6F0F               	movwf	strcpy@to& (0+255),b
  17558  013D04  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17921,7 +17921,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17563  013D0E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17564  013D10  EC15  F0CC         	call	_strcpy	;wreg free
  17565                           
- 17566                           ;oled.c: 442: sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos5_adc_result);
+ 17566                           ;oled.c: 446: sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos5_adc_result);
  17567  013D14  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17568  013D16  0101               	movlb	1	; () banked
  17569  013D18  6F90               	movwf	sprintf@wh& (0+255),b
@@ -17937,7 +17937,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17579  013D32  C0EA  F197         	movff	_adc_results+11,?_sprintf+7
  17580  013D36  EC39  F0CC         	call	_sprintf	;wreg free
  17581                           
- 17582                           ;oled.c: 443: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17582                           ;oled.c: 447: strcpy(OLED_RAM_Buffer.line2, " ");
  17583  013D3A  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17584  013D3C  0101               	movlb	1	; () banked
  17585  013D3E  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17949,7 +17949,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17591  013D4A  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17592  013D4C  EC15  F0CC         	call	_strcpy	;wreg free
  17593                           
- 17594                           ;oled.c: 444: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17594                           ;oled.c: 448: strcpy(OLED_RAM_Buffer.line3, " ");
  17595  013D50  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17596  013D52  0101               	movlb	1	; () banked
  17597  013D54  6F0F               	movwf	strcpy@to& (0+255),b
@@ -17961,21 +17961,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17603  013D60  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17604  013D62  EC15  F0CC         	call	_strcpy	;wreg free
  17605                           
- 17606                           ;oled.c: 446: OLED_UpdateFromRAMBuffer();
+ 17606                           ;oled.c: 450: OLED_UpdateFromRAMBuffer();
  17607  013D66  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17608                           
- 17609                           ;oled.c: 447: OLED_Frame = OLED_POS5_Voltage;
+ 17609                           ;oled.c: 451: OLED_Frame = OLED_POS5_Voltage;
  17610  013D6A  0E06               	movlw	6
  17611  013D6C  D789               	goto	L4
  17612  013D6E                     l18702:
  17613                           
  17614                           ; BSR set to: 1
- 17615                           ;oled.c: 454: OLED_update_flag = 0;
+ 17615                           ;oled.c: 458: OLED_update_flag = 0;
  17616  013D6E  0E00               	movlw	0
  17617  013D70  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17618                           
  17619                           ; BSR set to: 1
- 17620                           ;oled.c: 456: strcpy(OLED_RAM_Buffer.line0, "POS12 Current:");
+ 17620                           ;oled.c: 460: strcpy(OLED_RAM_Buffer.line0, "POS12 Current:");
  17621  013D72  0E28               	movlw	low _OLED_RAM_Buffer
  17622  013D74  6F0F               	movwf	strcpy@to& (0+255),b
  17623  013D76  0E02               	movlw	high _OLED_RAM_Buffer
@@ -17986,7 +17986,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17628  013D80  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17629  013D82  EC15  F0CC         	call	_strcpy	;wreg free
  17630                           
- 17631                           ;oled.c: 457: sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.pos12_isns_adc_result
+ 17631                           ;oled.c: 461: sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.pos12_isns_adc_result
       +                          );
  17632  013D86  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17633  013D88  0101               	movlb	1	; () banked
@@ -18003,7 +18003,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17644  013DA4  C0F2  F197         	movff	_adc_results+19,?_sprintf+7
  17645  013DA8  EC39  F0CC         	call	_sprintf	;wreg free
  17646                           
- 17647                           ;oled.c: 458: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17647                           ;oled.c: 462: strcpy(OLED_RAM_Buffer.line2, " ");
  17648  013DAC  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17649  013DAE  0101               	movlb	1	; () banked
  17650  013DB0  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18015,7 +18015,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17656  013DBC  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17657  013DBE  EC15  F0CC         	call	_strcpy	;wreg free
  17658                           
- 17659                           ;oled.c: 459: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17659                           ;oled.c: 463: strcpy(OLED_RAM_Buffer.line3, " ");
  17660  013DC2  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17661  013DC4  0101               	movlb	1	; () banked
  17662  013DC6  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18027,21 +18027,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17668  013DD2  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17669  013DD4  EC15  F0CC         	call	_strcpy	;wreg free
  17670                           
- 17671                           ;oled.c: 461: OLED_UpdateFromRAMBuffer();
+ 17671                           ;oled.c: 465: OLED_UpdateFromRAMBuffer();
  17672  013DD8  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17673                           
- 17674                           ;oled.c: 462: OLED_Frame = OLED_POS12_Current;
+ 17674                           ;oled.c: 466: OLED_Frame = OLED_POS12_Current;
  17675  013DDC  0E07               	movlw	7
  17676  013DDE  D750               	goto	L4
  17677  013DE0                     l18718:
  17678                           
  17679                           ; BSR set to: 1
- 17680                           ;oled.c: 469: OLED_update_flag = 0;
+ 17680                           ;oled.c: 473: OLED_update_flag = 0;
  17681  013DE0  0E00               	movlw	0
  17682  013DE2  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17683                           
  17684                           ; BSR set to: 1
- 17685                           ;oled.c: 471: strcpy(OLED_RAM_Buffer.line0, "QI Current:");
+ 17685                           ;oled.c: 475: strcpy(OLED_RAM_Buffer.line0, "QI Current:");
  17686  013DE4  0E28               	movlw	low _OLED_RAM_Buffer
  17687  013DE6  6F0F               	movwf	strcpy@to& (0+255),b
  17688  013DE8  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18052,7 +18052,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17693  013DF2  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17694  013DF4  EC15  F0CC         	call	_strcpy	;wreg free
  17695                           
- 17696                           ;oled.c: 472: sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.qi_isns_adc_result);
+ 17696                           ;oled.c: 476: sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.qi_isns_adc_result);
  17697  013DF8  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17698  013DFA  0101               	movlb	1	; () banked
  17699  013DFC  6F90               	movwf	sprintf@wh& (0+255),b
@@ -18068,7 +18068,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17709  013E16  C0F6  F197         	movff	_adc_results+23,?_sprintf+7
  17710  013E1A  EC39  F0CC         	call	_sprintf	;wreg free
  17711                           
- 17712                           ;oled.c: 473: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17712                           ;oled.c: 477: strcpy(OLED_RAM_Buffer.line2, " ");
  17713  013E1E  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17714  013E20  0101               	movlb	1	; () banked
  17715  013E22  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18080,7 +18080,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17721  013E2E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17722  013E30  EC15  F0CC         	call	_strcpy	;wreg free
  17723                           
- 17724                           ;oled.c: 474: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17724                           ;oled.c: 478: strcpy(OLED_RAM_Buffer.line3, " ");
  17725  013E34  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17726  013E36  0101               	movlb	1	; () banked
  17727  013E38  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18092,21 +18092,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17733  013E44  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17734  013E46  EC15  F0CC         	call	_strcpy	;wreg free
  17735                           
- 17736                           ;oled.c: 476: OLED_UpdateFromRAMBuffer();
+ 17736                           ;oled.c: 480: OLED_UpdateFromRAMBuffer();
  17737  013E4A  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17738                           
- 17739                           ;oled.c: 477: OLED_Frame = OLED_QI_Current;
+ 17739                           ;oled.c: 481: OLED_Frame = OLED_QI_Current;
  17740  013E4E  0E08               	movlw	8
  17741  013E50  D717               	goto	L4
  17742  013E52                     l18734:
  17743                           
  17744                           ; BSR set to: 1
- 17745                           ;oled.c: 484: OLED_update_flag = 0;
+ 17745                           ;oled.c: 488: OLED_update_flag = 0;
  17746  013E52  0E00               	movlw	0
  17747  013E54  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17748                           
  17749                           ; BSR set to: 1
- 17750                           ;oled.c: 486: strcpy(OLED_RAM_Buffer.line0, "Input Power:");
+ 17750                           ;oled.c: 490: strcpy(OLED_RAM_Buffer.line0, "Input Power:");
  17751  013E56  0E28               	movlw	low _OLED_RAM_Buffer
  17752  013E58  6F0F               	movwf	strcpy@to& (0+255),b
  17753  013E5A  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18117,7 +18117,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17758  013E64  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17759  013E66  EC15  F0CC         	call	_strcpy	;wreg free
  17760                           
- 17761                           ;oled.c: 487: sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.input_power);
+ 17761                           ;oled.c: 491: sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.input_power);
  17762  013E6A  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17763  013E6C  0101               	movlb	1	; () banked
  17764  013E6E  6F90               	movwf	sprintf@wh& (0+255),b
@@ -18133,7 +18133,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17774  013E88  C203  F197         	movff	_adc_calculations+3,?_sprintf+7
  17775  013E8C  EC39  F0CC         	call	_sprintf	;wreg free
  17776                           
- 17777                           ;oled.c: 488: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17777                           ;oled.c: 492: strcpy(OLED_RAM_Buffer.line2, " ");
  17778  013E90  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17779  013E92  0101               	movlb	1	; () banked
  17780  013E94  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18145,7 +18145,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17786  013EA0  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17787  013EA2  EC15  F0CC         	call	_strcpy	;wreg free
  17788                           
- 17789                           ;oled.c: 489: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17789                           ;oled.c: 493: strcpy(OLED_RAM_Buffer.line3, " ");
  17790  013EA6  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17791  013EA8  0101               	movlb	1	; () banked
  17792  013EAA  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18157,21 +18157,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17798  013EB6  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17799  013EB8  EC15  F0CC         	call	_strcpy	;wreg free
  17800                           
- 17801                           ;oled.c: 491: OLED_UpdateFromRAMBuffer();
+ 17801                           ;oled.c: 495: OLED_UpdateFromRAMBuffer();
  17802  013EBC  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17803                           
- 17804                           ;oled.c: 492: OLED_Frame = OLED_Input_Power;
+ 17804                           ;oled.c: 496: OLED_Frame = OLED_Input_Power;
  17805  013EC0  0E09               	movlw	9
  17806  013EC2  D6DE               	goto	L4
  17807  013EC4                     l18750:
  17808                           
  17809                           ; BSR set to: 1
- 17810                           ;oled.c: 499: OLED_update_flag = 0;
+ 17810                           ;oled.c: 503: OLED_update_flag = 0;
  17811  013EC4  0E00               	movlw	0
  17812  013EC6  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17813                           
  17814                           ; BSR set to: 1
- 17815                           ;oled.c: 501: strcpy(OLED_RAM_Buffer.line0, "Output Power:");
+ 17815                           ;oled.c: 505: strcpy(OLED_RAM_Buffer.line0, "Output Power:");
  17816  013EC8  0E28               	movlw	low _OLED_RAM_Buffer
  17817  013ECA  6F0F               	movwf	strcpy@to& (0+255),b
  17818  013ECC  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18182,7 +18182,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17823  013ED6  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17824  013ED8  EC15  F0CC         	call	_strcpy	;wreg free
  17825                           
- 17826                           ;oled.c: 502: sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.output_power);
+ 17826                           ;oled.c: 506: sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.output_power);
  17827  013EDC  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17828  013EDE  0101               	movlb	1	; () banked
  17829  013EE0  6F90               	movwf	sprintf@wh& (0+255),b
@@ -18198,7 +18198,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17839  013EFA  C207  F197         	movff	_adc_calculations+7,?_sprintf+7
  17840  013EFE  EC39  F0CC         	call	_sprintf	;wreg free
  17841                           
- 17842                           ;oled.c: 503: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17842                           ;oled.c: 507: strcpy(OLED_RAM_Buffer.line2, " ");
  17843  013F02  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17844  013F04  0101               	movlb	1	; () banked
  17845  013F06  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18210,7 +18210,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17851  013F12  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17852  013F14  EC15  F0CC         	call	_strcpy	;wreg free
  17853                           
- 17854                           ;oled.c: 504: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17854                           ;oled.c: 508: strcpy(OLED_RAM_Buffer.line3, " ");
  17855  013F18  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17856  013F1A  0101               	movlb	1	; () banked
  17857  013F1C  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18222,21 +18222,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17863  013F28  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17864  013F2A  EC15  F0CC         	call	_strcpy	;wreg free
  17865                           
- 17866                           ;oled.c: 506: OLED_UpdateFromRAMBuffer();
+ 17866                           ;oled.c: 510: OLED_UpdateFromRAMBuffer();
  17867  013F2E  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17868                           
- 17869                           ;oled.c: 507: OLED_Frame = OLED_Output_Power;
+ 17869                           ;oled.c: 511: OLED_Frame = OLED_Output_Power;
  17870  013F32  0E0A               	movlw	10
  17871  013F34  D6A5               	goto	L4
  17872  013F36                     l18766:
  17873                           
  17874                           ; BSR set to: 1
- 17875                           ;oled.c: 514: OLED_update_flag = 0;
+ 17875                           ;oled.c: 518: OLED_update_flag = 0;
  17876  013F36  0E00               	movlw	0
  17877  013F38  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17878                           
  17879                           ; BSR set to: 1
- 17880                           ;oled.c: 516: strcpy(OLED_RAM_Buffer.line0, "Efficiency:");
+ 17880                           ;oled.c: 520: strcpy(OLED_RAM_Buffer.line0, "Efficiency:");
  17881  013F3A  0E28               	movlw	low _OLED_RAM_Buffer
  17882  013F3C  6F0F               	movwf	strcpy@to& (0+255),b
  17883  013F3E  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18247,7 +18247,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17888  013F48  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17889  013F4A  EC15  F0CC         	call	_strcpy	;wreg free
  17890                           
- 17891                           ;oled.c: 517: sprintf(OLED_RAM_Buffer.line1, "%+.3f%%", adc_calculations.efficiency);
+ 17891                           ;oled.c: 521: sprintf(OLED_RAM_Buffer.line1, "%+.3f%%", adc_calculations.efficiency);
  17892  013F4E  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17893  013F50  0101               	movlb	1	; () banked
  17894  013F52  6F90               	movwf	sprintf@wh& (0+255),b
@@ -18263,7 +18263,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17904  013F6C  C20B  F197         	movff	_adc_calculations+11,?_sprintf+7
  17905  013F70  EC39  F0CC         	call	_sprintf	;wreg free
  17906                           
- 17907                           ;oled.c: 518: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17907                           ;oled.c: 522: strcpy(OLED_RAM_Buffer.line2, " ");
  17908  013F74  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17909  013F76  0101               	movlb	1	; () banked
  17910  013F78  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18275,7 +18275,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17916  013F84  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17917  013F86  EC15  F0CC         	call	_strcpy	;wreg free
  17918                           
- 17919                           ;oled.c: 519: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17919                           ;oled.c: 523: strcpy(OLED_RAM_Buffer.line3, " ");
  17920  013F8A  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17921  013F8C  0101               	movlb	1	; () banked
  17922  013F8E  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18287,21 +18287,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17928  013F9A  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17929  013F9C  EC15  F0CC         	call	_strcpy	;wreg free
  17930                           
- 17931                           ;oled.c: 521: OLED_UpdateFromRAMBuffer();
+ 17931                           ;oled.c: 525: OLED_UpdateFromRAMBuffer();
  17932  013FA0  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17933                           
- 17934                           ;oled.c: 522: OLED_Frame = OLED_Efficiency;
+ 17934                           ;oled.c: 526: OLED_Frame = OLED_Efficiency;
  17935  013FA4  0E0B               	movlw	11
  17936  013FA6  D66C               	goto	L4
  17937  013FA8                     l18782:
  17938                           
  17939                           ; BSR set to: 1
- 17940                           ;oled.c: 529: OLED_update_flag = 0;
+ 17940                           ;oled.c: 533: OLED_update_flag = 0;
  17941  013FA8  0E00               	movlw	0
  17942  013FAA  6FE7               	movwf	_OLED_update_flag& (0+255),b
  17943                           
  17944                           ; BSR set to: 1
- 17945                           ;oled.c: 531: strcpy(OLED_RAM_Buffer.line0, "QI Temp:");
+ 17945                           ;oled.c: 535: strcpy(OLED_RAM_Buffer.line0, "QI Temp:");
  17946  013FAC  0E28               	movlw	low _OLED_RAM_Buffer
  17947  013FAE  6F0F               	movwf	strcpy@to& (0+255),b
  17948  013FB0  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18312,7 +18312,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17953  013FBA  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17954  013FBC  EC15  F0CC         	call	_strcpy	;wreg free
  17955                           
- 17956                           ;oled.c: 532: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.QI_temp_result)
+ 17956                           ;oled.c: 536: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.QI_temp_result)
       +                          ;
  17957  013FC0  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  17958  013FC2  0101               	movlb	1	; () banked
@@ -18329,7 +18329,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17969  013FDE  C297  F197         	movff	_LM73_temp_results+3,?_sprintf+7
  17970  013FE2  EC39  F0CC         	call	_sprintf	;wreg free
  17971                           
- 17972                           ;oled.c: 533: strcpy(OLED_RAM_Buffer.line2, " ");
+ 17972                           ;oled.c: 537: strcpy(OLED_RAM_Buffer.line2, " ");
  17973  013FE6  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  17974  013FE8  0101               	movlb	1	; () banked
  17975  013FEA  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18341,7 +18341,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17981  013FF6  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17982  013FF8  EC15  F0CC         	call	_strcpy	;wreg free
  17983                           
- 17984                           ;oled.c: 534: strcpy(OLED_RAM_Buffer.line3, " ");
+ 17984                           ;oled.c: 538: strcpy(OLED_RAM_Buffer.line3, " ");
  17985  013FFC  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  17986  013FFE  0101               	movlb	1	; () banked
  17987  014000  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18353,21 +18353,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  17993  01400C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  17994  01400E  EC15  F0CC         	call	_strcpy	;wreg free
  17995                           
- 17996                           ;oled.c: 536: OLED_UpdateFromRAMBuffer();
+ 17996                           ;oled.c: 540: OLED_UpdateFromRAMBuffer();
  17997  014012  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  17998                           
- 17999                           ;oled.c: 537: OLED_Frame = OLED_QI_Temp;
+ 17999                           ;oled.c: 541: OLED_Frame = OLED_QI_Temp;
  18000  014016  0E0C               	movlw	12
  18001  014018  D633               	goto	L4
  18002  01401A                     l18798:
  18003                           
  18004                           ; BSR set to: 1
- 18005                           ;oled.c: 544: OLED_update_flag = 0;
+ 18005                           ;oled.c: 548: OLED_update_flag = 0;
  18006  01401A  0E00               	movlw	0
  18007  01401C  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18008                           
  18009                           ; BSR set to: 1
- 18010                           ;oled.c: 546: strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
+ 18010                           ;oled.c: 550: strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
  18011  01401E  0E28               	movlw	low _OLED_RAM_Buffer
  18012  014020  6F0F               	movwf	strcpy@to& (0+255),b
  18013  014022  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18378,7 +18378,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18018  01402C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18019  01402E  EC15  F0CC         	call	_strcpy	;wreg free
  18020                           
- 18021                           ;oled.c: 547: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.POS5_temp_resul
+ 18021                           ;oled.c: 551: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.POS5_temp_resul
       +                          t);
  18022  014032  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18023  014034  0101               	movlb	1	; () banked
@@ -18395,7 +18395,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18034  014050  C29B  F197         	movff	_LM73_temp_results+7,?_sprintf+7
  18035  014054  EC39  F0CC         	call	_sprintf	;wreg free
  18036                           
- 18037                           ;oled.c: 548: strcpy(OLED_RAM_Buffer.line2, " ");
+ 18037                           ;oled.c: 552: strcpy(OLED_RAM_Buffer.line2, " ");
  18038  014058  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18039  01405A  0101               	movlb	1	; () banked
  18040  01405C  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18407,7 +18407,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18046  014068  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18047  01406A  EC15  F0CC         	call	_strcpy	;wreg free
  18048                           
- 18049                           ;oled.c: 549: strcpy(OLED_RAM_Buffer.line3, " ");
+ 18049                           ;oled.c: 553: strcpy(OLED_RAM_Buffer.line3, " ");
  18050  01406E  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18051  014070  0101               	movlb	1	; () banked
  18052  014072  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18419,21 +18419,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18058  01407E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18059  014080  EC15  F0CC         	call	_strcpy	;wreg free
  18060                           
- 18061                           ;oled.c: 551: OLED_UpdateFromRAMBuffer();
+ 18061                           ;oled.c: 555: OLED_UpdateFromRAMBuffer();
  18062  014084  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18063                           
- 18064                           ;oled.c: 552: OLED_Frame = OLED_POS5_Temp;
+ 18064                           ;oled.c: 556: OLED_Frame = OLED_POS5_Temp;
  18065  014088  0E0D               	movlw	13
  18066  01408A  D5FA               	goto	L4
  18067  01408C                     l18814:
  18068                           
  18069                           ; BSR set to: 1
- 18070                           ;oled.c: 559: OLED_update_flag = 0;
+ 18070                           ;oled.c: 563: OLED_update_flag = 0;
  18071  01408C  0E00               	movlw	0
  18072  01408E  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18073                           
  18074                           ; BSR set to: 1
- 18075                           ;oled.c: 561: strcpy(OLED_RAM_Buffer.line0, "Ambient Temp:");
+ 18075                           ;oled.c: 565: strcpy(OLED_RAM_Buffer.line0, "Ambient Temp:");
  18076  014090  0E28               	movlw	low _OLED_RAM_Buffer
  18077  014092  6F0F               	movwf	strcpy@to& (0+255),b
  18078  014094  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18444,7 +18444,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18083  01409E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18084  0140A0  EC15  F0CC         	call	_strcpy	;wreg free
  18085                           
- 18086                           ;oled.c: 562: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.Ambient_temp_re
+ 18086                           ;oled.c: 566: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.Ambient_temp_re
       +                          sult);
  18087  0140A4  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18088  0140A6  0101               	movlb	1	; () banked
@@ -18461,7 +18461,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18099  0140C2  C29F  F197         	movff	_LM73_temp_results+11,?_sprintf+7
  18100  0140C6  EC39  F0CC         	call	_sprintf	;wreg free
  18101                           
- 18102                           ;oled.c: 563: strcpy(OLED_RAM_Buffer.line2, " ");
+ 18102                           ;oled.c: 567: strcpy(OLED_RAM_Buffer.line2, " ");
  18103  0140CA  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18104  0140CC  0101               	movlb	1	; () banked
  18105  0140CE  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18473,7 +18473,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18111  0140DA  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18112  0140DC  EC15  F0CC         	call	_strcpy	;wreg free
  18113                           
- 18114                           ;oled.c: 564: strcpy(OLED_RAM_Buffer.line3, " ");
+ 18114                           ;oled.c: 568: strcpy(OLED_RAM_Buffer.line3, " ");
  18115  0140E0  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18116  0140E2  0101               	movlb	1	; () banked
  18117  0140E4  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18485,21 +18485,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18123  0140F0  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18124  0140F2  EC15  F0CC         	call	_strcpy	;wreg free
  18125                           
- 18126                           ;oled.c: 566: OLED_UpdateFromRAMBuffer();
+ 18126                           ;oled.c: 570: OLED_UpdateFromRAMBuffer();
  18127  0140F6  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18128                           
- 18129                           ;oled.c: 567: OLED_Frame = OLED_Ambient_Temp;
+ 18129                           ;oled.c: 571: OLED_Frame = OLED_Ambient_Temp;
  18130  0140FA  0E0E               	movlw	14
  18131  0140FC  D5C1               	goto	L4
  18132  0140FE                     l18830:
  18133                           
  18134                           ; BSR set to: 1
- 18135                           ;oled.c: 574: OLED_update_flag = 0;
+ 18135                           ;oled.c: 578: OLED_update_flag = 0;
  18136  0140FE  0E00               	movlw	0
  18137  014100  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18138                           
  18139                           ; BSR set to: 1
- 18140                           ;oled.c: 576: strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
+ 18140                           ;oled.c: 580: strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
  18141  014102  0E28               	movlw	low _OLED_RAM_Buffer
  18142  014104  6F0F               	movwf	strcpy@to& (0+255),b
  18143  014106  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18510,7 +18510,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18148  014110  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18149  014112  EC15  F0CC         	call	_strcpy	;wreg free
  18150                           
- 18151                           ;oled.c: 577: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", adc_results.die_temp_adc_result);
+ 18151                           ;oled.c: 581: sprintf(OLED_RAM_Buffer.line1, "%+.3fC", adc_results.die_temp_adc_result);
  18152  014116  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18153  014118  0101               	movlb	1	; () banked
  18154  01411A  6F90               	movwf	sprintf@wh& (0+255),b
@@ -18526,7 +18526,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18164  014134  C0FA  F197         	movff	_adc_results+27,?_sprintf+7
  18165  014138  EC39  F0CC         	call	_sprintf	;wreg free
  18166                           
- 18167                           ;oled.c: 578: strcpy(OLED_RAM_Buffer.line2, " ");
+ 18167                           ;oled.c: 582: strcpy(OLED_RAM_Buffer.line2, " ");
  18168  01413C  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18169  01413E  0101               	movlb	1	; () banked
  18170  014140  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18538,7 +18538,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18176  01414C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18177  01414E  EC15  F0CC         	call	_strcpy	;wreg free
  18178                           
- 18179                           ;oled.c: 579: strcpy(OLED_RAM_Buffer.line3, " ");
+ 18179                           ;oled.c: 583: strcpy(OLED_RAM_Buffer.line3, " ");
  18180  014152  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18181  014154  0101               	movlb	1	; () banked
  18182  014156  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18550,21 +18550,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18188  014162  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18189  014164  EC15  F0CC         	call	_strcpy	;wreg free
  18190                           
- 18191                           ;oled.c: 581: OLED_UpdateFromRAMBuffer();
+ 18191                           ;oled.c: 585: OLED_UpdateFromRAMBuffer();
  18192  014168  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18193                           
- 18194                           ;oled.c: 582: OLED_Frame = OLED_Micro_Temp;
+ 18194                           ;oled.c: 586: OLED_Frame = OLED_Micro_Temp;
  18195  01416C  0E0F               	movlw	15
  18196  01416E  D588               	goto	L4
  18197  014170                     l18846:
  18198                           
  18199                           ; BSR set to: 1
- 18200                           ;oled.c: 589: OLED_update_flag = 0;
+ 18200                           ;oled.c: 593: OLED_update_flag = 0;
  18201  014170  0E00               	movlw	0
  18202  014172  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18203                           
  18204                           ; BSR set to: 1
- 18205                           ;oled.c: 591: strcpy(OLED_RAM_Buffer.line0, "On Time:");
+ 18205                           ;oled.c: 595: strcpy(OLED_RAM_Buffer.line0, "On Time:");
  18206  014174  0E28               	movlw	low _OLED_RAM_Buffer
  18207  014176  6F0F               	movwf	strcpy@to& (0+255),b
  18208  014178  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18575,7 +18575,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18213  014182  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18214  014184  EC15  F0CC         	call	_strcpy	;wreg free
  18215                           
- 18216                           ;oled.c: 592: strcpy(OLED_RAM_Buffer.line1, " ");
+ 18216                           ;oled.c: 596: strcpy(OLED_RAM_Buffer.line1, " ");
  18217  014188  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18218  01418A  0101               	movlb	1	; () banked
  18219  01418C  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18587,7 +18587,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18225  014198  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18226  01419A  EC15  F0CC         	call	_strcpy	;wreg free
  18227                           
- 18228                           ;oled.c: 593: strcpy(OLED_RAM_Buffer.line2, " ");
+ 18228                           ;oled.c: 597: strcpy(OLED_RAM_Buffer.line2, " ");
  18229  01419E  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18230  0141A0  0101               	movlb	1	; () banked
  18231  0141A2  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18599,7 +18599,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18237  0141AE  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18238  0141B0  EC15  F0CC         	call	_strcpy	;wreg free
  18239                           
- 18240                           ;oled.c: 594: strcpy(OLED_RAM_Buffer.line3, " ");
+ 18240                           ;oled.c: 598: strcpy(OLED_RAM_Buffer.line3, " ");
  18241  0141B4  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18242  0141B6  0101               	movlb	1	; () banked
  18243  0141B8  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18611,21 +18611,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18249  0141C4  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18250  0141C6  EC15  F0CC         	call	_strcpy	;wreg free
  18251                           
- 18252                           ;oled.c: 596: OLED_UpdateFromRAMBuffer();
+ 18252                           ;oled.c: 600: OLED_UpdateFromRAMBuffer();
  18253  0141CA  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18254                           
- 18255                           ;oled.c: 597: OLED_Frame = OLED_Dev_On_Time;
+ 18255                           ;oled.c: 601: OLED_Frame = OLED_Dev_On_Time;
  18256  0141CE  0E10               	movlw	16
  18257  0141D0  D557               	goto	L4
  18258  0141D2                     l18862:
  18259                           
  18260                           ; BSR set to: 1
- 18261                           ;oled.c: 604: OLED_update_flag = 0;
+ 18261                           ;oled.c: 608: OLED_update_flag = 0;
  18262  0141D2  0E00               	movlw	0
  18263  0141D4  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18264                           
  18265                           ; BSR set to: 1
- 18266                           ;oled.c: 606: strcpy(OLED_RAM_Buffer.line0, "Cause of Reset:");
+ 18266                           ;oled.c: 610: strcpy(OLED_RAM_Buffer.line0, "Cause of Reset:");
  18267  0141D6  0E28               	movlw	low _OLED_RAM_Buffer
  18268  0141D8  6F0F               	movwf	strcpy@to& (0+255),b
  18269  0141DA  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18636,7 +18636,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18274  0141E4  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18275  0141E6  EC15  F0CC         	call	_strcpy	;wreg free
  18276                           
- 18277                           ;oled.c: 607: strcpy(OLED_RAM_Buffer.line1, " ");
+ 18277                           ;oled.c: 611: strcpy(OLED_RAM_Buffer.line1, " ");
  18278  0141EA  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18279  0141EC  0101               	movlb	1	; () banked
  18280  0141EE  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18648,7 +18648,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18286  0141FA  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18287  0141FC  EC15  F0CC         	call	_strcpy	;wreg free
  18288                           
- 18289                           ;oled.c: 608: strcpy(OLED_RAM_Buffer.line2, getCauseOfResetStringSmall(reset_cause));
+ 18289                           ;oled.c: 612: strcpy(OLED_RAM_Buffer.line2, getCauseOfResetStringSmall(reset_cause));
  18290  014200  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18291  014202  0101               	movlb	1	; () banked
  18292  014204  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18661,7 +18661,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18299  014216  C10D  F112         	movff	?_getCauseOfResetStringSmall+1,strcpy@from+1
  18300  01421A  EC15  F0CC         	call	_strcpy	;wreg free
  18301                           
- 18302                           ;oled.c: 609: strcpy(OLED_RAM_Buffer.line3, " ");
+ 18302                           ;oled.c: 613: strcpy(OLED_RAM_Buffer.line3, " ");
  18303  01421E  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18304  014220  0101               	movlb	1	; () banked
  18305  014222  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18673,21 +18673,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18311  01422E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18312  014230  EC15  F0CC         	call	_strcpy	;wreg free
  18313                           
- 18314                           ;oled.c: 611: OLED_UpdateFromRAMBuffer();
+ 18314                           ;oled.c: 615: OLED_UpdateFromRAMBuffer();
  18315  014234  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18316                           
- 18317                           ;oled.c: 612: OLED_Frame = OLED_Cause_Of_Reset;
+ 18317                           ;oled.c: 616: OLED_Frame = OLED_Cause_Of_Reset;
  18318  014238  0E11               	movlw	17
  18319  01423A  D522               	goto	L4
  18320  01423C                     l18878:
  18321                           
  18322                           ; BSR set to: 1
- 18323                           ;oled.c: 619: OLED_update_flag = 0;
+ 18323                           ;oled.c: 623: OLED_update_flag = 0;
  18324  01423C  0E00               	movlw	0
  18325  01423E  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18326                           
  18327                           ; BSR set to: 1
- 18328                           ;oled.c: 623: strcpy(OLED_RAM_Buffer.line0, "Device ID:");
+ 18328                           ;oled.c: 627: strcpy(OLED_RAM_Buffer.line0, "Device ID:");
  18329  014240  0E28               	movlw	low _OLED_RAM_Buffer
  18330  014242  6F0F               	movwf	strcpy@to& (0+255),b
  18331  014244  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18698,7 +18698,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18336  01424E  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18337  014250  EC15  F0CC         	call	_strcpy	;wreg free
  18338                           
- 18339                           ;oled.c: 624: char dev_id_str[17];;oled.c: 625: sprintf(dev_id_str,"0x%X",getDeviceID())
+ 18339                           ;oled.c: 628: char dev_id_str[17];;oled.c: 629: sprintf(dev_id_str,"0x%X",getDeviceID())
       +                          ;
  18340  014254  0EA5               	movlw	low OLED_updateHandler@dev_id_str
  18341  014256  0101               	movlb	1	; () banked
@@ -18714,7 +18714,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18351  01426E  C118  F195         	movff	?_getDeviceID+1,?_sprintf+5
  18352  014272  EC39  F0CC         	call	_sprintf	;wreg free
  18353                           
- 18354                           ;oled.c: 626: strcpy(OLED_RAM_Buffer.line1, dev_id_str);
+ 18354                           ;oled.c: 630: strcpy(OLED_RAM_Buffer.line1, dev_id_str);
  18355  014276  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18356  014278  0101               	movlb	1	; () banked
  18357  01427A  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18726,7 +18726,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18363  014286  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18364  014288  EC15  F0CC         	call	_strcpy	;wreg free
  18365                           
- 18366                           ;oled.c: 629: strcpy(OLED_RAM_Buffer.line2, "Revision ID:");
+ 18366                           ;oled.c: 633: strcpy(OLED_RAM_Buffer.line2, "Revision ID:");
  18367  01428C  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18368  01428E  0101               	movlb	1	; () banked
  18369  014290  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18738,7 +18738,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18375  01429C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18376  01429E  EC15  F0CC         	call	_strcpy	;wreg free
  18377                           
- 18378                           ;oled.c: 630: char rev_id_str[17];;oled.c: 631: sprintf(rev_id_str, "%c%03d", (char) get
+ 18378                           ;oled.c: 634: char rev_id_str[17];;oled.c: 635: sprintf(rev_id_str, "%c%03d", (char) get
       +                          MajorRevisionID() + 65, getMinorRevisionID());
  18379  0142A2  0EB6               	movlw	low OLED_updateHandler@rev_id_str
  18380  0142A4  0101               	movlb	1	; () banked
@@ -18766,7 +18766,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18402  0142D4  6B97               	clrf	(?_sprintf+7)& (0+255),b
  18403  0142D6  EC39  F0CC         	call	_sprintf	;wreg free
  18404                           
- 18405                           ;oled.c: 632: strcpy(OLED_RAM_Buffer.line3, rev_id_str);
+ 18405                           ;oled.c: 636: strcpy(OLED_RAM_Buffer.line3, rev_id_str);
  18406  0142DA  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18407  0142DC  0101               	movlb	1	; () banked
  18408  0142DE  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18778,21 +18778,21 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18414  0142EA  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18415  0142EC  EC15  F0CC         	call	_strcpy	;wreg free
  18416                           
- 18417                           ;oled.c: 634: OLED_UpdateFromRAMBuffer();
+ 18417                           ;oled.c: 638: OLED_UpdateFromRAMBuffer();
  18418  0142F0  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18419                           
- 18420                           ;oled.c: 635: OLED_Frame = OLED_Dev_Rev_ID;
+ 18420                           ;oled.c: 639: OLED_Frame = OLED_Dev_Rev_ID;
  18421  0142F4  0E12               	movlw	18
  18422  0142F6  D4C4               	goto	L4
  18423  0142F8                     l18898:
  18424                           
  18425                           ; BSR set to: 1
- 18426                           ;oled.c: 642: OLED_update_flag = 0;
+ 18426                           ;oled.c: 646: OLED_update_flag = 0;
  18427  0142F8  0E00               	movlw	0
  18428  0142FA  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18429                           
  18430                           ; BSR set to: 1
- 18431                           ;oled.c: 644: strcpy(OLED_RAM_Buffer.line0, "COM Port Setup:");
+ 18431                           ;oled.c: 648: strcpy(OLED_RAM_Buffer.line0, "COM Port Setup:");
  18432  0142FC  0E28               	movlw	low _OLED_RAM_Buffer
  18433  0142FE  6F0F               	movwf	strcpy@to& (0+255),b
  18434  014300  0E02               	movlw	high _OLED_RAM_Buffer
@@ -18803,7 +18803,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18439  01430A  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18440  01430C  EC15  F0CC         	call	_strcpy	;wreg free
  18441                           
- 18442                           ;oled.c: 645: strcpy(OLED_RAM_Buffer.line1, "115.2 kbs");
+ 18442                           ;oled.c: 649: strcpy(OLED_RAM_Buffer.line1, "115.2 kbs");
  18443  014310  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  18444  014312  0101               	movlb	1	; () banked
  18445  014314  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18815,7 +18815,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18451  014320  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18452  014322  EC15  F0CC         	call	_strcpy	;wreg free
  18453                           
- 18454                           ;oled.c: 646: strcpy(OLED_RAM_Buffer.line2, "8bit, no parity");
+ 18454                           ;oled.c: 650: strcpy(OLED_RAM_Buffer.line2, "8bit, no parity");
  18455  014326  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  18456  014328  0101               	movlb	1	; () banked
  18457  01432A  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18827,7 +18827,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18463  014336  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18464  014338  EC15  F0CC         	call	_strcpy	;wreg free
  18465                           
- 18466                           ;oled.c: 647: strcpy(OLED_RAM_Buffer.line3, "1 stp, no flow");
+ 18466                           ;oled.c: 651: strcpy(OLED_RAM_Buffer.line3, "1 stp, no flow");
  18467  01433C  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  18468  01433E  0101               	movlb	1	; () banked
  18469  014340  6F0F               	movwf	strcpy@to& (0+255),b
@@ -18839,34 +18839,34 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  18475  01434C  6F12               	movwf	(strcpy@from+1)& (0+255),b
  18476  01434E  EC15  F0CC         	call	_strcpy	;wreg free
  18477                           
- 18478                           ;oled.c: 649: OLED_UpdateFromRAMBuffer();
+ 18478                           ;oled.c: 653: OLED_UpdateFromRAMBuffer();
  18479  014352  EC11  F0C8         	call	_OLED_UpdateFromRAMBuffer	;wreg free
  18480                           
- 18481                           ;oled.c: 650: OLED_Frame = OLED_COM_PORT_SET;
+ 18481                           ;oled.c: 654: OLED_Frame = OLED_COM_PORT_SET;
  18482  014356  0E13               	movlw	19
  18483  014358  D493               	goto	L4
  18484  01435A                     l18914:
  18485                           
  18486                           ; BSR set to: 1
- 18487                           ;oled.c: 658: OLED_update_flag = 0;
+ 18487                           ;oled.c: 662: OLED_update_flag = 0;
  18488  01435A  0E00               	movlw	0
  18489  01435C  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18490                           
- 18491                           ;oled.c: 660: break;
+ 18491                           ;oled.c: 664: break;
  18492  01435E  0012               	return	
  18493  014360                     l18916:
  18494                           
  18495                           ; BSR set to: 1
- 18496                           ;oled.c: 664: OLED_update_flag = 0;
+ 18496                           ;oled.c: 668: OLED_update_flag = 0;
  18497  014360  0E00               	movlw	0
  18498  014362  6FE7               	movwf	_OLED_update_flag& (0+255),b
  18499                           
- 18500                           ;oled.c: 666: error_handler.I2C_OLED_error_flag = 1;
+ 18500                           ;oled.c: 670: error_handler.I2C_OLED_error_flag = 1;
  18501  014364  0E01               	movlw	1
  18502  014366  0100               	movlb	0	; () banked
  18503  014368  6FBC               	movwf	(_error_handler+3)& (0+255),b
  18504                           
- 18505                           ;oled.c: 667: break;
+ 18505                           ;oled.c: 671: break;
  18506  01436A  0012               	return	
  18507  01436C                     l18920:
  18508  01436C  0101               	movlb	1	; () banked
@@ -26874,7 +26874,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26332                           
  26333 ;; *************** function _OLED_UpdateFromRAMBuffer *****************
  26334 ;; Defined at:
- 26335 ;;		line 318 in file "oled.c"
+ 26335 ;;		line 322 in file "oled.c"
  26336 ;; Parameters:    Size  Location     Type
  26337 ;;		None
  26338 ;; Auto vars:     Size  Location     Type
@@ -26915,7 +26915,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26368  019022                     _OLED_UpdateFromRAMBuffer:
  26369                           	opt callstack 13
  26370                           
- 26371                           ;oled.c: 320: OLED_YX(0,0);
+ 26371                           ;oled.c: 324: OLED_YX(0,0);
  26372                           
  26373                           ; BSR set to: 1
  26374                           ;incstack = 0
@@ -26925,17 +26925,17 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26378  019028  0E00               	movlw	0
  26379  01902A  EC2F  F0CD         	call	_OLED_YX
  26380                           
- 26381                           ;oled.c: 321: OLED_Clear();
+ 26381                           ;oled.c: 325: OLED_Clear();
  26382  01902E  ECD6  F0CD         	call	_OLED_Clear	;wreg free
  26383                           
- 26384                           ;oled.c: 322: OLED_YX(0,0);
+ 26384                           ;oled.c: 326: OLED_YX(0,0);
  26385  019032  0E00               	movlw	0
  26386  019034  0101               	movlb	1	; () banked
  26387  019036  6F20               	movwf	OLED_YX@Column& (0+255),b
  26388  019038  0E00               	movlw	0
  26389  01903A  EC2F  F0CD         	call	_OLED_YX
  26390                           
- 26391                           ;oled.c: 323: OLED_WriteString(OLED_RAM_Buffer.line0);
+ 26391                           ;oled.c: 327: OLED_WriteString(OLED_RAM_Buffer.line0);
  26392  01903E  0E28               	movlw	low _OLED_RAM_Buffer
  26393  019040  0101               	movlb	1	; () banked
  26394  019042  6F2D               	movwf	OLED_WriteString@s& (0+255),b
@@ -26943,14 +26943,14 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26396  019046  6F2E               	movwf	(OLED_WriteString@s+1)& (0+255),b
  26397  019048  EC7E  F0CA         	call	_OLED_WriteString	;wreg free
  26398                           
- 26399                           ;oled.c: 324: OLED_YX(1,0);
+ 26399                           ;oled.c: 328: OLED_YX(1,0);
  26400  01904C  0E00               	movlw	0
  26401  01904E  0101               	movlb	1	; () banked
  26402  019050  6F20               	movwf	OLED_YX@Column& (0+255),b
  26403  019052  0E01               	movlw	1
  26404  019054  EC2F  F0CD         	call	_OLED_YX
  26405                           
- 26406                           ;oled.c: 325: OLED_WriteString(OLED_RAM_Buffer.line1);
+ 26406                           ;oled.c: 329: OLED_WriteString(OLED_RAM_Buffer.line1);
  26407  019058  0E39               	movlw	low (_OLED_RAM_Buffer+17)
  26408  01905A  0101               	movlb	1	; () banked
  26409  01905C  6F2D               	movwf	OLED_WriteString@s& (0+255),b
@@ -26958,14 +26958,14 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26411  019060  6F2E               	movwf	(OLED_WriteString@s+1)& (0+255),b
  26412  019062  EC7E  F0CA         	call	_OLED_WriteString	;wreg free
  26413                           
- 26414                           ;oled.c: 326: OLED_YX(2,0);
+ 26414                           ;oled.c: 330: OLED_YX(2,0);
  26415  019066  0E00               	movlw	0
  26416  019068  0101               	movlb	1	; () banked
  26417  01906A  6F20               	movwf	OLED_YX@Column& (0+255),b
  26418  01906C  0E02               	movlw	2
  26419  01906E  EC2F  F0CD         	call	_OLED_YX
  26420                           
- 26421                           ;oled.c: 327: OLED_WriteString(OLED_RAM_Buffer.line2);
+ 26421                           ;oled.c: 331: OLED_WriteString(OLED_RAM_Buffer.line2);
  26422  019072  0E4A               	movlw	low (_OLED_RAM_Buffer+34)
  26423  019074  0101               	movlb	1	; () banked
  26424  019076  6F2D               	movwf	OLED_WriteString@s& (0+255),b
@@ -26973,14 +26973,14 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26426  01907A  6F2E               	movwf	(OLED_WriteString@s+1)& (0+255),b
  26427  01907C  EC7E  F0CA         	call	_OLED_WriteString	;wreg free
  26428                           
- 26429                           ;oled.c: 328: OLED_YX(3,0);
+ 26429                           ;oled.c: 332: OLED_YX(3,0);
  26430  019080  0E00               	movlw	0
  26431  019082  0101               	movlb	1	; () banked
  26432  019084  6F20               	movwf	OLED_YX@Column& (0+255),b
  26433  019086  0E03               	movlw	3
  26434  019088  EC2F  F0CD         	call	_OLED_YX
  26435                           
- 26436                           ;oled.c: 329: OLED_WriteString(OLED_RAM_Buffer.line3);
+ 26436                           ;oled.c: 333: OLED_WriteString(OLED_RAM_Buffer.line3);
  26437  01908C  0E5B               	movlw	low (_OLED_RAM_Buffer+51)
  26438  01908E  0101               	movlb	1	; () banked
  26439  019090  6F2D               	movwf	OLED_WriteString@s& (0+255),b
@@ -26993,7 +26993,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26446                           
  26447 ;; *************** function _OLED_YX *****************
  26448 ;; Defined at:
- 26449 ;;		line 225 in file "oled.c"
+ 26449 ;;		line 229 in file "oled.c"
  26450 ;; Parameters:    Size  Location     Type
  26451 ;;  Row             1    wreg     unsigned char 
  26452 ;;  Column          1   32[BANK1 ] unsigned char 
@@ -27038,13 +27038,13 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26486  019A5E  0101               	movlb	1	; () banked
  26487  019A60  6F24               	movwf	OLED_YX@Row& (0+255),b
  26488                           
- 26489                           ;oled.c: 227: OLED_Command(0xB0 + Row);
+ 26489                           ;oled.c: 231: OLED_Command(0xB0 + Row);
  26490  019A62  0101               	movlb	1	; () banked
  26491  019A64  5124               	movf	OLED_YX@Row& (0+255),w,b
  26492  019A66  0FB0               	addlw	176
  26493  019A68  EC59  F0C9         	call	_OLED_Command
  26494                           
- 26495                           ;oled.c: 229: OLED_Command(0x00 + (8 * Column & 0x0F));
+ 26495                           ;oled.c: 233: OLED_Command(0x00 + (8 * Column & 0x0F));
  26496  019A6C  0101               	movlb	1	; () banked
  26497  019A6E  5120               	movf	OLED_YX@Column& (0+255),w,b
  26498  019A70  0D08               	mullw	8
@@ -27052,7 +27052,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26500  019A74  0B0F               	andlw	15
  26501  019A76  EC59  F0C9         	call	_OLED_Command
  26502                           
- 26503                           ;oled.c: 231: OLED_Command(0x10 + ((8* Column >> 4) & 0x0F));
+ 26503                           ;oled.c: 235: OLED_Command(0x10 + ((8* Column >> 4) & 0x0F));
  26504  019A7A  0101               	movlb	1	; () banked
  26505  019A7C  5120               	movf	OLED_YX@Column& (0+255),w,b
  26506  019A7E  0D08               	mullw	8
@@ -27076,7 +27076,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26524                           
  26525 ;; *************** function _OLED_WriteString *****************
  26526 ;; Defined at:
- 26527 ;;		line 286 in file "oled.c"
+ 26527 ;;		line 290 in file "oled.c"
  26528 ;; Parameters:    Size  Location     Type
  26529 ;;  s               2   45[BANK1 ] PTR unsigned char 
  26530 ;;		 -> ftoa@buf(17), OLED_RAM_Buffer(68), STR_59(1), STR_58(1), 
@@ -27119,13 +27119,13 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26562  0194FC                     _OLED_WriteString:
  26563                           	opt callstack 13
  26564                           
- 26565                           ;oled.c: 288: while(*s) {
+ 26565                           ;oled.c: 292: while(*s) {
  26566                           
  26567                           ;incstack = 0
  26568  0194FC  D016               	goto	l17254
  26569  0194FE                     l17250:
  26570                           
- 26571                           ;oled.c: 290: OLED_PutChar(*s++);
+ 26571                           ;oled.c: 294: OLED_PutChar(*s++);
  26572  0194FE  C12D  FFF6         	movff	OLED_WriteString@s,tblptrl
  26573  019502  C12E  FFF7         	movff	OLED_WriteString@s+1,tblptrh
  26574  019506  0E00               	movlw	low (__mediumconst shr (0+16))
@@ -27170,7 +27170,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26613                           
  26614 ;; *************** function _OLED_Clear *****************
  26615 ;; Defined at:
- 26616 ;;		line 271 in file "oled.c"
+ 26616 ;;		line 275 in file "oled.c"
  26617 ;; Parameters:    Size  Location     Type
  26618 ;;		None
  26619 ;; Auto vars:     Size  Location     Type
@@ -27211,7 +27211,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26649  019BAC                     _OLED_Clear:
  26650                           	opt callstack 13
  26651                           
- 26652                           ;oled.c: 273: for(uint16_t row = 0; row < 8; row++) {
+ 26652                           ;oled.c: 277: for(uint16_t row = 0; row < 8; row++) {
  26653                           
  26654                           ;incstack = 0
  26655  019BAC  0E00               	movlw	0
@@ -27222,7 +27222,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26660  019BB6                     l16914:
  26661                           
  26662                           ; BSR set to: 1
- 26663                           ;oled.c: 275: for(uint16_t col = 0; col < 16; col++) {
+ 26663                           ;oled.c: 279: for(uint16_t col = 0; col < 16; col++) {
  26664  019BB6  0E00               	movlw	0
  26665  019BB8  6F30               	movwf	(OLED_Clear@col+1)& (0+255),b
  26666  019BBA  0E00               	movlw	0
@@ -27230,7 +27230,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26668  019BBE                     l16920:
  26669                           
  26670                           ; BSR set to: 1
- 26671                           ;oled.c: 277: OLED_PutChar('\0');
+ 26671                           ;oled.c: 281: OLED_PutChar('\0');
  26672  019BBE  0E00               	movlw	0
  26673  019BC0  ECE1  F0C2         	call	_OLED_PutChar
  26674  019BC4  0101               	movlb	1	; () banked
@@ -27267,7 +27267,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26705                           
  26706 ;; *************** function _OLED_PutChar *****************
  26707 ;; Defined at:
- 26708 ;;		line 236 in file "oled.c"
+ 26708 ;;		line 240 in file "oled.c"
  26709 ;; Parameters:    Size  Location     Type
  26710 ;;  ch              1    wreg     unsigned char 
  26711 ;; Auto vars:     Size  Location     Type
@@ -27318,7 +27318,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26751  0185C2  0101               	movlb	1	; () banked
  26752  0185C4  6F2C               	movwf	OLED_PutChar@ch& (0+255),b
  26753                           
- 26754                           ;oled.c: 238: if((ch < 32) || (ch > 127)) {
+ 26754                           ;oled.c: 242: if((ch < 32) || (ch > 127)) {
  26755  0185C6  0E1F               	movlw	31
  26756  0185C8  0101               	movlb	1	; () banked
  26757  0185CA  652C               	cpfsgt	OLED_PutChar@ch& (0+255),b
@@ -27331,19 +27331,19 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26764  0185D4                     u21230:
  26765                           
  26766                           ; BSR set to: 1
- 26767                           ;oled.c: 240: ch = ' ';
+ 26767                           ;oled.c: 244: ch = ' ';
  26768  0185D4  0E20               	movlw	32
  26769  0185D6  6F2C               	movwf	OLED_PutChar@ch& (0+255),b
  26770  0185D8                     l1663:
  26771                           
  26772                           ; BSR set to: 1
- 26773                           ;oled.c: 242: };oled.c: 244: uint8_t length;;oled.c: 246: uint8_t data_array[9];;oled.c:
-      +                           248: data_array[0] = 0x40;
+ 26773                           ;oled.c: 246: };oled.c: 248: uint8_t length;;oled.c: 250: uint8_t data_array[9];;oled.c:
+      +                           252: data_array[0] = 0x40;
  26774  0185D8  0E40               	movlw	64
  26775  0185DA  6F20               	movwf	OLED_PutChar@data_array& (0+255),b
  26776                           
  26777                           ; BSR set to: 1
- 26778                           ;oled.c: 250: const uint8_t *input_base = &OledFont[ch - 32][0];
+ 26778                           ;oled.c: 254: const uint8_t *input_base = &OledFont[ch - 32][0];
  26779  0185DC  0E00               	movlw	0
  26780  0185DE  6F1C               	movwf	??_OLED_PutChar& (0+255),b
  26781  0185E0  0EFF               	movlw	255
@@ -27372,7 +27372,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26804  01860E  6F2A               	movwf	(OLED_PutChar@input_base+1)& (0+255),b
  26805                           
  26806                           ; BSR set to: 1
- 26807                           ;oled.c: 252: memmove(data_array + 1, input_base, 8);
+ 26807                           ;oled.c: 256: memmove(data_array + 1, input_base, 8);
  26808  018610  0E21               	movlw	low (OLED_PutChar@data_array+1)
  26809  018612  6F0C               	movwf	memmove@d1& (0+255),b
  26810  018614  0E01               	movlw	high (OLED_PutChar@data_array+1)
@@ -27385,7 +27385,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26817  018626  6F10               	movwf	memmove@n& (0+255),b
  26818  018628  ECFE  F0C3         	call	_memmove	;wreg free
  26819                           
- 26820                           ;oled.c: 257: I2C2_MasterWrite(data_array, length, (uint16_t) 0x3C, &I2C_STATUS);
+ 26820                           ;oled.c: 261: I2C2_MasterWrite(data_array, length, (uint16_t) 0x3C, &I2C_STATUS);
  26821  01862C  0E20               	movlw	low OLED_PutChar@data_array
  26822  01862E  0101               	movlb	1	; () banked
  26823  018630  6F15               	movwf	I2C2_MasterWrite@pdata& (0+255),b
@@ -27410,9 +27410,9 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26842  018656  D7FB               	goto	l16478
  26843                           
  26844                           ; BSR set to: 1
- 26845                           ;oled.c: 261: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||;oled.c: 262: I2C_STATUS == I2C2_ST
-      +                          UCK_START ||;oled.c: 263: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||;oled.c: 264: I2C_
-      +                          STATUS == I2C2_DATA_NO_ACK ||;oled.c: 265: I2C_STATUS == I2C2_LOST_STATE ) {
+ 26845                           ;oled.c: 265: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||;oled.c: 266: I2C_STATUS == I2C2_ST
+      +                          UCK_START ||;oled.c: 267: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||;oled.c: 268: I2C_
+      +                          STATUS == I2C2_DATA_NO_ACK ||;oled.c: 269: I2C_STATUS == I2C2_LOST_STATE ) {
  26846  018658  05F0               	decf	_I2C_STATUS& (0+255),w,b
  26847  01865A  B4D8               	btfsc	status,2,c
  26848  01865C  D010               	goto	u21290
@@ -27443,7 +27443,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  26873  01867E                     u21290:
  26874                           
  26875                           ; BSR set to: 1
- 26876                           ;oled.c: 266: error_handler.I2C_OLED_error_flag = 1;
+ 26876                           ;oled.c: 270: error_handler.I2C_OLED_error_flag = 1;
  26877  01867E  0E01               	movlw	1
  26878  018680  0100               	movlb	0	; () banked
  26879  018682  6FBC               	movwf	(_error_handler+3)& (0+255),b
@@ -27606,7 +27606,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  27031                           
  27032 ;; *************** function _OLED_Init *****************
  27033 ;; Defined at:
- 27034 ;;		line 167 in file "oled.c"
+ 27034 ;;		line 171 in file "oled.c"
  27035 ;; Parameters:    Size  Location     Type
  27036 ;;		None
  27037 ;; Auto vars:     Size  Location     Type
@@ -27645,110 +27645,110 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  27065  018B34                     _OLED_Init:
  27066                           	opt callstack 15
  27067                           
- 27068                           ;oled.c: 169: OLED_Command(0xAE);
+ 27068                           ;oled.c: 173: OLED_Command(0xAE);
  27069                           
  27070                           ; BSR set to: 1
  27071                           ;incstack = 0
  27072  018B34  0EAE               	movlw	174
  27073  018B36  EC59  F0C9         	call	_OLED_Command
  27074                           
- 27075                           ;oled.c: 171: OLED_Command(0xD5);
+ 27075                           ;oled.c: 175: OLED_Command(0xD5);
  27076  018B3A  0ED5               	movlw	213
  27077  018B3C  EC59  F0C9         	call	_OLED_Command
  27078                           
- 27079                           ;oled.c: 173: OLED_Command(0x80);
+ 27079                           ;oled.c: 177: OLED_Command(0x80);
  27080  018B40  0E80               	movlw	128
  27081  018B42  EC59  F0C9         	call	_OLED_Command
  27082                           
- 27083                           ;oled.c: 175: OLED_Command(0xA8);
+ 27083                           ;oled.c: 179: OLED_Command(0xA8);
  27084  018B46  0EA8               	movlw	168
  27085  018B48  EC59  F0C9         	call	_OLED_Command
  27086                           
- 27087                           ;oled.c: 177: OLED_Command(0x1F);
+ 27087                           ;oled.c: 181: OLED_Command(0x1F);
  27088  018B4C  0E1F               	movlw	31
  27089  018B4E  EC59  F0C9         	call	_OLED_Command
  27090                           
- 27091                           ;oled.c: 179: OLED_Command(0xD3);
+ 27091                           ;oled.c: 183: OLED_Command(0xD3);
  27092  018B52  0ED3               	movlw	211
  27093  018B54  EC59  F0C9         	call	_OLED_Command
  27094                           
- 27095                           ;oled.c: 181: OLED_Command(0x0);
+ 27095                           ;oled.c: 185: OLED_Command(0x0);
  27096  018B58  0E00               	movlw	0
  27097  018B5A  EC59  F0C9         	call	_OLED_Command
  27098                           
- 27099                           ;oled.c: 183: OLED_Command(0x40 | 0x0);
+ 27099                           ;oled.c: 187: OLED_Command(0x40 | 0x0);
  27100  018B5E  0E40               	movlw	64
  27101  018B60  EC59  F0C9         	call	_OLED_Command
  27102                           
- 27103                           ;oled.c: 185: OLED_Command(0x8D);
+ 27103                           ;oled.c: 189: OLED_Command(0x8D);
  27104  018B64  0E8D               	movlw	141
  27105  018B66  EC59  F0C9         	call	_OLED_Command
  27106                           
- 27107                           ;oled.c: 187: OLED_Command(0xAF);
+ 27107                           ;oled.c: 191: OLED_Command(0xAF);
  27108  018B6A  0EAF               	movlw	175
  27109  018B6C  EC59  F0C9         	call	_OLED_Command
  27110                           
- 27111                           ;oled.c: 189: OLED_Command(0x20);
+ 27111                           ;oled.c: 193: OLED_Command(0x20);
  27112  018B70  0E20               	movlw	32
  27113  018B72  EC59  F0C9         	call	_OLED_Command
  27114                           
- 27115                           ;oled.c: 191: OLED_Command(0x00);
+ 27115                           ;oled.c: 195: OLED_Command(0x00);
  27116  018B76  0E00               	movlw	0
  27117  018B78  EC59  F0C9         	call	_OLED_Command
  27118                           
- 27119                           ;oled.c: 193: OLED_Command(0xA0 | 0x1);
+ 27119                           ;oled.c: 197: OLED_Command(0xA0 | 0x1);
  27120  018B7C  0EA1               	movlw	161
  27121  018B7E  EC59  F0C9         	call	_OLED_Command
  27122                           
- 27123                           ;oled.c: 195: OLED_Command(0xC8);
+ 27123                           ;oled.c: 199: OLED_Command(0xC8);
  27124  018B82  0EC8               	movlw	200
  27125  018B84  EC59  F0C9         	call	_OLED_Command
  27126                           
- 27127                           ;oled.c: 197: OLED_Command(0xDA);
+ 27127                           ;oled.c: 201: OLED_Command(0xDA);
  27128  018B88  0EDA               	movlw	218
  27129  018B8A  EC59  F0C9         	call	_OLED_Command
  27130                           
- 27131                           ;oled.c: 199: OLED_Command(0x02);
+ 27131                           ;oled.c: 203: OLED_Command(0x02);
  27132  018B8E  0E02               	movlw	2
  27133  018B90  EC59  F0C9         	call	_OLED_Command
  27134                           
- 27135                           ;oled.c: 201: OLED_Command(0x81);
+ 27135                           ;oled.c: 205: OLED_Command(0x81);
  27136  018B94  0E81               	movlw	129
  27137  018B96  EC59  F0C9         	call	_OLED_Command
  27138                           
- 27139                           ;oled.c: 203: OLED_Command(0x8F);
+ 27139                           ;oled.c: 207: OLED_Command(0x8F);
  27140  018B9A  0E8F               	movlw	143
  27141  018B9C  EC59  F0C9         	call	_OLED_Command
  27142                           
- 27143                           ;oled.c: 205: OLED_Command(0xD9);
+ 27143                           ;oled.c: 209: OLED_Command(0xD9);
  27144  018BA0  0ED9               	movlw	217
  27145  018BA2  EC59  F0C9         	call	_OLED_Command
  27146                           
- 27147                           ;oled.c: 207: OLED_Command(0xF1);
+ 27147                           ;oled.c: 211: OLED_Command(0xF1);
  27148  018BA6  0EF1               	movlw	241
  27149  018BA8  EC59  F0C9         	call	_OLED_Command
  27150                           
- 27151                           ;oled.c: 209: OLED_Command(0xDB);
+ 27151                           ;oled.c: 213: OLED_Command(0xDB);
  27152  018BAC  0EDB               	movlw	219
  27153  018BAE  EC59  F0C9         	call	_OLED_Command
  27154                           
- 27155                           ;oled.c: 211: OLED_Command(0x40);
+ 27155                           ;oled.c: 215: OLED_Command(0x40);
  27156  018BB2  0E40               	movlw	64
  27157  018BB4  EC59  F0C9         	call	_OLED_Command
  27158                           
- 27159                           ;oled.c: 213: OLED_Command(0xA4);
+ 27159                           ;oled.c: 217: OLED_Command(0xA4);
  27160  018BB8  0EA4               	movlw	164
  27161  018BBA  EC59  F0C9         	call	_OLED_Command
  27162                           
- 27163                           ;oled.c: 215: OLED_Command(0xA6);
+ 27163                           ;oled.c: 219: OLED_Command(0xA6);
  27164  018BBE  0EA6               	movlw	166
  27165  018BC0  EC59  F0C9         	call	_OLED_Command
  27166                           
- 27167                           ;oled.c: 217: OLED_Command(0xAF);
+ 27167                           ;oled.c: 221: OLED_Command(0xAF);
  27168  018BC4  0EAF               	movlw	175
  27169  018BC6  EC59  F0C9         	call	_OLED_Command
  27170                           
- 27171                           ;oled.c: 220: __nop();
+ 27171                           ;oled.c: 224: __nop();
  27172  018BCA  F000               	nop	
  27173  018BCC  0012               	return		;funcret
  27174  018BCE                     __end_of_OLED_Init:
@@ -27756,7 +27756,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  27176                           
  27177 ;; *************** function _OLED_Command *****************
  27178 ;; Defined at:
- 27179 ;;		line 115 in file "oled.c"
+ 27179 ;;		line 119 in file "oled.c"
  27180 ;; Parameters:    Size  Location     Type
  27181 ;;  temp            1    wreg     unsigned char 
  27182 ;; Auto vars:     Size  Location     Type
@@ -27803,18 +27803,18 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  27218  0192B2  0101               	movlb	1	; () banked
  27219  0192B4  6F1C               	movwf	OLED_Command@temp& (0+255),b
  27220                           
- 27221                           ;oled.c: 117: uint8_t length;;oled.c: 119: uint8_t data_array[2];;oled.c: 120: data_arra
+ 27221                           ;oled.c: 121: uint8_t length;;oled.c: 123: uint8_t data_array[2];;oled.c: 124: data_arra
       +                          y[0] = 0x00;
  27222  0192B6  0E00               	movlw	0
  27223  0192B8  0101               	movlb	1	; () banked
  27224  0192BA  6F1E               	movwf	OLED_Command@data_array& (0+255),b
  27225                           
  27226                           ; BSR set to: 1
- 27227                           ;oled.c: 121: data_array[1] = temp;
+ 27227                           ;oled.c: 125: data_array[1] = temp;
  27228  0192BC  C11C  F11F         	movff	OLED_Command@temp,OLED_Command@data_array+1
  27229                           
  27230                           ; BSR set to: 1
- 27231                           ;oled.c: 126: I2C2_MasterWrite(data_array, length, (uint16_t) 0x3C, &I2C_STATUS);
+ 27231                           ;oled.c: 130: I2C2_MasterWrite(data_array, length, (uint16_t) 0x3C, &I2C_STATUS);
  27232                           
  27233                           ; BSR set to: 1
  27234  0192C0  0E1E               	movlw	low OLED_Command@data_array
@@ -27840,9 +27840,9 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  27254  0192E8  D7FB               	goto	l16450
  27255                           
  27256                           ; BSR set to: 1
- 27257                           ;oled.c: 130: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||;oled.c: 131: I2C_STATUS == I2C2_ST
-      +                          UCK_START ||;oled.c: 132: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||;oled.c: 133: I2C_
-      +                          STATUS == I2C2_DATA_NO_ACK ||;oled.c: 134: I2C_STATUS == I2C2_LOST_STATE ) {
+ 27257                           ;oled.c: 134: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||;oled.c: 135: I2C_STATUS == I2C2_ST
+      +                          UCK_START ||;oled.c: 136: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||;oled.c: 137: I2C_
+      +                          STATUS == I2C2_DATA_NO_ACK ||;oled.c: 138: I2C_STATUS == I2C2_LOST_STATE ) {
  27258  0192EA  05F0               	decf	_I2C_STATUS& (0+255),w,b
  27259  0192EC  B4D8               	btfsc	status,2,c
  27260  0192EE  D010               	goto	u21210
@@ -27873,7 +27873,7 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
  27285  019310                     u21210:
  27286                           
  27287                           ; BSR set to: 1
- 27288                           ;oled.c: 135: error_handler.I2C_OLED_error_flag = 1;
+ 27288                           ;oled.c: 139: error_handler.I2C_OLED_error_flag = 1;
  27289  019310  0E01               	movlw	1
  27290  019312  0100               	movlb	0	; () banked
  27291  019314  6FBC               	movwf	(_error_handler+3)& (0+255),b
@@ -48098,7 +48098,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Thu Feb 28 17:57:39 2019
+Symbol Table                                                                                   Thu Feb 28 18:29:27 2019
 
                               _temp_adc_offset E6AD               __end_of_TMR2_SetInterruptHandler A42E  
                                  ___fldiv@aexp 002B                                   ___fldiv@bexp 002A  
