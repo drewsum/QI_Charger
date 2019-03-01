@@ -16630,32 +16630,6 @@ void ADCC_ThresholdISR(void);
 # 881
 void ADCC_DefaultInterruptHandler(void);
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 99 "mcc_generated_files/memory.h"
-uint8_t FLASH_ReadByte(uint32_t flashAddr);
-
-# 125
-uint16_t FLASH_ReadWord(uint32_t flashAddr);
-
-# 157
-void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-
-# 193
-int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-
-# 218
-void FLASH_EraseBlock(uint32_t baseAddr);
-
-# 249
-void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-
-# 275
-uint8_t DATAEE_ReadByte(uint16_t bAdd);
-
-void MEMORY_Tasks(void);
-
 # 406 "mcc_generated_files/ext_int.h"
 void EXT_INT_Initialize(void);
 
@@ -16688,6 +16662,32 @@ extern void (*INT2_InterruptHandler)(void);
 
 # 636
 void INT2_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 99 "mcc_generated_files/memory.h"
+uint8_t FLASH_ReadByte(uint32_t flashAddr);
+
+# 125
+uint16_t FLASH_ReadWord(uint32_t flashAddr);
+
+# 157
+void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+
+# 193
+int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+
+# 218
+void FLASH_EraseBlock(uint32_t baseAddr);
+
+# 249
+void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+
+# 275
+uint8_t DATAEE_ReadByte(uint16_t bAdd);
+
+void MEMORY_Tasks(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;

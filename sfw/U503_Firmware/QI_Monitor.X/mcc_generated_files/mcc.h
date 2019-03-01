@@ -58,8 +58,8 @@
 #include "tmr0.h"
 #include "fvr.h"
 #include "adcc.h"
-#include "memory.h"
 #include "ext_int.h"
+#include "memory.h"
 #include "eusart2.h"
 
 

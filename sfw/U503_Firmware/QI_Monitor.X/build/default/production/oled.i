@@ -16771,32 +16771,6 @@ void ADCC_ThresholdISR(void);
 # 881
 void ADCC_DefaultInterruptHandler(void);
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 99 "mcc_generated_files/memory.h"
-uint8_t FLASH_ReadByte(uint32_t flashAddr);
-
-# 125
-uint16_t FLASH_ReadWord(uint32_t flashAddr);
-
-# 157
-void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-
-# 193
-int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-
-# 218
-void FLASH_EraseBlock(uint32_t baseAddr);
-
-# 249
-void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-
-# 275
-uint8_t DATAEE_ReadByte(uint16_t bAdd);
-
-void MEMORY_Tasks(void);
-
 # 406 "mcc_generated_files/ext_int.h"
 void EXT_INT_Initialize(void);
 
@@ -16829,6 +16803,32 @@ extern void (*INT2_InterruptHandler)(void);
 
 # 636
 void INT2_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 99 "mcc_generated_files/memory.h"
+uint8_t FLASH_ReadByte(uint32_t flashAddr);
+
+# 125
+uint16_t FLASH_ReadWord(uint32_t flashAddr);
+
+# 157
+void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+
+# 193
+int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+
+# 218
+void FLASH_EraseBlock(uint32_t baseAddr);
+
+# 249
+void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+
+# 275
+uint8_t DATAEE_ReadByte(uint16_t bAdd);
+
+void MEMORY_Tasks(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16942,11 +16942,14 @@ OLED_QI_Temp = 12,
 OLED_POS5_Temp = 13,
 OLED_Ambient_Temp = 14,
 OLED_Micro_Temp = 15,
-OLED_Dev_On_Time = 16,
-OLED_Cause_Of_Reset = 17,
-OLED_Dev_Rev_ID = 18,
-OLED_COM_PORT_SET = 19,
-OLED_Idle = 20
+OLED_POS5_FSW = 16,
+OLED_QI_FSW = 17,
+OLED_Dev_On_Time = 18,
+OLED_Cause_Of_Reset = 19,
+OLED_Dev_Rev_ID = 20,
+OLED_COM_PORT_SET = 21,
+OLED_TITLE_FRAME = 22,
+OLED_Idle = 23
 
 } OLED_Frame_t;
 
@@ -17531,7 +17534,7 @@ case OLED_POS12_Voltage:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "POS12 Voltage:");
+strcpy(OLED_RAM_Buffer.line0, "+12V Voltage:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos12_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
@@ -17546,7 +17549,7 @@ case OLED_POS5_Voltage:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "POS5 Voltage:");
+strcpy(OLED_RAM_Buffer.line0, "+5V Voltage:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos5_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
@@ -17561,7 +17564,7 @@ case OLED_POS12_Current:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "POS12 Current:");
+strcpy(OLED_RAM_Buffer.line0, "+12V Current:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.pos12_isns_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
@@ -17692,6 +17695,37 @@ OLED_update_time = 2;
 
 break;
 
+case OLED_POS5_FSW:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
+strcpy(OLED_RAM_Buffer.line1, " ");
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_POS5_FSW;
+OLED_update_time = 2;
+
+break;
+
+case OLED_QI_FSW:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "QI Sw. Freq:");
+strcpy(OLED_RAM_Buffer.line1, " ");
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_QI_FSW;
+OLED_update_time = 2;
+
+break;
+
+
 case OLED_Dev_On_Time:
 
 OLED_update_flag = 0;
@@ -17718,7 +17752,7 @@ strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Cause_Of_Reset;
-OLED_update_time = 2;
+OLED_update_time = 255;
 
 break;
 
@@ -17741,7 +17775,7 @@ strcpy(OLED_RAM_Buffer.line3, rev_id_str);
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Dev_Rev_ID;
-OLED_update_time = 2;
+OLED_update_time = 255;
 
 break;
 
@@ -17756,10 +17790,24 @@ strcpy(OLED_RAM_Buffer.line3, "1 stp, no flow");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_COM_PORT_SET;
-OLED_update_time = 2;
+OLED_update_time = 255;
 
 break;
 
+case OLED_TITLE_FRAME:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "QI Charger w/");
+strcpy(OLED_RAM_Buffer.line1, "Digital Monitor");
+strcpy(OLED_RAM_Buffer.line2, "Drew Maatman");
+strcpy(OLED_RAM_Buffer.line3, "Spring 2019");
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_TITLE_FRAME;
+OLED_update_time = 255;
+
+break;
 
 case OLED_Idle:
 

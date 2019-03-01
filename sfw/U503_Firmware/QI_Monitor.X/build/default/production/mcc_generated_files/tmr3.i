@@ -16197,10 +16197,10 @@ T3GATE = 0x00;
 T3CLK = 0x04;
 
 
-TMR3H = 0xE7;
+TMR3H = 0xCF;
 
 
-TMR3L = 0xC8;
+TMR3L = 0x90;
 
 
 timer3ReloadVal=(uint16_t)((TMR3H << 8) | TMR3L);
