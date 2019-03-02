@@ -17278,69 +17278,38 @@ error_handler.I2C_OLED_error_flag = 1;
 void OLED_Init(void) {
 
 OLED_Command(0xAE);
-
 OLED_Command(0xD5);
-
 OLED_Command(0x80);
-
 OLED_Command(0xA8);
-
 OLED_Command(0x1F);
-
 OLED_Command(0xD3);
-
 OLED_Command(0x0);
-
 OLED_Command(0x40 | 0x0);
-
 OLED_Command(0x8D);
-
 OLED_Command(0xAF);
-
 OLED_Command(0x20);
-
 OLED_Command(0x00);
-
 OLED_Command(0xA0 | 0x1);
-
 OLED_Command(0xC8);
-
 OLED_Command(0xDA);
-
 OLED_Command(0x02);
-
 OLED_Command(0x81);
-
 OLED_Command(0x8F);
-
 OLED_Command(0xD9);
-
 OLED_Command(0xF1);
-
 OLED_Command(0xDB);
-
 OLED_Command(0x40);
-
 OLED_Command(0xA4);
-
 OLED_Command(0xA6);
-
 OLED_Command(0xAF);
-
-
-__nop();
-
 
 }
 
 void OLED_YX(unsigned char Row, unsigned char Column) {
 
 OLED_Command(0xB0 + Row);
-
 OLED_Command(0x00 + (8 * Column & 0x0F));
-
 OLED_Command(0x10 + ((8* Column >> 4) & 0x0F));
-
 
 }
 
@@ -17428,8 +17397,21 @@ OLED_WriteString("");
 
 void OLED_UpdateFromRAMBuffer(void) {
 
-OLED_YX(0,0);
-OLED_Clear();
+
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line0); char_index < sizeof(OLED_RAM_Buffer.line0) - 1; char_index++) {
+OLED_RAM_Buffer.line0[char_index] = ' ';
+}
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line1); char_index < sizeof(OLED_RAM_Buffer.line1) - 1; char_index++) {
+OLED_RAM_Buffer.line1[char_index] = ' ';
+}
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line2); char_index < sizeof(OLED_RAM_Buffer.line2) - 1; char_index++) {
+OLED_RAM_Buffer.line2[char_index] = ' ';
+}
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line3); char_index < sizeof(OLED_RAM_Buffer.line3) - 1; char_index++) {
+OLED_RAM_Buffer.line3[char_index] = ' ';
+}
+
+
 OLED_YX(0,0);
 OLED_WriteString(OLED_RAM_Buffer.line0);
 OLED_YX(1,0);

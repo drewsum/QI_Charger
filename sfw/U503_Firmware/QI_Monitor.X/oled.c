@@ -171,69 +171,38 @@ void OLED_Data(uint8_t temp) {
 void OLED_Init(void) {
  
     OLED_Command(OLED_DISPLAYOFF);
-    //__delay_ms(20);
     OLED_Command(OLED_SETDISPLAYCLOCKDIV);
-    //__delay_ms(20);
     OLED_Command(0x80);
-    //__delay_ms(20);
     OLED_Command(OLED_SETMULTIPLEX);
-    //__delay_ms(20);
     OLED_Command(0x1F);
-    //__delay_ms(20);
     OLED_Command(OLED_SETDISPLAYOFFSET);
-    //__delay_ms(20);
     OLED_Command(0x0);
-    //__delay_ms(20);
     OLED_Command(OLED_SETSTARTLINE | 0x0);
-    //__delay_ms(20);
     OLED_Command(OLED_CHARGEPUMP);
-    //__delay_ms(20);
     OLED_Command(0xAF);
-    //__delay_ms(20);
     OLED_Command(OLED_MEMORYMODE);
-    //__delay_ms(20);
     OLED_Command(0x00);
-    //__delay_ms(20);
     OLED_Command(OLED_SEGREMAP | 0x1);
-    //__delay_ms(20);
     OLED_Command(OLED_COMSCANDEC);
-    //__delay_ms(20);
     OLED_Command(OLED_SETCOMPINS);
-    //__delay_ms(20);
     OLED_Command(0x02);
-    //__delay_ms(20);
     OLED_Command(OLED_SETCONTRAST);
-    //__delay_ms(20);
     OLED_Command(0x8F);
-    //__delay_ms(20);
     OLED_Command(OLED_SETPRECHARGE);
-    //__delay_ms(20);
     OLED_Command(0xF1);
-    //__delay_ms(20);
     OLED_Command(OLED_SETVCOMDETECT);
-    //__delay_ms(20);
     OLED_Command(0x40);
-    //__delay_ms(20);
     OLED_Command(OLED_DISPLAYALLON_RESUME);
-    //__delay_ms(20);
     OLED_Command(OLED_NORMALDISPLAY);
-    //__delay_ms(20);
     OLED_Command(OLED_DISPLAYON);
-    //__delay_ms(20);
-    
-    NOP();
-    
-    
+        
 }
 
 void OLED_YX(unsigned char Row, unsigned char Column) {
     
     OLED_Command(0xB0 + Row);
-    //__delay_ms(20);
     OLED_Command(0x00 + (8 * Column & 0x0F));
-    //__delay_ms(20);
     OLED_Command(0x10 + ((8* Column >> 4) & 0x0F));
-    //__delay_ms(20);
     
 }
 
@@ -320,9 +289,21 @@ void OLED_WriteFloat(float f) {
 }
 
 void OLED_UpdateFromRAMBuffer(void) {
-    
-    OLED_YX(0,0);
-    OLED_Clear();
+
+    // Tack on trailing spaces to rest of lines in OLED RAM buffer
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line0); char_index < sizeof(OLED_RAM_Buffer.line0) - 1; char_index++) {
+        OLED_RAM_Buffer.line0[char_index] = ' ';    
+    }
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line1); char_index < sizeof(OLED_RAM_Buffer.line1) - 1; char_index++) {
+        OLED_RAM_Buffer.line1[char_index] = ' ';    
+    }
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line2); char_index < sizeof(OLED_RAM_Buffer.line2) - 1; char_index++) {
+        OLED_RAM_Buffer.line2[char_index] = ' ';    
+    }
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line3); char_index < sizeof(OLED_RAM_Buffer.line3) - 1; char_index++) {
+        OLED_RAM_Buffer.line3[char_index] = ' ';    
+    }
+
     OLED_YX(0,0);
     OLED_WriteString(OLED_RAM_Buffer.line0);
     OLED_YX(1,0);
