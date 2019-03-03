@@ -122,6 +122,9 @@ void ADC_PostProcessingHandler(void) {
     adc_calculations.output_power = adc_results.pos5_adc_result * adc_results.qi_isns_adc_result;
     adc_calculations.efficiency = (adc_calculations.output_power / adc_calculations.input_power) * 100.0;
     
+    // Catch math errors
+    if (adc_calculations.efficiency > 99.0) adc_calculations.efficiency = 99.0;
+    
     // Re-start Acq timer
     TMR2_StartTimer();
     

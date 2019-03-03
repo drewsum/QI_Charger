@@ -90,6 +90,12 @@ void  INTERRUPT_Initialize (void)
     // TXI - low priority
     IPR3bits.TX2IP = 0;    
 
+    // CCPI - low priority
+    IPR6bits.CCP1IP = 0;    
+
+    // CCPI - low priority
+    IPR6bits.CCP2IP = 0;    
+
 }
 
 void __interrupt() INTERRUPT_InterruptManagerHigh (void)
@@ -147,6 +153,14 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
     {
         EUSART2_TxDefaultInterruptHandler();
+    }
+    else if(PIE6bits.CCP1IE == 1 && PIR6bits.CCP1IF == 1)
+    {
+        CCP1_CaptureISR();
+    }
+    else if(PIE6bits.CCP2IE == 1 && PIR6bits.CCP2IF == 1)
+    {
+        CCP2_CaptureISR();
     }
     else
     {

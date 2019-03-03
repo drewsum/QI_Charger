@@ -11,6 +11,7 @@
 #include "NXQ_charge_state.h"
 #include "adc_postprocessing.h"
 #include "LM73_I2C.h"
+#include "freq_meas.h"
 
 const uint8_t OledFont[][8] = 
 {
@@ -400,7 +401,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Charge_Status;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -415,7 +416,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS12_Voltage;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -430,7 +431,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_Voltage;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -445,7 +446,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS12_Current;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -460,7 +461,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_Current;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -475,7 +476,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Input_Power;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -490,7 +491,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Output_Power;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -505,7 +506,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Efficiency;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -520,7 +521,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -535,7 +536,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -550,7 +551,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Ambient_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -565,7 +566,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Micro_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -574,13 +575,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fHz", freq_meas_results.POS5_Freq_Meas);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_FSW;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -589,13 +590,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "QI Sw. Freq:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fHz", freq_meas_results.QI_Freq_Meas);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_FSW;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -611,7 +612,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Dev_On_Time;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             

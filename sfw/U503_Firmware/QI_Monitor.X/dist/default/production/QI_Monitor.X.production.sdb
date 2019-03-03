@@ -92,7 +92,7 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "188 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.c
-[e E9900 . `uc
+[e E9966 . `uc
 S_MASTER_IDLE 0
 S_MASTER_RESTART 1
 S_MASTER_SEND_ADDR 2
@@ -117,7 +117,7 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[e E10108 reset_types `uc
+[e E10174 reset_types `uc
 Undefined_Reset 0
 Power_On_Reset 1
 Brown_Out_Reset 2
@@ -129,7 +129,7 @@ Stack_Overflow_Reset 7
 Stack_Underflow_Reset 8
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9783 . `uc
+[e E9660 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -140,14 +140,14 @@ channel_DAC1 62
 channel_FVR_buf1 63
 ]
 "21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.h
-[e E10194 nxq_charge_state_t `uc
+[e E10260 nxq_charge_state_t `uc
 QI_Idle 0
 QI_Charging 1
 QI_Fully_Charged 2
 QI_Error 3
 ]
 "100 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[e E10216 . `uc
+[e E10282 . `uc
 OLED_Boot_Frame_1 0
 OLED_Boot_Frame_2 1
 OLED_Boot_Frame_3 2
@@ -173,8 +173,18 @@ OLED_COM_PORT_SET 21
 OLED_TITLE_FRAME 22
 OLED_Idle 23
 ]
-"125 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
-[e E9948 . `uc
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
+[e E10340 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E10344 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
+]
+"132 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
+[e E10014 . `uc
 BLACK 0
 RED 1
 GREEN 2
@@ -184,7 +194,7 @@ MAGENTA 5
 CYAN 6
 WHITE 7
 ]
-[e E9940 . `uc
+[e E10006 . `uc
 NORMAL 0
 BOLD 1
 UNDERSCORE 2
@@ -240,7 +250,7 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "100 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[e E10093 . `uc
+[e E10159 . `uc
 OLED_Boot_Frame_1 0
 OLED_Boot_Frame_2 1
 OLED_Boot_Frame_3 2
@@ -298,7 +308,7 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "100 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[e E10109 . `uc
+[e E10175 . `uc
 OLED_Boot_Frame_1 0
 OLED_Boot_Frame_2 1
 OLED_Boot_Frame_3 2
@@ -323,6 +333,16 @@ OLED_Dev_Rev_ID 20
 OLED_COM_PORT_SET 21
 OLED_TITLE_FRAME 22
 OLED_Idle 23
+]
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
+[e E10233 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E10237 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
 ]
 "97 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.h
 [e E9725 . `uc
@@ -335,7 +355,7 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "100 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[e E10089 . `uc
+[e E10155 . `uc
 OLED_Boot_Frame_1 0
 OLED_Boot_Frame_2 1
 OLED_Boot_Frame_3 2
@@ -362,7 +382,7 @@ OLED_TITLE_FRAME 22
 OLED_Idle 23
 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[e E10141 reset_types `uc
+[e E10207 reset_types `uc
 Undefined_Reset 0
 Power_On_Reset 1
 Brown_Out_Reset 2
@@ -374,14 +394,14 @@ Stack_Overflow_Reset 7
 Stack_Underflow_Reset 8
 ]
 "21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.h
-[e E10169 nxq_charge_state_t `uc
+[e E10235 nxq_charge_state_t `uc
 QI_Idle 0
 QI_Charging 1
 QI_Fully_Charged 2
 QI_Error 3
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9902 . `uc
+[e E9779 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -390,6 +410,16 @@ channel_VSS 60
 channel_Temp 61
 channel_DAC1 62
 channel_FVR_buf1 63
+]
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
+[e E10297 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E10301 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
 ]
 "97 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.h
 [e E9581 . `uc
@@ -402,7 +432,7 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[e E10118 reset_types `uc
+[e E10184 reset_types `uc
 Undefined_Reset 0
 Power_On_Reset 1
 Brown_Out_Reset 2
@@ -414,7 +444,7 @@ Stack_Overflow_Reset 7
 Stack_Underflow_Reset 8
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9758 . `uc
+[e E9635 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -425,13 +455,23 @@ channel_DAC1 62
 channel_FVR_buf1 63
 ]
 "21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.h
-[e E10200 nxq_charge_state_t `uc
+[e E10266 nxq_charge_state_t `uc
 QI_Idle 0
 QI_Charging 1
 QI_Fully_Charged 2
 QI_Error 3
 ]
-"50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
+[e E10288 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E10292 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
+]
+"51 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [e E9495 . `uc
 BLACK 0
 RED 1
@@ -479,9 +519,39 @@ BLINK 3
 REVERSE 4
 CONCEALED 5
 ]
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X/freq_meas.h
+[e E9452 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E9456 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
+]
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
+[e E9452 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E9456 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
+]
+"52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X/freq_meas.h
+[e E9467 pos5_edge_type `uc
+pos5_period_rising_1 0
+pos5_period_rising_2 1
+]
+"59
+[e E9471 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
+]
 "13 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.c
 [v _ADC_PostProcessingHandler ADC_PostProcessingHandler `(v  1 e 1 0 ]
-"132
+"135
 [v _ADC_acquisitionTimerHandler ADC_acquisitionTimerHandler `(v  1 e 1 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -556,14 +626,17 @@ CONCEALED 5
 [v i2_printf printf `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+[v i1___fladd __fladd `(d  1 e 4 0 ]
 [v i2___fladd __fladd `(d  1 e 4 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 4 0 ]
 [v i2___flsub __flsub `(d  1 e 4 0 ]
 "11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
+[v i2___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+[v i1___flmul __flmul `(d  1 e 4 0 ]
 [v i2___flmul __flmul `(d  1 e 4 0 ]
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -586,13 +659,14 @@ CONCEALED 5
 [v ___omul __omul `(ul  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+[v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
 [v i2___xxtofl __xxtofl `(d  1 e 4 0 ]
 "11 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cap_touch_int.c
 [v _leftCapTouchHandler leftCapTouchHandler `(v  1 e 1 0 ]
 "20
 [v _rightCapTouchHandler rightCapTouchHandler `(v  1 e 1 0 ]
 "11 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
-[v _getCauseOfReset getCauseOfReset `(E10108  1 e 1 0 ]
+[v _getCauseOfReset getCauseOfReset `(E10174  1 e 1 0 ]
 "87
 [v _getCauseOfResetString getCauseOfResetString `(*.32Tuc  1 e 2 0 ]
 "118
@@ -621,9 +695,13 @@ CONCEALED 5
 [v _clearUARTErrors clearUARTErrors `(v  1 e 1 0 ]
 "95
 [v _clearI2CErrors clearI2CErrors `(v  1 e 1 0 ]
-"18 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"5 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.c
+[v _freqMeasStartCaptures freqMeasStartCaptures `(v  1 e 1 0 ]
+"19
+[v _freqMeasConvert freqMeasConvert `(v  1 e 1 0 ]
+"20 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _heartbeatTimerHandler heartbeatTimerHandler `(v  1 e 1 0 ]
-"36
+"42
 [v _getStringSecondsAsTime getStringSecondsAsTime `(*.39uc  1 e 2 0 ]
 "13 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
 [v _LM73TempSensorInitialize LM73TempSensorInitialize `(v  1 e 1 0 ]
@@ -631,7 +709,7 @@ CONCEALED 5
 [v _LM73AcquisitionHandler LM73AcquisitionHandler `(v  1 e 1 0 ]
 "184
 [v _LM73Convert LM73Convert `(v  1 e 1 0 ]
-"65 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
+"66 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
@@ -657,6 +735,18 @@ CONCEALED 5
 [v _ADCC_SetADTIInterruptHandler ADCC_SetADTIInterruptHandler `(v  1 e 1 0 ]
 "310
 [v _ADCC_DefaultInterruptHandler ADCC_DefaultInterruptHandler `(v  1 e 1 0 ]
+"61 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp1.c
+[v _CCP1_Initialize CCP1_Initialize `(v  1 e 1 0 ]
+"90
+[v _CCP1_CaptureISR CCP1_CaptureISR `(v  1 e 1 0 ]
+"105
+[v _CCP1_CallBack CCP1_CallBack `(v  1 e 1 0 ]
+"61 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp2.c
+[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+"89
+[v _CCP2_CaptureISR CCP2_CaptureISR `(v  1 e 1 0 ]
+"105
+[v _CCP2_CallBack CCP2_CallBack `(v  1 e 1 0 ]
 "79 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
 "132
@@ -719,15 +809,15 @@ CONCEALED 5
 [v _I2C2_BusCollisionISR I2C2_BusCollisionISR `(v  1 e 1 0 ]
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-"95
+"101
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
-"120
+"126
 [v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"66
+"70
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"80
+"84
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "59 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/memory.c
 [v _FLASH_ReadByte FLASH_ReadByte `(uc  1 e 1 0 ]
@@ -739,19 +829,19 @@ CONCEALED 5
 [v _FLASH_EraseBlock FLASH_EraseBlock `(v  1 e 1 0 ]
 "60 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"142
+"144
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"159
+"161
 [v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
-"174
+"176
 [v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
-"181
+"183
 [v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"189
+"191
 [v _IOCBF3_ISR IOCBF3_ISR `(v  1 e 1 0 ]
-"204
+"206
 [v _IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
-"211
+"213
 [v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
 "61 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
@@ -761,6 +851,12 @@ CONCEALED 5
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "138
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"98
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
 "64 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "108
@@ -804,6 +900,12 @@ CONCEALED 5
 [v _TMR3_SetInterruptHandler TMR3_SetInterruptHandler `(v  1 e 1 0 ]
 "182
 [v _TMR3_DefaultInterruptHandler TMR3_DefaultInterruptHandler `(v  1 e 1 0 ]
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr5.c
+[v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
+"98
+[v _TMR5_StopTimer TMR5_StopTimer `(v  1 e 1 0 ]
+"120
+[v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
 "9 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.c
 [v _getNXQChargeStateString getNXQChargeStateString `(*.32uc  1 e 2 0 ]
 "38
@@ -814,25 +916,25 @@ CONCEALED 5
 [v _QIChargeIOCHandler QIChargeIOCHandler `(v  1 e 1 0 ]
 "93
 [v _QIIdleTimerHandler QIIdleTimerHandler `(v  1 e 1 0 ]
-"119 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"120 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_Command OLED_Command `(v  1 e 1 0 ]
-"171
+"172
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
-"201
+"202
 [v _OLED_YX OLED_YX `(v  1 e 1 0 ]
-"209
+"210
 [v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
-"244
+"245
 [v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
-"259
+"260
 [v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
-"291
+"292
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
 "321
 [v _OLED_updateHandler OLED_updateHandler `(v  1 e 1 0 ]
 "6 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.c
 [v _terminal_ringBufferPull terminal_ringBufferPull `(v  1 e 1 0 ]
-"17 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"18 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 "12 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
 [v _terminalClearScreen terminalClearScreen `(v  1 e 1 0 ]
@@ -843,23 +945,23 @@ CONCEALED 5
 "164
 [v _terminalTextAttributesReset terminalTextAttributesReset `(v  1 e 1 0 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[v _next_adc_channel next_adc_channel `E9783  1 e 1 0 ]
-[s S2411 adc_results_t 28 `d 1 avss_adc_result 4 0 `d 1 fvr_adc_result 4 4 `d 1 pos5_adc_result 4 8 `d 1 pos12_adc_result 4 12 `d 1 pos12_isns_adc_result 4 16 `d 1 qi_isns_adc_result 4 20 `d 1 die_temp_adc_result 4 24 ]
+[v _next_adc_channel next_adc_channel `E9660  1 e 1 0 ]
+[s S2470 adc_results_t 28 `f 1 avss_adc_result 4 0 `f 1 fvr_adc_result 4 4 `f 1 pos5_adc_result 4 8 `f 1 pos12_adc_result 4 12 `f 1 pos12_isns_adc_result 4 16 `f 1 qi_isns_adc_result 4 20 `f 1 die_temp_adc_result 4 24 ]
 "63
-[v _adc_results adc_results `S2411  1 e 28 0 ]
-[s S2419 adc_calculations_t 12 `f 1 input_power 4 0 `f 1 output_power 4 4 `f 1 efficiency 4 8 ]
+[v _adc_results adc_results `S2470  1 e 28 0 ]
+[s S2478 adc_calculations_t 12 `f 1 input_power 4 0 `f 1 output_power 4 4 `f 1 efficiency 4 8 ]
 "72
-[v _adc_calculations adc_calculations `S2419  1 e 12 0 ]
+[v _adc_calculations adc_calculations `S2478  1 e 12 0 ]
 "75
-[v _pos12_isns_average_buffer pos12_isns_average_buffer `[16]d  1 e 64 0 ]
+[v _pos12_isns_average_buffer pos12_isns_average_buffer `[16]f  1 e 64 0 ]
 "77
 [v _pos12_isns_average_index pos12_isns_average_index `uc  1 e 1 0 ]
 "80
-[v _qi_isns_average_buffer qi_isns_average_buffer `[16]d  1 e 64 0 ]
+[v _qi_isns_average_buffer qi_isns_average_buffer `[16]f  1 e 64 0 ]
 "82
 [v _qi_isns_average_index qi_isns_average_index `uc  1 e 1 0 ]
 "85
-[v _adc_result_scaling adc_result_scaling `d  1 e 4 0 ]
+[v _adc_result_scaling adc_result_scaling `f  1 e 4 0 ]
 "52 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [v _RX2PPS RX2PPS `VEuc  1 e 1 @3725 ]
 "152
@@ -874,19 +976,19 @@ CONCEALED 5
 [v _SSP2STAT SSP2STAT `VEuc  1 e 1 @3733 ]
 "918
 [v _SSP2CON1 SSP2CON1 `VEuc  1 e 1 @3734 ]
-[s S2116 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S2175 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "948
-[s S2122 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S2181 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S2127 . 1 `uc 1 SSPM02 1 0 :1:0 
+[s S2186 . 1 `uc 1 SSPM02 1 0 :1:0 
 `uc 1 SSPM12 1 0 :1:1 
 `uc 1 SSPM22 1 0 :1:2 
 `uc 1 SSPM32 1 0 :1:3 
@@ -895,9 +997,9 @@ CONCEALED 5
 `uc 1 SSPOV2 1 0 :1:6 
 `uc 1 WCOL2 1 0 :1:7 
 ]
-[u S2136 . 1 `S2116 1 . 1 0 `S2122 1 . 1 0 `S2127 1 . 1 0 ]
-[v _SSP2CON1bits SSP2CON1bits `VES2136  1 e 1 @3734 ]
-[s S2161 . 1 `uc 1 SEN 1 0 :1:0 
+[u S2195 . 1 `S2175 1 . 1 0 `S2181 1 . 1 0 `S2186 1 . 1 0 ]
+[v _SSP2CON1bits SSP2CON1bits `VES2195  1 e 1 @3734 ]
+[s S2220 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -907,17 +1009,17 @@ CONCEALED 5
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1085
-[s S2170 . 1 `uc 1 . 1 0 :1:0 
+[s S2229 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S2173 . 1 `uc 1 . 1 0 :1:0 
+[s S2232 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S2180 . 1 `uc 1 SEN2 1 0 :1:0 
+[s S2239 . 1 `uc 1 SEN2 1 0 :1:0 
 `uc 1 ADMSK12 1 0 :1:1 
 `uc 1 ADMSK22 1 0 :1:2 
 `uc 1 ADMSK32 1 0 :1:3 
@@ -926,15 +1028,15 @@ CONCEALED 5
 `uc 1 ACKSTAT2 1 0 :1:6 
 `uc 1 GCEN2 1 0 :1:7 
 ]
-[s S2189 . 1 `uc 1 . 1 0 :1:0 
+[s S2248 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN2 1 0 :1:1 
 `uc 1 PEN2 1 0 :1:2 
 `uc 1 RCEN2 1 0 :1:3 
 `uc 1 ADMSK42 1 0 :1:4 
 `uc 1 ADMSK52 1 0 :1:5 
 ]
-[u S2196 . 1 `S2161 1 . 1 0 `S2170 1 . 1 0 `S2173 1 . 1 0 `S2180 1 . 1 0 `S2189 1 . 1 0 ]
-[v _SSP2CON2bits SSP2CON2bits `VES2196  1 e 1 @3735 ]
+[u S2255 . 1 `S2220 1 . 1 0 `S2229 1 . 1 0 `S2232 1 . 1 0 `S2239 1 . 1 0 `S2248 1 . 1 0 ]
+[v _SSP2CON2bits SSP2CON2bits `VES2255  1 e 1 @3735 ]
 "1225
 [v _SSP2CON3 SSP2CON3 `VEuc  1 e 1 @3736 ]
 "1287
@@ -992,6 +1094,10 @@ CONCEALED 5
 [v _INT1PPS INT1PPS `VEuc  1 e 1 @3746 ]
 "2279
 [v _INT2PPS INT2PPS `VEuc  1 e 1 @3747 ]
+"3059
+[v _CCP1PPS CCP1PPS `VEuc  1 e 1 @3759 ]
+"3125
+[v _CCP2PPS CCP2PPS `VEuc  1 e 1 @3760 ]
 [s S416 . 1 `uc 1 INT0IP 1 0 :1:0 
 `uc 1 INT1IP 1 0 :1:1 
 `uc 1 INT2IP 1 0 :1:2 
@@ -1043,6 +1149,12 @@ CONCEALED 5
 ]
 [u S496 . 1 `S487 1 . 1 0 `S494 1 . 1 0 ]
 [v _IPR4bits IPR4bits `VES496  1 e 1 @3774 ]
+[s S509 . 1 `uc 1 CCP1IP 1 0 :1:0 
+`uc 1 CCP2IP 1 0 :1:1 
+]
+"4323
+[u S512 . 1 `S509 1 . 1 0 ]
+[v _IPR6bits IPR6bits `VES512  1 e 1 @3776 ]
 [s S90 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 INT1IE 1 0 :1:1 
 `uc 1 INT2IE 1 0 :1:2 
@@ -1053,18 +1165,18 @@ CONCEALED 5
 "4400
 [u S97 . 1 `S90 1 . 1 0 ]
 [v _PIE0bits PIE0bits `VES97  1 e 1 @3778 ]
-[s S590 . 1 `uc 1 ADIE 1 0 :1:0 
+[s S599 . 1 `uc 1 ADIE 1 0 :1:0 
 `uc 1 ADTIE 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIE 1 0 :1:6 
 `uc 1 OSCFIE 1 0 :1:7 
 ]
 "4448
-[s S596 . 1 `uc 1 . 1 0 :7:0 
+[s S605 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S599 . 1 `S590 1 . 1 0 `S596 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES599  1 e 1 @3779 ]
+[u S608 . 1 `S599 1 . 1 0 `S605 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES608  1 e 1 @3779 ]
 [s S168 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
@@ -1088,7 +1200,7 @@ CONCEALED 5
 ]
 [u S188 . 1 `S168 1 . 1 0 `S177 1 . 1 0 `S183 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES188  1 e 1 @3781 ]
-[s S642 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S651 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 TMR3IE 1 0 :1:2 
 `uc 1 TMR4IE 1 0 :1:3 
@@ -1096,8 +1208,14 @@ CONCEALED 5
 `uc 1 TMR6IE 1 0 :1:5 
 ]
 "4651
-[u S649 . 1 `S642 1 . 1 0 ]
-[v _PIE4bits PIE4bits `VES649  1 e 1 @3782 ]
+[u S658 . 1 `S651 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES658  1 e 1 @3782 ]
+[s S703 . 1 `uc 1 CCP1IE 1 0 :1:0 
+`uc 1 CCP2IE 1 0 :1:1 
+]
+"4729
+[u S706 . 1 `S703 1 . 1 0 ]
+[v _PIE6bits PIE6bits `VES706  1 e 1 @3784 ]
 [s S26 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 INT1IF 1 0 :1:1 
 `uc 1 INT2IF 1 0 :1:2 
@@ -1108,19 +1226,19 @@ CONCEALED 5
 "4806
 [u S33 . 1 `S26 1 . 1 0 ]
 [v _PIR0bits PIR0bits `VES33  1 e 1 @3786 ]
-[s S612 . 1 `uc 1 ADIF 1 0 :1:0 
+[s S621 . 1 `uc 1 ADIF 1 0 :1:0 
 `uc 1 ADTIF 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIF 1 0 :1:6 
 `uc 1 OSCFIF 1 0 :1:7 
 ]
 "4854
-[s S618 . 1 `uc 1 . 1 0 :7:0 
+[s S627 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S621 . 1 `S612 1 . 1 0 `S618 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES621  1 e 1 @3787 ]
-[s S558 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S630 . 1 `S621 1 . 1 0 `S627 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES630  1 e 1 @3787 ]
+[s S567 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -1130,14 +1248,14 @@ CONCEALED 5
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "4955
-[s S567 . 1 `uc 1 . 1 0 :1:0 
+[s S576 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIF 1 0 :1:4 
 ]
-[u S572 . 1 `S558 1 . 1 0 `S567 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES572  1 e 1 @3789 ]
-[s S659 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S581 . 1 `S567 1 . 1 0 `S576 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES581  1 e 1 @3789 ]
+[s S668 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -1145,19 +1263,25 @@ CONCEALED 5
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "5025
-[u S666 . 1 `S659 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES666  1 e 1 @3790 ]
-[s S1505 . 1 `uc 1 CWGIF 1 0 :1:0 
+[u S675 . 1 `S668 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES675  1 e 1 @3790 ]
+[s S712 . 1 `uc 1 CCP1IF 1 0 :1:0 
+`uc 1 CCP2IF 1 0 :1:1 
+]
+"5103
+[u S715 . 1 `S712 1 . 1 0 ]
+[v _PIR6bits PIR6bits `VES715  1 e 1 @3792 ]
+[s S1564 . 1 `uc 1 CWGIF 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 NVMIF 1 0 :1:5 
 `uc 1 CRCIF 1 0 :1:6 
 `uc 1 SCANIF 1 0 :1:7 
 ]
 "5135
-[s S1511 . 1 `uc 1 CWG1IF 1 0 :1:0 
+[s S1570 . 1 `uc 1 CWG1IF 1 0 :1:0 
 ]
-[u S1513 . 1 `S1505 1 . 1 0 `S1511 1 . 1 0 ]
-[v _PIR7bits PIR7bits `VES1513  1 e 1 @3793 ]
+[u S1572 . 1 `S1564 1 . 1 0 `S1570 1 . 1 0 ]
+[v _PIR7bits PIR7bits `VES1572  1 e 1 @3793 ]
 "5743
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3800 ]
 "5883
@@ -1194,7 +1318,7 @@ CONCEALED 5
 [v _WPUA WPUA `VEuc  1 e 1 @3856 ]
 "8038
 [v _ANSELA ANSELA `VEuc  1 e 1 @3857 ]
-[s S857 . 1 `uc 1 IOCBF0 1 0 :1:0 
+[s S914 . 1 `uc 1 IOCBF0 1 0 :1:0 
 `uc 1 IOCBF1 1 0 :1:1 
 `uc 1 IOCBF2 1 0 :1:2 
 `uc 1 IOCBF3 1 0 :1:3 
@@ -1204,9 +1328,9 @@ CONCEALED 5
 `uc 1 IOCBF7 1 0 :1:7 
 ]
 "8117
-[u S866 . 1 `S857 1 . 1 0 ]
-[v _IOCBFbits IOCBFbits `VES866  1 e 1 @3858 ]
-[s S878 . 1 `uc 1 IOCBN0 1 0 :1:0 
+[u S923 . 1 `S914 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES923  1 e 1 @3858 ]
+[s S935 . 1 `uc 1 IOCBN0 1 0 :1:0 
 `uc 1 IOCBN1 1 0 :1:1 
 `uc 1 IOCBN2 1 0 :1:2 
 `uc 1 IOCBN3 1 0 :1:3 
@@ -1216,9 +1340,9 @@ CONCEALED 5
 `uc 1 IOCBN7 1 0 :1:7 
 ]
 "8179
-[u S887 . 1 `S878 1 . 1 0 ]
-[v _IOCBNbits IOCBNbits `VES887  1 e 1 @3859 ]
-[s S899 . 1 `uc 1 IOCBP0 1 0 :1:0 
+[u S944 . 1 `S935 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES944  1 e 1 @3859 ]
+[s S956 . 1 `uc 1 IOCBP0 1 0 :1:0 
 `uc 1 IOCBP1 1 0 :1:1 
 `uc 1 IOCBP2 1 0 :1:2 
 `uc 1 IOCBP3 1 0 :1:3 
@@ -1228,8 +1352,8 @@ CONCEALED 5
 `uc 1 IOCBP7 1 0 :1:7 
 ]
 "8241
-[u S908 . 1 `S899 1 . 1 0 ]
-[v _IOCBPbits IOCBPbits `VES908  1 e 1 @3860 ]
+[u S965 . 1 `S956 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES965  1 e 1 @3860 ]
 "8348
 [v _SLRCONB SLRCONB `VEuc  1 e 1 @3862 ]
 "8410
@@ -1250,7 +1374,7 @@ CONCEALED 5
 [v _WPUE WPUE `VEuc  1 e 1 @3885 ]
 "9349
 [v _FVRCON FVRCON `VEuc  1 e 1 @3889 ]
-[s S1302 . 1 `uc 1 ADFVR 1 0 :2:0 
+[s S1361 . 1 `uc 1 ADFVR 1 0 :2:0 
 `uc 1 CDAFVR 1 0 :2:2 
 `uc 1 TSRNG 1 0 :1:4 
 `uc 1 TSEN 1 0 :1:5 
@@ -1258,7 +1382,7 @@ CONCEALED 5
 `uc 1 EN 1 0 :1:7 
 ]
 "9373
-[s S1309 . 1 `uc 1 ADFVR0 1 0 :1:0 
+[s S1368 . 1 `uc 1 ADFVR0 1 0 :1:0 
 `uc 1 ADFVR1 1 0 :1:1 
 `uc 1 CDAFVR0 1 0 :1:2 
 `uc 1 CDAFVR1 1 0 :1:3 
@@ -1266,8 +1390,8 @@ CONCEALED 5
 `uc 1 FVRRDY 1 0 :1:6 
 `uc 1 FVREN 1 0 :1:7 
 ]
-[u S1317 . 1 `S1302 1 . 1 0 `S1309 1 . 1 0 ]
-[v _FVRCONbits FVRCONbits `VES1317  1 e 1 @3889 ]
+[u S1376 . 1 `S1361 1 . 1 0 `S1368 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES1376  1 e 1 @3889 ]
 "12405
 [v _ADACT ADACT `VEuc  1 e 1 @3926 ]
 "12457
@@ -1276,24 +1400,24 @@ CONCEALED 5
 [v _ADREF ADREF `VEuc  1 e 1 @3928 ]
 "12556
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @3929 ]
-[s S1218 . 1 `uc 1 ADDSEN 1 0 :1:0 
+[s S1277 . 1 `uc 1 ADDSEN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 ADGPOL 1 0 :1:5 
 `uc 1 ADIPEN 1 0 :1:6 
 `uc 1 ADPPOL 1 0 :1:7 
 ]
 "12570
-[u S1224 . 1 `S1218 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES1224  1 e 1 @3929 ]
+[u S1283 . 1 `S1277 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1283  1 e 1 @3929 ]
 "12595
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @3930 ]
-[s S1154 . 1 `uc 1 ADMD 1 0 :3:0 
+[s S1213 . 1 `uc 1 ADMD 1 0 :3:0 
 `uc 1 ADACLR 1 0 :1:3 
 `uc 1 ADCRS 1 0 :3:4 
 `uc 1 ADPSIS 1 0 :1:7 
 ]
 "12617
-[s S1159 . 1 `uc 1 ADMD0 1 0 :1:0 
+[s S1218 . 1 `uc 1 ADMD0 1 0 :1:0 
 `uc 1 ADMD1 1 0 :1:1 
 `uc 1 ADMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1301,16 +1425,16 @@ CONCEALED 5
 `uc 1 ADCRS1 1 0 :1:5 
 `uc 1 ADCRS2 1 0 :1:6 
 ]
-[u S1167 . 1 `S1154 1 . 1 0 `S1159 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES1167  1 e 1 @3930 ]
+[u S1226 . 1 `S1213 1 . 1 0 `S1218 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1226  1 e 1 @3930 ]
 "12672
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @3931 ]
-[s S1124 . 1 `uc 1 ADTMD 1 0 :3:0 
+[s S1183 . 1 `uc 1 ADTMD 1 0 :3:0 
 `uc 1 ADSOI 1 0 :1:3 
 `uc 1 ADCALC 1 0 :3:4 
 ]
 "12693
-[s S1128 . 1 `uc 1 ADTMD0 1 0 :1:0 
+[s S1187 . 1 `uc 1 ADTMD0 1 0 :1:0 
 `uc 1 ADTMD1 1 0 :1:1 
 `uc 1 ADTMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1318,8 +1442,8 @@ CONCEALED 5
 `uc 1 ADCALC1 1 0 :1:5 
 `uc 1 ADCALC2 1 0 :1:6 
 ]
-[u S1136 . 1 `S1124 1 . 1 0 `S1128 1 . 1 0 ]
-[v _ADCON3bits ADCON3bits `VES1136  1 e 1 @3931 ]
+[u S1195 . 1 `S1183 1 . 1 0 `S1187 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES1195  1 e 1 @3931 ]
 "12743
 [v _ADACQ ADACQ `VEuc  1 e 1 @3932 ]
 "12813
@@ -1330,7 +1454,7 @@ CONCEALED 5
 [v _ADPCH ADPCH `VEuc  1 e 1 @3935 ]
 "12993
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @3936 ]
-[s S1070 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S1129 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -1340,21 +1464,21 @@ CONCEALED 5
 `uc 1 ADON 1 0 :1:7 
 ]
 "13028
-[s S1079 . 1 `uc 1 GO 1 0 :1:0 
+[s S1138 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 ]
-[s S1083 . 1 `uc 1 DONE 1 0 :1:0 
+[s S1142 . 1 `uc 1 DONE 1 0 :1:0 
 ]
-[s S1085 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+[s S1144 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
 ]
-[s S1087 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S1146 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 ]
-[s S1089 . 1 `uc 1 . 1 0 :7:0 
+[s S1148 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ADCAL 1 0 :1:7 
 ]
-[u S1092 . 1 `S1070 1 . 1 0 `S1079 1 . 1 0 `S1083 1 . 1 0 `S1085 1 . 1 0 `S1087 1 . 1 0 `S1089 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES1092  1 e 1 @3936 ]
+[u S1151 . 1 `S1129 1 . 1 0 `S1138 1 . 1 0 `S1142 1 . 1 0 `S1144 1 . 1 0 `S1146 1 . 1 0 `S1148 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1151  1 e 1 @3936 ]
 "13095
 [v _ADPREVL ADPREVL `VEuc  1 e 1 @3937 ]
 "13165
@@ -1365,7 +1489,7 @@ CONCEALED 5
 [v _ADRESH ADRESH `VEuc  1 e 1 @3940 ]
 "13374
 [v _ADSTAT ADSTAT `VEuc  1 e 1 @3941 ]
-[s S1186 . 1 `uc 1 ADSTAT 1 0 :3:0 
+[s S1245 . 1 `uc 1 ADSTAT 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADMATH 1 0 :1:4 
 `uc 1 ADLTHR 1 0 :1:5 
@@ -1373,12 +1497,12 @@ CONCEALED 5
 `uc 1 ADAOV 1 0 :1:7 
 ]
 "13394
-[s S1193 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+[s S1252 . 1 `uc 1 ADSTAT0 1 0 :1:0 
 `uc 1 ADSTAT1 1 0 :1:1 
 `uc 1 ADSTAT2 1 0 :1:2 
 ]
-[u S1197 . 1 `S1186 1 . 1 0 `S1193 1 . 1 0 ]
-[v _ADSTATbits ADSTATbits `VES1197  1 e 1 @3941 ]
+[u S1256 . 1 `S1245 1 . 1 0 `S1252 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES1256  1 e 1 @3941 ]
 "13439
 [v _ADRPT ADRPT `VEuc  1 e 1 @3942 ]
 "13509
@@ -1413,7 +1537,7 @@ CONCEALED 5
 [v _NVMADRH NVMADRH `VEuc  1 e 1 @3967 ]
 "15307
 [v _NVMDAT NVMDAT `VEuc  1 e 1 @3968 ]
-[s S1433 . 1 `uc 1 RD 1 0 :1:0 
+[s S1492 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -1422,19 +1546,19 @@ CONCEALED 5
 `uc 1 NVMREG 1 0 :2:6 
 ]
 "15398
-[s S1441 . 1 `uc 1 . 1 0 :6:0 
+[s S1500 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG0 1 0 :1:6 
 `uc 1 NVMREG1 1 0 :1:7 
 ]
-[u S1445 . 1 `S1433 1 . 1 0 `S1441 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES1445  1 e 1 @3969 ]
+[u S1504 . 1 `S1492 1 . 1 0 `S1500 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES1504  1 e 1 @3969 ]
 "15443
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @3970 ]
 "15463
 [v _LATA LATA `VEuc  1 e 1 @3971 ]
 "15575
 [v _LATB LATB `VEuc  1 e 1 @3972 ]
-[s S3202 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S3302 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -1444,7 +1568,7 @@ CONCEALED 5
 `uc 1 LATB7 1 0 :1:7 
 ]
 "15602
-[s S3211 . 1 `uc 1 LB0 1 0 :1:0 
+[s S3311 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -1453,11 +1577,11 @@ CONCEALED 5
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S3220 . 1 `S3202 1 . 1 0 `S3211 1 . 1 0 ]
-[v _LATBbits LATBbits `VES3220  1 e 1 @3972 ]
+[u S3320 . 1 `S3302 1 . 1 0 `S3311 1 . 1 0 ]
+[v _LATBbits LATBbits `VES3320  1 e 1 @3972 ]
 "15687
 [v _LATC LATC `VEuc  1 e 1 @3973 ]
-[s S2609 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2697 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -1467,7 +1591,7 @@ CONCEALED 5
 `uc 1 LATC7 1 0 :1:7 
 ]
 "15714
-[s S2618 . 1 `uc 1 LC0 1 0 :1:0 
+[s S2706 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -1476,15 +1600,15 @@ CONCEALED 5
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S2627 . 1 `S2609 1 . 1 0 `S2618 1 . 1 0 ]
-[v _LATCbits LATCbits `VES2627  1 e 1 @3973 ]
+[u S2715 . 1 `S2697 1 . 1 0 `S2706 1 . 1 0 ]
+[v _LATCbits LATCbits `VES2715  1 e 1 @3973 ]
 "15799
 [v _TRISA TRISA `VEuc  1 e 1 @3976 ]
 "15921
 [v _TRISB TRISB `VEuc  1 e 1 @3977 ]
 "16043
 [v _TRISC TRISC `VEuc  1 e 1 @3978 ]
-[s S2653 . 1 `uc 1 RB0 1 0 :1:0 
+[s S2741 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -1494,11 +1618,72 @@ CONCEALED 5
 `uc 1 RB7 1 0 :1:7 
 ]
 "16270
-[s S2662 . 1 `uc 1 . 1 0 :3:0 
+[s S2750 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S2665 . 1 `S2653 1 . 1 0 `S2662 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES2665  1 e 1 @3982 ]
+[u S2753 . 1 `S2741 1 . 1 0 `S2750 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES2753  1 e 1 @3982 ]
+"20027
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @4006 ]
+"20047
+[v _CCPR2H CCPR2H `VEuc  1 e 1 @4007 ]
+"20067
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @4008 ]
+[s S4522 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 FMT 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"20104
+[s S4528 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+]
+[s S4533 . 1 `uc 1 CCP2MODE 1 0 :4:0 
+`uc 1 CCP2FMT 1 0 :1:4 
+`uc 1 CCP2OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 CCP2EN 1 0 :1:7 
+]
+[s S4539 . 1 `uc 1 CCP2MODE0 1 0 :1:0 
+`uc 1 CCP2MODE1 1 0 :1:1 
+`uc 1 CCP2MODE2 1 0 :1:2 
+`uc 1 CCP2MODE3 1 0 :1:3 
+]
+[s S4544 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 P2M1 1 0 :1:7 
+]
+[u S4547 . 1 `S4522 1 . 1 0 `S4528 1 . 1 0 `S4533 1 . 1 0 `S4539 1 . 1 0 `S4544 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES4547  1 e 1 @4008 ]
+"20194
+[v _CCP2CAP CCP2CAP `VEuc  1 e 1 @4009 ]
+"20257
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @4010 ]
+"20277
+[v _CCPR1H CCPR1H `VEuc  1 e 1 @4011 ]
+"20297
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @4012 ]
+"20424
+[v _CCP1CAP CCP1CAP `VEuc  1 e 1 @4013 ]
+[s S4388 . 1 `uc 1 C1TSEL 1 0 :2:0 
+`uc 1 C2TSEL 1 0 :2:2 
+`uc 1 P3TSEL 1 0 :2:4 
+`uc 1 P4TSEL 1 0 :2:6 
+]
+"20503
+[s S4393 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+`uc 1 C1TSEL1 1 0 :1:1 
+`uc 1 C2TSEL0 1 0 :1:2 
+`uc 1 C2TSEL1 1 0 :1:3 
+`uc 1 P3TSEL0 1 0 :1:4 
+`uc 1 P3TSEL1 1 0 :1:5 
+`uc 1 P4TSEL0 1 0 :1:6 
+`uc 1 P4TSEL1 1 0 :1:7 
+]
+[u S4402 . 1 `S4388 1 . 1 0 `S4393 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES4402  1 e 1 @4014 ]
 "21744
 [v _T2TMR T2TMR `VEuc  1 e 1 @4027 ]
 "21749
@@ -1509,16 +1694,16 @@ CONCEALED 5
 [v _PR2 PR2 `VEuc  1 e 1 @4028 ]
 "21820
 [v _T2CON T2CON `VEuc  1 e 1 @4029 ]
-[s S1723 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S1782 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
 "21856
-[s S1727 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+[s S1786 . 1 `uc 1 T2OUTPS 1 0 :4:0 
 `uc 1 T2CKPS 1 0 :3:4 
 `uc 1 T2ON 1 0 :1:7 
 ]
-[s S1731 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+[s S1790 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
 `uc 1 T2OUTPS1 1 0 :1:1 
 `uc 1 T2OUTPS2 1 0 :1:2 
 `uc 1 T2OUTPS3 1 0 :1:3 
@@ -1526,7 +1711,7 @@ CONCEALED 5
 `uc 1 T2CKPS1 1 0 :1:5 
 `uc 1 T2CKPS2 1 0 :1:6 
 ]
-[s S1739 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S1798 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
@@ -1535,98 +1720,98 @@ CONCEALED 5
 `uc 1 CKPS2 1 0 :1:6 
 `uc 1 TMR2ON 1 0 :1:7 
 ]
-[u S1748 . 1 `S1723 1 . 1 0 `S1727 1 . 1 0 `S1731 1 . 1 0 `S1739 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1748  1 e 1 @4029 ]
+[u S1807 . 1 `S1782 1 . 1 0 `S1786 1 . 1 0 `S1790 1 . 1 0 `S1798 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1807  1 e 1 @4029 ]
 "21966
 [v _T2HLT T2HLT `VEuc  1 e 1 @4030 ]
-[s S1627 . 1 `uc 1 MODE 1 0 :5:0 
+[s S1686 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
 "21999
-[s S1632 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S1691 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 `uc 1 MODE4 1 0 :1:4 
 ]
-[s S1638 . 1 `uc 1 T2MODE 1 0 :5:0 
+[s S1697 . 1 `uc 1 T2MODE 1 0 :5:0 
 `uc 1 T2CKSYNC 1 0 :1:5 
 `uc 1 T2CKPOL 1 0 :1:6 
 `uc 1 T2PSYNC 1 0 :1:7 
 ]
-[s S1643 . 1 `uc 1 T2MODE0 1 0 :1:0 
+[s S1702 . 1 `uc 1 T2MODE0 1 0 :1:0 
 `uc 1 T2MODE1 1 0 :1:1 
 `uc 1 T2MODE2 1 0 :1:2 
 `uc 1 T2MODE3 1 0 :1:3 
 `uc 1 T2MODE4 1 0 :1:4 
 ]
-[u S1649 . 1 `S1627 1 . 1 0 `S1632 1 . 1 0 `S1638 1 . 1 0 `S1643 1 . 1 0 ]
-[v _T2HLTbits T2HLTbits `VES1649  1 e 1 @4030 ]
+[u S1708 . 1 `S1686 1 . 1 0 `S1691 1 . 1 0 `S1697 1 . 1 0 `S1702 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES1708  1 e 1 @4030 ]
 "22094
 [v _T2CLKCON T2CLKCON `VEuc  1 e 1 @4031 ]
 "22252
 [v _T2RST T2RST `VEuc  1 e 1 @4032 ]
-[s S1689 . 1 `uc 1 RSEL 1 0 :5:0 
+[s S1748 . 1 `uc 1 RSEL 1 0 :5:0 
 ]
 "22277
-[s S1691 . 1 `uc 1 RSEL0 1 0 :1:0 
+[s S1750 . 1 `uc 1 RSEL0 1 0 :1:0 
 `uc 1 RSEL1 1 0 :1:1 
 `uc 1 RSEL2 1 0 :1:2 
 `uc 1 RSEL3 1 0 :1:3 
 ]
-[s S1696 . 1 `uc 1 T2RSEL 1 0 :5:0 
+[s S1755 . 1 `uc 1 T2RSEL 1 0 :5:0 
 ]
-[s S1698 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+[s S1757 . 1 `uc 1 T2RSEL0 1 0 :1:0 
 `uc 1 T2RSEL1 1 0 :1:1 
 `uc 1 T2RSEL2 1 0 :1:2 
 `uc 1 T2RSEL3 1 0 :1:3 
 ]
-[u S1703 . 1 `S1689 1 . 1 0 `S1691 1 . 1 0 `S1696 1 . 1 0 `S1698 1 . 1 0 ]
-[v _T2RSTbits T2RSTbits `VES1703  1 e 1 @4032 ]
-"23266
-[v _TMR3L TMR3L `VEuc  1 e 1 @4039 ]
-"23436
-[v _TMR3H TMR3H `VEuc  1 e 1 @4040 ]
-"23556
-[v _T3CON T3CON `VEuc  1 e 1 @4041 ]
-[s S1863 . 1 `uc 1 . 1 0 :2:0 
+[u S1762 . 1 `S1748 1 . 1 0 `S1750 1 . 1 0 `S1755 1 . 1 0 `S1757 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES1762  1 e 1 @4032 ]
+"22339
+[v _TMR5L TMR5L `VEuc  1 e 1 @4033 ]
+"22509
+[v _TMR5H TMR5H `VEuc  1 e 1 @4034 ]
+"22629
+[v _T5CON T5CON `VEuc  1 e 1 @4035 ]
+[s S1922 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_SYNC 1 0 :1:2 
 ]
-"23595
-[s S1866 . 1 `uc 1 ON 1 0 :1:0 
+"22668
+[s S1925 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
-[s S1872 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 NOT_T3SYNC 1 0 :1:2 
+[s S4661 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T5SYNC 1 0 :1:2 
 ]
-[s S1875 . 1 `uc 1 TMR3ON 1 0 :1:0 
-`uc 1 T3RD16 1 0 :1:1 
-`uc 1 nT3SYNC 1 0 :1:2 
+[s S4664 . 1 `uc 1 TMR5ON 1 0 :1:0 
+`uc 1 T5RD16 1 0 :1:1 
+`uc 1 nT5SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
-`uc 1 T3CKPS0 1 0 :1:4 
-`uc 1 T3CKPS1 1 0 :1:5 
+`uc 1 T5CKPS0 1 0 :1:4 
+`uc 1 T5CKPS1 1 0 :1:5 
 ]
-[s S1882 . 1 `uc 1 . 1 0 :4:0 
+[s S1941 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
-[s S1886 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 RD163 1 0 :1:1 
+[s S4675 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD165 1 0 :1:1 
 ]
-[u S1889 . 1 `S1863 1 . 1 0 `S1866 1 . 1 0 `S1872 1 . 1 0 `S1875 1 . 1 0 `S1882 1 . 1 0 `S1886 1 . 1 0 ]
-[v _T3CONbits T3CONbits `VES1889  1 e 1 @4041 ]
-"23670
-[v _T3GCON T3GCON `VEuc  1 e 1 @4042 ]
-[s S1923 . 1 `uc 1 . 1 0 :3:0 
+[u S4678 . 1 `S1922 1 . 1 0 `S1925 1 . 1 0 `S4661 1 . 1 0 `S4664 1 . 1 0 `S1941 1 . 1 0 `S4675 1 . 1 0 ]
+[v _T5CONbits T5CONbits `VES4678  1 e 1 @4035 ]
+"22743
+[v _T5GCON T5GCON `VEuc  1 e 1 @4036 ]
+[s S1982 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 GGO_NOT_DONE 1 0 :1:3 
 ]
-"23712
-[s S1926 . 1 `uc 1 . 1 0 :2:0 
+"22785
+[s S1985 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO_nDONE 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -1634,10 +1819,55 @@ CONCEALED 5
 `uc 1 GPOL 1 0 :1:6 
 `uc 1 GE 1 0 :1:7 
 ]
-[s S1934 . 1 `uc 1 . 1 0 :3:0 
+[s S4796 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T5GGO_NOT_DONE 1 0 :1:3 
+]
+[s S4799 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T5GVAL 1 0 :1:2 
+`uc 1 T5GGO_nDONE 1 0 :1:3 
+`uc 1 T5GSPM 1 0 :1:4 
+`uc 1 T5GTM 1 0 :1:5 
+`uc 1 T5GPOL 1 0 :1:6 
+`uc 1 T5GE 1 0 :1:7 
+]
+[s S4807 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T5GGO 1 0 :1:3 
+]
+[u S4810 . 1 `S1982 1 . 1 0 `S1985 1 . 1 0 `S4796 1 . 1 0 `S4799 1 . 1 0 `S4807 1 . 1 0 ]
+[v _T5GCONbits T5GCONbits `VES4810  1 e 1 @4036 ]
+"22975
+[v _T5GATE T5GATE `VEuc  1 e 1 @4037 ]
+"23117
+[v _T5CLK T5CLK `VEuc  1 e 1 @4038 ]
+"23266
+[v _TMR3L TMR3L `VEuc  1 e 1 @4039 ]
+"23436
+[v _TMR3H TMR3H `VEuc  1 e 1 @4040 ]
+"23556
+[v _T3CON T3CON `VEuc  1 e 1 @4041 ]
+"23595
+[s S1931 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T3SYNC 1 0 :1:2 
+]
+[s S1934 . 1 `uc 1 TMR3ON 1 0 :1:0 
+`uc 1 T3RD16 1 0 :1:1 
+`uc 1 nT3SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T3CKPS0 1 0 :1:4 
+`uc 1 T3CKPS1 1 0 :1:5 
+]
+[s S1945 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD163 1 0 :1:1 
+]
+[u S1948 . 1 `S1922 1 . 1 0 `S1925 1 . 1 0 `S1931 1 . 1 0 `S1934 1 . 1 0 `S1941 1 . 1 0 `S1945 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES1948  1 e 1 @4041 ]
+"23670
+[v _T3GCON T3GCON `VEuc  1 e 1 @4042 ]
+"23712
+[s S1993 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T3GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S1937 . 1 `uc 1 . 1 0 :2:0 
+[s S1996 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T3GVAL 1 0 :1:2 
 `uc 1 T3GGO_nDONE 1 0 :1:3 
 `uc 1 T3GSPM 1 0 :1:4 
@@ -1645,56 +1875,101 @@ CONCEALED 5
 `uc 1 T3GPOL 1 0 :1:6 
 `uc 1 T3GE 1 0 :1:7 
 ]
-[s S1945 . 1 `uc 1 . 1 0 :3:0 
+[s S2004 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T3GGO 1 0 :1:3 
 ]
-[u S1948 . 1 `S1923 1 . 1 0 `S1926 1 . 1 0 `S1934 1 . 1 0 `S1937 1 . 1 0 `S1945 1 . 1 0 ]
-[v _T3GCONbits T3GCONbits `VES1948  1 e 1 @4042 ]
+[u S2007 . 1 `S1982 1 . 1 0 `S1985 1 . 1 0 `S1993 1 . 1 0 `S1996 1 . 1 0 `S2004 1 . 1 0 ]
+[v _T3GCONbits T3GCONbits `VES2007  1 e 1 @4042 ]
 "23902
 [v _T3GATE T3GATE `VEuc  1 e 1 @4043 ]
 "24044
 [v _T3CLK T3CLK `VEuc  1 e 1 @4044 ]
+"24193
+[v _TMR1L TMR1L `VEuc  1 e 1 @4045 ]
+"24363
+[v _TMR1H TMR1H `VEuc  1 e 1 @4046 ]
+"24483
+[v _T1CON T1CON `VEuc  1 e 1 @4047 ]
+"24522
+[s S4236 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+]
+[s S4239 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S4250 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[u S4253 . 1 `S1922 1 . 1 0 `S1925 1 . 1 0 `S4236 1 . 1 0 `S4239 1 . 1 0 `S1941 1 . 1 0 `S4250 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES4253  1 e 1 @4047 ]
+"24597
+[v _T1GCON T1GCON `VEuc  1 e 1 @4048 ]
+"24639
+[s S4298 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO_NOT_DONE 1 0 :1:3 
+]
+[s S4301 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S4309 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[u S4312 . 1 `S1982 1 . 1 0 `S1985 1 . 1 0 `S4298 1 . 1 0 `S4301 1 . 1 0 `S4309 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES4312  1 e 1 @4048 ]
+"24829
+[v _T1GATE T1GATE `VEuc  1 e 1 @4049 ]
+"24971
+[v _T1CLK T1CLK `VEuc  1 e 1 @4050 ]
 "25113
 [v _TMR0L TMR0L `VEuc  1 e 1 @4051 ]
 "25251
 [v _TMR0H TMR0H `VEuc  1 e 1 @4052 ]
 "25505
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @4053 ]
-[s S1386 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S1445 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T016BIT 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
 "25525
-[s S1392 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S1451 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S1397 . 1 `S1386 1 . 1 0 `S1392 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES1397  1 e 1 @4053 ]
+[u S1456 . 1 `S1445 1 . 1 0 `S1451 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES1456  1 e 1 @4053 ]
 "25570
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @4054 ]
-[s S3044 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S3144 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "25729
-[s S3046 . 1 `uc 1 . 1 0 :1:0 
+[s S3146 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S3049 . 1 `uc 1 . 1 0 :2:0 
+[s S3149 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_RI 1 0 :1:2 
 ]
-[s S3052 . 1 `uc 1 . 1 0 :3:0 
+[s S3152 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_RMCLR 1 0 :1:3 
 ]
-[s S3055 . 1 `uc 1 . 1 0 :4:0 
+[s S3155 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RWDT 1 0 :1:4 
 ]
-[s S3058 . 1 `uc 1 . 1 0 :5:0 
+[s S3158 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_WDTWV 1 0 :1:5 
 ]
-[s S3061 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S3161 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nRI 1 0 :1:2 
 `uc 1 nRMCLR 1 0 :1:3 
@@ -1703,15 +1978,15 @@ CONCEALED 5
 `uc 1 STKUNF 1 0 :1:6 
 `uc 1 STKOVF 1 0 :1:7 
 ]
-[s S3070 . 1 `uc 1 BOR 1 0 :1:0 
+[s S3170 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 RI 1 0 :1:2 
 `uc 1 RMCLR 1 0 :1:3 
 `uc 1 RWDT 1 0 :1:4 
 `uc 1 WDTWV 1 0 :1:5 
 ]
-[u S3077 . 1 `S3044 1 . 1 0 `S3046 1 . 1 0 `S3049 1 . 1 0 `S3052 1 . 1 0 `S3055 1 . 1 0 `S3058 1 . 1 0 `S3061 1 . 1 0 `S3070 1 . 1 0 ]
-[v _PCON0bits PCON0bits `VES3077  1 e 1 @4055 ]
+[u S3177 . 1 `S3144 1 . 1 0 `S3146 1 . 1 0 `S3149 1 . 1 0 `S3152 1 . 1 0 `S3155 1 . 1 0 `S3158 1 . 1 0 `S3161 1 . 1 0 `S3170 1 . 1 0 ]
+[v _PCON0bits PCON0bits `VES3177  1 e 1 @4055 ]
 [s S53 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
@@ -1748,17 +2023,26 @@ CONCEALED 5
 "39
 [v __npowers_ _npowers_ `C[13]d  1 e 52 0 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[v _reset_cause reset_cause `E10108  1 e 1 0 ]
+[v _reset_cause reset_cause `E10174  1 e 1 0 ]
 [s S159 error_struct 8 `uc 1 FVR_ADC_error_flag 1 0 `uc 1 ADC_general_error_flag 1 1 `uc 1 I2C_General_error_flag 1 2 `uc 1 I2C_OLED_error_flag 1 3 `uc 1 I2C_QI_Temp_Sense_error_flag 1 4 `uc 1 I2C_POS5_Temp_Sense_error_flag 1 5 `uc 1 I2C_Ambient_Temp_Sense_error_flag 1 6 `uc 1 USB_UART_COMM_error_flag 1 7 ]
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\error_handling.h
 [v _error_handler error_handler `S159  1 e 8 0 ]
 "38 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.h
 [v _device_on_time device_on_time `ul  1 e 4 0 ]
-[s S2432 LM73_temp_results_t 18 `d 1 QI_temp_result 4 0 `d 1 POS5_temp_result 4 4 `d 1 Ambient_temp_result 4 8 `[2]uc 1 QI_data_raw 2 12 `[2]uc 1 POS5_data_raw 2 14 `[2]uc 1 Ambient_data_raw 2 16 ]
+[s S2491 LM73_temp_results_t 18 `f 1 QI_temp_result 4 0 `f 1 POS5_temp_result 4 4 `f 1 Ambient_temp_result 4 8 `[2]uc 1 QI_data_raw 2 12 `[2]uc 1 POS5_data_raw 2 14 `[2]uc 1 Ambient_data_raw 2 16 ]
 "65 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.h
-[v _LM73_temp_results LM73_temp_results `S2432  1 e 18 0 ]
+[v _LM73_temp_results LM73_temp_results `S2491  1 e 18 0 ]
 "68
 [v _LM73_start_flag LM73_start_flag `uc  1 e 1 0 ]
+[s S2533 . 12 `f 1 POS5_Freq_Meas 4 0 `ui 1 POS5_Freq_Meas_Raw 2 4 `f 1 QI_Freq_Meas 4 6 `ui 1 QI_Freq_Meas_Raw 2 10 ]
+"46 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X/freq_meas.h
+[v _freq_meas_results freq_meas_results `S2533  1 e 12 0 ]
+"52
+[v _POS5_current_edge POS5_current_edge `E10340  1 e 1 0 ]
+"59
+[v _QI_current_edge QI_current_edge `E10344  1 e 1 0 ]
+"63
+[v _freq_meas_start_flag freq_meas_start_flag `uc  1 e 1 0 ]
 "57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 [v _ADCC_ADTI_InterruptHandler ADCC_ADTI_InterruptHandler `*.38(v  1 e 3 0 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
@@ -1787,26 +2071,26 @@ CONCEALED 5
 [v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
 "31
 [v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
-[s S2035 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
+[s S2094 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
 "186 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.c
-[s S2039 . 5 `uc 1 count 1 0 `*.39S2035 1 ptrb_list 2 1 `*.39E9433 1 pTrFlag 2 3 ]
-[v _i2c2_tr_queue i2c2_tr_queue `[1]S2039  1 s 5 i2c2_tr_queue ]
+[s S2098 . 5 `uc 1 count 1 0 `*.39S2094 1 ptrb_list 2 1 `*.39E9433 1 pTrFlag 2 3 ]
+[v _i2c2_tr_queue i2c2_tr_queue `[1]S2098  1 s 5 i2c2_tr_queue ]
 "187
-[s S2043 . 1 `uc 1 full 1 0 :1:0 
+[s S2102 . 1 `uc 1 full 1 0 :1:0 
 `uc 1 empty 1 0 :1:1 
 `uc 1 reserved 1 0 :6:2 
 ]
-[u S2047 . 1 `S2043 1 s 1 0 `uc 1 status 1 0 ]
-[s S2050 . 7 `*.39S2039 1 pTrTail 2 0 `*.39S2039 1 pTrHead 2 2 `S2047 1 trStatus 1 4 `uc 1 i2cDoneFlag 1 5 `uc 1 i2cErrors 1 6 ]
-[v _i2c2_object i2c2_object `S2050  1 s 7 i2c2_object ]
+[u S2106 . 1 `S2102 1 s 1 0 `uc 1 status 1 0 ]
+[s S2109 . 7 `*.39S2098 1 pTrTail 2 0 `*.39S2098 1 pTrHead 2 2 `S2106 1 trStatus 1 4 `uc 1 i2cDoneFlag 1 5 `uc 1 i2cErrors 1 6 ]
+[v _i2c2_object i2c2_object `S2109  1 s 7 i2c2_object ]
 "188
-[v _i2c2_state i2c2_state `E9900  1 s 1 i2c2_state ]
+[v _i2c2_state i2c2_state `E9966  1 s 1 i2c2_state ]
 "189
 [v _i2c2_trb_count i2c2_trb_count `uc  1 s 1 i2c2_trb_count ]
 "191
-[v _p_i2c2_trb_current p_i2c2_trb_current `*.39S2035  1 s 2 p_i2c2_trb_current ]
+[v _p_i2c2_trb_current p_i2c2_trb_current `*.39S2094  1 s 2 p_i2c2_trb_current ]
 "192
-[v _p_i2c2_current p_i2c2_current `*.39VES2039  1 s 2 p_i2c2_current ]
+[v _p_i2c2_current p_i2c2_current `*.39VES2098  1 s 2 p_i2c2_current ]
 "97 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.h
 [v _I2C_STATUS I2C_STATUS `E9554  1 e 1 0 ]
 "56 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
@@ -1815,51 +2099,55 @@ CONCEALED 5
 [v _IOCBF3_InterruptHandler IOCBF3_InterruptHandler `*.38(v  1 e 3 0 ]
 "59 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr0.c
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.38(v  1 e 3 0 ]
+"57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
 "58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr2.c
 [v _TMR2_InterruptHandler TMR2_InterruptHandler `*.38(v  1 e 3 0 ]
 "57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr3.c
 [v _timer3ReloadVal timer3ReloadVal `VEui  1 e 2 0 ]
 "58
 [v _TMR3_InterruptHandler TMR3_InterruptHandler `*.38(v  1 e 3 0 ]
+"57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr5.c
+[v _timer5ReloadVal timer5ReloadVal `VEui  1 e 2 0 ]
 "21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.h
-[v _nxq_charge_state nxq_charge_state `E10194  1 e 1 0 ]
-"15 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+[v _nxq_charge_state nxq_charge_state `E10260  1 e 1 0 ]
+"16 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OledFont OledFont `C[96][8]uc  1 e 768 0 ]
-[s S2444 OLED_RAM_Buffer_t 68 `[17]uc 1 line0 17 0 `[17]uc 1 line1 17 17 `[17]uc 1 line2 17 34 `[17]uc 1 line3 17 51 ]
+[s S2503 OLED_RAM_Buffer_t 68 `[17]uc 1 line0 17 0 `[17]uc 1 line1 17 17 `[17]uc 1 line2 17 34 `[17]uc 1 line3 17 51 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[v _OLED_RAM_Buffer OLED_RAM_Buffer `S2444  1 e 68 0 ]
+[v _OLED_RAM_Buffer OLED_RAM_Buffer `S2503  1 e 68 0 ]
 "100
-[v _OLED_Frame OLED_Frame `E10216  1 e 1 0 ]
+[v _OLED_Frame OLED_Frame `E10282  1 e 1 0 ]
 "103
 [v _OLED_update_flag OLED_update_flag `uc  1 e 1 0 ]
 "107
 [v _OLED_update_time OLED_update_time `uc  1 e 1 0 ]
 "48 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.h
 [v _line line `[64]uc  1 e 64 0 ]
-"65 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
+"66 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"186
+"196
 } 0
 "6 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.c
 [v _terminal_ringBufferPull terminal_ringBufferPull `(v  1 e 1 0 ]
 {
 "18
-[v terminal_ringBufferPull@index_3964 index `i  1 a 2 223 ]
+[v terminal_ringBufferPull@index_4113 index `i  1 a 2 12 ]
 "11
-[v terminal_ringBufferPull@index index `i  1 a 2 225 ]
+[v terminal_ringBufferPull@index index `i  1 a 2 14 ]
 "8
-[v terminal_ringBufferPull@charNumber charNumber `i  1 a 2 221 ]
+[v terminal_ringBufferPull@charNumber charNumber `i  1 a 2 10 ]
 "44
 } 0
-"17 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"18 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 {
-"104
-[v ringBufferLUT@userID userID `i  1 a 2 218 ]
-"17
-[v ringBufferLUT@line line `*.39uc  1 p 2 214 ]
-"488
+"105
+[v ringBufferLUT@userID userID `i  1 a 2 7 ]
+"18
+[v ringBufferLUT@line line `*.39uc  1 p 2 195 ]
+"507
 } 0
 "164 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
 [v _terminalTextAttributesReset terminalTextAttributesReset `(v  1 e 1 0 ]
@@ -1877,9 +2165,9 @@ CONCEALED 5
 "47
 [v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 wreg ]
 "48
-[v terminalTextAttributes@background_color background_color `E9584  1 p 1 212 ]
+[v terminalTextAttributes@background_color background_color `E9584  1 p 1 193 ]
 "49
-[v terminalTextAttributes@input_attribute input_attribute `E9576  1 p 1 213 ]
+[v terminalTextAttributes@input_attribute input_attribute `E9576  1 p 1 194 ]
 "55
 [v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 0 ]
 "161
@@ -1888,21 +2176,21 @@ CONCEALED 5
 [v _strncpy strncpy `(*.39uc  1 e 2 0 ]
 {
 "15
-[v strncpy@cp cp `*.39uc  1 a 2 18 ]
+[v strncpy@cp cp `*.39uc  1 a 2 6 ]
 "8
-[v strncpy@to to `*.39uc  1 p 2 12 ]
-[v strncpy@from from `*.32Cuc  1 p 2 14 ]
-[v strncpy@size size `ui  1 p 2 16 ]
+[v strncpy@to to `*.39uc  1 p 2 0 ]
+[v strncpy@from from `*.32Cuc  1 p 2 2 ]
+[v strncpy@size size `ui  1 p 2 4 ]
 "27
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
 {
 "35
-[v strcmp@r r `c  1 a 1 18 ]
+[v strcmp@r r `c  1 a 1 6 ]
 "33
-[v strcmp@s1 s1 `*.39Cuc  1 p 2 12 ]
-[v strcmp@s2 s2 `*.32Cuc  1 p 2 14 ]
+[v strcmp@s1 s1 `*.39Cuc  1 p 2 0 ]
+[v strcmp@s2 s2 `*.32Cuc  1 p 2 2 ]
 "42
 } 0
 "72 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
@@ -1910,39 +2198,39 @@ CONCEALED 5
 {
 [v getUserID@inputUserID inputUserID `uc  1 a 1 wreg ]
 "78
-[v getUserID@IDOffset IDOffset `uc  1 a 1 30 ]
+[v getUserID@IDOffset IDOffset `uc  1 a 1 18 ]
 "72
 [v getUserID@inputUserID inputUserID `uc  1 a 1 wreg ]
-[v getUserID@inputUserID inputUserID `uc  1 a 1 29 ]
+[v getUserID@inputUserID inputUserID `uc  1 a 1 17 ]
 "84
 } 0
-"36 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"42 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _getStringSecondsAsTime getStringSecondsAsTime `(*.39uc  1 e 2 0 ]
 {
-"49
-[v getStringSecondsAsTime@buff buff `[20]uc  1 a 20 171 ]
-"38
-[v getStringSecondsAsTime@minutes minutes `uc  1 a 1 196 ]
-[v getStringSecondsAsTime@hours hours `uc  1 a 1 195 ]
-[v getStringSecondsAsTime@days days `uc  1 a 1 194 ]
-[v getStringSecondsAsTime@years years `uc  1 a 1 193 ]
-[v getStringSecondsAsTime@seconds seconds `uc  1 a 1 192 ]
+"55
+[v getStringSecondsAsTime@buff buff `[20]uc  1 a 20 159 ]
+"44
+[v getStringSecondsAsTime@minutes minutes `uc  1 a 1 184 ]
+[v getStringSecondsAsTime@hours hours `uc  1 a 1 183 ]
+[v getStringSecondsAsTime@days days `uc  1 a 1 182 ]
+[v getStringSecondsAsTime@years years `uc  1 a 1 181 ]
+[v getStringSecondsAsTime@seconds seconds `uc  1 a 1 180 ]
+"48
+[v getStringSecondsAsTime@i i `uc  1 a 1 179 ]
 "42
-[v getStringSecondsAsTime@i i `uc  1 a 1 191 ]
-"36
-[v getStringSecondsAsTime@input_seconds input_seconds `ul  1 p 4 163 ]
-"39
+[v getStringSecondsAsTime@input_seconds input_seconds `ul  1 p 4 151 ]
+"45
 [v getStringSecondsAsTime@return_string return_string `[40]uc  1 s 40 return_string ]
-"152
+"158
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.39uc  1 e 2 0 ]
 {
 "15
-[v strcat@cp cp `*.39uc  1 a 2 16 ]
+[v strcat@cp cp `*.39uc  1 a 2 4 ]
 "8
-[v strcat@to to `*.39uc  1 p 2 12 ]
-[v strcat@from from `*.34Cuc  1 p 2 14 ]
+[v strcat@to to `*.39uc  1 p 2 0 ]
+[v strcat@from from `*.34Cuc  1 p 2 2 ]
 "26
 } 0
 "9 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.c
@@ -1953,7 +2241,7 @@ CONCEALED 5
 "34 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
 [v _getDeviceIDString getDeviceIDString `(*.32Tuc  1 e 2 0 ]
 {
-[v getDeviceIDString@inputDevID inputDevID `ui  1 p 2 25 ]
+[v getDeviceIDString@inputDevID inputDevID `ui  1 p 2 13 ]
 "70
 } 0
 "87 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
@@ -1964,7 +2252,7 @@ CONCEALED 5
 "90
 [v getCauseOfResetString@strings strings `[9]*.32uc  1 s 18 strings ]
 "103
-[v getCauseOfResetString@r r `E9577  1 a 1 14 ]
+[v getCauseOfResetString@r r `E9577  1 a 1 2 ]
 "115
 } 0
 "85 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\error_handling.c
@@ -2006,7 +2294,7 @@ CONCEALED 5
 [v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
 {
 "134
-[v EUSART2_Read@readValue readValue `uc  1 a 1 12 ]
+[v EUSART2_Read@readValue readValue `uc  1 a 1 0 ]
 "151
 } 0
 "17 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
@@ -2022,21 +2310,37 @@ CONCEALED 5
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
-[s S4065 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[s S4874 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "21
-[v printf@pb pb `S4065  1 a 5 207 ]
+[v printf@pb pb `S4874  1 a 5 2 ]
 "15
-[v printf@ap ap `[1]*.39v  1 a 2 205 ]
+[v printf@ap ap `[1]*.39v  1 a 2 0 ]
 "13
-[v printf@f f `*.34Cuc  1 p 2 197 ]
+[v printf@f f `*.34Cuc  1 p 2 185 ]
 "28
 } 0
 "11 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
-[v _getCauseOfReset getCauseOfReset `(E10108  1 e 1 0 ]
+[v _getCauseOfReset getCauseOfReset `(E10174  1 e 1 0 ]
 {
 "13
-[v getCauseOfReset@return_reset_cause return_reset_cause `E9577  1 a 1 12 ]
+[v getCauseOfReset@return_reset_cause return_reset_cause `E9577  1 a 1 0 ]
 "84
+} 0
+"5 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.c
+[v _freqMeasStartCaptures freqMeasStartCaptures `(v  1 e 1 0 ]
+{
+"16
+} 0
+"120 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr5.c
+[v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR5_WriteTimer@timerVal timerVal `ui  1 p 2 0 ]
+"140
+} 0
+"98
+[v _TMR5_StopTimer TMR5_StopTimer `(v  1 e 1 0 ]
+{
+"102
 } 0
 "105 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr3.c
 [v _TMR3_StopTimer TMR3_StopTimer `(v  1 e 1 0 ]
@@ -2051,13 +2355,29 @@ CONCEALED 5
 "127
 [v _TMR3_WriteTimer TMR3_WriteTimer `(v  1 e 1 0 ]
 {
-[v TMR3_WriteTimer@timerVal timerVal `ui  1 p 2 12 ]
+[v TMR3_WriteTimer@timerVal timerVal `ui  1 p 2 0 ]
 "147
+} 0
+"120 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr1.c
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `ui  1 p 2 0 ]
+"140
+} 0
+"98
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"102
 } 0
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"64
+"68
+} 0
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr5.c
+[v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
+{
+"90
 } 0
 "64 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr3.c
 [v _TMR3_Initialize TMR3_Initialize `(v  1 e 1 0 ]
@@ -2067,7 +2387,7 @@ CONCEALED 5
 "178
 [v _TMR3_SetInterruptHandler TMR3_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR3_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+[v TMR3_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "180
 } 0
 "64 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr2.c
@@ -2078,8 +2398,13 @@ CONCEALED 5
 "178
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "180
+} 0
+"63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"90
 } 0
 "61 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
@@ -2089,40 +2414,40 @@ CONCEALED 5
 "134
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "136
 } 0
-"80 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
+"84 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"94
+"98
 } 0
 "60 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"140
+"142
 } 0
-"204
+"206
 [v _IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCBF3_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
-"206
+[v IOCBF3_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"208
 } 0
-"174
+"176
 [v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCBF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
-"176
+[v IOCBF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"178
 } 0
-"66 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
+"70 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"78
+"82
 } 0
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
-"93
+"99
 } 0
 "199 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.c
 [v _I2C2_Initialize I2C2_Initialize `(v  1 e 1 0 ]
@@ -2142,13 +2467,13 @@ CONCEALED 5
 "77
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "79
 } 0
 "51
 [v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "53
 } 0
 "79 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
@@ -2159,14 +2484,24 @@ CONCEALED 5
 "264
 [v _EUSART2_SetTxInterruptHandler EUSART2_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART2_SetTxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 12 ]
+[v EUSART2_SetTxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
 "266
 } 0
 "268
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 12 ]
+[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
 "270
+} 0
+"61 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp2.c
+[v _CCP2_Initialize CCP2_Initialize `(v  1 e 1 0 ]
+{
+"87
+} 0
+"61 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp1.c
+[v _CCP1_Initialize CCP1_Initialize `(v  1 e 1 0 ]
+{
+"88
 } 0
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
@@ -2176,72 +2511,72 @@ CONCEALED 5
 "307
 [v _ADCC_SetADTIInterruptHandler ADCC_SetADTIInterruptHandler `(v  1 e 1 0 ]
 {
-[v ADCC_SetADTIInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 12 ]
+[v ADCC_SetADTIInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "309
 } 0
 "321 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_updateHandler OLED_updateHandler `(v  1 e 1 0 ]
 {
 "353
-[v OLED_updateHandler@rev_id_str rev_id_str `[17]uc  1 a 17 182 ]
+[v OLED_updateHandler@rev_id_str rev_id_str `[17]uc  1 a 17 170 ]
 "347
-[v OLED_updateHandler@dev_id_str dev_id_str `[17]uc  1 a 17 165 ]
+[v OLED_updateHandler@dev_id_str dev_id_str `[17]uc  1 a 17 153 ]
 "702
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
 {
 "15
-[v strcpy@cp cp `*.39uc  1 a 2 19 ]
+[v strcpy@cp cp `*.39uc  1 a 2 7 ]
 "8
-[v strcpy@to to `*.39uc  1 p 2 15 ]
-[v strcpy@from from `*.34Cuc  1 p 2 17 ]
+[v strcpy@to to `*.39uc  1 p 2 3 ]
+[v strcpy@from from `*.34Cuc  1 p 2 5 ]
 "24
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S4065 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[s S4874 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "29
-[v sprintf@pb pb `S4065  1 a 5 158 ]
+[v sprintf@pb pb `S4874  1 a 5 146 ]
 "28
-[v sprintf@ap ap `[1]*.39v  1 a 2 156 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 144 ]
 "13
-[v sprintf@wh wh `*.39uc  1 p 2 144 ]
-[v sprintf@f f `*.32Cuc  1 p 2 146 ]
+[v sprintf@wh wh `*.39uc  1 p 2 132 ]
+[v sprintf@f f `*.32Cuc  1 p 2 134 ]
 "38
 } 0
 "466 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v __doprnt _doprnt `(i  1 e 2 0 ]
 {
 "1519
-[v __doprnt@idx idx `uc  1 a 1 102 ]
+[v __doprnt@idx idx `uc  1 a 1 90 ]
 "540
-[v __doprnt@val val `ul  1 a 4 133 ]
+[v __doprnt@val val `ul  1 a 4 121 ]
 "528
-[v __doprnt@fval fval `d  1 a 4 129 ]
-[u S4111 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[v __doprnt@fval fval `d  1 a 4 117 ]
+[u S4920 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
 "538
-[v __doprnt@tmpval tmpval `S4111  1 a 4 125 ]
+[v __doprnt@tmpval tmpval `S4920  1 a 4 113 ]
 "520
-[v __doprnt@flag flag `us  1 a 2 141 ]
+[v __doprnt@flag flag `us  1 a 2 129 ]
 "512
-[v __doprnt@prec prec `i  1 a 2 139 ]
+[v __doprnt@prec prec `i  1 a 2 127 ]
 "509
-[v __doprnt@width width `i  1 a 2 137 ]
+[v __doprnt@width width `i  1 a 2 125 ]
 "529
-[v __doprnt@eexp eexp `i  1 a 2 123 ]
+[v __doprnt@eexp eexp `i  1 a 2 111 ]
 "541
-[v __doprnt@len len `ui  1 a 2 121 ]
+[v __doprnt@len len `ui  1 a 2 109 ]
 "542
-[v __doprnt@cp cp `*.34Cuc  1 a 2 119 ]
+[v __doprnt@cp cp `*.34Cuc  1 a 2 107 ]
 "507
-[v __doprnt@c c `uc  1 a 1 143 ]
-[s S4065 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v __doprnt@c c `uc  1 a 1 131 ]
+[s S4874 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "466
-[v __doprnt@pb pb `*.39S4065  1 p 2 88 ]
-[v __doprnt@f f `*.34Cuc  1 p 2 90 ]
-[v __doprnt@ap ap `*.39*.39v  1 p 2 92 ]
+[v __doprnt@pb pb `*.39S4874  1 p 2 76 ]
+[v __doprnt@f f `*.34Cuc  1 p 2 78 ]
+[v __doprnt@ap ap `*.39*.39v  1 p 2 80 ]
 "1560
 } 0
 "433
@@ -2250,31 +2585,31 @@ CONCEALED 5
 [v scale@scl scl `c  1 a 1 wreg ]
 [v scale@scl scl `c  1 a 1 wreg ]
 "436
-[v scale@scl scl `c  1 a 1 59 ]
+[v scale@scl scl `c  1 a 1 47 ]
 "449
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 17 ]
-[v ___awmod@counter counter `uc  1 a 1 16 ]
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
 "7
-[v ___awmod@dividend dividend `i  1 p 2 12 ]
-[v ___awmod@divisor divisor `i  1 p 2 14 ]
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
 "34
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
-[v ___awdiv@quotient quotient `i  1 a 2 24 ]
+[v ___awdiv@quotient quotient `i  1 a 2 12 ]
 "11
-[v ___awdiv@sign sign `uc  1 a 1 23 ]
-[v ___awdiv@counter counter `uc  1 a 1 22 ]
+[v ___awdiv@sign sign `uc  1 a 1 11 ]
+[v ___awdiv@counter counter `uc  1 a 1 10 ]
 "7
-[v ___awdiv@dividend dividend `i  1 p 2 18 ]
-[v ___awdiv@divisor divisor `i  1 p 2 20 ]
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+[v ___awdiv@divisor divisor `i  1 p 2 8 ]
 "41
 } 0
 "182 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
@@ -2283,7 +2618,7 @@ CONCEALED 5
 [v putch@txData txData `uc  1 a 1 wreg ]
 [v putch@txData txData `uc  1 a 1 wreg ]
 "184
-[v putch@txData txData `uc  1 a 1 13 ]
+[v putch@txData txData `uc  1 a 1 1 ]
 "185
 } 0
 "153
@@ -2291,7 +2626,7 @@ CONCEALED 5
 {
 [v EUSART2_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART2_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART2_Write@txData txData `uc  1 a 1 12 ]
+[v EUSART2_Write@txData txData `uc  1 a 1 0 ]
 "175
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\isdigit.c
@@ -2300,7 +2635,7 @@ CONCEALED 5
 [v isdigit@c c `uc  1 a 1 wreg ]
 [v isdigit@c c `uc  1 a 1 wreg ]
 "14
-[v isdigit@c c `uc  1 a 1 14 ]
+[v isdigit@c c `uc  1 a 1 2 ]
 "15
 } 0
 "417 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
@@ -2309,140 +2644,140 @@ CONCEALED 5
 [v fround@prec prec `uc  1 a 1 wreg ]
 [v fround@prec prec `uc  1 a 1 wreg ]
 "421
-[v fround@prec prec `uc  1 a 1 63 ]
+[v fround@prec prec `uc  1 a 1 51 ]
 "426
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwmod@counter counter `uc  1 a 1 16 ]
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
 "7
-[v ___lwmod@dividend dividend `ui  1 p 2 12 ]
-[v ___lwmod@divisor divisor `ui  1 p 2 14 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
 "25
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwdiv@quotient quotient `ui  1 a 2 22 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 10 ]
 "11
-[v ___lwdiv@counter counter `uc  1 a 1 21 ]
+[v ___lwdiv@counter counter `uc  1 a 1 9 ]
 "7
-[v ___lwdiv@dividend dividend `ui  1 p 2 17 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 19 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 5 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
 "30
 } 0
 "60 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\ftdivl.c
 [v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
 {
 "63
-[v __tdiv_to_l_@quot quot `ul  1 a 4 23 ]
+[v __tdiv_to_l_@quot quot `ul  1 a 4 11 ]
 "62
-[v __tdiv_to_l_@exp1 exp1 `uc  1 a 1 28 ]
-[v __tdiv_to_l_@cntr cntr `uc  1 a 1 27 ]
+[v __tdiv_to_l_@exp1 exp1 `uc  1 a 1 16 ]
+[v __tdiv_to_l_@cntr cntr `uc  1 a 1 15 ]
 "60
-[v __tdiv_to_l_@f1 f1 `f  1 p 4 12 ]
-[v __tdiv_to_l_@f2 f2 `f  1 p 4 16 ]
+[v __tdiv_to_l_@f1 f1 `f  1 p 4 0 ]
+[v __tdiv_to_l_@f2 f2 `f  1 p 4 4 ]
 "101
 } 0
 "60 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fldivl.c
 [v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
 {
 "63
-[v __div_to_l_@quot quot `ul  1 a 4 20 ]
+[v __div_to_l_@quot quot `ul  1 a 4 8 ]
 "62
-[v __div_to_l_@exp1 exp1 `uc  1 a 1 25 ]
-[v __div_to_l_@cntr cntr `uc  1 a 1 24 ]
+[v __div_to_l_@exp1 exp1 `uc  1 a 1 13 ]
+[v __div_to_l_@cntr cntr `uc  1 a 1 12 ]
 "60
-[v __div_to_l_@f1 f1 `d  1 p 4 12 ]
-[v __div_to_l_@f2 f2 `d  1 p 4 16 ]
+[v __div_to_l_@f1 f1 `d  1 p 4 0 ]
+[v __div_to_l_@f2 f2 `d  1 p 4 4 ]
 "101
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 16 ]
+[v ___wmul@product product `ui  1 a 2 4 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 12 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 14 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
 {
 "10
-[v ___llmod@counter counter `uc  1 a 1 33 ]
+[v ___llmod@counter counter `uc  1 a 1 21 ]
 "7
-[v ___llmod@dividend dividend `ul  1 p 4 25 ]
-[v ___llmod@divisor divisor `ul  1 p 4 29 ]
+[v ___llmod@dividend dividend `ul  1 p 4 13 ]
+[v ___llmod@divisor divisor `ul  1 p 4 17 ]
 "25
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 {
 "10
-[v ___lldiv@quotient quotient `ul  1 a 4 20 ]
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
 "11
-[v ___lldiv@counter counter `uc  1 a 1 24 ]
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
 "7
-[v ___lldiv@dividend dividend `ul  1 p 4 12 ]
-[v ___lldiv@divisor divisor `ul  1 p 4 16 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
 "30
 } 0
 "43 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 69 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 68 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 57 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 56 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 60 ]
+[v ___fltol@f1 f1 `d  1 p 4 48 ]
 "70
 } 0
 "245 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
 {
-[v ___flsub@b b `d  1 p 4 80 ]
-[v ___flsub@a a `d  1 p 4 84 ]
+[v ___flsub@b b `d  1 p 4 68 ]
+[v ___flsub@a a `d  1 p 4 72 ]
 "250
 } 0
 "10
 [v ___fladd __fladd `(d  1 e 4 0 ]
 {
 "17
-[v ___fladd@grs grs `uc  1 a 1 79 ]
+[v ___fladd@grs grs `uc  1 a 1 67 ]
 "15
-[v ___fladd@bexp bexp `uc  1 a 1 78 ]
+[v ___fladd@bexp bexp `uc  1 a 1 66 ]
 "16
-[v ___fladd@aexp aexp `uc  1 a 1 77 ]
+[v ___fladd@aexp aexp `uc  1 a 1 65 ]
 "13
-[v ___fladd@signs signs `uc  1 a 1 76 ]
+[v ___fladd@signs signs `uc  1 a 1 64 ]
 "10
-[v ___fladd@b b `d  1 p 4 64 ]
-[v ___fladd@a a `d  1 p 4 68 ]
+[v ___fladd@b b `d  1 p 4 52 ]
+[v ___fladd@a a `d  1 p 4 56 ]
 "237
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\flneg.c
 [v ___flneg __flneg `(d  1 e 4 0 ]
 {
-[v ___flneg@f1 f1 `d  1 p 4 12 ]
+[v ___flneg@f1 f1 `d  1 p 4 0 ]
 "20
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
 {
-[v ___flge@ff1 ff1 `d  1 p 4 12 ]
-[v ___flge@ff2 ff2 `d  1 p 4 16 ]
+[v ___flge@ff1 ff1 `d  1 p 4 0 ]
+[v ___flge@ff2 ff2 `d  1 p 4 4 ]
 "19
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 {
-[v ___fleq@ff1 ff1 `d  1 p 4 12 ]
-[v ___fleq@ff2 ff2 `d  1 p 4 16 ]
+[v ___fleq@ff1 ff1 `d  1 p 4 0 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 4 ]
 "12
 } 0
 "38 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.c
@@ -2454,14 +2789,14 @@ CONCEALED 5
 [v _getMinorRevisionID getMinorRevisionID `(uc  1 e 1 0 ]
 {
 "26
-[v getMinorRevisionID@REVID_RAW REVID_RAW `ui  1 a 2 23 ]
+[v getMinorRevisionID@REVID_RAW REVID_RAW `ui  1 a 2 11 ]
 "31
 } 0
 "12
 [v _getMajorRevisionID getMajorRevisionID `(uc  1 e 1 0 ]
 {
 "15
-[v getMajorRevisionID@REVID_RAW REVID_RAW `ui  1 a 2 26 ]
+[v getMajorRevisionID@REVID_RAW REVID_RAW `ui  1 a 2 14 ]
 "20
 } 0
 "4
@@ -2472,13 +2807,13 @@ CONCEALED 5
 "71 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/memory.c
 [v _FLASH_ReadWord FLASH_ReadWord `(ui  1 e 2 0 ]
 {
-[v FLASH_ReadWord@flashAddr flashAddr `ul  1 p 4 16 ]
+[v FLASH_ReadWord@flashAddr flashAddr `ul  1 p 4 4 ]
 "74
 } 0
 "59
 [v _FLASH_ReadByte FLASH_ReadByte `(uc  1 e 1 0 ]
 {
-[v FLASH_ReadByte@flashAddr flashAddr `ul  1 p 4 12 ]
+[v FLASH_ReadByte@flashAddr flashAddr `ul  1 p 4 0 ]
 "69
 } 0
 "118 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
@@ -2489,105 +2824,105 @@ CONCEALED 5
 "121
 [v getCauseOfResetStringSmall@strings strings `[9]*.32uc  1 s 18 strings ]
 "134
-[v getCauseOfResetStringSmall@r r `E9577  1 a 1 14 ]
+[v getCauseOfResetStringSmall@r r `E9577  1 a 1 2 ]
 "146
 } 0
-"291 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"292 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
 {
-"303
-[v OLED_UpdateFromRAMBuffer@char_index_3604 char_index `uc  1 a 1 50 ]
-"300
-[v OLED_UpdateFromRAMBuffer@char_index_3603 char_index `uc  1 a 1 49 ]
-"297
-[v OLED_UpdateFromRAMBuffer@char_index_3602 char_index `uc  1 a 1 48 ]
-"294
-[v OLED_UpdateFromRAMBuffer@char_index char_index `uc  1 a 1 47 ]
+"304
+[v OLED_UpdateFromRAMBuffer@char_index_3734 char_index `uc  1 a 1 38 ]
+"301
+[v OLED_UpdateFromRAMBuffer@char_index_3733 char_index `uc  1 a 1 37 ]
+"298
+[v OLED_UpdateFromRAMBuffer@char_index_3732 char_index `uc  1 a 1 36 ]
+"295
+[v OLED_UpdateFromRAMBuffer@char_index char_index `uc  1 a 1 35 ]
 "317
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "6
-[v strlen@cp cp `*.39Cuc  1 a 2 14 ]
+[v strlen@cp cp `*.39Cuc  1 a 2 2 ]
 "4
-[v strlen@s s `*.39Cuc  1 p 2 12 ]
+[v strlen@s s `*.39Cuc  1 p 2 0 ]
 "13
 } 0
-"201 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"202 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_YX OLED_YX `(v  1 e 1 0 ]
 {
 [v OLED_YX@Row Row `uc  1 a 1 wreg ]
 [v OLED_YX@Row Row `uc  1 a 1 wreg ]
-[v OLED_YX@Column Column `uc  1 p 1 32 ]
-"203
-[v OLED_YX@Row Row `uc  1 a 1 36 ]
-"207
+[v OLED_YX@Column Column `uc  1 p 1 20 ]
+"204
+[v OLED_YX@Row Row `uc  1 a 1 24 ]
+"208
 } 0
-"259
+"260
 [v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
 {
-[v OLED_WriteString@s s `*.34uc  1 p 2 45 ]
-"268
+[v OLED_WriteString@s s `*.34uc  1 p 2 33 ]
+"269
 } 0
-"171
+"172
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
 {
-"199
+"200
 } 0
-"119
+"120
 [v _OLED_Command OLED_Command `(v  1 e 1 0 ]
 {
 [v OLED_Command@temp temp `uc  1 a 1 wreg ]
-"123
-[v OLED_Command@data_array data_array `[2]uc  1 a 2 30 ]
-"119
-[v OLED_Command@temp temp `uc  1 a 1 wreg ]
 "124
-[v OLED_Command@temp temp `uc  1 a 1 28 ]
-"143
+[v OLED_Command@data_array data_array `[2]uc  1 a 2 18 ]
+"120
+[v OLED_Command@temp temp `uc  1 a 1 wreg ]
+"125
+[v OLED_Command@temp temp `uc  1 a 1 16 ]
+"144
 } 0
-"244
+"245
 [v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
 {
-"248
-[v OLED_Clear@col col `ui  1 a 2 47 ]
-"246
-[v OLED_Clear@row row `ui  1 a 2 45 ]
-"257
+"249
+[v OLED_Clear@col col `ui  1 a 2 35 ]
+"247
+[v OLED_Clear@row row `ui  1 a 2 33 ]
+"258
 } 0
-"209
+"210
 [v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
 {
 [v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
-"219
-[v OLED_PutChar@data_array data_array `[9]uc  1 a 9 32 ]
-"223
-[v OLED_PutChar@input_base input_base `*.32Cuc  1 a 2 41 ]
-"209
+"220
+[v OLED_PutChar@data_array data_array `[9]uc  1 a 9 20 ]
+"224
+[v OLED_PutChar@input_base input_base `*.32Cuc  1 a 2 29 ]
+"210
 [v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
-"211
-[v OLED_PutChar@ch ch `uc  1 a 1 44 ]
-"242
+"212
+[v OLED_PutChar@ch ch `uc  1 a 1 32 ]
+"243
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 [v _memmove memmove `(*.39v  1 e 2 0 ]
 {
 "17
-[v memmove@s s `*.32Cuc  1 a 2 22 ]
+[v memmove@s s `*.32Cuc  1 a 2 10 ]
 "15
-[v memmove@d d `*.39uc  1 a 2 20 ]
+[v memmove@d d `*.39uc  1 a 2 8 ]
 "8
-[v memmove@d1 d1 `*.39v  1 p 2 12 ]
-[v memmove@s1 s1 `*.32Cv  1 p 2 14 ]
-[v memmove@n n `ui  1 p 2 16 ]
+[v memmove@d1 d1 `*.39v  1 p 2 0 ]
+[v memmove@s1 s1 `*.32Cv  1 p 2 2 ]
+[v memmove@n n `ui  1 p 2 4 ]
 "37
 } 0
 "13 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
 [v _LM73TempSensorInitialize LM73TempSensorInitialize `(v  1 e 1 0 ]
 {
 "23
-[v LM73TempSensorInitialize@output_data_array output_data_array `[2]uc  1 a 2 28 ]
+[v LM73TempSensorInitialize@output_data_array output_data_array `[2]uc  1 a 2 16 ]
 "99
 } 0
 "102
@@ -2599,9 +2934,9 @@ CONCEALED 5
 [v _LM73Convert LM73Convert `(v  1 e 1 0 ]
 {
 "186
-[v LM73Convert@Ambient_Conv Ambient_Conv `ui  1 a 2 58 ]
-[v LM73Convert@POS5_Conv POS5_Conv `ui  1 a 2 56 ]
-[v LM73Convert@QI_Conv QI_Conv `ui  1 a 2 54 ]
+[v LM73Convert@Ambient_Conv Ambient_Conv `ui  1 a 2 46 ]
+[v LM73Convert@POS5_Conv POS5_Conv `ui  1 a 2 44 ]
+[v LM73Convert@QI_Conv QI_Conv `ui  1 a 2 42 ]
 "246
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
@@ -2609,85 +2944,85 @@ CONCEALED 5
 {
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 22 ]
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
 "12
-[v ___xxtofl@exp exp `uc  1 a 1 21 ]
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
 "10
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 12 ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
 "15
-[v ___xxtofl@sign sign `uc  1 a 1 20 ]
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S4449 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5258 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S4454 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S4457 . 4 `l 1 i 4 0 `d 1 f 4 0 `S4449 1 fAsBytes 4 0 `S4454 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S4457  1 a 4 45 ]
+[s S5263 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5266 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5258 1 fAsBytes 4 0 `S5263 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S5266  1 a 4 33 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 40 ]
-[s S4525 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 28 ]
+[s S5334 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S4528 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S4525 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S4528  1 a 2 49 ]
+[u S5337 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5334 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S5337  1 a 2 37 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 44 ]
+[v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 39 ]
+[v ___flmul@aexp aexp `uc  1 a 1 27 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 38 ]
+[v ___flmul@sign sign `uc  1 a 1 26 ]
 "8
-[v ___flmul@b b `d  1 p 4 26 ]
-[v ___flmul@a a `d  1 p 4 30 ]
+[v ___flmul@b b `d  1 p 4 14 ]
+[v ___flmul@a a `d  1 p 4 18 ]
 "205
 } 0
 "601 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.c
 [v _I2C2_MasterWrite I2C2_MasterWrite `(v  1 e 1 0 ]
 {
 "602
-[v I2C2_MasterWrite@pdata pdata `*.39uc  1 p 2 21 ]
+[v I2C2_MasterWrite@pdata pdata `*.39uc  1 p 2 9 ]
 "603
-[v I2C2_MasterWrite@length length `uc  1 p 1 23 ]
+[v I2C2_MasterWrite@length length `uc  1 p 1 11 ]
 "604
-[v I2C2_MasterWrite@address address `ui  1 p 2 24 ]
+[v I2C2_MasterWrite@address address `ui  1 p 2 12 ]
 "605
-[v I2C2_MasterWrite@pflag pflag `*.39E9433  1 p 2 26 ]
-[s S2035 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
+[v I2C2_MasterWrite@pflag pflag `*.39E9433  1 p 2 14 ]
+[s S2094 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
 "607
-[v I2C2_MasterWrite@trBlock trBlock `S2035  1 s 5 trBlock ]
+[v I2C2_MasterWrite@trBlock trBlock `S2094  1 s 5 trBlock ]
 "620
 } 0
 "722
 [v _I2C2_MasterWriteTRBBuild I2C2_MasterWriteTRBBuild `(v  1 e 1 0 ]
 {
-[s S2035 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
+[s S2094 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
 "723
-[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.39S2035  1 p 2 12 ]
+[v I2C2_MasterWriteTRBBuild@ptrb ptrb `*.39S2094  1 p 2 0 ]
 "724
-[v I2C2_MasterWriteTRBBuild@pdata pdata `*.39uc  1 p 2 14 ]
+[v I2C2_MasterWriteTRBBuild@pdata pdata `*.39uc  1 p 2 2 ]
 "725
-[v I2C2_MasterWriteTRBBuild@length length `uc  1 p 1 16 ]
+[v I2C2_MasterWriteTRBBuild@length length `uc  1 p 1 4 ]
 "726
-[v I2C2_MasterWriteTRBBuild@address address `ui  1 p 2 17 ]
+[v I2C2_MasterWriteTRBBuild@address address `ui  1 p 2 5 ]
 "731
 } 0
 "622
 [v _I2C2_MasterRead I2C2_MasterRead `(v  1 e 1 0 ]
 {
 "623
-[v I2C2_MasterRead@pdata pdata `*.39uc  1 p 2 21 ]
+[v I2C2_MasterRead@pdata pdata `*.39uc  1 p 2 9 ]
 "624
-[v I2C2_MasterRead@length length `uc  1 p 1 23 ]
+[v I2C2_MasterRead@length length `uc  1 p 1 11 ]
 "625
-[v I2C2_MasterRead@address address `ui  1 p 2 24 ]
+[v I2C2_MasterRead@address address `ui  1 p 2 12 ]
 "626
-[v I2C2_MasterRead@pflag pflag `*.39E9433  1 p 2 26 ]
-[s S2035 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
+[v I2C2_MasterRead@pflag pflag `*.39E9433  1 p 2 14 ]
+[s S2094 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
 "628
-[v I2C2_MasterRead@trBlock trBlock `S2035  1 s 5 trBlock ]
+[v I2C2_MasterRead@trBlock trBlock `S2094  1 s 5 trBlock ]
 "642
 } 0
 "655
@@ -2696,13 +3031,13 @@ CONCEALED 5
 "656
 [v I2C2_MasterTRBInsert@count count `uc  1 a 1 wreg ]
 [v I2C2_MasterTRBInsert@count count `uc  1 a 1 wreg ]
-[s S2035 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
+[s S2094 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
 "657
-[v I2C2_MasterTRBInsert@ptrb_list ptrb_list `*.39S2035  1 p 2 12 ]
+[v I2C2_MasterTRBInsert@ptrb_list ptrb_list `*.39S2094  1 p 2 0 ]
 "658
-[v I2C2_MasterTRBInsert@pflag pflag `*.39E9433  1 p 2 14 ]
+[v I2C2_MasterTRBInsert@pflag pflag `*.39E9433  1 p 2 2 ]
 "662
-[v I2C2_MasterTRBInsert@count count `uc  1 a 1 17 ]
+[v I2C2_MasterTRBInsert@count count `uc  1 a 1 5 ]
 "707
 } 0
 "645
@@ -2713,21 +3048,21 @@ CONCEALED 5
 "709
 [v _I2C2_MasterReadTRBBuild I2C2_MasterReadTRBBuild `(v  1 e 1 0 ]
 {
-[s S2035 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
+[s S2094 . 5 `ui 1 address 2 0 `uc 1 length 1 2 `*.39uc 1 pbuffer 2 3 ]
 "710
-[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.39S2035  1 p 2 12 ]
+[v I2C2_MasterReadTRBBuild@ptrb ptrb `*.39S2094  1 p 2 0 ]
 "711
-[v I2C2_MasterReadTRBBuild@pdata pdata `*.39uc  1 p 2 14 ]
+[v I2C2_MasterReadTRBBuild@pdata pdata `*.39uc  1 p 2 2 ]
 "712
-[v I2C2_MasterReadTRBBuild@length length `uc  1 p 1 16 ]
+[v I2C2_MasterReadTRBBuild@length length `uc  1 p 1 4 ]
 "713
-[v I2C2_MasterReadTRBBuild@address address `ui  1 p 2 17 ]
+[v I2C2_MasterReadTRBBuild@address address `ui  1 p 2 5 ]
 "720
 } 0
-"120 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
+"126 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
 {
-"155
+"169
 } 0
 "164 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr3.c
 [v _TMR3_ISR TMR3_ISR `(v  1 e 1 0 ]
@@ -2765,10 +3100,10 @@ CONCEALED 5
 {
 "175
 } 0
-"132 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.c
+"135 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.c
 [v _ADC_acquisitionTimerHandler ADC_acquisitionTimerHandler `(v  1 e 1 0 ]
 {
-"148
+"151
 } 0
 "182 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr2.c
 [v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
@@ -2881,10 +3216,112 @@ CONCEALED 5
 {
 "204
 } 0
-"95 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
+"89 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp2.c
+[v _CCP2_CaptureISR CCP2_CaptureISR `(v  1 e 1 0 ]
+{
+[s S4637 . 2 `uc 1 ccpr2l 1 0 `uc 1 ccpr2h 1 1 ]
+"92
+[s S4640 . 2 `ui 1 ccpr2_16Bit 2 0 ]
+[u S4642 CCPR2Reg_tag 2 `S4637 1 . 2 0 `S4640 1 . 2 0 ]
+[v CCP2_CaptureISR@module module `S4642  1 a 2 90 ]
+"103
+} 0
+"105
+[v _CCP2_CallBack CCP2_CallBack `(v  1 e 1 0 ]
+{
+[v CCP2_CallBack@capturedValue capturedValue `ui  1 p 2 88 ]
+"142
+} 0
+"90 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp1.c
+[v _CCP1_CaptureISR CCP1_CaptureISR `(v  1 e 1 0 ]
+{
+[s S4432 . 2 `uc 1 ccpr1l 1 0 `uc 1 ccpr1h 1 1 ]
+"92
+[s S4435 . 2 `ui 1 ccpr1_16Bit 2 0 ]
+[u S4437 CCPR1Reg_tag 2 `S4432 1 . 2 0 `S4435 1 . 2 0 ]
+[v CCP1_CaptureISR@module module `S4437  1 a 2 90 ]
+"103
+} 0
+"105
+[v _CCP1_CallBack CCP1_CallBack `(v  1 e 1 0 ]
+{
+[v CCP1_CallBack@capturedValue capturedValue `ui  1 p 2 88 ]
+"143
+} 0
+"19 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.c
+[v _freqMeasConvert freqMeasConvert `(v  1 e 1 0 ]
+{
+"26
+[v freqMeasConvert@qi_period qi_period `d  1 a 4 84 ]
+"22
+[v freqMeasConvert@pos5_period pos5_period `d  1 a 4 80 ]
+"30
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
+[v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v i1___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v i1___xxtofl@arg __xxtofl `ul  1 a 4 10 ]
+[v i1___xxtofl@exp __xxtofl `uc  1 a 1 9 ]
+[v i1___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v i1___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v i1___xxtofl@sign sign `uc  1 a 1 8 ]
+"44
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
+[v i1___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S5258 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5263 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5266 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5258 1 fAsBytes 4 0 `S5263 1 fAsWords 4 0 ]
+[v i1___flmul@prod __flmul `S5266  1 a 4 74 ]
+[v i1___flmul@grs __flmul `ul  1 a 4 68 ]
+[s S5334 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S5337 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5334 1 nAsBytes 2 0 ]
+[v i1___flmul@temp __flmul `S5337  1 a 2 78 ]
+[v i1___flmul@bexp __flmul `uc  1 a 1 73 ]
+[v i1___flmul@aexp __flmul `uc  1 a 1 72 ]
+[v i1___flmul@sign __flmul `uc  1 a 1 67 ]
+[v i1___flmul@b b `d  1 p 4 55 ]
+[v i1___flmul@a a `d  1 p 4 59 ]
+"205
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v i1___fladd __fladd `(d  1 e 4 0 ]
+{
+[v i1___fladd@grs __fladd `uc  1 a 1 29 ]
+[v i1___fladd@bexp __fladd `uc  1 a 1 28 ]
+[v i1___fladd@aexp __fladd `uc  1 a 1 27 ]
+[v i1___fladd@signs __fladd `uc  1 a 1 26 ]
+[v i1___fladd@b b `d  1 p 4 14 ]
+[v i1___fladd@a a `d  1 p 4 18 ]
+"237
+} 0
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 49 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 42 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 47 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 54 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 53 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 46 ]
+"11
+[v ___fldiv@b b `d  1 p 4 30 ]
+[v ___fldiv@a a `d  1 p 4 34 ]
+"185
+} 0
+"101 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
 {
-"118
+"124
 } 0
 "121 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
@@ -2896,40 +3333,40 @@ CONCEALED 5
 {
 "141
 } 0
-"18 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"20 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _heartbeatTimerHandler heartbeatTimerHandler `(v  1 e 1 0 ]
 {
-"33
+"39
 } 0
-"142 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
+"144 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"154
+"156
 } 0
-"189
+"191
 [v _IOCBF3_ISR IOCBF3_ISR `(v  1 e 1 0 ]
 {
-"199
+"201
 } 0
-"211
+"213
 [v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"214
+"216
 } 0
 "79 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.c
 [v _QIChargeIOCHandler QIChargeIOCHandler `(v  1 e 1 0 ]
 {
 "90
 } 0
-"159 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
+"161 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
 [v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
 {
-"169
+"171
 } 0
-"181
+"183
 [v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"184
+"186
 } 0
 "67 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.c
 [v _QIIdleIOCHandler QIIdleIOCHandler `(v  1 e 1 0 ]
@@ -2960,8 +3397,8 @@ CONCEALED 5
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
 [v i2_printf printf `(i  1 e 2 0 ]
 {
-[s S4065 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-[v i2printf@pb printf `S4065  1 a 5 72 ]
+[s S4874 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v i2printf@pb printf `S4874  1 a 5 72 ]
 [v i2printf@ap printf `[1]*.39v  1 a 2 70 ]
 [v i2printf@f f `*.34Cuc  1 p 2 68 ]
 "28
@@ -2971,8 +3408,8 @@ CONCEALED 5
 {
 [v i2__doprnt@val _doprnt `ul  1 a 4 57 ]
 [v i2__doprnt@fval _doprnt `d  1 a 4 53 ]
-[u S4111 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
-[v i2__doprnt@tmpval _doprnt `S4111  1 a 4 49 ]
+[u S4920 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[v i2__doprnt@tmpval _doprnt `S4920  1 a 4 49 ]
 [v i2__doprnt@flag _doprnt `us  1 a 2 65 ]
 [v i2__doprnt@prec _doprnt `i  1 a 2 63 ]
 [v i2__doprnt@width _doprnt `i  1 a 2 61 ]
@@ -2981,8 +3418,8 @@ CONCEALED 5
 [v i2__doprnt@cp _doprnt `*.34Cuc  1 a 2 43 ]
 [v i2__doprnt@c _doprnt `uc  1 a 1 67 ]
 [v i2__doprnt@idx _doprnt `uc  1 a 1 26 ]
-[s S4065 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-[v i2__doprnt@pb pb `*.39S4065  1 p 2 12 ]
+[s S4874 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v i2__doprnt@pb pb `*.39S4874  1 p 2 12 ]
 [v i2__doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v i2__doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1560
@@ -3141,12 +3578,12 @@ CONCEALED 5
 [v _ADC_PostProcessingHandler ADC_PostProcessingHandler `(v  1 e 1 0 ]
 {
 "89
-[v ADC_PostProcessingHandler@i_2966 i `uc  1 a 1 26 ]
+[v ADC_PostProcessingHandler@i_3066 i `uc  1 a 1 26 ]
 "70
 [v ADC_PostProcessingHandler@i i `uc  1 a 1 25 ]
 "19
 [v ADC_PostProcessingHandler@current_adc_channel current_adc_channel `E9492  1 a 1 24 ]
-"128
+"131
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v i2___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -3181,14 +3618,14 @@ CONCEALED 5
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v i2___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S4449 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S4454 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S4457 . 4 `l 1 i 4 0 `d 1 f 4 0 `S4449 1 fAsBytes 4 0 `S4454 1 fAsWords 4 0 ]
-[v i2___flmul@prod __flmul `S4457  1 a 4 62 ]
+[s S5258 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5263 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5266 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5258 1 fAsBytes 4 0 `S5263 1 fAsWords 4 0 ]
+[v i2___flmul@prod __flmul `S5266  1 a 4 62 ]
 [v i2___flmul@grs __flmul `ul  1 a 4 57 ]
-[s S4525 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S4528 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S4525 1 nAsBytes 2 0 ]
-[v i2___flmul@temp __flmul `S4528  1 a 2 66 ]
+[s S5334 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S5337 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5334 1 nAsBytes 2 0 ]
+[v i2___flmul@temp __flmul `S5337  1 a 2 66 ]
 [v i2___flmul@bexp __flmul `uc  1 a 1 61 ]
 [v i2___flmul@aexp __flmul `uc  1 a 1 56 ]
 [v i2___flmul@sign __flmul `uc  1 a 1 55 ]
@@ -3203,6 +3640,19 @@ CONCEALED 5
 [v i2___flge@ff2 ff2 `d  1 p 4 4 ]
 "19
 } 0
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v i2___fldiv __fldiv `(d  1 e 4 0 ]
+{
+[v i2___fldiv@grs __fldiv `ul  1 a 4 37 ]
+[v i2___fldiv@rem __fldiv `ul  1 a 4 30 ]
+[v i2___fldiv@new_exp __fldiv `i  1 a 2 35 ]
+[v i2___fldiv@aexp __fldiv `uc  1 a 1 42 ]
+[v i2___fldiv@bexp __fldiv `uc  1 a 1 41 ]
+[v i2___fldiv@sign __fldiv `uc  1 a 1 34 ]
+[v i2___fldiv@b b `d  1 p 4 18 ]
+[v i2___fldiv@a a `d  1 p 4 22 ]
+"185
+} 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fabs.c
 [v _fabs fabs `(d  1 e 4 0 ]
 {
@@ -3214,26 +3664,6 @@ CONCEALED 5
 {
 [v i2___flneg@f1 f1 `d  1 p 4 0 ]
 "20
-} 0
-"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 37 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 30 ]
-"20
-[v ___fldiv@new_exp new_exp `i  1 a 2 35 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 42 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 41 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 34 ]
-"11
-[v ___fldiv@b b `d  1 p 4 18 ]
-[v ___fldiv@a a `d  1 p 4 22 ]
-"185
 } 0
 "114 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr2.c
 [v _TMR2_StartTimer TMR2_StartTimer `(v  1 e 1 0 ]

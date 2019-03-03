@@ -3,7 +3,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [c E9492 0 1 4 5 60 61 62 63 .. ]
 [n E9492 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
-[s S1434 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 ]
+[s S1434 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1434 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
 "66
 [s S1435 `f 1 `f 1 `f 1 ]
@@ -11,11 +11,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9691 0 1 2 3 4 5 6 .. ]
 [n E9691 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9906 `(v ~T0 @X0 0 tf ]
-[v F9909 `(v ~T0 @X0 0 tf ]
+[v F9972 `(v ~T0 @X0 0 tf ]
+[v F9975 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
-[s S1438 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1438 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1444 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1444 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "280 mcc_generated_files/adcc.h
 [v _ADCC_StopConversion `(v ~T0 @X0 0 ef ]
 "12935 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
@@ -10837,13 +10837,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "63
 [v _adc_results `S1434 ~T0 @X0 1 e ]
 [; ;adc_postprocessing.h: 53: struct adc_results_t {
-[; ;adc_postprocessing.h: 55: double avss_adc_result;
-[; ;adc_postprocessing.h: 56: double fvr_adc_result;
-[; ;adc_postprocessing.h: 57: double pos5_adc_result;
-[; ;adc_postprocessing.h: 58: double pos12_adc_result;
-[; ;adc_postprocessing.h: 59: double pos12_isns_adc_result;
-[; ;adc_postprocessing.h: 60: double qi_isns_adc_result;
-[; ;adc_postprocessing.h: 61: double die_temp_adc_result;
+[; ;adc_postprocessing.h: 55: float avss_adc_result;
+[; ;adc_postprocessing.h: 56: float fvr_adc_result;
+[; ;adc_postprocessing.h: 57: float pos5_adc_result;
+[; ;adc_postprocessing.h: 58: float pos12_adc_result;
+[; ;adc_postprocessing.h: 59: float pos12_isns_adc_result;
+[; ;adc_postprocessing.h: 60: float qi_isns_adc_result;
+[; ;adc_postprocessing.h: 61: float die_temp_adc_result;
 [; ;adc_postprocessing.h: 63: } adc_results;
 "72
 [v _adc_calculations `S1435 ~T0 @X0 1 e ]
@@ -10853,8 +10853,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_postprocessing.h: 70: float efficiency;
 [; ;adc_postprocessing.h: 72: } adc_calculations;
 "75
-[v _pos12_isns_average_buffer `d ~T0 @X0 -> 16 `i e ]
-[; ;adc_postprocessing.h: 75: double pos12_isns_average_buffer[16];
+[v _pos12_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
+[; ;adc_postprocessing.h: 75: float pos12_isns_average_buffer[16];
 "77
 [v _pos12_isns_average_index `uc ~T0 @X0 1 e ]
 [i _pos12_isns_average_index
@@ -10862,8 +10862,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;adc_postprocessing.h: 77: uint8_t pos12_isns_average_index = 0;
 "80
-[v _qi_isns_average_buffer `d ~T0 @X0 -> 16 `i e ]
-[; ;adc_postprocessing.h: 80: double qi_isns_average_buffer[16];
+[v _qi_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
+[; ;adc_postprocessing.h: 80: float qi_isns_average_buffer[16];
 "82
 [v _qi_isns_average_index `uc ~T0 @X0 1 e ]
 [i _qi_isns_average_index
@@ -10871,14 +10871,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;adc_postprocessing.h: 82: uint8_t qi_isns_average_index = 0;
 "85
-[v _adc_result_scaling `d ~T0 @X0 1 e ]
-[; ;adc_postprocessing.h: 85: double adc_result_scaling;
+[v _adc_result_scaling `f ~T0 @X0 1 e ]
+[; ;adc_postprocessing.h: 85: float adc_result_scaling;
 "88
 [v _temp_adc_offset `Cf ~T0 @X0 1 e ]
 [i _temp_adc_offset
--> .436.115 `f
+-> .376.115 `f
 ]
-[; ;adc_postprocessing.h: 88: const float temp_adc_offset = 436.115;
+[; ;adc_postprocessing.h: 88: const float temp_adc_offset = 376.115;
 [; ;adc_postprocessing.h: 92: void ADC_PostProcessingHandler(void);
 [; ;adc_postprocessing.h: 96: void ADC_acquisitionTimerHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
@@ -11001,6 +11001,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;fvr.h: 93: void FVR_Initialize(void);
+[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp1.h: 80: typedef union CCPR1Reg_tag
+[; ;ccp1.h: 81: {
+[; ;ccp1.h: 82: struct
+[; ;ccp1.h: 83: {
+[; ;ccp1.h: 84: uint8_t ccpr1l;
+[; ;ccp1.h: 85: uint8_t ccpr1h;
+[; ;ccp1.h: 86: };
+[; ;ccp1.h: 87: struct
+[; ;ccp1.h: 88: {
+[; ;ccp1.h: 89: uint16_t ccpr1_16Bit;
+[; ;ccp1.h: 90: };
+[; ;ccp1.h: 91: } CCP1_PERIOD_REG_T ;
+[; ;ccp1.h: 123: void CCP1_Initialize(void);
+[; ;ccp1.h: 139: void CCP1_CaptureISR(void);
+[; ;ccp1.h: 160: void CCP1_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr5.h: 100: void TMR5_Initialize(void);
+[; ;tmr5.h: 129: void TMR5_StartTimer(void);
+[; ;tmr5.h: 161: void TMR5_StopTimer(void);
+[; ;tmr5.h: 196: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 235: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 271: void TMR5_Reload(void);
+[; ;tmr5.h: 310: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 349: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 387: bool TMR5_HasOverflowOccured(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr3.h: 100: void TMR3_Initialize(void);
 [; ;tmr3.h: 129: void TMR3_StartTimer(void);
 [; ;tmr3.h: 161: void TMR3_StopTimer(void);
@@ -11014,6 +11059,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 387: bool TMR1_HasOverflowOccured(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr0.h: 100: void TMR0_Initialize(void);
 [; ;tmr0.h: 129: void TMR0_StartTimer(void);
 [; ;tmr0.h: 161: void TMR0_StopTimer(void);
@@ -11025,8 +11080,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 328: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;fvr.h: 93: void FVR_Initialize(void);
-[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
+[; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
+[; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+[; ;memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+[; ;memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
+[; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+[; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
+[; ;memory.h: 277: void MEMORY_Tasks(void);
 [; ;ext_int.h: 406: void EXT_INT_Initialize(void);
 [; ;ext_int.h: 428: void INT1_ISR(void);
 [; ;ext_int.h: 452: void INT1_CallBack(void);
@@ -11038,15 +11099,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.h: 588: void INT2_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;ext_int.h: 612: extern void (*INT2_InterruptHandler)(void);
 [; ;ext_int.h: 636: void INT2_DefaultInterruptHandler(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
-[; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
-[; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-[; ;memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-[; ;memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
-[; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-[; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
-[; ;memory.h: 277: void MEMORY_Tasks(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -11080,10 +11132,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9906 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9972 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9909 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9975 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11095,11 +11147,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 78: void SYSTEM_Initialize(void);
-[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 104: void PMD_Initialize(void);
+[; ;mcc.h: 82: void SYSTEM_Initialize(void);
+[; ;mcc.h: 95: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 108: void PMD_Initialize(void);
 "52 error_handling.h
-[v _error_handler `S1438 ~T0 @X0 1 e ]
+[v _error_handler `S1444 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11132,273 +11184,278 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _current_adc_channel -> _ADPCH `E9492 ]
 [; ;adc_postprocessing.c: 22: switch (current_adc_channel) {
 "22
-[e $U 1441  ]
+[e $U 1447  ]
 {
 [; ;adc_postprocessing.c: 24: case channel_VSS:
 "24
-[e :U 1442 ]
+[e :U 1448 ]
 [; ;adc_postprocessing.c: 26: adc_results.avss_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0);
 "26
-[e = . _adc_results 0 * -> ( _ADCC_GetConversionResult ..  `d / .5.0 .1023.0 ]
+[e = . _adc_results 0 -> * -> ( _ADCC_GetConversionResult ..  `d / .5.0 .1023.0 `f ]
 [; ;adc_postprocessing.c: 28: next_adc_channel = channel_FVR_buf1;
 "28
 [e = _next_adc_channel . `E9492 7 ]
 [; ;adc_postprocessing.c: 30: break;
 "30
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 33: case channel_FVR_buf1:
 "33
-[e :U 1443 ]
+[e :U 1449 ]
 [; ;adc_postprocessing.c: 35: adc_results.fvr_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0) + adc_results.avss_adc_result;
 "35
-[e = . _adc_results 1 + * -> ( _ADCC_GetConversionResult ..  `d / .5.0 .1023.0 . _adc_results 0 ]
+[e = . _adc_results 1 -> + * -> ( _ADCC_GetConversionResult ..  `d / .5.0 .1023.0 -> . _adc_results 0 `d `f ]
 [; ;adc_postprocessing.c: 36: adc_result_scaling = 4.096/adc_results.fvr_adc_result;
 "36
-[e = _adc_result_scaling / .4.096 . _adc_results 1 ]
+[e = _adc_result_scaling -> / .4.096 -> . _adc_results 1 `d `f ]
 [; ;adc_postprocessing.c: 38: if (adc_results.fvr_adc_result > 5.0 || adc_results.fvr_adc_result < 3.9) {
 "38
-[e $ ! || > . _adc_results 1 .5.0 < . _adc_results 1 .3.9 1444  ]
+[e $ ! || > -> . _adc_results 1 `d .5.0 < -> . _adc_results 1 `d .3.9 1450  ]
 {
 [; ;adc_postprocessing.c: 40: error_handler.FVR_ADC_error_flag = 1;
 "40
 [e = . _error_handler 0 -> -> 1 `i `uc ]
 "42
 }
-[e :U 1444 ]
+[e :U 1450 ]
 [; ;adc_postprocessing.c: 42: }
 [; ;adc_postprocessing.c: 44: next_adc_channel = POS5_ADC;
 "44
 [e = _next_adc_channel . `E9492 2 ]
 [; ;adc_postprocessing.c: 46: break;
 "46
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 48: case POS5_ADC:
 "48
-[e :U 1445 ]
+[e :U 1451 ]
 [; ;adc_postprocessing.c: 49: adc_results.pos5_adc_result = (((ADCC_GetFilterValue()) * (5.0/1023.0)) * 2.0 - adc_results.avss_adc_result) * adc_result_scaling;
 "49
-[e = . _adc_results 2 * - * * -> ( _ADCC_GetFilterValue ..  `d / .5.0 .1023.0 .2.0 . _adc_results 0 _adc_result_scaling ]
+[e = . _adc_results 2 -> * - * * -> ( _ADCC_GetFilterValue ..  `d / .5.0 .1023.0 .2.0 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
 [; ;adc_postprocessing.c: 51: next_adc_channel = POS12_ADC;
 "51
 [e = _next_adc_channel . `E9492 0 ]
 [; ;adc_postprocessing.c: 52: break;
 "52
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 54: case POS12_ADC:
 "54
-[e :U 1446 ]
+[e :U 1452 ]
 [; ;adc_postprocessing.c: 55: adc_results.pos12_adc_result = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 2.96078 - adc_results.avss_adc_result) * adc_result_scaling;
 "55
-[e = . _adc_results 3 * - * * -> ( _ADCC_GetFilterValue ..  `d / . _adc_results 2 .1023.0 .2.96078 . _adc_results 0 _adc_result_scaling ]
+[e = . _adc_results 3 -> * - * * -> ( _ADCC_GetFilterValue ..  `d / -> . _adc_results 2 `d .1023.0 .2.96078 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
 [; ;adc_postprocessing.c: 57: next_adc_channel = POS12_ISNS_ADC;
 "57
 [e = _next_adc_channel . `E9492 1 ]
 [; ;adc_postprocessing.c: 58: break;
 "58
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 60: case POS12_ISNS_ADC:
 "60
-[e :U 1447 ]
+[e :U 1453 ]
 [; ;adc_postprocessing.c: 62: pos12_isns_average_buffer[pos12_isns_average_index] = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 0.501002004 - adc_results.avss_adc_result) * adc_result_scaling;
 "62
-[e = *U + &U _pos12_isns_average_buffer * -> _pos12_isns_average_index `ux -> -> # *U &U _pos12_isns_average_buffer `ui `ux * - * * -> ( _ADCC_GetFilterValue ..  `d / . _adc_results 2 .1023.0 .0.501002004 . _adc_results 0 _adc_result_scaling ]
+[e = *U + &U _pos12_isns_average_buffer * -> _pos12_isns_average_index `ux -> -> # *U &U _pos12_isns_average_buffer `ui `ux -> * - * * -> ( _ADCC_GetFilterValue ..  `d / -> . _adc_results 2 `d .1023.0 .0.501002004 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
 [; ;adc_postprocessing.c: 63: pos12_isns_average_index++;
 "63
 [e ++ _pos12_isns_average_index -> -> 1 `i `uc ]
 [; ;adc_postprocessing.c: 66: if (pos12_isns_average_index == 16) {
 "66
-[e $ ! == -> _pos12_isns_average_index `i -> 16 `i 1448  ]
+[e $ ! == -> _pos12_isns_average_index `i -> 16 `i 1454  ]
 {
 [; ;adc_postprocessing.c: 67: pos12_isns_average_index = 0;
 "67
 [e = _pos12_isns_average_index -> -> 0 `i `uc ]
 [; ;adc_postprocessing.c: 69: adc_results.pos12_isns_adc_result = 0.0;
 "69
-[e = . _adc_results 4 .0.0 ]
+[e = . _adc_results 4 -> .0.0 `f ]
 [; ;adc_postprocessing.c: 70: for (uint8_t i = 0; i < 16; i++) {
 "70
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1449  ]
-[e $U 1450  ]
-[e :U 1449 ]
+[e $ < -> _i `i -> 16 `i 1455  ]
+[e $U 1456  ]
+[e :U 1455 ]
 {
 [; ;adc_postprocessing.c: 71: adc_results.pos12_isns_adc_result += fabs(pos12_isns_average_buffer[i]);
 "71
-[e =+ . _adc_results 4 ( _fabs (1 *U + &U _pos12_isns_average_buffer * -> _i `ux -> -> # *U &U _pos12_isns_average_buffer `ui `ux ]
+[e =+ . _adc_results 4 -> ( _fabs (1 -> *U + &U _pos12_isns_average_buffer * -> _i `ux -> -> # *U &U _pos12_isns_average_buffer `ui `ux `d `f ]
 "72
 }
 "70
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1449  ]
-[e :U 1450 ]
+[e $ < -> _i `i -> 16 `i 1455  ]
+[e :U 1456 ]
 "72
 }
 [; ;adc_postprocessing.c: 72: }
 [; ;adc_postprocessing.c: 73: adc_results.pos12_isns_adc_result /= (float) 16;
 "73
-[e =/ . _adc_results 4 -> -> -> 16 `i `f `d ]
+[e =/ . _adc_results 4 -> -> -> 16 `i `f `f ]
 "74
 }
-[e :U 1448 ]
+[e :U 1454 ]
 [; ;adc_postprocessing.c: 74: }
 [; ;adc_postprocessing.c: 76: next_adc_channel = QI_ISNS_ADC;
 "76
 [e = _next_adc_channel . `E9492 3 ]
 [; ;adc_postprocessing.c: 77: break;
 "77
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 79: case QI_ISNS_ADC:
 "79
-[e :U 1452 ]
+[e :U 1458 ]
 [; ;adc_postprocessing.c: 81: qi_isns_average_buffer[qi_isns_average_index] = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 1.004016064 - adc_results.avss_adc_result) * adc_result_scaling;
 "81
-[e = *U + &U _qi_isns_average_buffer * -> _qi_isns_average_index `ux -> -> # *U &U _qi_isns_average_buffer `ui `ux * - * * -> ( _ADCC_GetFilterValue ..  `d / . _adc_results 2 .1023.0 .1.004016064 . _adc_results 0 _adc_result_scaling ]
+[e = *U + &U _qi_isns_average_buffer * -> _qi_isns_average_index `ux -> -> # *U &U _qi_isns_average_buffer `ui `ux -> * - * * -> ( _ADCC_GetFilterValue ..  `d / -> . _adc_results 2 `d .1023.0 .1.004016064 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
 [; ;adc_postprocessing.c: 82: qi_isns_average_index++;
 "82
 [e ++ _qi_isns_average_index -> -> 1 `i `uc ]
 [; ;adc_postprocessing.c: 85: if (qi_isns_average_index == 16) {
 "85
-[e $ ! == -> _qi_isns_average_index `i -> 16 `i 1453  ]
+[e $ ! == -> _qi_isns_average_index `i -> 16 `i 1459  ]
 {
 [; ;adc_postprocessing.c: 86: qi_isns_average_index = 0;
 "86
 [e = _qi_isns_average_index -> -> 0 `i `uc ]
 [; ;adc_postprocessing.c: 88: adc_results.qi_isns_adc_result = 0.0;
 "88
-[e = . _adc_results 5 .0.0 ]
+[e = . _adc_results 5 -> .0.0 `f ]
 [; ;adc_postprocessing.c: 89: for (uint8_t i = 0; i < 16; i++) {
 "89
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1454  ]
-[e $U 1455  ]
-[e :U 1454 ]
+[e $ < -> _i `i -> 16 `i 1460  ]
+[e $U 1461  ]
+[e :U 1460 ]
 {
 [; ;adc_postprocessing.c: 90: adc_results.qi_isns_adc_result += fabs(qi_isns_average_buffer[i]);
 "90
-[e =+ . _adc_results 5 ( _fabs (1 *U + &U _qi_isns_average_buffer * -> _i `ux -> -> # *U &U _qi_isns_average_buffer `ui `ux ]
+[e =+ . _adc_results 5 -> ( _fabs (1 -> *U + &U _qi_isns_average_buffer * -> _i `ux -> -> # *U &U _qi_isns_average_buffer `ui `ux `d `f ]
 "91
 }
 "89
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1454  ]
-[e :U 1455 ]
+[e $ < -> _i `i -> 16 `i 1460  ]
+[e :U 1461 ]
 "91
 }
 [; ;adc_postprocessing.c: 91: }
 [; ;adc_postprocessing.c: 92: adc_results.qi_isns_adc_result /= (float) 16;
 "92
-[e =/ . _adc_results 5 -> -> -> 16 `i `f `d ]
+[e =/ . _adc_results 5 -> -> -> 16 `i `f `f ]
 "93
 }
-[e :U 1453 ]
+[e :U 1459 ]
 [; ;adc_postprocessing.c: 93: }
 [; ;adc_postprocessing.c: 95: next_adc_channel = channel_Temp;
 "95
 [e = _next_adc_channel . `E9492 5 ]
 [; ;adc_postprocessing.c: 96: break;
 "96
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 98: case channel_Temp:
 "98
-[e :U 1457 ]
+[e :U 1463 ]
 [; ;adc_postprocessing.c: 99: adc_results.die_temp_adc_result = ((0.659 - (5.0 / 4.0) * (1.0 - ADCC_GetFilterValue()/1023.0)) / .00132) - 40.0 + temp_adc_offset;
 "99
-[e = . _adc_results 6 + - / - .0.659 * / .5.0 .4.0 - .1.0 / -> ( _ADCC_GetFilterValue ..  `d .1023.0 .0.00132 .40.0 -> _temp_adc_offset `d ]
+[e = . _adc_results 6 -> + - / - .0.659 * / .5.0 .4.0 - .1.0 / -> ( _ADCC_GetFilterValue ..  `d .1023.0 .0.00132 .40.0 -> _temp_adc_offset `d `f ]
 [; ;adc_postprocessing.c: 101: next_adc_channel = channel_VSS;
 "101
 [e = _next_adc_channel . `E9492 4 ]
 [; ;adc_postprocessing.c: 102: break;
 "102
-[e $U 1440  ]
+[e $U 1446  ]
 [; ;adc_postprocessing.c: 106: default:
 "106
-[e :U 1458 ]
+[e :U 1464 ]
 [; ;adc_postprocessing.c: 107: error_handler.ADC_general_error_flag = 1;
 "107
 [e = . _error_handler 1 -> -> 1 `i `uc ]
 [; ;adc_postprocessing.c: 108: break;
 "108
-[e $U 1440  ]
+[e $U 1446  ]
 "110
 }
 [; ;adc_postprocessing.c: 110: }
-[e $U 1440  ]
+[e $U 1446  ]
 "22
-[e :U 1441 ]
-[e [\ _current_adc_channel , $ . `E9492 4 1442
- , $ . `E9492 7 1443
- , $ . `E9492 2 1445
- , $ . `E9492 0 1446
- , $ . `E9492 1 1447
- , $ . `E9492 3 1452
- , $ . `E9492 5 1457
- 1458 ]
+[e :U 1447 ]
+[e [\ _current_adc_channel , $ . `E9492 4 1448
+ , $ . `E9492 7 1449
+ , $ . `E9492 2 1451
+ , $ . `E9492 0 1452
+ , $ . `E9492 1 1453
+ , $ . `E9492 3 1458
+ , $ . `E9492 5 1463
+ 1464 ]
 "110
-[e :U 1440 ]
+[e :U 1446 ]
 [; ;adc_postprocessing.c: 112: if (ADCC_GetCurrentCountofConversions() != 255) {
 "112
-[e $ ! != -> ( _ADCC_GetCurrentCountofConversions ..  `i -> 255 `i 1459  ]
+[e $ ! != -> ( _ADCC_GetCurrentCountofConversions ..  `i -> 255 `i 1465  ]
 {
 [; ;adc_postprocessing.c: 113: error_handler.ADC_general_error_flag = 1;
 "113
 [e = . _error_handler 1 -> -> 1 `i `uc ]
 "114
 }
-[e :U 1459 ]
+[e :U 1465 ]
 [; ;adc_postprocessing.c: 114: }
 [; ;adc_postprocessing.c: 116: if (ADCC_HasAccumulatorOverflowed()) {
 "116
-[e $ ! != -> ( _ADCC_HasAccumulatorOverflowed ..  `i -> -> -> 0 `i `uc `i 1460  ]
+[e $ ! != -> ( _ADCC_HasAccumulatorOverflowed ..  `i -> -> -> 0 `i `uc `i 1466  ]
 {
 [; ;adc_postprocessing.c: 117: error_handler.ADC_general_error_flag = 1;
 "117
 [e = . _error_handler 1 -> -> 1 `i `uc ]
 "118
 }
-[e :U 1460 ]
+[e :U 1466 ]
 [; ;adc_postprocessing.c: 118: }
 [; ;adc_postprocessing.c: 121: adc_calculations.input_power = adc_results.pos12_adc_result * adc_results.pos12_isns_adc_result;
 "121
-[e = . _adc_calculations 0 -> * . _adc_results 3 . _adc_results 4 `f ]
+[e = . _adc_calculations 0 * . _adc_results 3 . _adc_results 4 ]
 [; ;adc_postprocessing.c: 122: adc_calculations.output_power = adc_results.pos5_adc_result * adc_results.qi_isns_adc_result;
 "122
-[e = . _adc_calculations 1 -> * . _adc_results 2 . _adc_results 5 `f ]
+[e = . _adc_calculations 1 * . _adc_results 2 . _adc_results 5 ]
 [; ;adc_postprocessing.c: 123: adc_calculations.efficiency = (adc_calculations.output_power / adc_calculations.input_power) * 100.0;
 "123
 [e = . _adc_calculations 2 -> * -> / . _adc_calculations 1 . _adc_calculations 0 `d .100.0 `f ]
-[; ;adc_postprocessing.c: 126: TMR2_StartTimer();
+[; ;adc_postprocessing.c: 126: if (adc_calculations.efficiency > 99.0) adc_calculations.efficiency = 99.0;
 "126
+[e $ ! > -> . _adc_calculations 2 `d .99.0 1467  ]
+[e = . _adc_calculations 2 -> .99.0 `f ]
+[e :U 1467 ]
+[; ;adc_postprocessing.c: 129: TMR2_StartTimer();
+"129
 [e ( _TMR2_StartTimer ..  ]
-[; ;adc_postprocessing.c: 128: }
-"128
-[e :UE 1439 ]
+[; ;adc_postprocessing.c: 131: }
+"131
+[e :UE 1445 ]
 }
-"132
+"135
 [v _ADC_acquisitionTimerHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;adc_postprocessing.c: 132: void ADC_acquisitionTimerHandler(void) {
+[; ;adc_postprocessing.c: 135: void ADC_acquisitionTimerHandler(void) {
 [e :U _ADC_acquisitionTimerHandler ]
 [f ]
-[; ;adc_postprocessing.c: 136: TMR2_StopTimer();
-"136
+[; ;adc_postprocessing.c: 139: TMR2_StopTimer();
+"139
 [e ( _TMR2_StopTimer ..  ]
-[; ;adc_postprocessing.c: 137: TMR2 = 0;
-"137
-[e = _TMR2 -> -> 0 `i `uc ]
-[; ;adc_postprocessing.c: 140: ADCC_DischargeSampleCapacitor();
+[; ;adc_postprocessing.c: 140: TMR2 = 0;
 "140
-[e ( _ADCC_DischargeSampleCapacitor ..  ]
-[; ;adc_postprocessing.c: 143: ADCC_ClearAccumulator();
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;adc_postprocessing.c: 143: ADCC_DischargeSampleCapacitor();
 "143
-[e ( _ADCC_ClearAccumulator ..  ]
-[; ;adc_postprocessing.c: 146: ADCC_StartConversion(next_adc_channel);
+[e ( _ADCC_DischargeSampleCapacitor ..  ]
+[; ;adc_postprocessing.c: 146: ADCC_ClearAccumulator();
 "146
+[e ( _ADCC_ClearAccumulator ..  ]
+[; ;adc_postprocessing.c: 149: ADCC_StartConversion(next_adc_channel);
+"149
 [e ( _ADCC_StartConversion (1 _next_adc_channel ]
-[; ;adc_postprocessing.c: 148: }
-"148
-[e :UE 1461 ]
+[; ;adc_postprocessing.c: 151: }
+"151
+[e :UE 1468 ]
 }

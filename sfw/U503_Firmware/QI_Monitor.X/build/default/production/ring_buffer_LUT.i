@@ -16333,6 +16333,206 @@ void I2C2_ISR ( void );
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 93 "mcc_generated_files/fvr.h"
+void FVR_Initialize(void);
+
+# 127
+bool FVR_IsOutputReady(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 72 "mcc_generated_files/adcc.h"
+typedef uint16_t adc_result_t;
+
+# 89
+typedef enum
+{
+POS12_ADC = 0x0,
+POS12_ISNS_ADC = 0x1,
+POS5_ADC = 0x4,
+QI_ISNS_ADC = 0x5,
+channel_VSS = 0x3C,
+channel_Temp = 0x3D,
+channel_DAC1 = 0x3E,
+channel_FVR_buf1 = 0x3F
+} adcc_channel_t;
+
+# 133
+void ADCC_Initialize(void);
+
+# 162
+void ADCC_StartConversion(adcc_channel_t channel);
+
+# 192
+bool ADCC_IsConversionDone();
+
+# 224
+adc_result_t ADCC_GetConversionResult(void);
+
+# 255
+adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
+
+# 280
+void ADCC_StopConversion(void);
+
+# 307
+void ADCC_SetStopOnInterrupt(void);
+
+# 332
+void ADCC_DischargeSampleCapacitor(void);
+
+# 358
+void ADCC_LoadAcquisitionRegister(uint8_t);
+
+# 384
+void ADCC_SetPrechargeTime(uint8_t);
+
+# 409
+void ADCC_SetRepeatCount(uint8_t);
+
+# 437
+uint8_t ADCC_GetCurrentCountofConversions(void);
+
+# 461
+void ADCC_ClearAccumulator(void);
+
+# 486
+uint16_t ADCC_GetAccumulatorValue(void);
+
+# 514
+bool ADCC_HasAccumulatorOverflowed(void);
+
+# 539
+uint16_t ADCC_GetFilterValue(void);
+
+# 567
+uint16_t ADCC_GetPreviousResult(void);
+
+# 593
+void ADCC_DefineSetPoint(uint16_t);
+
+# 619
+void ADCC_SetUpperThreshold(uint16_t);
+
+# 645
+void ADCC_SetLowerThreshold(uint16_t);
+
+# 672
+uint16_t ADCC_GetErrorCalculation(void);
+
+# 699
+void ADCC_EnableDoubleSampling(void);
+
+# 723
+void ADCC_EnableContinuousConversion(void);
+
+# 747
+void ADCC_DisableContinuousConversion(void);
+
+# 775
+bool ADCC_HasErrorCrossedUpperThreshold(void);
+
+# 803
+bool ADCC_HasErrorCrossedLowerThreshold(void);
+
+# 830
+uint8_t ADCC_GetConversionStageStatus(void);
+
+# 847
+void ADCC_SetADTIInterruptHandler(void (* InterruptHandler)(void));
+
+# 863
+void ADCC_ThresholdISR(void);
+
+# 881
+void ADCC_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
+{
+struct
+{
+uint8_t ccpr2l;
+uint8_t ccpr2h;
+};
+struct
+{
+uint16_t ccpr2_16Bit;
+};
+} CCP2_PERIOD_REG_T ;
+
+# 123
+void CCP2_Initialize(void);
+
+# 139
+void CCP2_CaptureISR(void);
+
+# 160
+void CCP2_CallBack(uint16_t capturedValue);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 80 "mcc_generated_files/ccp1.h"
+typedef union CCPR1Reg_tag
+{
+struct
+{
+uint8_t ccpr1l;
+uint8_t ccpr1h;
+};
+struct
+{
+uint16_t ccpr1_16Bit;
+};
+} CCP1_PERIOD_REG_T ;
+
+# 123
+void CCP1_Initialize(void);
+
+# 139
+void CCP1_CaptureISR(void);
+
+# 160
+void CCP1_CallBack(uint16_t capturedValue);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 100 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 129
+void TMR5_StartTimer(void);
+
+# 161
+void TMR5_StopTimer(void);
+
+# 196
+uint16_t TMR5_ReadTimer(void);
+
+# 235
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR5_Reload(void);
+
+# 310
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 387
+bool TMR5_HasOverflowOccured(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 100 "mcc_generated_files/tmr3.h"
 void TMR3_Initialize(void);
 
@@ -16368,6 +16568,36 @@ extern void (*TMR3_InterruptHandler)(void);
 
 # 421
 void TMR3_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 100 "mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+
+# 129
+void TMR1_StartTimer(void);
+
+# 161
+void TMR1_StopTimer(void);
+
+# 196
+uint16_t TMR1_ReadTimer(void);
+
+# 235
+void TMR1_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR1_Reload(void);
+
+# 310
+void TMR1_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR1_CheckGateValueStatus(void);
+
+# 387
+bool TMR1_HasOverflowOccured(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16567,120 +16797,28 @@ void TMR0_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 93 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
+# 99 "mcc_generated_files/memory.h"
+uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
-# 127
-bool FVR_IsOutputReady(void);
+# 125
+uint16_t FLASH_ReadWord(uint32_t flashAddr);
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
+# 157
+void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
 
-# 72 "mcc_generated_files/adcc.h"
-typedef uint16_t adc_result_t;
+# 193
+int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
 
-# 89
-typedef enum
-{
-POS12_ADC = 0x0,
-POS12_ISNS_ADC = 0x1,
-POS5_ADC = 0x4,
-QI_ISNS_ADC = 0x5,
-channel_VSS = 0x3C,
-channel_Temp = 0x3D,
-channel_DAC1 = 0x3E,
-channel_FVR_buf1 = 0x3F
-} adcc_channel_t;
+# 218
+void FLASH_EraseBlock(uint32_t baseAddr);
 
-# 133
-void ADCC_Initialize(void);
+# 249
+void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 
-# 162
-void ADCC_StartConversion(adcc_channel_t channel);
+# 275
+uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
-# 192
-bool ADCC_IsConversionDone();
-
-# 224
-adc_result_t ADCC_GetConversionResult(void);
-
-# 255
-adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-
-# 280
-void ADCC_StopConversion(void);
-
-# 307
-void ADCC_SetStopOnInterrupt(void);
-
-# 332
-void ADCC_DischargeSampleCapacitor(void);
-
-# 358
-void ADCC_LoadAcquisitionRegister(uint8_t);
-
-# 384
-void ADCC_SetPrechargeTime(uint8_t);
-
-# 409
-void ADCC_SetRepeatCount(uint8_t);
-
-# 437
-uint8_t ADCC_GetCurrentCountofConversions(void);
-
-# 461
-void ADCC_ClearAccumulator(void);
-
-# 486
-uint16_t ADCC_GetAccumulatorValue(void);
-
-# 514
-bool ADCC_HasAccumulatorOverflowed(void);
-
-# 539
-uint16_t ADCC_GetFilterValue(void);
-
-# 567
-uint16_t ADCC_GetPreviousResult(void);
-
-# 593
-void ADCC_DefineSetPoint(uint16_t);
-
-# 619
-void ADCC_SetUpperThreshold(uint16_t);
-
-# 645
-void ADCC_SetLowerThreshold(uint16_t);
-
-# 672
-uint16_t ADCC_GetErrorCalculation(void);
-
-# 699
-void ADCC_EnableDoubleSampling(void);
-
-# 723
-void ADCC_EnableContinuousConversion(void);
-
-# 747
-void ADCC_DisableContinuousConversion(void);
-
-# 775
-bool ADCC_HasErrorCrossedUpperThreshold(void);
-
-# 803
-bool ADCC_HasErrorCrossedLowerThreshold(void);
-
-# 830
-uint8_t ADCC_GetConversionStageStatus(void);
-
-# 847
-void ADCC_SetADTIInterruptHandler(void (* InterruptHandler)(void));
-
-# 863
-void ADCC_ThresholdISR(void);
-
-# 881
-void ADCC_DefaultInterruptHandler(void);
+void MEMORY_Tasks(void);
 
 # 406 "mcc_generated_files/ext_int.h"
 void EXT_INT_Initialize(void);
@@ -16714,32 +16852,6 @@ extern void (*INT2_InterruptHandler)(void);
 
 # 636
 void INT2_DefaultInterruptHandler(void);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 99 "mcc_generated_files/memory.h"
-uint8_t FLASH_ReadByte(uint32_t flashAddr);
-
-# 125
-uint16_t FLASH_ReadWord(uint32_t flashAddr);
-
-# 157
-void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-
-# 193
-int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-
-# 218
-void FLASH_EraseBlock(uint32_t baseAddr);
-
-# 249
-void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-
-# 275
-uint8_t DATAEE_ReadByte(uint16_t bAdd);
-
-void MEMORY_Tasks(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16842,13 +16954,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 78 "mcc_generated_files/mcc.h"
+# 82 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 91
+# 95
 void OSCILLATOR_Initialize(void);
 
-# 104
+# 108
 void PMD_Initialize(void);
 
 # 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h"
@@ -17005,13 +17117,13 @@ adcc_channel_t next_adc_channel = channel_VSS;
 
 struct adc_results_t {
 
-double avss_adc_result;
-double fvr_adc_result;
-double pos5_adc_result;
-double pos12_adc_result;
-double pos12_isns_adc_result;
-double qi_isns_adc_result;
-double die_temp_adc_result;
+float avss_adc_result;
+float fvr_adc_result;
+float pos5_adc_result;
+float pos12_adc_result;
+float pos12_isns_adc_result;
+float qi_isns_adc_result;
+float die_temp_adc_result;
 
 } adc_results;
 
@@ -17025,20 +17137,20 @@ float efficiency;
 } adc_calculations;
 
 
-double pos12_isns_average_buffer[16];
+float pos12_isns_average_buffer[16];
 
 uint8_t pos12_isns_average_index = 0;
 
 
-double qi_isns_average_buffer[16];
+float qi_isns_average_buffer[16];
 
 uint8_t qi_isns_average_index = 0;
 
 
-double adc_result_scaling;
+float adc_result_scaling;
 
 
-const float temp_adc_offset = 436.115;
+const float temp_adc_offset = 376.115;
 
 
 
@@ -17086,9 +17198,9 @@ void clearI2CErrors(void);
 # 56 "LM73_I2C.h"
 struct LM73_temp_results_t {
 
-double QI_temp_result;
-double POS5_temp_result;
-double Ambient_temp_result;
+float QI_temp_result;
+float POS5_temp_result;
+float Ambient_temp_result;
 uint8_t QI_data_raw[2];
 uint8_t POS5_data_raw[2];
 uint8_t Ambient_data_raw[2];
@@ -17132,10 +17244,43 @@ void QIChargeIOCHandler(void);
 
 void QIIdleTimerHandler(void);
 
-# 17 "ring_buffer_LUT.c"
+# 39 "freq_meas.h"
+struct {
+
+float POS5_Freq_Meas;
+uint16_t POS5_Freq_Meas_Raw;
+float QI_Freq_Meas;
+uint16_t QI_Freq_Meas_Raw;
+
+} freq_meas_results;
+
+
+enum pos5_edge_type{
+pos5_period_rising_1 = 0,
+pos5_period_rising_2 = 1
+} POS5_current_edge;
+
+
+
+enum qi_edge_type{
+qi_period_rising_1 = 0,
+qi_period_rising_2 = 1
+} QI_current_edge;
+
+
+
+bool freq_meas_start_flag;
+
+
+void freqMeasStartCaptures(void);
+
+
+void freqMeasConvert(void);
+
+# 18 "ring_buffer_LUT.c"
 void ringBufferLUT(char * line) {
 
-# 23
+# 24
 if((0 == strcmp(line, "Reset"))) {
 
 
@@ -17504,6 +17649,22 @@ terminalTextAttributesReset();
 
 }
 
+else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
+
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("Current +5V Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.POS5_Freq_Meas);
+terminalTextAttributesReset();
+
+}
+
+else if ((0 == strcmp(line, "Measure QI FSW?"))) {
+
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("Current QI Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.QI_Freq_Meas);
+terminalTextAttributesReset();
+
+}
+
 else if ((0 == strcmp(line, "Charge Status?"))) {
 
 if (nxq_charge_state == QI_Error) {
@@ -17564,6 +17725,8 @@ printf( "    Help: Lists available commands\n\r"
 "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
 "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
 "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
+"    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
+"    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
 "    Error Status? Prints if any system faults have been detected\n\r"
 "    Clear UART Errors: Clears UART error flags\n\r"
 "    Clear I2C Errors: Clears I2C error flags\n\r"

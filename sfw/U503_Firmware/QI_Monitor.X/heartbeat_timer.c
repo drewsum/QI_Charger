@@ -13,6 +13,8 @@
 
 #include "oled.h"
 
+#include "freq_meas.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
@@ -26,10 +28,14 @@ void heartbeatTimerHandler(void) {
     // Kick the dog
     CLRWDT();
     
+    // Request a new LM73 temperature acquisiton
     LM73_start_flag = true;
     
+    // Request an OLED update if needed
     if (device_on_time % OLED_update_time == 0) OLED_update_flag = true;
     
+    // Request a new frequency measurement capture
+    freq_meas_start_flag = true;
 }
 
 // This function returns a string of a large number of seconds in a human readable format

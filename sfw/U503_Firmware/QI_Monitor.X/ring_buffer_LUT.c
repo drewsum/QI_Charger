@@ -13,6 +13,7 @@
 #include "error_handling.h"
 #include "LM73_I2C.h"
 #include "NXQ_charge_state.h"
+#include "freq_meas.h"
 
 void ringBufferLUT(char * line) {
 
@@ -388,6 +389,22 @@ void ringBufferLUT(char * line) {
         
     }
     
+    else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Current +5V Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.POS5_Freq_Meas);
+        terminalTextAttributesReset();
+        
+    }
+    
+    else if ((0 == strcmp(line, "Measure QI FSW?"))) {
+     
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("Current QI Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.QI_Freq_Meas);
+        terminalTextAttributesReset();
+        
+    }
+    
     else if ((0 == strcmp(line, "Charge Status?"))) {
      
         if (nxq_charge_state == QI_Error) {
@@ -448,6 +465,8 @@ void ringBufferLUT(char * line) {
                 "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
                 "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
                 "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
+                "    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
+                "    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
                 "    Error Status? Prints if any system faults have been detected\n\r"
                 "    Clear UART Errors: Clears UART error flags\n\r"
                 "    Clear I2C Errors: Clears I2C error flags\n\r"
