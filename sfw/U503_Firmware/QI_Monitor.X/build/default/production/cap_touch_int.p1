@@ -2,17 +2,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9729 0 1 2 3 4 5 6 .. ]
 [n E9729 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F10028 `(v ~T0 @X0 0 tf ]
-[v F10031 `(v ~T0 @X0 0 tf ]
+[v F10061 `(v ~T0 @X0 0 tf ]
+[v F10064 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
-[s S1440 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1440 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1443 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1443 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "58 oled.h
-[s S1441 `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i ]
-[n S1441 OLED_RAM_Buffer_t line0 line1 line2 line3 ]
-"97
-[c E10093 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 .. ]
-[n E10093 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_Idle  ]
+[s S1444 `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i ]
+[n S1444 OLED_RAM_Buffer_t line0 line1 line2 line3 ]
+"100
+[c E10126 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
+[n E10126 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -10901,6 +10901,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr5.h: 100: void TMR5_Initialize(void);
+[; ;tmr5.h: 129: void TMR5_StartTimer(void);
+[; ;tmr5.h: 161: void TMR5_StopTimer(void);
+[; ;tmr5.h: 196: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 235: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 271: void TMR5_Reload(void);
+[; ;tmr5.h: 310: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 349: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 387: bool TMR5_HasOverflowOccured(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr3.h: 100: void TMR3_Initialize(void);
 [; ;tmr3.h: 129: void TMR3_StartTimer(void);
 [; ;tmr3.h: 161: void TMR3_StopTimer(void);
@@ -11027,6 +11037,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -11050,10 +11076,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F10028 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F10061 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F10031 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F10064 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11065,11 +11091,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 78: void SYSTEM_Initialize(void);
-[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 104: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 "52 error_handling.h
-[v _error_handler `S1440 ~T0 @X0 1 e ]
+[v _error_handler `S1443 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11088,7 +11114,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.h: 70: void clearUARTErrors(void);
 [; ;error_handling.h: 73: void clearI2CErrors(void);
 "63 oled.h
-[v _OLED_RAM_Buffer `S1441 ~T0 @X0 1 e ]
+[v _OLED_RAM_Buffer `S1444 ~T0 @X0 1 e ]
 [; ;oled.h: 58: struct OLED_RAM_Buffer_t {
 [; ;oled.h: 59: char line0[17];
 [; ;oled.h: 60: char line1[17];
@@ -11112,35 +11138,38 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.h: 85: OLED_POS5_Temp = 13,
 [; ;oled.h: 86: OLED_Ambient_Temp = 14,
 [; ;oled.h: 87: OLED_Micro_Temp = 15,
-[; ;oled.h: 88: OLED_Dev_On_Time = 16,
-[; ;oled.h: 89: OLED_Cause_Of_Reset = 17,
-[; ;oled.h: 90: OLED_Dev_Rev_ID = 18,
-[; ;oled.h: 91: OLED_COM_PORT_SET = 19,
-[; ;oled.h: 92: OLED_Idle = 20
-[; ;oled.h: 94: } OLED_Frame_t;
-"97
-[v _OLED_Frame `E10093 ~T0 @X0 1 e ]
-[; ;oled.h: 97: OLED_Frame_t OLED_Frame;
+[; ;oled.h: 88: OLED_POS5_FSW = 16,
+[; ;oled.h: 89: OLED_QI_FSW = 17,
+[; ;oled.h: 90: OLED_Dev_On_Time = 18,
+[; ;oled.h: 91: OLED_Cause_Of_Reset = 19,
+[; ;oled.h: 92: OLED_Dev_Rev_ID = 20,
+[; ;oled.h: 93: OLED_COM_PORT_SET = 21,
+[; ;oled.h: 94: OLED_TITLE_FRAME = 22,
+[; ;oled.h: 95: OLED_Idle = 23
+[; ;oled.h: 97: } OLED_Frame_t;
 "100
+[v _OLED_Frame `E10126 ~T0 @X0 1 e ]
+[; ;oled.h: 100: OLED_Frame_t OLED_Frame;
+"103
 [v _OLED_update_flag `uc ~T0 @X0 1 e ]
-[; ;oled.h: 100: bool OLED_update_flag;
-"104
+[; ;oled.h: 103: bool OLED_update_flag;
+"107
 [v _OLED_update_time `uc ~T0 @X0 1 e ]
 [i _OLED_update_time
 -> -> 3 `i `uc
 ]
-[; ;oled.h: 104: uint8_t OLED_update_time = 3;
-[; ;oled.h: 107: void OLED_Command(uint8_t temp);
-[; ;oled.h: 108: void OLED_Data(uint8_t temp);
-[; ;oled.h: 109: void OLED_Init(void);
-[; ;oled.h: 110: void OLED_YX(unsigned char Row, unsigned char Column);
-[; ;oled.h: 111: void OLED_PutChar(char ch);
-[; ;oled.h: 112: void OLED_Clear(void);
-[; ;oled.h: 113: void OLED_WriteString(char *s);
-[; ;oled.h: 114: void OLED_WriteInteger(uint16_t i);
-[; ;oled.h: 115: void OLED_WriteFloat(float f);
-[; ;oled.h: 116: void OLED_UpdateFromRAMBuffer(void);
-[; ;oled.h: 120: void OLED_updateHandler(void);
+[; ;oled.h: 107: uint8_t OLED_update_time = 3;
+[; ;oled.h: 110: void OLED_Command(uint8_t temp);
+[; ;oled.h: 111: void OLED_Data(uint8_t temp);
+[; ;oled.h: 112: void OLED_Init(void);
+[; ;oled.h: 113: void OLED_YX(unsigned char Row, unsigned char Column);
+[; ;oled.h: 114: void OLED_PutChar(char ch);
+[; ;oled.h: 115: void OLED_Clear(void);
+[; ;oled.h: 116: void OLED_WriteString(char *s);
+[; ;oled.h: 117: void OLED_WriteInteger(uint16_t i);
+[; ;oled.h: 118: void OLED_WriteFloat(float f);
+[; ;oled.h: 119: void OLED_UpdateFromRAMBuffer(void);
+[; ;oled.h: 123: void OLED_updateHandler(void);
 "11 cap_touch_int.c
 [v _leftCapTouchHandler `(v ~T0 @X0 1 ef ]
 {
@@ -11149,18 +11178,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;cap_touch_int.c: 13: OLED_Frame--;
 "13
-[e -- _OLED_Frame -> -> 1 `i `E10093 ]
-[; ;cap_touch_int.c: 14: if (OLED_Frame == 4 - 1) OLED_Frame = 19;
+[e -- _OLED_Frame -> -> 1 `i `E10126 ]
+[; ;cap_touch_int.c: 14: if (OLED_Frame == 4 - 1) OLED_Frame = 22;
 "14
-[e $ ! == -> _OLED_Frame `i - -> 4 `i -> 1 `i 1443  ]
-[e = _OLED_Frame -> -> 19 `i `E10093 ]
-[e :U 1443 ]
+[e $ ! == -> _OLED_Frame `i - -> 4 `i -> 1 `i 1446  ]
+[e = _OLED_Frame -> -> 22 `i `E10126 ]
+[e :U 1446 ]
 [; ;cap_touch_int.c: 15: OLED_update_flag = 1;
 "15
 [e = _OLED_update_flag -> -> 1 `i `uc ]
 [; ;cap_touch_int.c: 17: }
 "17
-[e :UE 1442 ]
+[e :UE 1445 ]
 }
 "20
 [v _rightCapTouchHandler `(v ~T0 @X0 1 ef ]
@@ -11170,16 +11199,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;cap_touch_int.c: 22: OLED_Frame++;
 "22
-[e ++ _OLED_Frame -> -> 1 `i `E10093 ]
-[; ;cap_touch_int.c: 23: if (OLED_Frame == 19 + 1) OLED_Frame = 4;
+[e ++ _OLED_Frame -> -> 1 `i `E10126 ]
+[; ;cap_touch_int.c: 23: if (OLED_Frame == 22 + 1) OLED_Frame = 4;
 "23
-[e $ ! == -> _OLED_Frame `i + -> 19 `i -> 1 `i 1445  ]
-[e = _OLED_Frame -> -> 4 `i `E10093 ]
-[e :U 1445 ]
+[e $ ! == -> _OLED_Frame `i + -> 22 `i -> 1 `i 1448  ]
+[e = _OLED_Frame -> -> 4 `i `E10126 ]
+[e :U 1448 ]
 [; ;cap_touch_int.c: 24: OLED_update_flag = 1;
 "24
 [e = _OLED_update_flag -> -> 1 `i `uc ]
 [; ;cap_touch_int.c: 26: }
 "26
-[e :UE 1444 ]
+[e :UE 1447 ]
 }

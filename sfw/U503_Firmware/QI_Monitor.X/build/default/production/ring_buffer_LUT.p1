@@ -2,34 +2,40 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9581 0 1 2 3 4 5 6 .. ]
 [n E9581 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9941 `(v ~T0 @X0 0 tf ]
-[v F9944 `(v ~T0 @X0 0 tf ]
+[v F9974 `(v ~T0 @X0 0 tf ]
+[v F9977 `(v ~T0 @X0 0 tf ]
 "55 cause_of_reset.h
-[c E10118 0 1 2 3 4 5 6 7 8 .. ]
-[n E10118 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
+[c E10161 0 1 2 3 4 5 6 7 8 .. ]
+[n E10161 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
 "50 adc_postprocessing.h
-[c E9758 0 1 4 5 60 61 62 63 .. ]
-[n E9758 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
+[c E9776 0 1 4 5 60 61 62 63 .. ]
+[n E9776 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
-[s S1440 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 `d 1 ]
-[n S1440 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
+[s S1443 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
+[n S1443 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
 "66
-[s S1441 `f 1 `f 1 `f 1 ]
-[n S1441 adc_calculations_t input_power output_power efficiency ]
+[s S1444 `f 1 `f 1 `f 1 ]
+[n S1444 adc_calculations_t input_power output_power efficiency ]
 "41 error_handling.h
-[s S1442 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1442 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1445 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1445 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "56 LM73_I2C.h
-[s S1443 `d 1 `d 1 `d 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
-[n S1443 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
+[s S1446 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
+[n S1446 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
 "21 NXQ_charge_state.h
-[c E10200 0 1 2 3 .. ]
-[n E10200 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+[c E10243 0 1 2 3 .. ]
+[n E10243 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+"39 freq_meas.h
+[s S1447 `f 1 `ui 1 ]
+[n S1447 . QI_Freq_Meas QI_Freq_Meas_Raw ]
+"50
+[c E10263 0 1 .. ]
+[n E10263 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "45 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 "195 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"50 ring_buffer_LUT.c
+"51 ring_buffer_LUT.c
 [c E9495 0 1 2 3 4 5 6 7 .. ]
 [n E9495 . BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE  ]
 [c E9487 0 1 2 3 4 5 .. ]
@@ -37,7 +43,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "44 terminal_control.h
 [v _terminalTextAttributes `(v ~T0 @X0 0 ef3`E9495`E9495`E9487 ]
 "62 cause_of_reset.h
-[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10118 ]
+[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10161 ]
 "49 terminal_control.h
 [v _terminalTextAttributesReset `(v ~T0 @X0 0 ef ]
 "48 device_IDs.h
@@ -10914,6 +10920,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr5.h: 100: void TMR5_Initialize(void);
+[; ;tmr5.h: 129: void TMR5_StartTimer(void);
+[; ;tmr5.h: 161: void TMR5_StopTimer(void);
+[; ;tmr5.h: 196: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 235: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 271: void TMR5_Reload(void);
+[; ;tmr5.h: 310: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 349: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 387: bool TMR5_HasOverflowOccured(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr3.h: 100: void TMR3_Initialize(void);
 [; ;tmr3.h: 129: void TMR3_StartTimer(void);
 [; ;tmr3.h: 161: void TMR3_StopTimer(void);
@@ -11040,6 +11056,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -11092,10 +11124,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9941 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9974 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9944 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9977 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11107,9 +11139,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 78: void SYSTEM_Initialize(void);
-[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 104: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
 [; ;stdlib.h: 15: typedef struct {
 [; ;stdlib.h: 16: int rem;
@@ -11174,6 +11206,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.h: 38: unsigned long device_on_time;
 [; ;heartbeat_timer.h: 42: void heartbeatTimerHandler(void);
 [; ;heartbeat_timer.h: 45: char * getStringSecondsAsTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 48: uint8_t getYearsFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 51: uint8_t getDaysFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 54: uint8_t getHoursFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 57: uint8_t getMinutesFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 60: uint8_t getSecondsFromOnTime(uint32_t input_seconds);
 [; ;device_IDs.h: 40: uint16_t getDeviceID(void);
 [; ;device_IDs.h: 43: uint8_t getMajorRevisionID(void);
 [; ;device_IDs.h: 44: uint8_t getMinorRevisionID(void);
@@ -11192,38 +11229,38 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cause_of_reset.h: 51: Stack_Underflow_Reset = 8
 [; ;cause_of_reset.h: 52: } reset_t;
 "55 cause_of_reset.h
-[v _reset_cause `E10118 ~T0 @X0 1 e ]
+[v _reset_cause `E10161 ~T0 @X0 1 e ]
 [; ;cause_of_reset.h: 55: reset_t reset_cause;
 [; ;cause_of_reset.h: 59: reset_t getCauseOfReset(void);
 [; ;cause_of_reset.h: 62: inline char * getCauseOfResetString(reset_t r);
 [; ;cause_of_reset.h: 65: inline char * getCauseOfResetStringSmall(reset_t r);
 "50 adc_postprocessing.h
-[v _next_adc_channel `E9758 ~T0 @X0 1 e ]
+[v _next_adc_channel `E9776 ~T0 @X0 1 e ]
 [i _next_adc_channel
-. `E9758 4
+. `E9776 4
 ]
 [; ;adc_postprocessing.h: 50: adcc_channel_t next_adc_channel = channel_VSS;
 "63
-[v _adc_results `S1440 ~T0 @X0 1 e ]
+[v _adc_results `S1443 ~T0 @X0 1 e ]
 [; ;adc_postprocessing.h: 53: struct adc_results_t {
-[; ;adc_postprocessing.h: 55: double avss_adc_result;
-[; ;adc_postprocessing.h: 56: double fvr_adc_result;
-[; ;adc_postprocessing.h: 57: double pos5_adc_result;
-[; ;adc_postprocessing.h: 58: double pos12_adc_result;
-[; ;adc_postprocessing.h: 59: double pos12_isns_adc_result;
-[; ;adc_postprocessing.h: 60: double qi_isns_adc_result;
-[; ;adc_postprocessing.h: 61: double die_temp_adc_result;
+[; ;adc_postprocessing.h: 55: float avss_adc_result;
+[; ;adc_postprocessing.h: 56: float fvr_adc_result;
+[; ;adc_postprocessing.h: 57: float pos5_adc_result;
+[; ;adc_postprocessing.h: 58: float pos12_adc_result;
+[; ;adc_postprocessing.h: 59: float pos12_isns_adc_result;
+[; ;adc_postprocessing.h: 60: float qi_isns_adc_result;
+[; ;adc_postprocessing.h: 61: float die_temp_adc_result;
 [; ;adc_postprocessing.h: 63: } adc_results;
 "72
-[v _adc_calculations `S1441 ~T0 @X0 1 e ]
+[v _adc_calculations `S1444 ~T0 @X0 1 e ]
 [; ;adc_postprocessing.h: 66: struct adc_calculations_t {
 [; ;adc_postprocessing.h: 68: float input_power;
 [; ;adc_postprocessing.h: 69: float output_power;
 [; ;adc_postprocessing.h: 70: float efficiency;
 [; ;adc_postprocessing.h: 72: } adc_calculations;
 "75
-[v _pos12_isns_average_buffer `d ~T0 @X0 -> 16 `i e ]
-[; ;adc_postprocessing.h: 75: double pos12_isns_average_buffer[16];
+[v _pos12_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
+[; ;adc_postprocessing.h: 75: float pos12_isns_average_buffer[16];
 "77
 [v _pos12_isns_average_index `uc ~T0 @X0 1 e ]
 [i _pos12_isns_average_index
@@ -11231,8 +11268,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;adc_postprocessing.h: 77: uint8_t pos12_isns_average_index = 0;
 "80
-[v _qi_isns_average_buffer `d ~T0 @X0 -> 16 `i e ]
-[; ;adc_postprocessing.h: 80: double qi_isns_average_buffer[16];
+[v _qi_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
+[; ;adc_postprocessing.h: 80: float qi_isns_average_buffer[16];
 "82
 [v _qi_isns_average_index `uc ~T0 @X0 1 e ]
 [i _qi_isns_average_index
@@ -11240,18 +11277,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;adc_postprocessing.h: 82: uint8_t qi_isns_average_index = 0;
 "85
-[v _adc_result_scaling `d ~T0 @X0 1 e ]
-[; ;adc_postprocessing.h: 85: double adc_result_scaling;
+[v _adc_result_scaling `f ~T0 @X0 1 e ]
+[; ;adc_postprocessing.h: 85: float adc_result_scaling;
 "88
 [v _temp_adc_offset `Cf ~T0 @X0 1 e ]
 [i _temp_adc_offset
--> .436.115 `f
+-> .376.115 `f
 ]
-[; ;adc_postprocessing.h: 88: const float temp_adc_offset = 436.115;
+[; ;adc_postprocessing.h: 88: const float temp_adc_offset = 376.115;
 [; ;adc_postprocessing.h: 92: void ADC_PostProcessingHandler(void);
 [; ;adc_postprocessing.h: 96: void ADC_acquisitionTimerHandler(void);
 "52 error_handling.h
-[v _error_handler `S1442 ~T0 @X0 1 e ]
+[v _error_handler `S1445 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11270,11 +11307,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.h: 70: void clearUARTErrors(void);
 [; ;error_handling.h: 73: void clearI2CErrors(void);
 "65 LM73_I2C.h
-[v _LM73_temp_results `S1443 ~T0 @X0 1 e ]
+[v _LM73_temp_results `S1446 ~T0 @X0 1 e ]
 [; ;LM73_I2C.h: 56: struct LM73_temp_results_t {
-[; ;LM73_I2C.h: 58: double QI_temp_result;
-[; ;LM73_I2C.h: 59: double POS5_temp_result;
-[; ;LM73_I2C.h: 60: double Ambient_temp_result;
+[; ;LM73_I2C.h: 58: float QI_temp_result;
+[; ;LM73_I2C.h: 59: float POS5_temp_result;
+[; ;LM73_I2C.h: 60: float Ambient_temp_result;
 [; ;LM73_I2C.h: 61: uint8_t QI_data_raw[2];
 [; ;LM73_I2C.h: 62: uint8_t POS5_data_raw[2];
 [; ;LM73_I2C.h: 63: uint8_t Ambient_data_raw[2];
@@ -11286,7 +11323,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LM73_I2C.h: 74: void LM73AcquisitionHandler(void);
 [; ;LM73_I2C.h: 77: void LM73Convert(void);
 "21 NXQ_charge_state.h
-[v _nxq_charge_state `E10200 ~T0 @X0 1 e ]
+[v _nxq_charge_state `E10243 ~T0 @X0 1 e ]
 [; ;NXQ_charge_state.h: 14: enum nxq_charge_state_t {
 [; ;NXQ_charge_state.h: 16: QI_Idle = 0,
 [; ;NXQ_charge_state.h: 17: QI_Charging = 1,
@@ -11298,898 +11335,957 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;NXQ_charge_state.h: 30: void QIIdleIOCHandler(void);
 [; ;NXQ_charge_state.h: 33: void QIChargeIOCHandler(void);
 [; ;NXQ_charge_state.h: 36: void QIIdleTimerHandler(void);
-"17 ring_buffer_LUT.c
+"44 freq_meas.h
+[v _freq_meas_results `S1447 ~T0 @X0 1 e ]
+[; ;freq_meas.h: 39: struct {
+[; ;freq_meas.h: 41: float QI_Freq_Meas;
+[; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
+[; ;freq_meas.h: 44: } freq_meas_results;
+"50
+[v _QI_current_edge `E10263 ~T0 @X0 1 e ]
+[; ;freq_meas.h: 47: enum qi_edge_type{
+[; ;freq_meas.h: 48: qi_period_rising_1 = 0,
+[; ;freq_meas.h: 49: qi_period_rising_2 = 1
+[; ;freq_meas.h: 50: } QI_current_edge;
+"54
+[v _freq_meas_start_flag `uc ~T0 @X0 1 e ]
+[; ;freq_meas.h: 54: bool freq_meas_start_flag;
+[; ;freq_meas.h: 57: void freqMeasStartCaptures(void);
+[; ;freq_meas.h: 60: void freqMeasConvert(void);
+"18 ring_buffer_LUT.c
 [v _ringBufferLUT `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;ring_buffer_LUT.c: 17: void ringBufferLUT(char * line) {
+[; ;ring_buffer_LUT.c: 18: void ringBufferLUT(char * line) {
 [e :U _ringBufferLUT ]
 [v _line `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;ring_buffer_LUT.c: 23: if((0 == strcmp(line, "Reset"))) {
-"23
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 1445  ]
+[; ;ring_buffer_LUT.c: 24: if((0 == strcmp(line, "Reset"))) {
+"24
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 1449  ]
 {
-[; ;ring_buffer_LUT.c: 26: printf("\033[2J");
-"26
+[; ;ring_buffer_LUT.c: 27: printf("\033[2J");
+"27
 [e ( _printf :s 2C ]
-[; ;ring_buffer_LUT.c: 29: printf("\033[H");
-"29
+[; ;ring_buffer_LUT.c: 30: printf("\033[H");
+"30
 [e ( _printf :s 3C ]
-[; ;ring_buffer_LUT.c: 32: asm("reset");
-"32
+[; ;ring_buffer_LUT.c: 33: asm("reset");
+"33
 [; <" reset ;# ">
-"34
+"35
 }
-[; ;ring_buffer_LUT.c: 34: }
-[e $U 1446  ]
-"37
-[e :U 1445 ]
-[; ;ring_buffer_LUT.c: 37: else if((0 == strcmp(line, "Clear"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 4C 1447  ]
-{
-[; ;ring_buffer_LUT.c: 40: printf("\033[2J");
-"40
-[e ( _printf :s 5C ]
-[; ;ring_buffer_LUT.c: 43: printf("\033[H");
-"43
-[e ( _printf :s 6C ]
-"45
-}
-[; ;ring_buffer_LUT.c: 45: }
-[e $U 1448  ]
-"48
-[e :U 1447 ]
-[; ;ring_buffer_LUT.c: 48: else if((0 == strcmp(line, "Cause of Reset?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 7C 1449  ]
-{
-[; ;ring_buffer_LUT.c: 50: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"50
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 53: printf("The cause of the most recent device reset was: %s\n\r",
-[; ;ring_buffer_LUT.c: 54: getCauseOfResetString(reset_cause));
-"54
-[e ( _printf , (. :s 8C -> ( _getCauseOfResetString (1 _reset_cause `*CTuc ]
-[; ;ring_buffer_LUT.c: 56: terminalTextAttributesReset();
-"56
-[e ( _terminalTextAttributesReset ..  ]
-"58
-}
-[; ;ring_buffer_LUT.c: 58: }
+[; ;ring_buffer_LUT.c: 35: }
 [e $U 1450  ]
-"61
+"38
 [e :U 1449 ]
-[; ;ring_buffer_LUT.c: 61: else if((0 == strcmp(line, "*IDN?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 1451  ]
+[; ;ring_buffer_LUT.c: 38: else if((0 == strcmp(line, "Clear"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 4C 1451  ]
 {
-[; ;ring_buffer_LUT.c: 63: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"63
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 64: printf("QI Charger with Digital Monitoring, by Drew Maatman\n\r");
-"64
-[e ( _printf :s 10C ]
-[; ;ring_buffer_LUT.c: 65: terminalTextAttributesReset();
-"65
-[e ( _terminalTextAttributesReset ..  ]
-"67
+[; ;ring_buffer_LUT.c: 41: printf("\033[2J");
+"41
+[e ( _printf :s 5C ]
+[; ;ring_buffer_LUT.c: 44: printf("\033[H");
+"44
+[e ( _printf :s 6C ]
+"46
 }
-[; ;ring_buffer_LUT.c: 67: }
+[; ;ring_buffer_LUT.c: 46: }
 [e $U 1452  ]
-"70
+"49
 [e :U 1451 ]
-[; ;ring_buffer_LUT.c: 70: else if((0 == strcmp(line, "Device ID?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 11C 1453  ]
+[; ;ring_buffer_LUT.c: 49: else if((0 == strcmp(line, "Cause of Reset?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 7C 1453  ]
 {
-[; ;ring_buffer_LUT.c: 72: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"72
+[; ;ring_buffer_LUT.c: 51: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"51
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 75: printf("Device ID stored in Flash is: %s (0x%04X)\n\r",
-[; ;ring_buffer_LUT.c: 76: getDeviceIDString(getDeviceID()),
-[; ;ring_buffer_LUT.c: 77: getDeviceID());
-"77
-[e ( _printf , , (. :s 12C -> ( _getDeviceIDString (1 ( _getDeviceID ..  `*CTuc ( _getDeviceID ..  ]
-[; ;ring_buffer_LUT.c: 79: terminalTextAttributesReset();
-"79
+[; ;ring_buffer_LUT.c: 54: printf("The cause of the most recent device reset was: %s\n\r",
+[; ;ring_buffer_LUT.c: 55: getCauseOfResetString(reset_cause));
+"55
+[e ( _printf , (. :s 8C -> ( _getCauseOfResetString (1 _reset_cause `*CTuc ]
+[; ;ring_buffer_LUT.c: 57: terminalTextAttributesReset();
+"57
 [e ( _terminalTextAttributesReset ..  ]
-"81
+"59
 }
-[; ;ring_buffer_LUT.c: 81: }
+[; ;ring_buffer_LUT.c: 59: }
 [e $U 1454  ]
-"84
+"62
 [e :U 1453 ]
-[; ;ring_buffer_LUT.c: 84: else if((0 == strcmp(line, "Revision ID?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 13C 1455  ]
+[; ;ring_buffer_LUT.c: 62: else if((0 == strcmp(line, "*IDN?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 1455  ]
 {
-[; ;ring_buffer_LUT.c: 86: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"86
+[; ;ring_buffer_LUT.c: 64: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"64
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 89: printf("Device silicon revision ID as stored in Flash is: %c%03d\n\r",
-[; ;ring_buffer_LUT.c: 90: ((char) getMajorRevisionID() + 65),getMinorRevisionID());
-"90
-[e ( _printf , , (. :s 14C + -> ( _getMajorRevisionID ..  `i -> 65 `i -> ( _getMinorRevisionID ..  `i ]
-[; ;ring_buffer_LUT.c: 92: terminalTextAttributesReset();
-"92
+[; ;ring_buffer_LUT.c: 65: printf("QI Charger with Digital Monitoring, by Drew Maatman\n\r");
+"65
+[e ( _printf :s 10C ]
+[; ;ring_buffer_LUT.c: 66: terminalTextAttributesReset();
+"66
 [e ( _terminalTextAttributesReset ..  ]
-"94
+"68
 }
-[; ;ring_buffer_LUT.c: 94: }
+[; ;ring_buffer_LUT.c: 68: }
 [e $U 1456  ]
-"97
+"71
 [e :U 1455 ]
-[; ;ring_buffer_LUT.c: 97: else if((0 == strcmp(line, "User IDs?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C 1457  ]
+[; ;ring_buffer_LUT.c: 71: else if((0 == strcmp(line, "Device ID?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 11C 1457  ]
 {
-[; ;ring_buffer_LUT.c: 99: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"99
+[; ;ring_buffer_LUT.c: 73: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"73
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 101: printf("The following User IDs have been retrieved from flash memory:\n\r");
-"101
+[; ;ring_buffer_LUT.c: 76: printf("Device ID stored in Flash is: %s (0x%04X)\n\r",
+[; ;ring_buffer_LUT.c: 77: getDeviceIDString(getDeviceID()),
+[; ;ring_buffer_LUT.c: 78: getDeviceID());
+"78
+[e ( _printf , , (. :s 12C -> ( _getDeviceIDString (1 ( _getDeviceID ..  `*CTuc ( _getDeviceID ..  ]
+[; ;ring_buffer_LUT.c: 80: terminalTextAttributesReset();
+"80
+[e ( _terminalTextAttributesReset ..  ]
+"82
+}
+[; ;ring_buffer_LUT.c: 82: }
+[e $U 1458  ]
+"85
+[e :U 1457 ]
+[; ;ring_buffer_LUT.c: 85: else if((0 == strcmp(line, "Revision ID?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 13C 1459  ]
+{
+[; ;ring_buffer_LUT.c: 87: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"87
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 90: printf("Device silicon revision ID as stored in Flash is: %c%03d\n\r",
+[; ;ring_buffer_LUT.c: 91: ((char) getMajorRevisionID() + 65),getMinorRevisionID());
+"91
+[e ( _printf , , (. :s 14C + -> ( _getMajorRevisionID ..  `i -> 65 `i -> ( _getMinorRevisionID ..  `i ]
+[; ;ring_buffer_LUT.c: 93: terminalTextAttributesReset();
+"93
+[e ( _terminalTextAttributesReset ..  ]
+"95
+}
+[; ;ring_buffer_LUT.c: 95: }
+[e $U 1460  ]
+"98
+[e :U 1459 ]
+[; ;ring_buffer_LUT.c: 98: else if((0 == strcmp(line, "User IDs?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C 1461  ]
+{
+[; ;ring_buffer_LUT.c: 100: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"100
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 102: printf("The following User IDs have been retrieved from flash memory:\n\r");
+"102
 [e ( _printf :s 16C ]
-[; ;ring_buffer_LUT.c: 104: for (int userID = 0; userID <= 7; userID++) {
-"104
+[; ;ring_buffer_LUT.c: 105: for (int userID = 0; userID <= 7; userID++) {
+"105
 {
 [v _userID `i ~T0 @X0 1 a ]
 [e = _userID -> 0 `i ]
-[e $ <= _userID -> 7 `i 1458  ]
-[e $U 1459  ]
-[e :U 1458 ]
-{
-[; ;ring_buffer_LUT.c: 106: printf("    User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
-[; ;ring_buffer_LUT.c: 107: userID,
-[; ;ring_buffer_LUT.c: 108: (2 * userID),
-[; ;ring_buffer_LUT.c: 109: getUserID(userID));
-"109
-[e ( _printf , , , (. :s 17C _userID * -> 2 `i _userID ( _getUserID (1 -> _userID `uc ]
-"111
-}
-"104
-[e ++ _userID -> 1 `i ]
-[e $ <= _userID -> 7 `i 1458  ]
-[e :U 1459 ]
-"111
-}
-[; ;ring_buffer_LUT.c: 111: }
-[; ;ring_buffer_LUT.c: 113: terminalTextAttributesReset();
-"113
-[e ( _terminalTextAttributesReset ..  ]
-"115
-}
-[; ;ring_buffer_LUT.c: 115: }
-[e $U 1461  ]
-"118
-[e :U 1457 ]
-[; ;ring_buffer_LUT.c: 118: else if((0 == strcmp(line, "Device On Time?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 18C 1462  ]
-{
-[; ;ring_buffer_LUT.c: 120: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"120
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 121: printf("Device on time since last reset condition is: %s\n\r", getStringSecondsAsTime(device_on_time));
-"121
-[e ( _printf , (. :s 19C -> ( _getStringSecondsAsTime (1 _device_on_time `*Cuc ]
-[; ;ring_buffer_LUT.c: 122: terminalTextAttributesReset();
-"122
-[e ( _terminalTextAttributesReset ..  ]
-"124
-}
-[; ;ring_buffer_LUT.c: 124: }
+[e $ <= _userID -> 7 `i 1462  ]
 [e $U 1463  ]
-"127
 [e :U 1462 ]
-[; ;ring_buffer_LUT.c: 127: else if ((0 == strcmp(line, "Enable QI"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 1464  ]
 {
-[; ;ring_buffer_LUT.c: 130: LATCbits.LATC2 = 0;
-"130
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-[; ;ring_buffer_LUT.c: 132: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"132
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 133: printf("QI Wireless Power Conversion Enabled\n\r");
-"133
-[e ( _printf :s 21C ]
-[; ;ring_buffer_LUT.c: 134: terminalTextAttributesReset();
-"134
-[e ( _terminalTextAttributesReset ..  ]
-"136
+[; ;ring_buffer_LUT.c: 107: printf("    User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
+[; ;ring_buffer_LUT.c: 108: userID,
+[; ;ring_buffer_LUT.c: 109: (2 * userID),
+[; ;ring_buffer_LUT.c: 110: getUserID(userID));
+"110
+[e ( _printf , , , (. :s 17C _userID * -> 2 `i _userID ( _getUserID (1 -> _userID `uc ]
+"112
 }
-[; ;ring_buffer_LUT.c: 136: }
+"105
+[e ++ _userID -> 1 `i ]
+[e $ <= _userID -> 7 `i 1462  ]
+[e :U 1463 ]
+"112
+}
+[; ;ring_buffer_LUT.c: 112: }
+[; ;ring_buffer_LUT.c: 114: terminalTextAttributesReset();
+"114
+[e ( _terminalTextAttributesReset ..  ]
+"116
+}
+[; ;ring_buffer_LUT.c: 116: }
 [e $U 1465  ]
-"139
-[e :U 1464 ]
-[; ;ring_buffer_LUT.c: 139: else if ((0 == strcmp(line, "Disable QI"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 22C 1466  ]
+"119
+[e :U 1461 ]
+[; ;ring_buffer_LUT.c: 119: else if((0 == strcmp(line, "Device On Time?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 18C 1466  ]
 {
-[; ;ring_buffer_LUT.c: 142: LATCbits.LATC2 = 1;
-"142
-[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
-[; ;ring_buffer_LUT.c: 144: terminalTextAttributes(RED, BLACK, NORMAL);
-"144
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 145: printf("QI Wireless Power Conversion Disabled\n\r");
-"145
-[e ( _printf :s 23C ]
-[; ;ring_buffer_LUT.c: 146: terminalTextAttributesReset();
-"146
+[; ;ring_buffer_LUT.c: 121: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"121
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 122: printf("Device on time since last reset condition is: %s\n\r", getStringSecondsAsTime(device_on_time));
+"122
+[e ( _printf , (. :s 19C -> ( _getStringSecondsAsTime (1 _device_on_time `*Cuc ]
+[; ;ring_buffer_LUT.c: 123: terminalTextAttributesReset();
+"123
 [e ( _terminalTextAttributesReset ..  ]
-"148
+"125
 }
-[; ;ring_buffer_LUT.c: 148: }
+[; ;ring_buffer_LUT.c: 125: }
 [e $U 1467  ]
-"151
+"128
 [e :U 1466 ]
-[; ;ring_buffer_LUT.c: 151: else if((0 == strcmp(line, "Clear ADC Errors"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 1468  ]
+[; ;ring_buffer_LUT.c: 128: else if ((0 == strcmp(line, "Enable QI"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 1468  ]
 {
-[; ;ring_buffer_LUT.c: 153: clearADCErrors();
-"153
-[e ( _clearADCErrors ..  ]
-[; ;ring_buffer_LUT.c: 155: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"155
+[; ;ring_buffer_LUT.c: 131: LATCbits.LATC2 = 0;
+"131
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+[; ;ring_buffer_LUT.c: 133: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"133
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 156: printf("ADC Error(s) cleared\n\r");
-"156
-[e ( _printf :s 25C ]
-[; ;ring_buffer_LUT.c: 157: terminalTextAttributesReset();
-"157
+[; ;ring_buffer_LUT.c: 134: printf("QI Wireless Power Conversion Enabled\n\r");
+"134
+[e ( _printf :s 21C ]
+[; ;ring_buffer_LUT.c: 135: terminalTextAttributesReset();
+"135
 [e ( _terminalTextAttributesReset ..  ]
-"159
+"137
 }
-[; ;ring_buffer_LUT.c: 159: }
+[; ;ring_buffer_LUT.c: 137: }
 [e $U 1469  ]
-"162
+"140
 [e :U 1468 ]
-[; ;ring_buffer_LUT.c: 162: else if((0 == strcmp(line, "Clear I2C Errors"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 26C 1470  ]
+[; ;ring_buffer_LUT.c: 140: else if ((0 == strcmp(line, "Disable QI"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 22C 1470  ]
 {
-[; ;ring_buffer_LUT.c: 164: clearI2CErrors();
-"164
-[e ( _clearI2CErrors ..  ]
-[; ;ring_buffer_LUT.c: 166: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"166
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 167: printf("I2C error(s) cleared\n\r");
-"167
-[e ( _printf :s 27C ]
-[; ;ring_buffer_LUT.c: 168: terminalTextAttributesReset();
-"168
+[; ;ring_buffer_LUT.c: 143: LATCbits.LATC2 = 1;
+"143
+[e = . . _LATCbits 0 2 -> -> 1 `i `uc ]
+[; ;ring_buffer_LUT.c: 145: terminalTextAttributes(RED, BLACK, NORMAL);
+"145
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 146: printf("QI Wireless Power Conversion Disabled\n\r");
+"146
+[e ( _printf :s 23C ]
+[; ;ring_buffer_LUT.c: 147: terminalTextAttributesReset();
+"147
 [e ( _terminalTextAttributesReset ..  ]
-"170
+"149
 }
-[; ;ring_buffer_LUT.c: 170: }
+[; ;ring_buffer_LUT.c: 149: }
 [e $U 1471  ]
-"173
+"152
 [e :U 1470 ]
-[; ;ring_buffer_LUT.c: 173: else if((0 == strcmp(line, "Clear UART Errors"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 1472  ]
+[; ;ring_buffer_LUT.c: 152: else if((0 == strcmp(line, "Clear ADC Errors"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 1472  ]
 {
-[; ;ring_buffer_LUT.c: 175: clearUARTErrors();
-"175
-[e ( _clearUARTErrors ..  ]
-[; ;ring_buffer_LUT.c: 177: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"177
+[; ;ring_buffer_LUT.c: 154: clearADCErrors();
+"154
+[e ( _clearADCErrors ..  ]
+[; ;ring_buffer_LUT.c: 156: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"156
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 178: printf("UART error(s) cleared\n\r");
-"178
-[e ( _printf :s 29C ]
-[; ;ring_buffer_LUT.c: 179: terminalTextAttributesReset();
-"179
+[; ;ring_buffer_LUT.c: 157: printf("ADC Error(s) cleared\n\r");
+"157
+[e ( _printf :s 25C ]
+[; ;ring_buffer_LUT.c: 158: terminalTextAttributesReset();
+"158
 [e ( _terminalTextAttributesReset ..  ]
-"181
+"160
 }
-[; ;ring_buffer_LUT.c: 181: }
+[; ;ring_buffer_LUT.c: 160: }
 [e $U 1473  ]
-"183
+"163
 [e :U 1472 ]
-[; ;ring_buffer_LUT.c: 183: else if ((0 == strcmp(line, "Error Status?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 30C 1474  ]
+[; ;ring_buffer_LUT.c: 163: else if((0 == strcmp(line, "Clear I2C Errors"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 26C 1474  ]
 {
-[; ;ring_buffer_LUT.c: 185: if (getADCError()) {
-"185
-[e $ ! != -> ( _getADCError ..  `i -> -> -> 0 `i `uc `i 1475  ]
-{
-[; ;ring_buffer_LUT.c: 187: terminalTextAttributes(RED, BLACK, NORMAL);
-"187
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 188: printf("ADC error(s) detected!\n\r");
-"188
-[e ( _printf :s 31C ]
-[; ;ring_buffer_LUT.c: 189: printf("The following channels caused an ADC error:\n\r");
-"189
-[e ( _printf :s 32C ]
-[; ;ring_buffer_LUT.c: 191: if (error_handler.ADC_general_error_flag) {
-"191
-[e $ ! != -> . _error_handler 1 `i -> -> -> 0 `i `uc `i 1476  ]
-{
-[; ;ring_buffer_LUT.c: 192: printf("    General ADC error\n\r");
-"192
-[e ( _printf :s 33C ]
-"193
-}
-[e :U 1476 ]
-[; ;ring_buffer_LUT.c: 193: }
-[; ;ring_buffer_LUT.c: 195: if (error_handler.FVR_ADC_error_flag) {
-"195
-[e $ ! != -> . _error_handler 0 `i -> -> -> 0 `i `uc `i 1477  ]
-{
-[; ;ring_buffer_LUT.c: 196: printf("    FVR\n\r");
-"196
-[e ( _printf :s 34C ]
-"197
-}
-[e :U 1477 ]
-[; ;ring_buffer_LUT.c: 197: }
-[; ;ring_buffer_LUT.c: 199: terminalTextAttributes(YELLOW, BLACK, NORMAL);
-"199
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 200: printf("Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
-"200
-[e ( _printf :s 35C ]
-[; ;ring_buffer_LUT.c: 201: terminalTextAttributesReset();
-"201
-[e ( _terminalTextAttributesReset ..  ]
-"203
-}
-[; ;ring_buffer_LUT.c: 203: }
-[e $U 1478  ]
-"205
-[e :U 1475 ]
-[; ;ring_buffer_LUT.c: 205: else {
-{
-[; ;ring_buffer_LUT.c: 207: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"207
+[; ;ring_buffer_LUT.c: 165: clearI2CErrors();
+"165
+[e ( _clearI2CErrors ..  ]
+[; ;ring_buffer_LUT.c: 167: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"167
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 208: printf("No ADC error(s) detected\n\r");
-"208
-[e ( _printf :s 36C ]
-[; ;ring_buffer_LUT.c: 209: terminalTextAttributesReset();
-"209
+[; ;ring_buffer_LUT.c: 168: printf("I2C error(s) cleared\n\r");
+"168
+[e ( _printf :s 27C ]
+[; ;ring_buffer_LUT.c: 169: terminalTextAttributesReset();
+"169
 [e ( _terminalTextAttributesReset ..  ]
-"211
+"171
 }
-[e :U 1478 ]
-[; ;ring_buffer_LUT.c: 211: }
-[; ;ring_buffer_LUT.c: 213: if (getI2CError()) {
-"213
-[e $ ! != -> ( _getI2CError ..  `i -> -> -> 0 `i `uc `i 1479  ]
+[; ;ring_buffer_LUT.c: 171: }
+[e $U 1475  ]
+"174
+[e :U 1474 ]
+[; ;ring_buffer_LUT.c: 174: else if((0 == strcmp(line, "Clear UART Errors"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 1476  ]
 {
-[; ;ring_buffer_LUT.c: 215: terminalTextAttributes(RED, BLACK, NORMAL);
-"215
+[; ;ring_buffer_LUT.c: 176: clearUARTErrors();
+"176
+[e ( _clearUARTErrors ..  ]
+[; ;ring_buffer_LUT.c: 178: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"178
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 179: printf("UART error(s) cleared\n\r");
+"179
+[e ( _printf :s 29C ]
+[; ;ring_buffer_LUT.c: 180: terminalTextAttributesReset();
+"180
+[e ( _terminalTextAttributesReset ..  ]
+"182
+}
+[; ;ring_buffer_LUT.c: 182: }
+[e $U 1477  ]
+"184
+[e :U 1476 ]
+[; ;ring_buffer_LUT.c: 184: else if ((0 == strcmp(line, "Error Status?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 30C 1478  ]
+{
+[; ;ring_buffer_LUT.c: 186: if (getADCError()) {
+"186
+[e $ ! != -> ( _getADCError ..  `i -> -> -> 0 `i `uc `i 1479  ]
+{
+[; ;ring_buffer_LUT.c: 188: terminalTextAttributes(RED, BLACK, NORMAL);
+"188
 [e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 216: printf("The following I2C Errors were detected:\n\r");
-"216
-[e ( _printf :s 37C ]
-[; ;ring_buffer_LUT.c: 218: if (error_handler.I2C_General_error_flag) {
-"218
-[e $ ! != -> . _error_handler 2 `i -> -> -> 0 `i `uc `i 1480  ]
+[; ;ring_buffer_LUT.c: 189: printf("ADC error(s) detected!\n\r");
+"189
+[e ( _printf :s 31C ]
+[; ;ring_buffer_LUT.c: 190: printf("The following channels caused an ADC error:\n\r");
+"190
+[e ( _printf :s 32C ]
+[; ;ring_buffer_LUT.c: 192: if (error_handler.ADC_general_error_flag) {
+"192
+[e $ ! != -> . _error_handler 1 `i -> -> -> 0 `i `uc `i 1480  ]
 {
-[; ;ring_buffer_LUT.c: 219: printf("    I2C General Error\n\r");
-"219
-[e ( _printf :s 38C ]
-"220
+[; ;ring_buffer_LUT.c: 193: printf("    General ADC error\n\r");
+"193
+[e ( _printf :s 33C ]
+"194
 }
 [e :U 1480 ]
-[; ;ring_buffer_LUT.c: 220: }
-[; ;ring_buffer_LUT.c: 222: if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
-"222
-[e $ ! != -> . _error_handler 6 `i -> -> -> 0 `i `uc `i 1481  ]
+[; ;ring_buffer_LUT.c: 194: }
+[; ;ring_buffer_LUT.c: 196: if (error_handler.FVR_ADC_error_flag) {
+"196
+[e $ ! != -> . _error_handler 0 `i -> -> -> 0 `i `uc `i 1481  ]
 {
-[; ;ring_buffer_LUT.c: 223: printf("    I2C Ambient Temp Sensor Error\n\r");
-"223
-[e ( _printf :s 39C ]
-"224
+[; ;ring_buffer_LUT.c: 197: printf("    FVR\n\r");
+"197
+[e ( _printf :s 34C ]
+"198
 }
 [e :U 1481 ]
-[; ;ring_buffer_LUT.c: 224: }
-[; ;ring_buffer_LUT.c: 226: if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
-"226
-[e $ ! != -> . _error_handler 5 `i -> -> -> 0 `i `uc `i 1482  ]
+[; ;ring_buffer_LUT.c: 198: }
+[; ;ring_buffer_LUT.c: 200: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"200
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 201: printf("Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
+"201
+[e ( _printf :s 35C ]
+[; ;ring_buffer_LUT.c: 202: terminalTextAttributesReset();
+"202
+[e ( _terminalTextAttributesReset ..  ]
+"204
+}
+[; ;ring_buffer_LUT.c: 204: }
+[e $U 1482  ]
+"206
+[e :U 1479 ]
+[; ;ring_buffer_LUT.c: 206: else {
 {
-[; ;ring_buffer_LUT.c: 227: printf("    I2C POS5 Temp Sensor Error\n\r");
-"227
-[e ( _printf :s 40C ]
-"228
+[; ;ring_buffer_LUT.c: 208: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"208
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 209: printf("No ADC error(s) detected\n\r");
+"209
+[e ( _printf :s 36C ]
+[; ;ring_buffer_LUT.c: 210: terminalTextAttributesReset();
+"210
+[e ( _terminalTextAttributesReset ..  ]
+"212
 }
 [e :U 1482 ]
-[; ;ring_buffer_LUT.c: 228: }
-[; ;ring_buffer_LUT.c: 230: if (error_handler.I2C_QI_Temp_Sense_error_flag) {
-"230
-[e $ ! != -> . _error_handler 4 `i -> -> -> 0 `i `uc `i 1483  ]
+[; ;ring_buffer_LUT.c: 212: }
+[; ;ring_buffer_LUT.c: 214: if (getI2CError()) {
+"214
+[e $ ! != -> ( _getI2CError ..  `i -> -> -> 0 `i `uc `i 1483  ]
 {
-[; ;ring_buffer_LUT.c: 231: printf("    I2C QI Temp Sensor Error\n\r");
-"231
-[e ( _printf :s 41C ]
-"232
-}
-[e :U 1483 ]
-[; ;ring_buffer_LUT.c: 232: }
-[; ;ring_buffer_LUT.c: 234: if (error_handler.I2C_OLED_error_flag) {
-"234
-[e $ ! != -> . _error_handler 3 `i -> -> -> 0 `i `uc `i 1484  ]
+[; ;ring_buffer_LUT.c: 216: terminalTextAttributes(RED, BLACK, NORMAL);
+"216
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 217: printf("The following I2C Errors were detected:\n\r");
+"217
+[e ( _printf :s 37C ]
+[; ;ring_buffer_LUT.c: 219: if (error_handler.I2C_General_error_flag) {
+"219
+[e $ ! != -> . _error_handler 2 `i -> -> -> 0 `i `uc `i 1484  ]
 {
-[; ;ring_buffer_LUT.c: 235: printf("    I2C OLED Display Error\n\r");
-"235
-[e ( _printf :s 42C ]
-"236
+[; ;ring_buffer_LUT.c: 220: printf("    I2C General Error\n\r");
+"220
+[e ( _printf :s 38C ]
+"221
 }
 [e :U 1484 ]
-[; ;ring_buffer_LUT.c: 236: }
-[; ;ring_buffer_LUT.c: 238: terminalTextAttributes(YELLOW, BLACK, NORMAL);
-"238
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 239: printf("Call 'Clear I2C Errors' to clear communications error(s)\n\r");
-"239
-[e ( _printf :s 43C ]
-[; ;ring_buffer_LUT.c: 240: terminalTextAttributesReset();
-"240
-[e ( _terminalTextAttributesReset ..  ]
-"242
-}
-[; ;ring_buffer_LUT.c: 242: }
-[e $U 1485  ]
-"244
-[e :U 1479 ]
-[; ;ring_buffer_LUT.c: 244: else {
+[; ;ring_buffer_LUT.c: 221: }
+[; ;ring_buffer_LUT.c: 223: if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
+"223
+[e $ ! != -> . _error_handler 6 `i -> -> -> 0 `i `uc `i 1485  ]
 {
-[; ;ring_buffer_LUT.c: 246: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"246
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 247: printf("No I2C error(s) detected\n\r");
-"247
-[e ( _printf :s 44C ]
-[; ;ring_buffer_LUT.c: 248: terminalTextAttributesReset();
-"248
-[e ( _terminalTextAttributesReset ..  ]
-"250
+[; ;ring_buffer_LUT.c: 224: printf("    I2C Ambient Temp Sensor Error\n\r");
+"224
+[e ( _printf :s 39C ]
+"225
 }
 [e :U 1485 ]
-[; ;ring_buffer_LUT.c: 250: }
-[; ;ring_buffer_LUT.c: 252: if (getUARTError()) {
-"252
-[e $ ! != -> ( _getUARTError ..  `i -> -> -> 0 `i `uc `i 1486  ]
+[; ;ring_buffer_LUT.c: 225: }
+[; ;ring_buffer_LUT.c: 227: if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
+"227
+[e $ ! != -> . _error_handler 5 `i -> -> -> 0 `i `uc `i 1486  ]
 {
-[; ;ring_buffer_LUT.c: 254: terminalTextAttributes(RED, BLACK, NORMAL);
-"254
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 255: printf("USB UART Error Detected\n\r");
-"255
-[e ( _printf :s 45C ]
-[; ;ring_buffer_LUT.c: 257: terminalTextAttributes(YELLOW, BLACK, NORMAL);
-"257
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 258: printf("Call 'Clear UART Errors' to clear communications error(s)\n\r");
-"258
-[e ( _printf :s 46C ]
-[; ;ring_buffer_LUT.c: 259: terminalTextAttributesReset();
-"259
-[e ( _terminalTextAttributesReset ..  ]
-"261
+[; ;ring_buffer_LUT.c: 228: printf("    I2C POS5 Temp Sensor Error\n\r");
+"228
+[e ( _printf :s 40C ]
+"229
 }
-[; ;ring_buffer_LUT.c: 261: }
-[e $U 1487  ]
-"263
 [e :U 1486 ]
-[; ;ring_buffer_LUT.c: 263: else {
+[; ;ring_buffer_LUT.c: 229: }
+[; ;ring_buffer_LUT.c: 231: if (error_handler.I2C_QI_Temp_Sense_error_flag) {
+"231
+[e $ ! != -> . _error_handler 4 `i -> -> -> 0 `i `uc `i 1487  ]
 {
-[; ;ring_buffer_LUT.c: 265: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"265
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 266: printf("No UART error(s) detected\n\r");
-"266
-[e ( _printf :s 47C ]
-[; ;ring_buffer_LUT.c: 267: terminalTextAttributesReset();
-"267
-[e ( _terminalTextAttributesReset ..  ]
-"269
+[; ;ring_buffer_LUT.c: 232: printf("    I2C QI Temp Sensor Error\n\r");
+"232
+[e ( _printf :s 41C ]
+"233
 }
 [e :U 1487 ]
-"271
-}
-[; ;ring_buffer_LUT.c: 269: }
-[; ;ring_buffer_LUT.c: 271: }
-[e $U 1488  ]
-"275
-[e :U 1474 ]
-[; ;ring_buffer_LUT.c: 275: else if((0 == strcmp(line, "Measure POS5?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 48C 1489  ]
+[; ;ring_buffer_LUT.c: 233: }
+[; ;ring_buffer_LUT.c: 235: if (error_handler.I2C_OLED_error_flag) {
+"235
+[e $ ! != -> . _error_handler 3 `i -> -> -> 0 `i `uc `i 1488  ]
 {
-[; ;ring_buffer_LUT.c: 277: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"277
-[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 278: printf("+5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
-"278
-[e ( _printf , (. :s 49C . _adc_results 2 ]
-[; ;ring_buffer_LUT.c: 279: terminalTextAttributesReset();
-"279
-[e ( _terminalTextAttributesReset ..  ]
-"281
+[; ;ring_buffer_LUT.c: 236: printf("    I2C OLED Display Error\n\r");
+"236
+[e ( _printf :s 42C ]
+"237
 }
-[; ;ring_buffer_LUT.c: 281: }
-[e $U 1490  ]
-"284
+[e :U 1488 ]
+[; ;ring_buffer_LUT.c: 237: }
+[; ;ring_buffer_LUT.c: 239: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"239
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 240: printf("Call 'Clear I2C Errors' to clear communications error(s)\n\r");
+"240
+[e ( _printf :s 43C ]
+[; ;ring_buffer_LUT.c: 241: terminalTextAttributesReset();
+"241
+[e ( _terminalTextAttributesReset ..  ]
+"243
+}
+[; ;ring_buffer_LUT.c: 243: }
+[e $U 1489  ]
+"245
+[e :U 1483 ]
+[; ;ring_buffer_LUT.c: 245: else {
+{
+[; ;ring_buffer_LUT.c: 247: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"247
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 248: printf("No I2C error(s) detected\n\r");
+"248
+[e ( _printf :s 44C ]
+[; ;ring_buffer_LUT.c: 249: terminalTextAttributesReset();
+"249
+[e ( _terminalTextAttributesReset ..  ]
+"251
+}
 [e :U 1489 ]
-[; ;ring_buffer_LUT.c: 284: else if((0 == strcmp(line, "Measure POS12?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 50C 1491  ]
+[; ;ring_buffer_LUT.c: 251: }
+[; ;ring_buffer_LUT.c: 253: if (getUARTError()) {
+"253
+[e $ ! != -> ( _getUARTError ..  `i -> -> -> 0 `i `uc `i 1490  ]
 {
-[; ;ring_buffer_LUT.c: 286: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"286
-[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 287: printf("+12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
-"287
-[e ( _printf , (. :s 51C . _adc_results 3 ]
-[; ;ring_buffer_LUT.c: 288: terminalTextAttributesReset();
-"288
+[; ;ring_buffer_LUT.c: 255: terminalTextAttributes(RED, BLACK, NORMAL);
+"255
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 256: printf("USB UART Error Detected\n\r");
+"256
+[e ( _printf :s 45C ]
+[; ;ring_buffer_LUT.c: 258: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"258
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 259: printf("Call 'Clear UART Errors' to clear communications error(s)\n\r");
+"259
+[e ( _printf :s 46C ]
+[; ;ring_buffer_LUT.c: 260: terminalTextAttributesReset();
+"260
 [e ( _terminalTextAttributesReset ..  ]
-"290
+"262
 }
-[; ;ring_buffer_LUT.c: 290: }
-[e $U 1492  ]
-"293
+[; ;ring_buffer_LUT.c: 262: }
+[e $U 1491  ]
+"264
+[e :U 1490 ]
+[; ;ring_buffer_LUT.c: 264: else {
+{
+[; ;ring_buffer_LUT.c: 266: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"266
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 267: printf("No UART error(s) detected\n\r");
+"267
+[e ( _printf :s 47C ]
+[; ;ring_buffer_LUT.c: 268: terminalTextAttributesReset();
+"268
+[e ( _terminalTextAttributesReset ..  ]
+"270
+}
 [e :U 1491 ]
-[; ;ring_buffer_LUT.c: 293: else if((0 == strcmp(line, "Measure Die Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 52C 1493  ]
-{
-[; ;ring_buffer_LUT.c: 295: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"295
-[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 296: printf("Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
-"296
-[e ( _printf , (. :s 53C . _adc_results 6 ]
-[; ;ring_buffer_LUT.c: 297: terminalTextAttributesReset();
-"297
-[e ( _terminalTextAttributesReset ..  ]
-"299
+"272
 }
-[; ;ring_buffer_LUT.c: 299: }
+[; ;ring_buffer_LUT.c: 270: }
+[; ;ring_buffer_LUT.c: 272: }
+[e $U 1492  ]
+"276
+[e :U 1478 ]
+[; ;ring_buffer_LUT.c: 276: else if((0 == strcmp(line, "Measure POS5?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 48C 1493  ]
+{
+[; ;ring_buffer_LUT.c: 278: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"278
+[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 279: printf("+5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
+"279
+[e ( _printf , (. :s 49C -> . _adc_results 2 `d ]
+[; ;ring_buffer_LUT.c: 280: terminalTextAttributesReset();
+"280
+[e ( _terminalTextAttributesReset ..  ]
+"282
+}
+[; ;ring_buffer_LUT.c: 282: }
 [e $U 1494  ]
-"302
+"285
 [e :U 1493 ]
-[; ;ring_buffer_LUT.c: 302: else if ((0 == strcmp(line, "Measure POS12 Current?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 54C 1495  ]
+[; ;ring_buffer_LUT.c: 285: else if((0 == strcmp(line, "Measure POS12?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 50C 1495  ]
 {
-[; ;ring_buffer_LUT.c: 304: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"304
+[; ;ring_buffer_LUT.c: 287: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"287
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 305: printf("+12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
-"305
-[e ( _printf , (. :s 55C . _adc_results 4 ]
-[; ;ring_buffer_LUT.c: 306: terminalTextAttributesReset();
-"306
+[; ;ring_buffer_LUT.c: 288: printf("+12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
+"288
+[e ( _printf , (. :s 51C -> . _adc_results 3 `d ]
+[; ;ring_buffer_LUT.c: 289: terminalTextAttributesReset();
+"289
 [e ( _terminalTextAttributesReset ..  ]
-"308
+"291
 }
-[; ;ring_buffer_LUT.c: 308: }
+[; ;ring_buffer_LUT.c: 291: }
 [e $U 1496  ]
-"311
+"294
 [e :U 1495 ]
-[; ;ring_buffer_LUT.c: 311: else if ((0 == strcmp(line, "Measure QI Current?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 56C 1497  ]
+[; ;ring_buffer_LUT.c: 294: else if((0 == strcmp(line, "Measure Die Temp?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 52C 1497  ]
 {
-[; ;ring_buffer_LUT.c: 313: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"313
+[; ;ring_buffer_LUT.c: 296: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"296
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 314: printf("QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
-"314
-[e ( _printf , (. :s 57C . _adc_results 5 ]
-[; ;ring_buffer_LUT.c: 315: terminalTextAttributesReset();
-"315
+[; ;ring_buffer_LUT.c: 297: printf("Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
+"297
+[e ( _printf , (. :s 53C -> . _adc_results 6 `d ]
+[; ;ring_buffer_LUT.c: 298: terminalTextAttributesReset();
+"298
 [e ( _terminalTextAttributesReset ..  ]
-"317
+"300
 }
-[; ;ring_buffer_LUT.c: 317: }
+[; ;ring_buffer_LUT.c: 300: }
 [e $U 1498  ]
-"320
+"303
 [e :U 1497 ]
-[; ;ring_buffer_LUT.c: 320: else if((0 == strcmp(line, "Measure FVR?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 58C 1499  ]
+[; ;ring_buffer_LUT.c: 303: else if ((0 == strcmp(line, "Measure POS12 Current?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 54C 1499  ]
 {
-[; ;ring_buffer_LUT.c: 322: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"322
+[; ;ring_buffer_LUT.c: 305: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"305
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 323: printf("Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
-"323
-[e ( _printf , (. :s 59C . _adc_results 1 ]
-[; ;ring_buffer_LUT.c: 324: terminalTextAttributesReset();
-"324
+[; ;ring_buffer_LUT.c: 306: printf("+12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
+"306
+[e ( _printf , (. :s 55C -> . _adc_results 4 `d ]
+[; ;ring_buffer_LUT.c: 307: terminalTextAttributesReset();
+"307
 [e ( _terminalTextAttributesReset ..  ]
-"326
+"309
 }
-[; ;ring_buffer_LUT.c: 326: }
+[; ;ring_buffer_LUT.c: 309: }
 [e $U 1500  ]
-"329
+"312
 [e :U 1499 ]
-[; ;ring_buffer_LUT.c: 329: else if((0 == strcmp(line, "Measure AVSS?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 60C 1501  ]
+[; ;ring_buffer_LUT.c: 312: else if ((0 == strcmp(line, "Measure QI Current?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 56C 1501  ]
 {
-[; ;ring_buffer_LUT.c: 331: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"331
+[; ;ring_buffer_LUT.c: 314: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"314
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 332: printf("AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
-"332
-[e ( _printf , (. :s 61C . _adc_results 0 ]
-[; ;ring_buffer_LUT.c: 333: terminalTextAttributesReset();
-"333
+[; ;ring_buffer_LUT.c: 315: printf("QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
+"315
+[e ( _printf , (. :s 57C -> . _adc_results 5 `d ]
+[; ;ring_buffer_LUT.c: 316: terminalTextAttributesReset();
+"316
 [e ( _terminalTextAttributesReset ..  ]
-"335
+"318
 }
-[; ;ring_buffer_LUT.c: 335: }
+[; ;ring_buffer_LUT.c: 318: }
 [e $U 1502  ]
-"338
+"321
 [e :U 1501 ]
-[; ;ring_buffer_LUT.c: 338: else if ((0 == strcmp(line, "Measure Input Power?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 62C 1503  ]
+[; ;ring_buffer_LUT.c: 321: else if((0 == strcmp(line, "Measure FVR?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 58C 1503  ]
 {
-[; ;ring_buffer_LUT.c: 340: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"340
+[; ;ring_buffer_LUT.c: 323: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"323
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 341: printf("Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
-"341
-[e ( _printf , (. :s 63C -> . _adc_calculations 0 `d ]
-[; ;ring_buffer_LUT.c: 342: terminalTextAttributesReset();
-"342
+[; ;ring_buffer_LUT.c: 324: printf("Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
+"324
+[e ( _printf , (. :s 59C -> . _adc_results 1 `d ]
+[; ;ring_buffer_LUT.c: 325: terminalTextAttributesReset();
+"325
 [e ( _terminalTextAttributesReset ..  ]
-"344
+"327
 }
-[; ;ring_buffer_LUT.c: 344: }
+[; ;ring_buffer_LUT.c: 327: }
 [e $U 1504  ]
-"347
+"330
 [e :U 1503 ]
-[; ;ring_buffer_LUT.c: 347: else if ((0 == strcmp(line, "Measure Output Power?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 64C 1505  ]
+[; ;ring_buffer_LUT.c: 330: else if((0 == strcmp(line, "Measure AVSS?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 60C 1505  ]
 {
-[; ;ring_buffer_LUT.c: 349: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"349
+[; ;ring_buffer_LUT.c: 332: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"332
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 350: printf("Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
-"350
-[e ( _printf , (. :s 65C -> . _adc_calculations 1 `d ]
-[; ;ring_buffer_LUT.c: 351: terminalTextAttributesReset();
-"351
+[; ;ring_buffer_LUT.c: 333: printf("AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
+"333
+[e ( _printf , (. :s 61C -> . _adc_results 0 `d ]
+[; ;ring_buffer_LUT.c: 334: terminalTextAttributesReset();
+"334
 [e ( _terminalTextAttributesReset ..  ]
-"353
+"336
 }
-[; ;ring_buffer_LUT.c: 353: }
+[; ;ring_buffer_LUT.c: 336: }
 [e $U 1506  ]
-"356
+"339
 [e :U 1505 ]
-[; ;ring_buffer_LUT.c: 356: else if ((0 == strcmp(line, "Measure Efficiency?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 66C 1507  ]
+[; ;ring_buffer_LUT.c: 339: else if ((0 == strcmp(line, "Measure Input Power?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 62C 1507  ]
 {
-[; ;ring_buffer_LUT.c: 358: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"358
+[; ;ring_buffer_LUT.c: 341: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"341
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 359: printf("System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
-"359
-[e ( _printf , (. :s 67C -> . _adc_calculations 2 `d ]
-[; ;ring_buffer_LUT.c: 360: terminalTextAttributesReset();
-"360
+[; ;ring_buffer_LUT.c: 342: printf("Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
+"342
+[e ( _printf , (. :s 63C -> . _adc_calculations 0 `d ]
+[; ;ring_buffer_LUT.c: 343: terminalTextAttributesReset();
+"343
 [e ( _terminalTextAttributesReset ..  ]
-"362
+"345
 }
-[; ;ring_buffer_LUT.c: 362: }
+[; ;ring_buffer_LUT.c: 345: }
 [e $U 1508  ]
-"365
+"348
 [e :U 1507 ]
-[; ;ring_buffer_LUT.c: 365: else if ((0 == strcmp(line, "Measure QI Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 68C 1509  ]
+[; ;ring_buffer_LUT.c: 348: else if ((0 == strcmp(line, "Measure Output Power?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 64C 1509  ]
 {
-[; ;ring_buffer_LUT.c: 367: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"367
+[; ;ring_buffer_LUT.c: 350: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"350
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 368: printf("QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
-"368
-[e ( _printf , (. :s 69C . _LM73_temp_results 0 ]
-[; ;ring_buffer_LUT.c: 369: terminalTextAttributesReset();
-"369
+[; ;ring_buffer_LUT.c: 351: printf("Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
+"351
+[e ( _printf , (. :s 65C -> . _adc_calculations 1 `d ]
+[; ;ring_buffer_LUT.c: 352: terminalTextAttributesReset();
+"352
 [e ( _terminalTextAttributesReset ..  ]
-"371
+"354
 }
-[; ;ring_buffer_LUT.c: 371: }
+[; ;ring_buffer_LUT.c: 354: }
 [e $U 1510  ]
-"374
+"357
 [e :U 1509 ]
-[; ;ring_buffer_LUT.c: 374: else if ((0 == strcmp(line, "Measure POS5 Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 70C 1511  ]
+[; ;ring_buffer_LUT.c: 357: else if ((0 == strcmp(line, "Measure Efficiency?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 66C 1511  ]
 {
-[; ;ring_buffer_LUT.c: 376: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"376
+[; ;ring_buffer_LUT.c: 359: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"359
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 377: printf("+5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
-"377
-[e ( _printf , (. :s 71C . _LM73_temp_results 1 ]
-[; ;ring_buffer_LUT.c: 378: terminalTextAttributesReset();
-"378
+[; ;ring_buffer_LUT.c: 360: printf("System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
+"360
+[e ( _printf , (. :s 67C -> . _adc_calculations 2 `d ]
+[; ;ring_buffer_LUT.c: 361: terminalTextAttributesReset();
+"361
 [e ( _terminalTextAttributesReset ..  ]
-"380
+"363
 }
-[; ;ring_buffer_LUT.c: 380: }
+[; ;ring_buffer_LUT.c: 363: }
 [e $U 1512  ]
-"383
+"366
 [e :U 1511 ]
-[; ;ring_buffer_LUT.c: 383: else if ((0 == strcmp(line, "Measure Ambient Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 72C 1513  ]
+[; ;ring_buffer_LUT.c: 366: else if ((0 == strcmp(line, "Measure QI Temp?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 68C 1513  ]
 {
-[; ;ring_buffer_LUT.c: 385: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"385
+[; ;ring_buffer_LUT.c: 368: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"368
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 386: printf("Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
-"386
-[e ( _printf , (. :s 73C . _LM73_temp_results 2 ]
-[; ;ring_buffer_LUT.c: 387: terminalTextAttributesReset();
-"387
+[; ;ring_buffer_LUT.c: 369: printf("QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
+"369
+[e ( _printf , (. :s 69C -> . _LM73_temp_results 0 `d ]
+[; ;ring_buffer_LUT.c: 370: terminalTextAttributesReset();
+"370
 [e ( _terminalTextAttributesReset ..  ]
-"389
+"372
 }
-[; ;ring_buffer_LUT.c: 389: }
+[; ;ring_buffer_LUT.c: 372: }
 [e $U 1514  ]
-"391
+"375
 [e :U 1513 ]
-[; ;ring_buffer_LUT.c: 391: else if ((0 == strcmp(line, "Charge Status?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 74C 1515  ]
+[; ;ring_buffer_LUT.c: 375: else if ((0 == strcmp(line, "Measure POS5 Temp?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 70C 1515  ]
 {
-[; ;ring_buffer_LUT.c: 393: if (nxq_charge_state == QI_Error) {
-"393
-[e $ ! == -> _nxq_charge_state `i -> . `E10200 3 `i 1516  ]
-{
-[; ;ring_buffer_LUT.c: 395: terminalTextAttributes(RED, BLACK, NORMAL);
-"395
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 396: printf("QI Charger is in Error State\n\r");
-"396
-[e ( _printf :s 75C ]
-[; ;ring_buffer_LUT.c: 397: terminalTextAttributesReset();
-"397
-[e ( _terminalTextAttributesReset ..  ]
-"399
-}
-[; ;ring_buffer_LUT.c: 399: }
-[e $U 1517  ]
-"401
-[e :U 1516 ]
-[; ;ring_buffer_LUT.c: 401: else if (nxq_charge_state == QI_Fully_Charged) {
-[e $ ! == -> _nxq_charge_state `i -> . `E10200 2 `i 1518  ]
-{
-[; ;ring_buffer_LUT.c: 403: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"403
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 404: printf("QI wireless power converter has fully charged phone\n\r");
-"404
-[e ( _printf :s 76C ]
-[; ;ring_buffer_LUT.c: 405: terminalTextAttributesReset();
-"405
-[e ( _terminalTextAttributesReset ..  ]
-"407
-}
-[; ;ring_buffer_LUT.c: 407: }
-[e $U 1519  ]
-"409
-[e :U 1518 ]
-[; ;ring_buffer_LUT.c: 409: else {
-{
-[; ;ring_buffer_LUT.c: 411: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"411
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 412: printf("QI wireless power converter is %s\n\r", getNXQChargeStateString());
-"412
-[e ( _printf , (. :s 77C -> ( _getNXQChargeStateString ..  `*Cuc ]
-[; ;ring_buffer_LUT.c: 413: terminalTextAttributesReset();
-"413
-[e ( _terminalTextAttributesReset ..  ]
-"415
-}
-[e :U 1519 ]
-[e :U 1517 ]
-"417
-}
-[; ;ring_buffer_LUT.c: 415: }
-[; ;ring_buffer_LUT.c: 417: }
-[e $U 1520  ]
-"420
-[e :U 1515 ]
-[; ;ring_buffer_LUT.c: 420: else if((0 == strcmp(line, "Help"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 78C 1521  ]
-{
-[; ;ring_buffer_LUT.c: 422: terminalTextAttributes(YELLOW, BLACK, NORMAL);
-"422
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 424: printf("Available Commands:\n\r");
-"424
-[e ( _printf :s 79C ]
-[; ;ring_buffer_LUT.c: 426: printf( "    Help: Lists available commands\n\r"
-[; ;ring_buffer_LUT.c: 427: "    *IDN?: Prints identification string\n\r"
-[; ;ring_buffer_LUT.c: 428: "    Reset: Executes software reset instruction\n\r"
-[; ;ring_buffer_LUT.c: 429: "    Clear: Clears the virtual COM port terminal\n\r"
-[; ;ring_buffer_LUT.c: 430: "    Cause of Reset?: Prints the cause of the most recent device reset\n\r"
-[; ;ring_buffer_LUT.c: 431: "    Device ID?: Prints the microchip device ID\n\r"
-[; ;ring_buffer_LUT.c: 432: "    Revision ID?: Prints the microchip silicon revision ID\n\r"
-[; ;ring_buffer_LUT.c: 433: "    User IDs?: Prints a list of User IDs saved in Flash\n\r"
-[; ;ring_buffer_LUT.c: 434: "    Device On Time?: Prints the device on time since last device reset\n\r"
-[; ;ring_buffer_LUT.c: 435: "    Enable QI: Enabled QI wireless power conversion\n\r"
-[; ;ring_buffer_LUT.c: 436: "    Disable QI: Disables QI wireless power conversion\n\r"
-[; ;ring_buffer_LUT.c: 437: "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
-[; ;ring_buffer_LUT.c: 438: "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
-[; ;ring_buffer_LUT.c: 439: "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
-[; ;ring_buffer_LUT.c: 440: "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
-[; ;ring_buffer_LUT.c: 441: "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
-[; ;ring_buffer_LUT.c: 442: "    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
-[; ;ring_buffer_LUT.c: 443: "    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
-[; ;ring_buffer_LUT.c: 444: "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
-[; ;ring_buffer_LUT.c: 445: "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
-[; ;ring_buffer_LUT.c: 446: "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
-[; ;ring_buffer_LUT.c: 447: "    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
-[; ;ring_buffer_LUT.c: 448: "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
-[; ;ring_buffer_LUT.c: 449: "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
-[; ;ring_buffer_LUT.c: 450: "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
-[; ;ring_buffer_LUT.c: 451: "    Error Status? Prints if any system faults have been detected\n\r"
-[; ;ring_buffer_LUT.c: 452: "    Clear UART Errors: Clears UART error flags\n\r"
-[; ;ring_buffer_LUT.c: 453: "    Clear I2C Errors: Clears I2C error flags\n\r"
-[; ;ring_buffer_LUT.c: 454: "    Clear ADC Errors: Clears ADC error flags\n\r"
-[; ;ring_buffer_LUT.c: 455: );
-"455
-[e ( _printf :s 80C ]
-[; ;ring_buffer_LUT.c: 457: printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
-"457
-[e ( _printf :s 81C ]
-[; ;ring_buffer_LUT.c: 459: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"459
-[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 460: printf("System parameters and affirmative responses appear in green\n\r");
-"460
-[e ( _printf :s 82C ]
-[; ;ring_buffer_LUT.c: 461: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"461
+[; ;ring_buffer_LUT.c: 377: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"377
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 462: printf("Measurement responses appear in cyan\n\r");
-"462
-[e ( _printf :s 83C ]
-[; ;ring_buffer_LUT.c: 463: terminalTextAttributes(RED, BLACK, NORMAL);
-"463
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 464: printf("Errors and negative responses appear in red\n\r");
-"464
-[e ( _printf :s 84C ]
-[; ;ring_buffer_LUT.c: 465: terminalTextAttributesReset();
-"465
+[; ;ring_buffer_LUT.c: 378: printf("+5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
+"378
+[e ( _printf , (. :s 71C -> . _LM73_temp_results 1 `d ]
+[; ;ring_buffer_LUT.c: 379: terminalTextAttributesReset();
+"379
 [e ( _terminalTextAttributesReset ..  ]
-[; ;ring_buffer_LUT.c: 466: printf("User input appears in white\n\r");
-"466
-[e ( _printf :s 85C ]
-"468
+"381
 }
-[; ;ring_buffer_LUT.c: 468: }
+[; ;ring_buffer_LUT.c: 381: }
+[e $U 1516  ]
+"384
+[e :U 1515 ]
+[; ;ring_buffer_LUT.c: 384: else if ((0 == strcmp(line, "Measure Ambient Temp?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 72C 1517  ]
+{
+[; ;ring_buffer_LUT.c: 386: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"386
+[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 387: printf("Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
+"387
+[e ( _printf , (. :s 73C -> . _LM73_temp_results 2 `d ]
+[; ;ring_buffer_LUT.c: 388: terminalTextAttributesReset();
+"388
+[e ( _terminalTextAttributesReset ..  ]
+"390
+}
+[; ;ring_buffer_LUT.c: 390: }
+[e $U 1518  ]
+"392
+[e :U 1517 ]
+[; ;ring_buffer_LUT.c: 392: else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 74C 1519  ]
+{
+[; ;ring_buffer_LUT.c: 394: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"394
+[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 395: printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+"395
+[e ( _printf , (. :s 75C .2.5 ]
+[; ;ring_buffer_LUT.c: 396: terminalTextAttributesReset();
+"396
+[e ( _terminalTextAttributesReset ..  ]
+"398
+}
+[; ;ring_buffer_LUT.c: 398: }
+[e $U 1520  ]
+"400
+[e :U 1519 ]
+[; ;ring_buffer_LUT.c: 400: else if ((0 == strcmp(line, "Measure QI FSW?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 76C 1521  ]
+{
+[; ;ring_buffer_LUT.c: 402: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"402
+[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 403: printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+"403
+[e ( _printf , (. :s 77C / -> . _freq_meas_results 0 `d .1000.0 ]
+[; ;ring_buffer_LUT.c: 404: terminalTextAttributesReset();
+"404
+[e ( _terminalTextAttributesReset ..  ]
+"406
+}
+[; ;ring_buffer_LUT.c: 406: }
 [e $U 1522  ]
-"471
+"408
 [e :U 1521 ]
-[; ;ring_buffer_LUT.c: 471: else {
+[; ;ring_buffer_LUT.c: 408: else if ((0 == strcmp(line, "Charge Status?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 78C 1523  ]
 {
-[; ;ring_buffer_LUT.c: 473: if (strlen(line) >= 1) {
-"473
-[e $ ! >= ( _strlen (1 -> _line `*Cuc -> -> 1 `i `ui 1523  ]
+[; ;ring_buffer_LUT.c: 410: if (nxq_charge_state == QI_Error) {
+"410
+[e $ ! == -> _nxq_charge_state `i -> . `E10243 3 `i 1524  ]
 {
-[; ;ring_buffer_LUT.c: 475: terminalTextAttributes(RED, BLACK, NORMAL);
-"475
+[; ;ring_buffer_LUT.c: 412: terminalTextAttributes(RED, BLACK, NORMAL);
+"412
 [e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 476: printf("Unsupported or mis-entered command\n\r");
-"476
-[e ( _printf :s 86C ]
-[; ;ring_buffer_LUT.c: 477: terminalTextAttributes(YELLOW, BLACK, NORMAL);
-"477
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 478: printf("Commands are case sensitive, backspace is supported, command history is not supported\n\r");
-"478
-[e ( _printf :s 87C ]
-[; ;ring_buffer_LUT.c: 479: printf("Call 'Help' for list of supported commands\n\r");
-"479
-[e ( _printf :s 88C ]
-[; ;ring_buffer_LUT.c: 480: terminalTextAttributesReset();
-"480
+[; ;ring_buffer_LUT.c: 413: printf("QI Charger is in Error State\n\r");
+"413
+[e ( _printf :s 79C ]
+[; ;ring_buffer_LUT.c: 414: terminalTextAttributesReset();
+"414
 [e ( _terminalTextAttributesReset ..  ]
-"482
+"416
 }
+[; ;ring_buffer_LUT.c: 416: }
+[e $U 1525  ]
+"418
+[e :U 1524 ]
+[; ;ring_buffer_LUT.c: 418: else if (nxq_charge_state == QI_Fully_Charged) {
+[e $ ! == -> _nxq_charge_state `i -> . `E10243 2 `i 1526  ]
+{
+[; ;ring_buffer_LUT.c: 420: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"420
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 421: printf("QI wireless power converter has fully charged phone\n\r");
+"421
+[e ( _printf :s 80C ]
+[; ;ring_buffer_LUT.c: 422: terminalTextAttributesReset();
+"422
+[e ( _terminalTextAttributesReset ..  ]
+"424
+}
+[; ;ring_buffer_LUT.c: 424: }
+[e $U 1527  ]
+"426
+[e :U 1526 ]
+[; ;ring_buffer_LUT.c: 426: else {
+{
+[; ;ring_buffer_LUT.c: 428: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"428
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 429: printf("QI wireless power converter is %s\n\r", getNXQChargeStateString());
+"429
+[e ( _printf , (. :s 81C -> ( _getNXQChargeStateString ..  `*Cuc ]
+[; ;ring_buffer_LUT.c: 430: terminalTextAttributesReset();
+"430
+[e ( _terminalTextAttributesReset ..  ]
+"432
+}
+[e :U 1527 ]
+[e :U 1525 ]
+"434
+}
+[; ;ring_buffer_LUT.c: 432: }
+[; ;ring_buffer_LUT.c: 434: }
+[e $U 1528  ]
+"437
 [e :U 1523 ]
+[; ;ring_buffer_LUT.c: 437: else if((0 == strcmp(line, "Help"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 82C 1529  ]
+{
+[; ;ring_buffer_LUT.c: 439: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"439
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 441: printf("Available Commands:\n\r");
+"441
+[e ( _printf :s 83C ]
+[; ;ring_buffer_LUT.c: 443: printf( "    Help: Lists available commands\n\r"
+[; ;ring_buffer_LUT.c: 444: "    *IDN?: Prints identification string\n\r"
+[; ;ring_buffer_LUT.c: 445: "    Reset: Executes software reset instruction\n\r"
+[; ;ring_buffer_LUT.c: 446: "    Clear: Clears the virtual COM port terminal\n\r"
+[; ;ring_buffer_LUT.c: 447: "    Cause of Reset?: Prints the cause of the most recent device reset\n\r"
+[; ;ring_buffer_LUT.c: 448: "    Device ID?: Prints the microchip device ID\n\r"
+[; ;ring_buffer_LUT.c: 449: "    Revision ID?: Prints the microchip silicon revision ID\n\r"
+[; ;ring_buffer_LUT.c: 450: "    User IDs?: Prints a list of User IDs saved in Flash\n\r"
+[; ;ring_buffer_LUT.c: 451: "    Device On Time?: Prints the device on time since last device reset\n\r"
+[; ;ring_buffer_LUT.c: 452: "    Enable QI: Enabled QI wireless power conversion\n\r"
+[; ;ring_buffer_LUT.c: 453: "    Disable QI: Disables QI wireless power conversion\n\r"
+[; ;ring_buffer_LUT.c: 454: "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
+[; ;ring_buffer_LUT.c: 455: "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
+[; ;ring_buffer_LUT.c: 456: "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
+[; ;ring_buffer_LUT.c: 457: "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
+[; ;ring_buffer_LUT.c: 458: "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
+[; ;ring_buffer_LUT.c: 459: "    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
+[; ;ring_buffer_LUT.c: 460: "    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
+[; ;ring_buffer_LUT.c: 461: "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
+[; ;ring_buffer_LUT.c: 462: "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
+[; ;ring_buffer_LUT.c: 463: "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
+[; ;ring_buffer_LUT.c: 464: "    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
+[; ;ring_buffer_LUT.c: 465: "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
+[; ;ring_buffer_LUT.c: 466: "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
+[; ;ring_buffer_LUT.c: 467: "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
+[; ;ring_buffer_LUT.c: 468: "    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
+[; ;ring_buffer_LUT.c: 469: "    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
+[; ;ring_buffer_LUT.c: 470: "    Error Status? Prints if any system faults have been detected\n\r"
+[; ;ring_buffer_LUT.c: 471: "    Clear UART Errors: Clears UART error flags\n\r"
+[; ;ring_buffer_LUT.c: 472: "    Clear I2C Errors: Clears I2C error flags\n\r"
+[; ;ring_buffer_LUT.c: 473: "    Clear ADC Errors: Clears ADC error flags\n\r"
+[; ;ring_buffer_LUT.c: 474: );
+"474
+[e ( _printf :s 84C ]
+[; ;ring_buffer_LUT.c: 476: printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
+"476
+[e ( _printf :s 85C ]
+[; ;ring_buffer_LUT.c: 478: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"478
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 479: printf("System parameters and affirmative responses appear in green\n\r");
+"479
+[e ( _printf :s 86C ]
+[; ;ring_buffer_LUT.c: 480: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"480
+[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 481: printf("Measurement responses appear in cyan\n\r");
+"481
+[e ( _printf :s 87C ]
+[; ;ring_buffer_LUT.c: 482: terminalTextAttributes(RED, BLACK, NORMAL);
+"482
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 483: printf("Errors and negative responses appear in red\n\r");
+"483
+[e ( _printf :s 88C ]
+[; ;ring_buffer_LUT.c: 484: terminalTextAttributesReset();
 "484
+[e ( _terminalTextAttributesReset ..  ]
+[; ;ring_buffer_LUT.c: 485: printf("User input appears in white\n\r");
+"485
+[e ( _printf :s 89C ]
+"487
 }
+[; ;ring_buffer_LUT.c: 487: }
+[e $U 1530  ]
+"490
+[e :U 1529 ]
+[; ;ring_buffer_LUT.c: 490: else {
+{
+[; ;ring_buffer_LUT.c: 492: if (strlen(line) >= 1) {
+"492
+[e $ ! >= ( _strlen (1 -> _line `*Cuc -> -> 1 `i `ui 1531  ]
+{
+[; ;ring_buffer_LUT.c: 494: terminalTextAttributes(RED, BLACK, NORMAL);
+"494
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 495: printf("Unsupported or mis-entered command\n\r");
+"495
+[e ( _printf :s 90C ]
+[; ;ring_buffer_LUT.c: 496: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"496
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 497: printf("Commands are case sensitive, backspace is supported, command history is not supported\n\r");
+"497
+[e ( _printf :s 91C ]
+[; ;ring_buffer_LUT.c: 498: printf("Call 'Help' for list of supported commands\n\r");
+"498
+[e ( _printf :s 92C ]
+[; ;ring_buffer_LUT.c: 499: terminalTextAttributesReset();
+"499
+[e ( _terminalTextAttributesReset ..  ]
+"501
+}
+[e :U 1531 ]
+"503
+}
+[e :U 1530 ]
+[e :U 1528 ]
 [e :U 1522 ]
 [e :U 1520 ]
+[e :U 1518 ]
+[e :U 1516 ]
 [e :U 1514 ]
 [e :U 1512 ]
 [e :U 1510 ]
@@ -12202,26 +12298,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1496 ]
 [e :U 1494 ]
 [e :U 1492 ]
-[e :U 1490 ]
-[e :U 1488 ]
+[e :U 1477 ]
+[e :U 1475 ]
 [e :U 1473 ]
 [e :U 1471 ]
 [e :U 1469 ]
 [e :U 1467 ]
 [e :U 1465 ]
-[e :U 1463 ]
-[e :U 1461 ]
+[e :U 1460 ]
+[e :U 1458 ]
 [e :U 1456 ]
 [e :U 1454 ]
 [e :U 1452 ]
 [e :U 1450 ]
-[e :U 1448 ]
-[e :U 1446 ]
-[; ;ring_buffer_LUT.c: 482: }
-[; ;ring_buffer_LUT.c: 484: }
-[; ;ring_buffer_LUT.c: 488: }
-"488
-[e :UE 1444 ]
+[; ;ring_buffer_LUT.c: 501: }
+[; ;ring_buffer_LUT.c: 503: }
+[; ;ring_buffer_LUT.c: 507: }
+"507
+[e :UE 1448 ]
 }
 [p f _printf 12427398 ]
 [a 1C 82 101 115 101 116 0 ]
@@ -12229,7 +12323,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 24C 67 108 101 97 114 32 65 68 67 32 69 114 114 111 114 115 0 ]
 [a 26C 67 108 101 97 114 32 73 50 67 32 69 114 114 111 114 115 0 ]
 [a 4C 67 108 101 97 114 0 ]
-[a 78C 72 101 108 112 0 ]
+[a 82C 72 101 108 112 0 ]
 [a 2C 27 91 50 74 0 ]
 [a 5C 27 91 50 74 0 ]
 [a 22C 68 105 115 97 98 108 101 32 81 73 0 ]
@@ -12241,7 +12335,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 54C 77 101 97 115 117 114 101 32 80 79 83 49 50 32 67 117 114 114 101 110 116 63 0 ]
 [a 7C 67 97 117 115 101 32 111 102 32 82 101 115 101 116 63 0 ]
 [a 30C 69 114 114 111 114 32 83 116 97 116 117 115 63 0 ]
-[a 74C 67 104 97 114 103 101 32 83 116 97 116 117 115 63 0 ]
+[a 78C 67 104 97 114 103 101 32 83 116 97 116 117 115 63 0 ]
 [a 15C 85 115 101 114 32 73 68 115 63 0 ]
 [a 64C 77 101 97 115 117 114 101 32 79 117 116 112 117 116 32 80 111 119 101 114 63 0 ]
 [a 62C 77 101 97 115 117 114 101 32 73 110 112 117 116 32 80 111 119 101 114 63 0 ]
@@ -12250,6 +12344,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 68C 77 101 97 115 117 114 101 32 81 73 32 84 101 109 112 63 0 ]
 [a 70C 77 101 97 115 117 114 101 32 80 79 83 53 32 84 101 109 112 63 0 ]
 [a 18C 68 101 118 105 99 101 32 79 110 32 84 105 109 101 63 0 ]
+[a 76C 77 101 97 115 117 114 101 32 81 73 32 70 83 87 63 0 ]
+[a 74C 77 101 97 115 117 114 101 32 80 79 83 53 32 70 83 87 63 0 ]
 [a 60C 77 101 97 115 117 114 101 32 65 86 83 83 63 0 ]
 [a 58C 77 101 97 115 117 114 101 32 70 86 82 63 0 ]
 [a 9C 42 73 68 78 63 0 ]
@@ -12257,7 +12353,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 11C 68 101 118 105 99 101 32 73 68 63 0 ]
 [a 48C 77 101 97 115 117 114 101 32 80 79 83 53 63 0 ]
 [a 50C 77 101 97 115 117 114 101 32 80 79 83 49 50 63 0 ]
-[a 81C 10 13 72 101 108 112 32 109 101 115 115 97 103 101 115 32 97 110 100 32 110 101 117 116 114 97 108 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 121 101 108 108 111 119 10 13 0 ]
+[a 77C 67 117 114 114 101 110 116 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 107 72 122 10 13 0 ]
+[a 75C 67 117 114 114 101 110 116 32 43 53 86 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 49 102 32 77 72 122 10 13 0 ]
+[a 85C 10 13 72 101 108 112 32 109 101 115 115 97 103 101 115 32 97 110 100 32 110 101 117 116 114 97 108 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 121 101 108 108 111 119 10 13 0 ]
 [a 65C 87 105 114 101 108 101 115 115 32 79 117 116 112 117 116 32 80 111 119 101 114 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 43 46 51 102 32 87 97 116 116 115 10 13 0 ]
 [a 63C 69 108 101 99 116 114 105 99 97 108 32 73 110 112 117 116 32 80 111 119 101 114 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 43 46 51 102 32 87 97 116 116 115 10 13 0 ]
 [a 49C 43 53 86 32 114 97 105 108 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 86 111 108 116 115 10 13 0 ]
@@ -12266,9 +12364,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 59C 70 105 120 101 100 32 86 111 108 116 97 103 101 32 82 101 102 101 114 101 110 99 101 32 66 117 102 102 101 114 32 49 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 86 111 108 116 115 44 32 99 97 108 105 98 114 97 116 101 100 32 102 111 114 32 43 52 46 48 57 54 32 86 111 108 116 115 10 13 0 ]
 [a 55C 43 49 50 86 32 105 110 112 117 116 32 99 117 114 114 101 110 116 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 65 109 112 115 10 13 0 ]
 [a 57C 81 73 32 99 111 110 118 101 114 116 101 114 32 99 117 114 114 101 110 116 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 65 109 112 115 10 13 0 ]
-[a 80C 32 32 32 32 72 101 108 112 58 32 76 105 115 116 115 32 97 118 97 105 108 97 98 108 101 32 99 111 109 109 97 110 100 115 10 13 32 32 32 32 42 73 68 78 63 58 32 80 114 105 110 116 115 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 32 115 116 114 105 110 103 10 13 32 32 32 32 82 101 115 101 116 58 32 69 120 101 99 117 116 101 115 32 115 111 102 116 119 97 114 101 32 114 101 115 101 116 32 105 110 115 116 114 117 99 116 105 111 110 10 13 32 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 118 105 114 116 117 97 108 32 67 79 77 32 112 111 114 116 32 116 101 114 109 105 110 97 108 10 13 32 32 32 32 67 97 117 115 101 32 111 102 32 82 101 115 101 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 117 115 101 32 111 102 32 116 104 101 32 109 111 115 116 32 114 101 99 101 110 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 68 101 118 105 99 101 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 100 101 118 105 99 101 32 73 68 10 13 32 32 32 32 82 101 118 105 115 105 111 110 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 115 105 108 105 99 111 110 32 114 101 118 105 115 105 111 110 32 73 68 10 13 32 32 32 32 85 115 101 114 32 73 68 115 63 58 32 80 114 105 110 116 115 32 97 32 108 105 115 116 32 111 102 32 85 115 101 114 32 73 68 115 32 115 97 118 101 100 32 105 110 32 70 108 97 115 104 10 13 32 32 32 32 68 101 118 105 99 101 32 79 110 32 84 105 109 101 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 101 118 105 99 101 32 111 110 32 116 105 109 101 32 115 105 110 99 101 32 108 97 115 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 69 110 97 98 108 101 32 81 73 58 32 69 110 97 98 108 101 100 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 68 105 115 97 98 108 101 32 81 73 58 32 68 105 115 97 98 108 101 115 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 67 104 97 114 103 101 32 83 116 97 116 117 115 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 104 97 114 103 101 32 115 116 97 116 101 32 111 102 32 116 104 101 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 105 110 112 117 116 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 73 110 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 101 108 101 99 116 114 105 99 97 108 32 105 110 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 79 117 116 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 119 105 114 101 108 101 115 115 32 111 117 116 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 69 102 102 105 99 105 101 110 99 121 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 115 121 115 116 101 109 32 101 102 102 105 99 105 101 110 99 121 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 86 83 83 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 65 86 83 83 10 13 32 32 32 32 77 101 97 115 117 114 101 32 70 86 82 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 102 105 120 101 100 32 118 111 108 116 97 103 101 32 114 101 102 101 114 101 110 99 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 68 105 101 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 109 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 100 105 101 32 116 101 109 112 101 114 97 116 117 114 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 109 98 105 101 110 116 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 97 109 98 105 101 110 116 32 101 110 118 105 114 111 110 109 101 110 116 10 13 32 32 32 32 69 114 114 111 114 32 83 116 97 116 117 115 63 32 80 114 105 110 116 115 32 105 102 32 97 110 121 32 115 121 115 116 101 109 32 102 97 117 108 116 115 32 104 97 118 101 32 98 101 101 110 32 100 101 116 101 99 116 101 100 10 13 32 32 32 32 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 85 65 82 84 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 73 50 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 73 50 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 65 68 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 65 68 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 0 ]
-[a 88C 67 97 108 108 32 39 72 101 108 112 39 32 102 111 114 32 108 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 10 13 0 ]
-[a 77C 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 105 115 32 37 115 10 13 0 ]
+[a 84C 32 32 32 32 72 101 108 112 58 32 76 105 115 116 115 32 97 118 97 105 108 97 98 108 101 32 99 111 109 109 97 110 100 115 10 13 32 32 32 32 42 73 68 78 63 58 32 80 114 105 110 116 115 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 32 115 116 114 105 110 103 10 13 32 32 32 32 82 101 115 101 116 58 32 69 120 101 99 117 116 101 115 32 115 111 102 116 119 97 114 101 32 114 101 115 101 116 32 105 110 115 116 114 117 99 116 105 111 110 10 13 32 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 118 105 114 116 117 97 108 32 67 79 77 32 112 111 114 116 32 116 101 114 109 105 110 97 108 10 13 32 32 32 32 67 97 117 115 101 32 111 102 32 82 101 115 101 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 117 115 101 32 111 102 32 116 104 101 32 109 111 115 116 32 114 101 99 101 110 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 68 101 118 105 99 101 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 100 101 118 105 99 101 32 73 68 10 13 32 32 32 32 82 101 118 105 115 105 111 110 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 115 105 108 105 99 111 110 32 114 101 118 105 115 105 111 110 32 73 68 10 13 32 32 32 32 85 115 101 114 32 73 68 115 63 58 32 80 114 105 110 116 115 32 97 32 108 105 115 116 32 111 102 32 85 115 101 114 32 73 68 115 32 115 97 118 101 100 32 105 110 32 70 108 97 115 104 10 13 32 32 32 32 68 101 118 105 99 101 32 79 110 32 84 105 109 101 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 101 118 105 99 101 32 111 110 32 116 105 109 101 32 115 105 110 99 101 32 108 97 115 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 69 110 97 98 108 101 32 81 73 58 32 69 110 97 98 108 101 100 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 68 105 115 97 98 108 101 32 81 73 58 32 68 105 115 97 98 108 101 115 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 67 104 97 114 103 101 32 83 116 97 116 117 115 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 104 97 114 103 101 32 115 116 97 116 101 32 111 102 32 116 104 101 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 105 110 112 117 116 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 73 110 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 101 108 101 99 116 114 105 99 97 108 32 105 110 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 79 117 116 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 119 105 114 101 108 101 115 115 32 111 117 116 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 69 102 102 105 99 105 101 110 99 121 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 115 121 115 116 101 109 32 101 102 102 105 99 105 101 110 99 121 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 86 83 83 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 65 86 83 83 10 13 32 32 32 32 77 101 97 115 117 114 101 32 70 86 82 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 102 105 120 101 100 32 118 111 108 116 97 103 101 32 114 101 102 101 114 101 110 99 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 68 105 101 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 109 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 100 105 101 32 116 101 109 112 101 114 97 116 117 114 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 109 98 105 101 110 116 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 97 109 98 105 101 110 116 32 101 110 118 105 114 111 110 109 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 70 83 87 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 101 97 115 117 114 101 100 32 80 79 83 53 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 70 83 87 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 101 97 115 117 114 101 100 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 10 13 32 32 32 32 69 114 114 111 114 32 83 116 97 116 117 115 63 32 80 114 105 110 116 115 32 105 102 32 97 110 121 32 115 121 115 116 101 109 32 102 97 117 108 116 115 32 104 97 118 101 32 98 101 101 110 32 100 101 116 101 99 116 101 100 10 13 32 32 32 32 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 85 65 82 84 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 73 50 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 73 50 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 65 68 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 65 68 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 0 ]
+[a 92C 67 97 108 108 32 39 72 101 108 112 39 32 102 111 114 32 108 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 81C 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 105 115 32 37 115 10 13 0 ]
 [a 19C 68 101 118 105 99 101 32 111 110 32 116 105 109 101 32 115 105 110 99 101 32 108 97 115 116 32 114 101 115 101 116 32 99 111 110 100 105 116 105 111 110 32 105 115 58 32 37 115 10 13 0 ]
 [a 8C 84 104 101 32 99 97 117 115 101 32 111 102 32 116 104 101 32 109 111 115 116 32 114 101 99 101 110 116 32 100 101 118 105 99 101 32 114 101 115 101 116 32 119 97 115 58 32 37 115 10 13 0 ]
 [a 33C 32 32 32 32 71 101 110 101 114 97 108 32 65 68 67 32 101 114 114 111 114 10 13 0 ]
@@ -12277,14 +12375,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 41C 32 32 32 32 73 50 67 32 81 73 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 40C 32 32 32 32 73 50 67 32 80 79 83 53 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 38C 32 32 32 32 73 50 67 32 71 101 110 101 114 97 108 32 69 114 114 111 114 10 13 0 ]
-[a 82C 83 121 115 116 101 109 32 112 97 114 97 109 101 116 101 114 115 32 97 110 100 32 97 102 102 105 114 109 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 103 114 101 101 110 10 13 0 ]
-[a 83C 77 101 97 115 117 114 101 109 101 110 116 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 99 121 97 110 10 13 0 ]
+[a 86C 83 121 115 116 101 109 32 112 97 114 97 109 101 116 101 114 115 32 97 110 100 32 97 102 102 105 114 109 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 103 114 101 101 110 10 13 0 ]
+[a 87C 77 101 97 115 117 114 101 109 101 110 116 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 99 121 97 110 10 13 0 ]
 [a 10C 81 73 32 67 104 97 114 103 101 114 32 119 105 116 104 32 68 105 103 105 116 97 108 32 77 111 110 105 116 111 114 105 110 103 44 32 98 121 32 68 114 101 119 32 77 97 97 116 109 97 110 10 13 0 ]
-[a 85C 85 115 101 114 32 105 110 112 117 116 32 97 112 112 101 97 114 115 32 105 110 32 119 104 105 116 101 10 13 0 ]
-[a 75C 81 73 32 67 104 97 114 103 101 114 32 105 115 32 105 110 32 69 114 114 111 114 32 83 116 97 116 101 10 13 0 ]
-[a 76C 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 104 97 115 32 102 117 108 108 121 32 99 104 97 114 103 101 100 32 112 104 111 110 101 10 13 0 ]
-[a 86C 85 110 115 117 112 112 111 114 116 101 100 32 111 114 32 109 105 115 45 101 110 116 101 114 101 100 32 99 111 109 109 97 110 100 10 13 0 ]
-[a 87C 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 44 32 98 97 99 107 115 112 97 99 101 32 105 115 32 115 117 112 112 111 114 116 101 100 44 32 99 111 109 109 97 110 100 32 104 105 115 116 111 114 121 32 105 115 32 110 111 116 32 115 117 112 112 111 114 116 101 100 10 13 0 ]
+[a 89C 85 115 101 114 32 105 110 112 117 116 32 97 112 112 101 97 114 115 32 105 110 32 119 104 105 116 101 10 13 0 ]
+[a 79C 81 73 32 67 104 97 114 103 101 114 32 105 115 32 105 110 32 69 114 114 111 114 32 83 116 97 116 101 10 13 0 ]
+[a 80C 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 104 97 115 32 102 117 108 108 121 32 99 104 97 114 103 101 100 32 112 104 111 110 101 10 13 0 ]
+[a 90C 85 110 115 117 112 112 111 114 116 101 100 32 111 114 32 109 105 115 45 101 110 116 101 114 101 100 32 99 111 109 109 97 110 100 10 13 0 ]
+[a 91C 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 44 32 98 97 99 107 115 112 97 99 101 32 105 115 32 115 117 112 112 111 114 116 101 100 44 32 99 111 109 109 97 110 100 32 104 105 115 116 111 114 121 32 105 115 32 110 111 116 32 115 117 112 112 111 114 116 101 100 10 13 0 ]
 [a 47C 78 111 32 85 65 82 84 32 101 114 114 111 114 40 115 41 32 100 101 116 101 99 116 101 100 10 13 0 ]
 [a 36C 78 111 32 65 68 67 32 101 114 114 111 114 40 115 41 32 100 101 116 101 99 116 101 100 10 13 0 ]
 [a 44C 78 111 32 73 50 67 32 101 114 114 111 114 40 115 41 32 100 101 116 101 99 116 101 100 10 13 0 ]
@@ -12292,7 +12390,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 29C 85 65 82 84 32 101 114 114 111 114 40 115 41 32 99 108 101 97 114 101 100 10 13 0 ]
 [a 27C 73 50 67 32 101 114 114 111 114 40 115 41 32 99 108 101 97 114 101 100 10 13 0 ]
 [a 25C 65 68 67 32 69 114 114 111 114 40 115 41 32 99 108 101 97 114 101 100 10 13 0 ]
-[a 84C 69 114 114 111 114 115 32 97 110 100 32 110 101 103 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 114 101 100 10 13 0 ]
+[a 88C 69 114 114 111 114 115 32 97 110 100 32 110 101 103 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 114 101 100 10 13 0 ]
 [a 23C 81 73 32 87 105 114 101 108 101 115 115 32 80 111 119 101 114 32 67 111 110 118 101 114 115 105 111 110 32 68 105 115 97 98 108 101 100 10 13 0 ]
 [a 21C 81 73 32 87 105 114 101 108 101 115 115 32 80 111 119 101 114 32 67 111 110 118 101 114 115 105 111 110 32 69 110 97 98 108 101 100 10 13 0 ]
 [a 14C 68 101 118 105 99 101 32 115 105 108 105 99 111 110 32 114 101 118 105 115 105 111 110 32 73 68 32 97 115 32 115 116 111 114 101 100 32 105 110 32 70 108 97 115 104 32 105 115 58 32 37 99 37 48 51 100 10 13 0 ]
@@ -12303,7 +12401,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 69C 81 73 32 67 111 110 118 101 114 116 101 114 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 10 13 0 ]
 [a 53C 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 68 105 101 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 10 13 0 ]
 [a 16C 84 104 101 32 102 111 108 108 111 119 105 110 103 32 85 115 101 114 32 73 68 115 32 104 97 118 101 32 98 101 101 110 32 114 101 116 114 105 101 118 101 100 32 102 114 111 109 32 102 108 97 115 104 32 109 101 109 111 114 121 58 10 13 0 ]
-[a 79C 65 118 97 105 108 97 98 108 101 32 67 111 109 109 97 110 100 115 58 10 13 0 ]
+[a 83C 65 118 97 105 108 97 98 108 101 32 67 111 109 109 97 110 100 115 58 10 13 0 ]
 [a 32C 84 104 101 32 102 111 108 108 111 119 105 110 103 32 99 104 97 110 110 101 108 115 32 99 97 117 115 101 100 32 97 110 32 65 68 67 32 101 114 114 111 114 58 10 13 0 ]
 [a 37C 84 104 101 32 102 111 108 108 111 119 105 110 103 32 73 50 67 32 69 114 114 111 114 115 32 119 101 114 101 32 100 101 116 101 99 116 101 100 58 10 13 0 ]
 [a 46C 67 97 108 108 32 39 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 39 32 116 111 32 99 108 101 97 114 32 99 111 109 109 117 110 105 99 97 116 105 111 110 115 32 101 114 114 111 114 40 115 41 10 13 0 ]

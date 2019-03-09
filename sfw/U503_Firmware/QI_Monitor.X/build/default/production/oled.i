@@ -1,6 +1,101 @@
 
 # 1 "oled.c"
 
+# 4 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\__size_t.h"
+typedef unsigned size_t;
+
+# 14 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
 # 18 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -16053,41 +16148,6 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\__size_t.h"
-typedef unsigned size_t;
-
-# 14 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h"
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-
-# 36
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
-
-
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-
 # 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h"
 typedef unsigned short wchar_t;
 
@@ -16358,6 +16418,36 @@ bool I2C2_MasterQueueIsFull(void);
 
 void I2C2_BusCollisionISR( void );
 void I2C2_ISR ( void );
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 100 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 129
+void TMR5_StartTimer(void);
+
+# 161
+void TMR5_StopTimer(void);
+
+# 196
+uint16_t TMR5_ReadTimer(void);
+
+# 235
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR5_Reload(void);
+
+# 310
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 387
+bool TMR5_HasOverflowOccured(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16714,6 +16804,32 @@ void ADCC_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
+{
+struct
+{
+uint8_t ccpr2l;
+uint8_t ccpr2h;
+};
+struct
+{
+uint16_t ccpr2_16Bit;
+};
+} CCP2_PERIOD_REG_T ;
+
+# 123
+void CCP2_Initialize(void);
+
+# 139
+void CCP2_CaptureISR(void);
+
+# 160
+void CCP2_CallBack(uint16_t capturedValue);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 99 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -16773,66 +16889,6 @@ void INT2_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 43 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 29 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\errno.h"
-extern int errno;
-
-# 12 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\conio.h"
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 23
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 88 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 180
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
 # 79 "mcc_generated_files/eusart2.h"
 extern volatile uint8_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
@@ -16871,13 +16927,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 78 "mcc_generated_files/mcc.h"
+# 80 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 91
+# 93
 void OSCILLATOR_Initialize(void);
 
-# 104
+# 106
 void PMD_Initialize(void);
 
 # 41 "error_handling.h"
@@ -16942,11 +16998,14 @@ OLED_QI_Temp = 12,
 OLED_POS5_Temp = 13,
 OLED_Ambient_Temp = 14,
 OLED_Micro_Temp = 15,
-OLED_Dev_On_Time = 16,
-OLED_Cause_Of_Reset = 17,
-OLED_Dev_Rev_ID = 18,
-OLED_COM_PORT_SET = 19,
-OLED_Idle = 20
+OLED_POS5_FSW = 16,
+OLED_QI_FSW = 17,
+OLED_Dev_On_Time = 18,
+OLED_Cause_Of_Reset = 19,
+OLED_Dev_Rev_ID = 20,
+OLED_COM_PORT_SET = 21,
+OLED_TITLE_FRAME = 22,
+OLED_Idle = 23
 
 } OLED_Frame_t;
 
@@ -17045,7 +17104,129 @@ void QIChargeIOCHandler(void);
 
 void QIIdleTimerHandler(void);
 
-# 9 "oled.c"
+# 50 "adc_postprocessing.h"
+adcc_channel_t next_adc_channel = channel_VSS;
+
+
+struct adc_results_t {
+
+float avss_adc_result;
+float fvr_adc_result;
+float pos5_adc_result;
+float pos12_adc_result;
+float pos12_isns_adc_result;
+float qi_isns_adc_result;
+float die_temp_adc_result;
+
+} adc_results;
+
+
+struct adc_calculations_t {
+
+float input_power;
+float output_power;
+float efficiency;
+
+} adc_calculations;
+
+
+float pos12_isns_average_buffer[16];
+
+uint8_t pos12_isns_average_index = 0;
+
+
+float qi_isns_average_buffer[16];
+
+uint8_t qi_isns_average_index = 0;
+
+
+float adc_result_scaling;
+
+
+const float temp_adc_offset = 376.115;
+
+
+
+void ADC_PostProcessingHandler(void);
+
+
+
+void ADC_acquisitionTimerHandler(void);
+
+# 56 "LM73_I2C.h"
+struct LM73_temp_results_t {
+
+float QI_temp_result;
+float POS5_temp_result;
+float Ambient_temp_result;
+uint8_t QI_data_raw[2];
+uint8_t POS5_data_raw[2];
+uint8_t Ambient_data_raw[2];
+
+} LM73_temp_results;
+
+
+bool LM73_start_flag;
+
+
+void LM73TempSensorInitialize(void);
+
+
+void LM73AcquisitionHandler(void);
+
+
+void LM73Convert(void);
+
+# 39 "freq_meas.h"
+struct {
+
+float QI_Freq_Meas;
+uint16_t QI_Freq_Meas_Raw;
+
+} freq_meas_results;
+
+
+enum qi_edge_type{
+qi_period_rising_1 = 0,
+qi_period_rising_2 = 1
+} QI_current_edge;
+
+
+
+bool freq_meas_start_flag;
+
+
+void freqMeasStartCaptures(void);
+
+
+void freqMeasConvert(void);
+
+# 38 "heartbeat_timer.h"
+unsigned long device_on_time;
+
+
+
+void heartbeatTimerHandler(void);
+
+
+char * getStringSecondsAsTime(uint32_t input_seconds);
+
+
+uint8_t getYearsFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getDaysFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getHoursFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getMinutesFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getSecondsFromOnTime(uint32_t input_seconds);
+
+# 17 "oled.c"
 const uint8_t OledFont[][8] =
 {
 {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},
@@ -17146,7 +17327,7 @@ const uint8_t OledFont[][8] =
 {0x00,0x02,0x05,0x05,0x02,0x00,0x00,0x00},
 };
 
-# 113
+# 121
 void OLED_Command(uint8_t temp) {
 
 uint8_t length;
@@ -17202,69 +17383,38 @@ error_handler.I2C_OLED_error_flag = 1;
 void OLED_Init(void) {
 
 OLED_Command(0xAE);
-
 OLED_Command(0xD5);
-
 OLED_Command(0x80);
-
 OLED_Command(0xA8);
-
 OLED_Command(0x1F);
-
 OLED_Command(0xD3);
-
 OLED_Command(0x0);
-
 OLED_Command(0x40 | 0x0);
-
 OLED_Command(0x8D);
-
 OLED_Command(0xAF);
-
 OLED_Command(0x20);
-
 OLED_Command(0x00);
-
 OLED_Command(0xA0 | 0x1);
-
 OLED_Command(0xC8);
-
 OLED_Command(0xDA);
-
 OLED_Command(0x02);
-
 OLED_Command(0x81);
-
 OLED_Command(0x8F);
-
 OLED_Command(0xD9);
-
 OLED_Command(0xF1);
-
 OLED_Command(0xDB);
-
 OLED_Command(0x40);
-
 OLED_Command(0xA4);
-
 OLED_Command(0xA6);
-
 OLED_Command(0xAF);
-
-
-__nop();
-
 
 }
 
 void OLED_YX(unsigned char Row, unsigned char Column) {
 
 OLED_Command(0xB0 + Row);
-
 OLED_Command(0x00 + (8 * Column & 0x0F));
-
 OLED_Command(0x10 + ((8* Column >> 4) & 0x0F));
-
 
 }
 
@@ -17352,8 +17502,20 @@ OLED_WriteString("");
 
 void OLED_UpdateFromRAMBuffer(void) {
 
-OLED_YX(0,0);
-OLED_Clear();
+
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line0); char_index < sizeof(OLED_RAM_Buffer.line0) - 1; char_index++) {
+OLED_RAM_Buffer.line0[char_index] = ' ';
+}
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line1); char_index < sizeof(OLED_RAM_Buffer.line1) - 1; char_index++) {
+OLED_RAM_Buffer.line1[char_index] = ' ';
+}
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line2); char_index < sizeof(OLED_RAM_Buffer.line2) - 1; char_index++) {
+OLED_RAM_Buffer.line2[char_index] = ' ';
+}
+for (uint8_t char_index = strlen(OLED_RAM_Buffer.line3); char_index < sizeof(OLED_RAM_Buffer.line3) - 1; char_index++) {
+OLED_RAM_Buffer.line3[char_index] = ' ';
+}
+
 OLED_YX(0,0);
 OLED_WriteString(OLED_RAM_Buffer.line0);
 OLED_YX(1,0);
@@ -17450,7 +17612,7 @@ strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Charge_Status;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17458,14 +17620,14 @@ case OLED_POS12_Voltage:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "POS12 Voltage:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+strcpy(OLED_RAM_Buffer.line0, "+12V Voltage:");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos12_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_POS12_Voltage;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17473,14 +17635,14 @@ case OLED_POS5_Voltage:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "POS5 Voltage:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+strcpy(OLED_RAM_Buffer.line0, "+5V Voltage:");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos5_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_POS5_Voltage;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17488,14 +17650,14 @@ case OLED_POS12_Current:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "POS12 Current:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+strcpy(OLED_RAM_Buffer.line0, "+12V Current:");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.pos12_isns_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_POS12_Current;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17504,13 +17666,13 @@ case OLED_QI_Current:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "QI Current:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.qi_isns_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_QI_Current;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17519,13 +17681,13 @@ case OLED_Input_Power:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Input Power:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.input_power);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Input_Power;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17534,13 +17696,13 @@ case OLED_Output_Power:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Output Power:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.output_power);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Output_Power;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17549,13 +17711,13 @@ case OLED_Efficiency:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Efficiency:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3f%%", adc_calculations.efficiency);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Efficiency;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17564,13 +17726,13 @@ case OLED_QI_Temp:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "QI Temp:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.QI_temp_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_QI_Temp;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17579,13 +17741,13 @@ case OLED_POS5_Temp:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.POS5_temp_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_POS5_Temp;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17594,13 +17756,13 @@ case OLED_Ambient_Temp:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Ambient Temp:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.Ambient_temp_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Ambient_Temp;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17609,28 +17771,105 @@ case OLED_Micro_Temp:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+sprintf(OLED_RAM_Buffer.line1, "%+.3fC", adc_results.die_temp_adc_result);
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Micro_Temp;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
+
+case OLED_POS5_FSW:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
+else strcpy(OLED_RAM_Buffer.line1, "2.5MHz");
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_POS5_FSW;
+OLED_update_time = 1;
+
+break;
+
+case OLED_QI_FSW:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "QI Sw. Freq:");
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
+else sprintf(OLED_RAM_Buffer.line1, "%+.3fkHz", freq_meas_results.QI_Freq_Meas / 1000.0);
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_QI_FSW;
+OLED_update_time = 1;
+
+break;
+
 
 case OLED_Dev_On_Time:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "On Time:");
-strcpy(OLED_RAM_Buffer.line1, " ");
+strcpy(OLED_RAM_Buffer.line0, "Dev. On Time:");
+
+
+if (device_on_time >= 31536000) {
+
+sprintf(OLED_RAM_Buffer.line1, "%u years", getYearsFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line2, "%u days", getDaysFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line3, "%u hours", getHoursFromOnTime(device_on_time));
+
+
+}
+
+
+else if (device_on_time >= 86400) {
+
+sprintf(OLED_RAM_Buffer.line1, "%u days", getDaysFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line2, "%u hours", getHoursFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line3, "%u minutes", getMinutesFromOnTime(device_on_time));
+
+}
+
+
+else if (device_on_time >= 3600) {
+
+sprintf(OLED_RAM_Buffer.line1, "%u hours", getHoursFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line2, "%u minutes", getMinutesFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line3, "%u seconds", getSecondsFromOnTime(device_on_time));
+
+}
+
+
+else if (device_on_time >= 60) {
+
+sprintf(OLED_RAM_Buffer.line1, "%u minutes", getMinutesFromOnTime(device_on_time));
+sprintf(OLED_RAM_Buffer.line2, "%u seconds", getSecondsFromOnTime(device_on_time));
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+}
+
+
+else {
+
+sprintf(OLED_RAM_Buffer.line1, "%u seconds", getSecondsFromOnTime(device_on_time));
 strcpy(OLED_RAM_Buffer.line2, " ");
 strcpy(OLED_RAM_Buffer.line3, " ");
 
+}
+
+
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Dev_On_Time;
-OLED_update_time = 2;
+OLED_update_time = 1;
 
 break;
 
@@ -17645,7 +17884,7 @@ strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Cause_Of_Reset;
-OLED_update_time = 2;
+OLED_update_time = 255;
 
 break;
 
@@ -17668,7 +17907,7 @@ strcpy(OLED_RAM_Buffer.line3, rev_id_str);
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Dev_Rev_ID;
-OLED_update_time = 2;
+OLED_update_time = 255;
 
 break;
 
@@ -17683,10 +17922,24 @@ strcpy(OLED_RAM_Buffer.line3, "1 stp, no flow");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_COM_PORT_SET;
-OLED_update_time = 2;
+OLED_update_time = 255;
 
 break;
 
+case OLED_TITLE_FRAME:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "QI Charger w/");
+strcpy(OLED_RAM_Buffer.line1, "Digital Monitor");
+strcpy(OLED_RAM_Buffer.line2, "Drew Maatman");
+strcpy(OLED_RAM_Buffer.line3, "Spring 2019");
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_TITLE_FRAME;
+OLED_update_time = 255;
+
+break;
 
 case OLED_Idle:
 

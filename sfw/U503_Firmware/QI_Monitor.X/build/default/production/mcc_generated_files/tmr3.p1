@@ -10829,12 +10829,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.c: 75: T3CLK = 0x04;
 "75
 [e = _T3CLK -> -> 4 `i `uc ]
-[; ;tmr3.c: 78: TMR3H = 0xE7;
+[; ;tmr3.c: 78: TMR3H = 0xD0;
 "78
-[e = _TMR3H -> -> 231 `i `uc ]
-[; ;tmr3.c: 81: TMR3L = 0xC8;
+[e = _TMR3H -> -> 208 `i `uc ]
+[; ;tmr3.c: 81: TMR3L = 0x2B;
 "81
-[e = _TMR3L -> -> 200 `i `uc ]
+[e = _TMR3L -> -> 43 `i `uc ]
 [; ;tmr3.c: 84: timer3ReloadVal=(uint16_t)((TMR3H << 8) | TMR3L);
 "84
 [e = _timer3ReloadVal -> | << -> _TMR3H `i -> 8 `i -> _TMR3L `i `ui ]

@@ -2,8 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9461 0 1 2 3 4 5 6 .. ]
 [n E9461 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9821 `(v ~T0 @X0 0 tf ]
-[v F9824 `(v ~T0 @X0 0 tf ]
+[v F9854 `(v ~T0 @X0 0 tf ]
+[v F9857 `(v ~T0 @X0 0 tf ]
 "26403 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S1404 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1404 . INT0EDG INT1EDG INT2EDG . IPEN PEIE_GIEL GIE_GIEH ]
@@ -59,6 +59,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S267 . . . ]
 "4226
 [v _IPR4bits `VS267 ~T0 @X0 0 e@3774 ]
+"4318
+[s S274 :1 `uc 1 :1 `uc 1 ]
+[n S274 . CCP1IP CCP2IP ]
+"4317
+[u S273 `S274 1 ]
+[n S273 . . ]
+"4323
+[v _IPR6bits `VS273 ~T0 @X0 0 e@3776 ]
 [t ~ __interrupt . k ]
 [t T12 __interrupt  ]
 "4391
@@ -130,6 +138,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADCC_ThresholdISR `(v ~T0 @X0 0 ef ]
 "516 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
+"428 mcc_generated_files/ext_int.h
+[v _INT1_ISR `(v ~T0 @X0 0 ef ]
+"541
+[v _INT2_ISR `(v ~T0 @X0 0 ef ]
 [t T13 __interrupt low_priority  ]
 "4642 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S291 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -149,16 +161,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR4bits `VS310 ~T0 @X0 0 e@3790 ]
 "770 mcc_generated_files/tmr2.h
 [v _TMR2_ISR `(v ~T0 @X0 0 ef ]
-"428 mcc_generated_files/ext_int.h
-[v _INT1_ISR `(v ~T0 @X0 0 ef ]
-"541
-[v _INT2_ISR `(v ~T0 @X0 0 ef ]
 "692 mcc_generated_files/i2c2.h
 [v _I2C2_BusCollisionISR `(v ~T0 @X0 0 ef ]
 "693
 [v _I2C2_ISR `(v ~T0 @X0 0 ef ]
 "367 mcc_generated_files/tmr3.h
 [v _TMR3_ISR `(v ~T0 @X0 0 ef ]
+"4724 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
+[s S295 :1 `uc 1 :1 `uc 1 ]
+[n S295 . CCP1IE CCP2IE ]
+"4723
+[u S294 `S295 1 ]
+[n S294 . . ]
+"4729
+[v _PIE6bits `VS294 ~T0 @X0 0 e@3784 ]
+"5098
+[s S315 :1 `uc 1 :1 `uc 1 ]
+[n S315 . CCP1IF CCP2IF ]
+"5097
+[u S314 `S315 1 ]
+[n S314 . . ]
+"5103
+[v _PIR6bits `VS314 ~T0 @X0 0 e@3792 ]
+"139 mcc_generated_files/ccp2.h
+[v _CCP2_CaptureISR `(v ~T0 @X0 0 ef ]
 [; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
@@ -10940,6 +10966,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr5.h: 100: void TMR5_Initialize(void);
+[; ;tmr5.h: 129: void TMR5_StartTimer(void);
+[; ;tmr5.h: 161: void TMR5_StopTimer(void);
+[; ;tmr5.h: 196: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 235: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 271: void TMR5_Reload(void);
+[; ;tmr5.h: 310: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 349: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 387: bool TMR5_HasOverflowOccured(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr3.h: 100: void TMR3_Initialize(void);
 [; ;tmr3.h: 129: void TMR3_StartTimer(void);
 [; ;tmr3.h: 161: void TMR3_StopTimer(void);
@@ -11066,6 +11102,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -11118,10 +11170,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9821 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9854 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9824 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9857 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11133,9 +11185,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 78: void SYSTEM_Initialize(void);
-[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 104: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 "52 mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
 "53
@@ -11159,15 +11211,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 69: IPR0bits.IOCIP = 1;
 "69
 [e = . . _IPR0bits 0 4 -> -> 1 `i `uc ]
-[; ;interrupt_manager.c: 73: IPR4bits.TMR2IP = 0;
-"73
-[e = . . _IPR4bits 0 1 -> -> 0 `i `uc ]
-[; ;interrupt_manager.c: 76: IPR0bits.INT1IP = 0;
-"76
-[e = . . _IPR0bits 0 1 -> -> 0 `i `uc ]
-[; ;interrupt_manager.c: 79: IPR0bits.INT2IP = 0;
+[; ;interrupt_manager.c: 72: IPR0bits.INT1IP = 1;
+"72
+[e = . . _IPR0bits 0 1 -> -> 1 `i `uc ]
+[; ;interrupt_manager.c: 75: IPR0bits.INT2IP = 1;
+"75
+[e = . . _IPR0bits 0 2 -> -> 1 `i `uc ]
+[; ;interrupt_manager.c: 79: IPR4bits.TMR2IP = 0;
 "79
-[e = . . _IPR0bits 0 2 -> -> 0 `i `uc ]
+[e = . . _IPR4bits 0 1 -> -> 0 `i `uc ]
 [; ;interrupt_manager.c: 82: IPR3bits.BCL2IP = 0;
 "82
 [e = . . _IPR3bits 0 3 -> -> 0 `i `uc ]
@@ -11180,214 +11232,232 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 91: IPR3bits.TX2IP = 0;
 "91
 [e = . . _IPR3bits 0 6 -> -> 0 `i `uc ]
-[; ;interrupt_manager.c: 93: }
-"93
-[e :UE 1436 ]
+[; ;interrupt_manager.c: 94: IPR6bits.CCP2IP = 0;
+"94
+[e = . . _IPR6bits 0 1 -> -> 0 `i `uc ]
+[; ;interrupt_manager.c: 96: }
+"96
+[e :UE 1439 ]
 }
 [v $root$_INTERRUPT_InterruptManagerHigh `(v ~T0 @X0 0 e ]
-"95
-[v _INTERRUPT_InterruptManagerHigh `(v ~T12 @X0 1 ef ]
-"96
-{
-[; ;interrupt_manager.c: 95: void __interrupt() INTERRUPT_InterruptManagerHigh (void)
-[; ;interrupt_manager.c: 96: {
-[e :U _INTERRUPT_InterruptManagerHigh ]
-[f ]
-[; ;interrupt_manager.c: 98: if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
 "98
-[e $ ! && == -> . . _PIE0bits 0 5 `i -> 1 `i == -> . . _PIR0bits 0 5 `i -> 1 `i 1438  ]
-[; ;interrupt_manager.c: 99: {
+[v _INTERRUPT_InterruptManagerHigh `(v ~T12 @X0 1 ef ]
 "99
 {
-[; ;interrupt_manager.c: 100: TMR0_ISR();
-"100
-[e ( _TMR0_ISR ..  ]
-"101
-}
-[; ;interrupt_manager.c: 101: }
-[e $U 1439  ]
-"102
-[e :U 1438 ]
-[; ;interrupt_manager.c: 102: else if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
-[e $ ! && == -> . . _PIE3bits 0 7 `i -> 1 `i == -> . . _PIR3bits 0 7 `i -> 1 `i 1440  ]
-[; ;interrupt_manager.c: 103: {
-"103
-{
-[; ;interrupt_manager.c: 104: EUSART2_RxDefaultInterruptHandler();
-"104
-[e ( *U _EUSART2_RxDefaultInterruptHandler ..  ]
-"105
-}
-[; ;interrupt_manager.c: 105: }
-[e $U 1441  ]
-"106
-[e :U 1440 ]
-[; ;interrupt_manager.c: 106: else if(PIE1bits.ADTIE == 1 && PIR1bits.ADTIF == 1)
-[e $ ! && == -> . . _PIE1bits 0 1 `i -> 1 `i == -> . . _PIR1bits 0 1 `i -> 1 `i 1442  ]
-[; ;interrupt_manager.c: 107: {
-"107
-{
-[; ;interrupt_manager.c: 108: ADCC_ThresholdISR();
-"108
-[e ( _ADCC_ThresholdISR ..  ]
-"109
-}
-[; ;interrupt_manager.c: 109: }
-[e $U 1443  ]
-"110
-[e :U 1442 ]
-[; ;interrupt_manager.c: 110: else if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
-[e $ ! && == -> . . _PIE0bits 0 4 `i -> 1 `i == -> . . _PIR0bits 0 4 `i -> 1 `i 1444  ]
-[; ;interrupt_manager.c: 111: {
-"111
-{
-[; ;interrupt_manager.c: 112: PIN_MANAGER_IOC();
-"112
-[e ( _PIN_MANAGER_IOC ..  ]
-"113
-}
-[; ;interrupt_manager.c: 113: }
-[e $U 1445  ]
-"114
-[e :U 1444 ]
-[; ;interrupt_manager.c: 114: else
-[; ;interrupt_manager.c: 115: {
-"115
-{
-"117
-}
-[e :U 1445 ]
-[e :U 1443 ]
-[e :U 1441 ]
-[e :U 1439 ]
-[; ;interrupt_manager.c: 117: }
-[; ;interrupt_manager.c: 118: }
-"118
-[e :UE 1437 ]
-}
-[v $root$_INTERRUPT_InterruptManagerLow `(v ~T0 @X0 0 e ]
-"120
-[v _INTERRUPT_InterruptManagerLow `(v ~T13 @X0 1 ef ]
-"121
-{
-[; ;interrupt_manager.c: 120: void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
-[; ;interrupt_manager.c: 121: {
-[e :U _INTERRUPT_InterruptManagerLow ]
+[; ;interrupt_manager.c: 98: void __interrupt() INTERRUPT_InterruptManagerHigh (void)
+[; ;interrupt_manager.c: 99: {
+[e :U _INTERRUPT_InterruptManagerHigh ]
 [f ]
-[; ;interrupt_manager.c: 123: if(PIE4bits.TMR2IE == 1 && PIR4bits.TMR2IF == 1)
-"123
-[e $ ! && == -> . . _PIE4bits 0 1 `i -> 1 `i == -> . . _PIR4bits 0 1 `i -> 1 `i 1447  ]
-[; ;interrupt_manager.c: 124: {
-"124
+[; ;interrupt_manager.c: 101: if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
+"101
+[e $ ! && == -> . . _PIE0bits 0 5 `i -> 1 `i == -> . . _PIR0bits 0 5 `i -> 1 `i 1441  ]
+[; ;interrupt_manager.c: 102: {
+"102
 {
-[; ;interrupt_manager.c: 125: TMR2_ISR();
-"125
-[e ( _TMR2_ISR ..  ]
-"126
+[; ;interrupt_manager.c: 103: TMR0_ISR();
+"103
+[e ( _TMR0_ISR ..  ]
+"104
 }
-[; ;interrupt_manager.c: 126: }
+[; ;interrupt_manager.c: 104: }
+[e $U 1442  ]
+"105
+[e :U 1441 ]
+[; ;interrupt_manager.c: 105: else if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
+[e $ ! && == -> . . _PIE3bits 0 7 `i -> 1 `i == -> . . _PIR3bits 0 7 `i -> 1 `i 1443  ]
+[; ;interrupt_manager.c: 106: {
+"106
+{
+[; ;interrupt_manager.c: 107: EUSART2_RxDefaultInterruptHandler();
+"107
+[e ( *U _EUSART2_RxDefaultInterruptHandler ..  ]
+"108
+}
+[; ;interrupt_manager.c: 108: }
+[e $U 1444  ]
+"109
+[e :U 1443 ]
+[; ;interrupt_manager.c: 109: else if(PIE1bits.ADTIE == 1 && PIR1bits.ADTIF == 1)
+[e $ ! && == -> . . _PIE1bits 0 1 `i -> 1 `i == -> . . _PIR1bits 0 1 `i -> 1 `i 1445  ]
+[; ;interrupt_manager.c: 110: {
+"110
+{
+[; ;interrupt_manager.c: 111: ADCC_ThresholdISR();
+"111
+[e ( _ADCC_ThresholdISR ..  ]
+"112
+}
+[; ;interrupt_manager.c: 112: }
+[e $U 1446  ]
+"113
+[e :U 1445 ]
+[; ;interrupt_manager.c: 113: else if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
+[e $ ! && == -> . . _PIE0bits 0 4 `i -> 1 `i == -> . . _PIR0bits 0 4 `i -> 1 `i 1447  ]
+[; ;interrupt_manager.c: 114: {
+"114
+{
+[; ;interrupt_manager.c: 115: PIN_MANAGER_IOC();
+"115
+[e ( _PIN_MANAGER_IOC ..  ]
+"116
+}
+[; ;interrupt_manager.c: 116: }
 [e $U 1448  ]
-"127
+"117
 [e :U 1447 ]
-[; ;interrupt_manager.c: 127: else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
+[; ;interrupt_manager.c: 117: else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
 [e $ ! && == -> . . _PIE0bits 0 1 `i -> 1 `i == -> . . _PIR0bits 0 1 `i -> 1 `i 1449  ]
-[; ;interrupt_manager.c: 128: {
-"128
+[; ;interrupt_manager.c: 118: {
+"118
 {
-[; ;interrupt_manager.c: 129: INT1_ISR();
-"129
+[; ;interrupt_manager.c: 119: INT1_ISR();
+"119
 [e ( _INT1_ISR ..  ]
-"130
+"120
 }
-[; ;interrupt_manager.c: 130: }
+[; ;interrupt_manager.c: 120: }
 [e $U 1450  ]
-"131
+"121
 [e :U 1449 ]
-[; ;interrupt_manager.c: 131: else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
+[; ;interrupt_manager.c: 121: else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
 [e $ ! && == -> . . _PIE0bits 0 2 `i -> 1 `i == -> . . _PIR0bits 0 2 `i -> 1 `i 1451  ]
-[; ;interrupt_manager.c: 132: {
-"132
+[; ;interrupt_manager.c: 122: {
+"122
 {
-[; ;interrupt_manager.c: 133: INT2_ISR();
-"133
+[; ;interrupt_manager.c: 123: INT2_ISR();
+"123
 [e ( _INT2_ISR ..  ]
-"134
+"124
 }
-[; ;interrupt_manager.c: 134: }
+[; ;interrupt_manager.c: 124: }
 [e $U 1452  ]
-"135
+"125
 [e :U 1451 ]
-[; ;interrupt_manager.c: 135: else if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
-[e $ ! && == -> . . _PIE3bits 0 3 `i -> 1 `i == -> . . _PIR3bits 0 3 `i -> 1 `i 1453  ]
-[; ;interrupt_manager.c: 136: {
-"136
+[; ;interrupt_manager.c: 125: else
+[; ;interrupt_manager.c: 126: {
+"126
 {
-[; ;interrupt_manager.c: 137: I2C2_BusCollisionISR();
-"137
-[e ( _I2C2_BusCollisionISR ..  ]
-"138
+"128
 }
-[; ;interrupt_manager.c: 138: }
-[e $U 1454  ]
-"139
-[e :U 1453 ]
-[; ;interrupt_manager.c: 139: else if(PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
-[e $ ! && == -> . . _PIE3bits 0 2 `i -> 1 `i == -> . . _PIR3bits 0 2 `i -> 1 `i 1455  ]
-[; ;interrupt_manager.c: 140: {
-"140
-{
-[; ;interrupt_manager.c: 141: I2C2_ISR();
-"141
-[e ( _I2C2_ISR ..  ]
-"142
-}
-[; ;interrupt_manager.c: 142: }
-[e $U 1456  ]
-"143
-[e :U 1455 ]
-[; ;interrupt_manager.c: 143: else if(PIE4bits.TMR3IE == 1 && PIR4bits.TMR3IF == 1)
-[e $ ! && == -> . . _PIE4bits 0 2 `i -> 1 `i == -> . . _PIR4bits 0 2 `i -> 1 `i 1457  ]
-[; ;interrupt_manager.c: 144: {
-"144
-{
-[; ;interrupt_manager.c: 145: TMR3_ISR();
-"145
-[e ( _TMR3_ISR ..  ]
-"146
-}
-[; ;interrupt_manager.c: 146: }
-[e $U 1458  ]
-"147
-[e :U 1457 ]
-[; ;interrupt_manager.c: 147: else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
-[e $ ! && == -> . . _PIE3bits 0 6 `i -> 1 `i == -> . . _PIR3bits 0 6 `i -> 1 `i 1459  ]
-[; ;interrupt_manager.c: 148: {
-"148
-{
-[; ;interrupt_manager.c: 149: EUSART2_TxDefaultInterruptHandler();
-"149
-[e ( *U _EUSART2_TxDefaultInterruptHandler ..  ]
-"150
-}
-[; ;interrupt_manager.c: 150: }
-[e $U 1460  ]
-"151
-[e :U 1459 ]
-[; ;interrupt_manager.c: 151: else
-[; ;interrupt_manager.c: 152: {
-"152
-{
-"154
-}
-[e :U 1460 ]
-[e :U 1458 ]
-[e :U 1456 ]
-[e :U 1454 ]
 [e :U 1452 ]
 [e :U 1450 ]
 [e :U 1448 ]
-[; ;interrupt_manager.c: 154: }
-[; ;interrupt_manager.c: 155: }
+[e :U 1446 ]
+[e :U 1444 ]
+[e :U 1442 ]
+[; ;interrupt_manager.c: 128: }
+[; ;interrupt_manager.c: 129: }
+"129
+[e :UE 1440 ]
+}
+[v $root$_INTERRUPT_InterruptManagerLow `(v ~T0 @X0 0 e ]
+"131
+[v _INTERRUPT_InterruptManagerLow `(v ~T13 @X0 1 ef ]
+"132
+{
+[; ;interrupt_manager.c: 131: void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
+[; ;interrupt_manager.c: 132: {
+[e :U _INTERRUPT_InterruptManagerLow ]
+[f ]
+[; ;interrupt_manager.c: 134: if(PIE4bits.TMR2IE == 1 && PIR4bits.TMR2IF == 1)
+"134
+[e $ ! && == -> . . _PIE4bits 0 1 `i -> 1 `i == -> . . _PIR4bits 0 1 `i -> 1 `i 1454  ]
+[; ;interrupt_manager.c: 135: {
+"135
+{
+[; ;interrupt_manager.c: 136: TMR2_ISR();
+"136
+[e ( _TMR2_ISR ..  ]
+"137
+}
+[; ;interrupt_manager.c: 137: }
+[e $U 1455  ]
+"138
+[e :U 1454 ]
+[; ;interrupt_manager.c: 138: else if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
+[e $ ! && == -> . . _PIE3bits 0 3 `i -> 1 `i == -> . . _PIR3bits 0 3 `i -> 1 `i 1456  ]
+[; ;interrupt_manager.c: 139: {
+"139
+{
+[; ;interrupt_manager.c: 140: I2C2_BusCollisionISR();
+"140
+[e ( _I2C2_BusCollisionISR ..  ]
+"141
+}
+[; ;interrupt_manager.c: 141: }
+[e $U 1457  ]
+"142
+[e :U 1456 ]
+[; ;interrupt_manager.c: 142: else if(PIE3bits.SSP2IE == 1 && PIR3bits.SSP2IF == 1)
+[e $ ! && == -> . . _PIE3bits 0 2 `i -> 1 `i == -> . . _PIR3bits 0 2 `i -> 1 `i 1458  ]
+[; ;interrupt_manager.c: 143: {
+"143
+{
+[; ;interrupt_manager.c: 144: I2C2_ISR();
+"144
+[e ( _I2C2_ISR ..  ]
+"145
+}
+[; ;interrupt_manager.c: 145: }
+[e $U 1459  ]
+"146
+[e :U 1458 ]
+[; ;interrupt_manager.c: 146: else if(PIE4bits.TMR3IE == 1 && PIR4bits.TMR3IF == 1)
+[e $ ! && == -> . . _PIE4bits 0 2 `i -> 1 `i == -> . . _PIR4bits 0 2 `i -> 1 `i 1460  ]
+[; ;interrupt_manager.c: 147: {
+"147
+{
+[; ;interrupt_manager.c: 148: TMR3_ISR();
+"148
+[e ( _TMR3_ISR ..  ]
+"149
+}
+[; ;interrupt_manager.c: 149: }
+[e $U 1461  ]
+"150
+[e :U 1460 ]
+[; ;interrupt_manager.c: 150: else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
+[e $ ! && == -> . . _PIE3bits 0 6 `i -> 1 `i == -> . . _PIR3bits 0 6 `i -> 1 `i 1462  ]
+[; ;interrupt_manager.c: 151: {
+"151
+{
+[; ;interrupt_manager.c: 152: EUSART2_TxDefaultInterruptHandler();
+"152
+[e ( *U _EUSART2_TxDefaultInterruptHandler ..  ]
+"153
+}
+[; ;interrupt_manager.c: 153: }
+[e $U 1463  ]
+"154
+[e :U 1462 ]
+[; ;interrupt_manager.c: 154: else if(PIE6bits.CCP2IE == 1 && PIR6bits.CCP2IF == 1)
+[e $ ! && == -> . . _PIE6bits 0 1 `i -> 1 `i == -> . . _PIR6bits 0 1 `i -> 1 `i 1464  ]
+[; ;interrupt_manager.c: 155: {
 "155
-[e :UE 1446 ]
+{
+[; ;interrupt_manager.c: 156: CCP2_CaptureISR();
+"156
+[e ( _CCP2_CaptureISR ..  ]
+"157
+}
+[; ;interrupt_manager.c: 157: }
+[e $U 1465  ]
+"158
+[e :U 1464 ]
+[; ;interrupt_manager.c: 158: else
+[; ;interrupt_manager.c: 159: {
+"159
+{
+"161
+}
+[e :U 1465 ]
+[e :U 1463 ]
+[e :U 1461 ]
+[e :U 1459 ]
+[e :U 1457 ]
+[e :U 1455 ]
+[; ;interrupt_manager.c: 161: }
+[; ;interrupt_manager.c: 162: }
+"162
+[e :UE 1453 ]
 }

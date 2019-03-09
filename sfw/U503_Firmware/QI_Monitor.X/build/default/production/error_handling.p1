@@ -2,11 +2,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9461 0 1 2 3 4 5 6 .. ]
 [n E9461 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9821 `(v ~T0 @X0 0 tf ]
-[v F9824 `(v ~T0 @X0 0 tf ]
+[v F9854 `(v ~T0 @X0 0 tf ]
+[v F9857 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
-[s S1436 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1436 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1439 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1439 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "15581 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S784 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S784 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
@@ -10810,6 +10810,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr5.h: 100: void TMR5_Initialize(void);
+[; ;tmr5.h: 129: void TMR5_StartTimer(void);
+[; ;tmr5.h: 161: void TMR5_StopTimer(void);
+[; ;tmr5.h: 196: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 235: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 271: void TMR5_Reload(void);
+[; ;tmr5.h: 310: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 349: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 387: bool TMR5_HasOverflowOccured(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr3.h: 100: void TMR3_Initialize(void);
 [; ;tmr3.h: 129: void TMR3_StartTimer(void);
 [; ;tmr3.h: 161: void TMR3_StopTimer(void);
@@ -10936,6 +10946,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10988,10 +11014,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9821 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9854 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9824 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9857 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11003,11 +11029,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 78: void SYSTEM_Initialize(void);
-[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 104: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 "52 error_handling.h
-[v _error_handler `S1436 ~T0 @X0 1 e ]
+[v _error_handler `S1439 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11034,31 +11060,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.c: 15: if ( error_handler.ADC_general_error_flag ||
 [; ;error_handling.c: 16: error_handler.FVR_ADC_error_flag ) {
 "16
-[e $ ! || != -> . _error_handler 1 `i -> -> -> 0 `i `uc `i != -> . _error_handler 0 `i -> -> -> 0 `i `uc `i 1438  ]
+[e $ ! || != -> . _error_handler 1 `i -> -> -> 0 `i `uc `i != -> . _error_handler 0 `i -> -> -> 0 `i `uc `i 1441  ]
 {
 [; ;error_handling.c: 18: return 1;
 "18
 [e ) -> -> 1 `i `uc ]
-[e $UE 1437  ]
+[e $UE 1440  ]
 "20
 }
 [; ;error_handling.c: 20: }
-[e $U 1439  ]
+[e $U 1442  ]
 "22
-[e :U 1438 ]
+[e :U 1441 ]
 [; ;error_handling.c: 22: else {
 {
 [; ;error_handling.c: 24: return 0;
 "24
 [e ) -> -> 0 `i `uc ]
-[e $UE 1437  ]
+[e $UE 1440  ]
 "26
 }
-[e :U 1439 ]
+[e :U 1442 ]
 [; ;error_handling.c: 26: }
 [; ;error_handling.c: 28: }
 "28
-[e :UE 1437 ]
+[e :UE 1440 ]
 }
 "31
 [v _getUARTError `(uc ~T0 @X0 1 ef ]
@@ -11069,10 +11095,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.c: 33: return error_handler.USB_UART_COMM_error_flag;
 "33
 [e ) . _error_handler 7 ]
-[e $UE 1440  ]
+[e $UE 1443  ]
 [; ;error_handling.c: 35: }
 "35
-[e :UE 1440 ]
+[e :UE 1443 ]
 }
 "38
 [v _getI2CError `(uc ~T0 @X0 1 ef ]
@@ -11086,31 +11112,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.c: 44: error_handler.I2C_POS5_Temp_Sense_error_flag ||
 [; ;error_handling.c: 45: error_handler.I2C_QI_Temp_Sense_error_flag ) {
 "45
-[e $ ! || || || || != -> . _error_handler 2 `i -> -> -> 0 `i `uc `i != -> . _error_handler 6 `i -> -> -> 0 `i `uc `i != -> . _error_handler 3 `i -> -> -> 0 `i `uc `i != -> . _error_handler 5 `i -> -> -> 0 `i `uc `i != -> . _error_handler 4 `i -> -> -> 0 `i `uc `i 1442  ]
+[e $ ! || || || || != -> . _error_handler 2 `i -> -> -> 0 `i `uc `i != -> . _error_handler 6 `i -> -> -> 0 `i `uc `i != -> . _error_handler 3 `i -> -> -> 0 `i `uc `i != -> . _error_handler 5 `i -> -> -> 0 `i `uc `i != -> . _error_handler 4 `i -> -> -> 0 `i `uc `i 1445  ]
 {
 [; ;error_handling.c: 47: return 1;
 "47
 [e ) -> -> 1 `i `uc ]
-[e $UE 1441  ]
+[e $UE 1444  ]
 "49
 }
 [; ;error_handling.c: 49: }
-[e $U 1443  ]
+[e $U 1446  ]
 "51
-[e :U 1442 ]
+[e :U 1445 ]
 [; ;error_handling.c: 51: else {
 {
 [; ;error_handling.c: 53: return 0;
 "53
 [e ) -> -> 0 `i `uc ]
-[e $UE 1441  ]
+[e $UE 1444  ]
 "55
 }
-[e :U 1443 ]
+[e :U 1446 ]
 [; ;error_handling.c: 55: }
 [; ;error_handling.c: 57: }
 "57
-[e :UE 1441 ]
+[e :UE 1444 ]
 }
 "60
 [v _updateErrorLEDs `(v ~T0 @X0 1 ef ]
@@ -11129,7 +11155,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 0 6 ( _getUARTError ..  ]
 [; ;error_handling.c: 71: }
 "71
-[e :UE 1444 ]
+[e :UE 1447 ]
 }
 "74
 [v _clearADCErrors `(v ~T0 @X0 1 ef ]
@@ -11148,7 +11174,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _updateErrorLEDs ..  ]
 [; ;error_handling.c: 82: }
 "82
-[e :UE 1445 ]
+[e :UE 1448 ]
 }
 "85
 [v _clearUARTErrors `(v ~T0 @X0 1 ef ]
@@ -11164,7 +11190,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _updateErrorLEDs ..  ]
 [; ;error_handling.c: 92: }
 "92
-[e :UE 1446 ]
+[e :UE 1449 ]
 }
 "95
 [v _clearI2CErrors `(v ~T0 @X0 1 ef ]
@@ -11192,5 +11218,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _updateErrorLEDs ..  ]
 [; ;error_handling.c: 105: }
 "105
-[e :UE 1447 ]
+[e :UE 1450 ]
 }

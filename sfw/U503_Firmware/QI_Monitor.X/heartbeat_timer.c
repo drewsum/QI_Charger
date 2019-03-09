@@ -13,6 +13,8 @@
 
 #include "oled.h"
 
+#include "freq_meas.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
@@ -26,10 +28,14 @@ void heartbeatTimerHandler(void) {
     // Kick the dog
     CLRWDT();
     
+    // Request a new LM73 temperature acquisiton
     LM73_start_flag = true;
     
+    // Request an OLED update if needed
     if (device_on_time % OLED_update_time == 0) OLED_update_flag = true;
     
+    // Request a new frequency measurement capture
+    freq_meas_start_flag = true;
 }
 
 // This function returns a string of a large number of seconds in a human readable format
@@ -148,6 +154,66 @@ char * getStringSecondsAsTime(uint32_t input_seconds) {
     }
     
     return return_string;
+    
+}
+
+// This function returns the number of years that have passed based on the device on time counter
+uint8_t getYearsFromOnTime(uint32_t input_seconds) {
+ 
+    uint8_t years;
+    return years = input_seconds / (60 * 60 * 24 * 365);
+    
+}
+
+// This function returns the number of days that have passed based on the device on time counter
+uint8_t getDaysFromOnTime(uint32_t input_seconds) {
+    
+    uint8_t years, days;
+    years = input_seconds / (60 * 60 * 24 * 365);
+    input_seconds -= years * (60 * 60 * 24 * 365);
+    return days = input_seconds / (60 * 60 * 24);
+    
+}
+
+// This function returns the number of hours that have passed based on the device on time counter
+uint8_t getHoursFromOnTime(uint32_t input_seconds) {
+    
+    uint8_t years, days, hours;
+    years = input_seconds / (60 * 60 * 24 * 365);
+    input_seconds -= years * (60 * 60 * 24 * 365);
+    days = input_seconds / (60 * 60 * 24);
+    input_seconds -= days * (60 * 60 * 24);
+    return hours = input_seconds / (60 * 60);
+    
+}
+
+// This function returns the number of minutes that have passed based on the device on time counter
+uint8_t getMinutesFromOnTime(uint32_t input_seconds) {
+    
+    uint8_t years, days, hours, minutes;
+    years = input_seconds / (60 * 60 * 24 * 365);
+    input_seconds -= years * (60 * 60 * 24 * 365);
+    days = input_seconds / (60 * 60 * 24);
+    input_seconds -= days * (60 * 60 * 24);
+    hours = input_seconds / (60 * 60);
+    input_seconds -= hours * (60 * 60);
+    return minutes = input_seconds / 60;
+    
+}
+
+// This function returns the number of seconds that have passed based on the device on time counter
+uint8_t getSecondsFromOnTime(uint32_t input_seconds) {
+    
+    uint8_t years, days, hours, minutes, seconds;
+    years = input_seconds / (60 * 60 * 24 * 365);
+    input_seconds -= years * (60 * 60 * 24 * 365);
+    days = input_seconds / (60 * 60 * 24);
+    input_seconds -= days * (60 * 60 * 24);
+    hours = input_seconds / (60 * 60);
+    input_seconds -= hours * (60 * 60);
+    minutes = input_seconds / 60;
+    input_seconds -= minutes * 60;
+    return seconds = input_seconds;
     
 }
 

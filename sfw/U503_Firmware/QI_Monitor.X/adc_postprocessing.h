@@ -52,13 +52,13 @@ adcc_channel_t next_adc_channel = channel_VSS;                      // The next 
 // This structure holds ADC measurement results
 struct adc_results_t {
     
-    double avss_adc_result;                 // This is the ADC conversion result for measuring AVSS
-    double fvr_adc_result;                  // This is the ADC conversion result for the fixed voltage reference
-    double pos5_adc_result;                 // This is the ADC conversion result for POS5
-    double pos12_adc_result;                // ADC Conversion result for POS12
-    double pos12_isns_adc_result;           // ADC conversion result for POS12 current
-    double qi_isns_adc_result;              // ADC conversion result for QI converter current
-    double die_temp_adc_result;             // ADC conversion result for die temperature
+    float avss_adc_result;                 // This is the ADC conversion result for measuring AVSS
+    float fvr_adc_result;                  // This is the ADC conversion result for the fixed voltage reference
+    float pos5_adc_result;                 // This is the ADC conversion result for POS5
+    float pos12_adc_result;                // ADC Conversion result for POS12
+    float pos12_isns_adc_result;           // ADC conversion result for POS12 current
+    float qi_isns_adc_result;              // ADC conversion result for QI converter current
+    float die_temp_adc_result;             // ADC conversion result for die temperature
     
 } adc_results;
 
@@ -72,20 +72,20 @@ struct adc_calculations_t {
 } adc_calculations;
 
 // This array holds POS12_ISNS_AVG_COUNT values for averaging POS12_ISNS
-double pos12_isns_average_buffer[POS12_ISNS_AVG_COUNT];
+float pos12_isns_average_buffer[POS12_ISNS_AVG_COUNT];
 // This uint8_t keeps track of which average index we're saving data into for pos12_isns_average
 uint8_t pos12_isns_average_index = 0;
 
 // This array holds QI_ISNS_AVG_COUNT values for averaging QI_ISNS
-double qi_isns_average_buffer[QI_ISNS_AVG_COUNT];
+float qi_isns_average_buffer[QI_ISNS_AVG_COUNT];
 // This uint8_t keeps track of which average index we're saving data into for qi_isns_average
 uint8_t qi_isns_average_index = 0;
 
 // This is a scaling factor that is applied to all ADC conversion results
-double adc_result_scaling;
+float adc_result_scaling;
 
 // This is an offset added to the die temperature ADC conversion result
-const float temp_adc_offset = 436.115;
+const float temp_adc_offset = 376.115;
 
 // This is the ADC postprocessing handler function
 // it operates on raw ADC data to convert it to meaningful measurements

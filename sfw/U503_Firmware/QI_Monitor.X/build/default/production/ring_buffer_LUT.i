@@ -16333,6 +16333,36 @@ void I2C2_ISR ( void );
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 100 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 129
+void TMR5_StartTimer(void);
+
+# 161
+void TMR5_StopTimer(void);
+
+# 196
+uint16_t TMR5_ReadTimer(void);
+
+# 235
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR5_Reload(void);
+
+# 310
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 387
+bool TMR5_HasOverflowOccured(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 100 "mcc_generated_files/tmr3.h"
 void TMR3_Initialize(void);
 
@@ -16685,6 +16715,32 @@ void ADCC_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
+{
+struct
+{
+uint8_t ccpr2l;
+uint8_t ccpr2h;
+};
+struct
+{
+uint16_t ccpr2_16Bit;
+};
+} CCP2_PERIOD_REG_T ;
+
+# 123
+void CCP2_Initialize(void);
+
+# 139
+void CCP2_CaptureISR(void);
+
+# 160
+void CCP2_CallBack(uint16_t capturedValue);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 99 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -16842,13 +16898,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 78 "mcc_generated_files/mcc.h"
+# 80 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 91
+# 93
 void OSCILLATOR_Initialize(void);
 
-# 104
+# 106
 void PMD_Initialize(void);
 
 # 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h"
@@ -16955,6 +17011,21 @@ void heartbeatTimerHandler(void);
 
 char * getStringSecondsAsTime(uint32_t input_seconds);
 
+
+uint8_t getYearsFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getDaysFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getHoursFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getMinutesFromOnTime(uint32_t input_seconds);
+
+
+uint8_t getSecondsFromOnTime(uint32_t input_seconds);
+
 # 40 "device_IDs.h"
 uint16_t getDeviceID(void);
 
@@ -17005,13 +17076,13 @@ adcc_channel_t next_adc_channel = channel_VSS;
 
 struct adc_results_t {
 
-double avss_adc_result;
-double fvr_adc_result;
-double pos5_adc_result;
-double pos12_adc_result;
-double pos12_isns_adc_result;
-double qi_isns_adc_result;
-double die_temp_adc_result;
+float avss_adc_result;
+float fvr_adc_result;
+float pos5_adc_result;
+float pos12_adc_result;
+float pos12_isns_adc_result;
+float qi_isns_adc_result;
+float die_temp_adc_result;
 
 } adc_results;
 
@@ -17025,20 +17096,20 @@ float efficiency;
 } adc_calculations;
 
 
-double pos12_isns_average_buffer[16];
+float pos12_isns_average_buffer[16];
 
 uint8_t pos12_isns_average_index = 0;
 
 
-double qi_isns_average_buffer[16];
+float qi_isns_average_buffer[16];
 
 uint8_t qi_isns_average_index = 0;
 
 
-double adc_result_scaling;
+float adc_result_scaling;
 
 
-const float temp_adc_offset = 436.115;
+const float temp_adc_offset = 376.115;
 
 
 
@@ -17086,9 +17157,9 @@ void clearI2CErrors(void);
 # 56 "LM73_I2C.h"
 struct LM73_temp_results_t {
 
-double QI_temp_result;
-double POS5_temp_result;
-double Ambient_temp_result;
+float QI_temp_result;
+float POS5_temp_result;
+float Ambient_temp_result;
 uint8_t QI_data_raw[2];
 uint8_t POS5_data_raw[2];
 uint8_t Ambient_data_raw[2];
@@ -17132,10 +17203,34 @@ void QIChargeIOCHandler(void);
 
 void QIIdleTimerHandler(void);
 
-# 17 "ring_buffer_LUT.c"
+# 39 "freq_meas.h"
+struct {
+
+float QI_Freq_Meas;
+uint16_t QI_Freq_Meas_Raw;
+
+} freq_meas_results;
+
+
+enum qi_edge_type{
+qi_period_rising_1 = 0,
+qi_period_rising_2 = 1
+} QI_current_edge;
+
+
+
+bool freq_meas_start_flag;
+
+
+void freqMeasStartCaptures(void);
+
+
+void freqMeasConvert(void);
+
+# 18 "ring_buffer_LUT.c"
 void ringBufferLUT(char * line) {
 
-# 23
+# 24
 if((0 == strcmp(line, "Reset"))) {
 
 
@@ -17504,6 +17599,22 @@ terminalTextAttributesReset();
 
 }
 
+else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
+
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+terminalTextAttributesReset();
+
+}
+
+else if ((0 == strcmp(line, "Measure QI FSW?"))) {
+
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+terminalTextAttributesReset();
+
+}
+
 else if ((0 == strcmp(line, "Charge Status?"))) {
 
 if (nxq_charge_state == QI_Error) {
@@ -17564,6 +17675,8 @@ printf( "    Help: Lists available commands\n\r"
 "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
 "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
 "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
+"    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
+"    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
 "    Error Status? Prints if any system faults have been detected\n\r"
 "    Clear UART Errors: Clears UART error flags\n\r"
 "    Clear I2C Errors: Clears I2C error flags\n\r"

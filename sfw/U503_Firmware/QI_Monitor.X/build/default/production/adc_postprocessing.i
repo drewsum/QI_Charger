@@ -16282,13 +16282,13 @@ adcc_channel_t next_adc_channel = channel_VSS;
 
 struct adc_results_t {
 
-double avss_adc_result;
-double fvr_adc_result;
-double pos5_adc_result;
-double pos12_adc_result;
-double pos12_isns_adc_result;
-double qi_isns_adc_result;
-double die_temp_adc_result;
+float avss_adc_result;
+float fvr_adc_result;
+float pos5_adc_result;
+float pos12_adc_result;
+float pos12_isns_adc_result;
+float qi_isns_adc_result;
+float die_temp_adc_result;
 
 } adc_results;
 
@@ -16302,20 +16302,20 @@ float efficiency;
 } adc_calculations;
 
 
-double pos12_isns_average_buffer[16];
+float pos12_isns_average_buffer[16];
 
 uint8_t pos12_isns_average_index = 0;
 
 
-double qi_isns_average_buffer[16];
+float qi_isns_average_buffer[16];
 
 uint8_t qi_isns_average_index = 0;
 
 
-double adc_result_scaling;
+float adc_result_scaling;
 
 
-const float temp_adc_offset = 436.115;
+const float temp_adc_offset = 376.115;
 
 
 
@@ -16605,6 +16605,36 @@ void I2C2_ISR ( void );
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 100 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 129
+void TMR5_StartTimer(void);
+
+# 161
+void TMR5_StopTimer(void);
+
+# 196
+uint16_t TMR5_ReadTimer(void);
+
+# 235
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR5_Reload(void);
+
+# 310
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 387
+bool TMR5_HasOverflowOccured(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 100 "mcc_generated_files/tmr3.h"
 void TMR3_Initialize(void);
 
@@ -16682,6 +16712,32 @@ void FVR_Initialize(void);
 
 # 127
 bool FVR_IsOutputReady(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
+{
+struct
+{
+uint8_t ccpr2l;
+uint8_t ccpr2h;
+};
+struct
+{
+uint16_t ccpr2_16Bit;
+};
+} CCP2_PERIOD_REG_T ;
+
+# 123
+void CCP2_Initialize(void);
+
+# 139
+void CCP2_CaptureISR(void);
+
+# 160
+void CCP2_CallBack(uint16_t capturedValue);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16843,13 +16899,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 78 "mcc_generated_files/mcc.h"
+# 80 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 91
+# 93
 void OSCILLATOR_Initialize(void);
 
-# 104
+# 106
 void PMD_Initialize(void);
 
 # 41 "error_handling.h"
@@ -16999,6 +17055,9 @@ error_handler.ADC_general_error_flag = 1;
 adc_calculations.input_power = adc_results.pos12_adc_result * adc_results.pos12_isns_adc_result;
 adc_calculations.output_power = adc_results.pos5_adc_result * adc_results.qi_isns_adc_result;
 adc_calculations.efficiency = (adc_calculations.output_power / adc_calculations.input_power) * 100.0;
+
+
+if (adc_calculations.efficiency > 99.0) adc_calculations.efficiency = 99.0;
 
 
 TMR2_StartTimer();

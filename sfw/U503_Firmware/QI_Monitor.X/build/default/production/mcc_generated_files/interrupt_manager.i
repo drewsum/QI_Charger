@@ -16257,6 +16257,36 @@ void I2C2_ISR ( void );
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 100 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 129
+void TMR5_StartTimer(void);
+
+# 161
+void TMR5_StopTimer(void);
+
+# 196
+uint16_t TMR5_ReadTimer(void);
+
+# 235
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR5_Reload(void);
+
+# 310
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 387
+bool TMR5_HasOverflowOccured(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 100 "mcc_generated_files/tmr3.h"
 void TMR3_Initialize(void);
 
@@ -16609,6 +16639,32 @@ void ADCC_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
+{
+struct
+{
+uint8_t ccpr2l;
+uint8_t ccpr2h;
+};
+struct
+{
+uint16_t ccpr2_16Bit;
+};
+} CCP2_PERIOD_REG_T ;
+
+# 123
+void CCP2_Initialize(void);
+
+# 139
+void CCP2_CaptureISR(void);
+
+# 160
+void CCP2_CallBack(uint16_t capturedValue);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 99 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -16766,13 +16822,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 78 "mcc_generated_files/mcc.h"
+# 80 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 91
+# 93
 void OSCILLATOR_Initialize(void);
 
-# 104
+# 106
 void PMD_Initialize(void);
 
 # 52 "mcc_generated_files/interrupt_manager.c"
@@ -16796,14 +16852,14 @@ IPR1bits.ADTIP = 1;
 IPR0bits.IOCIP = 1;
 
 
+IPR0bits.INT1IP = 1;
+
+
+IPR0bits.INT2IP = 1;
+
+
 
 IPR4bits.TMR2IP = 0;
-
-
-IPR0bits.INT1IP = 0;
-
-
-IPR0bits.INT2IP = 0;
 
 
 IPR3bits.BCL2IP = 0;
@@ -16816,6 +16872,9 @@ IPR4bits.TMR3IP = 0;
 
 
 IPR3bits.TX2IP = 0;
+
+
+IPR6bits.CCP2IP = 0;
 
 }
 
@@ -16838,6 +16897,14 @@ else if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
 {
 PIN_MANAGER_IOC();
 }
+else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
+{
+INT1_ISR();
+}
+else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
+{
+INT2_ISR();
+}
 else
 {
 
@@ -16850,14 +16917,6 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
 if(PIE4bits.TMR2IE == 1 && PIR4bits.TMR2IF == 1)
 {
 TMR2_ISR();
-}
-else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
-{
-INT1_ISR();
-}
-else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
-{
-INT2_ISR();
 }
 else if(PIE3bits.BCL2IE == 1 && PIR3bits.BCL2IF == 1)
 {
@@ -16874,6 +16933,10 @@ TMR3_ISR();
 else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
 {
 EUSART2_TxDefaultInterruptHandler();
+}
+else if(PIE6bits.CCP2IE == 1 && PIR6bits.CCP2IF == 1)
+{
+CCP2_CaptureISR();
 }
 else
 {

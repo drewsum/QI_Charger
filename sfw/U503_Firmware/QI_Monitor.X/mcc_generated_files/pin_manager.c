@@ -129,6 +129,7 @@ void PIN_MANAGER_Initialize(void)
     PIE0bits.IOCIE = 1; 
     
 	
+    CCP2PPS = 0x09;   //RB1->CCP2:CCP2;    
     SSP2DATPPS = 0x0C;   //RB4->MSSP2:SDA2;    
     RB5PPS = 0x11;   //RB5->MSSP2:SCL2;    
     RC4PPS = 0x0B;   //RC4->EUSART2:TX2;    

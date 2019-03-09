@@ -55,9 +55,9 @@
 // This structure holds calculated temperatures and raw 14 bit conversion results
 struct LM73_temp_results_t {
     
-    double QI_temp_result;
-    double POS5_temp_result;
-    double Ambient_temp_result;
+    float QI_temp_result;
+    float POS5_temp_result;
+    float Ambient_temp_result;
     uint8_t QI_data_raw[2];
     uint8_t POS5_data_raw[2];
     uint8_t Ambient_data_raw[2];

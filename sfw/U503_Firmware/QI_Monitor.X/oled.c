@@ -1,10 +1,18 @@
 
+#include <string.h>
+#include <stdio.h>
+
+
 #include "oled.h"
 
 #include "cause_of_reset.h"
 #include "device_IDs.h"
 #include "error_handling.h"
 #include "NXQ_charge_state.h"
+#include "adc_postprocessing.h"
+#include "LM73_I2C.h"
+#include "freq_meas.h"
+#include "heartbeat_timer.h"
 
 const uint8_t OledFont[][8] = 
 {
@@ -165,69 +173,38 @@ void OLED_Data(uint8_t temp) {
 void OLED_Init(void) {
  
     OLED_Command(OLED_DISPLAYOFF);
-    //__delay_ms(20);
     OLED_Command(OLED_SETDISPLAYCLOCKDIV);
-    //__delay_ms(20);
     OLED_Command(0x80);
-    //__delay_ms(20);
     OLED_Command(OLED_SETMULTIPLEX);
-    //__delay_ms(20);
     OLED_Command(0x1F);
-    //__delay_ms(20);
     OLED_Command(OLED_SETDISPLAYOFFSET);
-    //__delay_ms(20);
     OLED_Command(0x0);
-    //__delay_ms(20);
     OLED_Command(OLED_SETSTARTLINE | 0x0);
-    //__delay_ms(20);
     OLED_Command(OLED_CHARGEPUMP);
-    //__delay_ms(20);
     OLED_Command(0xAF);
-    //__delay_ms(20);
     OLED_Command(OLED_MEMORYMODE);
-    //__delay_ms(20);
     OLED_Command(0x00);
-    //__delay_ms(20);
     OLED_Command(OLED_SEGREMAP | 0x1);
-    //__delay_ms(20);
     OLED_Command(OLED_COMSCANDEC);
-    //__delay_ms(20);
     OLED_Command(OLED_SETCOMPINS);
-    //__delay_ms(20);
     OLED_Command(0x02);
-    //__delay_ms(20);
     OLED_Command(OLED_SETCONTRAST);
-    //__delay_ms(20);
     OLED_Command(0x8F);
-    //__delay_ms(20);
     OLED_Command(OLED_SETPRECHARGE);
-    //__delay_ms(20);
     OLED_Command(0xF1);
-    //__delay_ms(20);
     OLED_Command(OLED_SETVCOMDETECT);
-    //__delay_ms(20);
     OLED_Command(0x40);
-    //__delay_ms(20);
     OLED_Command(OLED_DISPLAYALLON_RESUME);
-    //__delay_ms(20);
     OLED_Command(OLED_NORMALDISPLAY);
-    //__delay_ms(20);
     OLED_Command(OLED_DISPLAYON);
-    //__delay_ms(20);
-    
-    NOP();
-    
-    
+        
 }
 
 void OLED_YX(unsigned char Row, unsigned char Column) {
     
     OLED_Command(0xB0 + Row);
-    //__delay_ms(20);
     OLED_Command(0x00 + (8 * Column & 0x0F));
-    //__delay_ms(20);
     OLED_Command(0x10 + ((8* Column >> 4) & 0x0F));
-    //__delay_ms(20);
     
 }
 
@@ -314,9 +291,21 @@ void OLED_WriteFloat(float f) {
 }
 
 void OLED_UpdateFromRAMBuffer(void) {
-    
-    OLED_YX(0,0);
-    OLED_Clear();
+
+    // Tack on trailing spaces to rest of lines in OLED RAM buffer
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line0); char_index < sizeof(OLED_RAM_Buffer.line0) - 1; char_index++) {
+        OLED_RAM_Buffer.line0[char_index] = ' ';    
+    }
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line1); char_index < sizeof(OLED_RAM_Buffer.line1) - 1; char_index++) {
+        OLED_RAM_Buffer.line1[char_index] = ' ';    
+    }
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line2); char_index < sizeof(OLED_RAM_Buffer.line2) - 1; char_index++) {
+        OLED_RAM_Buffer.line2[char_index] = ' ';    
+    }
+    for (uint8_t char_index = strlen(OLED_RAM_Buffer.line3); char_index < sizeof(OLED_RAM_Buffer.line3) - 1; char_index++) {
+        OLED_RAM_Buffer.line3[char_index] = ' ';    
+    }
+
     OLED_YX(0,0);
     OLED_WriteString(OLED_RAM_Buffer.line0);
     OLED_YX(1,0);
@@ -413,7 +402,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Charge_Status;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -421,14 +410,14 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "POS12 Voltage:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            strcpy(OLED_RAM_Buffer.line0, "+12V Voltage:");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos12_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS12_Voltage;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -436,14 +425,14 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "POS5 Voltage:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            strcpy(OLED_RAM_Buffer.line0, "+5V Voltage:");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fV", adc_results.pos5_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_Voltage;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -451,14 +440,14 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "POS12 Current:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            strcpy(OLED_RAM_Buffer.line0, "+12V Current:");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.pos12_isns_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS12_Current;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -467,13 +456,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "QI Current:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fA", adc_results.qi_isns_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_Current;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -482,13 +471,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Input Power:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.input_power);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Input_Power;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -497,13 +486,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Output Power:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fW", adc_calculations.output_power);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Output_Power;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -512,13 +501,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Efficiency:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3f%%", adc_calculations.efficiency);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Efficiency;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -527,13 +516,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "QI Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.QI_temp_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -542,13 +531,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.POS5_temp_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -557,13 +546,13 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Ambient Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", LM73_temp_results.Ambient_temp_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Ambient_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -572,28 +561,105 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
+            sprintf(OLED_RAM_Buffer.line1, "%+.3fC", adc_results.die_temp_adc_result);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Micro_Temp;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
+            
+        case OLED_POS5_FSW:
+            
+            OLED_update_flag = false;
+            
+            strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
+            if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
+            else strcpy(OLED_RAM_Buffer.line1, "2.5MHz");
+            strcpy(OLED_RAM_Buffer.line2, " ");
+            strcpy(OLED_RAM_Buffer.line3, " ");
+            
+            OLED_UpdateFromRAMBuffer();
+            OLED_Frame = OLED_POS5_FSW;
+            OLED_update_time = 1;
+            
+            break;
+            
+        case OLED_QI_FSW:
+            
+            OLED_update_flag = false;
+            
+            strcpy(OLED_RAM_Buffer.line0, "QI Sw. Freq:");
+            if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
+            else sprintf(OLED_RAM_Buffer.line1, "%+.3fkHz", freq_meas_results.QI_Freq_Meas / 1000.0);
+            strcpy(OLED_RAM_Buffer.line2, " ");
+            strcpy(OLED_RAM_Buffer.line3, " ");
+            
+            OLED_UpdateFromRAMBuffer();
+            OLED_Frame = OLED_QI_FSW;
+            OLED_update_time = 1;
+            
+            break;
+            
             
         case OLED_Dev_On_Time:
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "On Time:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            strcpy(OLED_RAM_Buffer.line0, "Dev. On Time:");
+            
+            // If we've been on longer than a year
+            if (device_on_time >= 31536000) {
+             
+                sprintf(OLED_RAM_Buffer.line1, "%u years", getYearsFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u days", getDaysFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u hours", getHoursFromOnTime(device_on_time));
+                
+                
+            }
+            
+            // Else if we've been on for longer than a day, don't show seconds
+            else if (device_on_time >= 86400) {
+                
+                sprintf(OLED_RAM_Buffer.line1, "%u days", getDaysFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u hours", getHoursFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u minutes", getMinutesFromOnTime(device_on_time));
+                
+            }
+            
+            // Else if we've been on longer than an hour
+            else if (device_on_time >= 3600) {
+                
+                sprintf(OLED_RAM_Buffer.line1, "%u hours", getHoursFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u minutes", getMinutesFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u seconds", getSecondsFromOnTime(device_on_time));
+                
+            }
+            
+            // Else if we've been on longer than a minute
+            else if (device_on_time >= 60) {
+             
+                sprintf(OLED_RAM_Buffer.line1, "%u minutes", getMinutesFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u seconds", getSecondsFromOnTime(device_on_time));
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
+            // Else we've been on less than a minute
+            else {
+               
+                sprintf(OLED_RAM_Buffer.line1, "%u seconds", getSecondsFromOnTime(device_on_time));
+                strcpy(OLED_RAM_Buffer.line2, " ");
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Dev_On_Time;
-            OLED_update_time = 2;
+            OLED_update_time = 1;
             
             break;
             
@@ -608,7 +674,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Cause_Of_Reset;
-            OLED_update_time = 2;
+            OLED_update_time = 255;
             
             break;
             
@@ -631,7 +697,7 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Dev_Rev_ID;
-            OLED_update_time = 2;
+            OLED_update_time = 255;
             
             break;
             
@@ -646,10 +712,24 @@ void OLED_updateHandler(void) {
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_COM_PORT_SET;
-            OLED_update_time = 2;
+            OLED_update_time = 255;
             
             break;
             
+        case OLED_TITLE_FRAME:
+            
+            OLED_update_flag = false;
+            
+            strcpy(OLED_RAM_Buffer.line0, "QI Charger w/");
+            strcpy(OLED_RAM_Buffer.line1, "Digital Monitor");
+            strcpy(OLED_RAM_Buffer.line2, "Drew Maatman");
+            strcpy(OLED_RAM_Buffer.line3, "Spring 2019");
+            
+            OLED_UpdateFromRAMBuffer();
+            OLED_Frame = OLED_TITLE_FRAME;
+            OLED_update_time = 255;
+            
+            break;
             
         case OLED_Idle:
             

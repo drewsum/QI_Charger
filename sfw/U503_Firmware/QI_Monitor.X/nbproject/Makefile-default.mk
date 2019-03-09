@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/ext_int.c mcc_generated_files/eusart2.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/adcc.c mcc_generated_files/fvr.c mcc_generated_files/tmr0.c mcc_generated_files/memory.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/device_config.c mcc_generated_files/i2c2.c main.c LM73_I2C.c NXQ_charge_state.c adc_postprocessing.c cap_touch_int.c cause_of_reset.c device_IDs.c error_handling.c heartbeat_timer.c oled.c ring_buffer_LUT.c ring_buffer_interface.c terminal_control.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/ext_int.c mcc_generated_files/eusart2.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/adcc.c mcc_generated_files/fvr.c mcc_generated_files/tmr0.c mcc_generated_files/memory.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/device_config.c mcc_generated_files/i2c2.c mcc_generated_files/ccp2.c mcc_generated_files/tmr5.c main.c LM73_I2C.c NXQ_charge_state.c adc_postprocessing.c cap_touch_int.c cause_of_reset.c device_IDs.c error_handling.c heartbeat_timer.c oled.c ring_buffer_LUT.c ring_buffer_interface.c terminal_control.c freq_meas.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/ext_int.p1 ${OBJECTDIR}/mcc_generated_files/eusart2.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/memory.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr3.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/i2c2.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/LM73_I2C.p1 ${OBJECTDIR}/NXQ_charge_state.p1 ${OBJECTDIR}/adc_postprocessing.p1 ${OBJECTDIR}/cap_touch_int.p1 ${OBJECTDIR}/cause_of_reset.p1 ${OBJECTDIR}/device_IDs.p1 ${OBJECTDIR}/error_handling.p1 ${OBJECTDIR}/heartbeat_timer.p1 ${OBJECTDIR}/oled.p1 ${OBJECTDIR}/ring_buffer_LUT.p1 ${OBJECTDIR}/ring_buffer_interface.p1 ${OBJECTDIR}/terminal_control.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/ext_int.p1.d ${OBJECTDIR}/mcc_generated_files/eusart2.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d ${OBJECTDIR}/mcc_generated_files/fvr.p1.d ${OBJECTDIR}/mcc_generated_files/tmr0.p1.d ${OBJECTDIR}/mcc_generated_files/memory.p1.d ${OBJECTDIR}/mcc_generated_files/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr3.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/i2c2.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/LM73_I2C.p1.d ${OBJECTDIR}/NXQ_charge_state.p1.d ${OBJECTDIR}/adc_postprocessing.p1.d ${OBJECTDIR}/cap_touch_int.p1.d ${OBJECTDIR}/cause_of_reset.p1.d ${OBJECTDIR}/device_IDs.p1.d ${OBJECTDIR}/error_handling.p1.d ${OBJECTDIR}/heartbeat_timer.p1.d ${OBJECTDIR}/oled.p1.d ${OBJECTDIR}/ring_buffer_LUT.p1.d ${OBJECTDIR}/ring_buffer_interface.p1.d ${OBJECTDIR}/terminal_control.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/ext_int.p1 ${OBJECTDIR}/mcc_generated_files/eusart2.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/memory.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr3.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/i2c2.p1 ${OBJECTDIR}/mcc_generated_files/ccp2.p1 ${OBJECTDIR}/mcc_generated_files/tmr5.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/LM73_I2C.p1 ${OBJECTDIR}/NXQ_charge_state.p1 ${OBJECTDIR}/adc_postprocessing.p1 ${OBJECTDIR}/cap_touch_int.p1 ${OBJECTDIR}/cause_of_reset.p1 ${OBJECTDIR}/device_IDs.p1 ${OBJECTDIR}/error_handling.p1 ${OBJECTDIR}/heartbeat_timer.p1 ${OBJECTDIR}/oled.p1 ${OBJECTDIR}/ring_buffer_LUT.p1 ${OBJECTDIR}/ring_buffer_interface.p1 ${OBJECTDIR}/terminal_control.p1 ${OBJECTDIR}/freq_meas.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/ext_int.p1.d ${OBJECTDIR}/mcc_generated_files/eusart2.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d ${OBJECTDIR}/mcc_generated_files/fvr.p1.d ${OBJECTDIR}/mcc_generated_files/tmr0.p1.d ${OBJECTDIR}/mcc_generated_files/memory.p1.d ${OBJECTDIR}/mcc_generated_files/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr3.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/i2c2.p1.d ${OBJECTDIR}/mcc_generated_files/ccp2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr5.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/LM73_I2C.p1.d ${OBJECTDIR}/NXQ_charge_state.p1.d ${OBJECTDIR}/adc_postprocessing.p1.d ${OBJECTDIR}/cap_touch_int.p1.d ${OBJECTDIR}/cause_of_reset.p1.d ${OBJECTDIR}/device_IDs.p1.d ${OBJECTDIR}/error_handling.p1.d ${OBJECTDIR}/heartbeat_timer.p1.d ${OBJECTDIR}/oled.p1.d ${OBJECTDIR}/ring_buffer_LUT.p1.d ${OBJECTDIR}/ring_buffer_interface.p1.d ${OBJECTDIR}/terminal_control.p1.d ${OBJECTDIR}/freq_meas.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/ext_int.p1 ${OBJECTDIR}/mcc_generated_files/eusart2.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/memory.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr3.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/i2c2.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/LM73_I2C.p1 ${OBJECTDIR}/NXQ_charge_state.p1 ${OBJECTDIR}/adc_postprocessing.p1 ${OBJECTDIR}/cap_touch_int.p1 ${OBJECTDIR}/cause_of_reset.p1 ${OBJECTDIR}/device_IDs.p1 ${OBJECTDIR}/error_handling.p1 ${OBJECTDIR}/heartbeat_timer.p1 ${OBJECTDIR}/oled.p1 ${OBJECTDIR}/ring_buffer_LUT.p1 ${OBJECTDIR}/ring_buffer_interface.p1 ${OBJECTDIR}/terminal_control.p1
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/ext_int.p1 ${OBJECTDIR}/mcc_generated_files/eusart2.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/mcc_generated_files/memory.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr3.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/i2c2.p1 ${OBJECTDIR}/mcc_generated_files/ccp2.p1 ${OBJECTDIR}/mcc_generated_files/tmr5.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/LM73_I2C.p1 ${OBJECTDIR}/NXQ_charge_state.p1 ${OBJECTDIR}/adc_postprocessing.p1 ${OBJECTDIR}/cap_touch_int.p1 ${OBJECTDIR}/cause_of_reset.p1 ${OBJECTDIR}/device_IDs.p1 ${OBJECTDIR}/error_handling.p1 ${OBJECTDIR}/heartbeat_timer.p1 ${OBJECTDIR}/oled.p1 ${OBJECTDIR}/ring_buffer_LUT.p1 ${OBJECTDIR}/ring_buffer_interface.p1 ${OBJECTDIR}/terminal_control.p1 ${OBJECTDIR}/freq_meas.p1
 
 # Source Files
-SOURCEFILES=mcc_generated_files/ext_int.c mcc_generated_files/eusart2.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/adcc.c mcc_generated_files/fvr.c mcc_generated_files/tmr0.c mcc_generated_files/memory.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/device_config.c mcc_generated_files/i2c2.c main.c LM73_I2C.c NXQ_charge_state.c adc_postprocessing.c cap_touch_int.c cause_of_reset.c device_IDs.c error_handling.c heartbeat_timer.c oled.c ring_buffer_LUT.c ring_buffer_interface.c terminal_control.c
+SOURCEFILES=mcc_generated_files/ext_int.c mcc_generated_files/eusart2.c mcc_generated_files/interrupt_manager.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/adcc.c mcc_generated_files/fvr.c mcc_generated_files/tmr0.c mcc_generated_files/memory.c mcc_generated_files/tmr2.c mcc_generated_files/tmr3.c mcc_generated_files/device_config.c mcc_generated_files/i2c2.c mcc_generated_files/ccp2.c mcc_generated_files/tmr5.c main.c LM73_I2C.c NXQ_charge_state.c adc_postprocessing.c cap_touch_int.c cause_of_reset.c device_IDs.c error_handling.c heartbeat_timer.c oled.c ring_buffer_LUT.c ring_buffer_interface.c terminal_control.c freq_meas.c
 
 
 CFLAGS=
@@ -184,6 +184,20 @@ ${OBJECTDIR}/mcc_generated_files/i2c2.p1: mcc_generated_files/i2c2.c  nbproject/
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/i2c2.p1 mcc_generated_files/i2c2.c 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/i2c2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/mcc_generated_files/ccp2.p1: mcc_generated_files/ccp2.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/ccp2.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/ccp2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/ccp2.p1 mcc_generated_files/ccp2.c 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/ccp2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/mcc_generated_files/tmr5.p1: mcc_generated_files/tmr5.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/tmr5.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/tmr5.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/tmr5.p1 mcc_generated_files/tmr5.c 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/tmr5.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.p1.d 
@@ -274,6 +288,13 @@ ${OBJECTDIR}/terminal_control.p1: terminal_control.c  nbproject/Makefile-${CND_C
 	@${RM} ${OBJECTDIR}/terminal_control.p1 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/terminal_control.p1 terminal_control.c 
 	@${FIXDEPS} ${OBJECTDIR}/terminal_control.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/freq_meas.p1: freq_meas.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/freq_meas.p1.d 
+	@${RM} ${OBJECTDIR}/freq_meas.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/freq_meas.p1 freq_meas.c 
+	@${FIXDEPS} ${OBJECTDIR}/freq_meas.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/mcc_generated_files/ext_int.p1: mcc_generated_files/ext_int.c  nbproject/Makefile-${CND_CONF}.mk
@@ -367,6 +388,20 @@ ${OBJECTDIR}/mcc_generated_files/i2c2.p1: mcc_generated_files/i2c2.c  nbproject/
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/i2c2.p1 mcc_generated_files/i2c2.c 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/i2c2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/mcc_generated_files/ccp2.p1: mcc_generated_files/ccp2.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/ccp2.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/ccp2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/ccp2.p1 mcc_generated_files/ccp2.c 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/ccp2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/mcc_generated_files/tmr5.p1: mcc_generated_files/tmr5.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/tmr5.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/tmr5.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/tmr5.p1 mcc_generated_files/tmr5.c 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/tmr5.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.p1.d 
@@ -457,6 +492,13 @@ ${OBJECTDIR}/terminal_control.p1: terminal_control.c  nbproject/Makefile-${CND_C
 	@${RM} ${OBJECTDIR}/terminal_control.p1 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/terminal_control.p1 terminal_control.c 
 	@${FIXDEPS} ${OBJECTDIR}/terminal_control.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/freq_meas.p1: freq_meas.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/freq_meas.p1.d 
+	@${RM} ${OBJECTDIR}/freq_meas.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/freq_meas.p1 freq_meas.c 
+	@${FIXDEPS} ${OBJECTDIR}/freq_meas.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

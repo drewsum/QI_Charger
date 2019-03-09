@@ -3,13 +3,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [c E9433 0 1 2 3 4 5 6 .. ]
 [n E9433 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
 "56 LM73_I2C.h
-[s S1435 `d 1 `d 1 `d 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
+[s S1435 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
 [n S1435 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
-[v F9836 `(v ~T0 @X0 0 tf ]
-[v F9839 `(v ~T0 @X0 0 tf ]
+[v F9869 `(v ~T0 @X0 0 tf ]
+[v F9872 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
-[s S1437 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1437 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1440 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1440 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "4391 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S279 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S279 . INT0IE INT1IE INT2IE . IOCIE TMR0IE ]
@@ -10795,9 +10795,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "65 LM73_I2C.h
 [v _LM73_temp_results `S1435 ~T0 @X0 1 e ]
 [; ;LM73_I2C.h: 56: struct LM73_temp_results_t {
-[; ;LM73_I2C.h: 58: double QI_temp_result;
-[; ;LM73_I2C.h: 59: double POS5_temp_result;
-[; ;LM73_I2C.h: 60: double Ambient_temp_result;
+[; ;LM73_I2C.h: 58: float QI_temp_result;
+[; ;LM73_I2C.h: 59: float POS5_temp_result;
+[; ;LM73_I2C.h: 60: float Ambient_temp_result;
 [; ;LM73_I2C.h: 61: uint8_t QI_data_raw[2];
 [; ;LM73_I2C.h: 62: uint8_t POS5_data_raw[2];
 [; ;LM73_I2C.h: 63: uint8_t Ambient_data_raw[2];
@@ -10820,6 +10820,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.h: 684: void IOCBF3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr5.h: 100: void TMR5_Initialize(void);
+[; ;tmr5.h: 129: void TMR5_StartTimer(void);
+[; ;tmr5.h: 161: void TMR5_StopTimer(void);
+[; ;tmr5.h: 196: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 235: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 271: void TMR5_Reload(void);
+[; ;tmr5.h: 310: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 349: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 387: bool TMR5_HasOverflowOccured(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr3.h: 100: void TMR3_Initialize(void);
 [; ;tmr3.h: 129: void TMR3_StartTimer(void);
@@ -10947,6 +10957,22 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10999,10 +11025,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9836 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9869 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9839 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9872 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11014,11 +11040,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 78: void SYSTEM_Initialize(void);
-[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 104: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 "52 error_handling.h
-[v _error_handler `S1437 ~T0 @X0 1 e ]
+[v _error_handler `S1440 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11050,11 +11076,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE0bits 0 2 -> -> 0 `i `uc ]
 [; ;LM73_I2C.c: 19: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "19
-[e $U 1439  ]
-[e :U 1440 ]
-[e :U 1439 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1440  ]
-[e :U 1441 ]
+[e $U 1442  ]
+[e :U 1443 ]
+[e :U 1442 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1443  ]
+[e :U 1444 ]
 "22
 [v _length `uc ~T0 @X0 1 a ]
 "23
@@ -11075,75 +11101,75 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _I2C2_MasterWrite (4 , , , &U _output_data_array _length -> -> 77 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 28: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "28
-[e $U 1442  ]
-[e :U 1443 ]
-[e :U 1442 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1443  ]
-[e :U 1444 ]
+[e $U 1445  ]
+[e :U 1446 ]
+[e :U 1445 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1446  ]
+[e :U 1447 ]
 [; ;LM73_I2C.c: 29: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 30: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 31: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 32: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 33: I2C_STATUS == I2C2_LOST_STATE ) {
 "33
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1445  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1448  ]
 {
 [; ;LM73_I2C.c: 34: error_handler.I2C_QI_Temp_Sense_error_flag = 1;
 "34
 [e = . _error_handler 4 -> -> 1 `i `uc ]
 "35
 }
-[e :U 1445 ]
+[e :U 1448 ]
 [; ;LM73_I2C.c: 35: }
 [; ;LM73_I2C.c: 38: I2C2_MasterWrite(output_data_array, length, 0x4C, &I2C_STATUS);
 "38
 [e ( _I2C2_MasterWrite (4 , , , &U _output_data_array _length -> -> 76 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 39: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "39
-[e $U 1446  ]
-[e :U 1447 ]
-[e :U 1446 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1447  ]
-[e :U 1448 ]
+[e $U 1449  ]
+[e :U 1450 ]
+[e :U 1449 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1450  ]
+[e :U 1451 ]
 [; ;LM73_I2C.c: 40: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 41: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 42: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 43: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 44: I2C_STATUS == I2C2_LOST_STATE ) {
 "44
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1449  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1452  ]
 {
 [; ;LM73_I2C.c: 45: error_handler.I2C_POS5_Temp_Sense_error_flag = 1;
 "45
 [e = . _error_handler 5 -> -> 1 `i `uc ]
 "46
 }
-[e :U 1449 ]
+[e :U 1452 ]
 [; ;LM73_I2C.c: 46: }
 [; ;LM73_I2C.c: 49: I2C2_MasterWrite(output_data_array, length, 0x4E, &I2C_STATUS);
 "49
 [e ( _I2C2_MasterWrite (4 , , , &U _output_data_array _length -> -> 78 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 50: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "50
-[e $U 1450  ]
-[e :U 1451 ]
-[e :U 1450 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1451  ]
-[e :U 1452 ]
+[e $U 1453  ]
+[e :U 1454 ]
+[e :U 1453 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1454  ]
+[e :U 1455 ]
 [; ;LM73_I2C.c: 51: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 52: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 53: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 54: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 55: I2C_STATUS == I2C2_LOST_STATE ) {
 "55
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1453  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1456  ]
 {
 [; ;LM73_I2C.c: 56: error_handler.I2C_Ambient_Temp_Sense_error_flag = 1;
 "56
 [e = . _error_handler 6 -> -> 1 `i `uc ]
 "57
 }
-[e :U 1453 ]
+[e :U 1456 ]
 [; ;LM73_I2C.c: 57: }
 [; ;LM73_I2C.c: 60: output_data_array[0] = 0x04;
 "60
@@ -11159,75 +11185,75 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _I2C2_MasterWrite (4 , , , &U _output_data_array _length -> -> 77 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 64: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "64
-[e $U 1454  ]
-[e :U 1455 ]
-[e :U 1454 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1455  ]
-[e :U 1456 ]
+[e $U 1457  ]
+[e :U 1458 ]
+[e :U 1457 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1458  ]
+[e :U 1459 ]
 [; ;LM73_I2C.c: 65: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 66: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 67: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 68: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 69: I2C_STATUS == I2C2_LOST_STATE ) {
 "69
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1457  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1460  ]
 {
 [; ;LM73_I2C.c: 70: error_handler.I2C_QI_Temp_Sense_error_flag = 1;
 "70
 [e = . _error_handler 4 -> -> 1 `i `uc ]
 "71
 }
-[e :U 1457 ]
+[e :U 1460 ]
 [; ;LM73_I2C.c: 71: }
 [; ;LM73_I2C.c: 74: I2C2_MasterWrite(output_data_array, length, 0x4C, &I2C_STATUS);
 "74
 [e ( _I2C2_MasterWrite (4 , , , &U _output_data_array _length -> -> 76 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 75: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "75
-[e $U 1458  ]
-[e :U 1459 ]
-[e :U 1458 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1459  ]
-[e :U 1460 ]
+[e $U 1461  ]
+[e :U 1462 ]
+[e :U 1461 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1462  ]
+[e :U 1463 ]
 [; ;LM73_I2C.c: 76: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 77: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 78: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 79: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 80: I2C_STATUS == I2C2_LOST_STATE ) {
 "80
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1461  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1464  ]
 {
 [; ;LM73_I2C.c: 81: error_handler.I2C_POS5_Temp_Sense_error_flag = 1;
 "81
 [e = . _error_handler 5 -> -> 1 `i `uc ]
 "82
 }
-[e :U 1461 ]
+[e :U 1464 ]
 [; ;LM73_I2C.c: 82: }
 [; ;LM73_I2C.c: 85: I2C2_MasterWrite(output_data_array, length, 0x4E, &I2C_STATUS);
 "85
 [e ( _I2C2_MasterWrite (4 , , , &U _output_data_array _length -> -> 78 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 86: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "86
-[e $U 1462  ]
-[e :U 1463 ]
-[e :U 1462 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1463  ]
-[e :U 1464 ]
+[e $U 1465  ]
+[e :U 1466 ]
+[e :U 1465 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1466  ]
+[e :U 1467 ]
 [; ;LM73_I2C.c: 87: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 88: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 89: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 90: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 91: I2C_STATUS == I2C2_LOST_STATE ) {
 "91
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1465  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1468  ]
 {
 [; ;LM73_I2C.c: 92: error_handler.I2C_Ambient_Temp_Sense_error_flag = 1;
 "92
 [e = . _error_handler 6 -> -> 1 `i `uc ]
 "93
 }
-[e :U 1465 ]
+[e :U 1468 ]
 [; ;LM73_I2C.c: 93: }
 [; ;LM73_I2C.c: 96: PIE0bits.INT1IE = 1;
 "96
@@ -11237,7 +11263,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
 [; ;LM73_I2C.c: 99: }
 "99
-[e :UE 1438 ]
+[e :UE 1441 ]
 }
 "102
 [v _LM73AcquisitionHandler `(v ~T0 @X0 1 ef ]
@@ -11253,160 +11279,160 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE0bits 0 2 -> -> 0 `i `uc ]
 [; ;LM73_I2C.c: 108: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "108
-[e $U 1467  ]
-[e :U 1468 ]
-[e :U 1467 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1468  ]
-[e :U 1469 ]
-[; ;LM73_I2C.c: 112: I2C2_MasterWrite(0x00, 1, 0x4D, &I2C_STATUS);
-"112
-[e ( _I2C2_MasterWrite (4 , , , -> -> 0 `i `*uc -> -> 1 `i `uc -> -> 77 `i `ui &U _I2C_STATUS ]
-[; ;LM73_I2C.c: 113: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
-"113
 [e $U 1470  ]
 [e :U 1471 ]
 [e :U 1470 ]
 [e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1471  ]
 [e :U 1472 ]
+[; ;LM73_I2C.c: 112: I2C2_MasterWrite(0x00, 1, 0x4D, &I2C_STATUS);
+"112
+[e ( _I2C2_MasterWrite (4 , , , -> -> 0 `i `*uc -> -> 1 `i `uc -> -> 77 `i `ui &U _I2C_STATUS ]
+[; ;LM73_I2C.c: 113: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
+"113
+[e $U 1473  ]
+[e :U 1474 ]
+[e :U 1473 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1474  ]
+[e :U 1475 ]
 [; ;LM73_I2C.c: 114: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 115: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 116: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 117: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 118: I2C_STATUS == I2C2_LOST_STATE ) {
 "118
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1473  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1476  ]
 {
 [; ;LM73_I2C.c: 119: error_handler.I2C_QI_Temp_Sense_error_flag = 1;
 "119
 [e = . _error_handler 4 -> -> 1 `i `uc ]
 "120
 }
-[e :U 1473 ]
+[e :U 1476 ]
 [; ;LM73_I2C.c: 120: }
 [; ;LM73_I2C.c: 122: I2C2_MasterRead(LM73_temp_results.QI_data_raw, 2, 0x4D, &I2C_STATUS);
 "122
 [e ( _I2C2_MasterRead (4 , , , &U . _LM73_temp_results 3 -> -> 2 `i `uc -> -> 77 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 123: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "123
-[e $U 1474  ]
-[e :U 1475 ]
-[e :U 1474 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1475  ]
-[e :U 1476 ]
+[e $U 1477  ]
+[e :U 1478 ]
+[e :U 1477 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1478  ]
+[e :U 1479 ]
 [; ;LM73_I2C.c: 124: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 125: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 126: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 127: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 128: I2C_STATUS == I2C2_LOST_STATE ) {
 "128
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1477  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1480  ]
 {
 [; ;LM73_I2C.c: 129: error_handler.I2C_QI_Temp_Sense_error_flag = 1;
 "129
 [e = . _error_handler 4 -> -> 1 `i `uc ]
 "130
 }
-[e :U 1477 ]
+[e :U 1480 ]
 [; ;LM73_I2C.c: 130: }
 [; ;LM73_I2C.c: 134: I2C2_MasterWrite(0x00, 1, 0x4C, &I2C_STATUS);
 "134
 [e ( _I2C2_MasterWrite (4 , , , -> -> 0 `i `*uc -> -> 1 `i `uc -> -> 76 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 135: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "135
-[e $U 1478  ]
-[e :U 1479 ]
-[e :U 1478 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1479  ]
-[e :U 1480 ]
+[e $U 1481  ]
+[e :U 1482 ]
+[e :U 1481 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1482  ]
+[e :U 1483 ]
 [; ;LM73_I2C.c: 136: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 137: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 138: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 139: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 140: I2C_STATUS == I2C2_LOST_STATE ) {
 "140
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1481  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1484  ]
 {
 [; ;LM73_I2C.c: 141: error_handler.I2C_POS5_Temp_Sense_error_flag = 1;
 "141
 [e = . _error_handler 5 -> -> 1 `i `uc ]
 "142
 }
-[e :U 1481 ]
+[e :U 1484 ]
 [; ;LM73_I2C.c: 142: }
 [; ;LM73_I2C.c: 144: I2C2_MasterRead(LM73_temp_results.POS5_data_raw, 2, 0x4C, &I2C_STATUS);
 "144
 [e ( _I2C2_MasterRead (4 , , , &U . _LM73_temp_results 4 -> -> 2 `i `uc -> -> 76 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 145: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "145
-[e $U 1482  ]
-[e :U 1483 ]
-[e :U 1482 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1483  ]
-[e :U 1484 ]
+[e $U 1485  ]
+[e :U 1486 ]
+[e :U 1485 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1486  ]
+[e :U 1487 ]
 [; ;LM73_I2C.c: 146: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 147: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 148: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 149: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 150: I2C_STATUS == I2C2_LOST_STATE ) {
 "150
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1485  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1488  ]
 {
 [; ;LM73_I2C.c: 151: error_handler.I2C_POS5_Temp_Sense_error_flag = 1;
 "151
 [e = . _error_handler 5 -> -> 1 `i `uc ]
 "152
 }
-[e :U 1485 ]
+[e :U 1488 ]
 [; ;LM73_I2C.c: 152: }
 [; ;LM73_I2C.c: 156: I2C2_MasterWrite(0x00, 1, 0x4E, &I2C_STATUS);
 "156
 [e ( _I2C2_MasterWrite (4 , , , -> -> 0 `i `*uc -> -> 1 `i `uc -> -> 78 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 157: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "157
-[e $U 1486  ]
-[e :U 1487 ]
-[e :U 1486 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1487  ]
-[e :U 1488 ]
+[e $U 1489  ]
+[e :U 1490 ]
+[e :U 1489 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1490  ]
+[e :U 1491 ]
 [; ;LM73_I2C.c: 158: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 159: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 160: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 161: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 162: I2C_STATUS == I2C2_LOST_STATE ) {
 "162
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1489  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1492  ]
 {
 [; ;LM73_I2C.c: 163: error_handler.I2C_Ambient_Temp_Sense_error_flag = 1;
 "163
 [e = . _error_handler 6 -> -> 1 `i `uc ]
 "164
 }
-[e :U 1489 ]
+[e :U 1492 ]
 [; ;LM73_I2C.c: 164: }
 [; ;LM73_I2C.c: 166: I2C2_MasterRead(LM73_temp_results.Ambient_data_raw, 2, 0x4E, &I2C_STATUS);
 "166
 [e ( _I2C2_MasterRead (4 , , , &U . _LM73_temp_results 5 -> -> 2 `i `uc -> -> 78 `i `ui &U _I2C_STATUS ]
 [; ;LM73_I2C.c: 167: while(I2C_STATUS == I2C2_MESSAGE_PENDING);
 "167
-[e $U 1490  ]
-[e :U 1491 ]
-[e :U 1490 ]
-[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1491  ]
-[e :U 1492 ]
+[e $U 1493  ]
+[e :U 1494 ]
+[e :U 1493 ]
+[e $ == -> _I2C_STATUS `i -> . `E9433 2 `i 1494  ]
+[e :U 1495 ]
 [; ;LM73_I2C.c: 168: if ( I2C_STATUS == I2C2_MESSAGE_FAIL ||
 [; ;LM73_I2C.c: 169: I2C_STATUS == I2C2_STUCK_START ||
 [; ;LM73_I2C.c: 170: I2C_STATUS == I2C2_MESSAGE_ADDRESS_NO_ACK ||
 [; ;LM73_I2C.c: 171: I2C_STATUS == I2C2_DATA_NO_ACK ||
 [; ;LM73_I2C.c: 172: I2C_STATUS == I2C2_LOST_STATE ) {
 "172
-[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1493  ]
+[e $ ! || || || || == -> _I2C_STATUS `i -> . `E9433 1 `i == -> _I2C_STATUS `i -> . `E9433 3 `i == -> _I2C_STATUS `i -> . `E9433 4 `i == -> _I2C_STATUS `i -> . `E9433 5 `i == -> _I2C_STATUS `i -> . `E9433 6 `i 1496  ]
 {
 [; ;LM73_I2C.c: 173: error_handler.I2C_Ambient_Temp_Sense_error_flag = 1;
 "173
 [e = . _error_handler 6 -> -> 1 `i `uc ]
 "174
 }
-[e :U 1493 ]
+[e :U 1496 ]
 [; ;LM73_I2C.c: 174: }
 [; ;LM73_I2C.c: 177: LM73Convert();
 "177
@@ -11416,7 +11442,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _LM73_start_flag -> -> 0 `i `uc ]
 [; ;LM73_I2C.c: 181: }
 "181
-[e :UE 1466 ]
+[e :UE 1469 ]
 }
 "184
 [v _LM73Convert `(v ~T0 @X0 1 ef ]
@@ -11434,7 +11460,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _QI_Conv -> | << -> *U + &U . _LM73_temp_results 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 3 `ui `ux `i -> 6 `i >> -> *U + &U . _LM73_temp_results 3 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _LM73_temp_results 3 `ui `ux `i -> 2 `i `ui ]
 [; ;LM73_I2C.c: 193: if ((LM73_temp_results.QI_data_raw[0] >> 6) == 1) {
 "193
-[e $ ! == >> -> *U + &U . _LM73_temp_results 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 3 `ui `ux `i -> 6 `i -> 1 `i 1495  ]
+[e $ ! == >> -> *U + &U . _LM73_temp_results 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 3 `ui `ux `i -> 6 `i -> 1 `i 1498  ]
 {
 [; ;LM73_I2C.c: 194: QI_Conv = ~(QI_Conv);
 "194
@@ -11444,13 +11470,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _QI_Conv & _QI_Conv -> -> 8191 `i `ui ]
 [; ;LM73_I2C.c: 197: LM73_temp_results.QI_temp_result = -0.03125 * QI_Conv;
 "197
-[e = . _LM73_temp_results 0 * -U .0.03125 -> _QI_Conv `d ]
+[e = . _LM73_temp_results 0 -> * -U .0.03125 -> _QI_Conv `d `f ]
 "198
 }
 [; ;LM73_I2C.c: 198: }
-[e $U 1496  ]
+[e $U 1499  ]
 "200
-[e :U 1495 ]
+[e :U 1498 ]
 [; ;LM73_I2C.c: 200: else {
 {
 [; ;LM73_I2C.c: 202: QI_Conv = QI_Conv & 0x1FFF;
@@ -11458,17 +11484,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _QI_Conv & _QI_Conv -> -> 8191 `i `ui ]
 [; ;LM73_I2C.c: 203: LM73_temp_results.QI_temp_result = 0.03125 * QI_Conv;
 "203
-[e = . _LM73_temp_results 0 * .0.03125 -> _QI_Conv `d ]
+[e = . _LM73_temp_results 0 -> * .0.03125 -> _QI_Conv `d `f ]
 "204
 }
-[e :U 1496 ]
+[e :U 1499 ]
 [; ;LM73_I2C.c: 204: }
 [; ;LM73_I2C.c: 207: POS5_Conv = LM73_temp_results.POS5_data_raw[0] << 6 | LM73_temp_results.POS5_data_raw[1] >> 2;
 "207
 [e = _POS5_Conv -> | << -> *U + &U . _LM73_temp_results 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 4 `ui `ux `i -> 6 `i >> -> *U + &U . _LM73_temp_results 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _LM73_temp_results 4 `ui `ux `i -> 2 `i `ui ]
 [; ;LM73_I2C.c: 211: if ((LM73_temp_results.POS5_data_raw[0] >> 6) == 1) {
 "211
-[e $ ! == >> -> *U + &U . _LM73_temp_results 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 4 `ui `ux `i -> 6 `i -> 1 `i 1497  ]
+[e $ ! == >> -> *U + &U . _LM73_temp_results 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 4 `ui `ux `i -> 6 `i -> 1 `i 1500  ]
 {
 [; ;LM73_I2C.c: 212: POS5_Conv = ~(POS5_Conv);
 "212
@@ -11478,13 +11504,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POS5_Conv & _POS5_Conv -> -> 8191 `i `ui ]
 [; ;LM73_I2C.c: 215: LM73_temp_results.POS5_temp_result = -0.03125 * POS5_Conv;
 "215
-[e = . _LM73_temp_results 1 * -U .0.03125 -> _POS5_Conv `d ]
+[e = . _LM73_temp_results 1 -> * -U .0.03125 -> _POS5_Conv `d `f ]
 "216
 }
 [; ;LM73_I2C.c: 216: }
-[e $U 1498  ]
+[e $U 1501  ]
 "218
-[e :U 1497 ]
+[e :U 1500 ]
 [; ;LM73_I2C.c: 218: else {
 {
 [; ;LM73_I2C.c: 220: POS5_Conv = POS5_Conv & 0x1FFF;
@@ -11492,17 +11518,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _POS5_Conv & _POS5_Conv -> -> 8191 `i `ui ]
 [; ;LM73_I2C.c: 221: LM73_temp_results.POS5_temp_result = 0.03125 * POS5_Conv;
 "221
-[e = . _LM73_temp_results 1 * .0.03125 -> _POS5_Conv `d ]
+[e = . _LM73_temp_results 1 -> * .0.03125 -> _POS5_Conv `d `f ]
 "222
 }
-[e :U 1498 ]
+[e :U 1501 ]
 [; ;LM73_I2C.c: 222: }
 [; ;LM73_I2C.c: 225: Ambient_Conv = LM73_temp_results.Ambient_data_raw[0] << 6 | LM73_temp_results.Ambient_data_raw[1] >> 2;
 "225
 [e = _Ambient_Conv -> | << -> *U + &U . _LM73_temp_results 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 5 `ui `ux `i -> 6 `i >> -> *U + &U . _LM73_temp_results 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _LM73_temp_results 5 `ui `ux `i -> 2 `i `ui ]
 [; ;LM73_I2C.c: 229: if ((LM73_temp_results.Ambient_data_raw[0] >> 6) == 1) {
 "229
-[e $ ! == >> -> *U + &U . _LM73_temp_results 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 5 `ui `ux `i -> 6 `i -> 1 `i 1499  ]
+[e $ ! == >> -> *U + &U . _LM73_temp_results 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _LM73_temp_results 5 `ui `ux `i -> 6 `i -> 1 `i 1502  ]
 {
 [; ;LM73_I2C.c: 230: Ambient_Conv = ~(Ambient_Conv);
 "230
@@ -11512,13 +11538,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _Ambient_Conv & _Ambient_Conv -> -> 8191 `i `ui ]
 [; ;LM73_I2C.c: 233: LM73_temp_results.Ambient_temp_result = -0.03125 * Ambient_Conv;
 "233
-[e = . _LM73_temp_results 2 * -U .0.03125 -> _Ambient_Conv `d ]
+[e = . _LM73_temp_results 2 -> * -U .0.03125 -> _Ambient_Conv `d `f ]
 "234
 }
 [; ;LM73_I2C.c: 234: }
-[e $U 1500  ]
+[e $U 1503  ]
 "236
-[e :U 1499 ]
+[e :U 1502 ]
 [; ;LM73_I2C.c: 236: else {
 {
 [; ;LM73_I2C.c: 238: Ambient_Conv = Ambient_Conv & 0x1FFF;
@@ -11526,10 +11552,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _Ambient_Conv & _Ambient_Conv -> -> 8191 `i `ui ]
 [; ;LM73_I2C.c: 239: LM73_temp_results.Ambient_temp_result = 0.03125 * Ambient_Conv;
 "239
-[e = . _LM73_temp_results 2 * .0.03125 -> _Ambient_Conv `d ]
+[e = . _LM73_temp_results 2 -> * .0.03125 -> _Ambient_Conv `d `f ]
 "240
 }
-[e :U 1500 ]
+[e :U 1503 ]
 [; ;LM73_I2C.c: 240: }
 [; ;LM73_I2C.c: 243: PIE0bits.INT1IE = 1;
 "243
@@ -11539,5 +11565,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
 [; ;LM73_I2C.c: 246: }
 "246
-[e :UE 1494 ]
+[e :UE 1497 ]
 }

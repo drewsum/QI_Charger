@@ -16148,6 +16148,7 @@ IOCBF3_SetInterruptHandler(IOCBF3_DefaultInterruptHandler);
 PIE0bits.IOCIE = 1;
 
 
+CCP2PPS = 0x09;
 SSP2DATPPS = 0x0C;
 RB5PPS = 0x11;
 RC4PPS = 0x0B;
@@ -16172,7 +16173,7 @@ IOCBF3_ISR();
 }
 }
 
-# 159
+# 160
 void IOCBF2_ISR(void) {
 
 
@@ -16185,18 +16186,18 @@ IOCBF2_InterruptHandler();
 IOCBFbits.IOCBF2 = 0;
 }
 
-# 174
+# 175
 void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void)){
 IOCBF2_InterruptHandler = InterruptHandler;
 }
 
-# 181
+# 182
 void IOCBF2_DefaultInterruptHandler(void){
 
 
 }
 
-# 189
+# 190
 void IOCBF3_ISR(void) {
 
 
@@ -16209,12 +16210,12 @@ IOCBF3_InterruptHandler();
 IOCBFbits.IOCBF3 = 0;
 }
 
-# 204
+# 205
 void IOCBF3_SetInterruptHandler(void (* InterruptHandler)(void)){
 IOCBF3_InterruptHandler = InterruptHandler;
 }
 
-# 211
+# 212
 void IOCBF3_DefaultInterruptHandler(void){
 
 

@@ -58,6 +58,7 @@
 #include "cap_touch_int.h"
 #include "NXQ_charge_state.h"
 #include "oled.h"
+#include "freq_meas.h"
 
 /*
                          Main application
@@ -100,7 +101,10 @@ void main(void)
     TMR3_SetInterruptHandler(QIIdleTimerHandler);
     TMR3_StopTimer();
     TMR3_Reload();
-        
+    
+    TMR5_StopTimer();
+    TMR5_WriteTimer(0);
+    
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
 
@@ -176,8 +180,11 @@ void main(void)
         // If the OLED needs to be updated, update it
         if (OLED_update_flag) OLED_updateHandler();
         
-        // If new LM73 is requested, get it
+        // If new LM73 data is requested, get it
         if (LM73_start_flag) LM73AcquisitionHandler();
+        
+        // If we need to start a new freq meas capture, start it
+        if (freq_meas_start_flag) freqMeasStartCaptures();
         
         // Update error LEDs based on error handler state
         updateErrorLEDs();
