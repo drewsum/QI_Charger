@@ -16142,45 +16142,36 @@ typedef uint16_t uintptr_t;
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 80 "mcc_generated_files/ccp1.h"
-typedef union CCPR1Reg_tag
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
 {
 struct
 {
-uint8_t ccpr1l;
-uint8_t ccpr1h;
+uint8_t ccpr2l;
+uint8_t ccpr2h;
 };
 struct
 {
-uint16_t ccpr1_16Bit;
+uint16_t ccpr2_16Bit;
 };
-} CCP1_PERIOD_REG_T ;
+} CCP2_PERIOD_REG_T ;
 
 # 123
-void CCP1_Initialize(void);
+void CCP2_Initialize(void);
 
 # 139
-void CCP1_CaptureISR(void);
+void CCP2_CaptureISR(void);
 
 # 160
-void CCP1_CallBack(uint16_t capturedValue);
+void CCP2_CallBack(uint16_t capturedValue);
 
 # 39 "freq_meas.h"
 struct {
 
-float POS5_Freq_Meas;
-uint16_t POS5_Freq_Meas_Raw;
 float QI_Freq_Meas;
 uint16_t QI_Freq_Meas_Raw;
 
 } freq_meas_results;
-
-
-enum pos5_edge_type{
-pos5_period_rising_1 = 0,
-pos5_period_rising_2 = 1
-} POS5_current_edge;
-
 
 
 enum qi_edge_type{
@@ -16201,7 +16192,7 @@ void freqMeasConvert(void);
 # 5 "freq_meas.c"
 void freqMeasStartCaptures(void) {
 
-# 11
+
 CCP2CONbits.EN = 1;
 
 
@@ -16211,10 +16202,6 @@ freq_meas_start_flag = 0;
 
 
 void freqMeasConvert(void) {
-
-
-double pos5_period = ((((float) freq_meas_results.POS5_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);
-freq_meas_results.POS5_Freq_Meas = 1.0 / pos5_period;
 
 
 double qi_period = ((((float) freq_meas_results.QI_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);

@@ -392,7 +392,7 @@ void ringBufferLUT(char * line) {
     else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
      
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Current +5V Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.POS5_Freq_Meas);
+        printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
         terminalTextAttributesReset();
         
     }
@@ -400,7 +400,7 @@ void ringBufferLUT(char * line) {
     else if ((0 == strcmp(line, "Measure QI FSW?"))) {
      
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Current QI Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.QI_Freq_Meas);
+        printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
         terminalTextAttributesReset();
         
     }

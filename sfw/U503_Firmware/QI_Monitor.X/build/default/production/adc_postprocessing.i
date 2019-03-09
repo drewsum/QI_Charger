@@ -16605,67 +16605,6 @@ void I2C2_ISR ( void );
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 93 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
-
-# 127
-bool FVR_IsOutputReady(void);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 80 "mcc_generated_files/ccp2.h"
-typedef union CCPR2Reg_tag
-{
-struct
-{
-uint8_t ccpr2l;
-uint8_t ccpr2h;
-};
-struct
-{
-uint16_t ccpr2_16Bit;
-};
-} CCP2_PERIOD_REG_T ;
-
-# 123
-void CCP2_Initialize(void);
-
-# 139
-void CCP2_CaptureISR(void);
-
-# 160
-void CCP2_CallBack(uint16_t capturedValue);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 80 "mcc_generated_files/ccp1.h"
-typedef union CCPR1Reg_tag
-{
-struct
-{
-uint8_t ccpr1l;
-uint8_t ccpr1h;
-};
-struct
-{
-uint16_t ccpr1_16Bit;
-};
-} CCP1_PERIOD_REG_T ;
-
-# 123
-void CCP1_Initialize(void);
-
-# 139
-void CCP1_CaptureISR(void);
-
-# 160
-void CCP1_CallBack(uint16_t capturedValue);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
 # 100 "mcc_generated_files/tmr5.h"
 void TMR5_Initialize(void);
 
@@ -16735,36 +16674,6 @@ void TMR3_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 100 "mcc_generated_files/tmr1.h"
-void TMR1_Initialize(void);
-
-# 129
-void TMR1_StartTimer(void);
-
-# 161
-void TMR1_StopTimer(void);
-
-# 196
-uint16_t TMR1_ReadTimer(void);
-
-# 235
-void TMR1_WriteTimer(uint16_t timerVal);
-
-# 271
-void TMR1_Reload(void);
-
-# 310
-void TMR1_StartSinglePulseAcquisition(void);
-
-# 349
-uint8_t TMR1_CheckGateValueStatus(void);
-
-# 387
-bool TMR1_HasOverflowOccured(void);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
 # 100 "mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
 
@@ -16794,6 +16703,41 @@ extern void (*TMR0_InterruptHandler)(void);
 
 # 346
 void TMR0_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 93 "mcc_generated_files/fvr.h"
+void FVR_Initialize(void);
+
+# 127
+bool FVR_IsOutputReady(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 80 "mcc_generated_files/ccp2.h"
+typedef union CCPR2Reg_tag
+{
+struct
+{
+uint8_t ccpr2l;
+uint8_t ccpr2h;
+};
+struct
+{
+uint16_t ccpr2_16Bit;
+};
+} CCP2_PERIOD_REG_T ;
+
+# 123
+void CCP2_Initialize(void);
+
+# 139
+void CCP2_CaptureISR(void);
+
+# 160
+void CCP2_CallBack(uint16_t capturedValue);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16955,13 +16899,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 82 "mcc_generated_files/mcc.h"
+# 80 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 95
+# 93
 void OSCILLATOR_Initialize(void);
 
-# 108
+# 106
 void PMD_Initialize(void);
 
 # 41 "error_handling.h"

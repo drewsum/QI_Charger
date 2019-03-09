@@ -44,5 +44,21 @@ void heartbeatTimerHandler(void);
 // This function returns a string of a large number of seconds in a human readable format
 char * getStringSecondsAsTime(uint32_t input_seconds);
 
+// This function returns the number of years that have passed based on the device on time counter
+uint8_t getYearsFromOnTime(uint32_t input_seconds);
+
+// This function returns the number of days that have passed based on the device on time counter
+uint8_t getDaysFromOnTime(uint32_t input_seconds);
+
+// This function returns the number of hours that have passed based on the device on time counter
+uint8_t getHoursFromOnTime(uint32_t input_seconds);
+
+// This function returns the number of minutes that have passed based on the device on time counter
+uint8_t getMinutesFromOnTime(uint32_t input_seconds);
+
+// This function returns the number of seconds that have passed based on the device on time counter
+uint8_t getSecondsFromOnTime(uint32_t input_seconds);
+
+
 #endif	/* _HEARTBEAT_TIMER_H */
 

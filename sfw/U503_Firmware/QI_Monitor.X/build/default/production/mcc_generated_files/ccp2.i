@@ -16165,48 +16165,13 @@ void CCP2_CaptureISR(void);
 # 160
 void CCP2_CallBack(uint16_t capturedValue);
 
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 80 "mcc_generated_files/../mcc_generated_files/ccp1.h"
-typedef union CCPR1Reg_tag
-{
-struct
-{
-uint8_t ccpr1l;
-uint8_t ccpr1h;
-};
-struct
-{
-uint16_t ccpr1_16Bit;
-};
-} CCP1_PERIOD_REG_T ;
-
-# 123
-void CCP1_Initialize(void);
-
-# 139
-void CCP1_CaptureISR(void);
-
-# 160
-void CCP1_CallBack(uint16_t capturedValue);
-
 # 39 "mcc_generated_files/../freq_meas.h"
 struct {
 
-float POS5_Freq_Meas;
-uint16_t POS5_Freq_Meas_Raw;
 float QI_Freq_Meas;
 uint16_t QI_Freq_Meas_Raw;
 
 } freq_meas_results;
-
-
-enum pos5_edge_type{
-pos5_period_rising_1 = 0,
-pos5_period_rising_2 = 1
-} POS5_current_edge;
-
 
 
 enum qi_edge_type{

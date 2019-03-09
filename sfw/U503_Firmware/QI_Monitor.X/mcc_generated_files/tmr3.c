@@ -74,11 +74,11 @@ void TMR3_Initialize(void)
     //CS LFINTOSC; 
     T3CLK = 0x04;
 
-    //TMR3H 207; 
-    TMR3H = 0xCF;
+    //TMR3H 208; 
+    TMR3H = 0xD0;
 
-    //TMR3L 144; 
-    TMR3L = 0x90;
+    //TMR3L 43; 
+    TMR3L = 0x2B;
 
     // Load the TMR value to reload variable
     timer3ReloadVal=(uint16_t)((TMR3H << 8) | TMR3L);

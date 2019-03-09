@@ -12,6 +12,7 @@
 #include "adc_postprocessing.h"
 #include "LM73_I2C.h"
 #include "freq_meas.h"
+#include "heartbeat_timer.h"
 
 const uint8_t OledFont[][8] = 
 {
@@ -575,7 +576,8 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
-            sprintf(OLED_RAM_Buffer.line1, "%+.3fHz", freq_meas_results.POS5_Freq_Meas);
+            if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
+            else strcpy(OLED_RAM_Buffer.line1, "2.5MHz");
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -590,7 +592,8 @@ void OLED_updateHandler(void) {
             OLED_update_flag = false;
             
             strcpy(OLED_RAM_Buffer.line0, "QI Sw. Freq:");
-            sprintf(OLED_RAM_Buffer.line1, "%+.3fHz", freq_meas_results.QI_Freq_Meas);
+            if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
+            else sprintf(OLED_RAM_Buffer.line1, "%+.3fkHz", freq_meas_results.QI_Freq_Meas / 1000.0);
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, " ");
             
@@ -605,10 +608,54 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "On Time:");
-            strcpy(OLED_RAM_Buffer.line1, " ");
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            strcpy(OLED_RAM_Buffer.line0, "Dev. On Time:");
+            
+            // If we've been on longer than a year
+            if (device_on_time >= 31536000) {
+             
+                sprintf(OLED_RAM_Buffer.line1, "%u years", getYearsFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u days", getDaysFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u hours", getHoursFromOnTime(device_on_time));
+                
+                
+            }
+            
+            // Else if we've been on for longer than a day, don't show seconds
+            else if (device_on_time >= 86400) {
+                
+                sprintf(OLED_RAM_Buffer.line1, "%u days", getDaysFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u hours", getHoursFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u minutes", getMinutesFromOnTime(device_on_time));
+                
+            }
+            
+            // Else if we've been on longer than an hour
+            else if (device_on_time >= 3600) {
+                
+                sprintf(OLED_RAM_Buffer.line1, "%u hours", getHoursFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u minutes", getMinutesFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u seconds", getSecondsFromOnTime(device_on_time));
+                
+            }
+            
+            // Else if we've been on longer than a minute
+            else if (device_on_time >= 60) {
+             
+                sprintf(OLED_RAM_Buffer.line1, "%u minutes", getMinutesFromOnTime(device_on_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u seconds", getSecondsFromOnTime(device_on_time));
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
+            // Else we've been on less than a minute
+            else {
+               
+                sprintf(OLED_RAM_Buffer.line1, "%u seconds", getSecondsFromOnTime(device_on_time));
+                strcpy(OLED_RAM_Buffer.line2, " ");
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Dev_On_Time;

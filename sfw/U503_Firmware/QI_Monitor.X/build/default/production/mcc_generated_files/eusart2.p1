@@ -5,8 +5,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [c E9554 0 1 2 3 4 5 6 .. ]
 [n E9554 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
 "41 mcc_generated_files/../error_handling.h
-[s S1442 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1442 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1439 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1439 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "4532 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S287 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S287 . SSP1IE BCL1IE SSP2IE BCL2IE TX1IE RC1IE TX2IE RC2IE ]
@@ -10907,84 +10907,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;fvr.h: 93: void FVR_Initialize(void);
-[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;adcc.h: 72: typedef uint16_t adc_result_t;
-[; ;adcc.h: 89: typedef enum
-[; ;adcc.h: 90: {
-[; ;adcc.h: 91: POS12_ADC = 0x0,
-[; ;adcc.h: 92: POS12_ISNS_ADC = 0x1,
-[; ;adcc.h: 93: POS5_ADC = 0x4,
-[; ;adcc.h: 94: QI_ISNS_ADC = 0x5,
-[; ;adcc.h: 95: channel_VSS = 0x3C,
-[; ;adcc.h: 96: channel_Temp = 0x3D,
-[; ;adcc.h: 97: channel_DAC1 = 0x3E,
-[; ;adcc.h: 98: channel_FVR_buf1 = 0x3F
-[; ;adcc.h: 99: } adcc_channel_t;
-[; ;adcc.h: 133: void ADCC_Initialize(void);
-[; ;adcc.h: 162: void ADCC_StartConversion(adcc_channel_t channel);
-[; ;adcc.h: 192: bool ADCC_IsConversionDone();
-[; ;adcc.h: 224: adc_result_t ADCC_GetConversionResult(void);
-[; ;adcc.h: 255: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-[; ;adcc.h: 280: void ADCC_StopConversion(void);
-[; ;adcc.h: 307: void ADCC_SetStopOnInterrupt(void);
-[; ;adcc.h: 332: void ADCC_DischargeSampleCapacitor(void);
-[; ;adcc.h: 358: void ADCC_LoadAcquisitionRegister(uint8_t);
-[; ;adcc.h: 384: void ADCC_SetPrechargeTime(uint8_t);
-[; ;adcc.h: 409: void ADCC_SetRepeatCount(uint8_t);
-[; ;adcc.h: 437: uint8_t ADCC_GetCurrentCountofConversions(void);
-[; ;adcc.h: 461: void ADCC_ClearAccumulator(void);
-[; ;adcc.h: 486: uint16_t ADCC_GetAccumulatorValue(void);
-[; ;adcc.h: 514: bool ADCC_HasAccumulatorOverflowed(void);
-[; ;adcc.h: 539: uint16_t ADCC_GetFilterValue(void);
-[; ;adcc.h: 567: uint16_t ADCC_GetPreviousResult(void);
-[; ;adcc.h: 593: void ADCC_DefineSetPoint(uint16_t);
-[; ;adcc.h: 619: void ADCC_SetUpperThreshold(uint16_t);
-[; ;adcc.h: 645: void ADCC_SetLowerThreshold(uint16_t);
-[; ;adcc.h: 672: uint16_t ADCC_GetErrorCalculation(void);
-[; ;adcc.h: 699: void ADCC_EnableDoubleSampling(void);
-[; ;adcc.h: 723: void ADCC_EnableContinuousConversion(void);
-[; ;adcc.h: 747: void ADCC_DisableContinuousConversion(void);
-[; ;adcc.h: 775: bool ADCC_HasErrorCrossedUpperThreshold(void);
-[; ;adcc.h: 803: bool ADCC_HasErrorCrossedLowerThreshold(void);
-[; ;adcc.h: 830: uint8_t ADCC_GetConversionStageStatus(void);
-[; ;adcc.h: 847: void ADCC_SetADTIInterruptHandler(void (* InterruptHandler)(void));
-[; ;adcc.h: 863: void ADCC_ThresholdISR(void);
-[; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
-[; ;ccp2.h: 81: {
-[; ;ccp2.h: 82: struct
-[; ;ccp2.h: 83: {
-[; ;ccp2.h: 84: uint8_t ccpr2l;
-[; ;ccp2.h: 85: uint8_t ccpr2h;
-[; ;ccp2.h: 86: };
-[; ;ccp2.h: 87: struct
-[; ;ccp2.h: 88: {
-[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
-[; ;ccp2.h: 90: };
-[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
-[; ;ccp2.h: 123: void CCP2_Initialize(void);
-[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
-[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp1.h: 80: typedef union CCPR1Reg_tag
-[; ;ccp1.h: 81: {
-[; ;ccp1.h: 82: struct
-[; ;ccp1.h: 83: {
-[; ;ccp1.h: 84: uint8_t ccpr1l;
-[; ;ccp1.h: 85: uint8_t ccpr1h;
-[; ;ccp1.h: 86: };
-[; ;ccp1.h: 87: struct
-[; ;ccp1.h: 88: {
-[; ;ccp1.h: 89: uint16_t ccpr1_16Bit;
-[; ;ccp1.h: 90: };
-[; ;ccp1.h: 91: } CCP1_PERIOD_REG_T ;
-[; ;ccp1.h: 123: void CCP1_Initialize(void);
-[; ;ccp1.h: 139: void CCP1_CaptureISR(void);
-[; ;ccp1.h: 160: void CCP1_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -11007,16 +10929,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 385: void TMR3_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;tmr1.h: 100: void TMR1_Initialize(void);
-[; ;tmr1.h: 129: void TMR1_StartTimer(void);
-[; ;tmr1.h: 161: void TMR1_StopTimer(void);
-[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
-[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
-[; ;tmr1.h: 271: void TMR1_Reload(void);
-[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
-[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
-[; ;tmr1.h: 387: bool TMR1_HasOverflowOccured(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
@@ -11085,6 +10997,68 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 328: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;fvr.h: 93: void FVR_Initialize(void);
+[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;adcc.h: 72: typedef uint16_t adc_result_t;
+[; ;adcc.h: 89: typedef enum
+[; ;adcc.h: 90: {
+[; ;adcc.h: 91: POS12_ADC = 0x0,
+[; ;adcc.h: 92: POS12_ISNS_ADC = 0x1,
+[; ;adcc.h: 93: POS5_ADC = 0x4,
+[; ;adcc.h: 94: QI_ISNS_ADC = 0x5,
+[; ;adcc.h: 95: channel_VSS = 0x3C,
+[; ;adcc.h: 96: channel_Temp = 0x3D,
+[; ;adcc.h: 97: channel_DAC1 = 0x3E,
+[; ;adcc.h: 98: channel_FVR_buf1 = 0x3F
+[; ;adcc.h: 99: } adcc_channel_t;
+[; ;adcc.h: 133: void ADCC_Initialize(void);
+[; ;adcc.h: 162: void ADCC_StartConversion(adcc_channel_t channel);
+[; ;adcc.h: 192: bool ADCC_IsConversionDone();
+[; ;adcc.h: 224: adc_result_t ADCC_GetConversionResult(void);
+[; ;adcc.h: 255: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
+[; ;adcc.h: 280: void ADCC_StopConversion(void);
+[; ;adcc.h: 307: void ADCC_SetStopOnInterrupt(void);
+[; ;adcc.h: 332: void ADCC_DischargeSampleCapacitor(void);
+[; ;adcc.h: 358: void ADCC_LoadAcquisitionRegister(uint8_t);
+[; ;adcc.h: 384: void ADCC_SetPrechargeTime(uint8_t);
+[; ;adcc.h: 409: void ADCC_SetRepeatCount(uint8_t);
+[; ;adcc.h: 437: uint8_t ADCC_GetCurrentCountofConversions(void);
+[; ;adcc.h: 461: void ADCC_ClearAccumulator(void);
+[; ;adcc.h: 486: uint16_t ADCC_GetAccumulatorValue(void);
+[; ;adcc.h: 514: bool ADCC_HasAccumulatorOverflowed(void);
+[; ;adcc.h: 539: uint16_t ADCC_GetFilterValue(void);
+[; ;adcc.h: 567: uint16_t ADCC_GetPreviousResult(void);
+[; ;adcc.h: 593: void ADCC_DefineSetPoint(uint16_t);
+[; ;adcc.h: 619: void ADCC_SetUpperThreshold(uint16_t);
+[; ;adcc.h: 645: void ADCC_SetLowerThreshold(uint16_t);
+[; ;adcc.h: 672: uint16_t ADCC_GetErrorCalculation(void);
+[; ;adcc.h: 699: void ADCC_EnableDoubleSampling(void);
+[; ;adcc.h: 723: void ADCC_EnableContinuousConversion(void);
+[; ;adcc.h: 747: void ADCC_DisableContinuousConversion(void);
+[; ;adcc.h: 775: bool ADCC_HasErrorCrossedUpperThreshold(void);
+[; ;adcc.h: 803: bool ADCC_HasErrorCrossedLowerThreshold(void);
+[; ;adcc.h: 830: uint8_t ADCC_GetConversionStageStatus(void);
+[; ;adcc.h: 847: void ADCC_SetADTIInterruptHandler(void (* InterruptHandler)(void));
+[; ;adcc.h: 863: void ADCC_ThresholdISR(void);
+[; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -11104,11 +11078,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.h: 588: void INT2_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;ext_int.h: 612: extern void (*INT2_InterruptHandler)(void);
 [; ;ext_int.h: 636: void INT2_DefaultInterruptHandler(void);
-[; ;mcc.h: 82: void SYSTEM_Initialize(void);
-[; ;mcc.h: 95: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 108: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 "52 mcc_generated_files/../error_handling.h
-[v _error_handler `S1442 ~T0 @X0 1 e ]
+[v _error_handler `S1439 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11226,7 +11200,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE3bits 0 7 -> -> 1 `i `uc ]
 [; ;eusart2.c: 115: }
 "115
-[e :UE 1443 ]
+[e :UE 1440 ]
 }
 "117
 [v _EUSART2_is_tx_ready `(uc ~T0 @X0 1 ef ]
@@ -11239,10 +11213,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.c: 119: return eusart2TxBufferRemaining;
 "119
 [e ) _eusart2TxBufferRemaining ]
-[e $UE 1444  ]
+[e $UE 1441  ]
 [; ;eusart2.c: 120: }
 "120
-[e :UE 1444 ]
+[e :UE 1441 ]
 }
 "122
 [v _EUSART2_is_rx_ready `(uc ~T0 @X0 1 ef ]
@@ -11255,10 +11229,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.c: 124: return eusart2RxCount;
 "124
 [e ) _eusart2RxCount ]
-[e $UE 1445  ]
+[e $UE 1442  ]
 [; ;eusart2.c: 125: }
 "125
-[e :UE 1445 ]
+[e :UE 1442 ]
 }
 "127
 [v _EUSART2_is_tx_done `(uc ~T0 @X0 1 ef ]
@@ -11271,10 +11245,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.c: 129: return TX2STAbits.TRMT;
 "129
 [e ) . . _TX2STAbits 0 1 ]
-[e $UE 1446  ]
+[e $UE 1443  ]
 [; ;eusart2.c: 130: }
 "130
-[e :UE 1446 ]
+[e :UE 1443 ]
 }
 "132
 [v _EUSART2_Read `(uc ~T0 @X0 1 ef ]
@@ -11290,8 +11264,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _readValue -> -> 0 `i `uc ]
 [; ;eusart2.c: 136: while(0 == eusart2RxCount)
 "136
-[e $U 1448  ]
-[e :U 1449 ]
+[e $U 1445  ]
+[e :U 1446 ]
 [; ;eusart2.c: 137: {
 "137
 {
@@ -11300,17 +11274,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; <"  clrwdt ;# ">
 "139
 }
-[e :U 1448 ]
+[e :U 1445 ]
 "136
-[e $ == -> 0 `i -> _eusart2RxCount `i 1449  ]
-[e :U 1450 ]
+[e $ == -> 0 `i -> _eusart2RxCount `i 1446  ]
+[e :U 1447 ]
 [; ;eusart2.c: 139: }
 [; ;eusart2.c: 141: readValue = eusart2RxBuffer[eusart2RxTail++];
 "141
 [e = _readValue *U + &U _eusart2RxBuffer * -> ++ _eusart2RxTail -> -> 1 `i `uc `ux -> -> # *U &U _eusart2RxBuffer `ui `ux ]
 [; ;eusart2.c: 142: if(sizeof(eusart2RxBuffer) <= eusart2RxTail)
 "142
-[e $ ! <= -> # _eusart2RxBuffer `ui -> _eusart2RxTail `ui 1451  ]
+[e $ ! <= -> # _eusart2RxBuffer `ui -> _eusart2RxTail `ui 1448  ]
 [; ;eusart2.c: 143: {
 "143
 {
@@ -11319,7 +11293,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _eusart2RxTail -> -> 0 `i `uc ]
 "145
 }
-[e :U 1451 ]
+[e :U 1448 ]
 [; ;eusart2.c: 145: }
 [; ;eusart2.c: 146: PIE3bits.RC2IE = 0;
 "146
@@ -11333,10 +11307,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.c: 150: return readValue;
 "150
 [e ) _readValue ]
-[e $UE 1447  ]
+[e $UE 1444  ]
 [; ;eusart2.c: 151: }
 "151
-[e :UE 1447 ]
+[e :UE 1444 ]
 }
 "153
 [v _EUSART2_Write `(v ~T0 @X0 1 ef1`uc ]
@@ -11351,8 +11325,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;eusart2.c: 155: while(0 == eusart2TxBufferRemaining)
 "155
-[e $U 1453  ]
-[e :U 1454 ]
+[e $U 1450  ]
+[e :U 1451 ]
 [; ;eusart2.c: 156: {
 "156
 {
@@ -11361,14 +11335,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; <"  clrwdt ;# ">
 "158
 }
-[e :U 1453 ]
+[e :U 1450 ]
 "155
-[e $ == -> 0 `i -> _eusart2TxBufferRemaining `i 1454  ]
-[e :U 1455 ]
+[e $ == -> 0 `i -> _eusart2TxBufferRemaining `i 1451  ]
+[e :U 1452 ]
 [; ;eusart2.c: 158: }
 [; ;eusart2.c: 160: if(0 == PIE3bits.TX2IE)
 "160
-[e $ ! == -> 0 `i -> . . _PIE3bits 0 6 `i 1456  ]
+[e $ ! == -> 0 `i -> . . _PIE3bits 0 6 `i 1453  ]
 [; ;eusart2.c: 161: {
 "161
 {
@@ -11378,9 +11352,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "163
 }
 [; ;eusart2.c: 163: }
-[e $U 1457  ]
+[e $U 1454  ]
 "164
-[e :U 1456 ]
+[e :U 1453 ]
 [; ;eusart2.c: 164: else
 [; ;eusart2.c: 165: {
 "165
@@ -11393,7 +11367,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + &U _eusart2TxBuffer * -> ++ _eusart2TxHead -> -> 1 `i `uc `ux -> -> # *U &U _eusart2TxBuffer `ui `ux _txData ]
 [; ;eusart2.c: 168: if(sizeof(eusart2TxBuffer) <= eusart2TxHead)
 "168
-[e $ ! <= -> # _eusart2TxBuffer `ui -> _eusart2TxHead `ui 1458  ]
+[e $ ! <= -> # _eusart2TxBuffer `ui -> _eusart2TxHead `ui 1455  ]
 [; ;eusart2.c: 169: {
 "169
 {
@@ -11402,21 +11376,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _eusart2TxHead -> -> 0 `i `uc ]
 "171
 }
-[e :U 1458 ]
+[e :U 1455 ]
 [; ;eusart2.c: 171: }
 [; ;eusart2.c: 172: eusart2TxBufferRemaining--;
 "172
 [e -- _eusart2TxBufferRemaining -> -> 1 `i `uc ]
 "173
 }
-[e :U 1457 ]
+[e :U 1454 ]
 [; ;eusart2.c: 173: }
 [; ;eusart2.c: 174: PIE3bits.TX2IE = 1;
 "174
 [e = . . _PIE3bits 0 6 -> -> 1 `i `uc ]
 [; ;eusart2.c: 175: }
 "175
-[e :UE 1452 ]
+[e :UE 1449 ]
 }
 "177
 [v _getch `(uc ~T0 @X0 1 ef ]
@@ -11429,10 +11403,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.c: 179: return EUSART2_Read();
 "179
 [e ) ( _EUSART2_Read ..  ]
-[e $UE 1459  ]
+[e $UE 1456  ]
 [; ;eusart2.c: 180: }
 "180
-[e :UE 1459 ]
+[e :UE 1456 ]
 }
 "182
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
@@ -11450,7 +11424,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _EUSART2_Write (1 _txData ]
 [; ;eusart2.c: 185: }
 "185
-[e :UE 1460 ]
+[e :UE 1457 ]
 }
 "187
 [v _EUSART2_Transmit_ISR `(v ~T0 @X0 1 ef ]
@@ -11462,7 +11436,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;eusart2.c: 191: if(sizeof(eusart2TxBuffer) > eusart2TxBufferRemaining)
 "191
-[e $ ! > -> # _eusart2TxBuffer `ui -> _eusart2TxBufferRemaining `ui 1462  ]
+[e $ ! > -> # _eusart2TxBuffer `ui -> _eusart2TxBufferRemaining `ui 1459  ]
 [; ;eusart2.c: 192: {
 "192
 {
@@ -11471,7 +11445,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _TX2REG *U + &U _eusart2TxBuffer * -> ++ _eusart2TxTail -> -> 1 `i `uc `ux -> -> # *U &U _eusart2TxBuffer `ui `ux ]
 [; ;eusart2.c: 194: if(sizeof(eusart2TxBuffer) <= eusart2TxTail)
 "194
-[e $ ! <= -> # _eusart2TxBuffer `ui -> _eusart2TxTail `ui 1463  ]
+[e $ ! <= -> # _eusart2TxBuffer `ui -> _eusart2TxTail `ui 1460  ]
 [; ;eusart2.c: 195: {
 "195
 {
@@ -11480,7 +11454,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _eusart2TxTail -> -> 0 `i `uc ]
 "197
 }
-[e :U 1463 ]
+[e :U 1460 ]
 [; ;eusart2.c: 197: }
 [; ;eusart2.c: 198: eusart2TxBufferRemaining++;
 "198
@@ -11488,9 +11462,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "199
 }
 [; ;eusart2.c: 199: }
-[e $U 1464  ]
+[e $U 1461  ]
 "200
-[e :U 1462 ]
+[e :U 1459 ]
 [; ;eusart2.c: 200: else
 [; ;eusart2.c: 201: {
 "201
@@ -11500,11 +11474,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE3bits 0 6 -> -> 0 `i `uc ]
 "203
 }
-[e :U 1464 ]
+[e :U 1461 ]
 [; ;eusart2.c: 203: }
 [; ;eusart2.c: 204: }
 "204
-[e :UE 1461 ]
+[e :UE 1458 ]
 }
 "206
 [v _EUSART2_Receive_ISR `(v ~T0 @X0 1 ef ]
@@ -11516,7 +11490,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;eusart2.c: 209: if(1 == RC2STAbits.OERR)
 "209
-[e $ ! == -> 1 `i -> . . _RC2STAbits 0 1 `i 1466  ]
+[e $ ! == -> 1 `i -> . . _RC2STAbits 0 1 `i 1463  ]
 [; ;eusart2.c: 210: {
 "210
 {
@@ -11531,14 +11505,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . _error_handler 7 -> -> 1 `i `uc ]
 "216
 }
-[e :U 1466 ]
+[e :U 1463 ]
 [; ;eusart2.c: 216: }
 [; ;eusart2.c: 219: eusart2RxBuffer[eusart2RxHead++] = RC2REG;
 "219
 [e = *U + &U _eusart2RxBuffer * -> ++ _eusart2RxHead -> -> 1 `i `uc `ux -> -> # *U &U _eusart2RxBuffer `ui `ux _RC2REG ]
 [; ;eusart2.c: 220: if(sizeof(eusart2RxBuffer) <= eusart2RxHead)
 "220
-[e $ ! <= -> # _eusart2RxBuffer `ui -> _eusart2RxHead `ui 1467  ]
+[e $ ! <= -> # _eusart2RxBuffer `ui -> _eusart2RxHead `ui 1464  ]
 [; ;eusart2.c: 221: {
 "221
 {
@@ -11547,14 +11521,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _eusart2RxHead -> -> 0 `i `uc ]
 "223
 }
-[e :U 1467 ]
+[e :U 1464 ]
 [; ;eusart2.c: 223: }
 [; ;eusart2.c: 224: eusart2RxCount++;
 "224
 [e ++ _eusart2RxCount -> -> 1 `i `uc ]
 [; ;eusart2.c: 226: if((RC2REG == (int) '\n') || (RC2REG == (int) '\r')) {
 "226
-[e $ ! || == -> _RC2REG `i -> -> 10 `ui `i == -> _RC2REG `i -> -> 13 `ui `i 1468  ]
+[e $ ! || == -> _RC2REG `i -> -> 10 `ui `i == -> _RC2REG `i -> -> 13 `ui `i 1465  ]
 {
 [; ;eusart2.c: 228: eusart2RxStringReady = 1;
 "228
@@ -11565,9 +11539,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "233
 }
 [; ;eusart2.c: 233: }
-[e $U 1469  ]
+[e $U 1466  ]
 "235
-[e :U 1468 ]
+[e :U 1465 ]
 [; ;eusart2.c: 235: else {
 {
 [; ;eusart2.c: 237: eusart2RxStringReady = 0;
@@ -11575,11 +11549,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _eusart2RxStringReady -> -> 0 `i `b ]
 "239
 }
-[e :U 1469 ]
+[e :U 1466 ]
 [; ;eusart2.c: 239: }
 [; ;eusart2.c: 242: if((RC2REG == (int) '\b')) {
 "242
-[e $ ! == -> _RC2REG `i -> -> 8 `ui `i 1470  ]
+[e $ ! == -> _RC2REG `i -> -> 8 `ui `i 1467  ]
 {
 [; ;eusart2.c: 244: eusart2RxBuffer[eusart2RxHead] = '\0';
 "244
@@ -11592,7 +11566,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _printf :s 1C ]
 [; ;eusart2.c: 250: if(eusart2RxHead != eusart2RxTail) {
 "250
-[e $ ! != -> _eusart2RxHead `i -> _eusart2RxTail `i 1471  ]
+[e $ ! != -> _eusart2RxHead `i -> _eusart2RxTail `i 1468  ]
 {
 [; ;eusart2.c: 252: eusart2RxBuffer[eusart2RxHead] = '\0';
 "252
@@ -11602,48 +11576,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e -- _eusart2RxHead -> -> 1 `i `uc ]
 "255
 }
-[e :U 1471 ]
+[e :U 1468 ]
 [; ;eusart2.c: 255: }
 [; ;eusart2.c: 257: RC2REG = 0;
 "257
 [e = _RC2REG -> -> 0 `i `uc ]
 "259
 }
-[e :U 1470 ]
+[e :U 1467 ]
 [; ;eusart2.c: 259: }
 [; ;eusart2.c: 262: }
 "262
-[e :UE 1465 ]
+[e :UE 1462 ]
 }
 "264
 [v _EUSART2_SetTxInterruptHandler `(v ~T0 @X0 1 ef1`*F9519 ]
 {
 [; ;eusart2.c: 264: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void)){
 [e :U _EUSART2_SetTxInterruptHandler ]
-[v F9970 `(v ~T0 @X0 0 tf ]
-[v _interruptHandler `*F9970 ~T0 @X0 1 r1 ]
+[v F9937 `(v ~T0 @X0 0 tf ]
+[v _interruptHandler `*F9937 ~T0 @X0 1 r1 ]
 [f ]
 [; ;eusart2.c: 265: EUSART2_TxDefaultInterruptHandler = interruptHandler;
 "265
 [e = _EUSART2_TxDefaultInterruptHandler _interruptHandler ]
 [; ;eusart2.c: 266: }
 "266
-[e :UE 1472 ]
+[e :UE 1469 ]
 }
 "268
 [v _EUSART2_SetRxInterruptHandler `(v ~T0 @X0 1 ef1`*F9523 ]
 {
 [; ;eusart2.c: 268: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void)){
 [e :U _EUSART2_SetRxInterruptHandler ]
-[v F9973 `(v ~T0 @X0 0 tf ]
-[v _interruptHandler `*F9973 ~T0 @X0 1 r1 ]
+[v F9940 `(v ~T0 @X0 0 tf ]
+[v _interruptHandler `*F9940 ~T0 @X0 1 r1 ]
 [f ]
 [; ;eusart2.c: 269: EUSART2_RxDefaultInterruptHandler = interruptHandler;
 "269
 [e = _EUSART2_RxDefaultInterruptHandler _interruptHandler ]
 [; ;eusart2.c: 270: }
 "270
-[e :UE 1473 ]
+[e :UE 1470 ]
 }
 [p f _printf 8388608 ]
 [a 1C 27 91 75 0 ]

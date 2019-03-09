@@ -33,24 +33,15 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
-#include "mcc_generated_files/ccp1.h"
+#include "mcc_generated_files/ccp2.h"
 
 // Structure to hold computed results
 struct {
-    
-    float POS5_Freq_Meas;
-    uint16_t POS5_Freq_Meas_Raw;
+
     float QI_Freq_Meas;
     uint16_t QI_Freq_Meas_Raw;
     
 } freq_meas_results;
-
-// This enum keeps track of which edge we're measuring for CCP1
-enum pos5_edge_type{
-    pos5_period_rising_1 = 0,
-    pos5_period_rising_2 = 1
-} POS5_current_edge;
-
 
 // This enum keeps track of which edge we're measuring for CCP2
 enum qi_edge_type{

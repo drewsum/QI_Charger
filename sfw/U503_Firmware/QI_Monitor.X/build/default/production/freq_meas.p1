@@ -1,13 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "39 freq_meas.h
-[s S1437 `f 1 `ui 1 `f 1 `ui 1 ]
-[n S1437 . POS5_Freq_Meas POS5_Freq_Meas_Raw QI_Freq_Meas QI_Freq_Meas_Raw ]
-"52
-[c E9452 0 1 .. ]
-[n E9452 pos5_edge_type pos5_period_rising_1 pos5_period_rising_2  ]
-"59
-[c E9456 0 1 .. ]
-[n E9456 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
+[s S1437 `f 1 `ui 1 ]
+[n S1437 . QI_Freq_Meas QI_Freq_Meas_Raw ]
+"50
+[c E9450 0 1 .. ]
+[n E9450 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "20073 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S1065 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1065 . MODE FMT OUT . EN ]
@@ -10746,83 +10743,68 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 289: typedef int16_t intptr_t;
 [; ;stdint.h: 294: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp1.h: 80: typedef union CCPR1Reg_tag
-[; ;ccp1.h: 81: {
-[; ;ccp1.h: 82: struct
-[; ;ccp1.h: 83: {
-[; ;ccp1.h: 84: uint8_t ccpr1l;
-[; ;ccp1.h: 85: uint8_t ccpr1h;
-[; ;ccp1.h: 86: };
-[; ;ccp1.h: 87: struct
-[; ;ccp1.h: 88: {
-[; ;ccp1.h: 89: uint16_t ccpr1_16Bit;
-[; ;ccp1.h: 90: };
-[; ;ccp1.h: 91: } CCP1_PERIOD_REG_T ;
-[; ;ccp1.h: 123: void CCP1_Initialize(void);
-[; ;ccp1.h: 139: void CCP1_CaptureISR(void);
-[; ;ccp1.h: 160: void CCP1_CallBack(uint16_t capturedValue);
-"46 freq_meas.h
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+"44 freq_meas.h
 [v _freq_meas_results `S1437 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 39: struct {
-[; ;freq_meas.h: 41: float POS5_Freq_Meas;
-[; ;freq_meas.h: 42: uint16_t POS5_Freq_Meas_Raw;
-[; ;freq_meas.h: 43: float QI_Freq_Meas;
-[; ;freq_meas.h: 44: uint16_t QI_Freq_Meas_Raw;
-[; ;freq_meas.h: 46: } freq_meas_results;
-"52
-[v _POS5_current_edge `E9452 ~T0 @X0 1 e ]
-[; ;freq_meas.h: 49: enum pos5_edge_type{
-[; ;freq_meas.h: 50: pos5_period_rising_1 = 0,
-[; ;freq_meas.h: 51: pos5_period_rising_2 = 1
-[; ;freq_meas.h: 52: } POS5_current_edge;
-"59
-[v _QI_current_edge `E9456 ~T0 @X0 1 e ]
-[; ;freq_meas.h: 56: enum qi_edge_type{
-[; ;freq_meas.h: 57: qi_period_rising_1 = 0,
-[; ;freq_meas.h: 58: qi_period_rising_2 = 1
-[; ;freq_meas.h: 59: } QI_current_edge;
-"63
+[; ;freq_meas.h: 41: float QI_Freq_Meas;
+[; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
+[; ;freq_meas.h: 44: } freq_meas_results;
+"50
+[v _QI_current_edge `E9450 ~T0 @X0 1 e ]
+[; ;freq_meas.h: 47: enum qi_edge_type{
+[; ;freq_meas.h: 48: qi_period_rising_1 = 0,
+[; ;freq_meas.h: 49: qi_period_rising_2 = 1
+[; ;freq_meas.h: 50: } QI_current_edge;
+"54
 [v _freq_meas_start_flag `uc ~T0 @X0 1 e ]
-[; ;freq_meas.h: 63: bool freq_meas_start_flag;
-[; ;freq_meas.h: 66: void freqMeasStartCaptures(void);
-[; ;freq_meas.h: 69: void freqMeasConvert(void);
+[; ;freq_meas.h: 54: bool freq_meas_start_flag;
+[; ;freq_meas.h: 57: void freqMeasStartCaptures(void);
+[; ;freq_meas.h: 60: void freqMeasConvert(void);
 "5 freq_meas.c
 [v _freqMeasStartCaptures `(v ~T0 @X0 1 ef ]
 {
 [; ;freq_meas.c: 5: void freqMeasStartCaptures(void) {
 [e :U _freqMeasStartCaptures ]
 [f ]
-[; ;freq_meas.c: 11: CCP2CONbits.EN = 1;
-"11
+[; ;freq_meas.c: 8: CCP2CONbits.EN = 1;
+"8
 [e = . . _CCP2CONbits 0 4 -> -> 1 `i `uc ]
-[; ;freq_meas.c: 14: freq_meas_start_flag = 0;
-"14
+[; ;freq_meas.c: 11: freq_meas_start_flag = 0;
+"11
 [e = _freq_meas_start_flag -> -> 0 `i `uc ]
-[; ;freq_meas.c: 16: }
-"16
+[; ;freq_meas.c: 13: }
+"13
 [e :UE 1438 ]
 }
-"19
+"16
 [v _freqMeasConvert `(v ~T0 @X0 1 ef ]
 {
-[; ;freq_meas.c: 19: void freqMeasConvert(void) {
+[; ;freq_meas.c: 16: void freqMeasConvert(void) {
 [e :U _freqMeasConvert ]
 [f ]
-"22
-[v _pos5_period `d ~T0 @X0 1 a ]
-[; ;freq_meas.c: 22: double pos5_period = ((((float) freq_meas_results.POS5_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);
-[e = _pos5_period * / -> + -> . _freq_meas_results 1 `f -> -> 1 `i `f `d .16.0 .0.00000063 ]
-[; ;freq_meas.c: 23: freq_meas_results.POS5_Freq_Meas = 1.0 / pos5_period;
-"23
-[e = . _freq_meas_results 0 -> / .1.0 _pos5_period `f ]
-"26
+"19
 [v _qi_period `d ~T0 @X0 1 a ]
-[; ;freq_meas.c: 26: double qi_period = ((((float) freq_meas_results.QI_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);
-[e = _qi_period * / -> + -> . _freq_meas_results 3 `f -> -> 1 `i `f `d .16.0 .0.00000063 ]
-[; ;freq_meas.c: 27: freq_meas_results.QI_Freq_Meas = 1.0 / qi_period;
-"27
-[e = . _freq_meas_results 2 -> / .1.0 _qi_period `f ]
-[; ;freq_meas.c: 30: }
-"30
+[; ;freq_meas.c: 19: double qi_period = ((((float) freq_meas_results.QI_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);
+[e = _qi_period * / -> + -> . _freq_meas_results 1 `f -> -> 1 `i `f `d .16.0 .0.00000063 ]
+[; ;freq_meas.c: 20: freq_meas_results.QI_Freq_Meas = 1.0 / qi_period;
+"20
+[e = . _freq_meas_results 0 -> / .1.0 _qi_period `f ]
+[; ;freq_meas.c: 23: }
+"23
 [e :UE 1439 ]
 }

@@ -56,14 +56,12 @@ void SYSTEM_Initialize(void)
     I2C2_Initialize();
     FVR_Initialize();
     ADCC_Initialize();
-    CCP1_Initialize();
     TMR2_Initialize();
     EXT_INT_Initialize();
     TMR0_Initialize();
     CCP2_Initialize();
     TMR3_Initialize();
     TMR5_Initialize();
-    TMR1_Initialize();
     EUSART2_Initialize();
 }
 

@@ -101,9 +101,6 @@ void main(void)
     TMR3_SetInterruptHandler(QIIdleTimerHandler);
     TMR3_StopTimer();
     TMR3_Reload();
-        
-    TMR1_StopTimer();
-    TMR1_WriteTimer(0);
     
     TMR5_StopTimer();
     TMR5_WriteTimer(0);
@@ -183,7 +180,7 @@ void main(void)
         // If the OLED needs to be updated, update it
         if (OLED_update_flag) OLED_updateHandler();
         
-        // If new LM73 is requested, get it
+        // If new LM73 data is requested, get it
         if (LM73_start_flag) LM73AcquisitionHandler();
         
         // If we need to start a new freq meas capture, start it

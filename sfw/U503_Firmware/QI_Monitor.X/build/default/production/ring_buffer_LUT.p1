@@ -2,38 +2,35 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9581 0 1 2 3 4 5 6 .. ]
 [n E9581 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F10007 `(v ~T0 @X0 0 tf ]
-[v F10010 `(v ~T0 @X0 0 tf ]
+[v F9974 `(v ~T0 @X0 0 tf ]
+[v F9977 `(v ~T0 @X0 0 tf ]
 "55 cause_of_reset.h
-[c E10184 0 1 2 3 4 5 6 7 8 .. ]
-[n E10184 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
+[c E10161 0 1 2 3 4 5 6 7 8 .. ]
+[n E10161 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
 "50 adc_postprocessing.h
-[c E9635 0 1 4 5 60 61 62 63 .. ]
-[n E9635 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
+[c E9776 0 1 4 5 60 61 62 63 .. ]
+[n E9776 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
-[s S1446 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
-[n S1446 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
+[s S1443 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
+[n S1443 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
 "66
-[s S1447 `f 1 `f 1 `f 1 ]
-[n S1447 adc_calculations_t input_power output_power efficiency ]
+[s S1444 `f 1 `f 1 `f 1 ]
+[n S1444 adc_calculations_t input_power output_power efficiency ]
 "41 error_handling.h
-[s S1448 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1448 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1445 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1445 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "56 LM73_I2C.h
-[s S1449 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
-[n S1449 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
+[s S1446 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
+[n S1446 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
 "21 NXQ_charge_state.h
-[c E10266 0 1 2 3 .. ]
-[n E10266 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+[c E10243 0 1 2 3 .. ]
+[n E10243 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "39 freq_meas.h
-[s S1450 `f 1 `ui 1 `f 1 `ui 1 ]
-[n S1450 . POS5_Freq_Meas POS5_Freq_Meas_Raw QI_Freq_Meas QI_Freq_Meas_Raw ]
-"52
-[c E10288 0 1 .. ]
-[n E10288 pos5_edge_type pos5_period_rising_1 pos5_period_rising_2  ]
-"59
-[c E10292 0 1 .. ]
-[n E10292 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
+[s S1447 `f 1 `ui 1 ]
+[n S1447 . QI_Freq_Meas QI_Freq_Meas_Raw ]
+"50
+[c E10263 0 1 .. ]
+[n E10263 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "45 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 "195 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
@@ -46,7 +43,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "44 terminal_control.h
 [v _terminalTextAttributes `(v ~T0 @X0 0 ef3`E9495`E9495`E9487 ]
 "62 cause_of_reset.h
-[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10184 ]
+[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10161 ]
 "49 terminal_control.h
 [v _terminalTextAttributesReset `(v ~T0 @X0 0 ef ]
 "48 device_IDs.h
@@ -10923,84 +10920,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;fvr.h: 93: void FVR_Initialize(void);
-[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;adcc.h: 72: typedef uint16_t adc_result_t;
-[; ;adcc.h: 89: typedef enum
-[; ;adcc.h: 90: {
-[; ;adcc.h: 91: POS12_ADC = 0x0,
-[; ;adcc.h: 92: POS12_ISNS_ADC = 0x1,
-[; ;adcc.h: 93: POS5_ADC = 0x4,
-[; ;adcc.h: 94: QI_ISNS_ADC = 0x5,
-[; ;adcc.h: 95: channel_VSS = 0x3C,
-[; ;adcc.h: 96: channel_Temp = 0x3D,
-[; ;adcc.h: 97: channel_DAC1 = 0x3E,
-[; ;adcc.h: 98: channel_FVR_buf1 = 0x3F
-[; ;adcc.h: 99: } adcc_channel_t;
-[; ;adcc.h: 133: void ADCC_Initialize(void);
-[; ;adcc.h: 162: void ADCC_StartConversion(adcc_channel_t channel);
-[; ;adcc.h: 192: bool ADCC_IsConversionDone();
-[; ;adcc.h: 224: adc_result_t ADCC_GetConversionResult(void);
-[; ;adcc.h: 255: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-[; ;adcc.h: 280: void ADCC_StopConversion(void);
-[; ;adcc.h: 307: void ADCC_SetStopOnInterrupt(void);
-[; ;adcc.h: 332: void ADCC_DischargeSampleCapacitor(void);
-[; ;adcc.h: 358: void ADCC_LoadAcquisitionRegister(uint8_t);
-[; ;adcc.h: 384: void ADCC_SetPrechargeTime(uint8_t);
-[; ;adcc.h: 409: void ADCC_SetRepeatCount(uint8_t);
-[; ;adcc.h: 437: uint8_t ADCC_GetCurrentCountofConversions(void);
-[; ;adcc.h: 461: void ADCC_ClearAccumulator(void);
-[; ;adcc.h: 486: uint16_t ADCC_GetAccumulatorValue(void);
-[; ;adcc.h: 514: bool ADCC_HasAccumulatorOverflowed(void);
-[; ;adcc.h: 539: uint16_t ADCC_GetFilterValue(void);
-[; ;adcc.h: 567: uint16_t ADCC_GetPreviousResult(void);
-[; ;adcc.h: 593: void ADCC_DefineSetPoint(uint16_t);
-[; ;adcc.h: 619: void ADCC_SetUpperThreshold(uint16_t);
-[; ;adcc.h: 645: void ADCC_SetLowerThreshold(uint16_t);
-[; ;adcc.h: 672: uint16_t ADCC_GetErrorCalculation(void);
-[; ;adcc.h: 699: void ADCC_EnableDoubleSampling(void);
-[; ;adcc.h: 723: void ADCC_EnableContinuousConversion(void);
-[; ;adcc.h: 747: void ADCC_DisableContinuousConversion(void);
-[; ;adcc.h: 775: bool ADCC_HasErrorCrossedUpperThreshold(void);
-[; ;adcc.h: 803: bool ADCC_HasErrorCrossedLowerThreshold(void);
-[; ;adcc.h: 830: uint8_t ADCC_GetConversionStageStatus(void);
-[; ;adcc.h: 847: void ADCC_SetADTIInterruptHandler(void (* InterruptHandler)(void));
-[; ;adcc.h: 863: void ADCC_ThresholdISR(void);
-[; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
-[; ;ccp2.h: 81: {
-[; ;ccp2.h: 82: struct
-[; ;ccp2.h: 83: {
-[; ;ccp2.h: 84: uint8_t ccpr2l;
-[; ;ccp2.h: 85: uint8_t ccpr2h;
-[; ;ccp2.h: 86: };
-[; ;ccp2.h: 87: struct
-[; ;ccp2.h: 88: {
-[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
-[; ;ccp2.h: 90: };
-[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
-[; ;ccp2.h: 123: void CCP2_Initialize(void);
-[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
-[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp1.h: 80: typedef union CCPR1Reg_tag
-[; ;ccp1.h: 81: {
-[; ;ccp1.h: 82: struct
-[; ;ccp1.h: 83: {
-[; ;ccp1.h: 84: uint8_t ccpr1l;
-[; ;ccp1.h: 85: uint8_t ccpr1h;
-[; ;ccp1.h: 86: };
-[; ;ccp1.h: 87: struct
-[; ;ccp1.h: 88: {
-[; ;ccp1.h: 89: uint16_t ccpr1_16Bit;
-[; ;ccp1.h: 90: };
-[; ;ccp1.h: 91: } CCP1_PERIOD_REG_T ;
-[; ;ccp1.h: 123: void CCP1_Initialize(void);
-[; ;ccp1.h: 139: void CCP1_CaptureISR(void);
-[; ;ccp1.h: 160: void CCP1_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -11023,16 +10942,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 385: void TMR3_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;tmr1.h: 100: void TMR1_Initialize(void);
-[; ;tmr1.h: 129: void TMR1_StartTimer(void);
-[; ;tmr1.h: 161: void TMR1_StopTimer(void);
-[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
-[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
-[; ;tmr1.h: 271: void TMR1_Reload(void);
-[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
-[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
-[; ;tmr1.h: 387: bool TMR1_HasOverflowOccured(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
@@ -11101,6 +11010,68 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 328: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;fvr.h: 93: void FVR_Initialize(void);
+[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;adcc.h: 72: typedef uint16_t adc_result_t;
+[; ;adcc.h: 89: typedef enum
+[; ;adcc.h: 90: {
+[; ;adcc.h: 91: POS12_ADC = 0x0,
+[; ;adcc.h: 92: POS12_ISNS_ADC = 0x1,
+[; ;adcc.h: 93: POS5_ADC = 0x4,
+[; ;adcc.h: 94: QI_ISNS_ADC = 0x5,
+[; ;adcc.h: 95: channel_VSS = 0x3C,
+[; ;adcc.h: 96: channel_Temp = 0x3D,
+[; ;adcc.h: 97: channel_DAC1 = 0x3E,
+[; ;adcc.h: 98: channel_FVR_buf1 = 0x3F
+[; ;adcc.h: 99: } adcc_channel_t;
+[; ;adcc.h: 133: void ADCC_Initialize(void);
+[; ;adcc.h: 162: void ADCC_StartConversion(adcc_channel_t channel);
+[; ;adcc.h: 192: bool ADCC_IsConversionDone();
+[; ;adcc.h: 224: adc_result_t ADCC_GetConversionResult(void);
+[; ;adcc.h: 255: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
+[; ;adcc.h: 280: void ADCC_StopConversion(void);
+[; ;adcc.h: 307: void ADCC_SetStopOnInterrupt(void);
+[; ;adcc.h: 332: void ADCC_DischargeSampleCapacitor(void);
+[; ;adcc.h: 358: void ADCC_LoadAcquisitionRegister(uint8_t);
+[; ;adcc.h: 384: void ADCC_SetPrechargeTime(uint8_t);
+[; ;adcc.h: 409: void ADCC_SetRepeatCount(uint8_t);
+[; ;adcc.h: 437: uint8_t ADCC_GetCurrentCountofConversions(void);
+[; ;adcc.h: 461: void ADCC_ClearAccumulator(void);
+[; ;adcc.h: 486: uint16_t ADCC_GetAccumulatorValue(void);
+[; ;adcc.h: 514: bool ADCC_HasAccumulatorOverflowed(void);
+[; ;adcc.h: 539: uint16_t ADCC_GetFilterValue(void);
+[; ;adcc.h: 567: uint16_t ADCC_GetPreviousResult(void);
+[; ;adcc.h: 593: void ADCC_DefineSetPoint(uint16_t);
+[; ;adcc.h: 619: void ADCC_SetUpperThreshold(uint16_t);
+[; ;adcc.h: 645: void ADCC_SetLowerThreshold(uint16_t);
+[; ;adcc.h: 672: uint16_t ADCC_GetErrorCalculation(void);
+[; ;adcc.h: 699: void ADCC_EnableDoubleSampling(void);
+[; ;adcc.h: 723: void ADCC_EnableContinuousConversion(void);
+[; ;adcc.h: 747: void ADCC_DisableContinuousConversion(void);
+[; ;adcc.h: 775: bool ADCC_HasErrorCrossedUpperThreshold(void);
+[; ;adcc.h: 803: bool ADCC_HasErrorCrossedLowerThreshold(void);
+[; ;adcc.h: 830: uint8_t ADCC_GetConversionStageStatus(void);
+[; ;adcc.h: 847: void ADCC_SetADTIInterruptHandler(void (* InterruptHandler)(void));
+[; ;adcc.h: 863: void ADCC_ThresholdISR(void);
+[; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -11153,10 +11124,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F10007 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9974 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F10010 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9977 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11168,9 +11139,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 82: void SYSTEM_Initialize(void);
-[; ;mcc.h: 95: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 108: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
 [; ;stdlib.h: 15: typedef struct {
 [; ;stdlib.h: 16: int rem;
@@ -11235,6 +11206,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.h: 38: unsigned long device_on_time;
 [; ;heartbeat_timer.h: 42: void heartbeatTimerHandler(void);
 [; ;heartbeat_timer.h: 45: char * getStringSecondsAsTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 48: uint8_t getYearsFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 51: uint8_t getDaysFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 54: uint8_t getHoursFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 57: uint8_t getMinutesFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 60: uint8_t getSecondsFromOnTime(uint32_t input_seconds);
 [; ;device_IDs.h: 40: uint16_t getDeviceID(void);
 [; ;device_IDs.h: 43: uint8_t getMajorRevisionID(void);
 [; ;device_IDs.h: 44: uint8_t getMinorRevisionID(void);
@@ -11253,19 +11229,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cause_of_reset.h: 51: Stack_Underflow_Reset = 8
 [; ;cause_of_reset.h: 52: } reset_t;
 "55 cause_of_reset.h
-[v _reset_cause `E10184 ~T0 @X0 1 e ]
+[v _reset_cause `E10161 ~T0 @X0 1 e ]
 [; ;cause_of_reset.h: 55: reset_t reset_cause;
 [; ;cause_of_reset.h: 59: reset_t getCauseOfReset(void);
 [; ;cause_of_reset.h: 62: inline char * getCauseOfResetString(reset_t r);
 [; ;cause_of_reset.h: 65: inline char * getCauseOfResetStringSmall(reset_t r);
 "50 adc_postprocessing.h
-[v _next_adc_channel `E9635 ~T0 @X0 1 e ]
+[v _next_adc_channel `E9776 ~T0 @X0 1 e ]
 [i _next_adc_channel
-. `E9635 4
+. `E9776 4
 ]
 [; ;adc_postprocessing.h: 50: adcc_channel_t next_adc_channel = channel_VSS;
 "63
-[v _adc_results `S1446 ~T0 @X0 1 e ]
+[v _adc_results `S1443 ~T0 @X0 1 e ]
 [; ;adc_postprocessing.h: 53: struct adc_results_t {
 [; ;adc_postprocessing.h: 55: float avss_adc_result;
 [; ;adc_postprocessing.h: 56: float fvr_adc_result;
@@ -11276,7 +11252,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_postprocessing.h: 61: float die_temp_adc_result;
 [; ;adc_postprocessing.h: 63: } adc_results;
 "72
-[v _adc_calculations `S1447 ~T0 @X0 1 e ]
+[v _adc_calculations `S1444 ~T0 @X0 1 e ]
 [; ;adc_postprocessing.h: 66: struct adc_calculations_t {
 [; ;adc_postprocessing.h: 68: float input_power;
 [; ;adc_postprocessing.h: 69: float output_power;
@@ -11312,7 +11288,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_postprocessing.h: 92: void ADC_PostProcessingHandler(void);
 [; ;adc_postprocessing.h: 96: void ADC_acquisitionTimerHandler(void);
 "52 error_handling.h
-[v _error_handler `S1448 ~T0 @X0 1 e ]
+[v _error_handler `S1445 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11331,7 +11307,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.h: 70: void clearUARTErrors(void);
 [; ;error_handling.h: 73: void clearI2CErrors(void);
 "65 LM73_I2C.h
-[v _LM73_temp_results `S1449 ~T0 @X0 1 e ]
+[v _LM73_temp_results `S1446 ~T0 @X0 1 e ]
 [; ;LM73_I2C.h: 56: struct LM73_temp_results_t {
 [; ;LM73_I2C.h: 58: float QI_temp_result;
 [; ;LM73_I2C.h: 59: float POS5_temp_result;
@@ -11347,7 +11323,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LM73_I2C.h: 74: void LM73AcquisitionHandler(void);
 [; ;LM73_I2C.h: 77: void LM73Convert(void);
 "21 NXQ_charge_state.h
-[v _nxq_charge_state `E10266 ~T0 @X0 1 e ]
+[v _nxq_charge_state `E10243 ~T0 @X0 1 e ]
 [; ;NXQ_charge_state.h: 14: enum nxq_charge_state_t {
 [; ;NXQ_charge_state.h: 16: QI_Idle = 0,
 [; ;NXQ_charge_state.h: 17: QI_Charging = 1,
@@ -11359,31 +11335,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;NXQ_charge_state.h: 30: void QIIdleIOCHandler(void);
 [; ;NXQ_charge_state.h: 33: void QIChargeIOCHandler(void);
 [; ;NXQ_charge_state.h: 36: void QIIdleTimerHandler(void);
-"46 freq_meas.h
-[v _freq_meas_results `S1450 ~T0 @X0 1 e ]
+"44 freq_meas.h
+[v _freq_meas_results `S1447 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 39: struct {
-[; ;freq_meas.h: 41: float POS5_Freq_Meas;
-[; ;freq_meas.h: 42: uint16_t POS5_Freq_Meas_Raw;
-[; ;freq_meas.h: 43: float QI_Freq_Meas;
-[; ;freq_meas.h: 44: uint16_t QI_Freq_Meas_Raw;
-[; ;freq_meas.h: 46: } freq_meas_results;
-"52
-[v _POS5_current_edge `E10288 ~T0 @X0 1 e ]
-[; ;freq_meas.h: 49: enum pos5_edge_type{
-[; ;freq_meas.h: 50: pos5_period_rising_1 = 0,
-[; ;freq_meas.h: 51: pos5_period_rising_2 = 1
-[; ;freq_meas.h: 52: } POS5_current_edge;
-"59
-[v _QI_current_edge `E10292 ~T0 @X0 1 e ]
-[; ;freq_meas.h: 56: enum qi_edge_type{
-[; ;freq_meas.h: 57: qi_period_rising_1 = 0,
-[; ;freq_meas.h: 58: qi_period_rising_2 = 1
-[; ;freq_meas.h: 59: } QI_current_edge;
-"63
+[; ;freq_meas.h: 41: float QI_Freq_Meas;
+[; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
+[; ;freq_meas.h: 44: } freq_meas_results;
+"50
+[v _QI_current_edge `E10263 ~T0 @X0 1 e ]
+[; ;freq_meas.h: 47: enum qi_edge_type{
+[; ;freq_meas.h: 48: qi_period_rising_1 = 0,
+[; ;freq_meas.h: 49: qi_period_rising_2 = 1
+[; ;freq_meas.h: 50: } QI_current_edge;
+"54
 [v _freq_meas_start_flag `uc ~T0 @X0 1 e ]
-[; ;freq_meas.h: 63: bool freq_meas_start_flag;
-[; ;freq_meas.h: 66: void freqMeasStartCaptures(void);
-[; ;freq_meas.h: 69: void freqMeasConvert(void);
+[; ;freq_meas.h: 54: bool freq_meas_start_flag;
+[; ;freq_meas.h: 57: void freqMeasStartCaptures(void);
+[; ;freq_meas.h: 60: void freqMeasConvert(void);
 "18 ring_buffer_LUT.c
 [v _ringBufferLUT `(v ~T0 @X0 1 ef1`*uc ]
 {
@@ -11393,7 +11361,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;ring_buffer_LUT.c: 24: if((0 == strcmp(line, "Reset"))) {
 "24
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 1452  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 1449  ]
 {
 [; ;ring_buffer_LUT.c: 27: printf("\033[2J");
 "27
@@ -11407,11 +11375,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "35
 }
 [; ;ring_buffer_LUT.c: 35: }
-[e $U 1453  ]
+[e $U 1450  ]
 "38
-[e :U 1452 ]
+[e :U 1449 ]
 [; ;ring_buffer_LUT.c: 38: else if((0 == strcmp(line, "Clear"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 4C 1454  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 4C 1451  ]
 {
 [; ;ring_buffer_LUT.c: 41: printf("\033[2J");
 "41
@@ -11422,11 +11390,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "46
 }
 [; ;ring_buffer_LUT.c: 46: }
-[e $U 1455  ]
+[e $U 1452  ]
 "49
-[e :U 1454 ]
+[e :U 1451 ]
 [; ;ring_buffer_LUT.c: 49: else if((0 == strcmp(line, "Cause of Reset?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 7C 1456  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 7C 1453  ]
 {
 [; ;ring_buffer_LUT.c: 51: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "51
@@ -11441,11 +11409,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "59
 }
 [; ;ring_buffer_LUT.c: 59: }
-[e $U 1457  ]
+[e $U 1454  ]
 "62
-[e :U 1456 ]
+[e :U 1453 ]
 [; ;ring_buffer_LUT.c: 62: else if((0 == strcmp(line, "*IDN?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 1458  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 1455  ]
 {
 [; ;ring_buffer_LUT.c: 64: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "64
@@ -11459,11 +11427,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "68
 }
 [; ;ring_buffer_LUT.c: 68: }
-[e $U 1459  ]
+[e $U 1456  ]
 "71
-[e :U 1458 ]
+[e :U 1455 ]
 [; ;ring_buffer_LUT.c: 71: else if((0 == strcmp(line, "Device ID?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 11C 1460  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 11C 1457  ]
 {
 [; ;ring_buffer_LUT.c: 73: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "73
@@ -11479,11 +11447,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "82
 }
 [; ;ring_buffer_LUT.c: 82: }
-[e $U 1461  ]
+[e $U 1458  ]
 "85
-[e :U 1460 ]
+[e :U 1457 ]
 [; ;ring_buffer_LUT.c: 85: else if((0 == strcmp(line, "Revision ID?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 13C 1462  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 13C 1459  ]
 {
 [; ;ring_buffer_LUT.c: 87: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "87
@@ -11498,11 +11466,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "95
 }
 [; ;ring_buffer_LUT.c: 95: }
-[e $U 1463  ]
+[e $U 1460  ]
 "98
-[e :U 1462 ]
+[e :U 1459 ]
 [; ;ring_buffer_LUT.c: 98: else if((0 == strcmp(line, "User IDs?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C 1464  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C 1461  ]
 {
 [; ;ring_buffer_LUT.c: 100: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "100
@@ -11515,9 +11483,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _userID `i ~T0 @X0 1 a ]
 [e = _userID -> 0 `i ]
-[e $ <= _userID -> 7 `i 1465  ]
-[e $U 1466  ]
-[e :U 1465 ]
+[e $ <= _userID -> 7 `i 1462  ]
+[e $U 1463  ]
+[e :U 1462 ]
 {
 [; ;ring_buffer_LUT.c: 107: printf("    User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
 [; ;ring_buffer_LUT.c: 108: userID,
@@ -11529,8 +11497,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "105
 [e ++ _userID -> 1 `i ]
-[e $ <= _userID -> 7 `i 1465  ]
-[e :U 1466 ]
+[e $ <= _userID -> 7 `i 1462  ]
+[e :U 1463 ]
 "112
 }
 [; ;ring_buffer_LUT.c: 112: }
@@ -11540,11 +11508,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "116
 }
 [; ;ring_buffer_LUT.c: 116: }
-[e $U 1468  ]
+[e $U 1465  ]
 "119
-[e :U 1464 ]
+[e :U 1461 ]
 [; ;ring_buffer_LUT.c: 119: else if((0 == strcmp(line, "Device On Time?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 18C 1469  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 18C 1466  ]
 {
 [; ;ring_buffer_LUT.c: 121: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "121
@@ -11558,11 +11526,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "125
 }
 [; ;ring_buffer_LUT.c: 125: }
-[e $U 1470  ]
+[e $U 1467  ]
 "128
-[e :U 1469 ]
+[e :U 1466 ]
 [; ;ring_buffer_LUT.c: 128: else if ((0 == strcmp(line, "Enable QI"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 1471  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 1468  ]
 {
 [; ;ring_buffer_LUT.c: 131: LATCbits.LATC2 = 0;
 "131
@@ -11579,11 +11547,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "137
 }
 [; ;ring_buffer_LUT.c: 137: }
-[e $U 1472  ]
+[e $U 1469  ]
 "140
-[e :U 1471 ]
+[e :U 1468 ]
 [; ;ring_buffer_LUT.c: 140: else if ((0 == strcmp(line, "Disable QI"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 22C 1473  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 22C 1470  ]
 {
 [; ;ring_buffer_LUT.c: 143: LATCbits.LATC2 = 1;
 "143
@@ -11600,11 +11568,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "149
 }
 [; ;ring_buffer_LUT.c: 149: }
-[e $U 1474  ]
+[e $U 1471  ]
 "152
-[e :U 1473 ]
+[e :U 1470 ]
 [; ;ring_buffer_LUT.c: 152: else if((0 == strcmp(line, "Clear ADC Errors"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 1475  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 1472  ]
 {
 [; ;ring_buffer_LUT.c: 154: clearADCErrors();
 "154
@@ -11621,11 +11589,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "160
 }
 [; ;ring_buffer_LUT.c: 160: }
-[e $U 1476  ]
+[e $U 1473  ]
 "163
-[e :U 1475 ]
+[e :U 1472 ]
 [; ;ring_buffer_LUT.c: 163: else if((0 == strcmp(line, "Clear I2C Errors"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 26C 1477  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 26C 1474  ]
 {
 [; ;ring_buffer_LUT.c: 165: clearI2CErrors();
 "165
@@ -11642,11 +11610,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "171
 }
 [; ;ring_buffer_LUT.c: 171: }
-[e $U 1478  ]
+[e $U 1475  ]
 "174
-[e :U 1477 ]
+[e :U 1474 ]
 [; ;ring_buffer_LUT.c: 174: else if((0 == strcmp(line, "Clear UART Errors"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 1479  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 1476  ]
 {
 [; ;ring_buffer_LUT.c: 176: clearUARTErrors();
 "176
@@ -11663,15 +11631,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 "182
 }
 [; ;ring_buffer_LUT.c: 182: }
-[e $U 1480  ]
+[e $U 1477  ]
 "184
-[e :U 1479 ]
+[e :U 1476 ]
 [; ;ring_buffer_LUT.c: 184: else if ((0 == strcmp(line, "Error Status?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 30C 1481  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 30C 1478  ]
 {
 [; ;ring_buffer_LUT.c: 186: if (getADCError()) {
 "186
-[e $ ! != -> ( _getADCError ..  `i -> -> -> 0 `i `uc `i 1482  ]
+[e $ ! != -> ( _getADCError ..  `i -> -> -> 0 `i `uc `i 1479  ]
 {
 [; ;ring_buffer_LUT.c: 188: terminalTextAttributes(RED, BLACK, NORMAL);
 "188
@@ -11684,25 +11652,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _printf :s 32C ]
 [; ;ring_buffer_LUT.c: 192: if (error_handler.ADC_general_error_flag) {
 "192
-[e $ ! != -> . _error_handler 1 `i -> -> -> 0 `i `uc `i 1483  ]
+[e $ ! != -> . _error_handler 1 `i -> -> -> 0 `i `uc `i 1480  ]
 {
 [; ;ring_buffer_LUT.c: 193: printf("    General ADC error\n\r");
 "193
 [e ( _printf :s 33C ]
 "194
 }
-[e :U 1483 ]
+[e :U 1480 ]
 [; ;ring_buffer_LUT.c: 194: }
 [; ;ring_buffer_LUT.c: 196: if (error_handler.FVR_ADC_error_flag) {
 "196
-[e $ ! != -> . _error_handler 0 `i -> -> -> 0 `i `uc `i 1484  ]
+[e $ ! != -> . _error_handler 0 `i -> -> -> 0 `i `uc `i 1481  ]
 {
 [; ;ring_buffer_LUT.c: 197: printf("    FVR\n\r");
 "197
 [e ( _printf :s 34C ]
 "198
 }
-[e :U 1484 ]
+[e :U 1481 ]
 [; ;ring_buffer_LUT.c: 198: }
 [; ;ring_buffer_LUT.c: 200: terminalTextAttributes(YELLOW, BLACK, NORMAL);
 "200
@@ -11716,9 +11684,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "204
 }
 [; ;ring_buffer_LUT.c: 204: }
-[e $U 1485  ]
+[e $U 1482  ]
 "206
-[e :U 1482 ]
+[e :U 1479 ]
 [; ;ring_buffer_LUT.c: 206: else {
 {
 [; ;ring_buffer_LUT.c: 208: terminalTextAttributes(GREEN, BLACK, NORMAL);
@@ -11732,11 +11700,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributesReset ..  ]
 "212
 }
-[e :U 1485 ]
+[e :U 1482 ]
 [; ;ring_buffer_LUT.c: 212: }
 [; ;ring_buffer_LUT.c: 214: if (getI2CError()) {
 "214
-[e $ ! != -> ( _getI2CError ..  `i -> -> -> 0 `i `uc `i 1486  ]
+[e $ ! != -> ( _getI2CError ..  `i -> -> -> 0 `i `uc `i 1483  ]
 {
 [; ;ring_buffer_LUT.c: 216: terminalTextAttributes(RED, BLACK, NORMAL);
 "216
@@ -11746,58 +11714,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _printf :s 37C ]
 [; ;ring_buffer_LUT.c: 219: if (error_handler.I2C_General_error_flag) {
 "219
-[e $ ! != -> . _error_handler 2 `i -> -> -> 0 `i `uc `i 1487  ]
+[e $ ! != -> . _error_handler 2 `i -> -> -> 0 `i `uc `i 1484  ]
 {
 [; ;ring_buffer_LUT.c: 220: printf("    I2C General Error\n\r");
 "220
 [e ( _printf :s 38C ]
 "221
 }
-[e :U 1487 ]
+[e :U 1484 ]
 [; ;ring_buffer_LUT.c: 221: }
 [; ;ring_buffer_LUT.c: 223: if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
 "223
-[e $ ! != -> . _error_handler 6 `i -> -> -> 0 `i `uc `i 1488  ]
+[e $ ! != -> . _error_handler 6 `i -> -> -> 0 `i `uc `i 1485  ]
 {
 [; ;ring_buffer_LUT.c: 224: printf("    I2C Ambient Temp Sensor Error\n\r");
 "224
 [e ( _printf :s 39C ]
 "225
 }
-[e :U 1488 ]
+[e :U 1485 ]
 [; ;ring_buffer_LUT.c: 225: }
 [; ;ring_buffer_LUT.c: 227: if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
 "227
-[e $ ! != -> . _error_handler 5 `i -> -> -> 0 `i `uc `i 1489  ]
+[e $ ! != -> . _error_handler 5 `i -> -> -> 0 `i `uc `i 1486  ]
 {
 [; ;ring_buffer_LUT.c: 228: printf("    I2C POS5 Temp Sensor Error\n\r");
 "228
 [e ( _printf :s 40C ]
 "229
 }
-[e :U 1489 ]
+[e :U 1486 ]
 [; ;ring_buffer_LUT.c: 229: }
 [; ;ring_buffer_LUT.c: 231: if (error_handler.I2C_QI_Temp_Sense_error_flag) {
 "231
-[e $ ! != -> . _error_handler 4 `i -> -> -> 0 `i `uc `i 1490  ]
+[e $ ! != -> . _error_handler 4 `i -> -> -> 0 `i `uc `i 1487  ]
 {
 [; ;ring_buffer_LUT.c: 232: printf("    I2C QI Temp Sensor Error\n\r");
 "232
 [e ( _printf :s 41C ]
 "233
 }
-[e :U 1490 ]
+[e :U 1487 ]
 [; ;ring_buffer_LUT.c: 233: }
 [; ;ring_buffer_LUT.c: 235: if (error_handler.I2C_OLED_error_flag) {
 "235
-[e $ ! != -> . _error_handler 3 `i -> -> -> 0 `i `uc `i 1491  ]
+[e $ ! != -> . _error_handler 3 `i -> -> -> 0 `i `uc `i 1488  ]
 {
 [; ;ring_buffer_LUT.c: 236: printf("    I2C OLED Display Error\n\r");
 "236
 [e ( _printf :s 42C ]
 "237
 }
-[e :U 1491 ]
+[e :U 1488 ]
 [; ;ring_buffer_LUT.c: 237: }
 [; ;ring_buffer_LUT.c: 239: terminalTextAttributes(YELLOW, BLACK, NORMAL);
 "239
@@ -11811,9 +11779,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "243
 }
 [; ;ring_buffer_LUT.c: 243: }
-[e $U 1492  ]
+[e $U 1489  ]
 "245
-[e :U 1486 ]
+[e :U 1483 ]
 [; ;ring_buffer_LUT.c: 245: else {
 {
 [; ;ring_buffer_LUT.c: 247: terminalTextAttributes(GREEN, BLACK, NORMAL);
@@ -11827,11 +11795,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributesReset ..  ]
 "251
 }
-[e :U 1492 ]
+[e :U 1489 ]
 [; ;ring_buffer_LUT.c: 251: }
 [; ;ring_buffer_LUT.c: 253: if (getUARTError()) {
 "253
-[e $ ! != -> ( _getUARTError ..  `i -> -> -> 0 `i `uc `i 1493  ]
+[e $ ! != -> ( _getUARTError ..  `i -> -> -> 0 `i `uc `i 1490  ]
 {
 [; ;ring_buffer_LUT.c: 255: terminalTextAttributes(RED, BLACK, NORMAL);
 "255
@@ -11851,9 +11819,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "262
 }
 [; ;ring_buffer_LUT.c: 262: }
-[e $U 1494  ]
+[e $U 1491  ]
 "264
-[e :U 1493 ]
+[e :U 1490 ]
 [; ;ring_buffer_LUT.c: 264: else {
 {
 [; ;ring_buffer_LUT.c: 266: terminalTextAttributes(GREEN, BLACK, NORMAL);
@@ -11867,16 +11835,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributesReset ..  ]
 "270
 }
-[e :U 1494 ]
+[e :U 1491 ]
 "272
 }
 [; ;ring_buffer_LUT.c: 270: }
 [; ;ring_buffer_LUT.c: 272: }
-[e $U 1495  ]
+[e $U 1492  ]
 "276
-[e :U 1481 ]
+[e :U 1478 ]
 [; ;ring_buffer_LUT.c: 276: else if((0 == strcmp(line, "Measure POS5?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 48C 1496  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 48C 1493  ]
 {
 [; ;ring_buffer_LUT.c: 278: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "278
@@ -11890,11 +11858,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "282
 }
 [; ;ring_buffer_LUT.c: 282: }
-[e $U 1497  ]
+[e $U 1494  ]
 "285
-[e :U 1496 ]
+[e :U 1493 ]
 [; ;ring_buffer_LUT.c: 285: else if((0 == strcmp(line, "Measure POS12?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 50C 1498  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 50C 1495  ]
 {
 [; ;ring_buffer_LUT.c: 287: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "287
@@ -11908,11 +11876,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "291
 }
 [; ;ring_buffer_LUT.c: 291: }
-[e $U 1499  ]
+[e $U 1496  ]
 "294
-[e :U 1498 ]
+[e :U 1495 ]
 [; ;ring_buffer_LUT.c: 294: else if((0 == strcmp(line, "Measure Die Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 52C 1500  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 52C 1497  ]
 {
 [; ;ring_buffer_LUT.c: 296: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "296
@@ -11926,11 +11894,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "300
 }
 [; ;ring_buffer_LUT.c: 300: }
-[e $U 1501  ]
+[e $U 1498  ]
 "303
-[e :U 1500 ]
+[e :U 1497 ]
 [; ;ring_buffer_LUT.c: 303: else if ((0 == strcmp(line, "Measure POS12 Current?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 54C 1502  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 54C 1499  ]
 {
 [; ;ring_buffer_LUT.c: 305: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "305
@@ -11944,11 +11912,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "309
 }
 [; ;ring_buffer_LUT.c: 309: }
-[e $U 1503  ]
+[e $U 1500  ]
 "312
-[e :U 1502 ]
+[e :U 1499 ]
 [; ;ring_buffer_LUT.c: 312: else if ((0 == strcmp(line, "Measure QI Current?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 56C 1504  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 56C 1501  ]
 {
 [; ;ring_buffer_LUT.c: 314: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "314
@@ -11962,11 +11930,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "318
 }
 [; ;ring_buffer_LUT.c: 318: }
-[e $U 1505  ]
+[e $U 1502  ]
 "321
-[e :U 1504 ]
+[e :U 1501 ]
 [; ;ring_buffer_LUT.c: 321: else if((0 == strcmp(line, "Measure FVR?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 58C 1506  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 58C 1503  ]
 {
 [; ;ring_buffer_LUT.c: 323: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "323
@@ -11980,11 +11948,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "327
 }
 [; ;ring_buffer_LUT.c: 327: }
-[e $U 1507  ]
+[e $U 1504  ]
 "330
-[e :U 1506 ]
+[e :U 1503 ]
 [; ;ring_buffer_LUT.c: 330: else if((0 == strcmp(line, "Measure AVSS?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 60C 1508  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 60C 1505  ]
 {
 [; ;ring_buffer_LUT.c: 332: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "332
@@ -11998,11 +11966,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "336
 }
 [; ;ring_buffer_LUT.c: 336: }
-[e $U 1509  ]
+[e $U 1506  ]
 "339
-[e :U 1508 ]
+[e :U 1505 ]
 [; ;ring_buffer_LUT.c: 339: else if ((0 == strcmp(line, "Measure Input Power?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 62C 1510  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 62C 1507  ]
 {
 [; ;ring_buffer_LUT.c: 341: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "341
@@ -12016,11 +11984,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "345
 }
 [; ;ring_buffer_LUT.c: 345: }
-[e $U 1511  ]
+[e $U 1508  ]
 "348
-[e :U 1510 ]
+[e :U 1507 ]
 [; ;ring_buffer_LUT.c: 348: else if ((0 == strcmp(line, "Measure Output Power?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 64C 1512  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 64C 1509  ]
 {
 [; ;ring_buffer_LUT.c: 350: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "350
@@ -12034,11 +12002,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "354
 }
 [; ;ring_buffer_LUT.c: 354: }
-[e $U 1513  ]
+[e $U 1510  ]
 "357
-[e :U 1512 ]
+[e :U 1509 ]
 [; ;ring_buffer_LUT.c: 357: else if ((0 == strcmp(line, "Measure Efficiency?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 66C 1514  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 66C 1511  ]
 {
 [; ;ring_buffer_LUT.c: 359: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "359
@@ -12052,11 +12020,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "363
 }
 [; ;ring_buffer_LUT.c: 363: }
-[e $U 1515  ]
+[e $U 1512  ]
 "366
-[e :U 1514 ]
+[e :U 1511 ]
 [; ;ring_buffer_LUT.c: 366: else if ((0 == strcmp(line, "Measure QI Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 68C 1516  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 68C 1513  ]
 {
 [; ;ring_buffer_LUT.c: 368: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "368
@@ -12070,11 +12038,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "372
 }
 [; ;ring_buffer_LUT.c: 372: }
-[e $U 1517  ]
+[e $U 1514  ]
 "375
-[e :U 1516 ]
+[e :U 1513 ]
 [; ;ring_buffer_LUT.c: 375: else if ((0 == strcmp(line, "Measure POS5 Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 70C 1518  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 70C 1515  ]
 {
 [; ;ring_buffer_LUT.c: 377: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "377
@@ -12088,11 +12056,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "381
 }
 [; ;ring_buffer_LUT.c: 381: }
-[e $U 1519  ]
+[e $U 1516  ]
 "384
-[e :U 1518 ]
+[e :U 1515 ]
 [; ;ring_buffer_LUT.c: 384: else if ((0 == strcmp(line, "Measure Ambient Temp?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 72C 1520  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 72C 1517  ]
 {
 [; ;ring_buffer_LUT.c: 386: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "386
@@ -12106,51 +12074,51 @@ Version 3.2 HI-TECH Software Intermediate Code
 "390
 }
 [; ;ring_buffer_LUT.c: 390: }
-[e $U 1521  ]
+[e $U 1518  ]
 "392
-[e :U 1520 ]
+[e :U 1517 ]
 [; ;ring_buffer_LUT.c: 392: else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 74C 1522  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 74C 1519  ]
 {
 [; ;ring_buffer_LUT.c: 394: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "394
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 395: printf("Current +5V Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.POS5_Freq_Meas);
+[; ;ring_buffer_LUT.c: 395: printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
 "395
-[e ( _printf , (. :s 75C -> . _freq_meas_results 0 `d ]
+[e ( _printf , (. :s 75C .2.5 ]
 [; ;ring_buffer_LUT.c: 396: terminalTextAttributesReset();
 "396
 [e ( _terminalTextAttributesReset ..  ]
 "398
 }
 [; ;ring_buffer_LUT.c: 398: }
-[e $U 1523  ]
+[e $U 1520  ]
 "400
-[e :U 1522 ]
+[e :U 1519 ]
 [; ;ring_buffer_LUT.c: 400: else if ((0 == strcmp(line, "Measure QI FSW?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 76C 1524  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 76C 1521  ]
 {
 [; ;ring_buffer_LUT.c: 402: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "402
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 403: printf("Current QI Switching Frequency measured as %+.3f Hz\n\r", freq_meas_results.QI_Freq_Meas);
+[; ;ring_buffer_LUT.c: 403: printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
 "403
-[e ( _printf , (. :s 77C -> . _freq_meas_results 2 `d ]
+[e ( _printf , (. :s 77C / -> . _freq_meas_results 0 `d .1000.0 ]
 [; ;ring_buffer_LUT.c: 404: terminalTextAttributesReset();
 "404
 [e ( _terminalTextAttributesReset ..  ]
 "406
 }
 [; ;ring_buffer_LUT.c: 406: }
-[e $U 1525  ]
+[e $U 1522  ]
 "408
-[e :U 1524 ]
+[e :U 1521 ]
 [; ;ring_buffer_LUT.c: 408: else if ((0 == strcmp(line, "Charge Status?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 78C 1526  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 78C 1523  ]
 {
 [; ;ring_buffer_LUT.c: 410: if (nxq_charge_state == QI_Error) {
 "410
-[e $ ! == -> _nxq_charge_state `i -> . `E10266 3 `i 1527  ]
+[e $ ! == -> _nxq_charge_state `i -> . `E10243 3 `i 1524  ]
 {
 [; ;ring_buffer_LUT.c: 412: terminalTextAttributes(RED, BLACK, NORMAL);
 "412
@@ -12164,11 +12132,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "416
 }
 [; ;ring_buffer_LUT.c: 416: }
-[e $U 1528  ]
+[e $U 1525  ]
 "418
-[e :U 1527 ]
+[e :U 1524 ]
 [; ;ring_buffer_LUT.c: 418: else if (nxq_charge_state == QI_Fully_Charged) {
-[e $ ! == -> _nxq_charge_state `i -> . `E10266 2 `i 1529  ]
+[e $ ! == -> _nxq_charge_state `i -> . `E10243 2 `i 1526  ]
 {
 [; ;ring_buffer_LUT.c: 420: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "420
@@ -12182,9 +12150,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "424
 }
 [; ;ring_buffer_LUT.c: 424: }
-[e $U 1530  ]
+[e $U 1527  ]
 "426
-[e :U 1529 ]
+[e :U 1526 ]
 [; ;ring_buffer_LUT.c: 426: else {
 {
 [; ;ring_buffer_LUT.c: 428: terminalTextAttributes(GREEN, BLACK, NORMAL);
@@ -12198,17 +12166,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributesReset ..  ]
 "432
 }
-[e :U 1530 ]
-[e :U 1528 ]
+[e :U 1527 ]
+[e :U 1525 ]
 "434
 }
 [; ;ring_buffer_LUT.c: 432: }
 [; ;ring_buffer_LUT.c: 434: }
-[e $U 1531  ]
+[e $U 1528  ]
 "437
-[e :U 1526 ]
+[e :U 1523 ]
 [; ;ring_buffer_LUT.c: 437: else if((0 == strcmp(line, "Help"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 82C 1532  ]
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 82C 1529  ]
 {
 [; ;ring_buffer_LUT.c: 439: terminalTextAttributes(YELLOW, BLACK, NORMAL);
 "439
@@ -12280,14 +12248,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "487
 }
 [; ;ring_buffer_LUT.c: 487: }
-[e $U 1533  ]
+[e $U 1530  ]
 "490
-[e :U 1532 ]
+[e :U 1529 ]
 [; ;ring_buffer_LUT.c: 490: else {
 {
 [; ;ring_buffer_LUT.c: 492: if (strlen(line) >= 1) {
 "492
-[e $ ! >= ( _strlen (1 -> _line `*Cuc -> -> 1 `i `ui 1534  ]
+[e $ ! >= ( _strlen (1 -> _line `*Cuc -> -> 1 `i `ui 1531  ]
 {
 [; ;ring_buffer_LUT.c: 494: terminalTextAttributes(RED, BLACK, NORMAL);
 "494
@@ -12309,45 +12277,45 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributesReset ..  ]
 "501
 }
-[e :U 1534 ]
+[e :U 1531 ]
 "503
 }
-[e :U 1533 ]
-[e :U 1531 ]
-[e :U 1525 ]
-[e :U 1523 ]
-[e :U 1521 ]
-[e :U 1519 ]
-[e :U 1517 ]
-[e :U 1515 ]
-[e :U 1513 ]
-[e :U 1511 ]
-[e :U 1509 ]
-[e :U 1507 ]
-[e :U 1505 ]
-[e :U 1503 ]
-[e :U 1501 ]
-[e :U 1499 ]
-[e :U 1497 ]
-[e :U 1495 ]
-[e :U 1480 ]
-[e :U 1478 ]
-[e :U 1476 ]
-[e :U 1474 ]
-[e :U 1472 ]
-[e :U 1470 ]
-[e :U 1468 ]
-[e :U 1463 ]
-[e :U 1461 ]
-[e :U 1459 ]
-[e :U 1457 ]
-[e :U 1455 ]
-[e :U 1453 ]
+[e :U 1530 ]
+[e :U 1528 ]
+[e :U 1522 ]
+[e :U 1520 ]
+[e :U 1518 ]
+[e :U 1516 ]
+[e :U 1514 ]
+[e :U 1512 ]
+[e :U 1510 ]
+[e :U 1508 ]
+[e :U 1506 ]
+[e :U 1504 ]
+[e :U 1502 ]
+[e :U 1500 ]
+[e :U 1498 ]
+[e :U 1496 ]
+[e :U 1494 ]
+[e :U 1492 ]
+[e :U 1477 ]
+[e :U 1475 ]
+[e :U 1473 ]
+[e :U 1471 ]
+[e :U 1469 ]
+[e :U 1467 ]
+[e :U 1465 ]
+[e :U 1460 ]
+[e :U 1458 ]
+[e :U 1456 ]
+[e :U 1454 ]
+[e :U 1452 ]
+[e :U 1450 ]
 [; ;ring_buffer_LUT.c: 501: }
 [; ;ring_buffer_LUT.c: 503: }
 [; ;ring_buffer_LUT.c: 507: }
 "507
-[e :UE 1451 ]
+[e :UE 1448 ]
 }
 [p f _printf 12427398 ]
 [a 1C 82 101 115 101 116 0 ]
@@ -12385,8 +12353,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 11C 68 101 118 105 99 101 32 73 68 63 0 ]
 [a 48C 77 101 97 115 117 114 101 32 80 79 83 53 63 0 ]
 [a 50C 77 101 97 115 117 114 101 32 80 79 83 49 50 63 0 ]
-[a 75C 67 117 114 114 101 110 116 32 43 53 86 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 72 122 10 13 0 ]
-[a 77C 67 117 114 114 101 110 116 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 72 122 10 13 0 ]
+[a 77C 67 117 114 114 101 110 116 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 107 72 122 10 13 0 ]
+[a 75C 67 117 114 114 101 110 116 32 43 53 86 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 49 102 32 77 72 122 10 13 0 ]
 [a 85C 10 13 72 101 108 112 32 109 101 115 115 97 103 101 115 32 97 110 100 32 110 101 117 116 114 97 108 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 121 101 108 108 111 119 10 13 0 ]
 [a 65C 87 105 114 101 108 101 115 115 32 79 117 116 112 117 116 32 80 111 119 101 114 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 43 46 51 102 32 87 97 116 116 115 10 13 0 ]
 [a 63C 69 108 101 99 116 114 105 99 97 108 32 73 110 112 117 116 32 80 111 119 101 114 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 43 46 51 102 32 87 97 116 116 115 10 13 0 ]

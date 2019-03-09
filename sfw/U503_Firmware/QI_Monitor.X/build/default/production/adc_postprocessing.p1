@@ -11,11 +11,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9691 0 1 2 3 4 5 6 .. ]
 [n E9691 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9972 `(v ~T0 @X0 0 tf ]
-[v F9975 `(v ~T0 @X0 0 tf ]
+[v F9939 `(v ~T0 @X0 0 tf ]
+[v F9942 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
-[s S1444 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S1444 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
+[s S1441 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1441 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
 "280 mcc_generated_files/adcc.h
 [v _ADCC_StopConversion `(v ~T0 @X0 0 ef ]
 "12935 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
@@ -11001,41 +11001,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 692: void I2C2_BusCollisionISR( void );
 [; ;i2c2.h: 693: void I2C2_ISR ( void );
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;fvr.h: 93: void FVR_Initialize(void);
-[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
-[; ;ccp2.h: 81: {
-[; ;ccp2.h: 82: struct
-[; ;ccp2.h: 83: {
-[; ;ccp2.h: 84: uint8_t ccpr2l;
-[; ;ccp2.h: 85: uint8_t ccpr2h;
-[; ;ccp2.h: 86: };
-[; ;ccp2.h: 87: struct
-[; ;ccp2.h: 88: {
-[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
-[; ;ccp2.h: 90: };
-[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
-[; ;ccp2.h: 123: void CCP2_Initialize(void);
-[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
-[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;ccp1.h: 80: typedef union CCPR1Reg_tag
-[; ;ccp1.h: 81: {
-[; ;ccp1.h: 82: struct
-[; ;ccp1.h: 83: {
-[; ;ccp1.h: 84: uint8_t ccpr1l;
-[; ;ccp1.h: 85: uint8_t ccpr1h;
-[; ;ccp1.h: 86: };
-[; ;ccp1.h: 87: struct
-[; ;ccp1.h: 88: {
-[; ;ccp1.h: 89: uint16_t ccpr1_16Bit;
-[; ;ccp1.h: 90: };
-[; ;ccp1.h: 91: } CCP1_PERIOD_REG_T ;
-[; ;ccp1.h: 123: void CCP1_Initialize(void);
-[; ;ccp1.h: 139: void CCP1_CaptureISR(void);
-[; ;ccp1.h: 160: void CCP1_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -11059,16 +11024,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;tmr1.h: 100: void TMR1_Initialize(void);
-[; ;tmr1.h: 129: void TMR1_StartTimer(void);
-[; ;tmr1.h: 161: void TMR1_StopTimer(void);
-[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
-[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
-[; ;tmr1.h: 271: void TMR1_Reload(void);
-[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
-[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
-[; ;tmr1.h: 387: bool TMR1_HasOverflowOccured(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr0.h: 100: void TMR0_Initialize(void);
 [; ;tmr0.h: 129: void TMR0_StartTimer(void);
 [; ;tmr0.h: 161: void TMR0_StopTimer(void);
@@ -11079,6 +11034,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 310: void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;tmr0.h: 328: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;fvr.h: 93: void FVR_Initialize(void);
+[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;ccp2.h: 80: typedef union CCPR2Reg_tag
+[; ;ccp2.h: 81: {
+[; ;ccp2.h: 82: struct
+[; ;ccp2.h: 83: {
+[; ;ccp2.h: 84: uint8_t ccpr2l;
+[; ;ccp2.h: 85: uint8_t ccpr2h;
+[; ;ccp2.h: 86: };
+[; ;ccp2.h: 87: struct
+[; ;ccp2.h: 88: {
+[; ;ccp2.h: 89: uint16_t ccpr2_16Bit;
+[; ;ccp2.h: 90: };
+[; ;ccp2.h: 91: } CCP2_PERIOD_REG_T ;
+[; ;ccp2.h: 123: void CCP2_Initialize(void);
+[; ;ccp2.h: 139: void CCP2_CaptureISR(void);
+[; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
@@ -11132,10 +11106,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9972 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9939 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9975 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9942 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11147,11 +11121,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 82: void SYSTEM_Initialize(void);
-[; ;mcc.h: 95: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 108: void PMD_Initialize(void);
+[; ;mcc.h: 80: void SYSTEM_Initialize(void);
+[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 106: void PMD_Initialize(void);
 "52 error_handling.h
-[v _error_handler `S1444 ~T0 @X0 1 e ]
+[v _error_handler `S1441 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
 [; ;error_handling.h: 43: bool FVR_ADC_error_flag;
 [; ;error_handling.h: 44: bool ADC_general_error_flag;
@@ -11184,11 +11158,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _current_adc_channel -> _ADPCH `E9492 ]
 [; ;adc_postprocessing.c: 22: switch (current_adc_channel) {
 "22
-[e $U 1447  ]
+[e $U 1444  ]
 {
 [; ;adc_postprocessing.c: 24: case channel_VSS:
 "24
-[e :U 1448 ]
+[e :U 1445 ]
 [; ;adc_postprocessing.c: 26: adc_results.avss_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0);
 "26
 [e = . _adc_results 0 -> * -> ( _ADCC_GetConversionResult ..  `d / .5.0 .1023.0 `f ]
@@ -11197,10 +11171,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _next_adc_channel . `E9492 7 ]
 [; ;adc_postprocessing.c: 30: break;
 "30
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 33: case channel_FVR_buf1:
 "33
-[e :U 1449 ]
+[e :U 1446 ]
 [; ;adc_postprocessing.c: 35: adc_results.fvr_adc_result = (ADCC_GetConversionResult()) * (5.0/1023.0) + adc_results.avss_adc_result;
 "35
 [e = . _adc_results 1 -> + * -> ( _ADCC_GetConversionResult ..  `d / .5.0 .1023.0 -> . _adc_results 0 `d `f ]
@@ -11209,24 +11183,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _adc_result_scaling -> / .4.096 -> . _adc_results 1 `d `f ]
 [; ;adc_postprocessing.c: 38: if (adc_results.fvr_adc_result > 5.0 || adc_results.fvr_adc_result < 3.9) {
 "38
-[e $ ! || > -> . _adc_results 1 `d .5.0 < -> . _adc_results 1 `d .3.9 1450  ]
+[e $ ! || > -> . _adc_results 1 `d .5.0 < -> . _adc_results 1 `d .3.9 1447  ]
 {
 [; ;adc_postprocessing.c: 40: error_handler.FVR_ADC_error_flag = 1;
 "40
 [e = . _error_handler 0 -> -> 1 `i `uc ]
 "42
 }
-[e :U 1450 ]
+[e :U 1447 ]
 [; ;adc_postprocessing.c: 42: }
 [; ;adc_postprocessing.c: 44: next_adc_channel = POS5_ADC;
 "44
 [e = _next_adc_channel . `E9492 2 ]
 [; ;adc_postprocessing.c: 46: break;
 "46
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 48: case POS5_ADC:
 "48
-[e :U 1451 ]
+[e :U 1448 ]
 [; ;adc_postprocessing.c: 49: adc_results.pos5_adc_result = (((ADCC_GetFilterValue()) * (5.0/1023.0)) * 2.0 - adc_results.avss_adc_result) * adc_result_scaling;
 "49
 [e = . _adc_results 2 -> * - * * -> ( _ADCC_GetFilterValue ..  `d / .5.0 .1023.0 .2.0 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
@@ -11235,10 +11209,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _next_adc_channel . `E9492 0 ]
 [; ;adc_postprocessing.c: 52: break;
 "52
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 54: case POS12_ADC:
 "54
-[e :U 1452 ]
+[e :U 1449 ]
 [; ;adc_postprocessing.c: 55: adc_results.pos12_adc_result = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 2.96078 - adc_results.avss_adc_result) * adc_result_scaling;
 "55
 [e = . _adc_results 3 -> * - * * -> ( _ADCC_GetFilterValue ..  `d / -> . _adc_results 2 `d .1023.0 .2.96078 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
@@ -11247,10 +11221,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _next_adc_channel . `E9492 1 ]
 [; ;adc_postprocessing.c: 58: break;
 "58
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 60: case POS12_ISNS_ADC:
 "60
-[e :U 1453 ]
+[e :U 1450 ]
 [; ;adc_postprocessing.c: 62: pos12_isns_average_buffer[pos12_isns_average_index] = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 0.501002004 - adc_results.avss_adc_result) * adc_result_scaling;
 "62
 [e = *U + &U _pos12_isns_average_buffer * -> _pos12_isns_average_index `ux -> -> # *U &U _pos12_isns_average_buffer `ui `ux -> * - * * -> ( _ADCC_GetFilterValue ..  `d / -> . _adc_results 2 `d .1023.0 .0.501002004 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
@@ -11259,7 +11233,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _pos12_isns_average_index -> -> 1 `i `uc ]
 [; ;adc_postprocessing.c: 66: if (pos12_isns_average_index == 16) {
 "66
-[e $ ! == -> _pos12_isns_average_index `i -> 16 `i 1454  ]
+[e $ ! == -> _pos12_isns_average_index `i -> 16 `i 1451  ]
 {
 [; ;adc_postprocessing.c: 67: pos12_isns_average_index = 0;
 "67
@@ -11272,9 +11246,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1455  ]
-[e $U 1456  ]
-[e :U 1455 ]
+[e $ < -> _i `i -> 16 `i 1452  ]
+[e $U 1453  ]
+[e :U 1452 ]
 {
 [; ;adc_postprocessing.c: 71: adc_results.pos12_isns_adc_result += fabs(pos12_isns_average_buffer[i]);
 "71
@@ -11283,8 +11257,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "70
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1455  ]
-[e :U 1456 ]
+[e $ < -> _i `i -> 16 `i 1452  ]
+[e :U 1453 ]
 "72
 }
 [; ;adc_postprocessing.c: 72: }
@@ -11293,17 +11267,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =/ . _adc_results 4 -> -> -> 16 `i `f `f ]
 "74
 }
-[e :U 1454 ]
+[e :U 1451 ]
 [; ;adc_postprocessing.c: 74: }
 [; ;adc_postprocessing.c: 76: next_adc_channel = QI_ISNS_ADC;
 "76
 [e = _next_adc_channel . `E9492 3 ]
 [; ;adc_postprocessing.c: 77: break;
 "77
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 79: case QI_ISNS_ADC:
 "79
-[e :U 1458 ]
+[e :U 1455 ]
 [; ;adc_postprocessing.c: 81: qi_isns_average_buffer[qi_isns_average_index] = (((ADCC_GetFilterValue()) * (adc_results.pos5_adc_result/1023.0)) * 1.004016064 - adc_results.avss_adc_result) * adc_result_scaling;
 "81
 [e = *U + &U _qi_isns_average_buffer * -> _qi_isns_average_index `ux -> -> # *U &U _qi_isns_average_buffer `ui `ux -> * - * * -> ( _ADCC_GetFilterValue ..  `d / -> . _adc_results 2 `d .1023.0 .1.004016064 -> . _adc_results 0 `d -> _adc_result_scaling `d `f ]
@@ -11312,7 +11286,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _qi_isns_average_index -> -> 1 `i `uc ]
 [; ;adc_postprocessing.c: 85: if (qi_isns_average_index == 16) {
 "85
-[e $ ! == -> _qi_isns_average_index `i -> 16 `i 1459  ]
+[e $ ! == -> _qi_isns_average_index `i -> 16 `i 1456  ]
 {
 [; ;adc_postprocessing.c: 86: qi_isns_average_index = 0;
 "86
@@ -11325,9 +11299,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1460  ]
-[e $U 1461  ]
-[e :U 1460 ]
+[e $ < -> _i `i -> 16 `i 1457  ]
+[e $U 1458  ]
+[e :U 1457 ]
 {
 [; ;adc_postprocessing.c: 90: adc_results.qi_isns_adc_result += fabs(qi_isns_average_buffer[i]);
 "90
@@ -11336,8 +11310,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "89
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 16 `i 1460  ]
-[e :U 1461 ]
+[e $ < -> _i `i -> 16 `i 1457  ]
+[e :U 1458 ]
 "91
 }
 [; ;adc_postprocessing.c: 91: }
@@ -11346,17 +11320,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =/ . _adc_results 5 -> -> -> 16 `i `f `f ]
 "93
 }
-[e :U 1459 ]
+[e :U 1456 ]
 [; ;adc_postprocessing.c: 93: }
 [; ;adc_postprocessing.c: 95: next_adc_channel = channel_Temp;
 "95
 [e = _next_adc_channel . `E9492 5 ]
 [; ;adc_postprocessing.c: 96: break;
 "96
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 98: case channel_Temp:
 "98
-[e :U 1463 ]
+[e :U 1460 ]
 [; ;adc_postprocessing.c: 99: adc_results.die_temp_adc_result = ((0.659 - (5.0 / 4.0) * (1.0 - ADCC_GetFilterValue()/1023.0)) / .00132) - 40.0 + temp_adc_offset;
 "99
 [e = . _adc_results 6 -> + - / - .0.659 * / .5.0 .4.0 - .1.0 / -> ( _ADCC_GetFilterValue ..  `d .1023.0 .0.00132 .40.0 -> _temp_adc_offset `d `f ]
@@ -11365,53 +11339,53 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _next_adc_channel . `E9492 4 ]
 [; ;adc_postprocessing.c: 102: break;
 "102
-[e $U 1446  ]
+[e $U 1443  ]
 [; ;adc_postprocessing.c: 106: default:
 "106
-[e :U 1464 ]
+[e :U 1461 ]
 [; ;adc_postprocessing.c: 107: error_handler.ADC_general_error_flag = 1;
 "107
 [e = . _error_handler 1 -> -> 1 `i `uc ]
 [; ;adc_postprocessing.c: 108: break;
 "108
-[e $U 1446  ]
+[e $U 1443  ]
 "110
 }
 [; ;adc_postprocessing.c: 110: }
-[e $U 1446  ]
+[e $U 1443  ]
 "22
-[e :U 1447 ]
-[e [\ _current_adc_channel , $ . `E9492 4 1448
- , $ . `E9492 7 1449
- , $ . `E9492 2 1451
- , $ . `E9492 0 1452
- , $ . `E9492 1 1453
- , $ . `E9492 3 1458
- , $ . `E9492 5 1463
- 1464 ]
+[e :U 1444 ]
+[e [\ _current_adc_channel , $ . `E9492 4 1445
+ , $ . `E9492 7 1446
+ , $ . `E9492 2 1448
+ , $ . `E9492 0 1449
+ , $ . `E9492 1 1450
+ , $ . `E9492 3 1455
+ , $ . `E9492 5 1460
+ 1461 ]
 "110
-[e :U 1446 ]
+[e :U 1443 ]
 [; ;adc_postprocessing.c: 112: if (ADCC_GetCurrentCountofConversions() != 255) {
 "112
-[e $ ! != -> ( _ADCC_GetCurrentCountofConversions ..  `i -> 255 `i 1465  ]
+[e $ ! != -> ( _ADCC_GetCurrentCountofConversions ..  `i -> 255 `i 1462  ]
 {
 [; ;adc_postprocessing.c: 113: error_handler.ADC_general_error_flag = 1;
 "113
 [e = . _error_handler 1 -> -> 1 `i `uc ]
 "114
 }
-[e :U 1465 ]
+[e :U 1462 ]
 [; ;adc_postprocessing.c: 114: }
 [; ;adc_postprocessing.c: 116: if (ADCC_HasAccumulatorOverflowed()) {
 "116
-[e $ ! != -> ( _ADCC_HasAccumulatorOverflowed ..  `i -> -> -> 0 `i `uc `i 1466  ]
+[e $ ! != -> ( _ADCC_HasAccumulatorOverflowed ..  `i -> -> -> 0 `i `uc `i 1463  ]
 {
 [; ;adc_postprocessing.c: 117: error_handler.ADC_general_error_flag = 1;
 "117
 [e = . _error_handler 1 -> -> 1 `i `uc ]
 "118
 }
-[e :U 1466 ]
+[e :U 1463 ]
 [; ;adc_postprocessing.c: 118: }
 [; ;adc_postprocessing.c: 121: adc_calculations.input_power = adc_results.pos12_adc_result * adc_results.pos12_isns_adc_result;
 "121
@@ -11424,15 +11398,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . _adc_calculations 2 -> * -> / . _adc_calculations 1 . _adc_calculations 0 `d .100.0 `f ]
 [; ;adc_postprocessing.c: 126: if (adc_calculations.efficiency > 99.0) adc_calculations.efficiency = 99.0;
 "126
-[e $ ! > -> . _adc_calculations 2 `d .99.0 1467  ]
+[e $ ! > -> . _adc_calculations 2 `d .99.0 1464  ]
 [e = . _adc_calculations 2 -> .99.0 `f ]
-[e :U 1467 ]
+[e :U 1464 ]
 [; ;adc_postprocessing.c: 129: TMR2_StartTimer();
 "129
 [e ( _TMR2_StartTimer ..  ]
 [; ;adc_postprocessing.c: 131: }
 "131
-[e :UE 1445 ]
+[e :UE 1442 ]
 }
 "135
 [v _ADC_acquisitionTimerHandler `(v ~T0 @X0 1 ef ]
@@ -11457,5 +11431,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _ADCC_StartConversion (1 _next_adc_channel ]
 [; ;adc_postprocessing.c: 151: }
 "151
-[e :UE 1468 ]
+[e :UE 1465 ]
 }
