@@ -392,7 +392,8 @@ void ringBufferLUT(char * line) {
     else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
      
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("POS5 Converter is in Burst Mode\n\r");
+        else printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
         terminalTextAttributesReset();
         
     }
@@ -400,7 +401,8 @@ void ringBufferLUT(char * line) {
     else if ((0 == strcmp(line, "Measure QI FSW?"))) {
      
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("QI Converter is in Burst Mode\n\r");
+        else printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
         terminalTextAttributesReset();
         
     }
