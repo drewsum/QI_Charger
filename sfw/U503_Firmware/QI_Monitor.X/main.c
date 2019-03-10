@@ -97,11 +97,18 @@ void main(void)
     // Assign QI Charge IOC Handler to IOC B3
     IOCBF3_SetInterruptHandler(QIChargeIOCHandler);
     
-    // Assign idle detection handler to TMR3 ISR
-    TMR3_SetInterruptHandler(QIIdleTimerHandler);
+    // Assign idle /charged detection handler to TMR3 ISR
+    TMR3_SetInterruptHandler(QIIdleChargedTimerHandler);
     TMR3_StopTimer();
     TMR3_Reload();
     
+    // Assign error detection handler to TMR1 ISR
+    TMR1_SetInterruptHandler(QIErrorTimerHandler);
+    TMR1_StopTimer();
+    TMR1_Reload();
+    
+    
+    // Clear timer for QI FSW measurement
     TMR5_StopTimer();
     TMR5_WriteTimer(0);
     

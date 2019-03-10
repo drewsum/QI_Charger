@@ -10930,6 +10930,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
 [; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
@@ -11078,9 +11091,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.h: 588: void INT2_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;ext_int.h: 612: extern void (*INT2_InterruptHandler)(void);
 [; ;ext_int.h: 636: void INT2_DefaultInterruptHandler(void);
-[; ;mcc.h: 80: void SYSTEM_Initialize(void);
-[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 106: void PMD_Initialize(void);
+[; ;mcc.h: 81: void SYSTEM_Initialize(void);
+[; ;mcc.h: 94: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 107: void PMD_Initialize(void);
 "52 mcc_generated_files/../error_handling.h
 [v _error_handler `S1439 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
@@ -11594,8 +11607,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;eusart2.c: 264: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void)){
 [e :U _EUSART2_SetTxInterruptHandler ]
-[v F9937 `(v ~T0 @X0 0 tf ]
-[v _interruptHandler `*F9937 ~T0 @X0 1 r1 ]
+[v F9964 `(v ~T0 @X0 0 tf ]
+[v _interruptHandler `*F9964 ~T0 @X0 1 r1 ]
 [f ]
 [; ;eusart2.c: 265: EUSART2_TxDefaultInterruptHandler = interruptHandler;
 "265
@@ -11609,8 +11622,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;eusart2.c: 268: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void)){
 [e :U _EUSART2_SetRxInterruptHandler ]
-[v F9940 `(v ~T0 @X0 0 tf ]
-[v _interruptHandler `*F9940 ~T0 @X0 1 r1 ]
+[v F9967 `(v ~T0 @X0 0 tf ]
+[v _interruptHandler `*F9967 ~T0 @X0 1 r1 ]
 [f ]
 [; ;eusart2.c: 269: EUSART2_RxDefaultInterruptHandler = interruptHandler;
 "269

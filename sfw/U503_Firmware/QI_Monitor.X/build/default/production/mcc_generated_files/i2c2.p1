@@ -2,8 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9433 0 1 2 3 4 5 6 .. ]
 [n E9433 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9854 `(v ~T0 @X0 0 tf ]
-[v F9857 `(v ~T0 @X0 0 tf ]
+[v F9881 `(v ~T0 @X0 0 tf ]
+[v F9884 `(v ~T0 @X0 0 tf ]
 "41 mcc_generated_files/../error_handling.h
 [s S1439 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1439 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
@@ -23,8 +23,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S1443 `*S1442 1 `*S1442 1 `S1440 1 `uc 1 `uc 1 ]
 [n S1443 . pTrTail pTrHead trStatus i2cDoneFlag i2cErrors ]
 "188
-[c E9933 0 1 2 3 4 5 6 7 8 9 10 11 .. ]
-[n E9933 . S_MASTER_IDLE S_MASTER_RESTART S_MASTER_SEND_ADDR S_MASTER_SEND_DATA S_MASTER_SEND_STOP S_MASTER_ACK_ADDR S_MASTER_RCV_DATA S_MASTER_RCV_STOP S_MASTER_ACK_RCV_DATA S_MASTER_NOACK_STOP S_MASTER_SEND_ADDR_10BIT_LSB S_MASTER_10BIT_RESTART  ]
+[c E9960 0 1 2 3 4 5 6 7 8 9 10 11 .. ]
+[n E9960 . S_MASTER_IDLE S_MASTER_RESTART S_MASTER_SEND_ADDR S_MASTER_SEND_DATA S_MASTER_SEND_STOP S_MASTER_ACK_ADDR S_MASTER_RCV_DATA S_MASTER_RCV_STOP S_MASTER_ACK_RCV_DATA S_MASTER_NOACK_STOP S_MASTER_SEND_ADDR_10BIT_LSB S_MASTER_10BIT_RESTART  ]
 "464 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [v _SSP2STAT `Vuc ~T0 @X0 0 e@3733 ]
 "918
@@ -10908,6 +10908,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
 [; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
@@ -11089,10 +11102,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/../mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9854 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9881 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9857 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9884 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11104,9 +11117,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 80: void SYSTEM_Initialize(void);
-[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 106: void PMD_Initialize(void);
+[; ;mcc.h: 81: void SYSTEM_Initialize(void);
+[; ;mcc.h: 94: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 107: void PMD_Initialize(void);
 "52 mcc_generated_files/../error_handling.h
 [v _error_handler `S1439 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
@@ -11174,9 +11187,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _i2c2_object `S1443 ~T0 @X0 1 s ]
 [; ;i2c2.c: 187: static I2C_OBJECT i2c2_object;
 "188
-[v _i2c2_state `E9933 ~T0 @X0 1 s ]
+[v _i2c2_state `E9960 ~T0 @X0 1 s ]
 [i _i2c2_state
-. `E9933 0
+. `E9960 0
 ]
 [; ;i2c2.c: 188: static I2C_MASTER_STATES i2c2_state = S_MASTER_IDLE;
 "189
@@ -11279,20 +11292,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _I2C2_ISR ]
 [f ]
 "239
-[v F9962 `*uc ~T0 @X0 1 s pi2c_buf_ptr ]
+[v F9989 `*uc ~T0 @X0 1 s pi2c_buf_ptr ]
 "240
-[v F9963 `ui ~T0 @X0 1 s i2c_address ]
-[i F9963
+[v F9990 `ui ~T0 @X0 1 s i2c_address ]
+[i F9990
 -> -> 0 `i `ui
 ]
 "241
-[v F9964 `uc ~T0 @X0 1 s i2c_bytes_left ]
-[i F9964
+[v F9991 `uc ~T0 @X0 1 s i2c_bytes_left ]
+[i F9991
 -> -> 0 `i `uc
 ]
 "242
-[v F9965 `uc ~T0 @X0 1 s i2c_10bit_address_restart ]
-[i F9965
+[v F9992 `uc ~T0 @X0 1 s i2c_10bit_address_restart ]
+[i F9992
 -> -> 0 `i `uc
 ]
 [; ;i2c2.c: 239: static uint8_t *pi2c_buf_ptr;
@@ -11313,7 +11326,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON1bits 0 4 -> -> 0 `i `uc ]
 [; ;i2c2.c: 252: i2c2_state = S_MASTER_IDLE;
 "252
-[e = _i2c2_state . `E9933 0 ]
+[e = _i2c2_state . `E9960 0 ]
 [; ;i2c2.c: 253: *(p_i2c2_current->pTrFlag) = I2C2_MESSAGE_FAIL;
 "253
 [e = *U . *U _p_i2c2_current 2 . `E9433 1 ]
@@ -11388,7 +11401,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON2bits 0 0 -> -> 1 `i `uc ]
 [; ;i2c2.c: 297: i2c2_state = S_MASTER_SEND_ADDR;
 "297
-[e = _i2c2_state . `E9933 2 ]
+[e = _i2c2_state . `E9960 2 ]
 "298
 }
 [e :U 1451 ]
@@ -11404,7 +11417,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON2bits 0 1 -> -> 1 `i `uc ]
 [; ;i2c2.c: 310: i2c2_state = S_MASTER_SEND_ADDR;
 "310
-[e = _i2c2_state . `E9933 2 ]
+[e = _i2c2_state . `E9960 2 ]
 [; ;i2c2.c: 312: break;
 "312
 [e $U 1448  ]
@@ -11435,16 +11448,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 324: SSP2BUF = (i2c_address >> 1) & 0x00FF;
 "324
-[e = _SSP2BUF -> & >> F9963 -> 1 `i -> -> 255 `i `ui `uc ]
+[e = _SSP2BUF -> & >> F9990 -> 1 `i -> -> 255 `i `ui `uc ]
 [; ;i2c2.c: 327: if(i2c_address & 0x01)
 "327
-[e $ ! != & F9963 -> -> 1 `i `ui -> -> 0 `i `ui 1458  ]
+[e $ ! != & F9990 -> -> 1 `i `ui -> -> 0 `i `ui 1458  ]
 [; ;i2c2.c: 328: {
 "328
 {
 [; ;i2c2.c: 331: i2c2_state = S_MASTER_10BIT_RESTART;
 "331
-[e = _i2c2_state . `E9933 11 ]
+[e = _i2c2_state . `E9960 11 ]
 "332
 }
 [; ;i2c2.c: 332: }
@@ -11457,7 +11470,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 336: i2c2_state = S_MASTER_SEND_DATA;
 "336
-[e = _i2c2_state . `E9933 3 ]
+[e = _i2c2_state . `E9960 3 ]
 "337
 }
 [e :U 1459 ]
@@ -11499,16 +11512,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON2bits 0 1 -> -> 1 `i `uc ]
 [; ;i2c2.c: 357: i2c_address = 0x00F0 | ((i2c_address >> 8) & 0x0006);
 "357
-[e = F9963 | -> -> 240 `i `ui & >> F9963 -> 8 `i -> -> 6 `i `ui ]
+[e = F9990 | -> -> 240 `i `ui & >> F9990 -> 8 `i -> -> 6 `i `ui ]
 [; ;i2c2.c: 360: i2c_address |= 0x0001;
 "360
-[e =| F9963 -> -> 1 `i `ui ]
+[e =| F9990 -> -> 1 `i `ui ]
 [; ;i2c2.c: 363: i2c_10bit_address_restart = 1;
 "363
-[e = F9965 -> -> 1 `i `uc ]
+[e = F9992 -> -> 1 `i `uc ]
 [; ;i2c2.c: 366: i2c2_state = S_MASTER_SEND_ADDR;
 "366
-[e = _i2c2_state . `E9933 2 ]
+[e = _i2c2_state . `E9960 2 ]
 "367
 }
 [e :U 1462 ]
@@ -11521,41 +11534,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1463 ]
 [; ;i2c2.c: 384: if(i2c_10bit_address_restart != 1)
 "384
-[e $ ! != -> F9965 `i -> 1 `i 1464  ]
+[e $ ! != -> F9992 `i -> 1 `i 1464  ]
 [; ;i2c2.c: 385: {
 "385
 {
 [; ;i2c2.c: 387: i2c_address = p_i2c2_trb_current->address;
 "387
-[e = F9963 . *U _p_i2c2_trb_current 0 ]
+[e = F9990 . *U _p_i2c2_trb_current 0 ]
 [; ;i2c2.c: 388: pi2c_buf_ptr = p_i2c2_trb_current->pbuffer;
 "388
-[e = F9962 . *U _p_i2c2_trb_current 2 ]
+[e = F9989 . *U _p_i2c2_trb_current 2 ]
 [; ;i2c2.c: 389: i2c_bytes_left = p_i2c2_trb_current->length;
 "389
-[e = F9964 . *U _p_i2c2_trb_current 1 ]
+[e = F9991 . *U _p_i2c2_trb_current 1 ]
 "390
 }
 [e :U 1464 ]
 [; ;i2c2.c: 390: }
 [; ;i2c2.c: 393: if(!1 && (0x0 != i2c_address))
 "393
-[e $ ! && ! != -> 1 `i -> 0 `i != -> -> 0 `i `ui F9963 1465  ]
+[e $ ! && ! != -> 1 `i -> 0 `i != -> -> 0 `i `ui F9990 1465  ]
 [; ;i2c2.c: 394: {
 "394
 {
 [; ;i2c2.c: 395: if (0 == i2c_10bit_address_restart)
 "395
-[e $ ! == -> 0 `i -> F9965 `i 1466  ]
+[e $ ! == -> 0 `i -> F9992 `i 1466  ]
 [; ;i2c2.c: 396: {
 "396
 {
 [; ;i2c2.c: 400: SSP2BUF = 0xF0 | ((i2c_address >> 8) & 0x0006);
 "400
-[e = _SSP2BUF -> | -> -> 240 `i `ui & >> F9963 -> 8 `i -> -> 6 `i `ui `uc ]
+[e = _SSP2BUF -> | -> -> 240 `i `ui & >> F9990 -> 8 `i -> -> 6 `i `ui `uc ]
 [; ;i2c2.c: 401: i2c2_state = S_MASTER_SEND_ADDR_10BIT_LSB;
 "401
-[e = _i2c2_state . `E9933 10 ]
+[e = _i2c2_state . `E9960 10 ]
 "402
 }
 [; ;i2c2.c: 402: }
@@ -11568,13 +11581,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 406: SSP2BUF = i2c_address;
 "406
-[e = _SSP2BUF -> F9963 `uc ]
+[e = _SSP2BUF -> F9990 `uc ]
 [; ;i2c2.c: 407: i2c2_state = S_MASTER_ACK_ADDR;
 "407
-[e = _i2c2_state . `E9933 5 ]
+[e = _i2c2_state . `E9960 5 ]
 [; ;i2c2.c: 409: i2c_10bit_address_restart = 0;
 "409
-[e = F9965 -> -> 0 `i `uc ]
+[e = F9992 -> -> 0 `i `uc ]
 "410
 }
 [e :U 1467 ]
@@ -11591,16 +11604,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 415: SSP2BUF = i2c_address;
 "415
-[e = _SSP2BUF -> F9963 `uc ]
+[e = _SSP2BUF -> F9990 `uc ]
 [; ;i2c2.c: 416: if(i2c_address & 0x01)
 "416
-[e $ ! != & F9963 -> -> 1 `i `ui -> -> 0 `i `ui 1469  ]
+[e $ ! != & F9990 -> -> 1 `i `ui -> -> 0 `i `ui 1469  ]
 [; ;i2c2.c: 417: {
 "417
 {
 [; ;i2c2.c: 419: i2c2_state = S_MASTER_ACK_ADDR;
 "419
-[e = _i2c2_state . `E9933 5 ]
+[e = _i2c2_state . `E9960 5 ]
 "420
 }
 [; ;i2c2.c: 420: }
@@ -11613,7 +11626,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 424: i2c2_state = S_MASTER_SEND_DATA;
 "424
-[e = _i2c2_state . `E9933 3 ]
+[e = _i2c2_state . `E9960 3 ]
 "425
 }
 [e :U 1470 ]
@@ -11655,7 +11668,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 447: if(i2c_bytes_left-- == 0U)
 "447
-[e $ ! == -> -- F9964 -> -> 1 `i `uc `ui -> 0 `ui 1474  ]
+[e $ ! == -> -- F9991 -> -> 1 `i `uc `ui -> 0 `ui 1474  ]
 [; ;i2c2.c: 448: {
 "448
 {
@@ -11686,7 +11699,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON2bits 0 1 -> -> 1 `i `uc ]
 [; ;i2c2.c: 470: i2c2_state = S_MASTER_SEND_ADDR;
 "470
-[e = _i2c2_state . `E9933 2 ]
+[e = _i2c2_state . `E9960 2 ]
 "472
 }
 [e :U 1476 ]
@@ -11703,7 +11716,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 477: SSP2BUF = *pi2c_buf_ptr++;
 "477
-[e = _SSP2BUF *U ++ F9962 * -> -> 1 `i `x -> -> # *U F9962 `i `x ]
+[e = _SSP2BUF *U ++ F9989 * -> -> 1 `i `x -> -> # *U F9989 `i `x ]
 "478
 }
 [e :U 1477 ]
@@ -11748,7 +11761,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON2bits 0 3 -> -> 1 `i `uc ]
 [; ;i2c2.c: 500: i2c2_state = S_MASTER_ACK_RCV_DATA;
 "500
-[e = _i2c2_state . `E9933 8 ]
+[e = _i2c2_state . `E9960 8 ]
 "501
 }
 [e :U 1480 ]
@@ -11761,7 +11774,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1481 ]
 [; ;i2c2.c: 509: i2c2_state = S_MASTER_ACK_RCV_DATA;
 "509
-[e = _i2c2_state . `E9933 8 ]
+[e = _i2c2_state . `E9960 8 ]
 [; ;i2c2.c: 512: SSP2CON2bits.RCEN = 1;
 "512
 [e = . . _SSP2CON2bits 0 3 -> -> 1 `i `uc ]
@@ -11773,10 +11786,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1482 ]
 [; ;i2c2.c: 519: *pi2c_buf_ptr++ = SSP2BUF;
 "519
-[e = *U ++ F9962 * -> -> 1 `i `x -> -> # *U F9962 `i `x _SSP2BUF ]
+[e = *U ++ F9989 * -> -> 1 `i `x -> -> # *U F9989 `i `x _SSP2BUF ]
 [; ;i2c2.c: 522: if(--i2c_bytes_left)
 "522
-[e $ ! != -> =- F9964 -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 1483  ]
+[e $ ! != -> =- F9991 -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 1483  ]
 [; ;i2c2.c: 523: {
 "523
 {
@@ -11785,7 +11798,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _SSP2CON2bits 0 5 -> -> 0 `i `uc ]
 [; ;i2c2.c: 532: i2c2_state = S_MASTER_RCV_DATA;
 "532
-[e = _i2c2_state . `E9933 6 ]
+[e = _i2c2_state . `E9960 6 ]
 "533
 }
 [; ;i2c2.c: 533: }
@@ -11842,17 +11855,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1448  ]
 "262
 [e :U 1449 ]
-[e [\ _i2c2_state , $ . `E9933 0 1450
- , $ . `E9933 1 1454
- , $ . `E9933 10 1455
- , $ . `E9933 11 1460
- , $ . `E9933 2 1463
- , $ . `E9933 3 1471
- , $ . `E9933 5 1478
- , $ . `E9933 6 1481
- , $ . `E9933 8 1482
- , $ . `E9933 7 1485
- , $ . `E9933 4 1486
+[e [\ _i2c2_state , $ . `E9960 0 1450
+ , $ . `E9960 1 1454
+ , $ . `E9960 10 1455
+ , $ . `E9960 11 1460
+ , $ . `E9960 2 1463
+ , $ . `E9960 3 1471
+ , $ . `E9960 5 1478
+ , $ . `E9960 6 1481
+ , $ . `E9960 8 1482
+ , $ . `E9960 7 1485
+ , $ . `E9960 4 1486
  1487 ]
 "563
 [e :U 1448 ]
@@ -11879,7 +11892,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 575: i2c2_state = S_MASTER_SEND_STOP;
 "575
-[e = _i2c2_state . `E9933 4 ]
+[e = _i2c2_state . `E9960 4 ]
 "576
 }
 [; ;i2c2.c: 576: }
@@ -11892,7 +11905,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 579: i2c2_state = S_MASTER_RESTART;
 "579
-[e = _i2c2_state . `E9933 1 ]
+[e = _i2c2_state . `E9960 1 ]
 "580
 }
 [e :U 1490 ]
@@ -11916,7 +11929,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "587
 [e = . . _SSP2CON2bits 0 2 -> -> 1 `i `uc ]
 [; ;i2c2.c: 590: if (p_i2c2_current->pTrFlag != (0))
-[v F9969 `*E9433 ~T0 @X0 1 t ]
+[v F9996 `*E9433 ~T0 @X0 1 t ]
 "590
 [e $ ! != . *U _p_i2c2_current 2 -> -> 0 `i `V*E9433 1492  ]
 [; ;i2c2.c: 591: {
@@ -11931,7 +11944,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.c: 594: }
 [; ;i2c2.c: 597: i2c2_state = S_MASTER_IDLE;
 "597
-[e = _i2c2_state . `E9933 0 ]
+[e = _i2c2_state . `E9960 0 ]
 [; ;i2c2.c: 599: }
 "599
 [e :UE 1491 ]
@@ -11958,7 +11971,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "606
 [f ]
 "607
-[v F9975 `S1434 ~T0 @X0 1 s trBlock ]
+[v F10002 `S1434 ~T0 @X0 1 s trBlock ]
 [; ;i2c2.c: 607: static I2C2_TRANSACTION_REQUEST_BLOCK trBlock;
 [; ;i2c2.c: 610: if (i2c2_object.trStatus.s.full != 1)
 "610
@@ -11968,10 +11981,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 612: I2C2_MasterWriteTRBBuild(&trBlock, pdata, length, address);
 "612
-[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U F9975 _pdata _length _address ]
+[e ( _I2C2_MasterWriteTRBBuild (4 , , , &U F10002 _pdata _length _address ]
 [; ;i2c2.c: 613: I2C2_MasterTRBInsert(1, &trBlock, pflag);
 "613
-[e ( _I2C2_MasterTRBInsert (3 , , -> -> 1 `i `uc &U F9975 _pflag ]
+[e ( _I2C2_MasterTRBInsert (3 , , -> -> 1 `i `uc &U F10002 _pflag ]
 "614
 }
 [; ;i2c2.c: 614: }
@@ -12015,7 +12028,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "627
 [f ]
 "628
-[v F9980 `S1434 ~T0 @X0 1 s trBlock ]
+[v F10007 `S1434 ~T0 @X0 1 s trBlock ]
 [; ;i2c2.c: 628: static I2C2_TRANSACTION_REQUEST_BLOCK trBlock;
 [; ;i2c2.c: 632: if (i2c2_object.trStatus.s.full != 1)
 "632
@@ -12025,10 +12038,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;i2c2.c: 634: I2C2_MasterReadTRBBuild(&trBlock, pdata, length, address);
 "634
-[e ( _I2C2_MasterReadTRBBuild (4 , , , &U F9980 _pdata _length _address ]
+[e ( _I2C2_MasterReadTRBBuild (4 , , , &U F10007 _pdata _length _address ]
 [; ;i2c2.c: 635: I2C2_MasterTRBInsert(1, &trBlock, pflag);
 "635
-[e ( _I2C2_MasterTRBInsert (3 , , -> -> 1 `i `uc &U F9980 _pflag ]
+[e ( _I2C2_MasterTRBInsert (3 , , -> -> 1 `i `uc &U F10007 _pflag ]
 "636
 }
 [; ;i2c2.c: 636: }
@@ -12050,9 +12063,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "642
 [e :UE 1496 ]
 }
-[v F9982 `(v ~T0 @X0 1 tf ]
+[v F10009 `(v ~T0 @X0 1 tf ]
 "645
-[v _I2C2_WaitForLastPacketToComplete `TF9982 ~T0 @X0 1 e ]
+[v _I2C2_WaitForLastPacketToComplete `TF10009 ~T0 @X0 1 e ]
 "646
 {
 [; ;i2c2.c: 645: inline void I2C2_WaitForLastPacketToComplete()
@@ -12070,7 +12083,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 1500 ]
 "647
-[e $ != -> _i2c2_state `i -> . `E9933 0 `i 1501  ]
+[e $ != -> _i2c2_state `i -> . `E9960 0 `i 1501  ]
 [e :U 1502 ]
 [; ;i2c2.c: 652: }
 [; ;i2c2.c: 653: }

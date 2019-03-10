@@ -9,6 +9,7 @@
 #include "pin_macros.h"
 
 #include "mcc_generated_files/tmr3.h"
+#include "mcc_generated_files/tmr1.h"
 
 // 
 enum nxq_charge_state_t {
@@ -33,7 +34,10 @@ void QIIdleIOCHandler(void);
 void QIChargeIOCHandler(void);
 
 // This function should be called by a 750 ms timer that is started on the falling edge on CHARGE signal
-void QIIdleTimerHandler(void);
+void QIIdleChargedTimerHandler(void);
+
+// This function is called by a timer ISR and detects if an error condition has occurred
+void QIErrorTimerHandler(void);
 
 #endif	/* _NXQ_CHARGE_STATE_H */
 

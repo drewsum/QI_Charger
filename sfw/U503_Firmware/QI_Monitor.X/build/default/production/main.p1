@@ -2,14 +2,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9606 0 1 2 3 4 5 6 .. ]
 [n E9606 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9938 `(v ~T0 @X0 0 tf ]
-[v F9941 `(v ~T0 @X0 0 tf ]
+[v F9965 `(v ~T0 @X0 0 tf ]
+[v F9968 `(v ~T0 @X0 0 tf ]
 "55 cause_of_reset.h
-[c E10151 0 1 2 3 4 5 6 7 8 .. ]
-[n E10151 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
+[c E10178 0 1 2 3 4 5 6 7 8 .. ]
+[n E10178 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
 "50 adc_postprocessing.h
-[c E9801 0 1 4 5 60 61 62 63 .. ]
-[n E9801 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
+[c E9828 0 1 4 5 60 61 62 63 .. ]
+[n E9828 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
 [s S1443 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1443 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
@@ -22,74 +22,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 "56 LM73_I2C.h
 [s S1446 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
 [n S1446 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
-"21 NXQ_charge_state.h
-[c E10237 0 1 2 3 .. ]
-[n E10237 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+"22 NXQ_charge_state.h
+[c E10264 0 1 2 3 .. ]
+[n E10264 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "58 oled.h
 [s S1447 `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i ]
 [n S1447 OLED_RAM_Buffer_t line0 line1 line2 line3 ]
 "100
-[c E10259 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
-[n E10259 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
+[c E10288 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
+[n E10288 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
 "39 freq_meas.h
 [s S1448 `f 1 `ui 1 ]
 [n S1448 . QI_Freq_Meas QI_Freq_Meas_Raw ]
 "50
-[c E10315 0 1 .. ]
-[n E10315 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
+[c E10344 0 1 .. ]
+[n E10344 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 [p mainexit ]
 "59 cause_of_reset.h
-[v _getCauseOfReset `(E10151 ~T0 @X0 0 ef ]
+[v _getCauseOfReset `(E10178 ~T0 @X0 0 ef ]
 [v F9541 `(v ~T0 @X0 1 tf1`ul ]
 "183 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18.h
 [v __delay `JF9541 ~T0 @X0 0 e ]
 [p i __delay ]
-"80 mcc_generated_files/mcc.h
+"81 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F9789 `(v ~T0 @X0 0 tf ]
+[v F9816 `(v ~T0 @X0 0 tf ]
 "310 mcc_generated_files/tmr0.h
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9789 ]
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9816 ]
 "42 heartbeat_timer.h
 [v _heartbeatTimerHandler `(v ~T0 @X0 0 ef ]
-[v F9766 `(v ~T0 @X0 0 tf ]
+[v F9793 `(v ~T0 @X0 0 tf ]
 "788 mcc_generated_files/tmr2.h
-[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9766 ]
+[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9793 ]
 "96 adc_postprocessing.h
 [v _ADC_acquisitionTimerHandler `(v ~T0 @X0 0 ef ]
-[v F9866 `(v ~T0 @X0 0 tf ]
+[v F9893 `(v ~T0 @X0 0 tf ]
 "847 mcc_generated_files/adcc.h
-[v _ADCC_SetADTIInterruptHandler `(v ~T0 @X0 0 ef1`*F9866 ]
+[v _ADCC_SetADTIInterruptHandler `(v ~T0 @X0 0 ef1`*F9893 ]
 "92 adc_postprocessing.h
 [v _ADC_PostProcessingHandler `(v ~T0 @X0 0 ef ]
-[v F9915 `(v ~T0 @X0 0 tf ]
+[v F9942 `(v ~T0 @X0 0 tf ]
 "475 mcc_generated_files/ext_int.h
-[v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9915 ]
+[v _INT1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9942 ]
 "37 cap_touch_int.h
 [v _leftCapTouchHandler `(v ~T0 @X0 0 ef ]
-[v F9928 `(v ~T0 @X0 0 tf ]
+[v F9955 `(v ~T0 @X0 0 tf ]
 "588 mcc_generated_files/ext_int.h
-[v _INT2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9928 ]
+[v _INT2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9955 ]
 "40 cap_touch_int.h
 [v _rightCapTouchHandler `(v ~T0 @X0 0 ef ]
 [v F9556 `(v ~T0 @X0 0 tf ]
 "552 mcc_generated_files/pin_manager.h
 [v _IOCBF2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9556 ]
-"30 NXQ_charge_state.h
+"31 NXQ_charge_state.h
 [v _QIIdleIOCHandler `(v ~T0 @X0 0 ef ]
 [v F9567 `(v ~T0 @X0 0 tf ]
 "636 mcc_generated_files/pin_manager.h
 [v _IOCBF3_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9567 ]
-"33 NXQ_charge_state.h
+"34 NXQ_charge_state.h
 [v _QIChargeIOCHandler `(v ~T0 @X0 0 ef ]
 [v F9693 `(v ~T0 @X0 0 tf ]
 "385 mcc_generated_files/tmr3.h
 [v _TMR3_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9693 ]
-"36 NXQ_charge_state.h
-[v _QIIdleTimerHandler `(v ~T0 @X0 0 ef ]
+"37 NXQ_charge_state.h
+[v _QIIdleChargedTimerHandler `(v ~T0 @X0 0 ef ]
 "161 mcc_generated_files/tmr3.h
 [v _TMR3_StopTimer `(v ~T0 @X0 0 ef ]
 "271
 [v _TMR3_Reload `(v ~T0 @X0 0 ef ]
+[v F9720 `(v ~T0 @X0 0 tf ]
+"385 mcc_generated_files/tmr1.h
+[v _TMR1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F9720 ]
+"40 NXQ_charge_state.h
+[v _QIErrorTimerHandler `(v ~T0 @X0 0 ef ]
+"161 mcc_generated_files/tmr1.h
+[v _TMR1_StopTimer `(v ~T0 @X0 0 ef ]
+"271
+[v _TMR1_Reload `(v ~T0 @X0 0 ef ]
 "161 mcc_generated_files/tmr5.h
 [v _TMR5_StopTimer `(v ~T0 @X0 0 ef ]
 "235
@@ -120,17 +129,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OLED_updateHandler `(v ~T0 @X0 0 ef ]
 "71 LM73_I2C.h
 [v _LM73TempSensorInitialize `(v ~T0 @X0 0 ef ]
-"129 main.c
-[c E9981 0 1 2 3 4 5 6 7 .. ]
-[n E9981 . BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE  ]
-[c E9973 0 1 2 3 4 5 .. ]
-[n E9973 . NORMAL BOLD UNDERSCORE BLINK REVERSE CONCEALED  ]
+"136 main.c
+[c E10008 0 1 2 3 4 5 6 7 .. ]
+[n E10008 . BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE  ]
+[c E10000 0 1 2 3 4 5 .. ]
+[n E10000 . NORMAL BOLD UNDERSCORE BLINK REVERSE CONCEALED  ]
 "44 terminal_control.h
-[v _terminalTextAttributes `(v ~T0 @X0 0 ef3`E9981`E9981`E9973 ]
+[v _terminalTextAttributes `(v ~T0 @X0 0 ef3`E10008`E10008`E10000 ]
 "195 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "62 cause_of_reset.h
-[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10151 ]
+[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10178 ]
 "15693 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S788 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S788 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
@@ -11024,6 +11033,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
 [; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
@@ -11176,10 +11198,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9938 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9965 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9941 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9968 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11191,9 +11213,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 80: void SYSTEM_Initialize(void);
-[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 106: void PMD_Initialize(void);
+[; ;mcc.h: 81: void SYSTEM_Initialize(void);
+[; ;mcc.h: 94: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 107: void PMD_Initialize(void);
 [; ;terminal_control.h: 11: typedef enum {
 [; ;terminal_control.h: 13: NORMAL,
 [; ;terminal_control.h: 14: BOLD,
@@ -11304,15 +11326,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cause_of_reset.h: 51: Stack_Underflow_Reset = 8
 [; ;cause_of_reset.h: 52: } reset_t;
 "55 cause_of_reset.h
-[v _reset_cause `E10151 ~T0 @X0 1 e ]
+[v _reset_cause `E10178 ~T0 @X0 1 e ]
 [; ;cause_of_reset.h: 55: reset_t reset_cause;
 [; ;cause_of_reset.h: 59: reset_t getCauseOfReset(void);
 [; ;cause_of_reset.h: 62: inline char * getCauseOfResetString(reset_t r);
 [; ;cause_of_reset.h: 65: inline char * getCauseOfResetStringSmall(reset_t r);
 "50 adc_postprocessing.h
-[v _next_adc_channel `E9801 ~T0 @X0 1 e ]
+[v _next_adc_channel `E9828 ~T0 @X0 1 e ]
 [i _next_adc_channel
-. `E9801 4
+. `E9828 4
 ]
 [; ;adc_postprocessing.h: 50: adcc_channel_t next_adc_channel = channel_VSS;
 "63
@@ -11399,19 +11421,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LM73_I2C.h: 77: void LM73Convert(void);
 [; ;cap_touch_int.h: 37: void leftCapTouchHandler(void);
 [; ;cap_touch_int.h: 40: void rightCapTouchHandler(void);
-"21 NXQ_charge_state.h
-[v _nxq_charge_state `E10237 ~T0 @X0 1 e ]
-[; ;NXQ_charge_state.h: 14: enum nxq_charge_state_t {
-[; ;NXQ_charge_state.h: 16: QI_Idle = 0,
-[; ;NXQ_charge_state.h: 17: QI_Charging = 1,
-[; ;NXQ_charge_state.h: 18: QI_Fully_Charged = 2,
-[; ;NXQ_charge_state.h: 19: QI_Error = 3
-[; ;NXQ_charge_state.h: 21: } nxq_charge_state;
-[; ;NXQ_charge_state.h: 24: char * getNXQChargeStateStringCaps(void);
-[; ;NXQ_charge_state.h: 27: char * getNXQChargeStateString(void);
-[; ;NXQ_charge_state.h: 30: void QIIdleIOCHandler(void);
-[; ;NXQ_charge_state.h: 33: void QIChargeIOCHandler(void);
-[; ;NXQ_charge_state.h: 36: void QIIdleTimerHandler(void);
+"22 NXQ_charge_state.h
+[v _nxq_charge_state `E10264 ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 15: enum nxq_charge_state_t {
+[; ;NXQ_charge_state.h: 17: QI_Idle = 0,
+[; ;NXQ_charge_state.h: 18: QI_Charging = 1,
+[; ;NXQ_charge_state.h: 19: QI_Fully_Charged = 2,
+[; ;NXQ_charge_state.h: 20: QI_Error = 3
+[; ;NXQ_charge_state.h: 22: } nxq_charge_state;
+[; ;NXQ_charge_state.h: 25: char * getNXQChargeStateStringCaps(void);
+[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateString(void);
+[; ;NXQ_charge_state.h: 31: void QIIdleIOCHandler(void);
+[; ;NXQ_charge_state.h: 34: void QIChargeIOCHandler(void);
+[; ;NXQ_charge_state.h: 37: void QIIdleChargedTimerHandler(void);
+[; ;NXQ_charge_state.h: 40: void QIErrorTimerHandler(void);
 "63 oled.h
 [v _OLED_RAM_Buffer `S1447 ~T0 @X0 1 e ]
 [; ;oled.h: 58: struct OLED_RAM_Buffer_t {
@@ -11447,7 +11470,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.h: 95: OLED_Idle = 23
 [; ;oled.h: 97: } OLED_Frame_t;
 "100
-[v _OLED_Frame `E10259 ~T0 @X0 1 e ]
+[v _OLED_Frame `E10288 ~T0 @X0 1 e ]
 [; ;oled.h: 100: OLED_Frame_t OLED_Frame;
 "103
 [v _OLED_update_flag `uc ~T0 @X0 1 e ]
@@ -11476,7 +11499,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
 [; ;freq_meas.h: 44: } freq_meas_results;
 "50
-[v _QI_current_edge `E10315 ~T0 @X0 1 e ]
+[v _QI_current_edge `E10344 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 47: enum qi_edge_type{
 [; ;freq_meas.h: 48: qi_period_rising_1 = 0,
 [; ;freq_meas.h: 49: qi_period_rising_2 = 1
@@ -11525,176 +11548,185 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 98: IOCBF3_SetInterruptHandler(QIChargeIOCHandler);
 "98
 [e ( _IOCBF3_SetInterruptHandler (1 &U _QIChargeIOCHandler ]
-[; ;main.c: 101: TMR3_SetInterruptHandler(QIIdleTimerHandler);
+[; ;main.c: 101: TMR3_SetInterruptHandler(QIIdleChargedTimerHandler);
 "101
-[e ( _TMR3_SetInterruptHandler (1 &U _QIIdleTimerHandler ]
+[e ( _TMR3_SetInterruptHandler (1 &U _QIIdleChargedTimerHandler ]
 [; ;main.c: 102: TMR3_StopTimer();
 "102
 [e ( _TMR3_StopTimer ..  ]
 [; ;main.c: 103: TMR3_Reload();
 "103
 [e ( _TMR3_Reload ..  ]
-[; ;main.c: 105: TMR5_StopTimer();
-"105
-[e ( _TMR5_StopTimer ..  ]
-[; ;main.c: 106: TMR5_WriteTimer(0);
+[; ;main.c: 106: TMR1_SetInterruptHandler(QIErrorTimerHandler);
 "106
-[e ( _TMR5_WriteTimer (1 -> -> 0 `i `ui ]
-[; ;main.c: 109: (INTCONbits.GIEH = 1);
-"109
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;main.c: 112: (INTCONbits.GIEL = 1);
+[e ( _TMR1_SetInterruptHandler (1 &U _QIErrorTimerHandler ]
+[; ;main.c: 107: TMR1_StopTimer();
+"107
+[e ( _TMR1_StopTimer ..  ]
+[; ;main.c: 108: TMR1_Reload();
+"108
+[e ( _TMR1_Reload ..  ]
+[; ;main.c: 112: TMR5_StopTimer();
 "112
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;main.c: 115: terminalClearScreen();
-"115
-[e ( _terminalClearScreen ..  ]
-[; ;main.c: 116: terminalSetCursorHome();
+[e ( _TMR5_StopTimer ..  ]
+[; ;main.c: 113: TMR5_WriteTimer(0);
+"113
+[e ( _TMR5_WriteTimer (1 -> -> 0 `i `ui ]
+[; ;main.c: 116: (INTCONbits.GIEH = 1);
 "116
-[e ( _terminalSetCursorHome ..  ]
-[; ;main.c: 118: OLED_Init();
-"118
-[e ( _OLED_Init ..  ]
-[; ;main.c: 119: OLED_Clear();
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;main.c: 119: (INTCONbits.GIEL = 1);
 "119
-[e ( _OLED_Clear ..  ]
-[; ;main.c: 122: OLED_Frame = OLED_Boot_Frame_1;
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
+[; ;main.c: 122: terminalClearScreen();
 "122
-[e = _OLED_Frame . `E10259 0 ]
-[; ;main.c: 123: OLED_updateHandler();
+[e ( _terminalClearScreen ..  ]
+[; ;main.c: 123: terminalSetCursorHome();
 "123
-[e ( _OLED_updateHandler ..  ]
-[; ;main.c: 126: LM73TempSensorInitialize();
+[e ( _terminalSetCursorHome ..  ]
+[; ;main.c: 125: OLED_Init();
+"125
+[e ( _OLED_Init ..  ]
+[; ;main.c: 126: OLED_Clear();
 "126
-[e ( _LM73TempSensorInitialize ..  ]
-[; ;main.c: 129: terminalTextAttributes(GREEN, BLACK, NORMAL);
+[e ( _OLED_Clear ..  ]
+[; ;main.c: 129: OLED_Frame = OLED_Boot_Frame_1;
 "129
-[e ( _terminalTextAttributes (3 , , . `E9981 2 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 130: printf("QI Charger with Digital Monitoring\n\r"
-[; ;main.c: 131: "Boot Complete\n\r");
-"131
-[e ( _printf :s 1C ]
-[; ;main.c: 134: if ( reset_cause != Power_On_Reset) {
-"134
-[e $ ! != -> _reset_cause `i -> . `E10151 1 `i 1450  ]
-{
-[; ;main.c: 136: terminalTextAttributes(RED, BLACK, NORMAL);
+[e = _OLED_Frame . `E10288 0 ]
+[; ;main.c: 130: OLED_updateHandler();
+"130
+[e ( _OLED_updateHandler ..  ]
+[; ;main.c: 133: LM73TempSensorInitialize();
+"133
+[e ( _LM73TempSensorInitialize ..  ]
+[; ;main.c: 136: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "136
-[e ( _terminalTextAttributes (3 , , . `E9981 1 . `E9981 0 . `E9973 0 ]
+[e ( _terminalTextAttributes (3 , , . `E10008 2 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 137: printf("QI Charger with Digital Monitoring\n\r"
+[; ;main.c: 138: "Boot Complete\n\r");
 "138
-}
-[; ;main.c: 138: }
-[e $U 1451  ]
-"140
-[e :U 1450 ]
-[; ;main.c: 140: else {
+[e ( _printf :s 1C ]
+[; ;main.c: 141: if ( reset_cause != Power_On_Reset) {
+"141
+[e $ ! != -> _reset_cause `i -> . `E10178 1 `i 1450  ]
 {
-[; ;main.c: 142: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"142
-[e ( _terminalTextAttributes (3 , , . `E9981 2 . `E9981 0 . `E9973 0 ]
-"144
+[; ;main.c: 143: terminalTextAttributes(RED, BLACK, NORMAL);
+"143
+[e ( _terminalTextAttributes (3 , , . `E10008 1 . `E10008 0 . `E10000 0 ]
+"145
 }
-[e :U 1451 ]
-[; ;main.c: 144: }
-[; ;main.c: 147: printf("Cause of most recent device reset was: %s\n\r", getCauseOfResetString(reset_cause));
+[; ;main.c: 145: }
+[e $U 1451  ]
 "147
-[e ( _printf , (. :s 2C -> ( _getCauseOfResetString (1 _reset_cause `*CTuc ]
+[e :U 1450 ]
+[; ;main.c: 147: else {
+{
 [; ;main.c: 149: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "149
-[e ( _terminalTextAttributes (3 , , . `E9981 2 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 151: LATCbits.LATC2 = 0;
+[e ( _terminalTextAttributes (3 , , . `E10008 2 . `E10008 0 . `E10000 0 ]
 "151
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 152: printf("QI Wireless Power Conversion Enabled\n\r");
-"152
-[e ( _printf :s 3C ]
-[; ;main.c: 154: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+}
+[e :U 1451 ]
+[; ;main.c: 151: }
+[; ;main.c: 154: printf("Cause of most recent device reset was: %s\n\r", getCauseOfResetString(reset_cause));
 "154
-[e ( _terminalTextAttributes (3 , , . `E9981 3 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 155: printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
-"155
-[e ( _printf :s 4C ]
+[e ( _printf , (. :s 2C -> ( _getCauseOfResetString (1 _reset_cause `*CTuc ]
 [; ;main.c: 156: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "156
-[e ( _terminalTextAttributes (3 , , . `E9981 2 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 157: printf("System parameters and affirmative responses appear in green\n\r");
-"157
-[e ( _printf :s 5C ]
-[; ;main.c: 158: terminalTextAttributes(CYAN, BLACK, NORMAL);
+[e ( _terminalTextAttributes (3 , , . `E10008 2 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 158: LATCbits.LATC2 = 0;
 "158
-[e ( _terminalTextAttributes (3 , , . `E9981 6 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 159: printf("Measurement responses appear in cyan\n\r");
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 159: printf("QI Wireless Power Conversion Enabled\n\r");
 "159
-[e ( _printf :s 6C ]
-[; ;main.c: 160: terminalTextAttributes(RED, BLACK, NORMAL);
-"160
-[e ( _terminalTextAttributes (3 , , . `E9981 1 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 161: printf("Errors and negative responses appear in red\n\r");
+[e ( _printf :s 3C ]
+[; ;main.c: 161: terminalTextAttributes(YELLOW, BLACK, NORMAL);
 "161
-[e ( _printf :s 7C ]
-[; ;main.c: 162: terminalTextAttributesReset();
+[e ( _terminalTextAttributes (3 , , . `E10008 3 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 162: printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
 "162
-[e ( _terminalTextAttributesReset ..  ]
-[; ;main.c: 163: printf("User input appears in white\n\r");
+[e ( _printf :s 4C ]
+[; ;main.c: 163: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "163
-[e ( _printf :s 8C ]
-[; ;main.c: 164: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+[e ( _terminalTextAttributes (3 , , . `E10008 2 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 164: printf("System parameters and affirmative responses appear in green\n\r");
 "164
-[e ( _terminalTextAttributes (3 , , . `E9981 3 . `E9981 0 . `E9973 0 ]
-[; ;main.c: 165: printf("\n\rCall 'Help' for list of supported commands\n\r");
+[e ( _printf :s 5C ]
+[; ;main.c: 165: terminalTextAttributes(CYAN, BLACK, NORMAL);
 "165
-[e ( _printf :s 9C ]
-[; ;main.c: 168: terminalTextAttributesReset();
+[e ( _terminalTextAttributes (3 , , . `E10008 6 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 166: printf("Measurement responses appear in cyan\n\r");
+"166
+[e ( _printf :s 6C ]
+[; ;main.c: 167: terminalTextAttributes(RED, BLACK, NORMAL);
+"167
+[e ( _terminalTextAttributes (3 , , . `E10008 1 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 168: printf("Errors and negative responses appear in red\n\r");
 "168
+[e ( _printf :s 7C ]
+[; ;main.c: 169: terminalTextAttributesReset();
+"169
 [e ( _terminalTextAttributesReset ..  ]
-[; ;main.c: 171: if (PORTBbits.RB3 == 0 && PORTBbits.RB2 == 0) nxq_charge_state = QI_Idle;
+[; ;main.c: 170: printf("User input appears in white\n\r");
+"170
+[e ( _printf :s 8C ]
+[; ;main.c: 171: terminalTextAttributes(YELLOW, BLACK, NORMAL);
 "171
-[e $ ! && == -> . . _PORTBbits 0 3 `i -> 0 `i == -> . . _PORTBbits 0 2 `i -> 0 `i 1452  ]
-[e = _nxq_charge_state . `E10237 0 ]
-[e $U 1453  ]
+[e ( _terminalTextAttributes (3 , , . `E10008 3 . `E10008 0 . `E10000 0 ]
+[; ;main.c: 172: printf("\n\rCall 'Help' for list of supported commands\n\r");
 "172
-[e :U 1452 ]
-[; ;main.c: 172: else if (PORTBbits.RB3 == 1 && PORTBbits.RB2 == 1) nxq_charge_state = QI_Fully_Charged;
-[e $ ! && == -> . . _PORTBbits 0 3 `i -> 1 `i == -> . . _PORTBbits 0 2 `i -> 1 `i 1454  ]
-[e = _nxq_charge_state . `E10237 2 ]
-[e :U 1454 ]
+[e ( _printf :s 9C ]
+[; ;main.c: 175: terminalTextAttributesReset();
 "175
+[e ( _terminalTextAttributesReset ..  ]
+[; ;main.c: 178: if (PORTBbits.RB3 == 0 && PORTBbits.RB2 == 0) nxq_charge_state = QI_Idle;
+"178
+[e $ ! && == -> . . _PORTBbits 0 3 `i -> 0 `i == -> . . _PORTBbits 0 2 `i -> 0 `i 1452  ]
+[e = _nxq_charge_state . `E10264 0 ]
+[e $U 1453  ]
+"179
+[e :U 1452 ]
+[; ;main.c: 179: else if (PORTBbits.RB3 == 1 && PORTBbits.RB2 == 1) nxq_charge_state = QI_Fully_Charged;
+[e $ ! && == -> . . _PORTBbits 0 3 `i -> 1 `i == -> . . _PORTBbits 0 2 `i -> 1 `i 1454  ]
+[e = _nxq_charge_state . `E10264 2 ]
+[e :U 1454 ]
+"182
 [e :U 1453 ]
-[; ;main.c: 175: while (1) {
+[; ;main.c: 182: while (1) {
 [e :U 1456 ]
 {
-[; ;main.c: 178: if (eusart2RxStringReady) terminal_ringBufferPull();
-"178
+[; ;main.c: 185: if (eusart2RxStringReady) terminal_ringBufferPull();
+"185
 [e $ ! _eusart2RxStringReady 1458  ]
 [e ( _terminal_ringBufferPull ..  ]
 [e :U 1458 ]
-[; ;main.c: 181: if (OLED_update_flag) OLED_updateHandler();
-"181
+[; ;main.c: 188: if (OLED_update_flag) OLED_updateHandler();
+"188
 [e $ ! != -> _OLED_update_flag `i -> -> -> 0 `i `uc `i 1459  ]
 [e ( _OLED_updateHandler ..  ]
 [e :U 1459 ]
-[; ;main.c: 184: if (LM73_start_flag) LM73AcquisitionHandler();
-"184
+[; ;main.c: 191: if (LM73_start_flag) LM73AcquisitionHandler();
+"191
 [e $ ! != -> _LM73_start_flag `i -> -> -> 0 `i `uc `i 1460  ]
 [e ( _LM73AcquisitionHandler ..  ]
 [e :U 1460 ]
-[; ;main.c: 187: if (freq_meas_start_flag) freqMeasStartCaptures();
-"187
+[; ;main.c: 194: if (freq_meas_start_flag) freqMeasStartCaptures();
+"194
 [e $ ! != -> _freq_meas_start_flag `i -> -> -> 0 `i `uc `i 1461  ]
 [e ( _freqMeasStartCaptures ..  ]
 [e :U 1461 ]
-[; ;main.c: 190: updateErrorLEDs();
-"190
+[; ;main.c: 197: updateErrorLEDs();
+"197
 [e ( _updateErrorLEDs ..  ]
-"192
+"199
 }
 [e :U 1455 ]
-"175
+"182
 [e $U 1456  ]
 [e :U 1457 ]
-[; ;main.c: 192: }
-[; ;main.c: 193: }
-"193
+[; ;main.c: 199: }
+[; ;main.c: 200: }
+"200
 [e :UE 1449 ]
 }
 [p f _printf 8650752 ]

@@ -2,8 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9725 0 1 2 3 4 5 6 .. ]
 [n E9725 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F10057 `(v ~T0 @X0 0 tf ]
-[v F10060 `(v ~T0 @X0 0 tf ]
+[v F10084 `(v ~T0 @X0 0 tf ]
+[v F10087 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
 [s S1443 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1443 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
@@ -11,17 +11,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S1444 `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i ]
 [n S1444 OLED_RAM_Buffer_t line0 line1 line2 line3 ]
 "100
-[c E10122 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
-[n E10122 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
+[c E10149 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
+[n E10149 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
 "55 cause_of_reset.h
-[c E10174 0 1 2 3 4 5 6 7 8 .. ]
-[n E10174 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
-"21 NXQ_charge_state.h
-[c E10202 0 1 2 3 .. ]
-[n E10202 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+[c E10201 0 1 2 3 4 5 6 7 8 .. ]
+[n E10201 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
+"22 NXQ_charge_state.h
+[c E10229 0 1 2 3 .. ]
+[n E10229 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "50 adc_postprocessing.h
-[c E9920 0 1 4 5 60 61 62 63 .. ]
-[n E9920 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
+[c E9947 0 1 4 5 60 61 62 63 .. ]
+[n E9947 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
 [s S1445 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1445 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
@@ -35,8 +35,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S1448 `f 1 `ui 1 ]
 [n S1448 . QI_Freq_Meas QI_Freq_Meas_Raw ]
 "50
-[c E10262 0 1 .. ]
-[n E10262 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
+[c E10291 0 1 .. ]
+[n E10291 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "264 mcc_generated_files/i2c2.h
 [v _I2C2_MasterWrite `(v ~T0 @X0 0 ef4`*uc`uc`ui`*E9725 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h
@@ -50,7 +50,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "37
 [v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
 "65 cause_of_reset.h
-[v _getCauseOfResetStringSmall `(*Tuc ~T0 @X0 0 ef1`E10174 ]
+[v _getCauseOfResetStringSmall `(*Tuc ~T0 @X0 0 ef1`E10201 ]
 "194 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "40 device_IDs.h
@@ -59,7 +59,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _getMajorRevisionID `(uc ~T0 @X0 0 ef ]
 "44
 [v _getMinorRevisionID `(uc ~T0 @X0 0 ef ]
-"24 NXQ_charge_state.h
+"25 NXQ_charge_state.h
 [v _getNXQChargeStateStringCaps `(*uc ~T0 @X0 0 ef ]
 "48 heartbeat_timer.h
 [v _getYearsFromOnTime `(uc ~T0 @X0 0 ef1`ul ]
@@ -10980,6 +10980,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
 [; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
@@ -11132,10 +11145,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F10057 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F10084 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F10060 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F10087 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11147,9 +11160,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 80: void SYSTEM_Initialize(void);
-[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 106: void PMD_Initialize(void);
+[; ;mcc.h: 81: void SYSTEM_Initialize(void);
+[; ;mcc.h: 94: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 107: void PMD_Initialize(void);
 "52 error_handling.h
 [v _error_handler `S1443 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
@@ -11204,7 +11217,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.h: 95: OLED_Idle = 23
 [; ;oled.h: 97: } OLED_Frame_t;
 "100
-[v _OLED_Frame `E10122 ~T0 @X0 1 e ]
+[v _OLED_Frame `E10149 ~T0 @X0 1 e ]
 [; ;oled.h: 100: OLED_Frame_t OLED_Frame;
 "103
 [v _OLED_update_flag `uc ~T0 @X0 1 e ]
@@ -11239,7 +11252,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cause_of_reset.h: 51: Stack_Underflow_Reset = 8
 [; ;cause_of_reset.h: 52: } reset_t;
 "55 cause_of_reset.h
-[v _reset_cause `E10174 ~T0 @X0 1 e ]
+[v _reset_cause `E10201 ~T0 @X0 1 e ]
 [; ;cause_of_reset.h: 55: reset_t reset_cause;
 [; ;cause_of_reset.h: 59: reset_t getCauseOfReset(void);
 [; ;cause_of_reset.h: 62: inline char * getCauseOfResetString(reset_t r);
@@ -11249,23 +11262,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;device_IDs.h: 44: uint8_t getMinorRevisionID(void);
 [; ;device_IDs.h: 48: inline char * getDeviceIDString(uint16_t inputDevID);
 [; ;device_IDs.h: 52: uint16_t getUserID(uint8_t inputUserID);
-"21 NXQ_charge_state.h
-[v _nxq_charge_state `E10202 ~T0 @X0 1 e ]
-[; ;NXQ_charge_state.h: 14: enum nxq_charge_state_t {
-[; ;NXQ_charge_state.h: 16: QI_Idle = 0,
-[; ;NXQ_charge_state.h: 17: QI_Charging = 1,
-[; ;NXQ_charge_state.h: 18: QI_Fully_Charged = 2,
-[; ;NXQ_charge_state.h: 19: QI_Error = 3
-[; ;NXQ_charge_state.h: 21: } nxq_charge_state;
-[; ;NXQ_charge_state.h: 24: char * getNXQChargeStateStringCaps(void);
-[; ;NXQ_charge_state.h: 27: char * getNXQChargeStateString(void);
-[; ;NXQ_charge_state.h: 30: void QIIdleIOCHandler(void);
-[; ;NXQ_charge_state.h: 33: void QIChargeIOCHandler(void);
-[; ;NXQ_charge_state.h: 36: void QIIdleTimerHandler(void);
+"22 NXQ_charge_state.h
+[v _nxq_charge_state `E10229 ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 15: enum nxq_charge_state_t {
+[; ;NXQ_charge_state.h: 17: QI_Idle = 0,
+[; ;NXQ_charge_state.h: 18: QI_Charging = 1,
+[; ;NXQ_charge_state.h: 19: QI_Fully_Charged = 2,
+[; ;NXQ_charge_state.h: 20: QI_Error = 3
+[; ;NXQ_charge_state.h: 22: } nxq_charge_state;
+[; ;NXQ_charge_state.h: 25: char * getNXQChargeStateStringCaps(void);
+[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateString(void);
+[; ;NXQ_charge_state.h: 31: void QIIdleIOCHandler(void);
+[; ;NXQ_charge_state.h: 34: void QIChargeIOCHandler(void);
+[; ;NXQ_charge_state.h: 37: void QIIdleChargedTimerHandler(void);
+[; ;NXQ_charge_state.h: 40: void QIErrorTimerHandler(void);
 "50 adc_postprocessing.h
-[v _next_adc_channel `E9920 ~T0 @X0 1 e ]
+[v _next_adc_channel `E9947 ~T0 @X0 1 e ]
 [i _next_adc_channel
-. `E9920 4
+. `E9947 4
 ]
 [; ;adc_postprocessing.h: 50: adcc_channel_t next_adc_channel = channel_VSS;
 "63
@@ -11338,7 +11352,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
 [; ;freq_meas.h: 44: } freq_meas_results;
 "50
-[v _QI_current_edge `E10262 ~T0 @X0 1 e ]
+[v _QI_current_edge `E10291 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 47: enum qi_edge_type{
 [; ;freq_meas.h: 48: qi_period_rising_1 = 0,
 [; ;freq_meas.h: 49: qi_period_rising_2 = 1
@@ -11358,9 +11372,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.h: 54: uint8_t getHoursFromOnTime(uint32_t input_seconds);
 [; ;heartbeat_timer.h: 57: uint8_t getMinutesFromOnTime(uint32_t input_seconds);
 [; ;heartbeat_timer.h: 60: uint8_t getSecondsFromOnTime(uint32_t input_seconds);
-[v F10287 `Cuc ~T0 @X0 -> 8 `i t ]
+[v F10316 `Cuc ~T0 @X0 -> 8 `i t ]
 "17 oled.c
-[v _OledFont `F10287 ~T0 @X0 -> 0 `x e ]
+[v _OledFont `F10316 ~T0 @X0 -> 0 `x e ]
 [i _OledFont
 :U ..
 :U ..
@@ -13069,7 +13083,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 336: OLED_Frame = OLED_Boot_Frame_2;
 "336
-[e = _OLED_Frame . `E10122 1 ]
+[e = _OLED_Frame . `E10149 1 ]
 [; ;oled.c: 337: OLED_update_time = 3;
 "337
 [e = _OLED_update_time -> -> 3 `i `uc ]
@@ -13111,7 +13125,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 359: OLED_Frame = OLED_Boot_Frame_3;
 "359
-[e = _OLED_Frame . `E10122 2 ]
+[e = _OLED_Frame . `E10149 2 ]
 [; ;oled.c: 360: OLED_update_time = 3;
 "360
 [e = _OLED_update_time -> -> 3 `i `uc ]
@@ -13141,7 +13155,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 374: OLED_Frame = OLED_Boot_Frame_4;
 "374
-[e = _OLED_Frame . `E10122 3 ]
+[e = _OLED_Frame . `E10149 3 ]
 [; ;oled.c: 375: OLED_update_time = 3;
 "375
 [e = _OLED_update_time -> -> 3 `i `uc ]
@@ -13171,7 +13185,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 389: OLED_Frame = OLED_Charge_Status;
 "389
-[e = _OLED_Frame . `E10122 4 ]
+[e = _OLED_Frame . `E10149 4 ]
 [; ;oled.c: 390: OLED_update_time = 3;
 "390
 [e = _OLED_update_time -> -> 3 `i `uc ]
@@ -13201,7 +13215,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 404: OLED_Frame = OLED_Charge_Status;
 "404
-[e = _OLED_Frame . `E10122 4 ]
+[e = _OLED_Frame . `E10149 4 ]
 [; ;oled.c: 405: OLED_update_time = 1;
 "405
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13231,7 +13245,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 419: OLED_Frame = OLED_POS12_Voltage;
 "419
-[e = _OLED_Frame . `E10122 5 ]
+[e = _OLED_Frame . `E10149 5 ]
 [; ;oled.c: 420: OLED_update_time = 1;
 "420
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13261,7 +13275,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 434: OLED_Frame = OLED_POS5_Voltage;
 "434
-[e = _OLED_Frame . `E10122 6 ]
+[e = _OLED_Frame . `E10149 6 ]
 [; ;oled.c: 435: OLED_update_time = 1;
 "435
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13291,7 +13305,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 449: OLED_Frame = OLED_POS12_Current;
 "449
-[e = _OLED_Frame . `E10122 7 ]
+[e = _OLED_Frame . `E10149 7 ]
 [; ;oled.c: 450: OLED_update_time = 1;
 "450
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13321,7 +13335,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 464: OLED_Frame = OLED_QI_Current;
 "464
-[e = _OLED_Frame . `E10122 8 ]
+[e = _OLED_Frame . `E10149 8 ]
 [; ;oled.c: 465: OLED_update_time = 1;
 "465
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13351,7 +13365,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 479: OLED_Frame = OLED_Input_Power;
 "479
-[e = _OLED_Frame . `E10122 9 ]
+[e = _OLED_Frame . `E10149 9 ]
 [; ;oled.c: 480: OLED_update_time = 1;
 "480
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13381,7 +13395,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 494: OLED_Frame = OLED_Output_Power;
 "494
-[e = _OLED_Frame . `E10122 10 ]
+[e = _OLED_Frame . `E10149 10 ]
 [; ;oled.c: 495: OLED_update_time = 1;
 "495
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13411,7 +13425,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 509: OLED_Frame = OLED_Efficiency;
 "509
-[e = _OLED_Frame . `E10122 11 ]
+[e = _OLED_Frame . `E10149 11 ]
 [; ;oled.c: 510: OLED_update_time = 1;
 "510
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13441,7 +13455,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 524: OLED_Frame = OLED_QI_Temp;
 "524
-[e = _OLED_Frame . `E10122 12 ]
+[e = _OLED_Frame . `E10149 12 ]
 [; ;oled.c: 525: OLED_update_time = 1;
 "525
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13471,7 +13485,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 539: OLED_Frame = OLED_POS5_Temp;
 "539
-[e = _OLED_Frame . `E10122 13 ]
+[e = _OLED_Frame . `E10149 13 ]
 [; ;oled.c: 540: OLED_update_time = 1;
 "540
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13501,7 +13515,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 554: OLED_Frame = OLED_Ambient_Temp;
 "554
-[e = _OLED_Frame . `E10122 14 ]
+[e = _OLED_Frame . `E10149 14 ]
 [; ;oled.c: 555: OLED_update_time = 1;
 "555
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13531,7 +13545,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 569: OLED_Frame = OLED_Micro_Temp;
 "569
-[e = _OLED_Frame . `E10122 15 ]
+[e = _OLED_Frame . `E10149 15 ]
 [; ;oled.c: 570: OLED_update_time = 1;
 "570
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13549,7 +13563,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 65C ]
 [; ;oled.c: 579: if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
 "579
-[e $ ! || == -> _nxq_charge_state `i -> . `E10202 0 `i == -> _nxq_charge_state `i -> . `E10202 3 `i 1513  ]
+[e $ ! || == -> _nxq_charge_state `i -> . `E10229 0 `i == -> _nxq_charge_state `i -> . `E10229 3 `i 1513  ]
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 66C ]
 [e $U 1514  ]
 "580
@@ -13568,7 +13582,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 585: OLED_Frame = OLED_POS5_FSW;
 "585
-[e = _OLED_Frame . `E10122 16 ]
+[e = _OLED_Frame . `E10149 16 ]
 [; ;oled.c: 586: OLED_update_time = 1;
 "586
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13586,7 +13600,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 70C ]
 [; ;oled.c: 595: if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
 "595
-[e $ ! || == -> _nxq_charge_state `i -> . `E10202 0 `i == -> _nxq_charge_state `i -> . `E10202 3 `i 1516  ]
+[e $ ! || == -> _nxq_charge_state `i -> . `E10229 0 `i == -> _nxq_charge_state `i -> . `E10229 3 `i 1516  ]
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 71C ]
 [e $U 1517  ]
 "596
@@ -13605,7 +13619,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 601: OLED_Frame = OLED_QI_FSW;
 "601
-[e = _OLED_Frame . `E10122 17 ]
+[e = _OLED_Frame . `E10149 17 ]
 [; ;oled.c: 602: OLED_update_time = 1;
 "602
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13717,7 +13731,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 661: OLED_Frame = OLED_Dev_On_Time;
 "661
-[e = _OLED_Frame . `E10122 18 ]
+[e = _OLED_Frame . `E10149 18 ]
 [; ;oled.c: 662: OLED_update_time = 1;
 "662
 [e = _OLED_update_time -> -> 1 `i `uc ]
@@ -13747,7 +13761,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 676: OLED_Frame = OLED_Cause_Of_Reset;
 "676
-[e = _OLED_Frame . `E10122 19 ]
+[e = _OLED_Frame . `E10149 19 ]
 [; ;oled.c: 677: OLED_update_time = 255;
 "677
 [e = _OLED_update_time -> -> 255 `i `uc ]
@@ -13785,7 +13799,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 699: OLED_Frame = OLED_Dev_Rev_ID;
 "699
-[e = _OLED_Frame . `E10122 20 ]
+[e = _OLED_Frame . `E10149 20 ]
 [; ;oled.c: 700: OLED_update_time = 255;
 "700
 [e = _OLED_update_time -> -> 255 `i `uc ]
@@ -13815,7 +13829,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 714: OLED_Frame = OLED_COM_PORT_SET;
 "714
-[e = _OLED_Frame . `E10122 21 ]
+[e = _OLED_Frame . `E10149 21 ]
 [; ;oled.c: 715: OLED_update_time = 255;
 "715
 [e = _OLED_update_time -> -> 255 `i `uc ]
@@ -13845,7 +13859,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
 [; ;oled.c: 729: OLED_Frame = OLED_TITLE_FRAME;
 "729
-[e = _OLED_Frame . `E10122 22 ]
+[e = _OLED_Frame . `E10149 22 ]
 [; ;oled.c: 730: OLED_update_time = 255;
 "730
 [e = _OLED_update_time -> -> 255 `i `uc ]
@@ -13879,30 +13893,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1494  ]
 "324
 [e :U 1495 ]
-[e [\ _OLED_Frame , $ . `E10122 0 1496
- , $ . `E10122 1 1497
- , $ . `E10122 2 1498
- , $ . `E10122 3 1499
- , $ . `E10122 4 1500
- , $ . `E10122 5 1501
- , $ . `E10122 6 1502
- , $ . `E10122 7 1503
- , $ . `E10122 8 1504
- , $ . `E10122 9 1505
- , $ . `E10122 10 1506
- , $ . `E10122 11 1507
- , $ . `E10122 12 1508
- , $ . `E10122 13 1509
- , $ . `E10122 14 1510
- , $ . `E10122 15 1511
- , $ . `E10122 16 1512
- , $ . `E10122 17 1515
- , $ . `E10122 18 1518
- , $ . `E10122 19 1527
- , $ . `E10122 20 1528
- , $ . `E10122 21 1529
- , $ . `E10122 22 1530
- , $ . `E10122 23 1531
+[e [\ _OLED_Frame , $ . `E10149 0 1496
+ , $ . `E10149 1 1497
+ , $ . `E10149 2 1498
+ , $ . `E10149 3 1499
+ , $ . `E10149 4 1500
+ , $ . `E10149 5 1501
+ , $ . `E10149 6 1502
+ , $ . `E10149 7 1503
+ , $ . `E10149 8 1504
+ , $ . `E10149 9 1505
+ , $ . `E10149 10 1506
+ , $ . `E10149 11 1507
+ , $ . `E10149 12 1508
+ , $ . `E10149 13 1509
+ , $ . `E10149 14 1510
+ , $ . `E10149 15 1511
+ , $ . `E10149 16 1512
+ , $ . `E10149 17 1515
+ , $ . `E10149 18 1518
+ , $ . `E10149 19 1527
+ , $ . `E10149 20 1528
+ , $ . `E10149 21 1529
+ , $ . `E10149 22 1530
+ , $ . `E10149 23 1531
  1532 ]
 "747
 [e :U 1494 ]

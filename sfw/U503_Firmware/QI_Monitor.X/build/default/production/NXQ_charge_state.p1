@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"21 NXQ_charge_state.h
-[c E9458 0 1 2 3 .. ]
-[n E9458 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+"22 NXQ_charge_state.h
+[c E9485 0 1 2 3 .. ]
+[n E9485 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "8168 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S452 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S452 . IOCBN0 IOCBN1 IOCBN2 IOCBN3 IOCBN4 IOCBN5 IOCBN6 IOCBN7 ]
@@ -14,6 +14,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR3_Reload `(v ~T0 @X0 0 ef ]
 "129
 [v _TMR3_StartTimer `(v ~T0 @X0 0 ef ]
+"129 mcc_generated_files/tmr1.h
+[v _TMR1_StartTimer `(v ~T0 @X0 0 ef ]
 "16255 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S805 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S805 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
@@ -25,8 +27,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S804 . . . ]
 "16270
 [v _PORTBbits `VS804 ~T0 @X0 0 e@3982 ]
+"271 mcc_generated_files/tmr1.h
+[v _TMR1_Reload `(v ~T0 @X0 0 ef ]
 "161 mcc_generated_files/tmr3.h
 [v _TMR3_StopTimer `(v ~T0 @X0 0 ef ]
+"161 mcc_generated_files/tmr1.h
+[v _TMR1_StopTimer `(v ~T0 @X0 0 ef ]
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10757,19 +10763,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 385: void TMR3_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
-"21 NXQ_charge_state.h
-[v _nxq_charge_state `E9458 ~T0 @X0 1 e ]
-[; ;NXQ_charge_state.h: 14: enum nxq_charge_state_t {
-[; ;NXQ_charge_state.h: 16: QI_Idle = 0,
-[; ;NXQ_charge_state.h: 17: QI_Charging = 1,
-[; ;NXQ_charge_state.h: 18: QI_Fully_Charged = 2,
-[; ;NXQ_charge_state.h: 19: QI_Error = 3
-[; ;NXQ_charge_state.h: 21: } nxq_charge_state;
-[; ;NXQ_charge_state.h: 24: char * getNXQChargeStateStringCaps(void);
-[; ;NXQ_charge_state.h: 27: char * getNXQChargeStateString(void);
-[; ;NXQ_charge_state.h: 30: void QIIdleIOCHandler(void);
-[; ;NXQ_charge_state.h: 33: void QIChargeIOCHandler(void);
-[; ;NXQ_charge_state.h: 36: void QIIdleTimerHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+"22 NXQ_charge_state.h
+[v _nxq_charge_state `E9485 ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 15: enum nxq_charge_state_t {
+[; ;NXQ_charge_state.h: 17: QI_Idle = 0,
+[; ;NXQ_charge_state.h: 18: QI_Charging = 1,
+[; ;NXQ_charge_state.h: 19: QI_Fully_Charged = 2,
+[; ;NXQ_charge_state.h: 20: QI_Error = 3
+[; ;NXQ_charge_state.h: 22: } nxq_charge_state;
+[; ;NXQ_charge_state.h: 25: char * getNXQChargeStateStringCaps(void);
+[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateString(void);
+[; ;NXQ_charge_state.h: 31: void QIIdleIOCHandler(void);
+[; ;NXQ_charge_state.h: 34: void QIChargeIOCHandler(void);
+[; ;NXQ_charge_state.h: 37: void QIIdleChargedTimerHandler(void);
+[; ;NXQ_charge_state.h: 40: void QIErrorTimerHandler(void);
 "9 NXQ_charge_state.c
 [v _getNXQChargeStateString `(*uc ~T0 @X0 1 ef ]
 {
@@ -10836,10 +10856,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1435  ]
 "11
 [e :U 1436 ]
-[e [\ _nxq_charge_state , $ . `E9458 0 1437
- , $ . `E9458 1 1438
- , $ . `E9458 2 1439
- , $ . `E9458 3 1440
+[e [\ _nxq_charge_state , $ . `E9485 0 1437
+ , $ . `E9485 1 1438
+ , $ . `E9485 2 1439
+ , $ . `E9485 3 1440
  1441 ]
 "33
 [e :U 1435 ]
@@ -10913,10 +10933,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1443  ]
 "40
 [e :U 1444 ]
-[e [\ _nxq_charge_state , $ . `E9458 0 1445
- , $ . `E9458 1 1446
- , $ . `E9458 2 1447
- , $ . `E9458 3 1448
+[e [\ _nxq_charge_state , $ . `E9485 0 1445
+ , $ . `E9485 1 1446
+ , $ . `E9485 2 1447
+ , $ . `E9485 3 1448
  1449 ]
 "62
 [e :U 1443 ]
@@ -10940,93 +10960,113 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;NXQ_charge_state.c: 72: TMR3_StartTimer();
 "72
 [e ( _TMR3_StartTimer ..  ]
-"74
+[; ;NXQ_charge_state.c: 75: TMR1_StartTimer();
+"75
+[e ( _TMR1_StartTimer ..  ]
+"77
 }
 [e :U 1451 ]
-[; ;NXQ_charge_state.c: 74: }
-[; ;NXQ_charge_state.c: 76: }
-"76
+[; ;NXQ_charge_state.c: 77: }
+[; ;NXQ_charge_state.c: 79: }
+"79
 [e :UE 1450 ]
 }
-"79
+"82
 [v _QIChargeIOCHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;NXQ_charge_state.c: 79: void QIChargeIOCHandler(void) {
+[; ;NXQ_charge_state.c: 82: void QIChargeIOCHandler(void) {
 [e :U _QIChargeIOCHandler ]
 [f ]
-[; ;NXQ_charge_state.c: 81: if (IOCBNbits.IOCBN3 && PORTBbits.RB2 == 1) {
-"81
+[; ;NXQ_charge_state.c: 84: if (IOCBNbits.IOCBN3 && PORTBbits.RB2 == 1) {
+"84
 [e $ ! && != -> . . _IOCBNbits 0 3 `i -> -> -> 0 `i `Vuc `i == -> . . _PORTBbits 0 2 `i -> 1 `i 1453  ]
 {
-[; ;NXQ_charge_state.c: 83: nxq_charge_state = QI_Charging;
-"83
-[e = _nxq_charge_state . `E9458 1 ]
-"85
+[; ;NXQ_charge_state.c: 86: nxq_charge_state = QI_Charging;
+"86
+[e = _nxq_charge_state . `E9485 1 ]
+"88
 }
 [e :U 1453 ]
-[; ;NXQ_charge_state.c: 85: }
-[; ;NXQ_charge_state.c: 87: TMR3_Reload();
-"87
-[e ( _TMR3_Reload ..  ]
-[; ;NXQ_charge_state.c: 88: TMR3_StartTimer();
-"88
-[e ( _TMR3_StartTimer ..  ]
-[; ;NXQ_charge_state.c: 90: }
+[; ;NXQ_charge_state.c: 88: }
+[; ;NXQ_charge_state.c: 90: TMR3_Reload();
 "90
+[e ( _TMR3_Reload ..  ]
+[; ;NXQ_charge_state.c: 91: TMR3_StartTimer();
+"91
+[e ( _TMR3_StartTimer ..  ]
+[; ;NXQ_charge_state.c: 93: TMR1_Reload();
+"93
+[e ( _TMR1_Reload ..  ]
+[; ;NXQ_charge_state.c: 95: }
+"95
 [e :UE 1452 ]
 }
-"93
-[v _QIIdleTimerHandler `(v ~T0 @X0 1 ef ]
+"98
+[v _QIIdleChargedTimerHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;NXQ_charge_state.c: 93: void QIIdleTimerHandler(void) {
-[e :U _QIIdleTimerHandler ]
+[; ;NXQ_charge_state.c: 98: void QIIdleChargedTimerHandler(void) {
+[e :U _QIIdleChargedTimerHandler ]
 [f ]
-[; ;NXQ_charge_state.c: 95: if (PORTBbits.RB2 == 1 && PORTBbits.RB3 == 0) {
-"95
-[e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i == -> . . _PORTBbits 0 3 `i -> 0 `i 1455  ]
+[; ;NXQ_charge_state.c: 100: if (PORTBbits.RB2 == 0 && PORTBbits.RB3 == 0) {
+"100
+[e $ ! && == -> . . _PORTBbits 0 2 `i -> 0 `i == -> . . _PORTBbits 0 3 `i -> 0 `i 1455  ]
 {
-[; ;NXQ_charge_state.c: 97: nxq_charge_state = QI_Error;
-"97
-[e = _nxq_charge_state . `E9458 3 ]
-"99
+[; ;NXQ_charge_state.c: 102: nxq_charge_state = QI_Idle;
+"102
+[e = _nxq_charge_state . `E9485 0 ]
+"104
 }
-[; ;NXQ_charge_state.c: 99: }
+[; ;NXQ_charge_state.c: 104: }
 [e $U 1456  ]
-"101
+"106
 [e :U 1455 ]
-[; ;NXQ_charge_state.c: 101: else if (PORTBbits.RB2 == 0 && PORTBbits.RB3 == 0) {
-[e $ ! && == -> . . _PORTBbits 0 2 `i -> 0 `i == -> . . _PORTBbits 0 3 `i -> 0 `i 1457  ]
+[; ;NXQ_charge_state.c: 106: else if (PORTBbits.RB2 == 1 && PORTBbits.RB3 == 1) {
+[e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i == -> . . _PORTBbits 0 3 `i -> 1 `i 1457  ]
 {
-[; ;NXQ_charge_state.c: 103: nxq_charge_state = QI_Idle;
-"103
-[e = _nxq_charge_state . `E9458 0 ]
-"105
+[; ;NXQ_charge_state.c: 108: nxq_charge_state = QI_Fully_Charged;
+"108
+[e = _nxq_charge_state . `E9485 2 ]
+"110
 }
-[; ;NXQ_charge_state.c: 105: }
-[e $U 1458  ]
-"107
 [e :U 1457 ]
-[; ;NXQ_charge_state.c: 107: else if (PORTBbits.RB2 == 1 && PORTBbits.RB3 == 1) {
-[e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i == -> . . _PORTBbits 0 3 `i -> 1 `i 1459  ]
+"112
+[e :U 1456 ]
+[; ;NXQ_charge_state.c: 110: }
+[; ;NXQ_charge_state.c: 112: TMR3_StopTimer();
+[e ( _TMR3_StopTimer ..  ]
+[; ;NXQ_charge_state.c: 113: TMR3_Reload();
+"113
+[e ( _TMR3_Reload ..  ]
+[; ;NXQ_charge_state.c: 115: }
+"115
+[e :UE 1454 ]
+}
+"118
+[v _QIErrorTimerHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;NXQ_charge_state.c: 109: nxq_charge_state = QI_Fully_Charged;
-"109
-[e = _nxq_charge_state . `E9458 2 ]
-"111
+[; ;NXQ_charge_state.c: 118: void QIErrorTimerHandler(void) {
+[e :U _QIErrorTimerHandler ]
+[f ]
+[; ;NXQ_charge_state.c: 120: if (PORTBbits.RB2 == 1 && PORTBbits.RB3 == 0) {
+"120
+[e $ ! && == -> . . _PORTBbits 0 2 `i -> 1 `i == -> . . _PORTBbits 0 3 `i -> 0 `i 1459  ]
+{
+[; ;NXQ_charge_state.c: 122: nxq_charge_state = QI_Error;
+"122
+[e = _nxq_charge_state . `E9485 3 ]
+"124
 }
 [e :U 1459 ]
-"113
-[e :U 1458 ]
-[e :U 1456 ]
-[; ;NXQ_charge_state.c: 111: }
-[; ;NXQ_charge_state.c: 113: TMR3_StopTimer();
-[e ( _TMR3_StopTimer ..  ]
-[; ;NXQ_charge_state.c: 114: TMR3_Reload();
-"114
-[e ( _TMR3_Reload ..  ]
-[; ;NXQ_charge_state.c: 116: }
-"116
-[e :UE 1454 ]
+[; ;NXQ_charge_state.c: 124: }
+[; ;NXQ_charge_state.c: 126: TMR1_StopTimer();
+"126
+[e ( _TMR1_StopTimer ..  ]
+[; ;NXQ_charge_state.c: 127: TMR1_Reload();
+"127
+[e ( _TMR1_Reload ..  ]
+[; ;NXQ_charge_state.c: 129: }
+"129
+[e :UE 1458 ]
 }
 [a 4C 101 114 114 111 114 0 ]
 [a 9C 69 114 114 111 114 0 ]

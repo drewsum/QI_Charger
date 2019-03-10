@@ -2,8 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9729 0 1 2 3 4 5 6 .. ]
 [n E9729 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F10061 `(v ~T0 @X0 0 tf ]
-[v F10064 `(v ~T0 @X0 0 tf ]
+[v F10088 `(v ~T0 @X0 0 tf ]
+[v F10091 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
 [s S1443 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1443 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
@@ -11,8 +11,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S1444 `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i ]
 [n S1444 OLED_RAM_Buffer_t line0 line1 line2 line3 ]
 "100
-[c E10126 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
-[n E10126 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
+[c E10153 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
+[n E10153 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -10924,6 +10924,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
 [; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
@@ -11076,10 +11089,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F10061 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F10088 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F10064 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F10091 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11091,9 +11104,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 80: void SYSTEM_Initialize(void);
-[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 106: void PMD_Initialize(void);
+[; ;mcc.h: 81: void SYSTEM_Initialize(void);
+[; ;mcc.h: 94: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 107: void PMD_Initialize(void);
 "52 error_handling.h
 [v _error_handler `S1443 ~T0 @X0 1 e ]
 [; ;error_handling.h: 41: struct error_struct {
@@ -11148,7 +11161,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.h: 95: OLED_Idle = 23
 [; ;oled.h: 97: } OLED_Frame_t;
 "100
-[v _OLED_Frame `E10126 ~T0 @X0 1 e ]
+[v _OLED_Frame `E10153 ~T0 @X0 1 e ]
 [; ;oled.h: 100: OLED_Frame_t OLED_Frame;
 "103
 [v _OLED_update_flag `uc ~T0 @X0 1 e ]
@@ -11178,11 +11191,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;cap_touch_int.c: 13: OLED_Frame--;
 "13
-[e -- _OLED_Frame -> -> 1 `i `E10126 ]
+[e -- _OLED_Frame -> -> 1 `i `E10153 ]
 [; ;cap_touch_int.c: 14: if (OLED_Frame == 4 - 1) OLED_Frame = 22;
 "14
 [e $ ! == -> _OLED_Frame `i - -> 4 `i -> 1 `i 1446  ]
-[e = _OLED_Frame -> -> 22 `i `E10126 ]
+[e = _OLED_Frame -> -> 22 `i `E10153 ]
 [e :U 1446 ]
 [; ;cap_touch_int.c: 15: OLED_update_flag = 1;
 "15
@@ -11199,11 +11212,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;cap_touch_int.c: 22: OLED_Frame++;
 "22
-[e ++ _OLED_Frame -> -> 1 `i `E10126 ]
+[e ++ _OLED_Frame -> -> 1 `i `E10153 ]
 [; ;cap_touch_int.c: 23: if (OLED_Frame == 22 + 1) OLED_Frame = 4;
 "23
 [e $ ! == -> _OLED_Frame `i + -> 22 `i -> 1 `i 1448  ]
-[e = _OLED_Frame -> -> 4 `i `E10126 ]
+[e = _OLED_Frame -> -> 4 `i `E10153 ]
 [e :U 1448 ]
 [; ;cap_touch_int.c: 24: OLED_update_flag = 1;
 "24

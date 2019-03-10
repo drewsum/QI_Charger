@@ -71,6 +71,9 @@ void QIIdleIOCHandler(void) {
         TMR3_Reload();
         TMR3_StartTimer();
         
+        // TMR1_Reload();
+        TMR1_StartTimer();
+        
     }
          
 }
@@ -87,18 +90,14 @@ void QIChargeIOCHandler(void) {
     TMR3_Reload();
     TMR3_StartTimer();
     
+    TMR1_Reload();
+    
 }
 
 // This function should be called by a 800 ms timer that is started on the falling edge on both IDLE and CHARGE signals
-void QIIdleTimerHandler(void) {
-     
-    if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
-     
-        nxq_charge_state = QI_Error;
-        
-    }
+void QIIdleChargedTimerHandler(void) {
     
-    else if (QI_IDLE_PIN == 0 && QI_CHARGE_PIN == 0) {
+    if (QI_IDLE_PIN == 0 && QI_CHARGE_PIN == 0) {
      
         nxq_charge_state = QI_Idle;
         
@@ -114,3 +113,18 @@ void QIIdleTimerHandler(void) {
     TMR3_Reload();
     
 }
+
+// This function is called by a timer ISR and detects if an error condition has occurred
+void QIErrorTimerHandler(void) {
+
+    if (QI_IDLE_PIN == 1 && QI_CHARGE_PIN == 0) {
+     
+        nxq_charge_state = QI_Error;
+        
+    }
+
+    TMR1_StopTimer();
+    TMR1_Reload();
+    
+}
+

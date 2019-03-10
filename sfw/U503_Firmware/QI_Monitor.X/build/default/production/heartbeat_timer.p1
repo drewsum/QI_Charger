@@ -2,8 +2,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 "97 mcc_generated_files/i2c2.h
 [c E9621 0 1 2 3 4 5 6 .. ]
 [n E9621 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9953 `(v ~T0 @X0 0 tf ]
-[v F9956 `(v ~T0 @X0 0 tf ]
+[v F9980 `(v ~T0 @X0 0 tf ]
+[v F9983 `(v ~T0 @X0 0 tf ]
 "56 LM73_I2C.h
 [s S1439 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
 [n S1439 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
@@ -14,14 +14,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S1445 `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i `uc -> 17 `i ]
 [n S1445 OLED_RAM_Buffer_t line0 line1 line2 line3 ]
 "100
-[c E10152 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
-[n E10152 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
+[c E10179 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 .. ]
+[n E10179 . OLED_Boot_Frame_1 OLED_Boot_Frame_2 OLED_Boot_Frame_3 OLED_Boot_Frame_4 OLED_Charge_Status OLED_POS12_Voltage OLED_POS5_Voltage OLED_POS12_Current OLED_QI_Current OLED_Input_Power OLED_Output_Power OLED_Efficiency OLED_QI_Temp OLED_POS5_Temp OLED_Ambient_Temp OLED_Micro_Temp OLED_POS5_FSW OLED_QI_FSW OLED_Dev_On_Time OLED_Cause_Of_Reset OLED_Dev_Rev_ID OLED_COM_PORT_SET OLED_TITLE_FRAME OLED_Idle  ]
 "39 freq_meas.h
 [s S1446 `f 1 `ui 1 ]
 [n S1446 . QI_Freq_Meas QI_Freq_Meas_Raw ]
 "50
-[c E10208 0 1 .. ]
-[n E10208 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
+[c E10235 0 1 .. ]
+[n E10235 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "15581 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S784 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S784 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
@@ -10908,6 +10908,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 403: extern void (*TMR3_InterruptHandler)(void);
 [; ;tmr3.h: 421: void TMR3_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;tmr1.h: 100: void TMR1_Initialize(void);
+[; ;tmr1.h: 129: void TMR1_StartTimer(void);
+[; ;tmr1.h: 161: void TMR1_StopTimer(void);
+[; ;tmr1.h: 196: uint16_t TMR1_ReadTimer(void);
+[; ;tmr1.h: 235: void TMR1_WriteTimer(uint16_t timerVal);
+[; ;tmr1.h: 271: void TMR1_Reload(void);
+[; ;tmr1.h: 310: void TMR1_StartSinglePulseAcquisition(void);
+[; ;tmr1.h: 349: uint8_t TMR1_CheckGateValueStatus(void);
+[; ;tmr1.h: 367: void TMR1_ISR(void);
+[; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
+[; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
 [; ;tmr2.h: 89: TMR2_ROP_STARTS_TMRON,
@@ -11060,10 +11073,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9953 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9980 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9956 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9983 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -11075,9 +11088,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 343: void EUSART2_Receive_ISR(void);
 [; ;eusart2.h: 363: void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart2.h: 383: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
-[; ;mcc.h: 80: void SYSTEM_Initialize(void);
-[; ;mcc.h: 93: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 106: void PMD_Initialize(void);
+[; ;mcc.h: 81: void SYSTEM_Initialize(void);
+[; ;mcc.h: 94: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 107: void PMD_Initialize(void);
 "65 LM73_I2C.h
 [v _LM73_temp_results `S1439 ~T0 @X0 1 e ]
 [; ;LM73_I2C.h: 56: struct LM73_temp_results_t {
@@ -11198,7 +11211,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.h: 95: OLED_Idle = 23
 [; ;oled.h: 97: } OLED_Frame_t;
 "100
-[v _OLED_Frame `E10152 ~T0 @X0 1 e ]
+[v _OLED_Frame `E10179 ~T0 @X0 1 e ]
 [; ;oled.h: 100: OLED_Frame_t OLED_Frame;
 "103
 [v _OLED_update_flag `uc ~T0 @X0 1 e ]
@@ -11227,7 +11240,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
 [; ;freq_meas.h: 44: } freq_meas_results;
 "50
-[v _QI_current_edge `E10208 ~T0 @X0 1 e ]
+[v _QI_current_edge `E10235 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 47: enum qi_edge_type{
 [; ;freq_meas.h: 48: qi_period_rising_1 = 0,
 [; ;freq_meas.h: 49: qi_period_rising_2 = 1
@@ -11282,7 +11295,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _seconds `uc ~T0 @X0 1 a ]
 [v _remainder `uc ~T0 @X0 1 a ]
 "45
-[v F10225 `uc ~T0 @X0 -> 40 `i s return_string ]
+[v F10252 `uc ~T0 @X0 -> 40 `i s return_string ]
 "48
 [v _i `uc ~T0 @X0 1 a ]
 [; ;heartbeat_timer.c: 44: uint8_t years, days, hours, minutes, seconds, remainder;
@@ -11297,13 +11310,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;heartbeat_timer.c: 51: return_string[i] = '\0';
 "51
-[e = *U + &U F10225 * -> _i `ux -> -> # *U &U F10225 `ui `ux -> -> 0 `ui `uc ]
+[e = *U + &U F10252 * -> _i `ux -> -> # *U &U F10252 `ui `ux -> -> 0 `ui `uc ]
 "53
 }
 "49
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 1453 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U F10225 `*Cuc 1450  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U F10252 `*Cuc 1450  ]
 [e :U 1451 ]
 "53
 }
@@ -11366,7 +11379,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 79: }
 [; ;heartbeat_timer.c: 81: strcat(return_string, buff);
 "81
-[e ( _strcat (2 , &U F10225 -> &U _buff `*Cuc ]
+[e ( _strcat (2 , &U F10252 -> &U _buff `*Cuc ]
 "83
 }
 [e :U 1454 ]
@@ -11399,7 +11412,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 97: }
 [; ;heartbeat_timer.c: 99: strcat(return_string, buff);
 "99
-[e ( _strcat (2 , &U F10225 -> &U _buff `*Cuc ]
+[e ( _strcat (2 , &U F10252 -> &U _buff `*Cuc ]
 "100
 }
 [e :U 1457 ]
@@ -11432,7 +11445,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 114: }
 [; ;heartbeat_timer.c: 116: strcat(return_string, buff);
 "116
-[e ( _strcat (2 , &U F10225 -> &U _buff `*Cuc ]
+[e ( _strcat (2 , &U F10252 -> &U _buff `*Cuc ]
 "118
 }
 [e :U 1460 ]
@@ -11465,7 +11478,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 132: }
 [; ;heartbeat_timer.c: 134: strcat(return_string, buff);
 "134
-[e ( _strcat (2 , &U F10225 -> &U _buff `*Cuc ]
+[e ( _strcat (2 , &U F10252 -> &U _buff `*Cuc ]
 "136
 }
 [e :U 1463 ]
@@ -11498,14 +11511,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 150: }
 [; ;heartbeat_timer.c: 152: strcat(return_string, buff);
 "152
-[e ( _strcat (2 , &U F10225 -> &U _buff `*Cuc ]
+[e ( _strcat (2 , &U F10252 -> &U _buff `*Cuc ]
 "154
 }
 [e :U 1466 ]
 [; ;heartbeat_timer.c: 154: }
 [; ;heartbeat_timer.c: 156: return return_string;
 "156
-[e ) &U F10225 ]
+[e ) &U F10252 ]
 [e $UE 1449  ]
 [; ;heartbeat_timer.c: 158: }
 "158
