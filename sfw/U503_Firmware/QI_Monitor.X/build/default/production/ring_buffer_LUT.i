@@ -17040,7 +17040,38 @@ char line[64];
 # 81
 void terminal_ringBufferPull(void);
 
-# 38 "heartbeat_timer.h"
+# 15 "NXQ_charge_state.h"
+unsigned long QI_charge_time;
+
+
+enum nxq_charge_state_t {
+
+QI_Idle = 0,
+QI_Charging = 1,
+QI_Fully_Charged = 2,
+QI_Error = 3
+
+} nxq_charge_state;
+
+
+char * getNXQChargeStateStringCaps(void);
+
+
+char * getNXQChargeStateString(void);
+
+
+void QIIdleIOCHandler(void);
+
+
+void QIChargeIOCHandler(void);
+
+
+void QIIdleChargedTimerHandler(void);
+
+
+void QIErrorTimerHandler(void);
+
+# 40 "heartbeat_timer.h"
 unsigned long device_on_time;
 
 
@@ -17216,34 +17247,6 @@ void LM73AcquisitionHandler(void);
 
 
 void LM73Convert(void);
-
-# 15 "NXQ_charge_state.h"
-enum nxq_charge_state_t {
-
-QI_Idle = 0,
-QI_Charging = 1,
-QI_Fully_Charged = 2,
-QI_Error = 3
-
-} nxq_charge_state;
-
-
-char * getNXQChargeStateStringCaps(void);
-
-
-char * getNXQChargeStateString(void);
-
-
-void QIIdleIOCHandler(void);
-
-
-void QIChargeIOCHandler(void);
-
-
-void QIIdleChargedTimerHandler(void);
-
-
-void QIErrorTimerHandler(void);
 
 # 39 "freq_meas.h"
 struct {
@@ -17688,6 +17691,16 @@ terminalTextAttributesReset();
 }
 
 
+else if((0 == strcmp(line, "QI Charge Time?"))) {
+
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+if (QI_charge_time == 0) printf("QI Converter is not currently charging a phone\n\r");
+else printf("QI Converter has been charging a phone for: %s\n\r", getStringSecondsAsTime(QI_charge_time));
+terminalTextAttributesReset();
+
+}
+
+
 else if((0 == strcmp(line, "Help"))) {
 
 terminalTextAttributes(YELLOW, BLACK, NORMAL);
@@ -17706,6 +17719,7 @@ printf( "    Help: Lists available commands\n\r"
 "    Enable QI: Enabled QI wireless power conversion\n\r"
 "    Disable QI: Disables QI wireless power conversion\n\r"
 "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
+"    QI Charge Time?: Prints the elapsed time that the QI converter has been charging a phone\n\r"
 "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
 "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
 "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"

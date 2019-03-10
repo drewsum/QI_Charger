@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"22 NXQ_charge_state.h
-[c E9485 0 1 2 3 .. ]
-[n E9485 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
+"25 NXQ_charge_state.h
+[c E9486 0 1 2 3 .. ]
+[n E9486 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "8168 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S452 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S452 . IOCBN0 IOCBN1 IOCBN2 IOCBN3 IOCBN4 IOCBN5 IOCBN6 IOCBN7 ]
@@ -10776,20 +10776,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.h: 385: void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;tmr1.h: 403: extern void (*TMR1_InterruptHandler)(void);
 [; ;tmr1.h: 421: void TMR1_DefaultInterruptHandler(void);
-"22 NXQ_charge_state.h
-[v _nxq_charge_state `E9485 ~T0 @X0 1 e ]
-[; ;NXQ_charge_state.h: 15: enum nxq_charge_state_t {
-[; ;NXQ_charge_state.h: 17: QI_Idle = 0,
-[; ;NXQ_charge_state.h: 18: QI_Charging = 1,
-[; ;NXQ_charge_state.h: 19: QI_Fully_Charged = 2,
-[; ;NXQ_charge_state.h: 20: QI_Error = 3
-[; ;NXQ_charge_state.h: 22: } nxq_charge_state;
-[; ;NXQ_charge_state.h: 25: char * getNXQChargeStateStringCaps(void);
-[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateString(void);
-[; ;NXQ_charge_state.h: 31: void QIIdleIOCHandler(void);
-[; ;NXQ_charge_state.h: 34: void QIChargeIOCHandler(void);
-[; ;NXQ_charge_state.h: 37: void QIIdleChargedTimerHandler(void);
-[; ;NXQ_charge_state.h: 40: void QIErrorTimerHandler(void);
+"15 NXQ_charge_state.h
+[v _QI_charge_time `ul ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 15: unsigned long QI_charge_time;
+"25
+[v _nxq_charge_state `E9486 ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 18: enum nxq_charge_state_t {
+[; ;NXQ_charge_state.h: 20: QI_Idle = 0,
+[; ;NXQ_charge_state.h: 21: QI_Charging = 1,
+[; ;NXQ_charge_state.h: 22: QI_Fully_Charged = 2,
+[; ;NXQ_charge_state.h: 23: QI_Error = 3
+[; ;NXQ_charge_state.h: 25: } nxq_charge_state;
+[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateStringCaps(void);
+[; ;NXQ_charge_state.h: 31: char * getNXQChargeStateString(void);
+[; ;NXQ_charge_state.h: 34: void QIIdleIOCHandler(void);
+[; ;NXQ_charge_state.h: 37: void QIChargeIOCHandler(void);
+[; ;NXQ_charge_state.h: 40: void QIIdleChargedTimerHandler(void);
+[; ;NXQ_charge_state.h: 43: void QIErrorTimerHandler(void);
 "9 NXQ_charge_state.c
 [v _getNXQChargeStateString `(*uc ~T0 @X0 1 ef ]
 {
@@ -10856,10 +10859,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1435  ]
 "11
 [e :U 1436 ]
-[e [\ _nxq_charge_state , $ . `E9485 0 1437
- , $ . `E9485 1 1438
- , $ . `E9485 2 1439
- , $ . `E9485 3 1440
+[e [\ _nxq_charge_state , $ . `E9486 0 1437
+ , $ . `E9486 1 1438
+ , $ . `E9486 2 1439
+ , $ . `E9486 3 1440
  1441 ]
 "33
 [e :U 1435 ]
@@ -10933,10 +10936,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1443  ]
 "40
 [e :U 1444 ]
-[e [\ _nxq_charge_state , $ . `E9485 0 1445
- , $ . `E9485 1 1446
- , $ . `E9485 2 1447
- , $ . `E9485 3 1448
+[e [\ _nxq_charge_state , $ . `E9486 0 1445
+ , $ . `E9486 1 1446
+ , $ . `E9486 2 1447
+ , $ . `E9486 3 1448
  1449 ]
 "62
 [e :U 1443 ]
@@ -10983,7 +10986,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;NXQ_charge_state.c: 86: nxq_charge_state = QI_Charging;
 "86
-[e = _nxq_charge_state . `E9485 1 ]
+[e = _nxq_charge_state . `E9486 1 ]
 "88
 }
 [e :U 1453 ]
@@ -11013,7 +11016,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;NXQ_charge_state.c: 102: nxq_charge_state = QI_Idle;
 "102
-[e = _nxq_charge_state . `E9485 0 ]
+[e = _nxq_charge_state . `E9486 0 ]
 "104
 }
 [; ;NXQ_charge_state.c: 104: }
@@ -11025,7 +11028,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;NXQ_charge_state.c: 108: nxq_charge_state = QI_Fully_Charged;
 "108
-[e = _nxq_charge_state . `E9485 2 ]
+[e = _nxq_charge_state . `E9486 2 ]
 "110
 }
 [e :U 1457 ]
@@ -11053,7 +11056,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;NXQ_charge_state.c: 122: nxq_charge_state = QI_Error;
 "122
-[e = _nxq_charge_state . `E9485 3 ]
+[e = _nxq_charge_state . `E9486 3 ]
 "124
 }
 [e :U 1459 ]

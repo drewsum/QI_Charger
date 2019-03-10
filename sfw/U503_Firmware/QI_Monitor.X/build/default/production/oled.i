@@ -17040,11 +17040,12 @@ OLED_Micro_Temp = 15,
 OLED_POS5_FSW = 16,
 OLED_QI_FSW = 17,
 OLED_Dev_On_Time = 18,
-OLED_Cause_Of_Reset = 19,
-OLED_Dev_Rev_ID = 20,
-OLED_COM_PORT_SET = 21,
-OLED_TITLE_FRAME = 22,
-OLED_Idle = 23
+OLED_Charge_Time = 19,
+OLED_Cause_Of_Reset = 20,
+OLED_Dev_Rev_ID = 21,
+OLED_COM_PORT_SET = 22,
+OLED_TITLE_FRAME = 23,
+OLED_Idle = 24
 
 } OLED_Frame_t;
 
@@ -17119,6 +17120,9 @@ inline char * getDeviceIDString(uint16_t inputDevID);
 uint16_t getUserID(uint8_t inputUserID);
 
 # 15 "NXQ_charge_state.h"
+unsigned long QI_charge_time;
+
+
 enum nxq_charge_state_t {
 
 QI_Idle = 0,
@@ -17243,7 +17247,7 @@ void freqMeasStartCaptures(void);
 
 void freqMeasConvert(void);
 
-# 38 "heartbeat_timer.h"
+# 40 "heartbeat_timer.h"
 unsigned long device_on_time;
 
 
@@ -17911,6 +17915,53 @@ strcpy(OLED_RAM_Buffer.line3, " ");
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Dev_On_Time;
+OLED_update_time = 1;
+
+break;
+
+case OLED_Charge_Time:
+
+OLED_update_flag = 0;
+
+strcpy(OLED_RAM_Buffer.line0, "QI Charge Time:");
+
+
+if (QI_charge_time >= 3600) {
+
+sprintf(OLED_RAM_Buffer.line1, "%u hours", getHoursFromOnTime(QI_charge_time));
+sprintf(OLED_RAM_Buffer.line2, "%u minutes", getMinutesFromOnTime(QI_charge_time));
+sprintf(OLED_RAM_Buffer.line3, "%u seconds", getSecondsFromOnTime(QI_charge_time));
+
+}
+
+
+else if (QI_charge_time >= 60) {
+
+sprintf(OLED_RAM_Buffer.line1, "%u minutes", getMinutesFromOnTime(QI_charge_time));
+sprintf(OLED_RAM_Buffer.line2, "%u seconds", getSecondsFromOnTime(QI_charge_time));
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+}
+
+else if (QI_charge_time == 0) {
+
+strcpy(OLED_RAM_Buffer.line1, "Not Charging");
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+}
+
+
+else {
+
+sprintf(OLED_RAM_Buffer.line1, "%u seconds", getSecondsFromOnTime(QI_charge_time));
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, " ");
+
+}
+
+OLED_UpdateFromRAMBuffer();
+OLED_Frame = OLED_Charge_Time;
 OLED_update_time = 1;
 
 break;

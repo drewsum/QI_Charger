@@ -435,6 +435,16 @@ void ringBufferLUT(char * line) {
         
     }
     
+    // Report QI charge time since last charging
+    else if((0 == strcmp(line, "QI Charge Time?"))) {
+     
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        if (QI_charge_time == 0) printf("QI Converter is not currently charging a phone\n\r");
+        else printf("QI Converter has been charging a phone for: %s\n\r", getStringSecondsAsTime(QI_charge_time));
+        terminalTextAttributesReset();
+         
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
@@ -454,6 +464,7 @@ void ringBufferLUT(char * line) {
                 "    Enable QI: Enabled QI wireless power conversion\n\r"
                 "    Disable QI: Disables QI wireless power conversion\n\r"
                 "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
+                "    QI Charge Time?: Prints the elapsed time that the QI converter has been charging a phone\n\r"
                 "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
                 "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
                 "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"

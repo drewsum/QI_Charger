@@ -60,6 +60,16 @@
 #include "oled.h"
 #include "freq_meas.h"
 
+// User IDs
+#pragma config IDLOC0 = 0xD
+#pragma config IDLOC1 = 0xE
+#pragma config IDLOC2 = 0xA
+#pragma config IDLOC3 = 0xD
+#pragma config IDLOC4 = 0xB
+#pragma config IDLOC5 = 0xE
+#pragma config IDLOC6 = 0xE
+#pragma config IDLOC7 = 0xF
+
 /*
                          Main application
  */

@@ -17046,11 +17046,12 @@ OLED_Micro_Temp = 15,
 OLED_POS5_FSW = 16,
 OLED_QI_FSW = 17,
 OLED_Dev_On_Time = 18,
-OLED_Cause_Of_Reset = 19,
-OLED_Dev_Rev_ID = 20,
-OLED_COM_PORT_SET = 21,
-OLED_TITLE_FRAME = 22,
-OLED_Idle = 23
+OLED_Charge_Time = 19,
+OLED_Cause_Of_Reset = 20,
+OLED_Dev_Rev_ID = 21,
+OLED_COM_PORT_SET = 22,
+OLED_TITLE_FRAME = 23,
+OLED_Idle = 24
 
 } OLED_Frame_t;
 
@@ -17084,7 +17085,7 @@ void OLED_updateHandler(void);
 void leftCapTouchHandler(void) {
 
 OLED_Frame--;
-if (OLED_Frame == 4 - 1) OLED_Frame = 22;
+if (OLED_Frame == 4 - 1) OLED_Frame = 23;
 OLED_update_flag = 1;
 
 }
@@ -17093,7 +17094,7 @@ OLED_update_flag = 1;
 void rightCapTouchHandler(void) {
 
 OLED_Frame++;
-if (OLED_Frame == 22 + 1) OLED_Frame = 4;
+if (OLED_Frame == 23 + 1) OLED_Frame = 4;
 OLED_update_flag = 1;
 
 }

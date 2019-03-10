@@ -16946,7 +16946,38 @@ void terminalTextAttributesReset(void);
 
 void terminalPrintTestMessage(void);
 
-# 38 "heartbeat_timer.h"
+# 15 "NXQ_charge_state.h"
+unsigned long QI_charge_time;
+
+
+enum nxq_charge_state_t {
+
+QI_Idle = 0,
+QI_Charging = 1,
+QI_Fully_Charged = 2,
+QI_Error = 3
+
+} nxq_charge_state;
+
+
+char * getNXQChargeStateStringCaps(void);
+
+
+char * getNXQChargeStateString(void);
+
+
+void QIIdleIOCHandler(void);
+
+
+void QIChargeIOCHandler(void);
+
+
+void QIIdleChargedTimerHandler(void);
+
+
+void QIErrorTimerHandler(void);
+
+# 40 "heartbeat_timer.h"
 unsigned long device_on_time;
 
 
@@ -17208,34 +17239,6 @@ void leftCapTouchHandler(void);
 
 void rightCapTouchHandler(void);
 
-# 15 "NXQ_charge_state.h"
-enum nxq_charge_state_t {
-
-QI_Idle = 0,
-QI_Charging = 1,
-QI_Fully_Charged = 2,
-QI_Error = 3
-
-} nxq_charge_state;
-
-
-char * getNXQChargeStateStringCaps(void);
-
-
-char * getNXQChargeStateString(void);
-
-
-void QIIdleIOCHandler(void);
-
-
-void QIChargeIOCHandler(void);
-
-
-void QIIdleChargedTimerHandler(void);
-
-
-void QIErrorTimerHandler(void);
-
 # 58 "oled.h"
 struct OLED_RAM_Buffer_t {
 char line0[17];
@@ -17266,11 +17269,12 @@ OLED_Micro_Temp = 15,
 OLED_POS5_FSW = 16,
 OLED_QI_FSW = 17,
 OLED_Dev_On_Time = 18,
-OLED_Cause_Of_Reset = 19,
-OLED_Dev_Rev_ID = 20,
-OLED_COM_PORT_SET = 21,
-OLED_TITLE_FRAME = 22,
-OLED_Idle = 23
+OLED_Charge_Time = 19,
+OLED_Cause_Of_Reset = 20,
+OLED_Dev_Rev_ID = 21,
+OLED_COM_PORT_SET = 22,
+OLED_TITLE_FRAME = 23,
+OLED_Idle = 24
 
 } OLED_Frame_t;
 
@@ -17324,7 +17328,18 @@ void freqMeasStartCaptures(void);
 
 void freqMeasConvert(void);
 
-# 66 "main.c"
+
+# 64 "main.c"
+#pragma config IDLOC0 = 0xD
+#pragma config IDLOC1 = 0xE
+#pragma config IDLOC2 = 0xA
+#pragma config IDLOC3 = 0xD
+#pragma config IDLOC4 = 0xB
+#pragma config IDLOC5 = 0xE
+#pragma config IDLOC6 = 0xE
+#pragma config IDLOC7 = 0xF
+
+# 76
 void main(void)
 {
 

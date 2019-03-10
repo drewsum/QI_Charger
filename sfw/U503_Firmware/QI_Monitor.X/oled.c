@@ -663,6 +663,53 @@ void OLED_updateHandler(void) {
             
             break;
             
+        case OLED_Charge_Time:
+            
+            OLED_update_flag = false;
+            
+            strcpy(OLED_RAM_Buffer.line0, "QI Charge Time:");
+            
+            // If we've been on longer than an hour
+            if (QI_charge_time >= 3600) {
+                
+                sprintf(OLED_RAM_Buffer.line1, "%u hours", getHoursFromOnTime(QI_charge_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u minutes", getMinutesFromOnTime(QI_charge_time));
+                sprintf(OLED_RAM_Buffer.line3, "%u seconds", getSecondsFromOnTime(QI_charge_time));
+                
+            }
+            
+            // Else if we've been on longer than a minute
+            else if (QI_charge_time >= 60) {
+             
+                sprintf(OLED_RAM_Buffer.line1, "%u minutes", getMinutesFromOnTime(QI_charge_time));
+                sprintf(OLED_RAM_Buffer.line2, "%u seconds", getSecondsFromOnTime(QI_charge_time));
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
+            else if (QI_charge_time == 0) {
+             
+                strcpy(OLED_RAM_Buffer.line1, "Not Charging");
+                strcpy(OLED_RAM_Buffer.line2, " ");
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
+            // Else we've been on less than a minute
+            else {
+               
+                sprintf(OLED_RAM_Buffer.line1, "%u seconds", getSecondsFromOnTime(QI_charge_time));
+                strcpy(OLED_RAM_Buffer.line2, " ");
+                strcpy(OLED_RAM_Buffer.line3, " ");
+                
+            }
+            
+            OLED_UpdateFromRAMBuffer();
+            OLED_Frame = OLED_Charge_Time;
+            OLED_update_time = 1;
+            
+            break;
+            
         case OLED_Cause_Of_Reset:
             
             OLED_update_flag = false;

@@ -11,6 +11,9 @@
 #include "mcc_generated_files/tmr3.h"
 #include "mcc_generated_files/tmr1.h"
 
+// This variable keeps track of how long the charge state has been either charging or fully charged
+unsigned long QI_charge_time;
+
 // 
 enum nxq_charge_state_t {
     

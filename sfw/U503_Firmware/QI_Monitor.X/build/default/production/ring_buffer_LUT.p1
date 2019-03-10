@@ -4,9 +4,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n E9581 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
 [v F10001 `(v ~T0 @X0 0 tf ]
 [v F10004 `(v ~T0 @X0 0 tf ]
+"25 NXQ_charge_state.h
+[c E10164 0 1 2 3 .. ]
+[n E10164 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "55 cause_of_reset.h
-[c E10188 0 1 2 3 4 5 6 7 8 .. ]
-[n E10188 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
+[c E10207 0 1 2 3 4 5 6 7 8 .. ]
+[n E10207 reset_types Undefined_Reset Power_On_Reset Brown_Out_Reset Master_Clear_Reset Watch_Dog_Timer_Reset Windowed_Watch_Dog_Timer_Reset RESET_Instruction_Executed Stack_Overflow_Reset Stack_Underflow_Reset  ]
 "50 adc_postprocessing.h
 [c E9803 0 1 4 5 60 61 62 63 .. ]
 [n E9803 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
@@ -22,15 +25,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "56 LM73_I2C.h
 [s S1446 `f 1 `f 1 `f 1 `uc -> 2 `i `uc -> 2 `i `uc -> 2 `i ]
 [n S1446 LM73_temp_results_t QI_temp_result POS5_temp_result Ambient_temp_result QI_data_raw POS5_data_raw Ambient_data_raw ]
-"22 NXQ_charge_state.h
-[c E10270 0 1 2 3 .. ]
-[n E10270 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "39 freq_meas.h
 [s S1447 `f 1 `ui 1 ]
 [n S1447 . QI_Freq_Meas QI_Freq_Meas_Raw ]
 "50
-[c E10292 0 1 .. ]
-[n E10292 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
+[c E10293 0 1 .. ]
+[n E10293 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "45 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 "195 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h
@@ -43,7 +43,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "44 terminal_control.h
 [v _terminalTextAttributes `(v ~T0 @X0 0 ef3`E9495`E9495`E9487 ]
 "62 cause_of_reset.h
-[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10188 ]
+[v _getCauseOfResetString `(*Tuc ~T0 @X0 0 ef1`E10207 ]
 "49 terminal_control.h
 [v _terminalTextAttributesReset `(v ~T0 @X0 0 ef ]
 "48 device_IDs.h
@@ -56,7 +56,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _getMinorRevisionID `(uc ~T0 @X0 0 ef ]
 "52
 [v _getUserID `(ui ~T0 @X0 0 ef1`uc ]
-"45 heartbeat_timer.h
+"47 heartbeat_timer.h
 [v _getStringSecondsAsTime `(*uc ~T0 @X0 0 ef1`ul ]
 "15693 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S787 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -81,7 +81,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _getI2CError `(uc ~T0 @X0 0 ef ]
 "58
 [v _getUARTError `(uc ~T0 @X0 0 ef ]
-"28 NXQ_charge_state.h
+"31 NXQ_charge_state.h
 [v _getNXQChargeStateString `(*uc ~T0 @X0 0 ef ]
 "56 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
@@ -11214,16 +11214,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _line `uc ~T0 @X0 -> 64 `i e ]
 [; ;ring_buffer_interface.h: 48: char line[64];
 [; ;ring_buffer_interface.h: 81: void terminal_ringBufferPull(void);
-"38 heartbeat_timer.h
+"15 NXQ_charge_state.h
+[v _QI_charge_time `ul ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 15: unsigned long QI_charge_time;
+"25
+[v _nxq_charge_state `E10164 ~T0 @X0 1 e ]
+[; ;NXQ_charge_state.h: 18: enum nxq_charge_state_t {
+[; ;NXQ_charge_state.h: 20: QI_Idle = 0,
+[; ;NXQ_charge_state.h: 21: QI_Charging = 1,
+[; ;NXQ_charge_state.h: 22: QI_Fully_Charged = 2,
+[; ;NXQ_charge_state.h: 23: QI_Error = 3
+[; ;NXQ_charge_state.h: 25: } nxq_charge_state;
+[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateStringCaps(void);
+[; ;NXQ_charge_state.h: 31: char * getNXQChargeStateString(void);
+[; ;NXQ_charge_state.h: 34: void QIIdleIOCHandler(void);
+[; ;NXQ_charge_state.h: 37: void QIChargeIOCHandler(void);
+[; ;NXQ_charge_state.h: 40: void QIIdleChargedTimerHandler(void);
+[; ;NXQ_charge_state.h: 43: void QIErrorTimerHandler(void);
+"40 heartbeat_timer.h
 [v _device_on_time `ul ~T0 @X0 1 e ]
-[; ;heartbeat_timer.h: 38: unsigned long device_on_time;
-[; ;heartbeat_timer.h: 42: void heartbeatTimerHandler(void);
-[; ;heartbeat_timer.h: 45: char * getStringSecondsAsTime(uint32_t input_seconds);
-[; ;heartbeat_timer.h: 48: uint8_t getYearsFromOnTime(uint32_t input_seconds);
-[; ;heartbeat_timer.h: 51: uint8_t getDaysFromOnTime(uint32_t input_seconds);
-[; ;heartbeat_timer.h: 54: uint8_t getHoursFromOnTime(uint32_t input_seconds);
-[; ;heartbeat_timer.h: 57: uint8_t getMinutesFromOnTime(uint32_t input_seconds);
-[; ;heartbeat_timer.h: 60: uint8_t getSecondsFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 40: unsigned long device_on_time;
+[; ;heartbeat_timer.h: 44: void heartbeatTimerHandler(void);
+[; ;heartbeat_timer.h: 47: char * getStringSecondsAsTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 50: uint8_t getYearsFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 53: uint8_t getDaysFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 56: uint8_t getHoursFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 59: uint8_t getMinutesFromOnTime(uint32_t input_seconds);
+[; ;heartbeat_timer.h: 62: uint8_t getSecondsFromOnTime(uint32_t input_seconds);
 [; ;device_IDs.h: 40: uint16_t getDeviceID(void);
 [; ;device_IDs.h: 43: uint8_t getMajorRevisionID(void);
 [; ;device_IDs.h: 44: uint8_t getMinorRevisionID(void);
@@ -11242,7 +11259,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cause_of_reset.h: 51: Stack_Underflow_Reset = 8
 [; ;cause_of_reset.h: 52: } reset_t;
 "55 cause_of_reset.h
-[v _reset_cause `E10188 ~T0 @X0 1 e ]
+[v _reset_cause `E10207 ~T0 @X0 1 e ]
 [; ;cause_of_reset.h: 55: reset_t reset_cause;
 [; ;cause_of_reset.h: 59: reset_t getCauseOfReset(void);
 [; ;cause_of_reset.h: 62: inline char * getCauseOfResetString(reset_t r);
@@ -11335,20 +11352,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LM73_I2C.h: 71: void LM73TempSensorInitialize(void);
 [; ;LM73_I2C.h: 74: void LM73AcquisitionHandler(void);
 [; ;LM73_I2C.h: 77: void LM73Convert(void);
-"22 NXQ_charge_state.h
-[v _nxq_charge_state `E10270 ~T0 @X0 1 e ]
-[; ;NXQ_charge_state.h: 15: enum nxq_charge_state_t {
-[; ;NXQ_charge_state.h: 17: QI_Idle = 0,
-[; ;NXQ_charge_state.h: 18: QI_Charging = 1,
-[; ;NXQ_charge_state.h: 19: QI_Fully_Charged = 2,
-[; ;NXQ_charge_state.h: 20: QI_Error = 3
-[; ;NXQ_charge_state.h: 22: } nxq_charge_state;
-[; ;NXQ_charge_state.h: 25: char * getNXQChargeStateStringCaps(void);
-[; ;NXQ_charge_state.h: 28: char * getNXQChargeStateString(void);
-[; ;NXQ_charge_state.h: 31: void QIIdleIOCHandler(void);
-[; ;NXQ_charge_state.h: 34: void QIChargeIOCHandler(void);
-[; ;NXQ_charge_state.h: 37: void QIIdleChargedTimerHandler(void);
-[; ;NXQ_charge_state.h: 40: void QIErrorTimerHandler(void);
 "44 freq_meas.h
 [v _freq_meas_results `S1447 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 39: struct {
@@ -11356,7 +11359,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;freq_meas.h: 42: uint16_t QI_Freq_Meas_Raw;
 [; ;freq_meas.h: 44: } freq_meas_results;
 "50
-[v _QI_current_edge `E10292 ~T0 @X0 1 e ]
+[v _QI_current_edge `E10293 ~T0 @X0 1 e ]
 [; ;freq_meas.h: 47: enum qi_edge_type{
 [; ;freq_meas.h: 48: qi_period_rising_1 = 0,
 [; ;freq_meas.h: 49: qi_period_rising_2 = 1
@@ -12099,7 +12102,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
 [; ;ring_buffer_LUT.c: 395: if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("POS5 Converter is in Burst Mode\n\r");
 "395
-[e $ ! || == -> _nxq_charge_state `i -> . `E10270 0 `i == -> _nxq_charge_state `i -> . `E10270 3 `i 1520  ]
+[e $ ! || == -> _nxq_charge_state `i -> . `E10164 0 `i == -> _nxq_charge_state `i -> . `E10164 3 `i 1520  ]
 [e ( _printf :s 75C ]
 [e $U 1521  ]
 "396
@@ -12124,7 +12127,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
 [; ;ring_buffer_LUT.c: 404: if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("QI Converter is in Burst Mode\n\r");
 "404
-[e $ ! || == -> _nxq_charge_state `i -> . `E10270 0 `i == -> _nxq_charge_state `i -> . `E10270 3 `i 1524  ]
+[e $ ! || == -> _nxq_charge_state `i -> . `E10164 0 `i == -> _nxq_charge_state `i -> . `E10164 3 `i 1524  ]
 [e ( _printf :s 78C ]
 [e $U 1525  ]
 "405
@@ -12146,7 +12149,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;ring_buffer_LUT.c: 412: if (nxq_charge_state == QI_Error) {
 "412
-[e $ ! == -> _nxq_charge_state `i -> . `E10270 3 `i 1528  ]
+[e $ ! == -> _nxq_charge_state `i -> . `E10164 3 `i 1528  ]
 {
 [; ;ring_buffer_LUT.c: 414: terminalTextAttributes(RED, BLACK, NORMAL);
 "414
@@ -12164,7 +12167,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "420
 [e :U 1528 ]
 [; ;ring_buffer_LUT.c: 420: else if (nxq_charge_state == QI_Fully_Charged) {
-[e $ ! == -> _nxq_charge_state `i -> . `E10270 2 `i 1530  ]
+[e $ ! == -> _nxq_charge_state `i -> . `E10164 2 `i 1530  ]
 {
 [; ;ring_buffer_LUT.c: 422: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "422
@@ -12203,112 +12206,139 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 1532  ]
 "439
 [e :U 1527 ]
-[; ;ring_buffer_LUT.c: 439: else if((0 == strcmp(line, "Help"))) {
+[; ;ring_buffer_LUT.c: 439: else if((0 == strcmp(line, "QI Charge Time?"))) {
 [e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 84C 1533  ]
 {
-[; ;ring_buffer_LUT.c: 441: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+[; ;ring_buffer_LUT.c: 441: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "441
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 443: printf("Available Commands:\n\r");
-"443
-[e ( _printf :s 85C ]
-[; ;ring_buffer_LUT.c: 445: printf( "    Help: Lists available commands\n\r"
-[; ;ring_buffer_LUT.c: 446: "    *IDN?: Prints identification string\n\r"
-[; ;ring_buffer_LUT.c: 447: "    Reset: Executes software reset instruction\n\r"
-[; ;ring_buffer_LUT.c: 448: "    Clear: Clears the virtual COM port terminal\n\r"
-[; ;ring_buffer_LUT.c: 449: "    Cause of Reset?: Prints the cause of the most recent device reset\n\r"
-[; ;ring_buffer_LUT.c: 450: "    Device ID?: Prints the microchip device ID\n\r"
-[; ;ring_buffer_LUT.c: 451: "    Revision ID?: Prints the microchip silicon revision ID\n\r"
-[; ;ring_buffer_LUT.c: 452: "    User IDs?: Prints a list of User IDs saved in Flash\n\r"
-[; ;ring_buffer_LUT.c: 453: "    Device On Time?: Prints the device on time since last device reset\n\r"
-[; ;ring_buffer_LUT.c: 454: "    Enable QI: Enabled QI wireless power conversion\n\r"
-[; ;ring_buffer_LUT.c: 455: "    Disable QI: Disables QI wireless power conversion\n\r"
-[; ;ring_buffer_LUT.c: 456: "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
-[; ;ring_buffer_LUT.c: 457: "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
-[; ;ring_buffer_LUT.c: 458: "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
-[; ;ring_buffer_LUT.c: 459: "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
-[; ;ring_buffer_LUT.c: 460: "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
-[; ;ring_buffer_LUT.c: 461: "    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
-[; ;ring_buffer_LUT.c: 462: "    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
-[; ;ring_buffer_LUT.c: 463: "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
-[; ;ring_buffer_LUT.c: 464: "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
-[; ;ring_buffer_LUT.c: 465: "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
-[; ;ring_buffer_LUT.c: 466: "    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
-[; ;ring_buffer_LUT.c: 467: "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
-[; ;ring_buffer_LUT.c: 468: "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
-[; ;ring_buffer_LUT.c: 469: "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
-[; ;ring_buffer_LUT.c: 470: "    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
-[; ;ring_buffer_LUT.c: 471: "    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
-[; ;ring_buffer_LUT.c: 472: "    Error Status? Prints if any system faults have been detected\n\r"
-[; ;ring_buffer_LUT.c: 473: "    Clear UART Errors: Clears UART error flags\n\r"
-[; ;ring_buffer_LUT.c: 474: "    Clear I2C Errors: Clears I2C error flags\n\r"
-[; ;ring_buffer_LUT.c: 475: "    Clear ADC Errors: Clears ADC error flags\n\r"
-[; ;ring_buffer_LUT.c: 476: );
-"476
-[e ( _printf :s 86C ]
-[; ;ring_buffer_LUT.c: 478: printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
-"478
-[e ( _printf :s 87C ]
-[; ;ring_buffer_LUT.c: 480: terminalTextAttributes(GREEN, BLACK, NORMAL);
-"480
 [e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 481: printf("System parameters and affirmative responses appear in green\n\r");
-"481
-[e ( _printf :s 88C ]
-[; ;ring_buffer_LUT.c: 482: terminalTextAttributes(CYAN, BLACK, NORMAL);
-"482
-[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 483: printf("Measurement responses appear in cyan\n\r");
-"483
-[e ( _printf :s 89C ]
-[; ;ring_buffer_LUT.c: 484: terminalTextAttributes(RED, BLACK, NORMAL);
-"484
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 485: printf("Errors and negative responses appear in red\n\r");
-"485
-[e ( _printf :s 90C ]
-[; ;ring_buffer_LUT.c: 486: terminalTextAttributesReset();
-"486
-[e ( _terminalTextAttributesReset ..  ]
-[; ;ring_buffer_LUT.c: 487: printf("User input appears in white\n\r");
-"487
-[e ( _printf :s 91C ]
-"489
-}
-[; ;ring_buffer_LUT.c: 489: }
-[e $U 1534  ]
-"492
-[e :U 1533 ]
-[; ;ring_buffer_LUT.c: 492: else {
-{
-[; ;ring_buffer_LUT.c: 494: if (strlen(line) >= 1) {
-"494
-[e $ ! >= ( _strlen (1 -> _line `*Cuc -> -> 1 `i `ui 1535  ]
-{
-[; ;ring_buffer_LUT.c: 496: terminalTextAttributes(RED, BLACK, NORMAL);
-"496
-[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 497: printf("Unsupported or mis-entered command\n\r");
-"497
-[e ( _printf :s 92C ]
-[; ;ring_buffer_LUT.c: 498: terminalTextAttributes(YELLOW, BLACK, NORMAL);
-"498
-[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
-[; ;ring_buffer_LUT.c: 499: printf("Commands are case sensitive, backspace is supported, command history is not supported\n\r");
-"499
-[e ( _printf :s 93C ]
-[; ;ring_buffer_LUT.c: 500: printf("Call 'Help' for list of supported commands\n\r");
-"500
-[e ( _printf :s 94C ]
-[; ;ring_buffer_LUT.c: 501: terminalTextAttributesReset();
-"501
-[e ( _terminalTextAttributesReset ..  ]
-"503
-}
-[e :U 1535 ]
-"505
-}
+[; ;ring_buffer_LUT.c: 442: if (QI_charge_time == 0) printf("QI Converter is not currently charging a phone\n\r");
+"442
+[e $ ! == _QI_charge_time -> -> -> 0 `i `l `ul 1534  ]
+[e ( _printf :s 85C ]
+[e $U 1535  ]
+"443
 [e :U 1534 ]
+[; ;ring_buffer_LUT.c: 443: else printf("QI Converter has been charging a phone for: %s\n\r", getStringSecondsAsTime(QI_charge_time));
+[e ( _printf , (. :s 86C -> ( _getStringSecondsAsTime (1 _QI_charge_time `*Cuc ]
+[e :U 1535 ]
+[; ;ring_buffer_LUT.c: 444: terminalTextAttributesReset();
+"444
+[e ( _terminalTextAttributesReset ..  ]
+"446
+}
+[; ;ring_buffer_LUT.c: 446: }
+[e $U 1536  ]
+"449
+[e :U 1533 ]
+[; ;ring_buffer_LUT.c: 449: else if((0 == strcmp(line, "Help"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 87C 1537  ]
+{
+[; ;ring_buffer_LUT.c: 451: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"451
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 453: printf("Available Commands:\n\r");
+"453
+[e ( _printf :s 88C ]
+[; ;ring_buffer_LUT.c: 455: printf( "    Help: Lists available commands\n\r"
+[; ;ring_buffer_LUT.c: 456: "    *IDN?: Prints identification string\n\r"
+[; ;ring_buffer_LUT.c: 457: "    Reset: Executes software reset instruction\n\r"
+[; ;ring_buffer_LUT.c: 458: "    Clear: Clears the virtual COM port terminal\n\r"
+[; ;ring_buffer_LUT.c: 459: "    Cause of Reset?: Prints the cause of the most recent device reset\n\r"
+[; ;ring_buffer_LUT.c: 460: "    Device ID?: Prints the microchip device ID\n\r"
+[; ;ring_buffer_LUT.c: 461: "    Revision ID?: Prints the microchip silicon revision ID\n\r"
+[; ;ring_buffer_LUT.c: 462: "    User IDs?: Prints a list of User IDs saved in Flash\n\r"
+[; ;ring_buffer_LUT.c: 463: "    Device On Time?: Prints the device on time since last device reset\n\r"
+[; ;ring_buffer_LUT.c: 464: "    Enable QI: Enabled QI wireless power conversion\n\r"
+[; ;ring_buffer_LUT.c: 465: "    Disable QI: Disables QI wireless power conversion\n\r"
+[; ;ring_buffer_LUT.c: 466: "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
+[; ;ring_buffer_LUT.c: 467: "    QI Charge Time?: Prints the elapsed time that the QI converter has been charging a phone\n\r"
+[; ;ring_buffer_LUT.c: 468: "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
+[; ;ring_buffer_LUT.c: 469: "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
+[; ;ring_buffer_LUT.c: 470: "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
+[; ;ring_buffer_LUT.c: 471: "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
+[; ;ring_buffer_LUT.c: 472: "    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
+[; ;ring_buffer_LUT.c: 473: "    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
+[; ;ring_buffer_LUT.c: 474: "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
+[; ;ring_buffer_LUT.c: 475: "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
+[; ;ring_buffer_LUT.c: 476: "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
+[; ;ring_buffer_LUT.c: 477: "    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
+[; ;ring_buffer_LUT.c: 478: "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
+[; ;ring_buffer_LUT.c: 479: "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
+[; ;ring_buffer_LUT.c: 480: "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
+[; ;ring_buffer_LUT.c: 481: "    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
+[; ;ring_buffer_LUT.c: 482: "    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
+[; ;ring_buffer_LUT.c: 483: "    Error Status? Prints if any system faults have been detected\n\r"
+[; ;ring_buffer_LUT.c: 484: "    Clear UART Errors: Clears UART error flags\n\r"
+[; ;ring_buffer_LUT.c: 485: "    Clear I2C Errors: Clears I2C error flags\n\r"
+[; ;ring_buffer_LUT.c: 486: "    Clear ADC Errors: Clears ADC error flags\n\r"
+[; ;ring_buffer_LUT.c: 487: );
+"487
+[e ( _printf :s 89C ]
+[; ;ring_buffer_LUT.c: 489: printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
+"489
+[e ( _printf :s 90C ]
+[; ;ring_buffer_LUT.c: 491: terminalTextAttributes(GREEN, BLACK, NORMAL);
+"491
+[e ( _terminalTextAttributes (3 , , . `E9495 2 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 492: printf("System parameters and affirmative responses appear in green\n\r");
+"492
+[e ( _printf :s 91C ]
+[; ;ring_buffer_LUT.c: 493: terminalTextAttributes(CYAN, BLACK, NORMAL);
+"493
+[e ( _terminalTextAttributes (3 , , . `E9495 6 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 494: printf("Measurement responses appear in cyan\n\r");
+"494
+[e ( _printf :s 92C ]
+[; ;ring_buffer_LUT.c: 495: terminalTextAttributes(RED, BLACK, NORMAL);
+"495
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 496: printf("Errors and negative responses appear in red\n\r");
+"496
+[e ( _printf :s 93C ]
+[; ;ring_buffer_LUT.c: 497: terminalTextAttributesReset();
+"497
+[e ( _terminalTextAttributesReset ..  ]
+[; ;ring_buffer_LUT.c: 498: printf("User input appears in white\n\r");
+"498
+[e ( _printf :s 94C ]
+"500
+}
+[; ;ring_buffer_LUT.c: 500: }
+[e $U 1538  ]
+"503
+[e :U 1537 ]
+[; ;ring_buffer_LUT.c: 503: else {
+{
+[; ;ring_buffer_LUT.c: 505: if (strlen(line) >= 1) {
+"505
+[e $ ! >= ( _strlen (1 -> _line `*Cuc -> -> 1 `i `ui 1539  ]
+{
+[; ;ring_buffer_LUT.c: 507: terminalTextAttributes(RED, BLACK, NORMAL);
+"507
+[e ( _terminalTextAttributes (3 , , . `E9495 1 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 508: printf("Unsupported or mis-entered command\n\r");
+"508
+[e ( _printf :s 95C ]
+[; ;ring_buffer_LUT.c: 509: terminalTextAttributes(YELLOW, BLACK, NORMAL);
+"509
+[e ( _terminalTextAttributes (3 , , . `E9495 3 . `E9495 0 . `E9487 0 ]
+[; ;ring_buffer_LUT.c: 510: printf("Commands are case sensitive, backspace is supported, command history is not supported\n\r");
+"510
+[e ( _printf :s 96C ]
+[; ;ring_buffer_LUT.c: 511: printf("Call 'Help' for list of supported commands\n\r");
+"511
+[e ( _printf :s 97C ]
+[; ;ring_buffer_LUT.c: 512: terminalTextAttributesReset();
+"512
+[e ( _terminalTextAttributesReset ..  ]
+"514
+}
+[e :U 1539 ]
+"516
+}
+[e :U 1538 ]
+[e :U 1536 ]
 [e :U 1532 ]
 [e :U 1526 ]
 [e :U 1522 ]
@@ -12339,10 +12369,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 1454 ]
 [e :U 1452 ]
 [e :U 1450 ]
-[; ;ring_buffer_LUT.c: 503: }
-[; ;ring_buffer_LUT.c: 505: }
-[; ;ring_buffer_LUT.c: 509: }
-"509
+[; ;ring_buffer_LUT.c: 514: }
+[; ;ring_buffer_LUT.c: 516: }
+[; ;ring_buffer_LUT.c: 520: }
+"520
 [e :UE 1448 ]
 }
 [p f _printf 12427398 ]
@@ -12351,7 +12381,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 24C 67 108 101 97 114 32 65 68 67 32 69 114 114 111 114 115 0 ]
 [a 26C 67 108 101 97 114 32 73 50 67 32 69 114 114 111 114 115 0 ]
 [a 4C 67 108 101 97 114 0 ]
-[a 84C 72 101 108 112 0 ]
+[a 87C 72 101 108 112 0 ]
 [a 2C 27 91 50 74 0 ]
 [a 5C 27 91 50 74 0 ]
 [a 22C 68 105 115 97 98 108 101 32 81 73 0 ]
@@ -12372,6 +12402,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 68C 77 101 97 115 117 114 101 32 81 73 32 84 101 109 112 63 0 ]
 [a 70C 77 101 97 115 117 114 101 32 80 79 83 53 32 84 101 109 112 63 0 ]
 [a 18C 68 101 118 105 99 101 32 79 110 32 84 105 109 101 63 0 ]
+[a 84C 81 73 32 67 104 97 114 103 101 32 84 105 109 101 63 0 ]
 [a 77C 77 101 97 115 117 114 101 32 81 73 32 70 83 87 63 0 ]
 [a 74C 77 101 97 115 117 114 101 32 80 79 83 53 32 70 83 87 63 0 ]
 [a 60C 77 101 97 115 117 114 101 32 65 86 83 83 63 0 ]
@@ -12383,7 +12414,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 50C 77 101 97 115 117 114 101 32 80 79 83 49 50 63 0 ]
 [a 79C 67 117 114 114 101 110 116 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 107 72 122 10 13 0 ]
 [a 76C 67 117 114 114 101 110 116 32 43 53 86 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 49 102 32 77 72 122 10 13 0 ]
-[a 87C 10 13 72 101 108 112 32 109 101 115 115 97 103 101 115 32 97 110 100 32 110 101 117 116 114 97 108 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 121 101 108 108 111 119 10 13 0 ]
+[a 90C 10 13 72 101 108 112 32 109 101 115 115 97 103 101 115 32 97 110 100 32 110 101 117 116 114 97 108 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 121 101 108 108 111 119 10 13 0 ]
 [a 65C 87 105 114 101 108 101 115 115 32 79 117 116 112 117 116 32 80 111 119 101 114 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 43 46 51 102 32 87 97 116 116 115 10 13 0 ]
 [a 63C 69 108 101 99 116 114 105 99 97 108 32 73 110 112 117 116 32 80 111 119 101 114 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 43 46 51 102 32 87 97 116 116 115 10 13 0 ]
 [a 49C 43 53 86 32 114 97 105 108 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 86 111 108 116 115 10 13 0 ]
@@ -12392,27 +12423,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 59C 70 105 120 101 100 32 86 111 108 116 97 103 101 32 82 101 102 101 114 101 110 99 101 32 66 117 102 102 101 114 32 49 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 86 111 108 116 115 44 32 99 97 108 105 98 114 97 116 101 100 32 102 111 114 32 43 52 46 48 57 54 32 86 111 108 116 115 10 13 0 ]
 [a 55C 43 49 50 86 32 105 110 112 117 116 32 99 117 114 114 101 110 116 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 65 109 112 115 10 13 0 ]
 [a 57C 81 73 32 99 111 110 118 101 114 116 101 114 32 99 117 114 114 101 110 116 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 65 109 112 115 10 13 0 ]
-[a 86C 32 32 32 32 72 101 108 112 58 32 76 105 115 116 115 32 97 118 97 105 108 97 98 108 101 32 99 111 109 109 97 110 100 115 10 13 32 32 32 32 42 73 68 78 63 58 32 80 114 105 110 116 115 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 32 115 116 114 105 110 103 10 13 32 32 32 32 82 101 115 101 116 58 32 69 120 101 99 117 116 101 115 32 115 111 102 116 119 97 114 101 32 114 101 115 101 116 32 105 110 115 116 114 117 99 116 105 111 110 10 13 32 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 118 105 114 116 117 97 108 32 67 79 77 32 112 111 114 116 32 116 101 114 109 105 110 97 108 10 13 32 32 32 32 67 97 117 115 101 32 111 102 32 82 101 115 101 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 117 115 101 32 111 102 32 116 104 101 32 109 111 115 116 32 114 101 99 101 110 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 68 101 118 105 99 101 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 100 101 118 105 99 101 32 73 68 10 13 32 32 32 32 82 101 118 105 115 105 111 110 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 115 105 108 105 99 111 110 32 114 101 118 105 115 105 111 110 32 73 68 10 13 32 32 32 32 85 115 101 114 32 73 68 115 63 58 32 80 114 105 110 116 115 32 97 32 108 105 115 116 32 111 102 32 85 115 101 114 32 73 68 115 32 115 97 118 101 100 32 105 110 32 70 108 97 115 104 10 13 32 32 32 32 68 101 118 105 99 101 32 79 110 32 84 105 109 101 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 101 118 105 99 101 32 111 110 32 116 105 109 101 32 115 105 110 99 101 32 108 97 115 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 69 110 97 98 108 101 32 81 73 58 32 69 110 97 98 108 101 100 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 68 105 115 97 98 108 101 32 81 73 58 32 68 105 115 97 98 108 101 115 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 67 104 97 114 103 101 32 83 116 97 116 117 115 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 104 97 114 103 101 32 115 116 97 116 101 32 111 102 32 116 104 101 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 105 110 112 117 116 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 73 110 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 101 108 101 99 116 114 105 99 97 108 32 105 110 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 79 117 116 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 119 105 114 101 108 101 115 115 32 111 117 116 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 69 102 102 105 99 105 101 110 99 121 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 115 121 115 116 101 109 32 101 102 102 105 99 105 101 110 99 121 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 86 83 83 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 65 86 83 83 10 13 32 32 32 32 77 101 97 115 117 114 101 32 70 86 82 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 102 105 120 101 100 32 118 111 108 116 97 103 101 32 114 101 102 101 114 101 110 99 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 68 105 101 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 109 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 100 105 101 32 116 101 109 112 101 114 97 116 117 114 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 109 98 105 101 110 116 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 97 109 98 105 101 110 116 32 101 110 118 105 114 111 110 109 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 70 83 87 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 101 97 115 117 114 101 100 32 80 79 83 53 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 70 83 87 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 101 97 115 117 114 101 100 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 10 13 32 32 32 32 69 114 114 111 114 32 83 116 97 116 117 115 63 32 80 114 105 110 116 115 32 105 102 32 97 110 121 32 115 121 115 116 101 109 32 102 97 117 108 116 115 32 104 97 118 101 32 98 101 101 110 32 100 101 116 101 99 116 101 100 10 13 32 32 32 32 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 85 65 82 84 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 73 50 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 73 50 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 65 68 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 65 68 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 0 ]
-[a 94C 67 97 108 108 32 39 72 101 108 112 39 32 102 111 114 32 108 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 89C 32 32 32 32 72 101 108 112 58 32 76 105 115 116 115 32 97 118 97 105 108 97 98 108 101 32 99 111 109 109 97 110 100 115 10 13 32 32 32 32 42 73 68 78 63 58 32 80 114 105 110 116 115 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 32 115 116 114 105 110 103 10 13 32 32 32 32 82 101 115 101 116 58 32 69 120 101 99 117 116 101 115 32 115 111 102 116 119 97 114 101 32 114 101 115 101 116 32 105 110 115 116 114 117 99 116 105 111 110 10 13 32 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 118 105 114 116 117 97 108 32 67 79 77 32 112 111 114 116 32 116 101 114 109 105 110 97 108 10 13 32 32 32 32 67 97 117 115 101 32 111 102 32 82 101 115 101 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 117 115 101 32 111 102 32 116 104 101 32 109 111 115 116 32 114 101 99 101 110 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 68 101 118 105 99 101 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 100 101 118 105 99 101 32 73 68 10 13 32 32 32 32 82 101 118 105 115 105 111 110 32 73 68 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 105 99 114 111 99 104 105 112 32 115 105 108 105 99 111 110 32 114 101 118 105 115 105 111 110 32 73 68 10 13 32 32 32 32 85 115 101 114 32 73 68 115 63 58 32 80 114 105 110 116 115 32 97 32 108 105 115 116 32 111 102 32 85 115 101 114 32 73 68 115 32 115 97 118 101 100 32 105 110 32 70 108 97 115 104 10 13 32 32 32 32 68 101 118 105 99 101 32 79 110 32 84 105 109 101 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 101 118 105 99 101 32 111 110 32 116 105 109 101 32 115 105 110 99 101 32 108 97 115 116 32 100 101 118 105 99 101 32 114 101 115 101 116 10 13 32 32 32 32 69 110 97 98 108 101 32 81 73 58 32 69 110 97 98 108 101 100 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 68 105 115 97 98 108 101 32 81 73 58 32 68 105 115 97 98 108 101 115 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 115 105 111 110 10 13 32 32 32 32 67 104 97 114 103 101 32 83 116 97 116 117 115 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 104 97 114 103 101 32 115 116 97 116 101 32 111 102 32 116 104 101 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 81 73 32 67 104 97 114 103 101 32 84 105 109 101 63 58 32 80 114 105 110 116 115 32 116 104 101 32 101 108 97 112 115 101 100 32 116 105 109 101 32 116 104 97 116 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 32 104 97 115 32 98 101 101 110 32 99 104 97 114 103 105 110 103 32 97 32 112 104 111 110 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 114 97 105 108 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 49 50 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 49 50 86 32 105 110 112 117 116 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 67 117 114 114 101 110 116 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 32 99 117 114 114 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 73 110 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 101 108 101 99 116 114 105 99 97 108 32 105 110 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 79 117 116 112 117 116 32 80 111 119 101 114 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 119 105 114 101 108 101 115 115 32 111 117 116 112 117 116 32 112 111 119 101 114 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 69 102 102 105 99 105 101 110 99 121 63 58 32 80 114 105 110 116 115 32 116 104 101 32 99 97 108 99 117 108 97 116 101 100 32 115 121 115 116 101 109 32 101 102 102 105 99 105 101 110 99 121 32 98 97 115 101 100 32 111 110 32 65 68 67 32 109 101 97 115 117 114 101 109 101 110 116 115 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 86 83 83 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 65 86 83 83 10 13 32 32 32 32 77 101 97 115 117 114 101 32 70 86 82 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 102 105 120 101 100 32 118 111 108 116 97 103 101 32 114 101 102 101 114 101 110 99 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 68 105 101 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 65 68 67 32 99 111 110 118 101 114 115 105 111 110 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 109 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 100 105 101 32 116 101 109 112 101 114 97 116 117 114 101 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 81 73 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 116 104 101 32 43 53 86 32 99 111 110 118 101 114 116 101 114 10 13 32 32 32 32 77 101 97 115 117 114 101 32 65 109 98 105 101 110 116 32 84 101 109 112 63 58 32 80 114 105 110 116 115 32 116 104 101 32 100 105 103 105 116 97 108 32 116 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 114 101 115 117 108 116 32 102 111 114 32 97 109 98 105 101 110 116 32 101 110 118 105 114 111 110 109 101 110 116 10 13 32 32 32 32 77 101 97 115 117 114 101 32 80 79 83 53 32 70 83 87 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 101 97 115 117 114 101 100 32 80 79 83 53 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 10 13 32 32 32 32 77 101 97 115 117 114 101 32 81 73 32 70 83 87 63 58 32 80 114 105 110 116 115 32 116 104 101 32 109 101 97 115 117 114 101 100 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 10 13 32 32 32 32 69 114 114 111 114 32 83 116 97 116 117 115 63 32 80 114 105 110 116 115 32 105 102 32 97 110 121 32 115 121 115 116 101 109 32 102 97 117 108 116 115 32 104 97 118 101 32 98 101 101 110 32 100 101 116 101 99 116 101 100 10 13 32 32 32 32 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 85 65 82 84 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 73 50 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 73 50 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 32 32 32 32 67 108 101 97 114 32 65 68 67 32 69 114 114 111 114 115 58 32 67 108 101 97 114 115 32 65 68 67 32 101 114 114 111 114 32 102 108 97 103 115 10 13 0 ]
+[a 97C 67 97 108 108 32 39 72 101 108 112 39 32 102 111 114 32 108 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 10 13 0 ]
 [a 83C 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 105 115 32 37 115 10 13 0 ]
 [a 19C 68 101 118 105 99 101 32 111 110 32 116 105 109 101 32 115 105 110 99 101 32 108 97 115 116 32 114 101 115 101 116 32 99 111 110 100 105 116 105 111 110 32 105 115 58 32 37 115 10 13 0 ]
 [a 8C 84 104 101 32 99 97 117 115 101 32 111 102 32 116 104 101 32 109 111 115 116 32 114 101 99 101 110 116 32 100 101 118 105 99 101 32 114 101 115 101 116 32 119 97 115 58 32 37 115 10 13 0 ]
+[a 86C 81 73 32 67 111 110 118 101 114 116 101 114 32 104 97 115 32 98 101 101 110 32 99 104 97 114 103 105 110 103 32 97 32 112 104 111 110 101 32 102 111 114 58 32 37 115 10 13 0 ]
 [a 33C 32 32 32 32 71 101 110 101 114 97 108 32 65 68 67 32 101 114 114 111 114 10 13 0 ]
 [a 42C 32 32 32 32 73 50 67 32 79 76 69 68 32 68 105 115 112 108 97 121 32 69 114 114 111 114 10 13 0 ]
 [a 39C 32 32 32 32 73 50 67 32 65 109 98 105 101 110 116 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 41C 32 32 32 32 73 50 67 32 81 73 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 40C 32 32 32 32 73 50 67 32 80 79 83 53 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 38C 32 32 32 32 73 50 67 32 71 101 110 101 114 97 108 32 69 114 114 111 114 10 13 0 ]
-[a 88C 83 121 115 116 101 109 32 112 97 114 97 109 101 116 101 114 115 32 97 110 100 32 97 102 102 105 114 109 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 103 114 101 101 110 10 13 0 ]
-[a 89C 77 101 97 115 117 114 101 109 101 110 116 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 99 121 97 110 10 13 0 ]
+[a 91C 83 121 115 116 101 109 32 112 97 114 97 109 101 116 101 114 115 32 97 110 100 32 97 102 102 105 114 109 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 103 114 101 101 110 10 13 0 ]
+[a 92C 77 101 97 115 117 114 101 109 101 110 116 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 99 121 97 110 10 13 0 ]
 [a 10C 81 73 32 67 104 97 114 103 101 114 32 119 105 116 104 32 68 105 103 105 116 97 108 32 77 111 110 105 116 111 114 105 110 103 44 32 98 121 32 68 114 101 119 32 77 97 97 116 109 97 110 10 13 0 ]
-[a 91C 85 115 101 114 32 105 110 112 117 116 32 97 112 112 101 97 114 115 32 105 110 32 119 104 105 116 101 10 13 0 ]
+[a 94C 85 115 101 114 32 105 110 112 117 116 32 97 112 112 101 97 114 115 32 105 110 32 119 104 105 116 101 10 13 0 ]
 [a 81C 81 73 32 67 104 97 114 103 101 114 32 105 115 32 105 110 32 69 114 114 111 114 32 83 116 97 116 101 10 13 0 ]
 [a 82C 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 104 97 115 32 102 117 108 108 121 32 99 104 97 114 103 101 100 32 112 104 111 110 101 10 13 0 ]
+[a 85C 81 73 32 67 111 110 118 101 114 116 101 114 32 105 115 32 110 111 116 32 99 117 114 114 101 110 116 108 121 32 99 104 97 114 103 105 110 103 32 97 32 112 104 111 110 101 10 13 0 ]
 [a 78C 81 73 32 67 111 110 118 101 114 116 101 114 32 105 115 32 105 110 32 66 117 114 115 116 32 77 111 100 101 10 13 0 ]
 [a 75C 80 79 83 53 32 67 111 110 118 101 114 116 101 114 32 105 115 32 105 110 32 66 117 114 115 116 32 77 111 100 101 10 13 0 ]
-[a 92C 85 110 115 117 112 112 111 114 116 101 100 32 111 114 32 109 105 115 45 101 110 116 101 114 101 100 32 99 111 109 109 97 110 100 10 13 0 ]
-[a 93C 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 44 32 98 97 99 107 115 112 97 99 101 32 105 115 32 115 117 112 112 111 114 116 101 100 44 32 99 111 109 109 97 110 100 32 104 105 115 116 111 114 121 32 105 115 32 110 111 116 32 115 117 112 112 111 114 116 101 100 10 13 0 ]
+[a 95C 85 110 115 117 112 112 111 114 116 101 100 32 111 114 32 109 105 115 45 101 110 116 101 114 101 100 32 99 111 109 109 97 110 100 10 13 0 ]
+[a 96C 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 44 32 98 97 99 107 115 112 97 99 101 32 105 115 32 115 117 112 112 111 114 116 101 100 44 32 99 111 109 109 97 110 100 32 104 105 115 116 111 114 121 32 105 115 32 110 111 116 32 115 117 112 112 111 114 116 101 100 10 13 0 ]
 [a 47C 78 111 32 85 65 82 84 32 101 114 114 111 114 40 115 41 32 100 101 116 101 99 116 101 100 10 13 0 ]
 [a 36C 78 111 32 65 68 67 32 101 114 114 111 114 40 115 41 32 100 101 116 101 99 116 101 100 10 13 0 ]
 [a 44C 78 111 32 73 50 67 32 101 114 114 111 114 40 115 41 32 100 101 116 101 99 116 101 100 10 13 0 ]
@@ -12420,7 +12453,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 29C 85 65 82 84 32 101 114 114 111 114 40 115 41 32 99 108 101 97 114 101 100 10 13 0 ]
 [a 27C 73 50 67 32 101 114 114 111 114 40 115 41 32 99 108 101 97 114 101 100 10 13 0 ]
 [a 25C 65 68 67 32 69 114 114 111 114 40 115 41 32 99 108 101 97 114 101 100 10 13 0 ]
-[a 90C 69 114 114 111 114 115 32 97 110 100 32 110 101 103 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 114 101 100 10 13 0 ]
+[a 93C 69 114 114 111 114 115 32 97 110 100 32 110 101 103 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 114 101 100 10 13 0 ]
 [a 23C 81 73 32 87 105 114 101 108 101 115 115 32 80 111 119 101 114 32 67 111 110 118 101 114 115 105 111 110 32 68 105 115 97 98 108 101 100 10 13 0 ]
 [a 21C 81 73 32 87 105 114 101 108 101 115 115 32 80 111 119 101 114 32 67 111 110 118 101 114 115 105 111 110 32 69 110 97 98 108 101 100 10 13 0 ]
 [a 14C 68 101 118 105 99 101 32 115 105 108 105 99 111 110 32 114 101 118 105 115 105 111 110 32 73 68 32 97 115 32 115 116 111 114 101 100 32 105 110 32 70 108 97 115 104 32 105 115 58 32 37 99 37 48 51 100 10 13 0 ]
@@ -12431,7 +12464,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 69C 81 73 32 67 111 110 118 101 114 116 101 114 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 10 13 0 ]
 [a 53C 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 68 105 101 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 10 13 0 ]
 [a 16C 84 104 101 32 102 111 108 108 111 119 105 110 103 32 85 115 101 114 32 73 68 115 32 104 97 118 101 32 98 101 101 110 32 114 101 116 114 105 101 118 101 100 32 102 114 111 109 32 102 108 97 115 104 32 109 101 109 111 114 121 58 10 13 0 ]
-[a 85C 65 118 97 105 108 97 98 108 101 32 67 111 109 109 97 110 100 115 58 10 13 0 ]
+[a 88C 65 118 97 105 108 97 98 108 101 32 67 111 109 109 97 110 100 115 58 10 13 0 ]
 [a 32C 84 104 101 32 102 111 108 108 111 119 105 110 103 32 99 104 97 110 110 101 108 115 32 99 97 117 115 101 100 32 97 110 32 65 68 67 32 101 114 114 111 114 58 10 13 0 ]
 [a 37C 84 104 101 32 102 111 108 108 111 119 105 110 103 32 73 50 67 32 69 114 114 111 114 115 32 119 101 114 101 32 100 101 116 101 99 116 101 100 58 10 13 0 ]
 [a 46C 67 97 108 108 32 39 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 39 32 116 111 32 99 108 101 97 114 32 99 111 109 109 117 110 105 99 97 116 105 111 110 115 32 101 114 114 111 114 40 115 41 10 13 0 ]

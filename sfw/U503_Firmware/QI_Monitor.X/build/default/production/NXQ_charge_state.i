@@ -16218,6 +16218,9 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 
 # 15 "NXQ_charge_state.h"
+unsigned long QI_charge_time;
+
+
 enum nxq_charge_state_t {
 
 QI_Idle = 0,
