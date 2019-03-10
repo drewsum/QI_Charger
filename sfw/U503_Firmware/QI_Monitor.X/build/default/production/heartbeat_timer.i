@@ -16234,7 +16234,116 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 38 "heartbeat_timer.h"
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 100 "mcc_generated_files/tmr3.h"
+void TMR3_Initialize(void);
+
+# 129
+void TMR3_StartTimer(void);
+
+# 161
+void TMR3_StopTimer(void);
+
+# 196
+uint16_t TMR3_ReadTimer(void);
+
+# 235
+void TMR3_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR3_Reload(void);
+
+# 310
+void TMR3_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR3_CheckGateValueStatus(void);
+
+# 367
+void TMR3_ISR(void);
+
+# 385
+void TMR3_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 403
+extern void (*TMR3_InterruptHandler)(void);
+
+# 421
+void TMR3_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 100 "mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+
+# 129
+void TMR1_StartTimer(void);
+
+# 161
+void TMR1_StopTimer(void);
+
+# 196
+uint16_t TMR1_ReadTimer(void);
+
+# 235
+void TMR1_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR1_Reload(void);
+
+# 310
+void TMR1_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR1_CheckGateValueStatus(void);
+
+# 367
+void TMR1_ISR(void);
+
+# 385
+void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 403
+extern void (*TMR1_InterruptHandler)(void);
+
+# 421
+void TMR1_DefaultInterruptHandler(void);
+
+# 15 "NXQ_charge_state.h"
+unsigned long QI_charge_time;
+
+
+enum nxq_charge_state_t {
+
+QI_Idle = 0,
+QI_Charging = 1,
+QI_Fully_Charged = 2,
+QI_Error = 3
+
+} nxq_charge_state;
+
+
+char * getNXQChargeStateStringCaps(void);
+
+
+char * getNXQChargeStateString(void);
+
+
+void QIIdleIOCHandler(void);
+
+
+void QIChargeIOCHandler(void);
+
+
+void QIIdleChargedTimerHandler(void);
+
+
+void QIErrorTimerHandler(void);
+
+# 40 "heartbeat_timer.h"
 unsigned long device_on_time;
 
 
@@ -16400,45 +16509,6 @@ uint8_t TMR5_CheckGateValueStatus(void);
 
 # 387
 bool TMR5_HasOverflowOccured(void);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 100 "mcc_generated_files/tmr3.h"
-void TMR3_Initialize(void);
-
-# 129
-void TMR3_StartTimer(void);
-
-# 161
-void TMR3_StopTimer(void);
-
-# 196
-uint16_t TMR3_ReadTimer(void);
-
-# 235
-void TMR3_WriteTimer(uint16_t timerVal);
-
-# 271
-void TMR3_Reload(void);
-
-# 310
-void TMR3_StartSinglePulseAcquisition(void);
-
-# 349
-uint8_t TMR3_CheckGateValueStatus(void);
-
-# 367
-void TMR3_ISR(void);
-
-# 385
-void TMR3_SetInterruptHandler(void (* InterruptHandler)(void));
-
-# 403
-extern void (*TMR3_InterruptHandler)(void);
-
-# 421
-void TMR3_DefaultInterruptHandler(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16879,13 +16949,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 80 "mcc_generated_files/mcc.h"
+# 81 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 93
+# 94
 void OSCILLATOR_Initialize(void);
 
-# 106
+# 107
 void PMD_Initialize(void);
 
 # 56 "LM73_I2C.h"
@@ -17050,11 +17120,12 @@ OLED_Micro_Temp = 15,
 OLED_POS5_FSW = 16,
 OLED_QI_FSW = 17,
 OLED_Dev_On_Time = 18,
-OLED_Cause_Of_Reset = 19,
-OLED_Dev_Rev_ID = 20,
-OLED_COM_PORT_SET = 21,
-OLED_TITLE_FRAME = 22,
-OLED_Idle = 23
+OLED_Charge_Time = 19,
+OLED_Cause_Of_Reset = 20,
+OLED_Dev_Rev_ID = 21,
+OLED_COM_PORT_SET = 22,
+OLED_TITLE_FRAME = 23,
+OLED_Idle = 24
 
 } OLED_Frame_t;
 
@@ -17116,6 +17187,10 @@ LATBbits.LATB6 = ~(LATBbits.LATB6);
 
 
 device_on_time++;
+
+
+if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_charge_time++;
+else QI_charge_time = 0;
 
 
 asm(" clrwdt");

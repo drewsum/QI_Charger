@@ -25,6 +25,10 @@ void heartbeatTimerHandler(void) {
     // Increment on time
     device_on_time++;
     
+    // Increment charge time if we're charging
+    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_charge_time++;
+    else QI_charge_time = 0;
+    
     // Kick the dog
     CLRWDT();
     

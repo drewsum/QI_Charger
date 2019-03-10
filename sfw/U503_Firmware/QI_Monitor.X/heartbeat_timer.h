@@ -34,6 +34,8 @@
 #include <xc.h> // include processor files - each processor file is guarded. 
 #include <stdint.h>
 
+#include "NXQ_charge_state.h"
+
 // This is the device on time counter variable
 unsigned long device_on_time;
 

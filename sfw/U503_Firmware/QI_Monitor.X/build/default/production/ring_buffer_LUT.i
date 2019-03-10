@@ -16402,6 +16402,45 @@ void TMR3_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 100 "mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+
+# 129
+void TMR1_StartTimer(void);
+
+# 161
+void TMR1_StopTimer(void);
+
+# 196
+uint16_t TMR1_ReadTimer(void);
+
+# 235
+void TMR1_WriteTimer(uint16_t timerVal);
+
+# 271
+void TMR1_Reload(void);
+
+# 310
+void TMR1_StartSinglePulseAcquisition(void);
+
+# 349
+uint8_t TMR1_CheckGateValueStatus(void);
+
+# 367
+void TMR1_ISR(void);
+
+# 385
+void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 403
+extern void (*TMR1_InterruptHandler)(void);
+
+# 421
+void TMR1_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 79 "mcc_generated_files/tmr2.h"
 typedef enum
 {
@@ -16898,13 +16937,13 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 80 "mcc_generated_files/mcc.h"
+# 81 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 93
+# 94
 void OSCILLATOR_Initialize(void);
 
-# 106
+# 107
 void PMD_Initialize(void);
 
 # 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h"
@@ -17001,7 +17040,38 @@ char line[64];
 # 81
 void terminal_ringBufferPull(void);
 
-# 38 "heartbeat_timer.h"
+# 15 "NXQ_charge_state.h"
+unsigned long QI_charge_time;
+
+
+enum nxq_charge_state_t {
+
+QI_Idle = 0,
+QI_Charging = 1,
+QI_Fully_Charged = 2,
+QI_Error = 3
+
+} nxq_charge_state;
+
+
+char * getNXQChargeStateStringCaps(void);
+
+
+char * getNXQChargeStateString(void);
+
+
+void QIIdleIOCHandler(void);
+
+
+void QIChargeIOCHandler(void);
+
+
+void QIIdleChargedTimerHandler(void);
+
+
+void QIErrorTimerHandler(void);
+
+# 40 "heartbeat_timer.h"
 unsigned long device_on_time;
 
 
@@ -17177,31 +17247,6 @@ void LM73AcquisitionHandler(void);
 
 
 void LM73Convert(void);
-
-# 14 "NXQ_charge_state.h"
-enum nxq_charge_state_t {
-
-QI_Idle = 0,
-QI_Charging = 1,
-QI_Fully_Charged = 2,
-QI_Error = 3
-
-} nxq_charge_state;
-
-
-char * getNXQChargeStateStringCaps(void);
-
-
-char * getNXQChargeStateString(void);
-
-
-void QIIdleIOCHandler(void);
-
-
-void QIChargeIOCHandler(void);
-
-
-void QIIdleTimerHandler(void);
 
 # 39 "freq_meas.h"
 struct {
@@ -17602,7 +17647,8 @@ terminalTextAttributesReset();
 else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
 
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("POS5 Converter is in Burst Mode\n\r");
+else printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
 terminalTextAttributesReset();
 
 }
@@ -17610,7 +17656,8 @@ terminalTextAttributesReset();
 else if ((0 == strcmp(line, "Measure QI FSW?"))) {
 
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("QI Converter is in Burst Mode\n\r");
+else printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
 terminalTextAttributesReset();
 
 }
@@ -17644,6 +17691,16 @@ terminalTextAttributesReset();
 }
 
 
+else if((0 == strcmp(line, "QI Charge Time?"))) {
+
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+if (QI_charge_time == 0) printf("QI Converter is not currently charging a phone\n\r");
+else printf("QI Converter has been charging a phone for: %s\n\r", getStringSecondsAsTime(QI_charge_time));
+terminalTextAttributesReset();
+
+}
+
+
 else if((0 == strcmp(line, "Help"))) {
 
 terminalTextAttributes(YELLOW, BLACK, NORMAL);
@@ -17662,6 +17719,7 @@ printf( "    Help: Lists available commands\n\r"
 "    Enable QI: Enabled QI wireless power conversion\n\r"
 "    Disable QI: Disables QI wireless power conversion\n\r"
 "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
+"    QI Charge Time?: Prints the elapsed time that the QI converter has been charging a phone\n\r"
 "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
 "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
 "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
