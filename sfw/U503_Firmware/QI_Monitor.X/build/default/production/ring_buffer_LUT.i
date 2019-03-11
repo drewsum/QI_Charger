@@ -16088,6 +16088,66 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
+# 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
 # 11 "terminal_control.h"
 typedef enum {
 
@@ -16839,66 +16899,6 @@ void INT2_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdarg.h"
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-
-# 43 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
-struct __prbuf
-{
-char * ptr;
-void (* func)(char);
-};
-
-# 29 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\errno.h"
-extern int errno;
-
-# 12 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\conio.h"
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-# 23
-extern char * cgets(char *);
-extern void cputs(const char *);
-
-# 88 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdio.h"
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-
-
-# 180
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-
 # 79 "mcc_generated_files/eusart2.h"
 extern volatile uint8_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
@@ -17021,6 +17021,12 @@ extern char * ftoa(float f, int * status);
 
 # 44 "ring_buffer_LUT.h"
 void ringBufferLUT(char * line);
+
+
+void printErrorHandlerStatus(void);
+
+
+void printCurrentMeasurements(void);
 
 # 36 "ring_buffer_interface.h"
 extern volatile bit eusart2RxStringReady;
@@ -17272,10 +17278,10 @@ void freqMeasStartCaptures(void);
 
 void freqMeasConvert(void);
 
-# 18 "ring_buffer_LUT.c"
+# 19 "ring_buffer_LUT.c"
 void ringBufferLUT(char * line) {
 
-# 24
+# 25
 if((0 == strcmp(line, "Reset"))) {
 
 
@@ -17301,19 +17307,6 @@ printf("\033[H");
 }
 
 
-else if((0 == strcmp(line, "Cause of Reset?"))) {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-
-
-printf("The cause of the most recent device reset was: %s\n\r",
-getCauseOfResetString(reset_cause));
-
-terminalTextAttributesReset();
-
-}
-
-
 else if((0 == strcmp(line, "*IDN?"))) {
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
@@ -17323,83 +17316,56 @@ terminalTextAttributesReset();
 }
 
 
-else if((0 == strcmp(line, "Device ID?"))) {
+else if (0 == strcmp(line, "Device Status?")) {
+
+printf("\n\r");
+
+terminalTextAttributes(GREEN, BLACK, BOLD);
+
+printf("Digital Monitoring Microcontroller Status:\n\r");
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
 
+printf("\n\r");
 
-printf("Device ID stored in Flash is: %s (0x%04X)\n\r",
+
+printf("    Device ID retrieved from flash: %s (0x%04X)\n\r",
 getDeviceIDString(getDeviceID()),
 getDeviceID());
 
-terminalTextAttributesReset();
+printf("\n\r");
 
-}
-
-
-else if((0 == strcmp(line, "Revision ID?"))) {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-
-
-printf("Device silicon revision ID as stored in Flash is: %c%03d\n\r",
+printf("    Device silicon revision ID retrieved from flash: %c%03d\n\r",
 ((char) getMajorRevisionID() + 65),getMinorRevisionID());
 
-terminalTextAttributesReset();
+printf("\n\r");
 
-}
-
-
-else if((0 == strcmp(line, "User IDs?"))) {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-
-printf("The following User IDs have been retrieved from flash memory:\n\r");
+printf("    The following User IDs have been retrieved from flash:\n\r");
 
 
 for (int userID = 0; userID <= 7; userID++) {
 
-printf("    User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
+printf("        User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
 userID,
 (2 * userID),
 getUserID(userID));
 
 }
 
-terminalTextAttributesReset();
+printf("\n\r");
 
-}
+printf("    The cause of the most recent device reset was: %s\n\r",
+getCauseOfResetString(reset_cause));
 
+printf("\n\r");
 
-else if((0 == strcmp(line, "Device On Time?"))) {
+printf("    Device on time since last reset condition is %s\n\r", getStringSecondsAsTime(device_on_time));
 
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("Device on time since last reset condition is: %s\n\r", getStringSecondsAsTime(device_on_time));
-terminalTextAttributesReset();
+printf("\n\r");
 
-}
+printErrorHandlerStatus();
 
-
-else if ((0 == strcmp(line, "Enable QI"))) {
-
-
-LATCbits.LATC2 = 0;
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("QI Wireless Power Conversion Enabled\n\r");
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Disable QI"))) {
-
-
-LATCbits.LATC2 = 1;
-
-terminalTextAttributes(RED, BLACK, NORMAL);
-printf("QI Wireless Power Conversion Disabled\n\r");
-terminalTextAttributesReset();
+printf("\n\r");
 
 }
 
@@ -17438,307 +17404,38 @@ terminalTextAttributesReset();
 
 else if ((0 == strcmp(line, "Error Status?"))) {
 
-if (getADCError()) {
-
-terminalTextAttributes(RED, BLACK, NORMAL);
-printf("ADC error(s) detected!\n\r");
-printf("The following channels caused an ADC error:\n\r");
-
-if (error_handler.ADC_general_error_flag) {
-printf("    General ADC error\n\r");
-}
-
-if (error_handler.FVR_ADC_error_flag) {
-printf("    FVR\n\r");
-}
-
-terminalTextAttributes(YELLOW, BLACK, NORMAL);
-printf("Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
-terminalTextAttributesReset();
-
-}
-
-else {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("No ADC error(s) detected\n\r");
-terminalTextAttributesReset();
-
-}
-
-if (getI2CError()) {
-
-terminalTextAttributes(RED, BLACK, NORMAL);
-printf("The following I2C Errors were detected:\n\r");
-
-if (error_handler.I2C_General_error_flag) {
-printf("    I2C General Error\n\r");
-}
-
-if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
-printf("    I2C Ambient Temp Sensor Error\n\r");
-}
-
-if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
-printf("    I2C POS5 Temp Sensor Error\n\r");
-}
-
-if (error_handler.I2C_QI_Temp_Sense_error_flag) {
-printf("    I2C QI Temp Sensor Error\n\r");
-}
-
-if (error_handler.I2C_OLED_error_flag) {
-printf("    I2C OLED Display Error\n\r");
-}
-
-terminalTextAttributes(YELLOW, BLACK, NORMAL);
-printf("Call 'Clear I2C Errors' to clear communications error(s)\n\r");
-terminalTextAttributesReset();
-
-}
-
-else {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("No I2C error(s) detected\n\r");
-terminalTextAttributesReset();
-
-}
-
-if (getUARTError()) {
-
-terminalTextAttributes(RED, BLACK, NORMAL);
-printf("USB UART Error Detected\n\r");
-
-terminalTextAttributes(YELLOW, BLACK, NORMAL);
-printf("Call 'Clear UART Errors' to clear communications error(s)\n\r");
-terminalTextAttributesReset();
-
-}
-
-else {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("No UART error(s) detected\n\r");
-terminalTextAttributesReset();
-
-}
+printErrorHandlerStatus();
 
 }
 
 
+else if (0 == strcmp(line, "Current Measurements?")) {
 
-else if((0 == strcmp(line, "Measure POS5?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("+5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if((0 == strcmp(line, "Measure POS12?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("+12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if((0 == strcmp(line, "Measure Die Temp?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure POS12 Current?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("+12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure QI Current?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if((0 == strcmp(line, "Measure FVR?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if((0 == strcmp(line, "Measure AVSS?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure Input Power?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure Output Power?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure Efficiency?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure QI Temp?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure POS5 Temp?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("+5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
-terminalTextAttributesReset();
-
-}
-
-
-else if ((0 == strcmp(line, "Measure Ambient Temp?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
-terminalTextAttributesReset();
-
-}
-
-else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("POS5 Converter is in Burst Mode\n\r");
-else printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
-terminalTextAttributesReset();
-
-}
-
-else if ((0 == strcmp(line, "Measure QI FSW?"))) {
-
-terminalTextAttributes(CYAN, BLACK, NORMAL);
-if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("QI Converter is in Burst Mode\n\r");
-else printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
-terminalTextAttributesReset();
-
-}
-
-else if ((0 == strcmp(line, "Charge Status?"))) {
-
-if (nxq_charge_state == QI_Error) {
-
-terminalTextAttributes(RED, BLACK, NORMAL);
-printf("QI Charger is in Error State\n\r");
-terminalTextAttributesReset();
-
-}
-
-else if (nxq_charge_state == QI_Fully_Charged) {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("QI wireless power converter has fully charged phone\n\r");
-terminalTextAttributesReset();
-
-}
-
-else {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("QI wireless power converter is %s\n\r", getNXQChargeStateString());
-terminalTextAttributesReset();
-
-}
-
-}
-
-
-else if((0 == strcmp(line, "QI Charge Time?"))) {
-
-terminalTextAttributes(GREEN, BLACK, NORMAL);
-if (QI_charge_time == 0) printf("QI Converter is not currently charging a phone\n\r");
-else printf("QI Converter has been charging a phone for: %s\n\r", getStringSecondsAsTime(QI_charge_time));
-terminalTextAttributesReset();
+printCurrentMeasurements();
 
 }
 
 
 else if((0 == strcmp(line, "Help"))) {
 
-terminalTextAttributes(YELLOW, BLACK, NORMAL);
+printf("\n\r");
+
+terminalTextAttributes(YELLOW, BLACK, BOLD);
 
 printf("Available Commands:\n\r");
 
-printf( "    Help: Lists available commands\n\r"
-"    *IDN?: Prints identification string\n\r"
+terminalTextAttributes(YELLOW, BLACK, NORMAL);
+
+printf( "    *IDN?: Prints identification string\n\r"
 "    Reset: Executes software reset instruction\n\r"
 "    Clear: Clears the virtual COM port terminal\n\r"
-"    Cause of Reset?: Prints the cause of the most recent device reset\n\r"
-"    Device ID?: Prints the microchip device ID\n\r"
-"    Revision ID?: Prints the microchip silicon revision ID\n\r"
-"    User IDs?: Prints a list of User IDs saved in Flash\n\r"
-"    Device On Time?: Prints the device on time since last device reset\n\r"
-"    Enable QI: Enabled QI wireless power conversion\n\r"
-"    Disable QI: Disables QI wireless power conversion\n\r"
-"    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
-"    QI Charge Time?: Prints the elapsed time that the QI converter has been charging a phone\n\r"
-"    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
-"    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
-"    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
-"    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
-"    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
-"    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
-"    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
-"    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
-"    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
-"    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
-"    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
-"    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
-"    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
-"    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
-"    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
+"    Current Measurements?: Prints instantaneous system level electrical measurements\n\r"
+"    Device Status?: Prints digital monitoring microcontroller device status\n\r"
 "    Error Status? Prints if any system faults have been detected\n\r"
 "    Clear UART Errors: Clears UART error flags\n\r"
 "    Clear I2C Errors: Clears I2C error flags\n\r"
 "    Clear ADC Errors: Clears ADC error flags\n\r"
+"    Help: Lists available commands (this command)\n\r"
 );
 
 printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
@@ -17751,6 +17448,8 @@ terminalTextAttributes(RED, BLACK, NORMAL);
 printf("Errors and negative responses appear in red\n\r");
 terminalTextAttributesReset();
 printf("User input appears in white\n\r");
+
+printf("\n\r");
 
 }
 
@@ -17770,6 +17469,186 @@ terminalTextAttributesReset();
 
 }
 
+}
+
+
+void printErrorHandlerStatus(void) {
+
+if (getADCError()) {
+
+terminalTextAttributes(RED, BLACK, NORMAL);
+printf("    ADC error(s) detected!\n\r");
+printf("    The following channels caused an ADC error:\n\r");
+
+if (error_handler.ADC_general_error_flag) {
+printf("        General ADC error\n\r");
+}
+
+if (error_handler.FVR_ADC_error_flag) {
+printf("        FVR\n\r");
+}
+
+terminalTextAttributes(YELLOW, BLACK, NORMAL);
+printf("    Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
+terminalTextAttributesReset();
+
+}
+
+else {
+
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+printf("    No ADC error(s) detected\n\r");
+terminalTextAttributesReset();
+
+}
+
+if (getI2CError()) {
+
+terminalTextAttributes(RED, BLACK, NORMAL);
+printf("    The following I2C Errors were detected:\n\r");
+
+if (error_handler.I2C_General_error_flag) {
+printf("        I2C General Error\n\r");
+}
+
+if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
+printf("        I2C Ambient Temp Sensor Error\n\r");
+}
+
+if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
+printf("        I2C POS5 Temp Sensor Error\n\r");
+}
+
+if (error_handler.I2C_QI_Temp_Sense_error_flag) {
+printf("        I2C QI Temp Sensor Error\n\r");
+}
+
+if (error_handler.I2C_OLED_error_flag) {
+printf("        I2C OLED Display Error\n\r");
+}
+
+terminalTextAttributes(YELLOW, BLACK, NORMAL);
+printf("    Call 'Clear I2C Errors' to clear communications error(s)\n\r");
+terminalTextAttributesReset();
+
+}
+
+else {
+
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+printf("    No I2C error(s) detected\n\r");
+terminalTextAttributesReset();
+
+}
+
+if (getUARTError()) {
+
+terminalTextAttributes(RED, BLACK, NORMAL);
+printf("    USB UART Error Detected\n\r");
+
+terminalTextAttributes(YELLOW, BLACK, NORMAL);
+printf("    Call 'Clear UART Errors' to clear communications error(s)\n\r");
+terminalTextAttributesReset();
+
+}
+
+else {
+
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+printf("    No UART error(s) detected\n\r");
+terminalTextAttributesReset();
+
+}
+
+}
+
+
+void printCurrentMeasurements(void) {
+
+printf("\n\r");
+
+terminalTextAttributes(GREEN, BLACK, BOLD);
+printf("System Measurements at time of command call:\n\r");
+
+printf("\n\r");
+
+if (nxq_charge_state == QI_Error) {
+terminalTextAttributes(RED, BLACK, NORMAL);
+printf("    QI Charger is in Error State\n\r");
+}
+else if (nxq_charge_state == QI_Fully_Charged) {
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+printf("    QI wireless power converter has fully charged phone\n\r");
+}
+else {
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+printf("    QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
+}
+
+printf("\n\r");
+
+terminalTextAttributes(GREEN, BLACK, NORMAL);
+if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r", getStringSecondsAsTime(QI_charge_time));
+
+printf("\n\r");
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    System Voltages:\n\r");
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("        +12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
+printf("        +5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
+
+printf("\n\r");
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    System Currents:\n\r");
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("        +12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
+printf("        QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
+
+printf("\n\r");
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    System Power:\n\r");
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("        Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
+printf("        Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
+
+printf("\n\r");
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
+
+printf("\n\r");
+
+printf("    System Switching Frequencies:\n\r");
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
+else printf("        Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
+else printf("        Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+
+printf("\n\r");
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    System Temperatures:\n\r");
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("        QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
+printf("        +5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
+printf("        Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
+
+printf("\n\r");
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    Microcontroller Parameters:\n\r");
+terminalTextAttributes(CYAN, BLACK, NORMAL);
+printf("        Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
+printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
+printf("        AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
+
+printf("\n\r");
+
+terminalTextAttributesReset();
 
 
 }

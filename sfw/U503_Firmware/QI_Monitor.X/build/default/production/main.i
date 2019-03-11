@@ -17078,6 +17078,9 @@ extern char * ftoa(float f, int * status);
 # 44 "ring_buffer_LUT.h"
 void ringBufferLUT(char * line);
 
+
+void printErrorHandlerStatus(void);
+
 # 36 "ring_buffer_interface.h"
 extern volatile bit eusart2RxStringReady;
 

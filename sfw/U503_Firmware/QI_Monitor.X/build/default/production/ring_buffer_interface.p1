@@ -11111,6 +11111,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 120: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 122: extern char * ftoa(float f, int * status);
 [; ;ring_buffer_LUT.h: 44: void ringBufferLUT(char * line);
+[; ;ring_buffer_LUT.h: 47: void printErrorHandlerStatus(void);
 [; ;ring_buffer_interface.h: 36: extern volatile bit eusart2RxStringReady;
 [; ;ring_buffer_interface.h: 39: extern volatile uint8_t eusart2RxCount;
 [; ;ring_buffer_interface.h: 42: extern volatile uint8_t eusart2RxHead;

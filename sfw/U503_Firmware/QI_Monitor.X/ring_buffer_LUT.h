@@ -43,6 +43,12 @@
 */
 void ringBufferLUT(char * line);
 
+// This function prints error status message
+void printErrorHandlerStatus(void);
+
+// This function prints the current measurements message
+void printCurrentMeasurements(void);
+
 
 #endif	/* RING_BUFFER_LUT_H */
 

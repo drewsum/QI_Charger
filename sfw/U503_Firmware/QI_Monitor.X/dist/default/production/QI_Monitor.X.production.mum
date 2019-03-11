@@ -1,6 +1,6 @@
 
 Memory Summary:
-    Program space        used  E442h ( 58434) of 20000h bytes   ( 44.6%)
+    Program space        used  DBDEh ( 56286) of 20000h bytes   ( 42.9%)
     Data space           used   494h (  1172) of   E88h bytes   ( 31.5%)
     Configuration bits   used     6h (     6) of     6h words   (100.0%)
     EEPROM space         used     0h (     0) of   400h bytes   (  0.0%)
