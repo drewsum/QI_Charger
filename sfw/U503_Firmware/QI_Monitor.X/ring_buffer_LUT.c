@@ -163,6 +163,16 @@ void ringBufferLUT(char * line) {
         
     } 
     
+    else if ((0 == strcmp(line, "Enable Live Measurements"))) {
+     
+        live_measurement_enable_flag = 1;
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("Enabling live measurements\n\r");
+        terminalTextAttributesReset();
+        __delay_ms(200);
+        
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
@@ -178,6 +188,7 @@ void ringBufferLUT(char * line) {
                 "    Reset: Executes software reset instruction\n\r"
                 "    Clear: Clears the virtual COM port terminal\n\r"
                 "    Current Measurements?: Prints instantaneous system level electrical measurements\n\r"
+                "    Enable Live Measurements: Prints a continuous stream of measurement data to the terminal\n\r"
                 "    Device Status?: Prints digital monitoring microcontroller device status\n\r"
                 "    Error Status? Prints if any system faults have been detected\n\r"
                 "    Clear UART Errors: Clears UART error flags\n\r"
@@ -213,6 +224,15 @@ void ringBufferLUT(char * line) {
             printf("Call 'Help' for list of supported commands\n\r");
             terminalTextAttributesReset();
         
+        }
+        
+        else if (live_measurement_enable_flag) {
+         
+            live_measurement_enable_flag = 0;
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("Live measurement updates disabled\n\r");
+            terminalTextAttributesReset();
+            
         }
         
     }

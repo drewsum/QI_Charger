@@ -16560,15 +16560,6 @@ void TMR0_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 93 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
-
-# 127
-bool FVR_IsOutputReady(void);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
 # 72 "mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
 
@@ -16678,6 +16669,15 @@ void ADCC_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 93 "mcc_generated_files/fvr.h"
+void FVR_Initialize(void);
+
+# 127
+bool FVR_IsOutputReady(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 80 "mcc_generated_files/ccp2.h"
 typedef union CCPR2Reg_tag
 {
@@ -16700,32 +16700,6 @@ void CCP2_CaptureISR(void);
 
 # 160
 void CCP2_CallBack(uint16_t capturedValue);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 99 "mcc_generated_files/memory.h"
-uint8_t FLASH_ReadByte(uint32_t flashAddr);
-
-# 125
-uint16_t FLASH_ReadWord(uint32_t flashAddr);
-
-# 157
-void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-
-# 193
-int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-
-# 218
-void FLASH_EraseBlock(uint32_t baseAddr);
-
-# 249
-void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-
-# 275
-uint8_t DATAEE_ReadByte(uint16_t bAdd);
-
-void MEMORY_Tasks(void);
 
 # 406 "mcc_generated_files/ext_int.h"
 void EXT_INT_Initialize(void);
@@ -16759,6 +16733,32 @@ extern void (*INT2_InterruptHandler)(void);
 
 # 636
 void INT2_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 99 "mcc_generated_files/memory.h"
+uint8_t FLASH_ReadByte(uint32_t flashAddr);
+
+# 125
+uint16_t FLASH_ReadWord(uint32_t flashAddr);
+
+# 157
+void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+
+# 193
+int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+
+# 218
+void FLASH_EraseBlock(uint32_t baseAddr);
+
+# 249
+void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+
+# 275
+uint8_t DATAEE_ReadByte(uint16_t bAdd);
+
+void MEMORY_Tasks(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -16882,6 +16882,9 @@ INTCONbits.IPEN = 1;
 IPR4bits.TMR1IP = 1;
 
 
+IPR0bits.INT2IP = 1;
+
+
 IPR0bits.TMR0IP = 1;
 
 
@@ -16894,10 +16897,10 @@ IPR1bits.ADTIP = 1;
 IPR0bits.IOCIP = 1;
 
 
+IPR3bits.TX2IP = 1;
+
+
 IPR0bits.INT1IP = 1;
-
-
-IPR0bits.INT2IP = 1;
 
 
 
@@ -16913,9 +16916,6 @@ IPR3bits.SSP2IP = 0;
 IPR4bits.TMR3IP = 0;
 
 
-IPR3bits.TX2IP = 0;
-
-
 IPR6bits.CCP2IP = 0;
 
 }
@@ -16926,6 +16926,10 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
 if(PIE4bits.TMR1IE == 1 && PIR4bits.TMR1IF == 1)
 {
 TMR1_ISR();
+}
+else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
+{
+INT2_ISR();
 }
 else if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
 {
@@ -16943,13 +16947,13 @@ else if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
 {
 PIN_MANAGER_IOC();
 }
+else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
+{
+EUSART2_TxDefaultInterruptHandler();
+}
 else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
 {
 INT1_ISR();
-}
-else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
-{
-INT2_ISR();
 }
 else
 {
@@ -16975,10 +16979,6 @@ I2C2_ISR();
 else if(PIE4bits.TMR3IE == 1 && PIR4bits.TMR3IF == 1)
 {
 TMR3_ISR();
-}
-else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
-{
-EUSART2_TxDefaultInterruptHandler();
 }
 else if(PIE6bits.CCP2IE == 1 && PIR6bits.CCP2IF == 1)
 {

@@ -20,8 +20,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [c E10233 0 1 2 3 .. ]
 [n E10233 nxq_charge_state_t QI_Idle QI_Charging QI_Fully_Charged QI_Error  ]
 "50 adc_postprocessing.h
-[c E9947 0 1 4 5 60 61 62 63 .. ]
-[n E9947 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
+[c E9943 0 1 4 5 60 61 62 63 .. ]
+[n E9943 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
 [s S1445 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1445 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
@@ -61,7 +61,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _getMinorRevisionID `(uc ~T0 @X0 0 ef ]
 "28 NXQ_charge_state.h
 [v _getNXQChargeStateStringCaps `(*uc ~T0 @X0 0 ef ]
-"55 ring_buffer_LUT.h
+"62 ring_buffer_LUT.h
 [v _floatToEngineeringFormat `(*uc ~T0 @X0 0 ef1`f ]
 "50 heartbeat_timer.h
 [v _getYearsFromOnTime `(uc ~T0 @X0 0 ef1`ul ]
@@ -11062,9 +11062,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 328: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;fvr.h: 93: void FVR_Initialize(void);
-[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;adcc.h: 72: typedef uint16_t adc_result_t;
 [; ;adcc.h: 89: typedef enum
 [; ;adcc.h: 90: {
@@ -11108,6 +11105,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;fvr.h: 93: void FVR_Initialize(void);
+[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;ccp2.h: 80: typedef union CCPR2Reg_tag
 [; ;ccp2.h: 81: {
 [; ;ccp2.h: 82: struct
@@ -11123,15 +11123,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ccp2.h: 123: void CCP2_Initialize(void);
 [; ;ccp2.h: 139: void CCP2_CaptureISR(void);
 [; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
-[; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
-[; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-[; ;memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-[; ;memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
-[; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-[; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
-[; ;memory.h: 277: void MEMORY_Tasks(void);
 [; ;ext_int.h: 406: void EXT_INT_Initialize(void);
 [; ;ext_int.h: 428: void INT1_ISR(void);
 [; ;ext_int.h: 452: void INT1_CallBack(void);
@@ -11143,6 +11134,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.h: 588: void INT2_SetInterruptHandler(void (* InterruptHandler)(void));
 [; ;ext_int.h: 612: extern void (*INT2_InterruptHandler)(void);
 [; ;ext_int.h: 636: void INT2_DefaultInterruptHandler(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
+[; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
+[; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+[; ;memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+[; ;memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
+[; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+[; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
+[; ;memory.h: 277: void MEMORY_Tasks(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
@@ -11285,9 +11285,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;NXQ_charge_state.h: 40: void QIIdleChargedTimerHandler(void);
 [; ;NXQ_charge_state.h: 43: void QIErrorTimerHandler(void);
 "50 adc_postprocessing.h
-[v _next_adc_channel `E9947 ~T0 @X0 1 e ]
+[v _next_adc_channel `E9943 ~T0 @X0 1 e ]
 [i _next_adc_channel
-. `E9947 4
+. `E9943 4
 ]
 [; ;adc_postprocessing.h: 50: adcc_channel_t next_adc_channel = channel_VSS;
 "63
@@ -11382,10 +11382,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.h: 56: uint8_t getHoursFromOnTime(uint32_t input_seconds);
 [; ;heartbeat_timer.h: 59: uint8_t getMinutesFromOnTime(uint32_t input_seconds);
 [; ;heartbeat_timer.h: 62: uint8_t getSecondsFromOnTime(uint32_t input_seconds);
-[; ;ring_buffer_LUT.h: 44: void ringBufferLUT(char * line);
-[; ;ring_buffer_LUT.h: 47: void printErrorHandlerStatus(void);
-[; ;ring_buffer_LUT.h: 50: void printCurrentMeasurements(void);
-[; ;ring_buffer_LUT.h: 55: char * floatToEngineeringFormat(float input_value);
+"21 ring_buffer_LUT.h
+[v _live_measurement_enable_flag `uc ~T0 @X0 1 e ]
+[; ;ring_buffer_LUT.h: 21: uint8_t live_measurement_enable_flag;
+"24
+[v _live_measurement_request_flag `uc ~T0 @X0 1 e ]
+[; ;ring_buffer_LUT.h: 24: uint8_t live_measurement_request_flag;
+[; ;ring_buffer_LUT.h: 51: void ringBufferLUT(char * line);
+[; ;ring_buffer_LUT.h: 54: void printErrorHandlerStatus(void);
+[; ;ring_buffer_LUT.h: 57: void printCurrentMeasurements(void);
+[; ;ring_buffer_LUT.h: 62: char * floatToEngineeringFormat(float input_value);
 [; ;ring_buffer_interface.h: 36: extern volatile bit eusart2RxStringReady;
 [; ;ring_buffer_interface.h: 39: extern volatile uint8_t eusart2RxCount;
 [; ;ring_buffer_interface.h: 42: extern volatile uint8_t eusart2RxHead;
@@ -11394,9 +11400,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _line `uc ~T0 @X0 -> 64 `i e ]
 [; ;ring_buffer_interface.h: 48: char line[64];
 [; ;ring_buffer_interface.h: 81: void terminal_ringBufferPull(void);
-[v F10336 `Cuc ~T0 @X0 -> 8 `i t ]
+[v F10338 `Cuc ~T0 @X0 -> 8 `i t ]
 "18 oled.c
-[v _OledFont `F10336 ~T0 @X0 -> 0 `x e ]
+[v _OledFont `F10338 ~T0 @X0 -> 0 `x e ]
 [i _OledFont
 :U ..
 :U ..

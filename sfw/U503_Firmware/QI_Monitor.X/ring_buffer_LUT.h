@@ -15,7 +15,14 @@
 
 #ifndef RING_BUFFER_LUT_H
 #define	RING_BUFFER_LUT_H
-    
+  
+
+// This flag enable live measurement printing
+uint8_t live_measurement_enable_flag;
+
+// This flag request a live measurement print
+uint8_t live_measurement_request_flag;
+
 /*
   @Summary
     This routine compares the string passed to it and acts on it if it matches

@@ -16,6 +16,8 @@
 #include "freq_meas.h"
 #include "adc_postprocessing.h"
 
+#include "ring_buffer_LUT.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
@@ -49,6 +51,9 @@ void heartbeatTimerHandler(void) {
     
     // Request a new frequency measurement capture
     freq_meas_start_flag = true;
+    
+    // If we need to stream data over UART, request a print message
+    if (live_measurement_enable_flag) live_measurement_request_flag = 1;
     
 }
 

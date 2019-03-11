@@ -203,6 +203,25 @@ void main(void)
         // If we need to start a new freq meas capture, start it
         if (freq_meas_start_flag) freqMeasStartCaptures();
         
+        // If we need to print out live data to the terminal, do it.
+        if (live_measurement_request_flag) {
+         
+            live_measurement_request_flag = 0;
+            
+            terminalClearScreen();
+            terminalSetCursorHome();
+            
+            terminalTextAttributes(GREEN, BLACK, BOLD);
+            printf("Live Measurements:\n\r\n\r");
+            
+            printCurrentMeasurements();
+            
+            terminalTextAttributes(YELLOW, BLACK, REVERSE);
+            printf("Press enter key to exit\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
         // Update error LEDs based on error handler state
         updateErrorLEDs();
         

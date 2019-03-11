@@ -16708,15 +16708,6 @@ void TMR0_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 93 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
-
-# 127
-bool FVR_IsOutputReady(void);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
 # 72 "mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
 
@@ -16826,6 +16817,15 @@ void ADCC_DefaultInterruptHandler(void);
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
+# 93 "mcc_generated_files/fvr.h"
+void FVR_Initialize(void);
+
+# 127
+bool FVR_IsOutputReady(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
 # 80 "mcc_generated_files/ccp2.h"
 typedef union CCPR2Reg_tag
 {
@@ -16848,32 +16848,6 @@ void CCP2_CaptureISR(void);
 
 # 160
 void CCP2_CallBack(uint16_t capturedValue);
-
-# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
-typedef unsigned char bool;
-
-# 99 "mcc_generated_files/memory.h"
-uint8_t FLASH_ReadByte(uint32_t flashAddr);
-
-# 125
-uint16_t FLASH_ReadWord(uint32_t flashAddr);
-
-# 157
-void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-
-# 193
-int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-
-# 218
-void FLASH_EraseBlock(uint32_t baseAddr);
-
-# 249
-void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-
-# 275
-uint8_t DATAEE_ReadByte(uint16_t bAdd);
-
-void MEMORY_Tasks(void);
 
 # 406 "mcc_generated_files/ext_int.h"
 void EXT_INT_Initialize(void);
@@ -16907,6 +16881,32 @@ extern void (*INT2_InterruptHandler)(void);
 
 # 636
 void INT2_DefaultInterruptHandler(void);
+
+# 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
+typedef unsigned char bool;
+
+# 99 "mcc_generated_files/memory.h"
+uint8_t FLASH_ReadByte(uint32_t flashAddr);
+
+# 125
+uint16_t FLASH_ReadWord(uint32_t flashAddr);
+
+# 157
+void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+
+# 193
+int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+
+# 218
+void FLASH_EraseBlock(uint32_t baseAddr);
+
+# 249
+void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+
+# 275
+uint8_t DATAEE_ReadByte(uint16_t bAdd);
+
+void MEMORY_Tasks(void);
 
 # 15 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
@@ -17232,7 +17232,45 @@ void ADC_PostProcessingHandler(void);
 
 void ADC_acquisitionTimerHandler(void);
 
-# 21 "heartbeat_timer.c"
+# 21 "ring_buffer_LUT.h"
+uint8_t live_measurement_enable_flag;
+
+
+uint8_t live_measurement_request_flag;
+
+# 51
+void ringBufferLUT(char * line);
+
+
+void printErrorHandlerStatus(void);
+
+
+void printCurrentMeasurements(void);
+
+
+
+
+char * floatToEngineeringFormat(float input_value);
+
+# 36 "ring_buffer_interface.h"
+extern volatile bit eusart2RxStringReady;
+
+
+extern volatile uint8_t eusart2RxCount;
+
+
+extern volatile uint8_t eusart2RxHead;
+extern volatile uint8_t eusart2RxTail;
+
+
+
+
+char line[64];
+
+# 81
+void terminal_ringBufferPull(void);
+
+# 23 "heartbeat_timer.c"
 void heartbeatTimerHandler(void) {
 
 
@@ -17264,6 +17302,9 @@ if (device_on_time % OLED_update_time == 0) OLED_update_flag = 1;
 
 
 freq_meas_start_flag = 1;
+
+
+if (live_measurement_enable_flag) live_measurement_request_flag = 1;
 
 }
 
