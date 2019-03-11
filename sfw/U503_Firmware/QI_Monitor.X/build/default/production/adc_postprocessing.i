@@ -16298,6 +16298,8 @@ struct adc_calculations_t {
 float input_power;
 float output_power;
 float efficiency;
+float output_charge;
+float output_energy;
 
 } adc_calculations;
 

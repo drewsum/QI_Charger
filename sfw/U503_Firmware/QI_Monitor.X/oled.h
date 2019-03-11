@@ -63,7 +63,7 @@ struct OLED_RAM_Buffer_t {
 } OLED_RAM_Buffer;
 
 // These macros set the maximum and minimum OLED_Frame values for normal operation (after boot)
-#define OLED_FRAME_MAX      23
+#define OLED_FRAME_MAX      25
 #define OLED_FRAME_MIN      4
 
 // Current OLED frame enumeration
@@ -81,19 +81,21 @@ typedef enum {
     OLED_Input_Power            = 9,
     OLED_Output_Power           = 10,
     OLED_Efficiency             = 11,
-    OLED_QI_Temp                = 12,
-    OLED_POS5_Temp              = 13,
-    OLED_Ambient_Temp           = 14,
-    OLED_Micro_Temp             = 15,
-    OLED_POS5_FSW               = 16,
-    OLED_QI_FSW                 = 17,
-    OLED_Dev_On_Time            = 18,
-    OLED_Charge_Time            = 19,
-    OLED_Cause_Of_Reset         = 20,
-    OLED_Dev_Rev_ID             = 21,
-    OLED_COM_PORT_SET           = 22,
-    OLED_TITLE_FRAME            = 23,
-    OLED_Idle                   = 24
+    OLED_Charge_Time            = 12,
+    OLED_Load_Charge            = 13,
+    OLED_Load_Energy            = 14,
+    OLED_QI_Temp                = 15,
+    OLED_POS5_Temp              = 16,
+    OLED_Ambient_Temp           = 17,
+    OLED_Micro_Temp             = 18,
+    OLED_POS5_FSW               = 19,
+    OLED_QI_FSW                 = 20,
+    OLED_Dev_On_Time            = 21,
+    OLED_Cause_Of_Reset         = 22,
+    OLED_Dev_Rev_ID             = 23,
+    OLED_COM_PORT_SET           = 24,
+    OLED_TITLE_FRAME            = 25,
+    OLED_Idle                   = 26
 
 } OLED_Frame_t;
 

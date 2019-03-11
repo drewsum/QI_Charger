@@ -2,6 +2,7 @@
 #include <xc.h>
 #include <string.h>
 #include <stdio.h>
+#include <math.h>
 
 #include "terminal_control.h"
 #include "ring_buffer_LUT.h"
@@ -150,6 +151,13 @@ void ringBufferLUT(char * line) {
     
     // Print all ADC and temperature measurements, as well as calculations
     else if (0 == strcmp(line, "Current Measurements?")) {
+         
+        printf("\n\r");
+        
+        terminalTextAttributes(GREEN, BLACK, BOLD);
+        printf("System Measurements at time of command call:\n\r");
+        
+        printf("\n\r");
         
         printCurrentMeasurements();
         
@@ -304,14 +312,7 @@ void printErrorHandlerStatus(void) {
 
 // This function prints the current measurements message
 void printCurrentMeasurements(void) {
- 
-        printf("\n\r");
-        
-        terminalTextAttributes(GREEN, BLACK, BOLD);
-        printf("System Measurements at time of command call:\n\r");
-        
-        printf("\n\r");
-        
+    
         if (nxq_charge_state == QI_Error) { 
             terminalTextAttributes(RED, BLACK, NORMAL);
             printf("    QI Charger is in Error State\n\r");
@@ -359,12 +360,30 @@ void printCurrentMeasurements(void) {
         
         printf("\n\r");
         
+        if (adc_calculations.output_energy > 0.0) {
+            
+            terminalTextAttributes(CYAN, BLACK, BOLD);
+            printf("    Energy consumed by the load while charging: %sJoules\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+
+            printf("\n\r");
+
+        }
+         
+        if (adc_calculations.output_charge > 0.0) {
+
+            terminalTextAttributes(CYAN, BLACK, BOLD);
+            printf("    Charge consumed by the load while charging: %sCoulombs\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+
+            printf("\n\r");
+
+        }
+            
         printf("    System Switching Frequencies:\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
         if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
-        else printf("        Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+        else printf("        Current +5V Switching Frequency measured as %.1f MHz\n\r", 2.5);
         if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
-        else printf("        Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+        else printf("        Current QI Switching Frequency measured as %sHz\n\r", floatToEngineeringFormat(freq_meas_results.QI_Freq_Meas));
         
         printf("\n\r");
         
@@ -388,6 +407,28 @@ void printCurrentMeasurements(void) {
         
         terminalTextAttributesReset();
     
+    
+}
+
+// This function returns a string representing a floating point number in
+// engineering format. It will append the unit prefix on the end after
+// three digits past the decimal point
+char * floatToEngineeringFormat(float input_value) {
+
+    static unsigned char result[20];
+    unsigned char *res = result;
+
+    float sign = (input_value > 0.0) ? 1.0 : ((input_value < 0.0) ? -1.0 : 0);
+    
+    if (abs(input_value) >= 1000000.0) sprintf(res, "+%0.3f M", input_value * sign / 1000000.0);
+    else if (abs(input_value) >= 1000.0) sprintf(res, "+%0.3f k", input_value * sign / 1000.0);
+    else if (abs(input_value) >= 1.0) sprintf(res, "+%0.3f ", input_value * sign / 1.0);
+    else if (abs(input_value) >= 0.0001) sprintf(res, "+%0.3f m", input_value * sign / 0.001);
+    else if (abs(input_value) >= 0.0000001) sprintf(res, "+%0.3f u", input_value * sign / 0.000001);
+    else if (abs(input_value) >= 0.0000000001) sprintf(res, "+%0.3f n", input_value * sign / 0.000000001);
+    else if (input_value == 0.0) sprintf(res, "0.0 ");
+    
+    return result;
     
 }
 

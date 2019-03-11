@@ -16148,6 +16148,34 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
+# 30 "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\math.h"
+extern double fabs(double);
+extern double floor(double);
+extern double ceil(double);
+extern double modf(double, double *);
+extern double sqrt(double);
+extern double atof(const char *);
+extern double sin(double) ;
+extern double cos(double) ;
+extern double tan(double) ;
+extern double asin(double) ;
+extern double acos(double) ;
+extern double atan(double);
+extern double atan2(double, double) ;
+extern double log(double);
+extern double log10(double);
+extern double pow(double, double) ;
+extern double exp(double) ;
+extern double sinh(double) ;
+extern double cosh(double) ;
+extern double tanh(double);
+extern double eval_poly(double, const double *, int);
+extern double frexp(double, int *);
+extern double ldexp(double, int);
+extern double fmod(double, double);
+extern double trunc(double);
+extern double round(double);
+
 # 11 "terminal_control.h"
 typedef enum {
 
@@ -17028,6 +17056,11 @@ void printErrorHandlerStatus(void);
 
 void printCurrentMeasurements(void);
 
+
+
+
+char * floatToEngineeringFormat(float input_value);
+
 # 36 "ring_buffer_interface.h"
 extern volatile bit eusart2RxStringReady;
 
@@ -17168,6 +17201,8 @@ struct adc_calculations_t {
 float input_power;
 float output_power;
 float efficiency;
+float output_charge;
+float output_energy;
 
 } adc_calculations;
 
@@ -17278,10 +17313,10 @@ void freqMeasStartCaptures(void);
 
 void freqMeasConvert(void);
 
-# 19 "ring_buffer_LUT.c"
+# 20 "ring_buffer_LUT.c"
 void ringBufferLUT(char * line) {
 
-# 25
+# 26
 if((0 == strcmp(line, "Reset"))) {
 
 
@@ -17410,6 +17445,13 @@ printErrorHandlerStatus();
 
 
 else if (0 == strcmp(line, "Current Measurements?")) {
+
+printf("\n\r");
+
+terminalTextAttributes(GREEN, BLACK, BOLD);
+printf("System Measurements at time of command call:\n\r");
+
+printf("\n\r");
 
 printCurrentMeasurements();
 
@@ -17565,13 +17607,6 @@ terminalTextAttributesReset();
 
 void printCurrentMeasurements(void) {
 
-printf("\n\r");
-
-terminalTextAttributes(GREEN, BLACK, BOLD);
-printf("System Measurements at time of command call:\n\r");
-
-printf("\n\r");
-
 if (nxq_charge_state == QI_Error) {
 terminalTextAttributes(RED, BLACK, NORMAL);
 printf("    QI Charger is in Error State\n\r");
@@ -17588,9 +17623,7 @@ printf("    QI wireless power converter is currently %s\n\r", getNXQChargeStateS
 printf("\n\r");
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r", getStringSecondsAsTime(QI_charge_time));
-
-printf("\n\r");
+if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r\n\r", getStringSecondsAsTime(QI_charge_time));
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    System Voltages:\n\r");
@@ -17621,12 +17654,30 @@ printf("    System Efficiency calculated as %.3f%%\n\r", adc_calculations.effici
 
 printf("\n\r");
 
+if (adc_calculations.output_energy > 0.0) {
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    Energy consumed by the load while charging: %sJoules\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+
+printf("\n\r");
+
+}
+
+if (adc_calculations.output_charge > 0.0) {
+
+terminalTextAttributes(CYAN, BLACK, BOLD);
+printf("    Charge consumed by the load while charging: %sCoulombs\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+
+printf("\n\r");
+
+}
+
 printf("    System Switching Frequencies:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
-else printf("        Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
+else printf("        Current +5V Switching Frequency measured as %.1f MHz\n\r", 2.5);
 if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
-else printf("        Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+else printf("        Current QI Switching Frequency measured as %sHz\n\r", floatToEngineeringFormat(freq_meas_results.QI_Freq_Meas));
 
 printf("\n\r");
 
@@ -17650,6 +17701,28 @@ printf("\n\r");
 
 terminalTextAttributesReset();
 
+
+}
+
+
+
+
+char * floatToEngineeringFormat(float input_value) {
+
+static unsigned char result[20];
+unsigned char *res = result;
+
+float sign = (input_value > 0.0) ? 1.0 : ((input_value < 0.0) ? -1.0 : 0);
+
+if (abs(input_value) >= 1000000.0) sprintf(res, "+%0.3f M", input_value * sign / 1000000.0);
+else if (abs(input_value) >= 1000.0) sprintf(res, "+%0.3f k", input_value * sign / 1000.0);
+else if (abs(input_value) >= 1.0) sprintf(res, "+%0.3f ", input_value * sign / 1.0);
+else if (abs(input_value) >= 0.0001) sprintf(res, "+%0.3f m", input_value * sign / 0.001);
+else if (abs(input_value) >= 0.0000001) sprintf(res, "+%0.3f u", input_value * sign / 0.000001);
+else if (abs(input_value) >= 0.0000000001) sprintf(res, "+%0.3f n", input_value * sign / 0.000000001);
+else if (input_value == 0.0) sprintf(res, "0.0 ");
+
+return result;
 
 }
 

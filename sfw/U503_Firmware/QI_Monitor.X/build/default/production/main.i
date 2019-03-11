@@ -17081,6 +17081,14 @@ void ringBufferLUT(char * line);
 
 void printErrorHandlerStatus(void);
 
+
+void printCurrentMeasurements(void);
+
+
+
+
+char * floatToEngineeringFormat(float input_value);
+
 # 36 "ring_buffer_interface.h"
 extern volatile bit eusart2RxStringReady;
 
@@ -17150,6 +17158,8 @@ struct adc_calculations_t {
 float input_power;
 float output_power;
 float efficiency;
+float output_charge;
+float output_energy;
 
 } adc_calculations;
 
@@ -17265,19 +17275,21 @@ OLED_QI_Current = 8,
 OLED_Input_Power = 9,
 OLED_Output_Power = 10,
 OLED_Efficiency = 11,
-OLED_QI_Temp = 12,
-OLED_POS5_Temp = 13,
-OLED_Ambient_Temp = 14,
-OLED_Micro_Temp = 15,
-OLED_POS5_FSW = 16,
-OLED_QI_FSW = 17,
-OLED_Dev_On_Time = 18,
-OLED_Charge_Time = 19,
-OLED_Cause_Of_Reset = 20,
-OLED_Dev_Rev_ID = 21,
-OLED_COM_PORT_SET = 22,
-OLED_TITLE_FRAME = 23,
-OLED_Idle = 24
+OLED_Charge_Time = 12,
+OLED_Load_Charge = 13,
+OLED_Load_Energy = 14,
+OLED_QI_Temp = 15,
+OLED_POS5_Temp = 16,
+OLED_Ambient_Temp = 17,
+OLED_Micro_Temp = 18,
+OLED_POS5_FSW = 19,
+OLED_QI_FSW = 20,
+OLED_Dev_On_Time = 21,
+OLED_Cause_Of_Reset = 22,
+OLED_Dev_Rev_ID = 23,
+OLED_COM_PORT_SET = 24,
+OLED_TITLE_FRAME = 25,
+OLED_Idle = 26
 
 } OLED_Frame_t;
 

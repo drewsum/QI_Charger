@@ -49,6 +49,11 @@ void printErrorHandlerStatus(void);
 // This function prints the current measurements message
 void printCurrentMeasurements(void);
 
+// This function returns a string representing a floating point number in
+// engineering format. It will append the unit prefix on the end after
+// three digits past the decimal point
+char * floatToEngineeringFormat(float input_value);
+
 
 #endif	/* RING_BUFFER_LUT_H */
 

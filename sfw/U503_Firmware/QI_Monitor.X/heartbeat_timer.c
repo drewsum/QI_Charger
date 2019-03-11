@@ -14,6 +14,7 @@
 #include "oled.h"
 
 #include "freq_meas.h"
+#include "adc_postprocessing.h"
 
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
@@ -29,6 +30,14 @@ void heartbeatTimerHandler(void) {
     if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_charge_time++;
     else QI_charge_time = 0;
     
+    // Increment output charge from QI current
+    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+    else adc_calculations.output_charge = 0.0;
+    
+    // Increment output energy from output power
+    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
+    else adc_calculations.output_energy = 0.0;
+    
     // Kick the dog
     CLRWDT();
     
@@ -40,6 +49,7 @@ void heartbeatTimerHandler(void) {
     
     // Request a new frequency measurement capture
     freq_meas_start_flag = true;
+    
 }
 
 // This function returns a string of a large number of seconds in a human readable format

@@ -6,13 +6,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [s S1434 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1434 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
 "66
-[s S1435 `f 1 `f 1 `f 1 ]
-[n S1435 adc_calculations_t input_power output_power efficiency ]
+[s S1435 `f 1 `f 1 `f 1 `f 1 `f 1 ]
+[n S1435 adc_calculations_t input_power output_power efficiency output_charge output_energy ]
 "97 mcc_generated_files/i2c2.h
-[c E9691 0 1 2 3 4 5 6 .. ]
-[n E9691 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
-[v F9966 `(v ~T0 @X0 0 tf ]
-[v F9969 `(v ~T0 @X0 0 tf ]
+[c E9693 0 1 2 3 4 5 6 .. ]
+[n E9693 . I2C2_MESSAGE_COMPLETE I2C2_MESSAGE_FAIL I2C2_MESSAGE_PENDING I2C2_STUCK_START I2C2_MESSAGE_ADDRESS_NO_ACK I2C2_DATA_NO_ACK I2C2_LOST_STATE  ]
+[v F9968 `(v ~T0 @X0 0 tf ]
+[v F9971 `(v ~T0 @X0 0 tf ]
 "41 error_handling.h
 [s S1441 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1441 error_struct FVR_ADC_error_flag ADC_general_error_flag I2C_General_error_flag I2C_OLED_error_flag I2C_QI_Temp_Sense_error_flag I2C_POS5_Temp_Sense_error_flag I2C_Ambient_Temp_Sense_error_flag USB_UART_COMM_error_flag ]
@@ -10845,42 +10845,44 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_postprocessing.h: 60: float qi_isns_adc_result;
 [; ;adc_postprocessing.h: 61: float die_temp_adc_result;
 [; ;adc_postprocessing.h: 63: } adc_results;
-"72
+"74
 [v _adc_calculations `S1435 ~T0 @X0 1 e ]
 [; ;adc_postprocessing.h: 66: struct adc_calculations_t {
 [; ;adc_postprocessing.h: 68: float input_power;
 [; ;adc_postprocessing.h: 69: float output_power;
 [; ;adc_postprocessing.h: 70: float efficiency;
-[; ;adc_postprocessing.h: 72: } adc_calculations;
-"75
-[v _pos12_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
-[; ;adc_postprocessing.h: 75: float pos12_isns_average_buffer[16];
+[; ;adc_postprocessing.h: 71: float output_charge;
+[; ;adc_postprocessing.h: 72: float output_energy;
+[; ;adc_postprocessing.h: 74: } adc_calculations;
 "77
+[v _pos12_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
+[; ;adc_postprocessing.h: 77: float pos12_isns_average_buffer[16];
+"79
 [v _pos12_isns_average_index `uc ~T0 @X0 1 e ]
 [i _pos12_isns_average_index
 -> -> 0 `i `uc
 ]
-[; ;adc_postprocessing.h: 77: uint8_t pos12_isns_average_index = 0;
-"80
-[v _qi_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
-[; ;adc_postprocessing.h: 80: float qi_isns_average_buffer[16];
+[; ;adc_postprocessing.h: 79: uint8_t pos12_isns_average_index = 0;
 "82
+[v _qi_isns_average_buffer `f ~T0 @X0 -> 16 `i e ]
+[; ;adc_postprocessing.h: 82: float qi_isns_average_buffer[16];
+"84
 [v _qi_isns_average_index `uc ~T0 @X0 1 e ]
 [i _qi_isns_average_index
 -> -> 0 `i `uc
 ]
-[; ;adc_postprocessing.h: 82: uint8_t qi_isns_average_index = 0;
-"85
+[; ;adc_postprocessing.h: 84: uint8_t qi_isns_average_index = 0;
+"87
 [v _adc_result_scaling `f ~T0 @X0 1 e ]
-[; ;adc_postprocessing.h: 85: float adc_result_scaling;
-"88
+[; ;adc_postprocessing.h: 87: float adc_result_scaling;
+"90
 [v _temp_adc_offset `Cf ~T0 @X0 1 e ]
 [i _temp_adc_offset
 -> .376.115 `f
 ]
-[; ;adc_postprocessing.h: 88: const float temp_adc_offset = 376.115;
-[; ;adc_postprocessing.h: 92: void ADC_PostProcessingHandler(void);
-[; ;adc_postprocessing.h: 96: void ADC_acquisitionTimerHandler(void);
+[; ;adc_postprocessing.h: 90: const float temp_adc_offset = 376.115;
+[; ;adc_postprocessing.h: 94: void ADC_PostProcessingHandler(void);
+[; ;adc_postprocessing.h: 98: void ADC_acquisitionTimerHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;tmr2.h: 79: typedef enum
 [; ;tmr2.h: 80: {
@@ -10963,7 +10965,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c2.h: 94: I2C2_LOST_STATE
 [; ;i2c2.h: 95: } I2C2_MESSAGE_STATUS;
 "97 mcc_generated_files/i2c2.h
-[v _I2C_STATUS `E9691 ~T0 @X0 1 e ]
+[v _I2C_STATUS `E9693 ~T0 @X0 1 e ]
 [; ;i2c2.h: 97: I2C2_MESSAGE_STATUS I2C_STATUS;
 [; ;i2c2.h: 113: typedef struct
 [; ;i2c2.h: 114: {
@@ -11119,10 +11121,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F9966 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F9968 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F9969 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F9971 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
