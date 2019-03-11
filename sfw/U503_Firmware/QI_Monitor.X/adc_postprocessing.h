@@ -68,6 +68,8 @@ struct adc_calculations_t {
     float input_power;                     // POS12 * POS12_ISNS
     float output_power;                    // POS5 * QI_ISNS
     float efficiency;                      // output_power / input_power * 100.0
+    float output_charge;                   // Charge that has been moved to phone
+    float output_energy;                   // Energy that has moved to phone
     
 } adc_calculations;
 

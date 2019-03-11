@@ -17113,19 +17113,21 @@ OLED_QI_Current = 8,
 OLED_Input_Power = 9,
 OLED_Output_Power = 10,
 OLED_Efficiency = 11,
-OLED_QI_Temp = 12,
-OLED_POS5_Temp = 13,
-OLED_Ambient_Temp = 14,
-OLED_Micro_Temp = 15,
-OLED_POS5_FSW = 16,
-OLED_QI_FSW = 17,
-OLED_Dev_On_Time = 18,
-OLED_Charge_Time = 19,
-OLED_Cause_Of_Reset = 20,
-OLED_Dev_Rev_ID = 21,
-OLED_COM_PORT_SET = 22,
-OLED_TITLE_FRAME = 23,
-OLED_Idle = 24
+OLED_Charge_Time = 12,
+OLED_Load_Charge = 13,
+OLED_Load_Energy = 14,
+OLED_QI_Temp = 15,
+OLED_POS5_Temp = 16,
+OLED_Ambient_Temp = 17,
+OLED_Micro_Temp = 18,
+OLED_POS5_FSW = 19,
+OLED_QI_FSW = 20,
+OLED_Dev_On_Time = 21,
+OLED_Cause_Of_Reset = 22,
+OLED_Dev_Rev_ID = 23,
+OLED_COM_PORT_SET = 24,
+OLED_TITLE_FRAME = 25,
+OLED_Idle = 26
 
 } OLED_Frame_t;
 
@@ -17179,7 +17181,58 @@ void freqMeasStartCaptures(void);
 
 void freqMeasConvert(void);
 
-# 20 "heartbeat_timer.c"
+# 50 "adc_postprocessing.h"
+adcc_channel_t next_adc_channel = channel_VSS;
+
+
+struct adc_results_t {
+
+float avss_adc_result;
+float fvr_adc_result;
+float pos5_adc_result;
+float pos12_adc_result;
+float pos12_isns_adc_result;
+float qi_isns_adc_result;
+float die_temp_adc_result;
+
+} adc_results;
+
+
+struct adc_calculations_t {
+
+float input_power;
+float output_power;
+float efficiency;
+float output_charge;
+float output_energy;
+
+} adc_calculations;
+
+
+float pos12_isns_average_buffer[16];
+
+uint8_t pos12_isns_average_index = 0;
+
+
+float qi_isns_average_buffer[16];
+
+uint8_t qi_isns_average_index = 0;
+
+
+float adc_result_scaling;
+
+
+const float temp_adc_offset = 376.115;
+
+
+
+void ADC_PostProcessingHandler(void);
+
+
+
+void ADC_acquisitionTimerHandler(void);
+
+# 21 "heartbeat_timer.c"
 void heartbeatTimerHandler(void) {
 
 
@@ -17193,6 +17246,14 @@ if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_
 else QI_charge_time = 0;
 
 
+if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+else adc_calculations.output_charge = 0.0;
+
+
+if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
+else adc_calculations.output_energy = 0.0;
+
+
 asm(" clrwdt");
 
 
@@ -17203,6 +17264,7 @@ if (device_on_time % OLED_update_time == 0) OLED_update_flag = 1;
 
 
 freq_meas_start_flag = 1;
+
 }
 
 

@@ -17039,19 +17039,21 @@ OLED_QI_Current = 8,
 OLED_Input_Power = 9,
 OLED_Output_Power = 10,
 OLED_Efficiency = 11,
-OLED_QI_Temp = 12,
-OLED_POS5_Temp = 13,
-OLED_Ambient_Temp = 14,
-OLED_Micro_Temp = 15,
-OLED_POS5_FSW = 16,
-OLED_QI_FSW = 17,
-OLED_Dev_On_Time = 18,
-OLED_Charge_Time = 19,
-OLED_Cause_Of_Reset = 20,
-OLED_Dev_Rev_ID = 21,
-OLED_COM_PORT_SET = 22,
-OLED_TITLE_FRAME = 23,
-OLED_Idle = 24
+OLED_Charge_Time = 12,
+OLED_Load_Charge = 13,
+OLED_Load_Energy = 14,
+OLED_QI_Temp = 15,
+OLED_POS5_Temp = 16,
+OLED_Ambient_Temp = 17,
+OLED_Micro_Temp = 18,
+OLED_POS5_FSW = 19,
+OLED_QI_FSW = 20,
+OLED_Dev_On_Time = 21,
+OLED_Cause_Of_Reset = 22,
+OLED_Dev_Rev_ID = 23,
+OLED_COM_PORT_SET = 24,
+OLED_TITLE_FRAME = 25,
+OLED_Idle = 26
 
 } OLED_Frame_t;
 
@@ -17085,7 +17087,7 @@ void OLED_updateHandler(void);
 void leftCapTouchHandler(void) {
 
 OLED_Frame--;
-if (OLED_Frame == 4 - 1) OLED_Frame = 23;
+if (OLED_Frame == 4 - 1) OLED_Frame = 25;
 OLED_update_flag = 1;
 
 }
@@ -17094,7 +17096,7 @@ OLED_update_flag = 1;
 void rightCapTouchHandler(void) {
 
 OLED_Frame++;
-if (OLED_Frame == 23 + 1) OLED_Frame = 4;
+if (OLED_Frame == 25 + 1) OLED_Frame = 4;
 OLED_update_flag = 1;
 
 }

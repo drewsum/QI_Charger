@@ -1,6 +1,8 @@
 
 #include <xc.h>
 #include <string.h>
+#include <stdio.h>
+#include <math.h>
 
 #include "terminal_control.h"
 #include "ring_buffer_LUT.h"
@@ -44,19 +46,6 @@ void ringBufferLUT(char * line) {
         printf("\033[H");
 
     }
-    
-    // print Device ID
-    else if((0 == strcmp(line, "Cause of Reset?"))) {
-
-        terminalTextAttributes(GREEN, BLACK, NORMAL);
-        
-        // Determine cause of reset and print
-        printf("The cause of the most recent device reset was: %s\n\r",
-                getCauseOfResetString(reset_cause));
-       
-        terminalTextAttributesReset();
-
-    }
 
     // Identification string
     else if((0 == strcmp(line, "*IDN?"))) {
@@ -67,84 +56,57 @@ void ringBufferLUT(char * line) {
 
     }
     
-    // print Device ID
-    else if((0 == strcmp(line, "Device ID?"))) {
-
+    // Print microcontroller status
+    else if (0 == strcmp(line, "Device Status?")) {
+     
+        printf("\n\r");
+        
+        terminalTextAttributes(GREEN, BLACK, BOLD);
+        
+        printf("Digital Monitoring Microcontroller Status:\n\r");
+        
         terminalTextAttributes(GREEN, BLACK, NORMAL);
+        
+        printf("\n\r");
         
         // Grab and print device ID from flash
-        printf("Device ID stored in Flash is: %s (0x%04X)\n\r",
+        printf("    Device ID retrieved from flash: %s (0x%04X)\n\r",
                 getDeviceIDString(getDeviceID()),
                 getDeviceID());
-
-        terminalTextAttributesReset();
-
-    }
-    
-    // print Revision ID
-    else if((0 == strcmp(line, "Revision ID?"))) {
-
-        terminalTextAttributes(GREEN, BLACK, NORMAL);
         
-        // Grab and print revision ID from flash
-        printf("Device silicon revision ID as stored in Flash is: %c%03d\n\r",
+        printf("\n\r");
+        
+        printf("    Device silicon revision ID retrieved from flash: %c%03d\n\r",
                 ((char) getMajorRevisionID() + 65),getMinorRevisionID());
-
-        terminalTextAttributesReset();
-
-    }
-    
-    // print User IDs
-    else if((0 == strcmp(line, "User IDs?"))) {
-
-        terminalTextAttributes(GREEN, BLACK, NORMAL);
         
-        printf("The following User IDs have been retrieved from flash memory:\n\r");
+        printf("\n\r");
+        
+        printf("    The following User IDs have been retrieved from flash:\n\r");
 
         // Loop through all 8 user ID locations in flash
         for (int userID = 0; userID <= 7; userID++) {
          
-            printf("    User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
+            printf("        User ID Word %d (Flash address 0x20000%X): 0x%04X\n\r",
                     userID,
                     (2 * userID),
                     getUserID(userID));
             
         }
-
-        terminalTextAttributesReset();
-
-    }
-    
-    // Report microcontroller on time since last reset
-    else if((0 == strcmp(line, "Device On Time?"))) {
-     
-        terminalTextAttributes(GREEN, BLACK, NORMAL);
-        printf("Device on time since last reset condition is: %s\n\r", getStringSecondsAsTime(device_on_time));
-        terminalTextAttributesReset();
-         
-    }
-    
-    // Turn on QI circuit
-    else if ((0 == strcmp(line, "Enable QI"))) {
-     
-        // Pull QI circuit out of standby
-        QI_STANDBY_PIN = 0;
         
-        terminalTextAttributes(GREEN, BLACK, NORMAL);
-        printf("QI Wireless Power Conversion Enabled\n\r");
-        terminalTextAttributesReset();
+        printf("\n\r");
         
-    }
-    
-    // Turn off QI circuit
-    else if ((0 == strcmp(line, "Disable QI"))) {
-     
-        // Set QI converter to Standby
-        QI_STANDBY_PIN = 1;
+        printf("    The cause of the most recent device reset was: %s\n\r",
+                getCauseOfResetString(reset_cause));
         
-        terminalTextAttributes(RED, BLACK, NORMAL);
-        printf("QI Wireless Power Conversion Disabled\n\r");
-        terminalTextAttributesReset();
+        printf("\n\r");
+        
+        printf("    Device on time since last reset condition is %s\n\r", getStringSecondsAsTime(device_on_time));
+        
+        printf("\n\r");
+        
+        printErrorHandlerStatus();
+        
+        printf("\n\r");
         
     }
     
@@ -183,307 +145,45 @@ void ringBufferLUT(char * line) {
     
     else if ((0 == strcmp(line, "Error Status?"))) {
      
-        if (getADCError()) {
-            
-            terminalTextAttributes(RED, BLACK, NORMAL);
-            printf("ADC error(s) detected!\n\r");
-            printf("The following channels caused an ADC error:\n\r");
-            
-            if (error_handler.ADC_general_error_flag) {
-                printf("    General ADC error\n\r");
-            }
-            
-            if (error_handler.FVR_ADC_error_flag) {
-                printf("    FVR\n\r");
-            }
-            
-            terminalTextAttributes(YELLOW, BLACK, NORMAL);
-            printf("Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
-            terminalTextAttributesReset();
-            
-        }
+        printErrorHandlerStatus();
         
-        else {
+    }
+    
+    // Print all ADC and temperature measurements, as well as calculations
+    else if (0 == strcmp(line, "Current Measurements?")) {
          
-            terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("No ADC error(s) detected\n\r");
-            terminalTextAttributesReset();
+        printf("\n\r");
         
-        }
+        terminalTextAttributes(GREEN, BLACK, BOLD);
+        printf("System Measurements at time of command call:\n\r");
         
-        if (getI2CError()) {
-         
-            terminalTextAttributes(RED, BLACK, NORMAL);
-            printf("The following I2C Errors were detected:\n\r");
-            
-            if (error_handler.I2C_General_error_flag) {
-                printf("    I2C General Error\n\r");
-            }
-            
-            if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
-                printf("    I2C Ambient Temp Sensor Error\n\r");
-            }
-            
-            if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
-                printf("    I2C POS5 Temp Sensor Error\n\r");
-            }
-            
-            if (error_handler.I2C_QI_Temp_Sense_error_flag) {
-                printf("    I2C QI Temp Sensor Error\n\r");
-            }
-            
-            if (error_handler.I2C_OLED_error_flag) {
-                printf("    I2C OLED Display Error\n\r");
-            }
-            
-            terminalTextAttributes(YELLOW, BLACK, NORMAL);
-            printf("Call 'Clear I2C Errors' to clear communications error(s)\n\r");
-            terminalTextAttributesReset();
-            
-        }
+        printf("\n\r");
         
-        else {
-            
-            terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("No I2C error(s) detected\n\r");
-            terminalTextAttributesReset();
-            
-        }
+        printCurrentMeasurements();
         
-        if (getUARTError()) {
-        
-            terminalTextAttributes(RED, BLACK, NORMAL);
-            printf("USB UART Error Detected\n\r");
-            
-            terminalTextAttributes(YELLOW, BLACK, NORMAL);
-            printf("Call 'Clear UART Errors' to clear communications error(s)\n\r");
-            terminalTextAttributesReset();
-        
-        }
-        
-        else {
-            
-            terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("No UART error(s) detected\n\r");
-            terminalTextAttributesReset();
-            
-        }
-        
-    }
-    
-    
-    // Report POS3P3 ADC Conversion Result
-    else if((0 == strcmp(line, "Measure POS5?"))) {
-
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("+5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report POS12 ADC Conversion Result
-    else if((0 == strcmp(line, "Measure POS12?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("+12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report Die temp ADC Conversion Result
-    else if((0 == strcmp(line, "Measure Die Temp?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report POS12 current
-    else if ((0 == strcmp(line, "Measure POS12 Current?"))) {
-        
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("+12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report !I current
-    else if ((0 == strcmp(line, "Measure QI Current?"))) {
-        
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report FVR buffer 1 ADC Conversion Result
-    else if((0 == strcmp(line, "Measure FVR?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report VSS ADC Conversion Result
-    else if((0 == strcmp(line, "Measure AVSS?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
-        terminalTextAttributesReset();
-        
-    }    
-    
-    // Report input power calculation
-    else if ((0 == strcmp(line, "Measure Input Power?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report output power calculation
-    else if ((0 == strcmp(line, "Measure Output Power?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report efficiency calculation
-    else if ((0 == strcmp(line, "Measure Efficiency?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report QI Temperature
-    else if ((0 == strcmp(line, "Measure QI Temp?"))) {
-    
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report POS5 Temperature
-    else if ((0 == strcmp(line, "Measure POS5 Temp?"))) {
-    
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("+5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    // Report Ambient Temperature
-    else if ((0 == strcmp(line, "Measure Ambient Temp?"))) {
-    
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
-        terminalTextAttributesReset();
-        
-    }
-    
-    else if ((0 == strcmp(line, "Measure POS5 FSW?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("POS5 Converter is in Burst Mode\n\r");
-        else printf("Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
-        terminalTextAttributesReset();
-        
-    }
-    
-    else if ((0 == strcmp(line, "Measure QI FSW?"))) {
-     
-        terminalTextAttributes(CYAN, BLACK, NORMAL);
-        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("QI Converter is in Burst Mode\n\r");
-        else printf("Current QI Switching Frequency measured as %+.3f kHz\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
-        terminalTextAttributesReset();
-        
-    }
-    
-    else if ((0 == strcmp(line, "Charge Status?"))) {
-     
-        if (nxq_charge_state == QI_Error) {
-         
-            terminalTextAttributes(RED, BLACK, NORMAL);
-            printf("QI Charger is in Error State\n\r");
-            terminalTextAttributesReset();
-            
-        }
-        
-        else if (nxq_charge_state == QI_Fully_Charged) {
-        
-            terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("QI wireless power converter has fully charged phone\n\r");
-            terminalTextAttributesReset();
-            
-        }
-            
-        else {
-            
-            terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("QI wireless power converter is %s\n\r", getNXQChargeStateString());
-            terminalTextAttributesReset();
-            
-        }
-        
-    }
-    
-    // Report QI charge time since last charging
-    else if((0 == strcmp(line, "QI Charge Time?"))) {
-     
-        terminalTextAttributes(GREEN, BLACK, NORMAL);
-        if (QI_charge_time == 0) printf("QI Converter is not currently charging a phone\n\r");
-        else printf("QI Converter has been charging a phone for: %s\n\r", getStringSecondsAsTime(QI_charge_time));
-        terminalTextAttributesReset();
-         
-    }
+    } 
     
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
-        terminalTextAttributes(YELLOW, BLACK, NORMAL);
+        printf("\n\r");
+        
+        terminalTextAttributes(YELLOW, BLACK, BOLD);
 
         printf("Available Commands:\n\r");
         
-        printf( "    Help: Lists available commands\n\r"
-                "    *IDN?: Prints identification string\n\r"
+        terminalTextAttributes(YELLOW, BLACK, NORMAL);
+        
+        printf( "    *IDN?: Prints identification string\n\r"
                 "    Reset: Executes software reset instruction\n\r"
                 "    Clear: Clears the virtual COM port terminal\n\r"
-                "    Cause of Reset?: Prints the cause of the most recent device reset\n\r"
-                "    Device ID?: Prints the microchip device ID\n\r"
-                "    Revision ID?: Prints the microchip silicon revision ID\n\r"
-                "    User IDs?: Prints a list of User IDs saved in Flash\n\r"
-                "    Device On Time?: Prints the device on time since last device reset\n\r"
-                "    Enable QI: Enabled QI wireless power conversion\n\r"
-                "    Disable QI: Disables QI wireless power conversion\n\r"
-                "    Charge Status?: Prints the charge state of the QI wireless power converter\n\r"
-                "    QI Charge Time?: Prints the elapsed time that the QI converter has been charging a phone\n\r"
-                "    Measure POS5?: Prints the ADC conversion result for the +5V rail\n\r"
-                "    Measure POS12?: Prints the ADC conversion result for the +12V rail\n\r"
-                "    Measure POS12 Current?: Prints the ADC conversion result for the +12V input current\n\r"
-                "    Measure QI Current?: Prints the ADC conversion result for the QI converter current\n\r"
-                "    Measure Input Power?: Prints the calculated electrical input power based on ADC measurements\n\r"
-                "    Measure Output Power?: Prints the calculated wireless output power based on ADC measurements\n\r"
-                "    Measure Efficiency?: Prints the calculated system efficiency based on ADC measurements\n\r"
-                "    Measure AVSS?: Prints the ADC conversion result for AVSS\n\r"
-                "    Measure FVR?: Prints the ADC conversion result for the fixed voltage reference\n\r"
-                "    Measure Die Temp?: Prints the ADC conversion result for the microcontroller die temperature\n\r"
-                "    Measure QI Temp?: Prints the digital temperature sensor result for the QI converter\n\r"
-                "    Measure POS5 Temp?: Prints the digital temperature sensor result for the +5V converter\n\r"
-                "    Measure Ambient Temp?: Prints the digital temperature sensor result for ambient environment\n\r"
-                "    Measure POS5 FSW?: Prints the measured POS5 Switching Frequency\n\r"
-                "    Measure QI FSW?: Prints the measured QI Switching Frequency\n\r"
+                "    Current Measurements?: Prints instantaneous system level electrical measurements\n\r"
+                "    Device Status?: Prints digital monitoring microcontroller device status\n\r"
                 "    Error Status? Prints if any system faults have been detected\n\r"
                 "    Clear UART Errors: Clears UART error flags\n\r"
                 "    Clear I2C Errors: Clears I2C error flags\n\r"
                 "    Clear ADC Errors: Clears ADC error flags\n\r"
+                "    Help: Lists available commands (this command)\n\r"
                 );
         
         printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
@@ -497,6 +197,8 @@ void ringBufferLUT(char * line) {
         terminalTextAttributesReset();
         printf("User input appears in white\n\r");
 
+        printf("\n\r");
+        
     }
     
     // If we've gotten an unsupported command:
@@ -514,8 +216,219 @@ void ringBufferLUT(char * line) {
         }
         
     }
+    
+}
+
+// This function prints error status
+void printErrorHandlerStatus(void) {
+    
+    if (getADCError()) {
+
+        terminalTextAttributes(RED, BLACK, NORMAL);
+        printf("    ADC error(s) detected!\n\r");
+        printf("    The following channels caused an ADC error:\n\r");
+
+        if (error_handler.ADC_general_error_flag) {
+            printf("        General ADC error\n\r");
+        }
+
+        if (error_handler.FVR_ADC_error_flag) {
+            printf("        FVR\n\r");
+        }
+
+        terminalTextAttributes(YELLOW, BLACK, NORMAL);
+        printf("    Call 'Clear ADC Errors' to clear ADC error(s)\n\r");
+        terminalTextAttributesReset();
+
+    }
+
+    else {
+
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("    No ADC error(s) detected\n\r");
+        terminalTextAttributesReset();
+
+    }
+
+    if (getI2CError()) {
+
+        terminalTextAttributes(RED, BLACK, NORMAL);
+        printf("    The following I2C Errors were detected:\n\r");
+
+        if (error_handler.I2C_General_error_flag) {
+            printf("        I2C General Error\n\r");
+        }
+
+        if (error_handler.I2C_Ambient_Temp_Sense_error_flag) {
+            printf("        I2C Ambient Temp Sensor Error\n\r");
+        }
+
+        if (error_handler.I2C_POS5_Temp_Sense_error_flag) {
+            printf("        I2C POS5 Temp Sensor Error\n\r");
+        }
+
+        if (error_handler.I2C_QI_Temp_Sense_error_flag) {
+            printf("        I2C QI Temp Sensor Error\n\r");
+        }
+
+        if (error_handler.I2C_OLED_error_flag) {
+            printf("        I2C OLED Display Error\n\r");
+        }
+
+        terminalTextAttributes(YELLOW, BLACK, NORMAL);
+        printf("    Call 'Clear I2C Errors' to clear communications error(s)\n\r");
+        terminalTextAttributesReset();
+
+    }
+
+    else {
+
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("    No I2C error(s) detected\n\r");
+        terminalTextAttributesReset();
+
+    }
+
+    if (getUARTError()) {
+
+        terminalTextAttributes(RED, BLACK, NORMAL);
+        printf("    USB UART Error Detected\n\r");
+
+        terminalTextAttributes(YELLOW, BLACK, NORMAL);
+        printf("    Call 'Clear UART Errors' to clear communications error(s)\n\r");
+        terminalTextAttributesReset();
+
+    }
+
+    else {
+
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("    No UART error(s) detected\n\r");
+        terminalTextAttributesReset();
+
+    }
+    
+}
+
+// This function prints the current measurements message
+void printCurrentMeasurements(void) {
+    
+        if (nxq_charge_state == QI_Error) { 
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("    QI Charger is in Error State\n\r");
+        }
+        else if (nxq_charge_state == QI_Fully_Charged) {
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("    QI wireless power converter has fully charged phone\n\r");
+        }
+        else {   
+            terminalTextAttributes(GREEN, BLACK, NORMAL);
+            printf("    QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
+        }
         
+        printf("\n\r");
         
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r\n\r", getStringSecondsAsTime(QI_charge_time));
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    System Voltages:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        +12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
+        printf("        +5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
+        
+        printf("\n\r");
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    System Currents:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        +12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
+        printf("        QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
+        
+        printf("\n\r");
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    System Power:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
+        printf("        Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
+        
+        printf("\n\r");
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
+        
+        printf("\n\r");
+        
+        if (adc_calculations.output_energy > 0.0) {
+            
+            terminalTextAttributes(CYAN, BLACK, BOLD);
+            printf("    Energy consumed by the load while charging: %sJoules\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+
+            printf("\n\r");
+
+        }
+         
+        if (adc_calculations.output_charge > 0.0) {
+
+            terminalTextAttributes(CYAN, BLACK, BOLD);
+            printf("    Charge consumed by the load while charging: %sCoulombs\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+
+            printf("\n\r");
+
+        }
+            
+        printf("    System Switching Frequencies:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
+        else printf("        Current +5V Switching Frequency measured as %.1f MHz\n\r", 2.5);
+        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
+        else printf("        Current QI Switching Frequency measured as %sHz\n\r", floatToEngineeringFormat(freq_meas_results.QI_Freq_Meas));
+        
+        printf("\n\r");
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    System Temperatures:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
+        printf("        +5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
+        printf("        Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
+        
+        printf("\n\r");
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Microcontroller Parameters:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
+        printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
+        printf("        AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
+        
+        printf("\n\r");
+        
+        terminalTextAttributesReset();
+    
+    
+}
+
+// This function returns a string representing a floating point number in
+// engineering format. It will append the unit prefix on the end after
+// three digits past the decimal point
+char * floatToEngineeringFormat(float input_value) {
+
+    static unsigned char result[20];
+    unsigned char *res = result;
+
+    float sign = (input_value > 0.0) ? 1.0 : ((input_value < 0.0) ? -1.0 : 0);
+    
+    if (abs(input_value) >= 1000000.0) sprintf(res, "+%0.3f M", input_value * sign / 1000000.0);
+    else if (abs(input_value) >= 1000.0) sprintf(res, "+%0.3f k", input_value * sign / 1000.0);
+    else if (abs(input_value) >= 1.0) sprintf(res, "+%0.3f ", input_value * sign / 1.0);
+    else if (abs(input_value) >= 0.0001) sprintf(res, "+%0.3f m", input_value * sign / 0.001);
+    else if (abs(input_value) >= 0.0000001) sprintf(res, "+%0.3f u", input_value * sign / 0.000001);
+    else if (abs(input_value) >= 0.0000000001) sprintf(res, "+%0.3f n", input_value * sign / 0.000000001);
+    else if (input_value == 0.0) sprintf(res, "0.0 ");
+    
+    return result;
     
 }
 
