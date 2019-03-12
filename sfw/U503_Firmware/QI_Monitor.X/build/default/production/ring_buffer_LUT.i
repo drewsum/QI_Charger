@@ -16928,7 +16928,7 @@ void MEMORY_Tasks(void);
 typedef unsigned char bool;
 
 # 79 "mcc_generated_files/eusart2.h"
-extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint16_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
 
 # 86
@@ -17469,7 +17469,6 @@ live_measurement_enable_flag = 1;
 terminalTextAttributes(GREEN, BLACK, NORMAL);
 printf("Enabling live measurements\n\r");
 terminalTextAttributesReset();
-_delay((unsigned long)((200)*(64000000/4000.0)));
 
 }
 
@@ -17643,10 +17642,8 @@ printf("    QI wireless power converter has fully charged phone\n\r");
 }
 else {
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("    QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
+printf("    QI wireless power converter is currently %s\n\r\n\r", getNXQChargeStateString());
 }
-
-printf("\n\r");
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
 if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r\n\r", getStringSecondsAsTime(QI_charge_time));
@@ -17655,75 +17652,46 @@ terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    System Voltages:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        +12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
-printf("        +5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
-
-printf("\n\r");
+printf("        +5V rail measured as %+.3f Volts\n\r\n\r", adc_results.pos5_adc_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    System Currents:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        +12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
-printf("        QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
-
-printf("\n\r");
+printf("        QI converter current measured as %+.3f Amps\n\r\n\r", adc_results.qi_isns_adc_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    System Power:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
-printf("        Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
-
-printf("\n\r");
+printf("        Wireless Output Power calculated as %+.3f Watts\n\r\n\r", adc_calculations.output_power);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
+printf("    System Efficiency calculated as %.3f%%\n\r\n\r", adc_calculations.efficiency);
 
-printf("\n\r");
-
-if (adc_calculations.output_energy > 0.0) {
-
-terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Energy consumed by the load while charging: %sJoules\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
-
-printf("\n\r");
-
-}
-
-if (adc_calculations.output_charge > 0.0) {
-
-terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Charge consumed by the load while charging: %sCoulombs\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
-
-printf("\n\r");
-
-}
+printf("    Energy consumed by the load while charging: %sJoules\n\r\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+printf("    Charge consumed by the load while charging: %sCoulombs\n\r\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
 
 printf("    System Switching Frequencies:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
-else printf("        Current +5V Switching Frequency measured as %.1f MHz\n\r", 2.5);
+else printf("        Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
 if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
-else printf("        Current QI Switching Frequency measured as %sHz\n\r", floatToEngineeringFormat(freq_meas_results.QI_Freq_Meas));
-
-printf("\n\r");
+else printf("        Current QI Switching Frequency measured as %+.3f kHz\n\r\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    System Temperatures:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
 printf("        +5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
-printf("        Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
-
-printf("\n\r");
+printf("        Ambient Temperature measured as %+.3f C\n\r\n\r", LM73_temp_results.Ambient_temp_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    Microcontroller Parameters:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
 printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
-printf("        AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
-
-printf("\n\r");
+printf("        AVSS measured as %+.3f Volts\n\r\n\r", adc_results.avss_adc_result);
 
 terminalTextAttributesReset();
 
@@ -17738,14 +17706,16 @@ char * floatToEngineeringFormat(float input_value) {
 static unsigned char result[20];
 unsigned char *res = result;
 
-float sign = (input_value > 0.0) ? 1.0 : ((input_value < 0.0) ? -1.0 : 0);
 
-if (abs(input_value) >= 1000000.0) sprintf(res, "+%0.3f M", input_value * sign / 1000000.0);
-else if (abs(input_value) >= 1000.0) sprintf(res, "+%0.3f k", input_value * sign / 1000.0);
-else if (abs(input_value) >= 1.0) sprintf(res, "+%0.3f ", input_value * sign / 1.0);
-else if (abs(input_value) >= 0.0001) sprintf(res, "+%0.3f m", input_value * sign / 0.001);
-else if (abs(input_value) >= 0.0000001) sprintf(res, "+%0.3f u", input_value * sign / 0.000001);
-else if (abs(input_value) >= 0.0000000001) sprintf(res, "+%0.3f n", input_value * sign / 0.000000001);
+
+float mag = abs(input_value);
+
+if (mag >= 1000000.0) sprintf(res, "+%0.3f M", input_value / 1000000.0);
+else if (mag >= 1000.0) sprintf(res, "+%0.3f k", input_value/ 1000.0);
+else if (mag >= 1.0) sprintf(res, "+%0.3f ", input_value / 1.0);
+else if (mag >= 0.0001) sprintf(res, "+%0.3f m", input_value / 0.001);
+else if (mag >= 0.0000001) sprintf(res, "+%0.3f u", input_value / 0.000001);
+else if (mag >= 0.0000000001) sprintf(res, "+%0.3f n", input_value / 0.000000001);
 else if (input_value == 0.0) sprintf(res, "0.0 ");
 
 return result;

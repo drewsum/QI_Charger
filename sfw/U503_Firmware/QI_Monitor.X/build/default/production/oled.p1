@@ -11144,7 +11144,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 277: void MEMORY_Tasks(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 79: extern volatile uint16_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
 [v _EUSART2_TxDefaultInterruptHandler `*F10084 ~T0 @X0 1 e ]

@@ -16848,7 +16848,7 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
 # 79 "mcc_generated_files/eusart2.h"
-extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint16_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
 
 # 86

@@ -16206,7 +16206,7 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
 # 79 "mcc_generated_files/eusart2.h"
-extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint16_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
 
 # 86
@@ -16906,10 +16906,10 @@ void clearUARTErrors(void);
 void clearI2CErrors(void);
 
 # 63 "mcc_generated_files/eusart2.c"
-volatile uint8_t eusart2TxHead = 0;
-volatile uint8_t eusart2TxTail = 0;
-volatile uint8_t eusart2TxBuffer[64];
-volatile uint8_t eusart2TxBufferRemaining;
+volatile uint16_t eusart2TxHead = 0;
+volatile uint16_t eusart2TxTail = 0;
+volatile uint8_t eusart2TxBuffer[1024];
+volatile uint16_t eusart2TxBufferRemaining;
 
 volatile uint8_t eusart2RxHead = 0;
 volatile uint8_t eusart2RxTail = 0;

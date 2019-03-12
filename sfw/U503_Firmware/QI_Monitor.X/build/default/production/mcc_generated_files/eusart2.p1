@@ -10826,7 +10826,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 [; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
 [; ;stdio.h: 195: extern int printf(const char *, ...);
-[; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 79: extern volatile uint16_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
 [v _EUSART2_TxDefaultInterruptHandler `*F9496 ~T0 @X0 1 e ]
@@ -11114,23 +11114,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;error_handling.h: 70: void clearUARTErrors(void);
 [; ;error_handling.h: 73: void clearI2CErrors(void);
 "63 mcc_generated_files/eusart2.c
-[v _eusart2TxHead `Vuc ~T0 @X0 1 e ]
+[v _eusart2TxHead `Vui ~T0 @X0 1 e ]
 [i _eusart2TxHead
--> -> 0 `i `uc
+-> -> 0 `i `ui
 ]
-[; ;eusart2.c: 63: volatile uint8_t eusart2TxHead = 0;
+[; ;eusart2.c: 63: volatile uint16_t eusart2TxHead = 0;
 "64
-[v _eusart2TxTail `Vuc ~T0 @X0 1 e ]
+[v _eusart2TxTail `Vui ~T0 @X0 1 e ]
 [i _eusart2TxTail
--> -> 0 `i `uc
+-> -> 0 `i `ui
 ]
-[; ;eusart2.c: 64: volatile uint8_t eusart2TxTail = 0;
+[; ;eusart2.c: 64: volatile uint16_t eusart2TxTail = 0;
 "65
-[v _eusart2TxBuffer `Vuc ~T0 @X0 -> 64 `i e ]
-[; ;eusart2.c: 65: volatile uint8_t eusart2TxBuffer[64];
+[v _eusart2TxBuffer `Vuc ~T0 @X0 -> 1024 `i e ]
+[; ;eusart2.c: 65: volatile uint8_t eusart2TxBuffer[1024];
 "66
-[v _eusart2TxBufferRemaining `Vuc ~T0 @X0 1 e ]
-[; ;eusart2.c: 66: volatile uint8_t eusart2TxBufferRemaining;
+[v _eusart2TxBufferRemaining `Vui ~T0 @X0 1 e ]
+[; ;eusart2.c: 66: volatile uint16_t eusart2TxBufferRemaining;
 "68
 [v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
 [i _eusart2RxHead
@@ -11192,13 +11192,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _SP2BRGH -> -> 0 `i `uc ]
 [; ;eusart2.c: 105: eusart2TxHead = 0;
 "105
-[e = _eusart2TxHead -> -> 0 `i `uc ]
+[e = _eusart2TxHead -> -> 0 `i `ui ]
 [; ;eusart2.c: 106: eusart2TxTail = 0;
 "106
-[e = _eusart2TxTail -> -> 0 `i `uc ]
+[e = _eusart2TxTail -> -> 0 `i `ui ]
 [; ;eusart2.c: 107: eusart2TxBufferRemaining = sizeof(eusart2TxBuffer);
 "107
-[e = _eusart2TxBufferRemaining -> -> # _eusart2TxBuffer `ui `uc ]
+[e = _eusart2TxBufferRemaining -> # _eusart2TxBuffer `ui ]
 [; ;eusart2.c: 109: eusart2RxHead = 0;
 "109
 [e = _eusart2RxHead -> -> 0 `i `uc ]
@@ -11225,7 +11225,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;eusart2.c: 119: return eusart2TxBufferRemaining;
 "119
-[e ) _eusart2TxBufferRemaining ]
+[e ) -> _eusart2TxBufferRemaining `uc ]
 [e $UE 1441  ]
 [; ;eusart2.c: 120: }
 "120
@@ -11350,7 +11350,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 1450 ]
 "155
-[e $ == -> 0 `i -> _eusart2TxBufferRemaining `i 1451  ]
+[e $ == -> -> 0 `i `ui _eusart2TxBufferRemaining 1451  ]
 [e :U 1452 ]
 [; ;eusart2.c: 158: }
 [; ;eusart2.c: 160: if(0 == PIE3bits.TX2IE)
@@ -11377,23 +11377,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _PIE3bits 0 6 -> -> 0 `i `uc ]
 [; ;eusart2.c: 167: eusart2TxBuffer[eusart2TxHead++] = txData;
 "167
-[e = *U + &U _eusart2TxBuffer * -> ++ _eusart2TxHead -> -> 1 `i `uc `ux -> -> # *U &U _eusart2TxBuffer `ui `ux _txData ]
+[e = *U + &U _eusart2TxBuffer * -> ++ _eusart2TxHead -> -> 1 `i `ui `ux -> -> # *U &U _eusart2TxBuffer `ui `ux _txData ]
 [; ;eusart2.c: 168: if(sizeof(eusart2TxBuffer) <= eusart2TxHead)
 "168
-[e $ ! <= -> # _eusart2TxBuffer `ui -> _eusart2TxHead `ui 1455  ]
+[e $ ! <= -> # _eusart2TxBuffer `ui _eusart2TxHead 1455  ]
 [; ;eusart2.c: 169: {
 "169
 {
 [; ;eusart2.c: 170: eusart2TxHead = 0;
 "170
-[e = _eusart2TxHead -> -> 0 `i `uc ]
+[e = _eusart2TxHead -> -> 0 `i `ui ]
 "171
 }
 [e :U 1455 ]
 [; ;eusart2.c: 171: }
 [; ;eusart2.c: 172: eusart2TxBufferRemaining--;
 "172
-[e -- _eusart2TxBufferRemaining -> -> 1 `i `uc ]
+[e -- _eusart2TxBufferRemaining -> -> 1 `i `ui ]
 "173
 }
 [e :U 1454 ]
@@ -11449,29 +11449,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;eusart2.c: 191: if(sizeof(eusart2TxBuffer) > eusart2TxBufferRemaining)
 "191
-[e $ ! > -> # _eusart2TxBuffer `ui -> _eusart2TxBufferRemaining `ui 1459  ]
+[e $ ! > -> # _eusart2TxBuffer `ui _eusart2TxBufferRemaining 1459  ]
 [; ;eusart2.c: 192: {
 "192
 {
 [; ;eusart2.c: 193: TX2REG = eusart2TxBuffer[eusart2TxTail++];
 "193
-[e = _TX2REG *U + &U _eusart2TxBuffer * -> ++ _eusart2TxTail -> -> 1 `i `uc `ux -> -> # *U &U _eusart2TxBuffer `ui `ux ]
+[e = _TX2REG *U + &U _eusart2TxBuffer * -> ++ _eusart2TxTail -> -> 1 `i `ui `ux -> -> # *U &U _eusart2TxBuffer `ui `ux ]
 [; ;eusart2.c: 194: if(sizeof(eusart2TxBuffer) <= eusart2TxTail)
 "194
-[e $ ! <= -> # _eusart2TxBuffer `ui -> _eusart2TxTail `ui 1460  ]
+[e $ ! <= -> # _eusart2TxBuffer `ui _eusart2TxTail 1460  ]
 [; ;eusart2.c: 195: {
 "195
 {
 [; ;eusart2.c: 196: eusart2TxTail = 0;
 "196
-[e = _eusart2TxTail -> -> 0 `i `uc ]
+[e = _eusart2TxTail -> -> 0 `i `ui ]
 "197
 }
 [e :U 1460 ]
 [; ;eusart2.c: 197: }
 [; ;eusart2.c: 198: eusart2TxBufferRemaining++;
 "198
-[e ++ _eusart2TxBufferRemaining -> -> 1 `i `uc ]
+[e ++ _eusart2TxBufferRemaining -> -> 1 `i `ui ]
 "199
 }
 [; ;eusart2.c: 199: }

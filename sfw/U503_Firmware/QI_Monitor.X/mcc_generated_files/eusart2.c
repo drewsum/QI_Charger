@@ -54,16 +54,16 @@
   Section: Macro Declarations
 */
 
-#define EUSART2_TX_BUFFER_SIZE 64
+#define EUSART2_TX_BUFFER_SIZE 1024
 #define EUSART2_RX_BUFFER_SIZE 64
 
 /**
   Section: Global Variables
 */
-volatile uint8_t eusart2TxHead = 0;
-volatile uint8_t eusart2TxTail = 0;
+volatile uint16_t eusart2TxHead = 0;
+volatile uint16_t eusart2TxTail = 0;
 volatile uint8_t eusart2TxBuffer[EUSART2_TX_BUFFER_SIZE];
-volatile uint8_t eusart2TxBufferRemaining;
+volatile uint16_t eusart2TxBufferRemaining;
 
 volatile uint8_t eusart2RxHead = 0;
 volatile uint8_t eusart2RxTail = 0;

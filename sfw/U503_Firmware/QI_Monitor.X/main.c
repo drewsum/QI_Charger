@@ -193,7 +193,7 @@ void main(void)
         
         // If received terminal data is ready, process it
         if (eusart2RxStringReady) terminal_ringBufferPull();
-            
+        
         // If the OLED needs to be updated, update it
         if (OLED_update_flag) OLED_updateHandler();
         
@@ -217,7 +217,7 @@ void main(void)
             printCurrentMeasurements();
             
             terminalTextAttributes(YELLOW, BLACK, REVERSE);
-            printf("Press enter key to exit\n\r");
+            printf("Press enter key to exit\n\r\n\r");
             terminalTextAttributesReset();
             
         }

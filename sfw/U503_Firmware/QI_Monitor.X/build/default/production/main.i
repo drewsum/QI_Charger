@@ -16856,7 +16856,7 @@ void MEMORY_Tasks(void);
 typedef unsigned char bool;
 
 # 79 "mcc_generated_files/eusart2.h"
-extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint16_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
 
 # 86
@@ -17505,7 +17505,7 @@ printf("Live Measurements:\n\r\n\r");
 printCurrentMeasurements();
 
 terminalTextAttributes(YELLOW, BLACK, REVERSE);
-printf("Press enter key to exit\n\r");
+printf("Press enter key to exit\n\r\n\r");
 terminalTextAttributesReset();
 
 }
