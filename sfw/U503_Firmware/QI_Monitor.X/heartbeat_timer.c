@@ -53,7 +53,7 @@ void heartbeatTimerHandler(void) {
     freq_meas_start_flag = true;
     
     // If we need to stream data over UART, request a print message
-    if (live_measurement_enable_flag && device_on_time % 2 == 0) live_measurement_request_flag = 1;
+    if (live_measurement_enable_flag) live_measurement_request_flag = 1;
     
 }
 

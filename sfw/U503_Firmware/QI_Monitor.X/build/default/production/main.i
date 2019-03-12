@@ -17496,16 +17496,16 @@ if (live_measurement_request_flag) {
 
 live_measurement_request_flag = 0;
 
-terminalClearScreen();
+
 terminalSetCursorHome();
 
 terminalTextAttributes(GREEN, BLACK, BOLD);
-printf("Live Measurements:\n\r\n\r");
+printf("Live Measurements:\033[K\n\r\033[K\n\r");
 
 printCurrentMeasurements();
 
 terminalTextAttributes(YELLOW, BLACK, REVERSE);
-printf("Press enter key to exit\n\r\n\r");
+printf("Press enter key to exit\033[K\n\r\033[K\n\r");
 terminalTextAttributesReset();
 
 }

@@ -11757,16 +11757,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 209: live_measurement_request_flag = 0;
 "209
 [e = _live_measurement_request_flag -> -> 0 `i `uc ]
-[; ;main.c: 211: terminalClearScreen();
-"211
-[e ( _terminalClearScreen ..  ]
 [; ;main.c: 212: terminalSetCursorHome();
 "212
 [e ( _terminalSetCursorHome ..  ]
 [; ;main.c: 214: terminalTextAttributes(GREEN, BLACK, BOLD);
 "214
 [e ( _terminalTextAttributes (3 , , . `E10008 2 . `E10008 0 . `E10000 1 ]
-[; ;main.c: 215: printf("Live Measurements:\n\r\n\r");
+[; ;main.c: 215: printf("Live Measurements:\033[K\n\r\033[K\n\r");
 "215
 [e ( _printf :s 10C ]
 [; ;main.c: 217: printCurrentMeasurements();
@@ -11775,7 +11772,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 219: terminalTextAttributes(YELLOW, BLACK, REVERSE);
 "219
 [e ( _terminalTextAttributes (3 , , . `E10008 3 . `E10008 0 . `E10000 4 ]
-[; ;main.c: 220: printf("Press enter key to exit\n\r\n\r");
+[; ;main.c: 220: printf("Press enter key to exit\033[K\n\r\033[K\n\r");
 "220
 [e ( _printf :s 11C ]
 [; ;main.c: 221: terminalTextAttributesReset();
@@ -11809,5 +11806,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 1C 81 73 32 67 104 97 114 103 101 114 32 119 105 116 104 32 68 105 103 105 116 97 108 32 77 111 110 105 116 111 114 105 110 103 10 13 66 111 111 116 32 67 111 109 112 108 101 116 101 10 13 0 ]
 [a 7C 69 114 114 111 114 115 32 97 110 100 32 110 101 103 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 114 101 100 10 13 0 ]
 [a 3C 81 73 32 87 105 114 101 108 101 115 115 32 80 111 119 101 114 32 67 111 110 118 101 114 115 105 111 110 32 69 110 97 98 108 101 100 10 13 0 ]
-[a 11C 80 114 101 115 115 32 101 110 116 101 114 32 107 101 121 32 116 111 32 101 120 105 116 10 13 10 13 0 ]
-[a 10C 76 105 118 101 32 77 101 97 115 117 114 101 109 101 110 116 115 58 10 13 10 13 0 ]
+[a 11C 80 114 101 115 115 32 101 110 116 101 114 32 107 101 121 32 116 111 32 101 120 105 116 27 91 75 10 13 27 91 75 10 13 0 ]
+[a 10C 76 105 118 101 32 77 101 97 115 117 114 101 109 101 110 116 115 58 27 91 75 10 13 27 91 75 10 13 0 ]

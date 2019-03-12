@@ -17304,7 +17304,7 @@ if (device_on_time % OLED_update_time == 0) OLED_update_flag = 1;
 freq_meas_start_flag = 1;
 
 
-if (live_measurement_enable_flag && device_on_time % 2 == 0) live_measurement_request_flag = 1;
+if (live_measurement_enable_flag) live_measurement_request_flag = 1;
 
 }
 

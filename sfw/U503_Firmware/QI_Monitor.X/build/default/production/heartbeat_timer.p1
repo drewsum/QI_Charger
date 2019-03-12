@@ -11411,9 +11411,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 53: freq_meas_start_flag = 1;
 "53
 [e = _freq_meas_start_flag -> -> 1 `i `uc ]
-[; ;heartbeat_timer.c: 56: if (live_measurement_enable_flag && device_on_time % 2 == 0) live_measurement_request_flag = 1;
+[; ;heartbeat_timer.c: 56: if (live_measurement_enable_flag) live_measurement_request_flag = 1;
 "56
-[e $ ! && != -> _live_measurement_enable_flag `i -> -> -> 0 `i `uc `i == % _device_on_time -> -> -> 2 `i `l `ul -> -> -> 0 `i `l `ul 1457  ]
+[e $ ! != -> _live_measurement_enable_flag `i -> -> -> 0 `i `uc `i 1457  ]
 [e = _live_measurement_request_flag -> -> 1 `i `uc ]
 [e :U 1457 ]
 [; ;heartbeat_timer.c: 58: }

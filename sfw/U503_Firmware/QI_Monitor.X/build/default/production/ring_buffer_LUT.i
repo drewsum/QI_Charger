@@ -17469,6 +17469,8 @@ live_measurement_enable_flag = 1;
 terminalTextAttributes(GREEN, BLACK, NORMAL);
 printf("Enabling live measurements\n\r");
 terminalTextAttributesReset();
+_delay((unsigned long)((100)*(64000000/4000.0)));
+terminalClearScreen();
 
 }
 
@@ -17634,64 +17636,67 @@ void printCurrentMeasurements(void) {
 
 if (nxq_charge_state == QI_Error) {
 terminalTextAttributes(RED, BLACK, NORMAL);
-printf("    QI Charger is in Error State\n\r");
+printf("    QI Charger is in Error State\033[K\n\r\033[K\n\r");
 }
 else if (nxq_charge_state == QI_Fully_Charged) {
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("    QI wireless power converter has fully charged phone\n\r");
+printf("    QI wireless power converter has fully charged phone\033[K\n\r\033[K\n\r");
 }
 else {
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("    QI wireless power converter is currently %s\n\r\n\r", getNXQChargeStateString());
+printf("    QI wireless power converter is currently %s\033[K\n\r\033[K\n\r", getNXQChargeStateString());
 }
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r\n\r", getStringSecondsAsTime(QI_charge_time));
+if (QI_charge_time > 0) printf("    System has been charging a phone for %s\033[K\n\r\033[K\n\r", getStringSecondsAsTime(QI_charge_time));
+else printf("\033[K\n\r\n\r");
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    System Voltages:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("        +12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
-printf("        +5V rail measured as %+.3f Volts\n\r\n\r", adc_results.pos5_adc_result);
+printf("        +12V rail measured as %+.3f Volts\033[K\n\r", adc_results.pos12_adc_result);
+printf("        +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", adc_results.pos5_adc_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Currents:\n\r");
+printf("    System Currents:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("        +12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
-printf("        QI converter current measured as %+.3f Amps\n\r\n\r", adc_results.qi_isns_adc_result);
+printf("        +12V input current measured as %+.3f Amps\033[K\n\r", adc_results.pos12_isns_adc_result);
+printf("        QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", adc_results.qi_isns_adc_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Power:\n\r");
+printf("    System Power:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("        Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
-printf("        Wireless Output Power calculated as %+.3f Watts\n\r\n\r", adc_calculations.output_power);
+printf("        Electrical Input Power calculated as %+.3f Watts\033[K\n\r", adc_calculations.input_power);
+printf("        Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", adc_calculations.output_power);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Efficiency calculated as %.3f%%\n\r\n\r", adc_calculations.efficiency);
+printf("    System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
 
-printf("    Energy consumed by the load while charging: %sJoules\n\r\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
-printf("    Charge consumed by the load while charging: %sCoulombs\n\r\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+if (QI_charge_time > 0) printf("    Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+else printf("\033[K\n\r\n\r");
+if (QI_charge_time > 0) printf("    Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+else printf("\033[K\n\r\n\r");
 
-printf("    System Switching Frequencies:\n\r");
+printf("    System Switching Frequencies:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
-else printf("        Current +5V Switching Frequency measured as %+.1f MHz\n\r", 2.5);
-if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
-else printf("        Current QI Switching Frequency measured as %+.3f kHz\n\r\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\033[K\n\r");
+else printf("        Current +5V Switching Frequency measured as %+.1f MHz\033[K\n\r", 2.5);
+if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\033[K\n\r\033[K\n\r");
+else printf("        Current QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Temperatures:\n\r");
+printf("    System Temperatures:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("        QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
-printf("        +5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
-printf("        Ambient Temperature measured as %+.3f C\n\r\n\r", LM73_temp_results.Ambient_temp_result);
+printf("        QI Converter Temperature measured as %+.3f C\033[K\n\r", LM73_temp_results.QI_temp_result);
+printf("        +5V Converter Temperature measured as %+.3f C\033[K\n\r", LM73_temp_results.POS5_temp_result);
+printf("        Ambient Temperature measured as %+.3f C\033[K\n\r\033[K\n\r", LM73_temp_results.Ambient_temp_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Microcontroller Parameters:\n\r");
+printf("    Microcontroller Parameters:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
-printf("        Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
-printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
-printf("        AVSS measured as %+.3f Volts\n\r\n\r", adc_results.avss_adc_result);
+printf("        Microcontroller Die Temperature measured as %+.3f C\033[K\n\r", adc_results.die_temp_adc_result);
+printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\033[K\n\r", adc_results.fvr_adc_result);
+printf("        AVSS measured as %+.3f Volts\033[K\n\r\033[K\n\r", adc_results.avss_adc_result);
 
 terminalTextAttributesReset();
 
