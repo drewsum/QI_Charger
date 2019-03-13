@@ -600,6 +600,7 @@ qi_period_rising_2 1
 [v i2___fleq __fleq `(b  1 e 0 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
+[v i1___flge __flge `(b  1 e 0 0 ]
 [v i2___flge __flge `(b  1 e 0 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\flneg.c
 [v ___flneg __flneg `(d  1 e 4 0 ]
@@ -2211,20 +2212,20 @@ qi_period_rising_2 1
 [v _terminal_ringBufferPull terminal_ringBufferPull `(v  1 e 1 0 ]
 {
 "18
-[v terminal_ringBufferPull@index_4969 index `i  1 a 2 46 ]
+[v terminal_ringBufferPull@index_4969 index `i  1 a 2 26 ]
 "11
-[v terminal_ringBufferPull@index index `i  1 a 2 48 ]
+[v terminal_ringBufferPull@index index `i  1 a 2 28 ]
 "8
-[v terminal_ringBufferPull@charNumber charNumber `i  1 a 2 44 ]
+[v terminal_ringBufferPull@charNumber charNumber `i  1 a 2 24 ]
 "44
 } 0
 "21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 {
 "88
-[v ringBufferLUT@userID userID `i  1 a 2 4 ]
+[v ringBufferLUT@userID userID `i  1 a 2 22 ]
 "21
-[v ringBufferLUT@line line `*.39uc  1 p 2 0 ]
+[v ringBufferLUT@line line `*.39uc  1 p 2 18 ]
 "288
 } 0
 "17 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
@@ -2277,9 +2278,9 @@ qi_period_rising_2 1
 {
 [v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 wreg ]
 "51
-[v terminalTextAttributes@print_string print_string `[16]uc  1 a 16 27 ]
+[v terminalTextAttributes@print_string print_string `[16]uc  1 a 16 1 ]
 "54
-[v terminalTextAttributes@i i `uc  1 a 1 43 ]
+[v terminalTextAttributes@i i `uc  1 a 1 17 ]
 "47
 [v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 wreg ]
 "48
@@ -2287,7 +2288,7 @@ qi_period_rising_2 1
 "49
 [v terminalTextAttributes@input_attribute input_attribute `E9576  1 p 1 189 ]
 "55
-[v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 26 ]
+[v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 0 ]
 "161
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strncpy.c
@@ -2304,9 +2305,9 @@ qi_period_rising_2 1
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
-[s S5275 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[s S5276 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "21
-[v printf@pb pb `S5275  1 a 5 183 ]
+[v printf@pb pb `S5276  1 a 5 183 ]
 "15
 [v printf@ap ap `[1]*.39v  1 a 2 181 ]
 "13
@@ -2383,12 +2384,6 @@ qi_period_rising_2 1
 [v getUserID@inputUserID inputUserID `uc  1 a 1 17 ]
 "84
 } 0
-"34
-[v _getDeviceIDString getDeviceIDString `(*.32Tuc  1 e 2 0 ]
-{
-[v getDeviceIDString@inputDevID inputDevID `ui  1 p 2 13 ]
-"70
-} 0
 "87 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
 [v _getCauseOfResetString getCauseOfResetString `(*.32Tuc  1 e 2 0 ]
 {
@@ -2410,9 +2405,9 @@ qi_period_rising_2 1
 {
 "51
 [v writeFloatToEEPROM@byte_index byte_index `i  1 a 2 14 ]
-[u S5217 . 4 `f 1 float_t 4 0 `[4]uc 1 byte_array_t 4 0 ]
+[u S5218 . 4 `f 1 float_t 4 0 `[4]uc 1 byte_array_t 4 0 ]
 "47
-[v writeFloatToEEPROM@input_data input_data `S5217  1 a 4 10 ]
+[v writeFloatToEEPROM@input_data input_data `S5218  1 a 4 10 ]
 "44
 [v writeFloatToEEPROM@input_float input_float `f  1 p 4 4 ]
 [v writeFloatToEEPROM@starting_address starting_address `ui  1 p 2 8 ]
@@ -2480,9 +2475,9 @@ qi_period_rising_2 1
 {
 "67
 [v readFloatFromEEPROM@byte_index byte_index `i  1 a 2 10 ]
-[u S5217 . 4 `f 1 float_t 4 0 `[4]uc 1 byte_array_t 4 0 ]
+[u S5218 . 4 `f 1 float_t 4 0 `[4]uc 1 byte_array_t 4 0 ]
 "64
-[v readFloatFromEEPROM@output_data output_data `S5217  1 a 4 6 ]
+[v readFloatFromEEPROM@output_data output_data `S5218  1 a 4 6 ]
 "61
 [v readFloatFromEEPROM@starting_address starting_address `ui  1 p 2 2 ]
 "76
@@ -2701,7 +2696,7 @@ qi_period_rising_2 1
 [v OLED_updateHandler@rev_id_str rev_id_str `[17]uc  1 a 17 17 ]
 "353
 [v OLED_updateHandler@dev_id_str dev_id_str `[17]uc  1 a 17 0 ]
-"836
+"831
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
@@ -2777,7 +2772,13 @@ qi_period_rising_2 1
 [v getHoursFromOnTime@input_seconds input_seconds `ul  1 p 4 13 ]
 "212
 } 0
-"4 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
+"34 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
+[v _getDeviceIDString getDeviceIDString `(*.32Tuc  1 e 2 0 ]
+{
+[v getDeviceIDString@inputDevID inputDevID `ui  1 p 2 13 ]
+"70
+} 0
+"4
 [v _getDeviceID getDeviceID `(ui  1 e 2 0 ]
 {
 "10
@@ -2818,22 +2819,22 @@ qi_period_rising_2 1
 "550 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _floatToEngineeringFormat floatToEngineeringFormat `(*.39uc  1 e 2 0 ]
 {
-"557
+"555
 [v floatToEngineeringFormat@mag mag `d  1 a 4 163 ]
 "553
 [v floatToEngineeringFormat@res res `*.39uc  1 a 2 171 ]
 "550
 [v floatToEngineeringFormat@input_value input_value `f  1 p 4 159 ]
 "552
-[v floatToEngineeringFormat@result result `[20]uc  1 s 20 result ]
-"570
+[v floatToEngineeringFormat@result result `[30]uc  1 s 30 result ]
+"568
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S5275 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[s S5276 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "29
-[v sprintf@pb pb `S5275  1 a 5 154 ]
+[v sprintf@pb pb `S5276  1 a 5 154 ]
 "28
 [v sprintf@ap ap `[1]*.39v  1 a 2 152 ]
 "13
@@ -2850,9 +2851,9 @@ qi_period_rising_2 1
 [v __doprnt@val val `ul  1 a 4 129 ]
 "528
 [v __doprnt@fval fval `d  1 a 4 125 ]
-[u S5321 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[u S5322 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
 "538
-[v __doprnt@tmpval tmpval `S5321  1 a 4 121 ]
+[v __doprnt@tmpval tmpval `S5322  1 a 4 121 ]
 "520
 [v __doprnt@flag flag `us  1 a 2 137 ]
 "512
@@ -2867,9 +2868,9 @@ qi_period_rising_2 1
 [v __doprnt@cp cp `*.34Cuc  1 a 2 115 ]
 "507
 [v __doprnt@c c `uc  1 a 1 139 ]
-[s S5275 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[s S5276 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "466
-[v __doprnt@pb pb `*.39S5275  1 p 2 84 ]
+[v __doprnt@pb pb `*.39S5276  1 p 2 84 ]
 [v __doprnt@f f `*.34Cuc  1 p 2 86 ]
 [v __doprnt@ap ap `*.39*.39v  1 p 2 88 ]
 "1560
@@ -3085,11 +3086,11 @@ qi_period_rising_2 1
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
 {
 "310
-[v OLED_UpdateFromRAMBuffer@char_index_4432 char_index `uc  1 a 1 39 ]
+[v OLED_UpdateFromRAMBuffer@char_index_4433 char_index `uc  1 a 1 39 ]
 "307
-[v OLED_UpdateFromRAMBuffer@char_index_4431 char_index `uc  1 a 1 38 ]
+[v OLED_UpdateFromRAMBuffer@char_index_4432 char_index `uc  1 a 1 38 ]
 "304
-[v OLED_UpdateFromRAMBuffer@char_index_4430 char_index `uc  1 a 1 37 ]
+[v OLED_UpdateFromRAMBuffer@char_index_4431 char_index `uc  1 a 1 37 ]
 "301
 [v OLED_UpdateFromRAMBuffer@char_index char_index `uc  1 a 1 36 ]
 "323
@@ -3214,17 +3215,17 @@ qi_period_rising_2 1
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5659 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5660 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S5664 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S5667 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5659 1 fAsBytes 4 0 `S5664 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S5667  1 a 4 33 ]
+[s S5665 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5668 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5660 1 fAsBytes 4 0 `S5665 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S5668  1 a 4 33 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 28 ]
-[s S5735 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S5736 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S5738 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5735 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S5738  1 a 2 37 ]
+[u S5739 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5736 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S5739  1 a 2 37 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
@@ -3435,21 +3436,23 @@ qi_period_rising_2 1
 "92
 [s S2493 . 2 `ui 1 ccpr2_16Bit 2 0 ]
 [u S2495 CCPR2Reg_tag 2 `S2490 1 . 2 0 `S2493 1 . 2 0 ]
-[v CCP2_CaptureISR@module module `S2495  1 a 2 86 ]
+[v CCP2_CaptureISR@module module `S2495  1 a 2 90 ]
 "103
 } 0
 "105
 [v _CCP2_CallBack CCP2_CallBack `(v  1 e 1 0 ]
 {
-[v CCP2_CallBack@capturedValue capturedValue `ui  1 p 2 84 ]
+[v CCP2_CallBack@capturedValue capturedValue `ui  1 p 2 88 ]
 "142
 } 0
 "16 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.c
 [v _freqMeasConvert freqMeasConvert `(v  1 e 1 0 ]
 {
 "21
-[v freqMeasConvert@qi_period qi_period `d  1 a 4 80 ]
-"26
+[v freqMeasConvert@qi_period qi_period `d  1 a 4 84 ]
+"22
+[v freqMeasConvert@qi_freq_scratch qi_freq_scratch `d  1 a 4 80 ]
+"27
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -3466,20 +3469,27 @@ qi_period_rising_2 1
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v i1___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5659 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S5664 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S5667 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5659 1 fAsBytes 4 0 `S5664 1 fAsWords 4 0 ]
-[v i1___flmul@prod __flmul `S5667  1 a 4 74 ]
+[s S5660 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5665 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5668 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5660 1 fAsBytes 4 0 `S5665 1 fAsWords 4 0 ]
+[v i1___flmul@prod __flmul `S5668  1 a 4 74 ]
 [v i1___flmul@grs __flmul `ul  1 a 4 68 ]
-[s S5735 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S5738 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5735 1 nAsBytes 2 0 ]
-[v i1___flmul@temp __flmul `S5738  1 a 2 78 ]
+[s S5736 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S5739 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5736 1 nAsBytes 2 0 ]
+[v i1___flmul@temp __flmul `S5739  1 a 2 78 ]
 [v i1___flmul@bexp __flmul `uc  1 a 1 73 ]
 [v i1___flmul@aexp __flmul `uc  1 a 1 72 ]
 [v i1___flmul@sign __flmul `uc  1 a 1 67 ]
 [v i1___flmul@b b `d  1 p 4 55 ]
 [v i1___flmul@a a `d  1 p 4 59 ]
 "205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\flge.c
+[v i1___flge __flge `(b  1 e 0 0 ]
+{
+[v i1___flge@ff1 ff1 `d  1 p 4 0 ]
+[v i1___flge@ff2 ff2 `d  1 p 4 4 ]
+"19
 } 0
 "11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
 [v i1___fldiv __fldiv `(d  1 e 4 0 ]
@@ -3665,8 +3675,8 @@ qi_period_rising_2 1
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
 [v i2_printf printf `(i  1 e 2 0 ]
 {
-[s S5275 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-[v i2printf@pb printf `S5275  1 a 5 72 ]
+[s S5276 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v i2printf@pb printf `S5276  1 a 5 72 ]
 [v i2printf@ap printf `[1]*.39v  1 a 2 70 ]
 [v i2printf@f f `*.34Cuc  1 p 2 68 ]
 "28
@@ -3676,8 +3686,8 @@ qi_period_rising_2 1
 {
 [v i2__doprnt@val _doprnt `ul  1 a 4 57 ]
 [v i2__doprnt@fval _doprnt `d  1 a 4 53 ]
-[u S5321 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
-[v i2__doprnt@tmpval _doprnt `S5321  1 a 4 49 ]
+[u S5322 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[v i2__doprnt@tmpval _doprnt `S5322  1 a 4 49 ]
 [v i2__doprnt@flag _doprnt `us  1 a 2 65 ]
 [v i2__doprnt@prec _doprnt `i  1 a 2 63 ]
 [v i2__doprnt@width _doprnt `i  1 a 2 61 ]
@@ -3686,8 +3696,8 @@ qi_period_rising_2 1
 [v i2__doprnt@cp _doprnt `*.34Cuc  1 a 2 43 ]
 [v i2__doprnt@c _doprnt `uc  1 a 1 67 ]
 [v i2__doprnt@idx _doprnt `uc  1 a 1 26 ]
-[s S5275 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-[v i2__doprnt@pb pb `*.39S5275  1 p 2 12 ]
+[s S5276 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v i2__doprnt@pb pb `*.39S5276  1 p 2 12 ]
 [v i2__doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v i2__doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1560
@@ -3886,14 +3896,14 @@ qi_period_rising_2 1
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v i2___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5659 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S5664 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S5667 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5659 1 fAsBytes 4 0 `S5664 1 fAsWords 4 0 ]
-[v i2___flmul@prod __flmul `S5667  1 a 4 62 ]
+[s S5660 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5665 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5668 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5660 1 fAsBytes 4 0 `S5665 1 fAsWords 4 0 ]
+[v i2___flmul@prod __flmul `S5668  1 a 4 62 ]
 [v i2___flmul@grs __flmul `ul  1 a 4 57 ]
-[s S5735 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S5738 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5735 1 nAsBytes 2 0 ]
-[v i2___flmul@temp __flmul `S5738  1 a 2 66 ]
+[s S5736 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S5739 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5736 1 nAsBytes 2 0 ]
+[v i2___flmul@temp __flmul `S5739  1 a 2 66 ]
 [v i2___flmul@bexp __flmul `uc  1 a 1 61 ]
 [v i2___flmul@aexp __flmul `uc  1 a 1 56 ]
 [v i2___flmul@sign __flmul `uc  1 a 1 55 ]

@@ -10797,22 +10797,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;freq_meas.c: 16: void freqMeasConvert(void) {
 [e :U _freqMeasConvert ]
 [f ]
-[; ;freq_meas.c: 19: if (freq_meas_results.QI_Freq_Meas_Raw != 0) {
+[; ;freq_meas.c: 19: if (freq_meas_results.QI_Freq_Meas_Raw > 2) {
 "19
-[e $ ! != . _freq_meas_results 1 -> -> 0 `i `ui 1440  ]
+[e $ ! > . _freq_meas_results 1 -> -> 2 `i `ui 1440  ]
 {
 "21
 [v _qi_period `d ~T0 @X0 1 a ]
 [; ;freq_meas.c: 21: double qi_period = ((((float) freq_meas_results.QI_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);
 [e = _qi_period * / -> + -> . _freq_meas_results 1 `f -> -> 1 `i `f `d .16.0 .0.00000063 ]
-[; ;freq_meas.c: 22: freq_meas_results.QI_Freq_Meas = 1.0 / qi_period;
 "22
-[e = . _freq_meas_results 0 -> / .1.0 _qi_period `f ]
-"24
+[v _qi_freq_scratch `d ~T0 @X0 1 a ]
+[; ;freq_meas.c: 22: double qi_freq_scratch = 1.0 / qi_period;
+[e = _qi_freq_scratch / .1.0 _qi_period ]
+[; ;freq_meas.c: 23: if (qi_freq_scratch > 100.0 && qi_freq_scratch < 500000.0) freq_meas_results.QI_Freq_Meas = (float) qi_freq_scratch;
+"23
+[e $ ! && > _qi_freq_scratch .100.0 < _qi_freq_scratch .500000.0 1441  ]
+[e = . _freq_meas_results 0 -> _qi_freq_scratch `f ]
+[e :U 1441 ]
+"25
 }
 [e :U 1440 ]
-[; ;freq_meas.c: 24: }
-[; ;freq_meas.c: 26: }
-"26
+[; ;freq_meas.c: 25: }
+[; ;freq_meas.c: 27: }
+"27
 [e :UE 1439 ]
 }
