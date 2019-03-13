@@ -17594,7 +17594,7 @@ printf("Live Measurements:\033[K\n\r\033[K\n\r");
 
 printCurrentMeasurements();
 
-terminalTextAttributes(YELLOW, BLACK, REVERSE);
+terminalTextAttributes(YELLOW, BLACK, BOLD);
 printf("Press enter key to exit\033[K\n\r\033[K\n\r");
 terminalTextAttributesReset();
 

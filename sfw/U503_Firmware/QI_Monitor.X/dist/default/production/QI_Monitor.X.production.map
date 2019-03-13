@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\QI_Monitor.X.production.sym \
   --cmf=dist/default/production\QI_Monitor.X.production.cmf -z -Q18F27K40 \
-  -oC:\Users\DREWMA~1\AppData\Local\Temp\s7ak.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\DREWMA~1\AppData\Local\Temp\sajo.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/QI_Monitor.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0934h-0E87h -pstack=STACK -ACODE=00h-01FFFFh \
   -ACONST=00h-01FFFFh -ASMALLCONST=0F00h-0FFFhx497 \
@@ -27,7 +27,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\DREWMA~1\AppData\Local\Temp\s7ak.o \
+  C:\Users\DREWMA~1\AppData\Local\Temp\sajo.o \
   dist/default/production\QI_Monitor.X.production.o 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\DREWMA~1\AppData\Local\Temp\s7ak.o
+C:\Users\DREWMA~1\AppData\Local\Temp\sajo.o
                 init                                 A2       A2        4        C       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000       10   200000       0

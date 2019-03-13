@@ -11839,9 +11839,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 225: printCurrentMeasurements();
 "225
 [e ( _printCurrentMeasurements ..  ]
-[; ;main.c: 227: terminalTextAttributes(YELLOW, BLACK, REVERSE);
+[; ;main.c: 227: terminalTextAttributes(YELLOW, BLACK, BOLD);
 "227
-[e ( _terminalTextAttributes (3 , , . `E10008 3 . `E10008 0 . `E10000 4 ]
+[e ( _terminalTextAttributes (3 , , . `E10008 3 . `E10008 0 . `E10000 1 ]
 [; ;main.c: 228: printf("Press enter key to exit\033[K\n\r\033[K\n\r");
 "228
 [e ( _printf :s 11C ]
