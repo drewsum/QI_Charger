@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -346,4 +345,6 @@ Text GLabel 2700 4510 0    60   UnSpc ~ 0
 USB_UART_TX
 Text GLabel 2700 4410 0    60   UnSpc ~ 0
 USB_UART_RX
+Text Notes 540  690  0    100  ~ 20
+09. USB UART Isolation
 $EndSCHEMATC

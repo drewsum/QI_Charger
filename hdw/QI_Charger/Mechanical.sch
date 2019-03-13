@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -294,4 +293,6 @@ F 4 "36-1892-ND" H 0   0   50  0001 C CNN "Digi-Key PN"
 	1    4400 5410
 	1    0    0    -1  
 $EndComp
+Text Notes 540  690  0    100  ~ 20
+15. Mechanical
 $EndSCHEMATC

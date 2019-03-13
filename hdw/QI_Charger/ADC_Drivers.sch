@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -1049,4 +1048,6 @@ Text Notes 9240 2780 0    50   ~ 0
 0.6622 V/V
 Text Notes 2540 5080 0    50   ~ 0
 0.5 V/V
+Text Notes 540  690  0    100  ~ 20
+06. ADC Drivers
 $EndSCHEMATC

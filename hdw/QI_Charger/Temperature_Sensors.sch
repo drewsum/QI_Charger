@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -754,4 +753,6 @@ Text Notes 4200 4870 0    50   ~ 0
 Placed near +5V Power supply
 Text Notes 4200 7140 0    50   ~ 0
 Placed away from power dissipating components
+Text Notes 540  690  0    100  ~ 20
+12. Temperature Sensors
 $EndSCHEMATC

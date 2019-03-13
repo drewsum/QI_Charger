@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -367,4 +366,6 @@ F 3 "" H 1950 3680 50  0001 C CNN
 	1    1950 3680
 	1    0    0    -1  
 $EndComp
+Text Notes 540  690  0    100  ~ 20
+07. OLED Display
 $EndSCHEMATC

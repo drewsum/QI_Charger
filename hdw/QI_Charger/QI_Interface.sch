@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -576,4 +575,6 @@ QI_Idle
 Wire Wire Line
 	6270 1510 6190 1510
 Connection ~ 6190 1510
+Text Notes 540  690  0    100  ~ 20
+14. QI Interface
 $EndSCHEMATC

@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -113,7 +112,7 @@ Text Notes 770  3920 0    100  ~ 20
 Text Notes 770  4220 0    100  ~ 20
 10. USB UART Bridge
 Text Notes 770  4520 0    100  ~ 20
-11. Status LEDs 1
+11. Status LEDs
 Text Notes 770  4820 0    100  ~ 20
 12. Temperature Sensors
 Text Notes 770  5120 0    100  ~ 20
@@ -128,6 +127,6 @@ F1 "Mechanical.sch" 50
 $EndSheet
 Text Notes 770  5720 0    100  ~ 20
 15. Mechanical
-Text Notes 3660 850  0    125  ~ 25
+Text Notes 3310 930  0    150  ~ 30
 DIY QI Charger with Digital Monitoring
 $EndSCHEMATC
