@@ -17840,8 +17840,7 @@ case OLED_QI_Current:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "QI Current:");
-if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
-else sprintf(OLED_RAM_Buffer.line1, "%+.3f A", adc_results.qi_isns_adc_result);
+sprintf(OLED_RAM_Buffer.line1, "%+.3f A", adc_results.qi_isns_adc_result);
 sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f A", eeprom_ram_aliases.QI_Current_Max_Result);
 sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f A", eeprom_ram_aliases.QI_Current_Min_Result);
 
@@ -17947,7 +17946,7 @@ case OLED_Micro_Temp:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
+strcpy(OLED_RAM_Buffer.line0, "MCU Temp:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3f C", adc_results.die_temp_adc_result);
 sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f C", eeprom_ram_aliases.Die_Temp_Max_Result);
 sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f C", eeprom_ram_aliases.Die_Temp_Min_Result);
@@ -17995,7 +17994,7 @@ case OLED_Dev_On_Time:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "Dev. On Time:");
+strcpy(OLED_RAM_Buffer.line0, "MCU On Time:");
 
 
 if (device_on_time >= 31536000) {
@@ -18133,10 +18132,10 @@ case OLED_Cause_Of_Reset:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "Cause of Reset:");
-strcpy(OLED_RAM_Buffer.line1, " ");
-strcpy(OLED_RAM_Buffer.line2, getCauseOfResetStringSmall(reset_cause));
-strcpy(OLED_RAM_Buffer.line3, " ");
+strcpy(OLED_RAM_Buffer.line0, "Cause of MCU");
+strcpy(OLED_RAM_Buffer.line1, "Reset:");
+strcpy(OLED_RAM_Buffer.line2, " ");
+strcpy(OLED_RAM_Buffer.line3, getCauseOfResetStringSmall(reset_cause));
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Cause_Of_Reset;
@@ -18150,16 +18149,12 @@ OLED_update_flag = 0;
 
 
 
-strcpy(OLED_RAM_Buffer.line0, "Device ID:");
-char dev_id_str[17];
-sprintf(dev_id_str,"0x%X",getDeviceID());
-strcpy(OLED_RAM_Buffer.line1, dev_id_str);
+strcpy(OLED_RAM_Buffer.line0, "MCU Device ID:");
+sprintf(OLED_RAM_Buffer.line1,"%s",getDeviceIDString(getDeviceID()));
 
 
-strcpy(OLED_RAM_Buffer.line2, "Revision ID:");
-char rev_id_str[17];
-sprintf(rev_id_str, "%c%03d", (char) getMajorRevisionID() + 65, getMinorRevisionID());
-strcpy(OLED_RAM_Buffer.line3, rev_id_str);
+strcpy(OLED_RAM_Buffer.line2, "MCU Revision ID:");
+sprintf(OLED_RAM_Buffer.line3, "%c%03d", (char) getMajorRevisionID() + 65, getMinorRevisionID());
 
 OLED_UpdateFromRAMBuffer();
 OLED_Frame = OLED_Dev_Rev_ID;
