@@ -16204,9 +16204,12 @@ freq_meas_start_flag = 0;
 void freqMeasConvert(void) {
 
 
+if (freq_meas_results.QI_Freq_Meas_Raw != 0) {
+
 double qi_period = ((((float) freq_meas_results.QI_Freq_Meas_Raw + 1) / 16.0) * 0.00000063);
 freq_meas_results.QI_Freq_Meas = 1.0 / qi_period;
 
+}
 
 }
 

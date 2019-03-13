@@ -59,6 +59,7 @@
 #include "NXQ_charge_state.h"
 #include "oled.h"
 #include "freq_meas.h"
+#include "double_to_EEPROM.h"
 
 // User IDs
 #pragma config IDLOC0 = 0xD
@@ -188,6 +189,13 @@ void main(void)
     if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) nxq_charge_state = QI_Idle;
     else if (QI_CHARGE_PIN == 1 && QI_IDLE_PIN == 1) nxq_charge_state = QI_Fully_Charged;
     
+    // Get starting data
+    LM73AcquisitionHandler();
+    freqMeasStartCaptures();
+    
+    // Recover saved variables from NVM
+    recoverEEPROMToRAM();
+    
     // Endless loop
     while (1) {
         
@@ -224,6 +232,11 @@ void main(void)
         
         // Update error LEDs based on error handler state
         updateErrorLEDs();
+        
+        // Check for new min and max measurements to save off
+        updataMinMaxRAMAliases();
+        
+        if (nvm_update_flag) writeEEPROMFromRAM();
         
     }
 }

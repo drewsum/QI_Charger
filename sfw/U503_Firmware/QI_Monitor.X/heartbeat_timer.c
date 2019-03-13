@@ -18,6 +18,8 @@
 
 #include "ring_buffer_LUT.h"
 
+#include "double_to_EEPROM.h"
+
 // This is the heartbeat timer handler function that is called by a timer ISR.
 // It blinks an LED, updates on time, and clears the watchdog timer
 void heartbeatTimerHandler(void) {
@@ -53,7 +55,10 @@ void heartbeatTimerHandler(void) {
     freq_meas_start_flag = true;
     
     // If we need to stream data over UART, request a print message
-    if (live_measurement_enable_flag) live_measurement_request_flag = 1;
+    if (live_measurement_enable_flag) live_measurement_request_flag = true;
+    
+    // Save new min and max data to eeprom every 60 seconds
+    if (device_on_time % 60 == 0) nvm_update_flag = true;
     
 }
 

@@ -16991,6 +16991,12 @@ void printErrorHandlerStatus(void);
 void printCurrentMeasurements(void);
 
 
+void printMaximumMeasurements(void);
+
+
+void printMinimumMeasurements(void);
+
+
 
 
 char * floatToEngineeringFormat(float input_value);

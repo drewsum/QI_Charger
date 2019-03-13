@@ -17091,6 +17091,12 @@ void printErrorHandlerStatus(void);
 void printCurrentMeasurements(void);
 
 
+void printMaximumMeasurements(void);
+
+
+void printMinimumMeasurements(void);
+
+
 
 
 char * floatToEngineeringFormat(float input_value);
@@ -17349,8 +17355,85 @@ void freqMeasStartCaptures(void);
 
 void freqMeasConvert(void);
 
+# 69 "double_to_EEPROM.h"
+bool nvm_update_flag;
 
-# 64 "main.c"
+
+struct eeprom_ram_alias_t {
+
+float POS12_Max_Result;
+float POS12_Min_Result;
+float POS5_Max_Result;
+float POS5_Min_Result;
+float POS12_Current_Max_Result;
+float POS12_Current_Min_Result;
+float QI_Current_Max_Result;
+float QI_Current_Min_Result;
+float Input_Power_Max_Result;
+float Input_Power_Min_Result;
+float Output_Power_Max_Result;
+float Output_Power_Min_Result;
+float Efficiency_Max_Result;
+float Efficiency_Min_Result;
+float Load_Energy_Max_Result;
+float Load_Charge_Max_Result;
+float QI_FSW_Max_Result;
+float QI_FSW_Min_Result;
+float QI_Temp_Max_Result;
+float QI_Temp_Min_Result;
+float POS5_Temp_Max_Result;
+float POS5_Temp_Min_Result;
+float Ambient_Temp_Max_Result;
+float Ambient_Temp_Min_Result;
+float Die_Temp_Max_Result;
+float Die_Temp_Min_Result;
+
+} eeprom_ram_aliases;
+
+
+typedef union {
+double double_t;
+unsigned char byte_array_t[sizeof(double)];
+} double_bytes_t;
+
+
+typedef union {
+float float_t;
+unsigned char byte_array_t[sizeof(float)];
+} float_bytes_t;
+
+
+
+void writeDoubleToEEPROM(double input_double, uint16_t starting_address);
+
+
+double readDoubleFromEEPROM(uint16_t starting_address);
+
+
+void writeFloatToEEPROM(float input_float, uint16_t starting_address);
+
+
+float readFloatFromEEPROM(uint16_t starting_address);
+
+
+void updataMinMaxRAMAliases(void);
+
+
+void recoverEEPROMToRAM(void);
+
+
+
+void writeEEPROMFromRAM(void);
+
+
+
+void minMaxInitialize(void);
+
+
+void forceEEPROMSave(void);
+
+
+# 65 "main.c"
 #pragma config IDLOC0 = 0xD
 #pragma config IDLOC1 = 0xE
 #pragma config IDLOC2 = 0xA
@@ -17360,7 +17443,7 @@ void freqMeasConvert(void);
 #pragma config IDLOC6 = 0xE
 #pragma config IDLOC7 = 0xF
 
-# 76
+# 77
 void main(void)
 {
 
@@ -17477,6 +17560,13 @@ if (PORTBbits.RB3 == 0 && PORTBbits.RB2 == 0) nxq_charge_state = QI_Idle;
 else if (PORTBbits.RB3 == 1 && PORTBbits.RB2 == 1) nxq_charge_state = QI_Fully_Charged;
 
 
+LM73AcquisitionHandler();
+freqMeasStartCaptures();
+
+
+recoverEEPROMToRAM();
+
+
 while (1) {
 
 
@@ -17512,6 +17602,11 @@ terminalTextAttributesReset();
 
 
 updateErrorLEDs();
+
+
+updataMinMaxRAMAliases();
+
+if (nvm_update_flag) writeEEPROMFromRAM();
 
 }
 }

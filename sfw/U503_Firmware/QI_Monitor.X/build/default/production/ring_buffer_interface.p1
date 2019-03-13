@@ -11119,7 +11119,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.h: 51: void ringBufferLUT(char * line);
 [; ;ring_buffer_LUT.h: 54: void printErrorHandlerStatus(void);
 [; ;ring_buffer_LUT.h: 57: void printCurrentMeasurements(void);
-[; ;ring_buffer_LUT.h: 62: char * floatToEngineeringFormat(float input_value);
+[; ;ring_buffer_LUT.h: 60: void printMaximumMeasurements(void);
+[; ;ring_buffer_LUT.h: 63: void printMinimumMeasurements(void);
+[; ;ring_buffer_LUT.h: 68: char * floatToEngineeringFormat(float input_value);
 [; ;ring_buffer_interface.h: 36: extern volatile bit eusart2RxStringReady;
 [; ;ring_buffer_interface.h: 39: extern volatile uint8_t eusart2RxCount;
 [; ;ring_buffer_interface.h: 42: extern volatile uint8_t eusart2RxHead;

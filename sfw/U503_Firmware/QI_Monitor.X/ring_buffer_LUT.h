@@ -56,6 +56,12 @@ void printErrorHandlerStatus(void);
 // This function prints the current measurements message
 void printCurrentMeasurements(void);
 
+// This function prints the maximum measurements message
+void printMaximumMeasurements(void);
+
+// This function prints the minimum measurements message
+void printMinimumMeasurements(void);
+
 // This function returns a string representing a floating point number in
 // engineering format. It will append the unit prefix on the end after
 // three digits past the decimal point
