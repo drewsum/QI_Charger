@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -764,4 +763,6 @@ F 3 "" H 2720 4400 60  0001 C CNN
 $EndComp
 NoConn ~ 6130 2190
 NoConn ~ 6130 2290
+Text Notes 540  690  0    100  ~ 20
+05. Microcontroller
 $EndSCHEMATC

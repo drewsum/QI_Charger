@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -1444,4 +1443,6 @@ F 4 "296-8484-1-ND" H 1620 6160 50  0001 C CNN "Digi-Key PN"
 	1    1620 6160
 	1    0    0    -1  
 $EndComp
+Text Notes 540  690  0    100  ~ 20
+11. Status LEDs
 $EndSCHEMATC

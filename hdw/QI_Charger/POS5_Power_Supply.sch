@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:QI_Charger-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -732,4 +731,6 @@ F 3 "" H 7050 2420 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	7050 2420 7050 2490
+Text Notes 540  690  0    100  ~ 20
+03. +5V Power Supply
 $EndSCHEMATC
