@@ -16,6 +16,7 @@
 #include "LM73_I2C.h"
 #include "NXQ_charge_state.h"
 #include "freq_meas.h"
+#include "double_to_EEPROM.h"
 
 void ringBufferLUT(char * line) {
 
@@ -163,6 +164,58 @@ void ringBufferLUT(char * line) {
         
     } 
     
+    else if (0 == strcmp(line, "Enable Live Measurements")) {
+     
+        live_measurement_enable_flag = 1;
+        terminalTextAttributes(GREEN, BLACK, NORMAL);
+        printf("Enabling live measurements\n\r");
+        terminalTextAttributesReset();
+        __delay_ms(100);
+        terminalClearScreen();
+        
+    }
+    
+    else if (0 == strcmp(line, "Max Measurements?")) {
+     
+        terminalTextAttributes(GREEN, BLACK, BOLD);
+        printf("Maximum measurement results at time of command call:\n\r\n\r");
+        terminalTextAttributesReset();
+        
+        printMaximumMeasurements();
+        
+        printf("\n\r");
+        
+    }
+    
+    else if (0 == strcmp(line, "Min Measurements?")) {
+     
+        terminalTextAttributes(GREEN, BLACK, BOLD);
+        printf("Minimum measurement results at time of command call:\n\r\n\r");
+        terminalTextAttributesReset();
+        
+        printMinimumMeasurements();
+        
+        printf("\n\r");
+        
+    }
+    
+    else if (0 == strcmp(line, "Clear Measurement Extremes")) {
+     
+        terminalTextAttributes(RED, BLACK, NORMAL);
+        printf("Clearing measurement minimums and maximums from RAM and EEPROM\n\r");
+        terminalTextAttributesReset();
+        
+        // Set mins and maxs to extreme opposites
+        minMaxInitialize();
+        
+        // Save extremes to EEPROM
+        forceEEPROMSave();
+        
+        // Next loop around while(1), save the "real" new minimums and maximums since
+        // what's in NVM is the extremes, which will never actually be minimums and maximums
+        nvm_update_flag = true;
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
 
@@ -178,6 +231,10 @@ void ringBufferLUT(char * line) {
                 "    Reset: Executes software reset instruction\n\r"
                 "    Clear: Clears the virtual COM port terminal\n\r"
                 "    Current Measurements?: Prints instantaneous system level electrical measurements\n\r"
+                "    Max Measurements?: Prints the maximum recorded system level electrical measurements\n\r"
+                "    Min Measurements?: Prints the minimum recorded system level electrical measurements\n\r"
+                "    Clear Measurement Extremes: clears measurement min and max values, and resets values in EEPROM\n\r"
+                "    Enable Live Measurements: Prints a continuous stream of measurement data to the terminal\n\r"
                 "    Device Status?: Prints digital monitoring microcontroller device status\n\r"
                 "    Error Status? Prints if any system faults have been detected\n\r"
                 "    Clear UART Errors: Clears UART error flags\n\r"
@@ -213,6 +270,17 @@ void ringBufferLUT(char * line) {
             printf("Call 'Help' for list of supported commands\n\r");
             terminalTextAttributesReset();
         
+        }
+        
+        else if (live_measurement_enable_flag) {
+        
+            live_measurement_enable_flag = 0;
+            terminalClearScreen();
+            terminalSetCursorHome();
+            terminalTextAttributes(RED, BLACK, NORMAL);
+            printf("Live measurement updates disabled\n\r");
+            terminalTextAttributesReset();
+            
         }
         
     }
@@ -315,99 +383,162 @@ void printCurrentMeasurements(void) {
     
         if (nxq_charge_state == QI_Error) { 
             terminalTextAttributes(RED, BLACK, NORMAL);
-            printf("    QI Charger is in Error State\n\r");
+            printf("    QI Charger is in Error State\033[K\n\r\033[K\n\r");
         }
         else if (nxq_charge_state == QI_Fully_Charged) {
             terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("    QI wireless power converter has fully charged phone\n\r");
+            printf("    QI wireless power converter has fully charged phone\033[K\n\r\033[K\n\r");
         }
         else {   
             terminalTextAttributes(GREEN, BLACK, NORMAL);
-            printf("    QI wireless power converter is currently %s\n\r", getNXQChargeStateString());
+            printf("    QI wireless power converter is currently %s\033[K\n\r\033[K\n\r", getNXQChargeStateString());
         }
         
-        printf("\n\r");
-        
         terminalTextAttributes(GREEN, BLACK, NORMAL);
-        if (QI_charge_time > 0) printf("    System has been charging a phone for %s\n\r\n\r", getStringSecondsAsTime(QI_charge_time));
+        if (QI_charge_time > 0) printf("    System has been charging a phone for %s\033[K\n\r\033[K\n\r", getStringSecondsAsTime(QI_charge_time));
+        else printf("\033[K\n\r\n\r");
         
         terminalTextAttributes(CYAN, BLACK, BOLD);
         printf("    System Voltages:\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("        +12V rail measured as %+.3f Volts\n\r", adc_results.pos12_adc_result);
-        printf("        +5V rail measured as %+.3f Volts\n\r", adc_results.pos5_adc_result);
-        
-        printf("\n\r");
+        printf("        +12V rail measured as %+.3f Volts\033[K\n\r", adc_results.pos12_adc_result);
+        printf("        +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", adc_results.pos5_adc_result);
         
         terminalTextAttributes(CYAN, BLACK, BOLD);
-        printf("    System Currents:\n\r");
+        printf("    System Currents:\033[K\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("        +12V input current measured as %+.3f Amps\n\r", adc_results.pos12_isns_adc_result);
-        printf("        QI converter current measured as %+.3f Amps\n\r", adc_results.qi_isns_adc_result);
-        
-        printf("\n\r");
+        printf("        +12V input current measured as %+.3f Amps\033[K\n\r", adc_results.pos12_isns_adc_result);
+        printf("        QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", adc_results.qi_isns_adc_result);
         
         terminalTextAttributes(CYAN, BLACK, BOLD);
-        printf("    System Power:\n\r");
+        printf("    System Power:\033[K\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("        Electrical Input Power calculated as %+.3f Watts\n\r", adc_calculations.input_power);
-        printf("        Wireless Output Power calculated as %+.3f Watts\n\r", adc_calculations.output_power);
-        
-        printf("\n\r");
+        printf("        Electrical Input Power calculated as %+.3f Watts\033[K\n\r", adc_calculations.input_power);
+        printf("        Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", adc_calculations.output_power);
         
         terminalTextAttributes(CYAN, BLACK, BOLD);
-        printf("    System Efficiency calculated as %.3f%%\n\r", adc_calculations.efficiency);
+        printf("    System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
         
-        printf("\n\r");
+        if (QI_charge_time > 0) printf("    Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+        else printf("\033[K\n\r\n\r");
+        if (QI_charge_time > 0) printf("    Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+        else printf("\033[K\n\r\n\r");    
         
-        if (adc_calculations.output_energy > 0.0) {
-            
-            terminalTextAttributes(CYAN, BLACK, BOLD);
-            printf("    Energy consumed by the load while charging: %sJoules\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
-
-            printf("\n\r");
-
-        }
-         
-        if (adc_calculations.output_charge > 0.0) {
-
-            terminalTextAttributes(CYAN, BLACK, BOLD);
-            printf("    Charge consumed by the load while charging: %sCoulombs\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
-
-            printf("\n\r");
-
-        }
-            
-        printf("    System Switching Frequencies:\n\r");
+        printf("    System Switching Frequencies:\033[K\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\n\r");
-        else printf("        Current +5V Switching Frequency measured as %.1f MHz\n\r", 2.5);
-        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\n\r");
-        else printf("        Current QI Switching Frequency measured as %sHz\n\r", floatToEngineeringFormat(freq_meas_results.QI_Freq_Meas));
-        
-        printf("\n\r");
+        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        POS5 Converter is in Burst Mode\033[K\n\r");
+        else printf("        Current +5V Switching Frequency measured as %+.1f MHz\033[K\n\r", 2.5);
+        if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) printf("        QI Converter is in Burst Mode\033[K\n\r\033[K\n\r");
+        else printf("        Current QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
         
         terminalTextAttributes(CYAN, BLACK, BOLD);
-        printf("    System Temperatures:\n\r");
+        printf("    System Temperatures:\033[K\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("        QI Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.QI_temp_result);
-        printf("        +5V Converter Temperature measured as %+.3f C\n\r", LM73_temp_results.POS5_temp_result);
-        printf("        Ambient Temperature measured as %+.3f C\n\r", LM73_temp_results.Ambient_temp_result);
-        
-        printf("\n\r");
+        printf("        QI Converter Temperature measured as %+.3f C\033[K\n\r", LM73_temp_results.QI_temp_result);
+        printf("        +5V Converter Temperature measured as %+.3f C\033[K\n\r", LM73_temp_results.POS5_temp_result);
+        printf("        Ambient Temperature measured as %+.3f C\033[K\n\r\033[K\n\r", LM73_temp_results.Ambient_temp_result);
         
         terminalTextAttributes(CYAN, BLACK, BOLD);
-        printf("    Microcontroller Parameters:\n\r");
+        printf("    Microcontroller Parameters:\033[K\n\r");
         terminalTextAttributes(CYAN, BLACK, NORMAL);
-        printf("        Microcontroller Die Temperature measured as %+.3f C\n\r", adc_results.die_temp_adc_result);
-        printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\n\r", adc_results.fvr_adc_result);
-        printf("        AVSS measured as %+.3f Volts\n\r", adc_results.avss_adc_result);
-        
-        printf("\n\r");
+        printf("        Microcontroller Die Temperature measured as %+.3f C\033[K\n\r", adc_results.die_temp_adc_result);
+        printf("        Fixed Voltage Reference Buffer 1 measured as %+.3f Volts, calibrated for +4.096 Volts\033[K\n\r", adc_results.fvr_adc_result);
+        printf("        AVSS measured as %+.3f Volts\033[K\n\r\033[K\n\r", adc_results.avss_adc_result);
         
         terminalTextAttributesReset();
     
     
+}
+
+// This function prints the maximum measurements message
+void printMaximumMeasurements(void) {
+    
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Maximum System Voltages:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Maximum +12V rail measured as %+.3f Volts\033[K\n\r", eeprom_ram_aliases.POS12_Max_Result);
+        printf("        Maximum +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.POS5_Max_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Maximum System Currents:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Maximum +12V input current measured as %+.3f Amps\033[K\n\r", eeprom_ram_aliases.POS12_Current_Max_Result);
+        printf("        Maximum QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_Current_Max_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Maximum System Power:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Maximum Electrical Input Power calculated as %+.3f Watts\033[K\n\r", eeprom_ram_aliases.Input_Power_Max_Result);
+        printf("        Maximum Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Output_Power_Max_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Maximum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Max_Result);
+        
+        printf("    Maximum Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
+        printf("    Maximum Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
+        
+        printf("    Maximum System Switching Frequencies:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("       Maximum QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_FSW_Max_Result / 1000.0);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Maximum System Temperatures:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Maximum QI Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.QI_Temp_Max_Result);
+        printf("        Maximum +5V Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.POS5_Temp_Max_Result);
+        printf("        Maximum Ambient Temperature measured as %+.3f C\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Ambient_Temp_Max_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Maximum Microcontroller Parameters:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Maximum Microcontroller Die Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.Die_Temp_Max_Result);
+        
+        terminalTextAttributesReset();
+    
+}
+
+// This function prints the minimum  easurements message
+void printMinimumMeasurements(void) {
+    
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Minimum System Voltages:\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Minimum +12V rail measured as %+.3f Volts\033[K\n\r", eeprom_ram_aliases.POS12_Min_Result);
+        printf("        Minimum +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.POS5_Min_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Minimum System Currents:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Minimum +12V input current measured as %+.3f Amps\033[K\n\r", eeprom_ram_aliases.POS12_Current_Min_Result);
+        printf("        Minimum QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_Current_Min_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Minimum System Power:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Minimum Electrical Input Power calculated as %+.3f Watts\033[K\n\r", eeprom_ram_aliases.Input_Power_Min_Result);
+        printf("        Minimum Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Output_Power_Min_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Minimum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Min_Result);
+        
+        printf("    Minimum System Switching Frequencies:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("       Minimum QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_FSW_Min_Result / 1000.0);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Minimum System Temperatures:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Minimum QI Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.QI_Temp_Min_Result);
+        printf("        Minimum +5V Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.POS5_Temp_Min_Result);
+        printf("        Minimum Ambient Temperature measured as %+.3f C\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Ambient_Temp_Min_Result);
+        
+        terminalTextAttributes(CYAN, BLACK, BOLD);
+        printf("    Minimum Microcontroller Parameters:\033[K\n\r");
+        terminalTextAttributes(CYAN, BLACK, NORMAL);
+        printf("        Minimum Microcontroller Die Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.Die_Temp_Min_Result);
+        
+        terminalTextAttributesReset();
+ 
 }
 
 // This function returns a string representing a floating point number in
@@ -418,14 +549,17 @@ char * floatToEngineeringFormat(float input_value) {
     static unsigned char result[20];
     unsigned char *res = result;
 
-    float sign = (input_value > 0.0) ? 1.0 : ((input_value < 0.0) ? -1.0 : 0);
+    // float sign = (input_value > 0.0) ? 1.0 : ((input_value < 0.0) ? -1.0 : 0);
     
-    if (abs(input_value) >= 1000000.0) sprintf(res, "+%0.3f M", input_value * sign / 1000000.0);
-    else if (abs(input_value) >= 1000.0) sprintf(res, "+%0.3f k", input_value * sign / 1000.0);
-    else if (abs(input_value) >= 1.0) sprintf(res, "+%0.3f ", input_value * sign / 1.0);
-    else if (abs(input_value) >= 0.0001) sprintf(res, "+%0.3f m", input_value * sign / 0.001);
-    else if (abs(input_value) >= 0.0000001) sprintf(res, "+%0.3f u", input_value * sign / 0.000001);
-    else if (abs(input_value) >= 0.0000000001) sprintf(res, "+%0.3f n", input_value * sign / 0.000000001);
+    double mag = abs(input_value);
+    
+    if (mag >=  1000000000.0) sprintf(res, "%.3f G", input_value * 0.000000001);
+    else if (mag >=  1000000.0) sprintf(res, "%.3f M", input_value * 0.000001);
+    else if (mag >=  1000.0) sprintf(res, "%.3f k", input_value * 0.001);
+    else if (mag >=  1.0) sprintf(res, "%.3f ", input_value);
+    else if (mag >=  0.001) sprintf(res, "%.3f m", input_value * 1000.0);
+    else if (mag >=  0.000001) sprintf(res, "%.3f u", input_value * 1000000.0);
+    else if (mag >=  0.000000001) sprintf(res, "%.3f n", input_value * 1000000000.0);
     else if (input_value == 0.0) sprintf(res, "0.0 ");
     
     return result;

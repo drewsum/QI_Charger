@@ -76,7 +76,7 @@
 /**
  Section: Global variables
  */
-extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint16_t eusart2TxBufferRemaining;
 extern volatile uint8_t eusart2RxCount;
 
 /**

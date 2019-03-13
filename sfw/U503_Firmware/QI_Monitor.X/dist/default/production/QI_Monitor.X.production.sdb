@@ -129,7 +129,7 @@ QI_Fully_Charged 2
 QI_Error 3
 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[e E10203 reset_types `uc
+[e E10209 reset_types `uc
 Undefined_Reset 0
 Power_On_Reset 1
 Brown_Out_Reset 2
@@ -141,7 +141,7 @@ Stack_Overflow_Reset 7
 Stack_Underflow_Reset 8
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9828 . `uc
+[e E9824 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -152,7 +152,7 @@ channel_DAC1 62
 channel_FVR_buf1 63
 ]
 "103 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[e E10297 . `uc
+[e E10303 . `uc
 OLED_Boot_Frame_1 0
 OLED_Boot_Frame_2 1
 OLED_Boot_Frame_3 2
@@ -182,11 +182,11 @@ OLED_TITLE_FRAME 25
 OLED_Idle 26
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
-[e E10356 qi_edge_type `uc
+[e E10362 qi_edge_type `uc
 qi_period_rising_1 0
 qi_period_rising_2 1
 ]
-"146 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
+"147 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 [e E10008 . `uc
 BLACK 0
 RED 1
@@ -357,7 +357,7 @@ qi_period_rising_1 0
 qi_period_rising_2 1
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9862 . `uc
+[e E9858 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -427,7 +427,7 @@ QI_Fully_Charged 2
 QI_Error 3
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9947 . `uc
+[e E9943 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -453,14 +453,14 @@ I2C2_DATA_NO_ACK 5
 I2C2_LOST_STATE 6
 ]
 "25 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.h
-[e E10229 nxq_charge_state_t `uc
+[e E10235 nxq_charge_state_t `uc
 QI_Idle 0
 QI_Charging 1
 QI_Fully_Charged 2
 QI_Error 3
 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[e E10272 reset_types `uc
+[e E10278 reset_types `uc
 Undefined_Reset 0
 Power_On_Reset 1
 Brown_Out_Reset 2
@@ -472,7 +472,7 @@ Stack_Overflow_Reset 7
 Stack_Underflow_Reset 8
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[e E9924 . `uc
+[e E9920 . `uc
 POS12_ADC 0
 POS12_ISNS_ADC 1
 POS5_ADC 4
@@ -483,11 +483,11 @@ channel_DAC1 62
 channel_FVR_buf1 63
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
-[e E10360 qi_edge_type `uc
+[e E10366 qi_edge_type `uc
 qi_period_rising_1 0
 qi_period_rising_2 1
 ]
-"53 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"54 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [e E9616 . `uc
 BLACK 0
 RED 1
@@ -537,6 +537,32 @@ CONCEALED 5
 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
 [e E9450 qi_edge_type `uc
+qi_period_rising_1 0
+qi_period_rising_2 1
+]
+"50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
+[e E9511 . `uc
+POS12_ADC 0
+POS12_ISNS_ADC 1
+POS5_ADC 4
+QI_ISNS_ADC 5
+channel_VSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR_buf1 63
+]
+"97 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/i2c2.h
+[e E9611 . `uc
+I2C2_MESSAGE_COMPLETE 0
+I2C2_MESSAGE_FAIL 1
+I2C2_MESSAGE_PENDING 2
+I2C2_STUCK_START 3
+I2C2_MESSAGE_ADDRESS_NO_ACK 4
+I2C2_DATA_NO_ACK 5
+I2C2_LOST_STATE 6
+]
+"50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.h
+[e E9694 qi_edge_type `uc
 qi_period_rising_1 0
 qi_period_rising_2 1
 ]
@@ -660,7 +686,7 @@ qi_period_rising_2 1
 "20
 [v _rightCapTouchHandler rightCapTouchHandler `(v  1 e 1 0 ]
 "11 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
-[v _getCauseOfReset getCauseOfReset `(E10203  1 e 1 0 ]
+[v _getCauseOfReset getCauseOfReset `(E10209  1 e 1 0 ]
 "87
 [v _getCauseOfResetString getCauseOfResetString `(*.32Tuc  1 e 2 0 ]
 "118
@@ -675,6 +701,20 @@ qi_period_rising_2 1
 [v _getDeviceIDString getDeviceIDString `(*.32Tuc  1 e 2 0 ]
 "72
 [v _getUserID getUserID `(ui  1 e 2 0 ]
+"44 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\double_to_EEPROM.c
+[v _writeFloatToEEPROM writeFloatToEEPROM `(v  1 e 1 0 ]
+"61
+[v _readFloatFromEEPROM readFloatFromEEPROM `(f  1 e 4 0 ]
+"79
+[v _updataMinMaxRAMAliases updataMinMaxRAMAliases `(v  1 e 1 0 ]
+"138
+[v _recoverEEPROMToRAM recoverEEPROMToRAM `(v  1 e 1 0 ]
+"171
+[v _writeEEPROMFromRAM writeEEPROMFromRAM `(v  1 e 1 0 ]
+"233
+[v _minMaxInitialize minMaxInitialize `(v  1 e 1 0 ]
+"268
+[v _forceEEPROMSave forceEEPROMSave `(v  1 e 1 0 ]
 "12 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\error_handling.c
 [v _getADCError getADCError `(uc  1 e 1 0 ]
 "31
@@ -693,19 +733,19 @@ qi_period_rising_2 1
 [v _freqMeasStartCaptures freqMeasStartCaptures `(v  1 e 1 0 ]
 "16
 [v _freqMeasConvert freqMeasConvert `(v  1 e 1 0 ]
-"21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"25 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _heartbeatTimerHandler heartbeatTimerHandler `(v  1 e 1 0 ]
-"56
+"66
 [v _getStringSecondsAsTime getStringSecondsAsTime `(*.39uc  1 e 2 0 ]
-"175
+"185
 [v _getYearsFromOnTime getYearsFromOnTime `(uc  1 e 1 0 ]
-"183
-[v _getDaysFromOnTime getDaysFromOnTime `(uc  1 e 1 0 ]
 "193
+[v _getDaysFromOnTime getDaysFromOnTime `(uc  1 e 1 0 ]
+"203
 [v _getHoursFromOnTime getHoursFromOnTime `(uc  1 e 1 0 ]
-"205
+"215
 [v _getMinutesFromOnTime getMinutesFromOnTime `(uc  1 e 1 0 ]
-"219
+"229
 [v _getSecondsFromOnTime getSecondsFromOnTime `(uc  1 e 1 0 ]
 "13 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.c
 [v _LM73TempSensorInitialize LM73TempSensorInitialize `(v  1 e 1 0 ]
@@ -713,7 +753,7 @@ qi_period_rising_2 1
 [v _LM73AcquisitionHandler LM73AcquisitionHandler `(v  1 e 1 0 ]
 "184
 [v _LM73Convert LM73Convert `(v  1 e 1 0 ]
-"76 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
+"77 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
@@ -809,7 +849,7 @@ qi_period_rising_2 1
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "101
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
-"138
+"142
 [v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -825,6 +865,10 @@ qi_period_rising_2 1
 [v _FLASH_WriteBlock FLASH_WriteBlock `(c  1 e 1 0 ]
 "146
 [v _FLASH_EraseBlock FLASH_EraseBlock `(v  1 e 1 0 ]
+"168
+[v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
+"190
+[v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
 "60 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "143
@@ -929,31 +973,35 @@ qi_period_rising_2 1
 [v _QIIdleChargedTimerHandler QIIdleChargedTimerHandler `(v  1 e 1 0 ]
 "118
 [v _QIErrorTimerHandler QIErrorTimerHandler `(v  1 e 1 0 ]
-"122 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"123 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_Command OLED_Command `(v  1 e 1 0 ]
-"174
+"175
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
-"204
+"205
 [v _OLED_YX OLED_YX `(v  1 e 1 0 ]
-"212
+"213
 [v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
-"247
+"248
 [v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
-"262
+"263
 [v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
-"294
+"297
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
-"324
+"327
 [v _OLED_updateHandler OLED_updateHandler `(v  1 e 1 0 ]
 "6 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.c
 [v _terminal_ringBufferPull terminal_ringBufferPull `(v  1 e 1 0 ]
-"20 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
-"223
+"291
 [v _printErrorHandlerStatus printErrorHandlerStatus `(v  1 e 1 0 ]
-"314
+"382
 [v _printCurrentMeasurements printCurrentMeasurements `(v  1 e 1 0 ]
-"416
+"454
+[v _printMaximumMeasurements printMaximumMeasurements `(v  1 e 1 0 ]
+"501
+[v _printMinimumMeasurements printMinimumMeasurements `(v  1 e 1 0 ]
+"547
 [v _floatToEngineeringFormat floatToEngineeringFormat `(*.39uc  1 e 2 0 ]
 "12 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
 [v _terminalClearScreen terminalClearScreen `(v  1 e 1 0 ]
@@ -964,13 +1012,13 @@ qi_period_rising_2 1
 "164
 [v _terminalTextAttributesReset terminalTextAttributesReset `(v  1 e 1 0 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\adc_postprocessing.h
-[v _next_adc_channel next_adc_channel `E9828  1 e 1 0 ]
-[s S2767 adc_results_t 28 `f 1 avss_adc_result 4 0 `f 1 fvr_adc_result 4 4 `f 1 pos5_adc_result 4 8 `f 1 pos12_adc_result 4 12 `f 1 pos12_isns_adc_result 4 16 `f 1 qi_isns_adc_result 4 20 `f 1 die_temp_adc_result 4 24 ]
+[v _next_adc_channel next_adc_channel `E9824  1 e 1 0 ]
+[s S2957 adc_results_t 28 `f 1 avss_adc_result 4 0 `f 1 fvr_adc_result 4 4 `f 1 pos5_adc_result 4 8 `f 1 pos12_adc_result 4 12 `f 1 pos12_isns_adc_result 4 16 `f 1 qi_isns_adc_result 4 20 `f 1 die_temp_adc_result 4 24 ]
 "63
-[v _adc_results adc_results `S2767  1 e 28 0 ]
-[s S2775 adc_calculations_t 20 `f 1 input_power 4 0 `f 1 output_power 4 4 `f 1 efficiency 4 8 `f 1 output_charge 4 12 `f 1 output_energy 4 16 ]
+[v _adc_results adc_results `S2957  1 e 28 0 ]
+[s S2965 adc_calculations_t 20 `f 1 input_power 4 0 `f 1 output_power 4 4 `f 1 efficiency 4 8 `f 1 output_charge 4 12 `f 1 output_energy 4 16 ]
 "74
-[v _adc_calculations adc_calculations `S2775  1 e 20 0 ]
+[v _adc_calculations adc_calculations `S2965  1 e 20 0 ]
 "77
 [v _pos12_isns_average_buffer pos12_isns_average_buffer `[16]f  1 e 64 0 ]
 "79
@@ -1182,18 +1230,18 @@ qi_period_rising_2 1
 "4400
 [u S97 . 1 `S90 1 . 1 0 ]
 [v _PIE0bits PIE0bits `VES97  1 e 1 @3778 ]
-[s S637 . 1 `uc 1 ADIE 1 0 :1:0 
+[s S638 . 1 `uc 1 ADIE 1 0 :1:0 
 `uc 1 ADTIE 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIE 1 0 :1:6 
 `uc 1 OSCFIE 1 0 :1:7 
 ]
 "4448
-[s S643 . 1 `uc 1 . 1 0 :7:0 
+[s S644 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S646 . 1 `S637 1 . 1 0 `S643 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES646  1 e 1 @3779 ]
+[u S647 . 1 `S638 1 . 1 0 `S644 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES647  1 e 1 @3779 ]
 [s S168 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
@@ -1243,19 +1291,19 @@ qi_period_rising_2 1
 "4806
 [u S33 . 1 `S26 1 . 1 0 ]
 [v _PIR0bits PIR0bits `VES33  1 e 1 @3786 ]
-[s S659 . 1 `uc 1 ADIF 1 0 :1:0 
+[s S660 . 1 `uc 1 ADIF 1 0 :1:0 
 `uc 1 ADTIF 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIF 1 0 :1:6 
 `uc 1 OSCFIF 1 0 :1:7 
 ]
 "4854
-[s S665 . 1 `uc 1 . 1 0 :7:0 
+[s S666 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S668 . 1 `S659 1 . 1 0 `S665 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES668  1 e 1 @3787 ]
-[s S605 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S669 . 1 `S660 1 . 1 0 `S666 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES669  1 e 1 @3787 ]
+[s S606 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -1265,13 +1313,13 @@ qi_period_rising_2 1
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "4955
-[s S614 . 1 `uc 1 . 1 0 :1:0 
+[s S615 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIF 1 0 :1:4 
 ]
-[u S619 . 1 `S605 1 . 1 0 `S614 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES619  1 e 1 @3789 ]
+[u S620 . 1 `S606 1 . 1 0 `S615 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES620  1 e 1 @3789 ]
 [s S535 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
@@ -1575,7 +1623,7 @@ qi_period_rising_2 1
 [v _LATA LATA `VEuc  1 e 1 @3971 ]
 "15575
 [v _LATB LATB `VEuc  1 e 1 @3972 ]
-[s S3608 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S3863 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -1585,7 +1633,7 @@ qi_period_rising_2 1
 `uc 1 LATB7 1 0 :1:7 
 ]
 "15602
-[s S3617 . 1 `uc 1 LB0 1 0 :1:0 
+[s S3872 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -1594,11 +1642,11 @@ qi_period_rising_2 1
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S3626 . 1 `S3608 1 . 1 0 `S3617 1 . 1 0 ]
-[v _LATBbits LATBbits `VES3626  1 e 1 @3972 ]
+[u S3881 . 1 `S3863 1 . 1 0 `S3872 1 . 1 0 ]
+[v _LATBbits LATBbits `VES3881  1 e 1 @3972 ]
 "15687
 [v _LATC LATC `VEuc  1 e 1 @3973 ]
-[s S2991 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S3198 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -1608,7 +1656,7 @@ qi_period_rising_2 1
 `uc 1 LATC7 1 0 :1:7 
 ]
 "15714
-[s S3000 . 1 `uc 1 LC0 1 0 :1:0 
+[s S3207 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -1617,15 +1665,15 @@ qi_period_rising_2 1
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S3009 . 1 `S2991 1 . 1 0 `S3000 1 . 1 0 ]
-[v _LATCbits LATCbits `VES3009  1 e 1 @3973 ]
+[u S3216 . 1 `S3198 1 . 1 0 `S3207 1 . 1 0 ]
+[v _LATCbits LATCbits `VES3216  1 e 1 @3973 ]
 "15799
 [v _TRISA TRISA `VEuc  1 e 1 @3976 ]
 "15921
 [v _TRISB TRISB `VEuc  1 e 1 @3977 ]
 "16043
 [v _TRISC TRISC `VEuc  1 e 1 @3978 ]
-[s S3035 . 1 `uc 1 RB0 1 0 :1:0 
+[s S3242 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -1635,45 +1683,45 @@ qi_period_rising_2 1
 `uc 1 RB7 1 0 :1:7 
 ]
 "16270
-[s S3044 . 1 `uc 1 . 1 0 :3:0 
+[s S3251 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S3047 . 1 `S3035 1 . 1 0 `S3044 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES3047  1 e 1 @3982 ]
+[u S3254 . 1 `S3242 1 . 1 0 `S3251 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES3254  1 e 1 @3982 ]
 "20027
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @4006 ]
 "20047
 [v _CCPR2H CCPR2H `VEuc  1 e 1 @4007 ]
 "20067
 [v _CCP2CON CCP2CON `VEuc  1 e 1 @4008 ]
-[s S4659 . 1 `uc 1 MODE 1 0 :4:0 
+[s S5071 . 1 `uc 1 MODE 1 0 :4:0 
 `uc 1 FMT 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "20104
-[s S4665 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S5077 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 ]
-[s S4670 . 1 `uc 1 CCP2MODE 1 0 :4:0 
+[s S5082 . 1 `uc 1 CCP2MODE 1 0 :4:0 
 `uc 1 CCP2FMT 1 0 :1:4 
 `uc 1 CCP2OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 CCP2EN 1 0 :1:7 
 ]
-[s S4676 . 1 `uc 1 CCP2MODE0 1 0 :1:0 
+[s S5088 . 1 `uc 1 CCP2MODE0 1 0 :1:0 
 `uc 1 CCP2MODE1 1 0 :1:1 
 `uc 1 CCP2MODE2 1 0 :1:2 
 `uc 1 CCP2MODE3 1 0 :1:3 
 ]
-[s S4681 . 1 `uc 1 . 1 0 :7:0 
+[s S5093 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 P2M1 1 0 :1:7 
 ]
-[u S4684 . 1 `S4659 1 . 1 0 `S4665 1 . 1 0 `S4670 1 . 1 0 `S4676 1 . 1 0 `S4681 1 . 1 0 ]
-[v _CCP2CONbits CCP2CONbits `VES4684  1 e 1 @4008 ]
+[u S5096 . 1 `S5071 1 . 1 0 `S5077 1 . 1 0 `S5082 1 . 1 0 `S5088 1 . 1 0 `S5093 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES5096  1 e 1 @4008 ]
 "20194
 [v _CCP2CAP CCP2CAP `VEuc  1 e 1 @4009 ]
 [s S2446 . 1 `uc 1 C1TSEL 1 0 :2:0 
@@ -1900,28 +1948,28 @@ qi_period_rising_2 1
 "24483
 [v _T1CON T1CON `VEuc  1 e 1 @4047 ]
 "24522
-[s S4769 . 1 `uc 1 . 1 0 :2:0 
+[s S2779 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
-[s S4772 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S2782 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S4783 . 1 `uc 1 . 1 0 :1:0 
+[s S2793 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD161 1 0 :1:1 
 ]
-[u S4786 . 1 `S1917 1 . 1 0 `S1920 1 . 1 0 `S4769 1 . 1 0 `S4772 1 . 1 0 `S1936 1 . 1 0 `S4783 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES4786  1 e 1 @4047 ]
+[u S2796 . 1 `S1917 1 . 1 0 `S1920 1 . 1 0 `S2779 1 . 1 0 `S2782 1 . 1 0 `S1936 1 . 1 0 `S2793 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES2796  1 e 1 @4047 ]
 "24597
 [v _T1GCON T1GCON `VEuc  1 e 1 @4048 ]
 "24639
-[s S4831 . 1 `uc 1 . 1 0 :3:0 
+[s S2841 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S4834 . 1 `uc 1 . 1 0 :2:0 
+[s S2844 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -1929,11 +1977,11 @@ qi_period_rising_2 1
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
-[s S4842 . 1 `uc 1 . 1 0 :3:0 
+[s S2852 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
-[u S4845 . 1 `S1977 1 . 1 0 `S1980 1 . 1 0 `S4831 1 . 1 0 `S4834 1 . 1 0 `S4842 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES4845  1 e 1 @4048 ]
+[u S2855 . 1 `S1977 1 . 1 0 `S1980 1 . 1 0 `S2841 1 . 1 0 `S2844 1 . 1 0 `S2852 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES2855  1 e 1 @4048 ]
 "24829
 [v _T1GATE T1GATE `VEuc  1 e 1 @4049 ]
 "24971
@@ -1960,25 +2008,25 @@ qi_period_rising_2 1
 [v _T0CON0bits T0CON0bits `VES1451  1 e 1 @4053 ]
 "25570
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @4054 ]
-[s S3450 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S3705 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "25729
-[s S3452 . 1 `uc 1 . 1 0 :1:0 
+[s S3707 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S3455 . 1 `uc 1 . 1 0 :2:0 
+[s S3710 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_RI 1 0 :1:2 
 ]
-[s S3458 . 1 `uc 1 . 1 0 :3:0 
+[s S3713 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_RMCLR 1 0 :1:3 
 ]
-[s S3461 . 1 `uc 1 . 1 0 :4:0 
+[s S3716 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RWDT 1 0 :1:4 
 ]
-[s S3464 . 1 `uc 1 . 1 0 :5:0 
+[s S3719 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_WDTWV 1 0 :1:5 
 ]
-[s S3467 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S3722 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nRI 1 0 :1:2 
 `uc 1 nRMCLR 1 0 :1:3 
@@ -1987,15 +2035,15 @@ qi_period_rising_2 1
 `uc 1 STKUNF 1 0 :1:6 
 `uc 1 STKOVF 1 0 :1:7 
 ]
-[s S3476 . 1 `uc 1 BOR 1 0 :1:0 
+[s S3731 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 RI 1 0 :1:2 
 `uc 1 RMCLR 1 0 :1:3 
 `uc 1 RWDT 1 0 :1:4 
 `uc 1 WDTWV 1 0 :1:5 
 ]
-[u S3483 . 1 `S3450 1 . 1 0 `S3452 1 . 1 0 `S3455 1 . 1 0 `S3458 1 . 1 0 `S3461 1 . 1 0 `S3464 1 . 1 0 `S3467 1 . 1 0 `S3476 1 . 1 0 ]
-[v _PCON0bits PCON0bits `VES3483  1 e 1 @4055 ]
+[u S3738 . 1 `S3705 1 . 1 0 `S3707 1 . 1 0 `S3710 1 . 1 0 `S3713 1 . 1 0 `S3716 1 . 1 0 `S3719 1 . 1 0 `S3722 1 . 1 0 `S3731 1 . 1 0 ]
+[v _PCON0bits PCON0bits `VES3738  1 e 1 @4055 ]
 [s S53 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
@@ -2032,7 +2080,12 @@ qi_period_rising_2 1
 "39
 [v __npowers_ _npowers_ `C[13]d  1 e 52 0 ]
 "55 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.h
-[v _reset_cause reset_cause `E10203  1 e 1 0 ]
+[v _reset_cause reset_cause `E10209  1 e 1 0 ]
+"69 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\double_to_EEPROM.h
+[v _nvm_update_flag nvm_update_flag `uc  1 e 1 0 ]
+[s S3026 eeprom_ram_alias_t 104 `f 1 POS12_Max_Result 4 0 `f 1 POS12_Min_Result 4 4 `f 1 POS5_Max_Result 4 8 `f 1 POS5_Min_Result 4 12 `f 1 POS12_Current_Max_Result 4 16 `f 1 POS12_Current_Min_Result 4 20 `f 1 QI_Current_Max_Result 4 24 `f 1 QI_Current_Min_Result 4 28 `f 1 Input_Power_Max_Result 4 32 `f 1 Input_Power_Min_Result 4 36 `f 1 Output_Power_Max_Result 4 40 `f 1 Output_Power_Min_Result 4 44 `f 1 Efficiency_Max_Result 4 48 `f 1 Efficiency_Min_Result 4 52 `f 1 Load_Energy_Max_Result 4 56 `f 1 Load_Charge_Max_Result 4 60 `f 1 QI_FSW_Max_Result 4 64 `f 1 QI_FSW_Min_Result 4 68 `f 1 QI_Temp_Max_Result 4 72 `f 1 QI_Temp_Min_Result 4 76 `f 1 POS5_Temp_Max_Result 4 80 `f 1 POS5_Temp_Min_Result 4 84 `f 1 Ambient_Temp_Max_Result 4 88 `f 1 Ambient_Temp_Min_Result 4 92 `f 1 Die_Temp_Max_Result 4 96 `f 1 Die_Temp_Min_Result 4 100 ]
+"101
+[v _eeprom_ram_aliases eeprom_ram_aliases `S3026  1 e 104 0 ]
 [s S159 error_struct 8 `uc 1 FVR_ADC_error_flag 1 0 `uc 1 ADC_general_error_flag 1 1 `uc 1 I2C_General_error_flag 1 2 `uc 1 I2C_OLED_error_flag 1 3 `uc 1 I2C_QI_Temp_Sense_error_flag 1 4 `uc 1 I2C_POS5_Temp_Sense_error_flag 1 5 `uc 1 I2C_Ambient_Temp_Sense_error_flag 1 6 `uc 1 USB_UART_COMM_error_flag 1 7 ]
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\error_handling.h
 [v _error_handler error_handler `S159  1 e 8 0 ]
@@ -2045,21 +2098,21 @@ qi_period_rising_2 1
 [v _freq_meas_start_flag freq_meas_start_flag `uc  1 e 1 0 ]
 "40 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.h
 [v _device_on_time device_on_time `ul  1 e 4 0 ]
-[s S2790 LM73_temp_results_t 18 `f 1 QI_temp_result 4 0 `f 1 POS5_temp_result 4 4 `f 1 Ambient_temp_result 4 8 `[2]uc 1 QI_data_raw 2 12 `[2]uc 1 POS5_data_raw 2 14 `[2]uc 1 Ambient_data_raw 2 16 ]
+[s S2980 LM73_temp_results_t 18 `f 1 QI_temp_result 4 0 `f 1 POS5_temp_result 4 4 `f 1 Ambient_temp_result 4 8 `[2]uc 1 QI_data_raw 2 12 `[2]uc 1 POS5_data_raw 2 14 `[2]uc 1 Ambient_data_raw 2 16 ]
 "65 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\LM73_I2C.h
-[v _LM73_temp_results LM73_temp_results `S2790  1 e 18 0 ]
+[v _LM73_temp_results LM73_temp_results `S2980  1 e 18 0 ]
 "68
 [v _LM73_start_flag LM73_start_flag `uc  1 e 1 0 ]
 "57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/adcc.c
 [v _ADCC_ADTI_InterruptHandler ADCC_ADTI_InterruptHandler `*.38(v  1 e 3 0 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
-[v _eusart2TxHead eusart2TxHead `VEuc  1 e 1 0 ]
+[v _eusart2TxHead eusart2TxHead `VEui  1 e 2 0 ]
 "64
-[v _eusart2TxTail eusart2TxTail `VEuc  1 e 1 0 ]
+[v _eusart2TxTail eusart2TxTail `VEui  1 e 2 0 ]
 "65
-[v _eusart2TxBuffer eusart2TxBuffer `VE[64]uc  1 e 64 0 ]
+[v _eusart2TxBuffer eusart2TxBuffer `VE[1024]uc  1 e 1024 0 ]
 "66
-[v _eusart2TxBufferRemaining eusart2TxBufferRemaining `VEuc  1 e 1 0 ]
+[v _eusart2TxBufferRemaining eusart2TxBufferRemaining `VEui  1 e 2 0 ]
 "68
 [v _eusart2RxHead eusart2RxHead `VEuc  1 e 1 0 ]
 "69
@@ -2122,43 +2175,67 @@ qi_period_rising_2 1
 [v _QI_charge_time QI_charge_time `ul  1 e 4 0 ]
 "25
 [v _nxq_charge_state nxq_charge_state `E10037  1 e 1 0 ]
-"18 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"19 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OledFont OledFont `C[96][8]uc  1 e 768 0 ]
-[s S2797 OLED_RAM_Buffer_t 68 `[17]uc 1 line0 17 0 `[17]uc 1 line1 17 17 `[17]uc 1 line2 17 34 `[17]uc 1 line3 17 51 ]
+[s S2987 OLED_RAM_Buffer_t 68 `[17]uc 1 line0 17 0 `[17]uc 1 line1 17 17 `[17]uc 1 line2 17 34 `[17]uc 1 line3 17 51 ]
 "63 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.h
-[v _OLED_RAM_Buffer OLED_RAM_Buffer `S2797  1 e 68 0 ]
+[v _OLED_RAM_Buffer OLED_RAM_Buffer `S2987  1 e 68 0 ]
 "103
-[v _OLED_Frame OLED_Frame `E10297  1 e 1 0 ]
+[v _OLED_Frame OLED_Frame `E10303  1 e 1 0 ]
 "106
 [v _OLED_update_flag OLED_update_flag `uc  1 e 1 0 ]
 "110
 [v _OLED_update_time OLED_update_time `uc  1 e 1 0 ]
 "48 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.h
 [v _line line `[64]uc  1 e 64 0 ]
-"76 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
+"21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.h
+[v _live_measurement_enable_flag live_measurement_enable_flag `uc  1 e 1 0 ]
+"24
+[v _live_measurement_request_flag live_measurement_request_flag `uc  1 e 1 0 ]
+"77 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"210
+"242
+} 0
+"171 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\double_to_EEPROM.c
+[v _writeEEPROMFromRAM writeEEPROMFromRAM `(v  1 e 1 0 ]
+{
+"229
+} 0
+"79
+[v _updataMinMaxRAMAliases updataMinMaxRAMAliases `(v  1 e 1 0 ]
+{
+"135
 } 0
 "6 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_interface.c
 [v _terminal_ringBufferPull terminal_ringBufferPull `(v  1 e 1 0 ]
 {
 "18
-[v terminal_ringBufferPull@index_4555 index `i  1 a 2 20 ]
+[v terminal_ringBufferPull@index_4967 index `i  1 a 2 46 ]
 "11
-[v terminal_ringBufferPull@index index `i  1 a 2 22 ]
+[v terminal_ringBufferPull@index index `i  1 a 2 48 ]
 "8
-[v terminal_ringBufferPull@charNumber charNumber `i  1 a 2 18 ]
+[v terminal_ringBufferPull@charNumber charNumber `i  1 a 2 44 ]
 "44
 } 0
-"20 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 {
-"87
-[v ringBufferLUT@userID userID `i  1 a 2 41 ]
-"20
-[v ringBufferLUT@line line `*.39uc  1 p 2 187 ]
-"220
+"88
+[v ringBufferLUT@userID userID `i  1 a 2 4 ]
+"21
+[v ringBufferLUT@line line `*.39uc  1 p 2 0 ]
+"288
+} 0
+"17 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
+[v _terminalSetCursorHome terminalSetCursorHome `(v  1 e 1 0 ]
+{
+"19
+} 0
+"12
+[v _terminalClearScreen terminalClearScreen `(v  1 e 1 0 ]
+{
+"14
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -2170,15 +2247,25 @@ qi_period_rising_2 1
 [v strcmp@s2 s2 `*.32Cuc  1 p 2 2 ]
 "42
 } 0
-"223 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"501 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+[v _printMinimumMeasurements printMinimumMeasurements `(v  1 e 1 0 ]
+{
+"542
+} 0
+"454
+[v _printMaximumMeasurements printMaximumMeasurements `(v  1 e 1 0 ]
+{
+"498
+} 0
+"291
 [v _printErrorHandlerStatus printErrorHandlerStatus `(v  1 e 1 0 ]
 {
-"311
+"379
 } 0
-"314
+"382
 [v _printCurrentMeasurements printCurrentMeasurements `(v  1 e 1 0 ]
 {
-"411
+"451
 } 0
 "164 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
 [v _terminalTextAttributesReset terminalTextAttributesReset `(v  1 e 1 0 ]
@@ -2190,17 +2277,17 @@ qi_period_rising_2 1
 {
 [v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 wreg ]
 "51
-[v terminalTextAttributes@print_string print_string `[16]uc  1 a 16 1 ]
+[v terminalTextAttributes@print_string print_string `[16]uc  1 a 16 27 ]
 "54
-[v terminalTextAttributes@i i `uc  1 a 1 17 ]
+[v terminalTextAttributes@i i `uc  1 a 1 43 ]
 "47
 [v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 wreg ]
 "48
-[v terminalTextAttributes@background_color background_color `E9584  1 p 1 185 ]
+[v terminalTextAttributes@background_color background_color `E9584  1 p 1 188 ]
 "49
-[v terminalTextAttributes@input_attribute input_attribute `E9576  1 p 1 186 ]
+[v terminalTextAttributes@input_attribute input_attribute `E9576  1 p 1 189 ]
 "55
-[v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 0 ]
+[v terminalTextAttributes@foreground_color foreground_color `E9584  1 a 1 26 ]
 "161
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strncpy.c
@@ -2214,24 +2301,36 @@ qi_period_rising_2 1
 [v strncpy@size size `ui  1 p 2 4 ]
 "27
 } 0
-"56 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+[s S5273 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+"21
+[v printf@pb pb `S5273  1 a 5 183 ]
+"15
+[v printf@ap ap `[1]*.39v  1 a 2 181 ]
+"13
+[v printf@f f `*.34Cuc  1 p 2 173 ]
+"28
+} 0
+"66 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _getStringSecondsAsTime getStringSecondsAsTime `(*.39uc  1 e 2 0 ]
 {
-"69
+"79
 [v getStringSecondsAsTime@buff buff `[20]uc  1 a 20 0 ]
-"58
+"68
 [v getStringSecondsAsTime@minutes minutes `uc  1 a 1 25 ]
 [v getStringSecondsAsTime@hours hours `uc  1 a 1 24 ]
 [v getStringSecondsAsTime@days days `uc  1 a 1 23 ]
 [v getStringSecondsAsTime@years years `uc  1 a 1 22 ]
 [v getStringSecondsAsTime@seconds seconds `uc  1 a 1 21 ]
-"62
+"72
 [v getStringSecondsAsTime@i i `uc  1 a 1 20 ]
-"56
-[v getStringSecondsAsTime@input_seconds input_seconds `ul  1 p 4 163 ]
-"59
+"66
+[v getStringSecondsAsTime@input_seconds input_seconds `ul  1 p 4 159 ]
+"69
 [v getStringSecondsAsTime@return_string return_string `[40]uc  1 s 40 return_string ]
-"172
+"182
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcat.c
 [v _strcat strcat `(*.39uc  1 e 2 0 ]
@@ -2247,6 +2346,31 @@ qi_period_rising_2 1
 [v _getNXQChargeStateString getNXQChargeStateString `(*.32uc  1 e 2 0 ]
 {
 "35
+} 0
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 19 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 12 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 17 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 24 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 23 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 16 ]
+"11
+[v ___fldiv@b b `d  1 p 4 0 ]
+[v ___fldiv@a a `d  1 p 4 4 ]
+"185
+} 0
+"233 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\double_to_EEPROM.c
+[v _minMaxInitialize minMaxInitialize `(v  1 e 1 0 ]
+{
+"265
 } 0
 "72 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
 [v _getUserID getUserID `(ui  1 e 2 0 ]
@@ -2275,6 +2399,34 @@ qi_period_rising_2 1
 "103
 [v getCauseOfResetString@r r `E9577  1 a 1 2 ]
 "115
+} 0
+"268 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\double_to_EEPROM.c
+[v _forceEEPROMSave forceEEPROMSave `(v  1 e 1 0 ]
+{
+"297
+} 0
+"44
+[v _writeFloatToEEPROM writeFloatToEEPROM `(v  1 e 1 0 ]
+{
+"51
+[v writeFloatToEEPROM@byte_index byte_index `i  1 a 2 14 ]
+[u S5215 . 4 `f 1 float_t 4 0 `[4]uc 1 byte_array_t 4 0 ]
+"47
+[v writeFloatToEEPROM@input_data input_data `S5215  1 a 4 10 ]
+"44
+[v writeFloatToEEPROM@input_float input_float `f  1 p 4 4 ]
+[v writeFloatToEEPROM@starting_address starting_address `ui  1 p 2 8 ]
+"58
+} 0
+"168 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/memory.c
+[v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
+{
+"170
+[v DATAEE_WriteByte@GIEBitValue GIEBitValue `uc  1 a 1 3 ]
+"168
+[v DATAEE_WriteByte@bAdd bAdd `ui  1 p 2 0 ]
+[v DATAEE_WriteByte@bData bData `uc  1 p 1 2 ]
+"188
 } 0
 "85 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\error_handling.c
 [v _clearUARTErrors clearUARTErrors `(v  1 e 1 0 ]
@@ -2318,30 +2470,31 @@ qi_period_rising_2 1
 [v EUSART2_Read@readValue readValue `uc  1 a 1 0 ]
 "151
 } 0
-"17 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\terminal_control.c
-[v _terminalSetCursorHome terminalSetCursorHome `(v  1 e 1 0 ]
+"138 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\double_to_EEPROM.c
+[v _recoverEEPROMToRAM recoverEEPROMToRAM `(v  1 e 1 0 ]
 {
-"19
+"167
 } 0
-"12
-[v _terminalClearScreen terminalClearScreen `(v  1 e 1 0 ]
+"61
+[v _readFloatFromEEPROM readFloatFromEEPROM `(f  1 e 4 0 ]
 {
-"14
+"67
+[v readFloatFromEEPROM@byte_index byte_index `i  1 a 2 10 ]
+[u S5215 . 4 `f 1 float_t 4 0 `[4]uc 1 byte_array_t 4 0 ]
+"64
+[v readFloatFromEEPROM@output_data output_data `S5215  1 a 4 6 ]
+"61
+[v readFloatFromEEPROM@starting_address starting_address `ui  1 p 2 2 ]
+"76
 } 0
-"13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
+"190 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/memory.c
+[v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
 {
-[s S4916 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-"21
-[v printf@pb pb `S4916  1 a 5 36 ]
-"15
-[v printf@ap ap `[1]*.39v  1 a 2 34 ]
-"13
-[v printf@f f `*.34Cuc  1 p 2 26 ]
-"28
+[v DATAEE_ReadByte@bAdd bAdd `ui  1 p 2 0 ]
+"200
 } 0
 "11 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
-[v _getCauseOfReset getCauseOfReset `(E10203  1 e 1 0 ]
+[v _getCauseOfReset getCauseOfReset `(E10209  1 e 1 0 ]
 {
 "13
 [v getCauseOfReset@return_reset_cause return_reset_cause `E9577  1 a 1 0 ]
@@ -2541,14 +2694,14 @@ qi_period_rising_2 1
 [v ADCC_SetADTIInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "309
 } 0
-"324 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"327 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_updateHandler OLED_updateHandler `(v  1 e 1 0 ]
 {
-"356
+"359
 [v OLED_updateHandler@rev_id_str rev_id_str `[17]uc  1 a 17 17 ]
-"350
+"353
 [v OLED_updateHandler@dev_id_str dev_id_str `[17]uc  1 a 17 0 ]
-"833
+"836
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strcpy.c
 [v _strcpy strcpy `(*.39uc  1 e 2 0 ]
@@ -2560,44 +2713,44 @@ qi_period_rising_2 1
 [v strcpy@from from `*.34Cuc  1 p 2 5 ]
 "24
 } 0
-"175 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"185 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _getYearsFromOnTime getYearsFromOnTime `(uc  1 e 1 0 ]
 {
-"177
+"187
 [v getYearsFromOnTime@years years `uc  1 a 1 17 ]
-"175
+"185
 [v getYearsFromOnTime@input_seconds input_seconds `ul  1 p 4 13 ]
-"180
+"190
 } 0
-"219
+"229
 [v _getSecondsFromOnTime getSecondsFromOnTime `(uc  1 e 1 0 ]
 {
-"221
+"231
 [v getSecondsFromOnTime@minutes minutes `uc  1 a 1 25 ]
 [v getSecondsFromOnTime@hours hours `uc  1 a 1 24 ]
 [v getSecondsFromOnTime@days days `uc  1 a 1 23 ]
 [v getSecondsFromOnTime@years years `uc  1 a 1 22 ]
 [v getSecondsFromOnTime@seconds seconds `uc  1 a 1 21 ]
-"219
+"229
 [v getSecondsFromOnTime@input_seconds input_seconds `ul  1 p 4 13 ]
-"232
+"242
 } 0
 "38 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\NXQ_charge_state.c
 [v _getNXQChargeStateStringCaps getNXQChargeStateStringCaps `(*.32uc  1 e 2 0 ]
 {
 "64
 } 0
-"205 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"215 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _getMinutesFromOnTime getMinutesFromOnTime `(uc  1 e 1 0 ]
 {
-"207
+"217
 [v getMinutesFromOnTime@hours hours `uc  1 a 1 24 ]
 [v getMinutesFromOnTime@days days `uc  1 a 1 23 ]
 [v getMinutesFromOnTime@years years `uc  1 a 1 22 ]
 [v getMinutesFromOnTime@minutes minutes `uc  1 a 1 21 ]
-"205
+"215
 [v getMinutesFromOnTime@input_seconds input_seconds `ul  1 p 4 13 ]
-"216
+"226
 } 0
 "23 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
 [v _getMinorRevisionID getMinorRevisionID `(uc  1 e 1 0 ]
@@ -2613,16 +2766,16 @@ qi_period_rising_2 1
 [v getMajorRevisionID@REVID_RAW REVID_RAW `ui  1 a 2 14 ]
 "20
 } 0
-"193 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"203 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _getHoursFromOnTime getHoursFromOnTime `(uc  1 e 1 0 ]
 {
-"195
+"205
 [v getHoursFromOnTime@days days `uc  1 a 1 23 ]
 [v getHoursFromOnTime@years years `uc  1 a 1 22 ]
 [v getHoursFromOnTime@hours hours `uc  1 a 1 21 ]
-"193
+"203
 [v getHoursFromOnTime@input_seconds input_seconds `ul  1 p 4 13 ]
-"202
+"212
 } 0
 "4 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\device_IDs.c
 [v _getDeviceID getDeviceID `(ui  1 e 2 0 ]
@@ -2641,15 +2794,15 @@ qi_period_rising_2 1
 [v FLASH_ReadByte@flashAddr flashAddr `ul  1 p 4 0 ]
 "69
 } 0
-"183 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"193 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _getDaysFromOnTime getDaysFromOnTime `(uc  1 e 1 0 ]
 {
-"185
+"195
 [v getDaysFromOnTime@years years `uc  1 a 1 22 ]
 [v getDaysFromOnTime@days days `uc  1 a 1 21 ]
-"183
+"193
 [v getDaysFromOnTime@input_seconds input_seconds `ul  1 p 4 13 ]
-"190
+"200
 } 0
 "118 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\cause_of_reset.c
 [v _getCauseOfResetStringSmall getCauseOfResetStringSmall `(*.32Tuc  1 e 2 0 ]
@@ -2662,63 +2815,63 @@ qi_period_rising_2 1
 [v getCauseOfResetStringSmall@r r `E9577  1 a 1 2 ]
 "146
 } 0
-"416 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
+"547 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\ring_buffer_LUT.c
 [v _floatToEngineeringFormat floatToEngineeringFormat `(*.39uc  1 e 2 0 ]
 {
-"421
-[v floatToEngineeringFormat@sign sign `f  1 a 4 175 ]
-"419
-[v floatToEngineeringFormat@res res `*.39uc  1 a 2 179 ]
-"416
-[v floatToEngineeringFormat@input_value input_value `f  1 p 4 163 ]
-"418
+"554
+[v floatToEngineeringFormat@mag mag `d  1 a 4 163 ]
+"550
+[v floatToEngineeringFormat@res res `*.39uc  1 a 2 171 ]
+"547
+[v floatToEngineeringFormat@input_value input_value `f  1 p 4 159 ]
+"549
 [v floatToEngineeringFormat@result result `[20]uc  1 s 20 result ]
-"433
+"567
 } 0
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S4916 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[s S5273 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "29
-[v sprintf@pb pb `S4916  1 a 5 158 ]
+[v sprintf@pb pb `S5273  1 a 5 154 ]
 "28
-[v sprintf@ap ap `[1]*.39v  1 a 2 156 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 152 ]
 "13
-[v sprintf@wh wh `*.39uc  1 p 2 144 ]
-[v sprintf@f f `*.32Cuc  1 p 2 146 ]
+[v sprintf@wh wh `*.39uc  1 p 2 140 ]
+[v sprintf@f f `*.32Cuc  1 p 2 142 ]
 "38
 } 0
 "466 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\doprnt.c
 [v __doprnt _doprnt `(i  1 e 2 0 ]
 {
 "1519
-[v __doprnt@idx idx `uc  1 a 1 102 ]
+[v __doprnt@idx idx `uc  1 a 1 98 ]
 "540
-[v __doprnt@val val `ul  1 a 4 133 ]
+[v __doprnt@val val `ul  1 a 4 129 ]
 "528
-[v __doprnt@fval fval `d  1 a 4 129 ]
-[u S4962 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[v __doprnt@fval fval `d  1 a 4 125 ]
+[u S5319 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
 "538
-[v __doprnt@tmpval tmpval `S4962  1 a 4 125 ]
+[v __doprnt@tmpval tmpval `S5319  1 a 4 121 ]
 "520
-[v __doprnt@flag flag `us  1 a 2 141 ]
+[v __doprnt@flag flag `us  1 a 2 137 ]
 "512
-[v __doprnt@prec prec `i  1 a 2 139 ]
+[v __doprnt@prec prec `i  1 a 2 135 ]
 "509
-[v __doprnt@width width `i  1 a 2 137 ]
+[v __doprnt@width width `i  1 a 2 133 ]
 "529
-[v __doprnt@eexp eexp `i  1 a 2 123 ]
+[v __doprnt@eexp eexp `i  1 a 2 119 ]
 "541
-[v __doprnt@len len `ui  1 a 2 121 ]
+[v __doprnt@len len `ui  1 a 2 117 ]
 "542
-[v __doprnt@cp cp `*.34Cuc  1 a 2 119 ]
+[v __doprnt@cp cp `*.34Cuc  1 a 2 115 ]
 "507
-[v __doprnt@c c `uc  1 a 1 143 ]
-[s S4916 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v __doprnt@c c `uc  1 a 1 139 ]
+[s S5273 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
 "466
-[v __doprnt@pb pb `*.39S4916  1 p 2 88 ]
-[v __doprnt@f f `*.34Cuc  1 p 2 90 ]
-[v __doprnt@ap ap `*.39*.39v  1 p 2 92 ]
+[v __doprnt@pb pb `*.39S5273  1 p 2 84 ]
+[v __doprnt@f f `*.34Cuc  1 p 2 86 ]
+[v __doprnt@ap ap `*.39*.39v  1 p 2 88 ]
 "1560
 } 0
 "433
@@ -2911,8 +3064,8 @@ qi_period_rising_2 1
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
 {
-[v ___flge@ff1 ff1 `d  1 p 4 76 ]
-[v ___flge@ff2 ff2 `d  1 p 4 80 ]
+[v ___flge@ff1 ff1 `d  1 p 4 12 ]
+[v ___flge@ff2 ff2 `d  1 p 4 16 ]
 "19
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\fleq.c
@@ -2928,38 +3081,18 @@ qi_period_rising_2 1
 [v abs@a a `i  1 p 2 58 ]
 "9
 } 0
-"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 58 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 51 ]
-"20
-[v ___fldiv@new_exp new_exp `i  1 a 2 56 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 63 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 62 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 55 ]
-"11
-[v ___fldiv@b b `d  1 p 4 39 ]
-[v ___fldiv@a a `d  1 p 4 43 ]
-"185
-} 0
-"294 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"297 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_UpdateFromRAMBuffer OLED_UpdateFromRAMBuffer `(v  1 e 1 0 ]
 {
+"310
+[v OLED_UpdateFromRAMBuffer@char_index_4432 char_index `uc  1 a 1 39 ]
 "307
-[v OLED_UpdateFromRAMBuffer@char_index_4113 char_index `uc  1 a 1 38 ]
+[v OLED_UpdateFromRAMBuffer@char_index_4431 char_index `uc  1 a 1 38 ]
 "304
-[v OLED_UpdateFromRAMBuffer@char_index_4112 char_index `uc  1 a 1 37 ]
+[v OLED_UpdateFromRAMBuffer@char_index_4430 char_index `uc  1 a 1 37 ]
 "301
-[v OLED_UpdateFromRAMBuffer@char_index_4111 char_index `uc  1 a 1 36 ]
-"298
-[v OLED_UpdateFromRAMBuffer@char_index char_index `uc  1 a 1 35 ]
-"320
+[v OLED_UpdateFromRAMBuffer@char_index char_index `uc  1 a 1 36 ]
+"323
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -2970,61 +3103,64 @@ qi_period_rising_2 1
 [v strlen@s s `*.39Cuc  1 p 2 0 ]
 "13
 } 0
-"204 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
+"205 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\oled.c
 [v _OLED_YX OLED_YX `(v  1 e 1 0 ]
 {
 [v OLED_YX@Row Row `uc  1 a 1 wreg ]
 [v OLED_YX@Row Row `uc  1 a 1 wreg ]
 [v OLED_YX@Column Column `uc  1 p 1 20 ]
-"206
+"207
 [v OLED_YX@Row Row `uc  1 a 1 24 ]
-"210
+"211
 } 0
-"262
+"263
 [v _OLED_WriteString OLED_WriteString `(v  1 e 1 0 ]
 {
+"265
+[v OLED_WriteString@str_len str_len `uc  1 a 1 35 ]
+"263
 [v OLED_WriteString@s s `*.34uc  1 p 2 33 ]
-"271
+"274
 } 0
-"174
+"175
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
 {
-"202
+"203
 } 0
-"122
+"123
 [v _OLED_Command OLED_Command `(v  1 e 1 0 ]
 {
 [v OLED_Command@temp temp `uc  1 a 1 wreg ]
-"126
-[v OLED_Command@data_array data_array `[2]uc  1 a 2 18 ]
-"122
-[v OLED_Command@temp temp `uc  1 a 1 wreg ]
 "127
+[v OLED_Command@data_array data_array `[2]uc  1 a 2 18 ]
+"123
+[v OLED_Command@temp temp `uc  1 a 1 wreg ]
+"128
 [v OLED_Command@temp temp `uc  1 a 1 16 ]
-"146
+"147
 } 0
-"247
+"248
 [v _OLED_Clear OLED_Clear `(v  1 e 1 0 ]
 {
-"251
+"252
 [v OLED_Clear@col col `ui  1 a 2 35 ]
-"249
+"250
 [v OLED_Clear@row row `ui  1 a 2 33 ]
-"260
+"261
 } 0
-"212
+"213
 [v _OLED_PutChar OLED_PutChar `(v  1 e 1 0 ]
 {
 [v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
-"222
+"223
 [v OLED_PutChar@data_array data_array `[9]uc  1 a 9 20 ]
-"226
+"227
 [v OLED_PutChar@input_base input_base `*.32Cuc  1 a 2 29 ]
-"212
+"213
 [v OLED_PutChar@ch ch `uc  1 a 1 wreg ]
-"214
+"215
 [v OLED_PutChar@ch ch `uc  1 a 1 32 ]
-"245
+"246
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memmove.c
 [v _memmove memmove `(*.39v  1 e 2 0 ]
@@ -3078,17 +3214,17 @@ qi_period_rising_2 1
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5300 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5657 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S5305 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S5308 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5300 1 fAsBytes 4 0 `S5305 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S5308  1 a 4 33 ]
+[s S5662 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5665 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5657 1 fAsBytes 4 0 `S5662 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S5665  1 a 4 33 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 28 ]
-[s S5376 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S5733 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S5379 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5376 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S5379  1 a 2 37 ]
+[u S5736 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5733 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S5736  1 a 2 37 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
@@ -3180,7 +3316,7 @@ qi_period_rising_2 1
 [v I2C2_MasterReadTRBBuild@address address `ui  1 p 2 5 ]
 "720
 } 0
-"138 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
+"142 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
 {
 "169
@@ -3292,11 +3428,6 @@ qi_period_rising_2 1
 {
 "748
 } 0
-"187 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
-[v _EUSART2_Transmit_ISR EUSART2_Transmit_ISR `(v  1 e 1 0 ]
-{
-"204
-} 0
 "89 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/ccp2.c
 [v _CCP2_CaptureISR CCP2_CaptureISR `(v  1 e 1 0 ]
 {
@@ -3316,9 +3447,9 @@ qi_period_rising_2 1
 "16 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\freq_meas.c
 [v _freqMeasConvert freqMeasConvert `(v  1 e 1 0 ]
 {
-"19
+"21
 [v freqMeasConvert@qi_period qi_period `d  1 a 4 80 ]
-"23
+"26
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\xxtofl.c
 [v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -3335,14 +3466,14 @@ qi_period_rising_2 1
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v i1___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5300 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S5305 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S5308 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5300 1 fAsBytes 4 0 `S5305 1 fAsWords 4 0 ]
-[v i1___flmul@prod __flmul `S5308  1 a 4 74 ]
+[s S5657 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5662 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5665 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5657 1 fAsBytes 4 0 `S5662 1 fAsWords 4 0 ]
+[v i1___flmul@prod __flmul `S5665  1 a 4 74 ]
 [v i1___flmul@grs __flmul `ul  1 a 4 68 ]
-[s S5376 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S5379 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5376 1 nAsBytes 2 0 ]
-[v i1___flmul@temp __flmul `S5379  1 a 2 78 ]
+[s S5733 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S5736 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5733 1 nAsBytes 2 0 ]
+[v i1___flmul@temp __flmul `S5736  1 a 2 78 ]
 [v i1___flmul@bexp __flmul `uc  1 a 1 73 ]
 [v i1___flmul@aexp __flmul `uc  1 a 1 72 ]
 [v i1___flmul@sign __flmul `uc  1 a 1 67 ]
@@ -3377,7 +3508,7 @@ qi_period_rising_2 1
 "101 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
 {
-"136
+"140
 } 0
 "164 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/tmr1.c
 [v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
@@ -3409,10 +3540,10 @@ qi_period_rising_2 1
 {
 "141
 } 0
-"21 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
+"25 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\heartbeat_timer.c
 [v _heartbeatTimerHandler heartbeatTimerHandler `(v  1 e 1 0 ]
 {
-"53
+"63
 } 0
 "143 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -3521,7 +3652,12 @@ qi_period_rising_2 1
 {
 "17
 } 0
-"206 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
+"187 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\mcc_generated_files/eusart2.c
+[v _EUSART2_Transmit_ISR EUSART2_Transmit_ISR `(v  1 e 1 0 ]
+{
+"204
+} 0
+"206
 [v _EUSART2_Receive_ISR EUSART2_Receive_ISR `(v  1 e 1 0 ]
 {
 "262
@@ -3529,8 +3665,8 @@ qi_period_rising_2 1
 "13 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\printf.c
 [v i2_printf printf `(i  1 e 2 0 ]
 {
-[s S4916 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-[v i2printf@pb printf `S4916  1 a 5 72 ]
+[s S5273 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v i2printf@pb printf `S5273  1 a 5 72 ]
 [v i2printf@ap printf `[1]*.39v  1 a 2 70 ]
 [v i2printf@f f `*.34Cuc  1 p 2 68 ]
 "28
@@ -3540,8 +3676,8 @@ qi_period_rising_2 1
 {
 [v i2__doprnt@val _doprnt `ul  1 a 4 57 ]
 [v i2__doprnt@fval _doprnt `d  1 a 4 53 ]
-[u S4962 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
-[v i2__doprnt@tmpval _doprnt `S4962  1 a 4 49 ]
+[u S5319 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[v i2__doprnt@tmpval _doprnt `S5319  1 a 4 49 ]
 [v i2__doprnt@flag _doprnt `us  1 a 2 65 ]
 [v i2__doprnt@prec _doprnt `i  1 a 2 63 ]
 [v i2__doprnt@width _doprnt `i  1 a 2 61 ]
@@ -3550,8 +3686,8 @@ qi_period_rising_2 1
 [v i2__doprnt@cp _doprnt `*.34Cuc  1 a 2 43 ]
 [v i2__doprnt@c _doprnt `uc  1 a 1 67 ]
 [v i2__doprnt@idx _doprnt `uc  1 a 1 26 ]
-[s S4916 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
-[v i2__doprnt@pb pb `*.39S4916  1 p 2 12 ]
+[s S5273 __prbuf 5 `*.39uc 1 ptr 2 0 `*.38(v 1 func 3 2 ]
+[v i2__doprnt@pb pb `*.39S5273  1 p 2 12 ]
 [v i2__doprnt@f f `*.34Cuc  1 p 2 14 ]
 [v i2__doprnt@ap ap `*.39*.39v  1 p 2 16 ]
 "1560
@@ -3710,7 +3846,7 @@ qi_period_rising_2 1
 [v _ADC_PostProcessingHandler ADC_PostProcessingHandler `(v  1 e 1 0 ]
 {
 "89
-[v ADC_PostProcessingHandler@i_3369 i `uc  1 a 1 26 ]
+[v ADC_PostProcessingHandler@i_3624 i `uc  1 a 1 26 ]
 "70
 [v ADC_PostProcessingHandler@i i `uc  1 a 1 25 ]
 "19
@@ -3750,14 +3886,14 @@ qi_period_rising_2 1
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
 [v i2___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5300 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-[s S5305 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S5308 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5300 1 fAsBytes 4 0 `S5305 1 fAsWords 4 0 ]
-[v i2___flmul@prod __flmul `S5308  1 a 4 62 ]
+[s S5657 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5662 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S5665 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5657 1 fAsBytes 4 0 `S5662 1 fAsWords 4 0 ]
+[v i2___flmul@prod __flmul `S5665  1 a 4 62 ]
 [v i2___flmul@grs __flmul `ul  1 a 4 57 ]
-[s S5376 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-[u S5379 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5376 1 nAsBytes 2 0 ]
-[v i2___flmul@temp __flmul `S5379  1 a 2 66 ]
+[s S5733 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[u S5736 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S5733 1 nAsBytes 2 0 ]
+[v i2___flmul@temp __flmul `S5736  1 a 2 66 ]
 [v i2___flmul@bexp __flmul `uc  1 a 1 61 ]
 [v i2___flmul@aexp __flmul `uc  1 a 1 56 ]
 [v i2___flmul@sign __flmul `uc  1 a 1 55 ]

@@ -59,6 +59,7 @@
 #include "NXQ_charge_state.h"
 #include "oled.h"
 #include "freq_meas.h"
+#include "double_to_EEPROM.h"
 
 // User IDs
 #pragma config IDLOC0 = 0xD
@@ -188,12 +189,19 @@ void main(void)
     if (QI_CHARGE_PIN == 0 && QI_IDLE_PIN == 0) nxq_charge_state = QI_Idle;
     else if (QI_CHARGE_PIN == 1 && QI_IDLE_PIN == 1) nxq_charge_state = QI_Fully_Charged;
     
+    // Get starting data
+    LM73AcquisitionHandler();
+    freqMeasStartCaptures();
+    
+    // Recover saved variables from NVM
+    recoverEEPROMToRAM();
+    
     // Endless loop
     while (1) {
         
         // If received terminal data is ready, process it
         if (eusart2RxStringReady) terminal_ringBufferPull();
-            
+        
         // If the OLED needs to be updated, update it
         if (OLED_update_flag) OLED_updateHandler();
         
@@ -203,8 +211,32 @@ void main(void)
         // If we need to start a new freq meas capture, start it
         if (freq_meas_start_flag) freqMeasStartCaptures();
         
+        // If we need to print out live data to the terminal, do it.
+        if (live_measurement_request_flag) {
+         
+            live_measurement_request_flag = 0;
+            
+            // terminalClearScreen();
+            terminalSetCursorHome();
+            
+            terminalTextAttributes(GREEN, BLACK, BOLD);
+            printf("Live Measurements:\033[K\n\r\033[K\n\r");
+            
+            printCurrentMeasurements();
+            
+            terminalTextAttributes(YELLOW, BLACK, REVERSE);
+            printf("Press enter key to exit\033[K\n\r\033[K\n\r");
+            terminalTextAttributesReset();
+            
+        }
+        
         // Update error LEDs based on error handler state
         updateErrorLEDs();
+        
+        // Check for new min and max measurements to save off
+        updataMinMaxRAMAliases();
+        
+        if (nvm_update_flag) writeEEPROMFromRAM();
         
     }
 }

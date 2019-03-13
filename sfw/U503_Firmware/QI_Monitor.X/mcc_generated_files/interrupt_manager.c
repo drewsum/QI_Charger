@@ -59,6 +59,9 @@ void  INTERRUPT_Initialize (void)
     // TMRI - high priority
     IPR4bits.TMR1IP = 1;
 
+    // INT2I - high priority
+    IPR0bits.INT2IP = 1;
+
     // TMRI - high priority
     IPR0bits.TMR0IP = 1;
 
@@ -71,11 +74,11 @@ void  INTERRUPT_Initialize (void)
     // IOCI - high priority
     IPR0bits.IOCIP = 1;
 
+    // TXI - high priority
+    IPR3bits.TX2IP = 1;
+
     // INT1I - high priority
     IPR0bits.INT1IP = 1;
-
-    // INT2I - high priority
-    IPR0bits.INT2IP = 1;
 
 
     // TMRI - low priority
@@ -90,9 +93,6 @@ void  INTERRUPT_Initialize (void)
     // TMRI - low priority
     IPR4bits.TMR3IP = 0;    
 
-    // TXI - low priority
-    IPR3bits.TX2IP = 0;    
-
     // CCPI - low priority
     IPR6bits.CCP2IP = 0;    
 
@@ -104,6 +104,10 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
     if(PIE4bits.TMR1IE == 1 && PIR4bits.TMR1IF == 1)
     {
         TMR1_ISR();
+    }
+    else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
+    {
+        INT2_ISR();
     }
     else if(PIE0bits.TMR0IE == 1 && PIR0bits.TMR0IF == 1)
     {
@@ -121,13 +125,13 @@ void __interrupt() INTERRUPT_InterruptManagerHigh (void)
     {
         PIN_MANAGER_IOC();
     }
+    else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
+    {
+        EUSART2_TxDefaultInterruptHandler();
+    }
     else if(PIE0bits.INT1IE == 1 && PIR0bits.INT1IF == 1)
     {
         INT1_ISR();
-    }
-    else if(PIE0bits.INT2IE == 1 && PIR0bits.INT2IF == 1)
-    {
-        INT2_ISR();
     }
     else
     {
@@ -153,10 +157,6 @@ void __interrupt(low_priority) INTERRUPT_InterruptManagerLow (void)
     else if(PIE4bits.TMR3IE == 1 && PIR4bits.TMR3IF == 1)
     {
         TMR3_ISR();
-    }
-    else if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
-    {
-        EUSART2_TxDefaultInterruptHandler();
     }
     else if(PIE6bits.CCP2IE == 1 && PIR6bits.CCP2IF == 1)
     {

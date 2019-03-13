@@ -14,6 +14,7 @@
 #include "freq_meas.h"
 #include "heartbeat_timer.h"
 #include "ring_buffer_LUT.h"
+#include "double_to_EEPROM.h"
 
 const uint8_t OledFont[][8] = 
 {
@@ -261,9 +262,11 @@ void OLED_Clear(void) {
 
 void OLED_WriteString(char* s) {
  
-    while(*s) {
+    uint8_t str_len = 16;
+    while(str_len > 0) {
      
         OLED_PutChar(*s++);
+        str_len--;
         
     }
     
@@ -414,8 +417,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "+12V Voltage:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f V", adc_results.pos12_adc_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f V", eeprom_ram_aliases.POS12_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f V", eeprom_ram_aliases.POS12_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS12_Voltage;
@@ -429,8 +432,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "+5V Voltage:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f V", adc_results.pos5_adc_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f V", eeprom_ram_aliases.POS5_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f V", eeprom_ram_aliases.POS5_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_Voltage;
@@ -444,8 +447,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "+12V Current:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f A", adc_results.pos12_isns_adc_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f A", eeprom_ram_aliases.POS12_Current_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f A", eeprom_ram_aliases.POS12_Current_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS12_Current;
@@ -460,8 +463,8 @@ void OLED_updateHandler(void) {
             strcpy(OLED_RAM_Buffer.line0, "QI Current:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line1, "%+.3f A", adc_results.qi_isns_adc_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f A", eeprom_ram_aliases.QI_Current_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f A", eeprom_ram_aliases.QI_Current_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_Current;
@@ -475,8 +478,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "Input Power:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f W", adc_calculations.input_power);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f W", eeprom_ram_aliases.Input_Power_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f W", eeprom_ram_aliases.Input_Power_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Input_Power;
@@ -491,8 +494,8 @@ void OLED_updateHandler(void) {
             strcpy(OLED_RAM_Buffer.line0, "Output Power:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line1, "%+.3f W", adc_calculations.output_power);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f W", eeprom_ram_aliases.Output_Power_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f W", eeprom_ram_aliases.Output_Power_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Output_Power;
@@ -507,8 +510,8 @@ void OLED_updateHandler(void) {
             strcpy(OLED_RAM_Buffer.line0, "Efficiency:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line1, "%+.3f %%", adc_calculations.efficiency);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f %%", eeprom_ram_aliases.Efficiency_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f %%", eeprom_ram_aliases.Efficiency_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Efficiency;
@@ -522,8 +525,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "QI Temp:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f C", LM73_temp_results.QI_temp_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f C", eeprom_ram_aliases.QI_Temp_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f C", eeprom_ram_aliases.QI_Temp_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_Temp;
@@ -537,8 +540,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f C", LM73_temp_results.POS5_temp_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f C", eeprom_ram_aliases.POS5_Temp_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f C", eeprom_ram_aliases.POS5_Temp_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_POS5_Temp;
@@ -552,8 +555,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "Ambient Temp:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f C", LM73_temp_results.Ambient_temp_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f C", eeprom_ram_aliases.Ambient_Temp_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f C", eeprom_ram_aliases.Ambient_Temp_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Ambient_Temp;
@@ -567,8 +570,8 @@ void OLED_updateHandler(void) {
             
             strcpy(OLED_RAM_Buffer.line0, "Micro Temp:");
             sprintf(OLED_RAM_Buffer.line1, "%+.3f C", adc_results.die_temp_adc_result);
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f C", eeprom_ram_aliases.Die_Temp_Max_Result);
+            sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f C", eeprom_ram_aliases.Die_Temp_Min_Result);
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_Micro_Temp;
@@ -599,8 +602,8 @@ void OLED_updateHandler(void) {
             strcpy(OLED_RAM_Buffer.line0, "QI Sw. Freq:");
             if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
             else sprintf(OLED_RAM_Buffer.line1, "%sHz", floatToEngineeringFormat(freq_meas_results.QI_Freq_Meas));
-            strcpy(OLED_RAM_Buffer.line2, " ");
-            strcpy(OLED_RAM_Buffer.line3, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %sHz", floatToEngineeringFormat(eeprom_ram_aliases.QI_FSW_Max_Result));
+            sprintf(OLED_RAM_Buffer.line3, "Min: %sHz", floatToEngineeringFormat(eeprom_ram_aliases.QI_FSW_Min_Result));
             
             OLED_UpdateFromRAMBuffer();
             OLED_Frame = OLED_QI_FSW;
@@ -722,7 +725,7 @@ void OLED_updateHandler(void) {
             strcpy(OLED_RAM_Buffer.line0, "Output Charge:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line1, "%sC", floatToEngineeringFormat(adc_calculations.output_charge));
-            strcpy(OLED_RAM_Buffer.line2, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %sC", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();
@@ -738,7 +741,7 @@ void OLED_updateHandler(void) {
             strcpy(OLED_RAM_Buffer.line0, "Output Energy:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line1, "%sJ", floatToEngineeringFormat(adc_calculations.output_energy));
-            strcpy(OLED_RAM_Buffer.line2, " ");
+            sprintf(OLED_RAM_Buffer.line2, "Max: %sJ", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
             strcpy(OLED_RAM_Buffer.line3, " ");
             
             OLED_UpdateFromRAMBuffer();

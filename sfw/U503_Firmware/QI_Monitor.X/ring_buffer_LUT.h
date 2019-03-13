@@ -15,7 +15,14 @@
 
 #ifndef RING_BUFFER_LUT_H
 #define	RING_BUFFER_LUT_H
-    
+  
+
+// This flag enable live measurement printing
+uint8_t live_measurement_enable_flag;
+
+// This flag request a live measurement print
+uint8_t live_measurement_request_flag;
+
 /*
   @Summary
     This routine compares the string passed to it and acts on it if it matches
@@ -48,6 +55,12 @@ void printErrorHandlerStatus(void);
 
 // This function prints the current measurements message
 void printCurrentMeasurements(void);
+
+// This function prints the maximum measurements message
+void printMaximumMeasurements(void);
+
+// This function prints the minimum measurements message
+void printMinimumMeasurements(void);
 
 // This function returns a string representing a floating point number in
 // engineering format. It will append the unit prefix on the end after

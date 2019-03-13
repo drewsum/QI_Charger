@@ -26,14 +26,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [c E10257 0 1 .. ]
 [n E10257 qi_edge_type qi_period_rising_1 qi_period_rising_2  ]
 "50 adc_postprocessing.h
-[c E9862 0 1 4 5 60 61 62 63 .. ]
-[n E9862 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
+[c E9858 0 1 4 5 60 61 62 63 .. ]
+[n E9858 . POS12_ADC POS12_ISNS_ADC POS5_ADC QI_ISNS_ADC channel_VSS channel_Temp channel_DAC1 channel_FVR_buf1  ]
 "53
 [s S1447 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1447 adc_results_t avss_adc_result fvr_adc_result pos5_adc_result pos12_adc_result pos12_isns_adc_result qi_isns_adc_result die_temp_adc_result ]
 "66
 [s S1448 `f 1 `f 1 `f 1 `f 1 `f 1 ]
 [n S1448 adc_calculations_t input_power output_power efficiency output_charge output_energy ]
+"72 double_to_EEPROM.h
+[s S1449 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 `f 1 ]
+[n S1449 eeprom_ram_alias_t POS12_Max_Result POS12_Min_Result POS5_Max_Result POS5_Min_Result POS12_Current_Max_Result POS12_Current_Min_Result QI_Current_Max_Result QI_Current_Min_Result Input_Power_Max_Result Input_Power_Min_Result Output_Power_Max_Result Output_Power_Min_Result Efficiency_Max_Result Efficiency_Min_Result Load_Energy_Max_Result Load_Charge_Max_Result QI_FSW_Max_Result QI_FSW_Min_Result QI_Temp_Max_Result QI_Temp_Min_Result POS5_Temp_Max_Result POS5_Temp_Min_Result Ambient_Temp_Max_Result Ambient_Temp_Min_Result Die_Temp_Max_Result Die_Temp_Min_Result ]
 "15581 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f27k40.h
 [s S784 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S784 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
@@ -11017,9 +11020,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 328: extern void (*TMR0_InterruptHandler)(void);
 [; ;tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;fvr.h: 93: void FVR_Initialize(void);
-[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
-[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;adcc.h: 72: typedef uint16_t adc_result_t;
 [; ;adcc.h: 89: typedef enum
 [; ;adcc.h: 90: {
@@ -11063,6 +11063,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adcc.h: 863: void ADCC_ThresholdISR(void);
 [; ;adcc.h: 881: void ADCC_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;fvr.h: 93: void FVR_Initialize(void);
+[; ;fvr.h: 127: bool FVR_IsOutputReady(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
 [; ;ccp2.h: 80: typedef union CCPR2Reg_tag
 [; ;ccp2.h: 81: {
 [; ;ccp2.h: 82: struct
@@ -11078,15 +11081,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ccp2.h: 123: void CCP2_Initialize(void);
 [; ;ccp2.h: 139: void CCP2_CaptureISR(void);
 [; ;ccp2.h: 160: void CCP2_CallBack(uint16_t capturedValue);
-[; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
-[; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
-[; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
-[; ;memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
-[; ;memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
-[; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
-[; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
-[; ;memory.h: 277: void MEMORY_Tasks(void);
 [; ;ext_int.h: 406: void EXT_INT_Initialize(void);
 [; ;ext_int.h: 428: void INT1_ISR(void);
 [; ;ext_int.h: 452: void INT1_CallBack(void);
@@ -11099,7 +11093,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ext_int.h: 612: extern void (*INT2_InterruptHandler)(void);
 [; ;ext_int.h: 636: void INT2_DefaultInterruptHandler(void);
 [; ;stdbool.h: 15: typedef unsigned char bool;
-[; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;memory.h: 99: uint8_t FLASH_ReadByte(uint32_t flashAddr);
+[; ;memory.h: 125: uint16_t FLASH_ReadWord(uint32_t flashAddr);
+[; ;memory.h: 157: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+[; ;memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+[; ;memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
+[; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+[; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
+[; ;memory.h: 277: void MEMORY_Tasks(void);
+[; ;stdbool.h: 15: typedef unsigned char bool;
+[; ;eusart2.h: 79: extern volatile uint16_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
 [v _EUSART2_TxDefaultInterruptHandler `*F9999 ~T0 @X0 1 e ]
@@ -11283,9 +11286,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;freq_meas.h: 57: void freqMeasStartCaptures(void);
 [; ;freq_meas.h: 60: void freqMeasConvert(void);
 "50 adc_postprocessing.h
-[v _next_adc_channel `E9862 ~T0 @X0 1 e ]
+[v _next_adc_channel `E9858 ~T0 @X0 1 e ]
 [i _next_adc_channel
-. `E9862 4
+. `E9858 4
 ]
 [; ;adc_postprocessing.h: 50: adcc_channel_t next_adc_channel = channel_VSS;
 "63
@@ -11337,469 +11340,549 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;adc_postprocessing.h: 90: const float temp_adc_offset = 376.115;
 [; ;adc_postprocessing.h: 94: void ADC_PostProcessingHandler(void);
 [; ;adc_postprocessing.h: 98: void ADC_acquisitionTimerHandler(void);
-"21 heartbeat_timer.c
+"21 ring_buffer_LUT.h
+[v _live_measurement_enable_flag `uc ~T0 @X0 1 e ]
+[; ;ring_buffer_LUT.h: 21: uint8_t live_measurement_enable_flag;
+"24
+[v _live_measurement_request_flag `uc ~T0 @X0 1 e ]
+[; ;ring_buffer_LUT.h: 24: uint8_t live_measurement_request_flag;
+[; ;ring_buffer_LUT.h: 51: void ringBufferLUT(char * line);
+[; ;ring_buffer_LUT.h: 54: void printErrorHandlerStatus(void);
+[; ;ring_buffer_LUT.h: 57: void printCurrentMeasurements(void);
+[; ;ring_buffer_LUT.h: 60: void printMaximumMeasurements(void);
+[; ;ring_buffer_LUT.h: 63: void printMinimumMeasurements(void);
+[; ;ring_buffer_LUT.h: 68: char * floatToEngineeringFormat(float input_value);
+[; ;ring_buffer_interface.h: 36: extern volatile bit eusart2RxStringReady;
+[; ;ring_buffer_interface.h: 39: extern volatile uint8_t eusart2RxCount;
+[; ;ring_buffer_interface.h: 42: extern volatile uint8_t eusart2RxHead;
+[; ;ring_buffer_interface.h: 43: extern volatile uint8_t eusart2RxTail;
+"48 ring_buffer_interface.h
+[v _line `uc ~T0 @X0 -> 64 `i e ]
+[; ;ring_buffer_interface.h: 48: char line[64];
+[; ;ring_buffer_interface.h: 81: void terminal_ringBufferPull(void);
+"69 double_to_EEPROM.h
+[v _nvm_update_flag `uc ~T0 @X0 1 e ]
+[; ;double_to_EEPROM.h: 69: bool nvm_update_flag;
+"101
+[v _eeprom_ram_aliases `S1449 ~T0 @X0 1 e ]
+[; ;double_to_EEPROM.h: 72: struct eeprom_ram_alias_t {
+[; ;double_to_EEPROM.h: 74: float POS12_Max_Result;
+[; ;double_to_EEPROM.h: 75: float POS12_Min_Result;
+[; ;double_to_EEPROM.h: 76: float POS5_Max_Result;
+[; ;double_to_EEPROM.h: 77: float POS5_Min_Result;
+[; ;double_to_EEPROM.h: 78: float POS12_Current_Max_Result;
+[; ;double_to_EEPROM.h: 79: float POS12_Current_Min_Result;
+[; ;double_to_EEPROM.h: 80: float QI_Current_Max_Result;
+[; ;double_to_EEPROM.h: 81: float QI_Current_Min_Result;
+[; ;double_to_EEPROM.h: 82: float Input_Power_Max_Result;
+[; ;double_to_EEPROM.h: 83: float Input_Power_Min_Result;
+[; ;double_to_EEPROM.h: 84: float Output_Power_Max_Result;
+[; ;double_to_EEPROM.h: 85: float Output_Power_Min_Result;
+[; ;double_to_EEPROM.h: 86: float Efficiency_Max_Result;
+[; ;double_to_EEPROM.h: 87: float Efficiency_Min_Result;
+[; ;double_to_EEPROM.h: 88: float Load_Energy_Max_Result;
+[; ;double_to_EEPROM.h: 89: float Load_Charge_Max_Result;
+[; ;double_to_EEPROM.h: 90: float QI_FSW_Max_Result;
+[; ;double_to_EEPROM.h: 91: float QI_FSW_Min_Result;
+[; ;double_to_EEPROM.h: 92: float QI_Temp_Max_Result;
+[; ;double_to_EEPROM.h: 93: float QI_Temp_Min_Result;
+[; ;double_to_EEPROM.h: 94: float POS5_Temp_Max_Result;
+[; ;double_to_EEPROM.h: 95: float POS5_Temp_Min_Result;
+[; ;double_to_EEPROM.h: 96: float Ambient_Temp_Max_Result;
+[; ;double_to_EEPROM.h: 97: float Ambient_Temp_Min_Result;
+[; ;double_to_EEPROM.h: 98: float Die_Temp_Max_Result;
+[; ;double_to_EEPROM.h: 99: float Die_Temp_Min_Result;
+[; ;double_to_EEPROM.h: 101: } eeprom_ram_aliases;
+[; ;double_to_EEPROM.h: 104: typedef union {
+[; ;double_to_EEPROM.h: 105: double double_t;
+[; ;double_to_EEPROM.h: 106: unsigned char byte_array_t[sizeof(double)];
+[; ;double_to_EEPROM.h: 107: } double_bytes_t;
+[; ;double_to_EEPROM.h: 110: typedef union {
+[; ;double_to_EEPROM.h: 111: float float_t;
+[; ;double_to_EEPROM.h: 112: unsigned char byte_array_t[sizeof(float)];
+[; ;double_to_EEPROM.h: 113: } float_bytes_t;
+[; ;double_to_EEPROM.h: 117: void writeDoubleToEEPROM(double input_double, uint16_t starting_address);
+[; ;double_to_EEPROM.h: 120: double readDoubleFromEEPROM(uint16_t starting_address);
+[; ;double_to_EEPROM.h: 123: void writeFloatToEEPROM(float input_float, uint16_t starting_address);
+[; ;double_to_EEPROM.h: 126: float readFloatFromEEPROM(uint16_t starting_address);
+[; ;double_to_EEPROM.h: 129: void updataMinMaxRAMAliases(void);
+[; ;double_to_EEPROM.h: 132: void recoverEEPROMToRAM(void);
+[; ;double_to_EEPROM.h: 136: void writeEEPROMFromRAM(void);
+[; ;double_to_EEPROM.h: 140: void minMaxInitialize(void);
+[; ;double_to_EEPROM.h: 143: void forceEEPROMSave(void);
+"25 heartbeat_timer.c
 [v _heartbeatTimerHandler `(v ~T0 @X0 1 ef ]
 {
-[; ;heartbeat_timer.c: 21: void heartbeatTimerHandler(void) {
+[; ;heartbeat_timer.c: 25: void heartbeatTimerHandler(void) {
 [e :U _heartbeatTimerHandler ]
 [f ]
-[; ;heartbeat_timer.c: 24: LATBbits.LATB6 = ~(LATBbits.LATB6);
-"24
+[; ;heartbeat_timer.c: 28: LATBbits.LATB6 = ~(LATBbits.LATB6);
+"28
 [e = . . _LATBbits 0 6 -> ~ -> . . _LATBbits 0 6 `i `uc ]
-[; ;heartbeat_timer.c: 27: device_on_time++;
-"27
-[e ++ _device_on_time -> -> -> 1 `i `l `ul ]
-[; ;heartbeat_timer.c: 30: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_charge_time++;
-"30
-[e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1450  ]
-[e ++ _QI_charge_time -> -> -> 1 `i `l `ul ]
-[e $U 1451  ]
+[; ;heartbeat_timer.c: 31: device_on_time++;
 "31
-[e :U 1450 ]
-[; ;heartbeat_timer.c: 31: else QI_charge_time = 0;
-[e = _QI_charge_time -> -> -> 0 `i `l `ul ]
-[e :U 1451 ]
-[; ;heartbeat_timer.c: 34: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+[e ++ _device_on_time -> -> -> 1 `i `l `ul ]
+[; ;heartbeat_timer.c: 34: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_charge_time++;
 "34
-[e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1452  ]
-[e =+ . _adc_calculations 3 . _adc_results 5 ]
-[e $U 1453  ]
+[e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1453  ]
+[e ++ _QI_charge_time -> -> -> 1 `i `l `ul ]
+[e $U 1454  ]
 "35
-[e :U 1452 ]
-[; ;heartbeat_timer.c: 35: else adc_calculations.output_charge = 0.0;
-[e = . _adc_calculations 3 -> .0.0 `f ]
 [e :U 1453 ]
-[; ;heartbeat_timer.c: 38: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
-"38
-[e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1454  ]
-[e =+ . _adc_calculations 4 . _adc_calculations 1 ]
-[e $U 1455  ]
-"39
+[; ;heartbeat_timer.c: 35: else QI_charge_time = 0;
+[e = _QI_charge_time -> -> -> 0 `i `l `ul ]
 [e :U 1454 ]
-[; ;heartbeat_timer.c: 39: else adc_calculations.output_energy = 0.0;
-[e = . _adc_calculations 4 -> .0.0 `f ]
+[; ;heartbeat_timer.c: 38: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+"38
+[e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1455  ]
+[e =+ . _adc_calculations 3 . _adc_results 5 ]
+[e $U 1456  ]
+"39
 [e :U 1455 ]
-[; ;heartbeat_timer.c: 42: asm(" clrwdt");
-"42
-[; <"  clrwdt ;# ">
-[; ;heartbeat_timer.c: 45: LM73_start_flag = 1;
-"45
-[e = _LM73_start_flag -> -> 1 `i `uc ]
-[; ;heartbeat_timer.c: 48: if (device_on_time % OLED_update_time == 0) OLED_update_flag = 1;
-"48
-[e $ ! == % _device_on_time -> _OLED_update_time `ul -> -> -> 0 `i `l `ul 1456  ]
-[e = _OLED_update_flag -> -> 1 `i `uc ]
+[; ;heartbeat_timer.c: 39: else adc_calculations.output_charge = 0.0;
+[e = . _adc_calculations 3 -> .0.0 `f ]
 [e :U 1456 ]
-[; ;heartbeat_timer.c: 51: freq_meas_start_flag = 1;
-"51
+[; ;heartbeat_timer.c: 42: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
+"42
+[e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1457  ]
+[e =+ . _adc_calculations 4 . _adc_calculations 1 ]
+[e $U 1458  ]
+"43
+[e :U 1457 ]
+[; ;heartbeat_timer.c: 43: else adc_calculations.output_energy = 0.0;
+[e = . _adc_calculations 4 -> .0.0 `f ]
+[e :U 1458 ]
+[; ;heartbeat_timer.c: 46: asm(" clrwdt");
+"46
+[; <"  clrwdt ;# ">
+[; ;heartbeat_timer.c: 49: LM73_start_flag = 1;
+"49
+[e = _LM73_start_flag -> -> 1 `i `uc ]
+[; ;heartbeat_timer.c: 52: if (device_on_time % OLED_update_time == 0) OLED_update_flag = 1;
+"52
+[e $ ! == % _device_on_time -> _OLED_update_time `ul -> -> -> 0 `i `l `ul 1459  ]
+[e = _OLED_update_flag -> -> 1 `i `uc ]
+[e :U 1459 ]
+[; ;heartbeat_timer.c: 55: freq_meas_start_flag = 1;
+"55
 [e = _freq_meas_start_flag -> -> 1 `i `uc ]
-[; ;heartbeat_timer.c: 53: }
-"53
-[e :UE 1449 ]
+[; ;heartbeat_timer.c: 58: if (live_measurement_enable_flag) live_measurement_request_flag = 1;
+"58
+[e $ ! != -> _live_measurement_enable_flag `i -> -> -> 0 `i `uc `i 1460  ]
+[e = _live_measurement_request_flag -> -> 1 `i `uc ]
+[e :U 1460 ]
+[; ;heartbeat_timer.c: 61: if (device_on_time % 60 == 0) nvm_update_flag = 1;
+"61
+[e $ ! == % _device_on_time -> -> -> 60 `i `l `ul -> -> -> 0 `i `l `ul 1461  ]
+[e = _nvm_update_flag -> -> 1 `i `uc ]
+[e :U 1461 ]
+[; ;heartbeat_timer.c: 63: }
+"63
+[e :UE 1452 ]
 }
-"56
+"66
 [v _getStringSecondsAsTime `(*uc ~T0 @X0 1 ef1`ul ]
 {
-[; ;heartbeat_timer.c: 56: char * getStringSecondsAsTime(uint32_t input_seconds) {
+[; ;heartbeat_timer.c: 66: char * getStringSecondsAsTime(uint32_t input_seconds) {
 [e :U _getStringSecondsAsTime ]
 [v _input_seconds `ul ~T0 @X0 1 r1 ]
 [f ]
-"58
+"68
 [v _years `uc ~T0 @X0 1 a ]
 [v _days `uc ~T0 @X0 1 a ]
 [v _hours `uc ~T0 @X0 1 a ]
 [v _minutes `uc ~T0 @X0 1 a ]
 [v _seconds `uc ~T0 @X0 1 a ]
 [v _remainder `uc ~T0 @X0 1 a ]
-"59
-[v F10301 `uc ~T0 @X0 -> 40 `i s return_string ]
-"62
+"69
+[v F10380 `uc ~T0 @X0 -> 40 `i s return_string ]
+"72
 [v _i `uc ~T0 @X0 1 a ]
-[; ;heartbeat_timer.c: 58: uint8_t years, days, hours, minutes, seconds, remainder;
-[; ;heartbeat_timer.c: 59: static char return_string[40];
-[; ;heartbeat_timer.c: 62: uint8_t i;
-[; ;heartbeat_timer.c: 63: for (i = 0; i < strlen(return_string); i++) {
-"63
+[; ;heartbeat_timer.c: 68: uint8_t years, days, hours, minutes, seconds, remainder;
+[; ;heartbeat_timer.c: 69: static char return_string[40];
+[; ;heartbeat_timer.c: 72: uint8_t i;
+[; ;heartbeat_timer.c: 73: for (i = 0; i < strlen(return_string); i++) {
+"73
 {
 [e = _i -> -> 0 `i `uc ]
-[e $U 1461  ]
-[e :U 1458 ]
-{
-[; ;heartbeat_timer.c: 65: return_string[i] = '\0';
-"65
-[e = *U + &U F10301 * -> _i `ux -> -> # *U &U F10301 `ui `ux -> -> 0 `ui `uc ]
-"67
-}
-"63
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 1461 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U F10301 `*Cuc 1458  ]
-[e :U 1459 ]
-"67
-}
-"69
-[v _buff `uc ~T0 @X0 -> 20 `i a ]
-[; ;heartbeat_timer.c: 67: }
-[; ;heartbeat_timer.c: 69: char buff[20];
-[; ;heartbeat_timer.c: 71: years = input_seconds / (60 * 60 * 24 * 365);
-"71
-[e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 72: input_seconds -= years * (60 * 60 * 24 * 365);
-"72
-[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
-[; ;heartbeat_timer.c: 73: days = input_seconds / (60 * 60 * 24);
-"73
-[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 74: input_seconds -= days * (60 * 60 * 24);
-"74
-[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
-[; ;heartbeat_timer.c: 75: hours = input_seconds / (60 * 60);
-"75
-[e = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 76: input_seconds -= hours * (60 * 60);
-"76
-[e =- _input_seconds -> -> * -> _hours `i * -> 60 `i -> 60 `i `l `ul ]
-[; ;heartbeat_timer.c: 77: minutes = input_seconds / 60;
-"77
-[e = _minutes -> / _input_seconds -> -> -> 60 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 78: input_seconds -= minutes * 60;
-"78
-[e =- _input_seconds -> -> * -> _minutes `i -> 60 `i `l `ul ]
-[; ;heartbeat_timer.c: 79: seconds = input_seconds;
-"79
-[e = _seconds -> _input_seconds `uc ]
-[; ;heartbeat_timer.c: 81: if (years > 0) {
-"81
-[e $ ! > -> _years `i -> 0 `i 1462  ]
-{
-[; ;heartbeat_timer.c: 83: if (years == 1) {
-"83
-[e $ ! == -> _years `i -> 1 `i 1463  ]
-{
-[; ;heartbeat_timer.c: 85: sprintf(buff, "%d year, ", years);
-"85
-[e ( _sprintf (1 , (. , &U _buff :s 1C -> _years `i ]
-"87
-}
-[; ;heartbeat_timer.c: 87: }
-[e $U 1464  ]
-"89
+[e $U 1466  ]
 [e :U 1463 ]
-[; ;heartbeat_timer.c: 89: else {
 {
-[; ;heartbeat_timer.c: 91: sprintf(buff, "%d years, ", years);
-"91
-[e ( _sprintf (1 , (. , &U _buff :s 2C -> _years `i ]
-"93
+[; ;heartbeat_timer.c: 75: return_string[i] = '\0';
+"75
+[e = *U + &U F10380 * -> _i `ux -> -> # *U &U F10380 `ui `ux -> -> 0 `ui `uc ]
+"77
 }
+"73
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 1466 ]
+[e $ < -> _i `ui ( _strlen (1 -> &U F10380 `*Cuc 1463  ]
 [e :U 1464 ]
-[; ;heartbeat_timer.c: 93: }
-[; ;heartbeat_timer.c: 95: strcat(return_string, buff);
+"77
+}
+"79
+[v _buff `uc ~T0 @X0 -> 20 `i a ]
+[; ;heartbeat_timer.c: 77: }
+[; ;heartbeat_timer.c: 79: char buff[20];
+[; ;heartbeat_timer.c: 81: years = input_seconds / (60 * 60 * 24 * 365);
+"81
+[e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 82: input_seconds -= years * (60 * 60 * 24 * 365);
+"82
+[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
+[; ;heartbeat_timer.c: 83: days = input_seconds / (60 * 60 * 24);
+"83
+[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 84: input_seconds -= days * (60 * 60 * 24);
+"84
+[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
+[; ;heartbeat_timer.c: 85: hours = input_seconds / (60 * 60);
+"85
+[e = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 86: input_seconds -= hours * (60 * 60);
+"86
+[e =- _input_seconds -> -> * -> _hours `i * -> 60 `i -> 60 `i `l `ul ]
+[; ;heartbeat_timer.c: 87: minutes = input_seconds / 60;
+"87
+[e = _minutes -> / _input_seconds -> -> -> 60 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 88: input_seconds -= minutes * 60;
+"88
+[e =- _input_seconds -> -> * -> _minutes `i -> 60 `i `l `ul ]
+[; ;heartbeat_timer.c: 89: seconds = input_seconds;
+"89
+[e = _seconds -> _input_seconds `uc ]
+[; ;heartbeat_timer.c: 91: if (years > 0) {
+"91
+[e $ ! > -> _years `i -> 0 `i 1467  ]
+{
+[; ;heartbeat_timer.c: 93: if (years == 1) {
+"93
+[e $ ! == -> _years `i -> 1 `i 1468  ]
+{
+[; ;heartbeat_timer.c: 95: sprintf(buff, "%d year, ", years);
 "95
-[e ( _strcat (2 , &U F10301 -> &U _buff `*Cuc ]
+[e ( _sprintf (1 , (. , &U _buff :s 1C -> _years `i ]
 "97
 }
-[e :U 1462 ]
 [; ;heartbeat_timer.c: 97: }
-[; ;heartbeat_timer.c: 99: if (days > 0) {
+[e $U 1469  ]
 "99
-[e $ ! > -> _days `i -> 0 `i 1465  ]
+[e :U 1468 ]
+[; ;heartbeat_timer.c: 99: else {
 {
-[; ;heartbeat_timer.c: 101: if (days == 1) {
+[; ;heartbeat_timer.c: 101: sprintf(buff, "%d years, ", years);
 "101
-[e $ ! == -> _days `i -> 1 `i 1466  ]
-{
-[; ;heartbeat_timer.c: 103: sprintf(buff, "%d day, ", days);
+[e ( _sprintf (1 , (. , &U _buff :s 2C -> _years `i ]
 "103
-[e ( _sprintf (1 , (. , &U _buff :s 3C -> _days `i ]
-"105
 }
-[; ;heartbeat_timer.c: 105: }
-[e $U 1467  ]
+[e :U 1469 ]
+[; ;heartbeat_timer.c: 103: }
+[; ;heartbeat_timer.c: 105: strcat(return_string, buff);
+"105
+[e ( _strcat (2 , &U F10380 -> &U _buff `*Cuc ]
 "107
-[e :U 1466 ]
-[; ;heartbeat_timer.c: 107: else {
-{
-[; ;heartbeat_timer.c: 109: sprintf(buff, "%d days, ", days);
-"109
-[e ( _sprintf (1 , (. , &U _buff :s 4C -> _days `i ]
-"111
 }
 [e :U 1467 ]
-[; ;heartbeat_timer.c: 111: }
-[; ;heartbeat_timer.c: 113: strcat(return_string, buff);
+[; ;heartbeat_timer.c: 107: }
+[; ;heartbeat_timer.c: 109: if (days > 0) {
+"109
+[e $ ! > -> _days `i -> 0 `i 1470  ]
+{
+[; ;heartbeat_timer.c: 111: if (days == 1) {
+"111
+[e $ ! == -> _days `i -> 1 `i 1471  ]
+{
+[; ;heartbeat_timer.c: 113: sprintf(buff, "%d day, ", days);
 "113
-[e ( _strcat (2 , &U F10301 -> &U _buff `*Cuc ]
-"114
+[e ( _sprintf (1 , (. , &U _buff :s 3C -> _days `i ]
+"115
 }
-[e :U 1465 ]
-[; ;heartbeat_timer.c: 114: }
-[; ;heartbeat_timer.c: 116: if (hours > 0) {
-"116
-[e $ ! > -> _hours `i -> 0 `i 1468  ]
+[; ;heartbeat_timer.c: 115: }
+[e $U 1472  ]
+"117
+[e :U 1471 ]
+[; ;heartbeat_timer.c: 117: else {
 {
-[; ;heartbeat_timer.c: 118: if (hours == 1) {
-"118
-[e $ ! == -> _hours `i -> 1 `i 1469  ]
-{
-[; ;heartbeat_timer.c: 120: sprintf(buff, "%d hour, ", hours);
-"120
-[e ( _sprintf (1 , (. , &U _buff :s 5C -> _hours `i ]
-"122
+[; ;heartbeat_timer.c: 119: sprintf(buff, "%d days, ", days);
+"119
+[e ( _sprintf (1 , (. , &U _buff :s 4C -> _days `i ]
+"121
 }
-[; ;heartbeat_timer.c: 122: }
-[e $U 1470  ]
+[e :U 1472 ]
+[; ;heartbeat_timer.c: 121: }
+[; ;heartbeat_timer.c: 123: strcat(return_string, buff);
+"123
+[e ( _strcat (2 , &U F10380 -> &U _buff `*Cuc ]
 "124
-[e :U 1469 ]
-[; ;heartbeat_timer.c: 124: else {
-{
-[; ;heartbeat_timer.c: 126: sprintf(buff, "%d hours, ", hours);
-"126
-[e ( _sprintf (1 , (. , &U _buff :s 6C -> _hours `i ]
-"128
 }
 [e :U 1470 ]
-[; ;heartbeat_timer.c: 128: }
-[; ;heartbeat_timer.c: 130: strcat(return_string, buff);
+[; ;heartbeat_timer.c: 124: }
+[; ;heartbeat_timer.c: 126: if (hours > 0) {
+"126
+[e $ ! > -> _hours `i -> 0 `i 1473  ]
+{
+[; ;heartbeat_timer.c: 128: if (hours == 1) {
+"128
+[e $ ! == -> _hours `i -> 1 `i 1474  ]
+{
+[; ;heartbeat_timer.c: 130: sprintf(buff, "%d hour, ", hours);
 "130
-[e ( _strcat (2 , &U F10301 -> &U _buff `*Cuc ]
+[e ( _sprintf (1 , (. , &U _buff :s 5C -> _hours `i ]
 "132
 }
-[e :U 1468 ]
 [; ;heartbeat_timer.c: 132: }
-[; ;heartbeat_timer.c: 134: if (minutes > 0) {
+[e $U 1475  ]
 "134
-[e $ ! > -> _minutes `i -> 0 `i 1471  ]
+[e :U 1474 ]
+[; ;heartbeat_timer.c: 134: else {
 {
-[; ;heartbeat_timer.c: 136: if (minutes == 1) {
+[; ;heartbeat_timer.c: 136: sprintf(buff, "%d hours, ", hours);
 "136
-[e $ ! == -> _minutes `i -> 1 `i 1472  ]
-{
-[; ;heartbeat_timer.c: 138: sprintf(buff, "%d minute, ", minutes);
+[e ( _sprintf (1 , (. , &U _buff :s 6C -> _hours `i ]
 "138
-[e ( _sprintf (1 , (. , &U _buff :s 7C -> _minutes `i ]
-"140
 }
-[; ;heartbeat_timer.c: 140: }
-[e $U 1473  ]
+[e :U 1475 ]
+[; ;heartbeat_timer.c: 138: }
+[; ;heartbeat_timer.c: 140: strcat(return_string, buff);
+"140
+[e ( _strcat (2 , &U F10380 -> &U _buff `*Cuc ]
 "142
-[e :U 1472 ]
-[; ;heartbeat_timer.c: 142: else {
-{
-[; ;heartbeat_timer.c: 144: sprintf(buff, "%d minutes, ", minutes);
-"144
-[e ( _sprintf (1 , (. , &U _buff :s 8C -> _minutes `i ]
-"146
 }
 [e :U 1473 ]
-[; ;heartbeat_timer.c: 146: }
-[; ;heartbeat_timer.c: 148: strcat(return_string, buff);
+[; ;heartbeat_timer.c: 142: }
+[; ;heartbeat_timer.c: 144: if (minutes > 0) {
+"144
+[e $ ! > -> _minutes `i -> 0 `i 1476  ]
+{
+[; ;heartbeat_timer.c: 146: if (minutes == 1) {
+"146
+[e $ ! == -> _minutes `i -> 1 `i 1477  ]
+{
+[; ;heartbeat_timer.c: 148: sprintf(buff, "%d minute, ", minutes);
 "148
-[e ( _strcat (2 , &U F10301 -> &U _buff `*Cuc ]
+[e ( _sprintf (1 , (. , &U _buff :s 7C -> _minutes `i ]
 "150
 }
-[e :U 1471 ]
 [; ;heartbeat_timer.c: 150: }
-[; ;heartbeat_timer.c: 152: if (seconds > 0) {
+[e $U 1478  ]
 "152
-[e $ ! > -> _seconds `i -> 0 `i 1474  ]
+[e :U 1477 ]
+[; ;heartbeat_timer.c: 152: else {
 {
-[; ;heartbeat_timer.c: 154: if (seconds == 1) {
+[; ;heartbeat_timer.c: 154: sprintf(buff, "%d minutes, ", minutes);
 "154
-[e $ ! == -> _seconds `i -> 1 `i 1475  ]
-{
-[; ;heartbeat_timer.c: 156: sprintf(buff, "%d second", seconds);
+[e ( _sprintf (1 , (. , &U _buff :s 8C -> _minutes `i ]
 "156
-[e ( _sprintf (1 , (. , &U _buff :s 9C -> _seconds `i ]
-"158
 }
-[; ;heartbeat_timer.c: 158: }
-[e $U 1476  ]
+[e :U 1478 ]
+[; ;heartbeat_timer.c: 156: }
+[; ;heartbeat_timer.c: 158: strcat(return_string, buff);
+"158
+[e ( _strcat (2 , &U F10380 -> &U _buff `*Cuc ]
 "160
-[e :U 1475 ]
-[; ;heartbeat_timer.c: 160: else {
-{
-[; ;heartbeat_timer.c: 162: sprintf(buff, "%d seconds", seconds);
-"162
-[e ( _sprintf (1 , (. , &U _buff :s 10C -> _seconds `i ]
-"164
 }
 [e :U 1476 ]
-[; ;heartbeat_timer.c: 164: }
-[; ;heartbeat_timer.c: 166: strcat(return_string, buff);
+[; ;heartbeat_timer.c: 160: }
+[; ;heartbeat_timer.c: 162: if (seconds > 0) {
+"162
+[e $ ! > -> _seconds `i -> 0 `i 1479  ]
+{
+[; ;heartbeat_timer.c: 164: if (seconds == 1) {
+"164
+[e $ ! == -> _seconds `i -> 1 `i 1480  ]
+{
+[; ;heartbeat_timer.c: 166: sprintf(buff, "%d second", seconds);
 "166
-[e ( _strcat (2 , &U F10301 -> &U _buff `*Cuc ]
+[e ( _sprintf (1 , (. , &U _buff :s 9C -> _seconds `i ]
 "168
 }
-[e :U 1474 ]
 [; ;heartbeat_timer.c: 168: }
-[; ;heartbeat_timer.c: 170: return return_string;
+[e $U 1481  ]
 "170
-[e ) &U F10301 ]
-[e $UE 1457  ]
-[; ;heartbeat_timer.c: 172: }
+[e :U 1480 ]
+[; ;heartbeat_timer.c: 170: else {
+{
+[; ;heartbeat_timer.c: 172: sprintf(buff, "%d seconds", seconds);
 "172
-[e :UE 1457 ]
+[e ( _sprintf (1 , (. , &U _buff :s 10C -> _seconds `i ]
+"174
 }
-"175
+[e :U 1481 ]
+[; ;heartbeat_timer.c: 174: }
+[; ;heartbeat_timer.c: 176: strcat(return_string, buff);
+"176
+[e ( _strcat (2 , &U F10380 -> &U _buff `*Cuc ]
+"178
+}
+[e :U 1479 ]
+[; ;heartbeat_timer.c: 178: }
+[; ;heartbeat_timer.c: 180: return return_string;
+"180
+[e ) &U F10380 ]
+[e $UE 1462  ]
+[; ;heartbeat_timer.c: 182: }
+"182
+[e :UE 1462 ]
+}
+"185
 [v _getYearsFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
 {
-[; ;heartbeat_timer.c: 175: uint8_t getYearsFromOnTime(uint32_t input_seconds) {
+[; ;heartbeat_timer.c: 185: uint8_t getYearsFromOnTime(uint32_t input_seconds) {
 [e :U _getYearsFromOnTime ]
 [v _input_seconds `ul ~T0 @X0 1 r1 ]
 [f ]
-"177
-[v _years `uc ~T0 @X0 1 a ]
-[; ;heartbeat_timer.c: 177: uint8_t years;
-[; ;heartbeat_timer.c: 178: return years = input_seconds / (60 * 60 * 24 * 365);
-"178
-[e ) = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
-[e $UE 1477  ]
-[; ;heartbeat_timer.c: 180: }
-"180
-[e :UE 1477 ]
-}
-"183
-[v _getDaysFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
-{
-[; ;heartbeat_timer.c: 183: uint8_t getDaysFromOnTime(uint32_t input_seconds) {
-[e :U _getDaysFromOnTime ]
-[v _input_seconds `ul ~T0 @X0 1 r1 ]
-[f ]
-"185
-[v _years `uc ~T0 @X0 1 a ]
-[v _days `uc ~T0 @X0 1 a ]
-[; ;heartbeat_timer.c: 185: uint8_t years, days;
-[; ;heartbeat_timer.c: 186: years = input_seconds / (60 * 60 * 24 * 365);
-"186
-[e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 187: input_seconds -= years * (60 * 60 * 24 * 365);
 "187
-[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
-[; ;heartbeat_timer.c: 188: return days = input_seconds / (60 * 60 * 24);
+[v _years `uc ~T0 @X0 1 a ]
+[; ;heartbeat_timer.c: 187: uint8_t years;
+[; ;heartbeat_timer.c: 188: return years = input_seconds / (60 * 60 * 24 * 365);
 "188
-[e ) = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
-[e $UE 1478  ]
+[e ) = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
+[e $UE 1482  ]
 [; ;heartbeat_timer.c: 190: }
 "190
-[e :UE 1478 ]
+[e :UE 1482 ]
 }
 "193
-[v _getHoursFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
+[v _getDaysFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
 {
-[; ;heartbeat_timer.c: 193: uint8_t getHoursFromOnTime(uint32_t input_seconds) {
-[e :U _getHoursFromOnTime ]
+[; ;heartbeat_timer.c: 193: uint8_t getDaysFromOnTime(uint32_t input_seconds) {
+[e :U _getDaysFromOnTime ]
 [v _input_seconds `ul ~T0 @X0 1 r1 ]
 [f ]
 "195
 [v _years `uc ~T0 @X0 1 a ]
 [v _days `uc ~T0 @X0 1 a ]
-[v _hours `uc ~T0 @X0 1 a ]
-[; ;heartbeat_timer.c: 195: uint8_t years, days, hours;
+[; ;heartbeat_timer.c: 195: uint8_t years, days;
 [; ;heartbeat_timer.c: 196: years = input_seconds / (60 * 60 * 24 * 365);
 "196
 [e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
 [; ;heartbeat_timer.c: 197: input_seconds -= years * (60 * 60 * 24 * 365);
 "197
 [e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
-[; ;heartbeat_timer.c: 198: days = input_seconds / (60 * 60 * 24);
+[; ;heartbeat_timer.c: 198: return days = input_seconds / (60 * 60 * 24);
 "198
-[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 199: input_seconds -= days * (60 * 60 * 24);
-"199
-[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
-[; ;heartbeat_timer.c: 200: return hours = input_seconds / (60 * 60);
+[e ) = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
+[e $UE 1483  ]
+[; ;heartbeat_timer.c: 200: }
 "200
-[e ) = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
-[e $UE 1479  ]
-[; ;heartbeat_timer.c: 202: }
-"202
-[e :UE 1479 ]
+[e :UE 1483 ]
 }
+"203
+[v _getHoursFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
+{
+[; ;heartbeat_timer.c: 203: uint8_t getHoursFromOnTime(uint32_t input_seconds) {
+[e :U _getHoursFromOnTime ]
+[v _input_seconds `ul ~T0 @X0 1 r1 ]
+[f ]
 "205
+[v _years `uc ~T0 @X0 1 a ]
+[v _days `uc ~T0 @X0 1 a ]
+[v _hours `uc ~T0 @X0 1 a ]
+[; ;heartbeat_timer.c: 205: uint8_t years, days, hours;
+[; ;heartbeat_timer.c: 206: years = input_seconds / (60 * 60 * 24 * 365);
+"206
+[e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 207: input_seconds -= years * (60 * 60 * 24 * 365);
+"207
+[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
+[; ;heartbeat_timer.c: 208: days = input_seconds / (60 * 60 * 24);
+"208
+[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 209: input_seconds -= days * (60 * 60 * 24);
+"209
+[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
+[; ;heartbeat_timer.c: 210: return hours = input_seconds / (60 * 60);
+"210
+[e ) = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
+[e $UE 1484  ]
+[; ;heartbeat_timer.c: 212: }
+"212
+[e :UE 1484 ]
+}
+"215
 [v _getMinutesFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
 {
-[; ;heartbeat_timer.c: 205: uint8_t getMinutesFromOnTime(uint32_t input_seconds) {
+[; ;heartbeat_timer.c: 215: uint8_t getMinutesFromOnTime(uint32_t input_seconds) {
 [e :U _getMinutesFromOnTime ]
 [v _input_seconds `ul ~T0 @X0 1 r1 ]
 [f ]
-"207
+"217
 [v _years `uc ~T0 @X0 1 a ]
 [v _days `uc ~T0 @X0 1 a ]
 [v _hours `uc ~T0 @X0 1 a ]
 [v _minutes `uc ~T0 @X0 1 a ]
-[; ;heartbeat_timer.c: 207: uint8_t years, days, hours, minutes;
-[; ;heartbeat_timer.c: 208: years = input_seconds / (60 * 60 * 24 * 365);
-"208
+[; ;heartbeat_timer.c: 217: uint8_t years, days, hours, minutes;
+[; ;heartbeat_timer.c: 218: years = input_seconds / (60 * 60 * 24 * 365);
+"218
 [e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 209: input_seconds -= years * (60 * 60 * 24 * 365);
-"209
-[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
-[; ;heartbeat_timer.c: 210: days = input_seconds / (60 * 60 * 24);
-"210
-[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 211: input_seconds -= days * (60 * 60 * 24);
-"211
-[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
-[; ;heartbeat_timer.c: 212: hours = input_seconds / (60 * 60);
-"212
-[e = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 213: input_seconds -= hours * (60 * 60);
-"213
-[e =- _input_seconds -> -> * -> _hours `i * -> 60 `i -> 60 `i `l `ul ]
-[; ;heartbeat_timer.c: 214: return minutes = input_seconds / 60;
-"214
-[e ) = _minutes -> / _input_seconds -> -> -> 60 `i `l `ul `uc ]
-[e $UE 1480  ]
-[; ;heartbeat_timer.c: 216: }
-"216
-[e :UE 1480 ]
-}
+[; ;heartbeat_timer.c: 219: input_seconds -= years * (60 * 60 * 24 * 365);
 "219
+[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
+[; ;heartbeat_timer.c: 220: days = input_seconds / (60 * 60 * 24);
+"220
+[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 221: input_seconds -= days * (60 * 60 * 24);
+"221
+[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
+[; ;heartbeat_timer.c: 222: hours = input_seconds / (60 * 60);
+"222
+[e = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 223: input_seconds -= hours * (60 * 60);
+"223
+[e =- _input_seconds -> -> * -> _hours `i * -> 60 `i -> 60 `i `l `ul ]
+[; ;heartbeat_timer.c: 224: return minutes = input_seconds / 60;
+"224
+[e ) = _minutes -> / _input_seconds -> -> -> 60 `i `l `ul `uc ]
+[e $UE 1485  ]
+[; ;heartbeat_timer.c: 226: }
+"226
+[e :UE 1485 ]
+}
+"229
 [v _getSecondsFromOnTime `(uc ~T0 @X0 1 ef1`ul ]
 {
-[; ;heartbeat_timer.c: 219: uint8_t getSecondsFromOnTime(uint32_t input_seconds) {
+[; ;heartbeat_timer.c: 229: uint8_t getSecondsFromOnTime(uint32_t input_seconds) {
 [e :U _getSecondsFromOnTime ]
 [v _input_seconds `ul ~T0 @X0 1 r1 ]
 [f ]
-"221
+"231
 [v _years `uc ~T0 @X0 1 a ]
 [v _days `uc ~T0 @X0 1 a ]
 [v _hours `uc ~T0 @X0 1 a ]
 [v _minutes `uc ~T0 @X0 1 a ]
 [v _seconds `uc ~T0 @X0 1 a ]
-[; ;heartbeat_timer.c: 221: uint8_t years, days, hours, minutes, seconds;
-[; ;heartbeat_timer.c: 222: years = input_seconds / (60 * 60 * 24 * 365);
-"222
-[e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 223: input_seconds -= years * (60 * 60 * 24 * 365);
-"223
-[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
-[; ;heartbeat_timer.c: 224: days = input_seconds / (60 * 60 * 24);
-"224
-[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 225: input_seconds -= days * (60 * 60 * 24);
-"225
-[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
-[; ;heartbeat_timer.c: 226: hours = input_seconds / (60 * 60);
-"226
-[e = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 227: input_seconds -= hours * (60 * 60);
-"227
-[e =- _input_seconds -> -> * -> _hours `i * -> 60 `i -> 60 `i `l `ul ]
-[; ;heartbeat_timer.c: 228: minutes = input_seconds / 60;
-"228
-[e = _minutes -> / _input_seconds -> -> -> 60 `i `l `ul `uc ]
-[; ;heartbeat_timer.c: 229: input_seconds -= minutes * 60;
-"229
-[e =- _input_seconds -> -> * -> _minutes `i -> 60 `i `l `ul ]
-[; ;heartbeat_timer.c: 230: return seconds = input_seconds;
-"230
-[e ) = _seconds -> _input_seconds `uc ]
-[e $UE 1481  ]
-[; ;heartbeat_timer.c: 232: }
+[; ;heartbeat_timer.c: 231: uint8_t years, days, hours, minutes, seconds;
+[; ;heartbeat_timer.c: 232: years = input_seconds / (60 * 60 * 24 * 365);
 "232
-[e :UE 1481 ]
+[e = _years -> / _input_seconds -> -> * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 233: input_seconds -= years * (60 * 60 * 24 * 365);
+"233
+[e =- _input_seconds -> -> * -> _years `i * * * -> 60 `i -> 60 `i -> 24 `i -> 365 `i `l `ul ]
+[; ;heartbeat_timer.c: 234: days = input_seconds / (60 * 60 * 24);
+"234
+[e = _days -> / _input_seconds -> -> * * -> 60 `i -> 60 `i -> 24 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 235: input_seconds -= days * (60 * 60 * 24);
+"235
+[e =- _input_seconds -> -> * -> _days `i * * -> 60 `i -> 60 `i -> 24 `i `l `ul ]
+[; ;heartbeat_timer.c: 236: hours = input_seconds / (60 * 60);
+"236
+[e = _hours -> / _input_seconds -> -> * -> 60 `i -> 60 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 237: input_seconds -= hours * (60 * 60);
+"237
+[e =- _input_seconds -> -> * -> _hours `i * -> 60 `i -> 60 `i `l `ul ]
+[; ;heartbeat_timer.c: 238: minutes = input_seconds / 60;
+"238
+[e = _minutes -> / _input_seconds -> -> -> 60 `i `l `ul `uc ]
+[; ;heartbeat_timer.c: 239: input_seconds -= minutes * 60;
+"239
+[e =- _input_seconds -> -> * -> _minutes `i -> 60 `i `l `ul ]
+[; ;heartbeat_timer.c: 240: return seconds = input_seconds;
+"240
+[e ) = _seconds -> _input_seconds `uc ]
+[e $UE 1486  ]
+[; ;heartbeat_timer.c: 242: }
+"242
+[e :UE 1486 ]
 }
 [p f _sprintf 8388736 ]
 [a 10C 37 100 32 115 101 99 111 110 100 115 0 ]
