@@ -35,11 +35,11 @@ void heartbeatTimerHandler(void) {
     else QI_charge_time = 0;
     
     // Increment output charge from QI current
-    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result * 0.5;
     else adc_calculations.output_charge = 0.0;
     
     // Increment output energy from output power
-    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
+    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power * 0,5;
     else adc_calculations.output_energy = 0.0;
     
     // Kick the dog
