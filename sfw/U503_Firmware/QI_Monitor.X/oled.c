@@ -721,8 +721,8 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "Estimated Load:");
-            strcpy(OLED_RAM_Buffer.line1, "Consumed Charge:");
+            strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
+            strcpy(OLED_RAM_Buffer.line1, "Charge Consumed:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line2, "%sC", floatToEngineeringFormat(adc_calculations.output_charge));
             sprintf(OLED_RAM_Buffer.line3, "Max: %sC", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
@@ -737,8 +737,8 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "Estimated Load:");
-            strcpy(OLED_RAM_Buffer.line1, "Consumed Energy:");
+            strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
+            strcpy(OLED_RAM_Buffer.line1, "Energy Consumed:");
             if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
             else sprintf(OLED_RAM_Buffer.line2, "%sJ", floatToEngineeringFormat(adc_calculations.output_energy));
             sprintf(OLED_RAM_Buffer.line3, "Max: %sJ", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
@@ -753,8 +753,8 @@ void OLED_updateHandler(void) {
             
             OLED_update_flag = false;
             
-            strcpy(OLED_RAM_Buffer.line0, "Cause of MCU");
-            strcpy(OLED_RAM_Buffer.line1, "Reset:");
+            strcpy(OLED_RAM_Buffer.line0, "Cause of last");
+            strcpy(OLED_RAM_Buffer.line1, "MCU Reset:");
             strcpy(OLED_RAM_Buffer.line2, " ");
             strcpy(OLED_RAM_Buffer.line3, getCauseOfResetStringSmall(reset_cause));
             

@@ -11432,20 +11432,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;heartbeat_timer.c: 35: else QI_charge_time = 0;
 [e = _QI_charge_time -> -> -> 0 `i `l `ul ]
 [e :U 1454 ]
-[; ;heartbeat_timer.c: 38: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+[; ;heartbeat_timer.c: 38: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result * 0.5;
 "38
 [e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1455  ]
-[e =+ . _adc_calculations 3 . _adc_results 5 ]
+[e =+ . _adc_calculations 3 -> * -> . _adc_results 5 `d .0.5 `f ]
 [e $U 1456  ]
 "39
 [e :U 1455 ]
 [; ;heartbeat_timer.c: 39: else adc_calculations.output_charge = 0.0;
 [e = . _adc_calculations 3 -> .0.0 `f ]
 [e :U 1456 ]
-[; ;heartbeat_timer.c: 42: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
+[; ;heartbeat_timer.c: 42: if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power * 0.5;
 "42
 [e $ ! || == -> _nxq_charge_state `i -> . `E9632 1 `i == -> _nxq_charge_state `i -> . `E9632 2 `i 1457  ]
-[e =+ . _adc_calculations 4 . _adc_calculations 1 ]
+[e =+ . _adc_calculations 4 -> * -> . _adc_calculations 1 `d .0.5 `f ]
 [e $U 1458  ]
 "43
 [e :U 1457 ]

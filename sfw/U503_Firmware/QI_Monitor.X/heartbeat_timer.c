@@ -39,7 +39,7 @@ void heartbeatTimerHandler(void) {
     else adc_calculations.output_charge = 0.0;
     
     // Increment output energy from output power
-    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power * 0,5;
+    if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power * 0.5;
     else adc_calculations.output_energy = 0.0;
     
     // Kick the dog

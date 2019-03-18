@@ -17367,11 +17367,11 @@ if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) QI_
 else QI_charge_time = 0;
 
 
-if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result;
+if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_charge += adc_results.qi_isns_adc_result * 0.5;
 else adc_calculations.output_charge = 0.0;
 
 
-if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power;
+if (nxq_charge_state == QI_Charging || nxq_charge_state == QI_Fully_Charged) adc_calculations.output_energy += adc_calculations.output_power * 0.5;
 else adc_calculations.output_energy = 0.0;
 
 

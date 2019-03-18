@@ -17803,11 +17803,11 @@ terminalTextAttributes(CYAN, BLACK, BOLD);
 if (QI_charge_time > 0) printf("    System Efficiency calculated as %.3f %%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
 else printf("    No load present, system efficiency is 0.0 %%\033[K\n\r\n\r");
 
-if (QI_charge_time > 0) printf("    Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
-else printf("    No load present, previously recorded maximum energy consumed by a load is %sJoules\033[K\n\r\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
+if (QI_charge_time > 0) printf("    Estimated energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
+else printf("    No load present, no energy consumed\033[K\n\r\n\r");
 
-if (QI_charge_time > 0) printf("    Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
-else printf("    No load present, previously recorded maximum charge consumed by a load is %sCoulombs\033[K\n\r\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
+if (QI_charge_time > 0) printf("    Estimated charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
+else printf("    No load present, no charge consumed\033[K\n\r\n\r");
 
 printf("    System Switching Frequencies:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -17859,8 +17859,8 @@ printf("        Maximum Wireless Output Power calculated as %+.3f Watts\033[K\n\
 terminalTextAttributes(CYAN, BLACK, BOLD);
 printf("    Maximum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Max_Result);
 
-printf("    Maximum Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
-printf("    Maximum Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
+printf("    Maximum Estimated Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
+printf("    Maximum Estimated Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
 
 printf("    Maximum System Switching Frequencies:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);

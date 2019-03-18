@@ -1,0 +1,33 @@
+ build/default/production/main.d  \
+ build/default/production/main.p1:  \
+ main.c  \
+double_to_EEPROM.h  \
+mcc_generated_files/fvr.h  \
+freq_meas.h  \
+cap_touch_int.h  \
+pin_macros.h  \
+mcc_generated_files/mcc.h  \
+LM73_I2C.h  \
+mcc_generated_files/eusart2.h  \
+error_handling.h  \
+mcc_generated_files/device_config.h  \
+mcc_generated_files/memory.h  \
+mcc_generated_files/ext_int.h  \
+oled.h  \
+mcc_generated_files/ccp2.h  \
+adc_postprocessing.h  \
+mcc_generated_files/i2c2.h  \
+heartbeat_timer.h  \
+terminal_control.h  \
+NXQ_charge_state.h  \
+mcc_generated_files/interrupt_manager.h  \
+mcc_generated_files/tmr0.h  \
+mcc_generated_files/tmr1.h  \
+mcc_generated_files/tmr2.h  \
+mcc_generated_files/tmr3.h  \
+mcc_generated_files/tmr5.h  \
+mcc_generated_files/pin_manager.h  \
+ring_buffer_interface.h  \
+cause_of_reset.h  \
+ring_buffer_LUT.h  \
+mcc_generated_files/adcc.h 

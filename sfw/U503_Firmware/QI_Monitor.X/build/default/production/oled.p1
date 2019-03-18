@@ -13943,25 +13943,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 722: OLED_update_flag = 0;
 "722
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 724: strcpy(OLED_RAM_Buffer.line0, "Output Charge:");
+[; ;oled.c: 724: strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
 "724
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 106C ]
-[; ;oled.c: 725: if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
+[; ;oled.c: 725: strcpy(OLED_RAM_Buffer.line1, "Charge Consumed:");
 "725
-[e $ ! == _QI_charge_time -> -> -> 0 `i `l `ul 1542  ]
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 107C ]
-[e $U 1543  ]
+[; ;oled.c: 726: if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
 "726
-[e :U 1542 ]
-[; ;oled.c: 726: else sprintf(OLED_RAM_Buffer.line1, "%sC", floatToEngineeringFormat(adc_calculations.output_charge));
-[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 1 :s 108C -> ( _floatToEngineeringFormat (1 . _adc_calculations 3 `*Cuc ]
-[e :U 1543 ]
-[; ;oled.c: 727: sprintf(OLED_RAM_Buffer.line2, "Max: %sC", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
+[e $ ! == _QI_charge_time -> -> -> 0 `i `l `ul 1542  ]
+[e ( _strcpy (2 , &U . _OLED_RAM_Buffer 2 :s 108C ]
+[e $U 1543  ]
 "727
-[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 2 :s 109C -> ( _floatToEngineeringFormat (1 . _eeprom_ram_aliases 15 `*Cuc ]
-[; ;oled.c: 728: strcpy(OLED_RAM_Buffer.line3, " ");
+[e :U 1542 ]
+[; ;oled.c: 727: else sprintf(OLED_RAM_Buffer.line2, "%sC", floatToEngineeringFormat(adc_calculations.output_charge));
+[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 2 :s 109C -> ( _floatToEngineeringFormat (1 . _adc_calculations 3 `*Cuc ]
+[e :U 1543 ]
+[; ;oled.c: 728: sprintf(OLED_RAM_Buffer.line3, "Max: %sC", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
 "728
-[e ( _strcpy (2 , &U . _OLED_RAM_Buffer 3 :s 110C ]
+[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 3 :s 110C -> ( _floatToEngineeringFormat (1 . _eeprom_ram_aliases 15 `*Cuc ]
 [; ;oled.c: 730: OLED_UpdateFromRAMBuffer();
 "730
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
@@ -13980,25 +13980,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 738: OLED_update_flag = 0;
 "738
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 740: strcpy(OLED_RAM_Buffer.line0, "Output Energy:");
+[; ;oled.c: 740: strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
 "740
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 111C ]
-[; ;oled.c: 741: if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line1, "Not Charging");
+[; ;oled.c: 741: strcpy(OLED_RAM_Buffer.line1, "Energy Consumed:");
 "741
-[e $ ! == _QI_charge_time -> -> -> 0 `i `l `ul 1545  ]
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 112C ]
-[e $U 1546  ]
+[; ;oled.c: 742: if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
 "742
-[e :U 1545 ]
-[; ;oled.c: 742: else sprintf(OLED_RAM_Buffer.line1, "%sJ", floatToEngineeringFormat(adc_calculations.output_energy));
-[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 1 :s 113C -> ( _floatToEngineeringFormat (1 . _adc_calculations 4 `*Cuc ]
-[e :U 1546 ]
-[; ;oled.c: 743: sprintf(OLED_RAM_Buffer.line2, "Max: %sJ", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
+[e $ ! == _QI_charge_time -> -> -> 0 `i `l `ul 1545  ]
+[e ( _strcpy (2 , &U . _OLED_RAM_Buffer 2 :s 113C ]
+[e $U 1546  ]
 "743
-[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 2 :s 114C -> ( _floatToEngineeringFormat (1 . _eeprom_ram_aliases 14 `*Cuc ]
-[; ;oled.c: 744: strcpy(OLED_RAM_Buffer.line3, " ");
+[e :U 1545 ]
+[; ;oled.c: 743: else sprintf(OLED_RAM_Buffer.line2, "%sJ", floatToEngineeringFormat(adc_calculations.output_energy));
+[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 2 :s 114C -> ( _floatToEngineeringFormat (1 . _adc_calculations 4 `*Cuc ]
+[e :U 1546 ]
+[; ;oled.c: 744: sprintf(OLED_RAM_Buffer.line3, "Max: %sJ", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
 "744
-[e ( _strcpy (2 , &U . _OLED_RAM_Buffer 3 :s 115C ]
+[e ( _sprintf (1 , (. , &U . _OLED_RAM_Buffer 3 :s 115C -> ( _floatToEngineeringFormat (1 . _eeprom_ram_aliases 14 `*Cuc ]
 [; ;oled.c: 746: OLED_UpdateFromRAMBuffer();
 "746
 [e ( _OLED_UpdateFromRAMBuffer ..  ]
@@ -14017,10 +14017,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 754: OLED_update_flag = 0;
 "754
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 756: strcpy(OLED_RAM_Buffer.line0, "Cause of MCU");
+[; ;oled.c: 756: strcpy(OLED_RAM_Buffer.line0, "Cause of last");
 "756
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 116C ]
-[; ;oled.c: 757: strcpy(OLED_RAM_Buffer.line1, "Reset:");
+[; ;oled.c: 757: strcpy(OLED_RAM_Buffer.line1, "MCU Reset:");
 "757
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 117C ]
 [; ;oled.c: 758: strcpy(OLED_RAM_Buffer.line2, " ");
@@ -14201,6 +14201,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 125C 56 98 105 116 44 32 110 111 32 112 97 114 105 116 121 0 ]
 [a 13C 49 32 115 116 112 44 32 110 111 32 102 108 111 119 0 ]
 [a 126C 49 32 115 116 112 44 32 110 111 32 102 108 111 119 0 ]
+[a 116C 67 97 117 115 101 32 111 102 32 108 97 115 116 0 ]
 [a 79C 37 117 32 100 97 121 115 0 ]
 [a 81C 37 117 32 100 97 121 115 0 ]
 [a 80C 37 117 32 104 111 117 114 115 0 ]
@@ -14229,12 +14230,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 42C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
 [a 47C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
 [a 100C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
-[a 107C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
-[a 112C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
+[a 108C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
+[a 113C 78 111 116 32 67 104 97 114 103 105 110 103 0 ]
 [a 14C 66 111 111 116 32 67 111 109 112 108 101 116 101 0 ]
 [a 68C 66 117 114 115 116 32 77 111 100 101 0 ]
 [a 73C 66 117 114 115 116 32 77 111 100 101 0 ]
 [a 15C 81 73 32 69 110 97 98 108 101 100 0 ]
+[a 106C 69 115 116 105 109 97 116 101 100 32 76 111 97 100 0 ]
+[a 111C 69 115 116 105 109 97 116 101 100 32 76 111 97 100 0 ]
 [a 9C 37 99 37 48 51 100 0 ]
 [a 122C 37 99 37 48 51 100 0 ]
 [a 7C 48 120 37 88 0 ]
@@ -14250,11 +14253,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 28C 77 105 110 58 32 37 43 46 51 102 32 86 0 ]
 [a 22C 37 43 46 51 102 32 86 0 ]
 [a 26C 37 43 46 51 102 32 86 0 ]
-[a 116C 67 97 117 115 101 32 111 102 32 77 67 85 0 ]
-[a 114C 77 97 120 58 32 37 115 74 0 ]
-[a 113C 37 115 74 0 ]
-[a 109C 77 97 120 58 32 37 115 67 0 ]
-[a 108C 37 115 67 0 ]
+[a 115C 77 97 120 58 32 37 115 74 0 ]
+[a 114C 37 115 74 0 ]
+[a 110C 77 97 120 58 32 37 115 67 0 ]
+[a 109C 37 115 67 0 ]
 [a 53C 77 97 120 58 32 37 43 46 51 102 32 67 0 ]
 [a 57C 77 97 120 58 32 37 43 46 51 102 32 67 0 ]
 [a 61C 77 97 120 58 32 37 43 46 51 102 32 67 0 ]
@@ -14273,12 +14275,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 36C 77 105 110 58 32 37 43 46 51 102 32 65 0 ]
 [a 30C 37 43 46 51 102 32 65 0 ]
 [a 34C 37 43 46 51 102 32 65 0 ]
-[a 111C 79 117 116 112 117 116 32 69 110 101 114 103 121 58 0 ]
 [a 46C 69 102 102 105 99 105 101 110 99 121 58 0 ]
 [a 29C 43 49 50 86 32 67 117 114 114 101 110 116 58 0 ]
 [a 33C 81 73 32 67 117 114 114 101 110 116 58 0 ]
 [a 5C 67 97 117 115 101 32 111 102 32 82 101 115 101 116 58 0 ]
-[a 117C 82 101 115 101 116 58 0 ]
+[a 117C 77 67 85 32 82 101 115 101 116 58 0 ]
 [a 18C 67 104 97 114 103 101 32 83 116 97 116 117 115 58 0 ]
 [a 41C 79 117 116 112 117 116 32 80 111 119 101 114 58 0 ]
 [a 37C 73 110 112 117 116 32 80 111 119 101 114 58 0 ]
@@ -14292,9 +14293,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 51C 81 73 32 84 101 109 112 58 0 ]
 [a 77C 77 67 85 32 79 110 32 84 105 109 101 58 0 ]
 [a 93C 67 104 97 114 103 101 32 84 105 109 101 58 0 ]
-[a 106C 79 117 116 112 117 116 32 67 104 97 114 103 101 58 0 ]
 [a 25C 43 53 86 32 86 111 108 116 97 103 101 58 0 ]
 [a 21C 43 49 50 86 32 86 111 108 116 97 103 101 58 0 ]
+[a 112C 69 110 101 114 103 121 32 67 111 110 115 117 109 101 100 58 0 ]
+[a 107C 67 104 97 114 103 101 32 67 111 110 115 117 109 101 100 58 0 ]
 [a 121C 77 67 85 32 82 101 118 105 115 105 111 110 32 73 68 58 0 ]
 [a 8C 82 101 118 105 115 105 111 110 32 73 68 58 0 ]
 [a 119C 77 67 85 32 68 101 118 105 99 101 32 73 68 58 0 ]
@@ -14318,8 +14320,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 102C 32 0 ]
 [a 104C 32 0 ]
 [a 105C 32 0 ]
-[a 110C 32 0 ]
-[a 115C 32 0 ]
 [a 118C 32 0 ]
 [a 1C 0 ]
 [a 2C 0 ]
