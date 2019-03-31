@@ -13320,7 +13320,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 416: OLED_update_flag = 0;
 "416
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 418: strcpy(OLED_RAM_Buffer.line0, "+12V Voltage:");
+[; ;oled.c: 418: strcpy(OLED_RAM_Buffer.line0, "Input Voltage:");
 "418
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 21C ]
 [; ;oled.c: 419: sprintf(OLED_RAM_Buffer.line1, "%+.3f V", adc_results.pos12_adc_result);
@@ -13380,7 +13380,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 446: OLED_update_flag = 0;
 "446
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 448: strcpy(OLED_RAM_Buffer.line0, "+12V Current:");
+[; ;oled.c: 448: strcpy(OLED_RAM_Buffer.line0, "Input Current:");
 "448
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 29C ]
 [; ;oled.c: 449: sprintf(OLED_RAM_Buffer.line1, "%+.3f A", adc_results.pos12_isns_adc_result);
@@ -13574,7 +13574,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 538: OLED_update_flag = 0;
 "538
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 540: strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
+[; ;oled.c: 540: strcpy(OLED_RAM_Buffer.line0, "Buck Temp:");
 "540
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 55C ]
 [; ;oled.c: 541: sprintf(OLED_RAM_Buffer.line1, "%+.3f C", LM73_temp_results.POS5_temp_result);
@@ -13664,7 +13664,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 583: OLED_update_flag = 0;
 "583
 [e = _OLED_update_flag -> -> 0 `i `uc ]
-[; ;oled.c: 585: strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
+[; ;oled.c: 585: strcpy(OLED_RAM_Buffer.line0, "Buck Sw. Freq:");
 "585
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 67C ]
 [; ;oled.c: 586: if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
@@ -13946,7 +13946,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 724: strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
 "724
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 106C ]
-[; ;oled.c: 725: strcpy(OLED_RAM_Buffer.line1, "Charge Consumed:");
+[; ;oled.c: 725: strcpy(OLED_RAM_Buffer.line1, "Charge:");
 "725
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 107C ]
 [; ;oled.c: 726: if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
@@ -13983,7 +13983,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;oled.c: 740: strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
 "740
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 0 :s 111C ]
-[; ;oled.c: 741: strcpy(OLED_RAM_Buffer.line1, "Energy Consumed:");
+[; ;oled.c: 741: strcpy(OLED_RAM_Buffer.line1, "Energy:");
 "741
 [e ( _strcpy (2 , &U . _OLED_RAM_Buffer 1 :s 112C ]
 [; ;oled.c: 742: if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
@@ -14275,28 +14275,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 36C 77 105 110 58 32 37 43 46 51 102 32 65 0 ]
 [a 30C 37 43 46 51 102 32 65 0 ]
 [a 34C 37 43 46 51 102 32 65 0 ]
+[a 112C 69 110 101 114 103 121 58 0 ]
 [a 46C 69 102 102 105 99 105 101 110 99 121 58 0 ]
-[a 29C 43 49 50 86 32 67 117 114 114 101 110 116 58 0 ]
+[a 29C 73 110 112 117 116 32 67 117 114 114 101 110 116 58 0 ]
 [a 33C 81 73 32 67 117 114 114 101 110 116 58 0 ]
 [a 5C 67 97 117 115 101 32 111 102 32 82 101 115 101 116 58 0 ]
 [a 117C 77 67 85 32 82 101 115 101 116 58 0 ]
 [a 18C 67 104 97 114 103 101 32 83 116 97 116 117 115 58 0 ]
 [a 41C 79 117 116 112 117 116 32 80 111 119 101 114 58 0 ]
 [a 37C 73 110 112 117 116 32 80 111 119 101 114 58 0 ]
-[a 67C 43 53 86 32 83 119 46 32 70 114 101 113 58 0 ]
+[a 67C 66 117 99 107 32 83 119 46 32 70 114 101 113 58 0 ]
 [a 72C 81 73 32 83 119 46 32 70 114 101 113 58 0 ]
 [a 10C 67 79 77 32 80 111 114 116 32 83 101 116 117 112 58 0 ]
 [a 123C 67 79 77 32 80 111 114 116 32 83 101 116 117 112 58 0 ]
 [a 59C 65 109 98 105 101 110 116 32 84 101 109 112 58 0 ]
-[a 55C 43 53 86 32 84 101 109 112 58 0 ]
+[a 55C 66 117 99 107 32 84 101 109 112 58 0 ]
 [a 63C 77 67 85 32 84 101 109 112 58 0 ]
 [a 51C 81 73 32 84 101 109 112 58 0 ]
 [a 77C 77 67 85 32 79 110 32 84 105 109 101 58 0 ]
 [a 93C 67 104 97 114 103 101 32 84 105 109 101 58 0 ]
+[a 107C 67 104 97 114 103 101 58 0 ]
+[a 21C 73 110 112 117 116 32 86 111 108 116 97 103 101 58 0 ]
 [a 25C 43 53 86 32 86 111 108 116 97 103 101 58 0 ]
-[a 21C 43 49 50 86 32 86 111 108 116 97 103 101 58 0 ]
-[a 112C 69 110 101 114 103 121 32 67 111 110 115 117 109 101 100 58 0 ]
-[a 107C 67 104 97 114 103 101 32 67 111 110 115 117 109 101 100 58 0 ]
 [a 121C 77 67 85 32 82 101 118 105 115 105 111 110 32 73 68 58 0 ]
 [a 8C 82 101 118 105 115 105 111 110 32 73 68 58 0 ]
 [a 119C 77 67 85 32 68 101 118 105 99 101 32 73 68 58 0 ]

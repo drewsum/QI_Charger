@@ -17794,7 +17794,7 @@ case OLED_POS12_Voltage:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "+12V Voltage:");
+strcpy(OLED_RAM_Buffer.line0, "Input Voltage:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3f V", adc_results.pos12_adc_result);
 sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f V", eeprom_ram_aliases.POS12_Max_Result);
 sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f V", eeprom_ram_aliases.POS12_Min_Result);
@@ -17824,7 +17824,7 @@ case OLED_POS12_Current:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "+12V Current:");
+strcpy(OLED_RAM_Buffer.line0, "Input Current:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3f A", adc_results.pos12_isns_adc_result);
 sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f A", eeprom_ram_aliases.POS12_Current_Max_Result);
 sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f A", eeprom_ram_aliases.POS12_Current_Min_Result);
@@ -17916,7 +17916,7 @@ case OLED_POS5_Temp:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "+5V Temp:");
+strcpy(OLED_RAM_Buffer.line0, "Buck Temp:");
 sprintf(OLED_RAM_Buffer.line1, "%+.3f C", LM73_temp_results.POS5_temp_result);
 sprintf(OLED_RAM_Buffer.line2, "Max: %+.3f C", eeprom_ram_aliases.POS5_Temp_Max_Result);
 sprintf(OLED_RAM_Buffer.line3, "Min: %+.3f C", eeprom_ram_aliases.POS5_Temp_Min_Result);
@@ -17961,7 +17961,7 @@ case OLED_POS5_FSW:
 
 OLED_update_flag = 0;
 
-strcpy(OLED_RAM_Buffer.line0, "+5V Sw. Freq:");
+strcpy(OLED_RAM_Buffer.line0, "Buck Sw. Freq:");
 if (nxq_charge_state == QI_Idle || nxq_charge_state == QI_Error) strcpy(OLED_RAM_Buffer.line1, "Burst Mode");
 else strcpy(OLED_RAM_Buffer.line1, "+2.5 MHz");
 strcpy(OLED_RAM_Buffer.line2, " ");
@@ -18101,7 +18101,7 @@ case OLED_Load_Charge:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
-strcpy(OLED_RAM_Buffer.line1, "Charge Consumed:");
+strcpy(OLED_RAM_Buffer.line1, "Charge:");
 if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
 else sprintf(OLED_RAM_Buffer.line2, "%sC", floatToEngineeringFormat(adc_calculations.output_charge));
 sprintf(OLED_RAM_Buffer.line3, "Max: %sC", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
@@ -18117,7 +18117,7 @@ case OLED_Load_Energy:
 OLED_update_flag = 0;
 
 strcpy(OLED_RAM_Buffer.line0, "Estimated Load");
-strcpy(OLED_RAM_Buffer.line1, "Energy Consumed:");
+strcpy(OLED_RAM_Buffer.line1, "Energy:");
 if (QI_charge_time == 0) strcpy(OLED_RAM_Buffer.line2, "Not Charging");
 else sprintf(OLED_RAM_Buffer.line2, "%sJ", floatToEngineeringFormat(adc_calculations.output_energy));
 sprintf(OLED_RAM_Buffer.line3, "Max: %sJ", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
