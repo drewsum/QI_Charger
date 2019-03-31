@@ -262,8 +262,8 @@ text224 CODE 0 1EB12 1EB12 14 1
 text225 CODE 0 1ED12 1ED12 4 1
 text226 CODE 0 1EB26 1EB26 14 1
 bssBIGRAM BIGRAM 1 564 564 400 1
-mediumconst MEDIUMCONST 0 D792 D792 286E 1
-$C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+mediumconst MEDIUMCONST 0 D754 D754 28AC 1
+$C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 idloc IDLOC 0 200000 200000 10 1
 init CODE 0 A2 A2 4 1
 reset_vec CODE 0 0 0 4 1
@@ -283,16 +283,16 @@ BANK4 4FE-4FF 1
 BANK9 964-9FF 1
 CONST 4-7 1
 CONST E-17 1
-CONST A6-D791 1
+CONST A6-D753 1
 CONST 1E7CB-1E7CB 1
 CONST 1ED29-1FFFF 1
 STACK 964-E87 1
-SMALLCONST F00-D791 1
+SMALLCONST F00-D753 1
 SMALLCONST 1E7CB-1E7CB 1
 SMALLCONST 1ED29-1FFFF 1
 CODE 4-7 1
 CODE E-17 1
-CODE A6-D791 1
+CODE A6-D753 1
 CODE 1E7CB-1E7CB 1
 CODE 1ED29-1FFFF 1
 BANK10 A00-AFF 1
@@ -304,7 +304,7 @@ BIGRAM 1BE-1FF 1
 BIGRAM 4FE-4FF 1
 BIGRAM 964-E87 1
 EEDATA 310000-3103FF 1
-MEDIUMCONST F00-D791 1
+MEDIUMCONST F00-D753 1
 MEDIUMCONST 1E7CB-1E7CB 1
 MEDIUMCONST 1ED29-1FFFF 1
 # %LINETAB Section
@@ -4385,83 +4385,83 @@ $dist/default/production\QI_Monitor.X.production.o
 19A12 text0 CODE >234:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 19A16 text0 CODE >237:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
 19A1A text0 CODE >239:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\QI_Charger\sfw\U503_Firmware\QI_Monitor.X\main.c
-1CF9E cinit CODE >38214:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CF9E cinit CODE >38216:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CF9E cinit CODE >38219:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CF9E cinit CODE >38450:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFA0 cinit CODE >38451:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFA2 cinit CODE >38452:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFA4 cinit CODE >38453:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFA6 cinit CODE >38454:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFA8 cinit CODE >38455:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFAA cinit CODE >38456:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFAE cinit CODE >38457:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFB2 cinit CODE >38458:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFB2 cinit CODE >38459:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFB4 cinit CODE >38460:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFB8 cinit CODE >38461:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFBA cinit CODE >38462:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFBC cinit CODE >38463:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFBE cinit CODE >38467:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFC0 cinit CODE >38468:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFC2 cinit CODE >38469:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFC4 cinit CODE >38470:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFC6 cinit CODE >38471:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFC8 cinit CODE >38472:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFCA cinit CODE >38473:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFCC cinit CODE >38474:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFD0 cinit CODE >38478:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFD4 cinit CODE >38479:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFD8 cinit CODE >38480:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFD8 cinit CODE >38481:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFDA cinit CODE >38482:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFDC cinit CODE >38483:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFDE cinit CODE >38484:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFE0 cinit CODE >38485:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFE2 cinit CODE >38486:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFE4 cinit CODE >38489:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFE8 cinit CODE >38490:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFEA cinit CODE >38491:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFEA cinit CODE >38492:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFEC cinit CODE >38493:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFEE cinit CODE >38494:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFF0 cinit CODE >38497:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFF4 cinit CODE >38498:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFF6 cinit CODE >38499:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFF6 cinit CODE >38500:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFF8 cinit CODE >38501:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFFA cinit CODE >38502:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1CFFC cinit CODE >38505:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D000 cinit CODE >38506:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D002 cinit CODE >38507:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D002 cinit CODE >38508:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D004 cinit CODE >38509:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D006 cinit CODE >38510:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D008 cinit CODE >38513:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D00C cinit CODE >38514:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D00E cinit CODE >38515:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D00E cinit CODE >38516:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D010 cinit CODE >38517:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D012 cinit CODE >38518:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D014 cinit CODE >38521:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D018 cinit CODE >38522:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D01A cinit CODE >38523:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D01A cinit CODE >38524:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D01C cinit CODE >38525:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D01E cinit CODE >38526:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D020 cinit CODE >38529:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D022 cinit CODE >38530:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D024 cinit CODE >38533:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D028 cinit CODE >38534:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D02A cinit CODE >38535:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D02A cinit CODE >38536:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D02C cinit CODE >38537:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D02E cinit CODE >38538:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D030 cinit CODE >38544:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D030 cinit CODE >38546:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D032 cinit CODE >38547:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D034 cinit CODE >38548:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
-1D036 cinit CODE >38549:C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.
+1CF9E cinit CODE >38277:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CF9E cinit CODE >38279:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CF9E cinit CODE >38282:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CF9E cinit CODE >38513:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFA0 cinit CODE >38514:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFA2 cinit CODE >38515:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFA4 cinit CODE >38516:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFA6 cinit CODE >38517:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFA8 cinit CODE >38518:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFAA cinit CODE >38519:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFAE cinit CODE >38520:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFB2 cinit CODE >38521:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFB2 cinit CODE >38522:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFB4 cinit CODE >38523:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFB8 cinit CODE >38524:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFBA cinit CODE >38525:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFBC cinit CODE >38526:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFBE cinit CODE >38530:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFC0 cinit CODE >38531:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFC2 cinit CODE >38532:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFC4 cinit CODE >38533:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFC6 cinit CODE >38534:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFC8 cinit CODE >38535:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFCA cinit CODE >38536:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFCC cinit CODE >38537:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFD0 cinit CODE >38541:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFD4 cinit CODE >38542:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFD8 cinit CODE >38543:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFD8 cinit CODE >38544:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFDA cinit CODE >38545:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFDC cinit CODE >38546:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFDE cinit CODE >38547:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFE0 cinit CODE >38548:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFE2 cinit CODE >38549:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFE4 cinit CODE >38552:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFE8 cinit CODE >38553:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFEA cinit CODE >38554:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFEA cinit CODE >38555:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFEC cinit CODE >38556:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFEE cinit CODE >38557:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFF0 cinit CODE >38560:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFF4 cinit CODE >38561:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFF6 cinit CODE >38562:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFF6 cinit CODE >38563:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFF8 cinit CODE >38564:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFFA cinit CODE >38565:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1CFFC cinit CODE >38568:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D000 cinit CODE >38569:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D002 cinit CODE >38570:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D002 cinit CODE >38571:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D004 cinit CODE >38572:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D006 cinit CODE >38573:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D008 cinit CODE >38576:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D00C cinit CODE >38577:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D00E cinit CODE >38578:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D00E cinit CODE >38579:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D010 cinit CODE >38580:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D012 cinit CODE >38581:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D014 cinit CODE >38584:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D018 cinit CODE >38585:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D01A cinit CODE >38586:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D01A cinit CODE >38587:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D01C cinit CODE >38588:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D01E cinit CODE >38589:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D020 cinit CODE >38592:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D022 cinit CODE >38593:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D024 cinit CODE >38596:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D028 cinit CODE >38597:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D02A cinit CODE >38598:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D02A cinit CODE >38599:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D02C cinit CODE >38600:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D02E cinit CODE >38601:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D030 cinit CODE >38607:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D030 cinit CODE >38609:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D032 cinit CODE >38610:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D034 cinit CODE >38611:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
+1D036 cinit CODE >38612:C:\Users\DREWMA~1\AppData\Local\Temp\s8is.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -4484,7 +4484,7 @@ __size_of_TMR1_StopTimer 0 0 ABS 0 - dist/default/production\QI_Monitor.X.produc
 ___lwmod@counter 204 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 __LdataBANK1 0 0 ABS 0 dataBANK1 dist/default/production\QI_Monitor.X.production.o
 __LdataBANK2 0 0 ABS 0 dataBANK2 dist/default/production\QI_Monitor.X.production.o
-__Lmediumconst D792 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__Lmediumconst D754 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __end_of_EUSART2_SetRxInterruptHandler 1EC22 0 CODE 0 text70 dist/default/production\QI_Monitor.X.production.o
 __end_of_IOCBF3_SetInterruptHandler 1EBDC 0 CODE 0 text59 dist/default/production\QI_Monitor.X.production.o
 __end_of_getADCError 1EA94 0 CODE 0 text32 dist/default/production\QI_Monitor.X.production.o
@@ -4507,7 +4507,7 @@ strncpy@cp 206 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.produc
 strncpy@to 200 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\QI_Monitor.X.production.o
 _adc_result_scaling 172 0 BANK1 1 bssBANK1 dist/default/production\QI_Monitor.X.production.o
-__mediumconst D792 0 MEDIUMCONST 0 mediumconst C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+__mediumconst D754 0 MEDIUMCONST 0 mediumconst C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 __size_of_TMR1_Reload 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 getDaysFromOnTime@days 215 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 i1___fladd@a 112 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.production.o
@@ -4554,7 +4554,7 @@ _WPUA F10 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _WPUB F18 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _WPUC F20 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _WPUE F2D 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+___sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 _fabs 1E356 0 CODE 0 text218 dist/default/production\QI_Monitor.X.production.o
 _line 480 0 BANK4 1 bssBANK4 dist/default/production\QI_Monitor.X.production.o
 _main 1973E 0 CODE 0 text0 dist/default/production\QI_Monitor.X.production.o
@@ -4564,7 +4564,7 @@ btemp 5F 0 COMRAM 1 temp dist/default/production\QI_Monitor.X.production.o
 __end_of_FLASH_ReadByte 1EA32 0 CODE 0 text86 dist/default/production\QI_Monitor.X.production.o
 __end_of_FLASH_ReadWord 1E0AE 0 CODE 0 text85 dist/default/production\QI_Monitor.X.production.o
 __HbssBIGRAM 0 0 ABS 0 bssBIGRAM dist/default/production\QI_Monitor.X.production.o
-start A2 0 CODE 0 init C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+start A2 0 CODE 0 init C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 ?_getNXQChargeStateString 200 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 i2___lwdiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/production\QI_Monitor.X.production.o
 ___flmul@aexp 21B 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
@@ -4647,7 +4647,7 @@ _i2c2_state DF 0 BANK0 1 bssBANK0 dist/default/production\QI_Monitor.X.productio
 _rightCapTouchHandler 1EAAA 0 CODE 0 text184 dist/default/production\QI_Monitor.X.production.o
 I2C2_MasterReadTRBBuild@length 204 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 _EUSART2_Transmit_ISR 1DF9E 0 CODE 0 text189 dist/default/production\QI_Monitor.X.production.o
-__end_of__npowers_ D7FB 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__end_of__npowers_ D7BD 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __end_ofi1___xxtofl 1BE0A 0 CODE 0 text155 dist/default/production\QI_Monitor.X.production.o
 ttemp5 60 0 COMRAM 1 temp dist/default/production\QI_Monitor.X.production.o
 ttemp6 63 0 COMRAM 1 temp dist/default/production\QI_Monitor.X.production.o
@@ -4666,11 +4666,11 @@ _getUARTError 1ECD2 0 CODE 0 text30 dist/default/production\QI_Monitor.X.product
 __size_ofi1_TMR3_StopTimer 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _TMR2_Stop 1ECFA 0 CODE 0 text144 dist/default/production\QI_Monitor.X.production.o
 __end_of_OLED_Init 1D16A 0 CODE 0 text117 dist/default/production\QI_Monitor.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
-intlevel0 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
-intlevel1 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
-intlevel2 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
-intlevel3 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+__accesstop 60 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
+intlevel0 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
+intlevel1 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
+intlevel2 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
+intlevel3 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 __size_of_EUSART2_SetTxInterruptHandler 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __ptext100 1DA34 0 CODE 0 text100 dist/default/production\QI_Monitor.X.production.o
 __ptext101 1C1A8 0 CODE 0 text101 dist/default/production\QI_Monitor.X.production.o
@@ -4856,7 +4856,7 @@ _ADC_PostProcessingHandler 1422C 0 CODE 0 text211 dist/default/production\QI_Mon
 _clearUARTErrors 1EC68 0 CODE 0 text26 dist/default/production\QI_Monitor.X.production.o
 floatToEngineeringFormat@input_value 29F 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 __end_of_getDeviceID 1E8F8 0 CODE 0 text84 dist/default/production\QI_Monitor.X.production.o
-__npowers_ D7C7 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__npowers_ D789 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __end_of_INT1_SetInterruptHandler 1EC06 0 CODE 0 text67 dist/default/production\QI_Monitor.X.production.o
 __end_ofi2_EUSART2_Write 1DADC 0 CODE 0 text197 dist/default/production\QI_Monitor.X.production.o
 __end_of_IOCBF2_DefaultInterruptHandler 1ED22 0 CODE 0 text175 dist/default/production\QI_Monitor.X.production.o
@@ -4900,8 +4900,8 @@ _TMR0_DefaultInterruptHandler 1ED1C 0 CODE 0 text166 dist/default/production\QI_
 _I2C2_Initialize 1E3CA 0 CODE 0 text63 dist/default/production\QI_Monitor.X.production.o
 ___awdiv@dividend 206 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 FLASH_ReadWord@flashAddr 204 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 _I2C2_ISR 1AC5E 0 CODE 0 text148 dist/default/production\QI_Monitor.X.production.o
 __size_ofi2___fleq 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_ofi2___flge 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
@@ -5076,7 +5076,7 @@ getSecondsFromOnTime@input_seconds 20D 0 BANK2 1 cstackBANK2 dist/default/produc
 _EUSART2_Initialize 1D520 0 CODE 0 text68 dist/default/production\QI_Monitor.X.production.o
 __end_of_CCP2_Initialize 1E836 0 CODE 0 text71 dist/default/production\QI_Monitor.X.production.o
 __end_of_writeFloatToEEPROM 1DC20 0 CODE 0 text24 dist/default/production\QI_Monitor.X.production.o
-__end_of_temp_adc_offset DB47 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__end_of_temp_adc_offset DB09 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __end_of_QIIdleIOCHandler 1EB12 0 CODE 0 text176 dist/default/production\QI_Monitor.X.production.o
 __size_of_ringBufferLUT 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_of_getUARTError 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
@@ -5163,7 +5163,7 @@ __size_of_EUSART2_SetRxInterruptHandler 0 0 ABS 0 - dist/default/production\QI_M
 OLED_Command@data_array 212 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 __size_of_strncpy 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_of_readFloatFromEEPROM 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
-_dpowers DB1B 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+_dpowers DADD 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __size_of_IOCBF3_SetInterruptHandler 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_ofi1___flge 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_of_getADCError 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
@@ -5252,7 +5252,7 @@ _ODCONC F1F 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_of_getMinutesFromOnTime 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _CCPTMRSbits FAE 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _updateErrorLEDs 1DECC 0 CODE 0 text29 dist/default/production\QI_Monitor.X.production.o
-__end_of_hexpowers D81B 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__end_of_hexpowers D7DD 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __size_ofi2__tdiv_to_l_ 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _OSCFRQ EDE 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _recoverEEPROMToRAM 1880C 0 CODE 0 text34 dist/default/production\QI_Monitor.X.production.o
@@ -5351,7 +5351,7 @@ i2__tdiv_to_l_@exp1 11 0 COMRAM 1 cstackCOMRAM dist/default/production\QI_Monito
 i2__tdiv_to_l_@quot C 0 COMRAM 1 cstackCOMRAM dist/default/production\QI_Monitor.X.production.o
 _INTERRUPT_InterruptManagerHigh 8 0 CODE 0 intcode dist/default/production\QI_Monitor.X.production.o
 _eusart2TxBufferRemaining 1A3 0 BANK1 1 bssBANK1 dist/default/production\QI_Monitor.X.production.o
-_hexpowers D7FB 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+_hexpowers D7BD 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 _DATAEE_ReadByte 1E9FE 0 CODE 0 text36 dist/default/production\QI_Monitor.X.production.o
 __end_of_printf 1E2A2 0 CODE 0 text15 dist/default/production\QI_Monitor.X.production.o
 __tdiv_to_l_@f1 200 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
@@ -5436,7 +5436,7 @@ __size_of___xxtofl 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __end_of_getUserID 1E434 0 CODE 0 text21 dist/default/production\QI_Monitor.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\QI_Monitor.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\QI_Monitor.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 _BAUD2CON E9F 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 ___xxtofl@arg 248 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 ___xxtofl@exp 247 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
@@ -5591,7 +5591,7 @@ __size_of_TMR3_WriteTimer 0 0 ABS 0 - dist/default/production\QI_Monitor.X.produ
 __size_of_FLASH_ReadWord 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __end_of_getCauseOfResetStringSmall 1E55E 0 CODE 0 text88 dist/default/production\QI_Monitor.X.production.o
 __size_of_terminal_ringBufferPull 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
-_OledFont D81B 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+_OledFont D7DD 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __end_of_TMR2_Start 1ED0E 0 CODE 0 text221 dist/default/production\QI_Monitor.X.production.o
 __size_of_TMR3_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __end_of_forceEEPROMSave 1880C 0 CODE 0 text23 dist/default/production\QI_Monitor.X.production.o
@@ -5628,7 +5628,7 @@ __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\QI_Monitor.X.production.
 _live_measurement_request_flag 2EB 0 BANK2 1 bssBANK2 dist/default/production\QI_Monitor.X.production.o
 __size_of_TMR2_SetInterruptHandler 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\QI_Monitor.X.production.o
-__end_of_OledFont DB1B 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__end_of_OledFont DADD 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 _OLED_WriteString 1E1EA 0 CODE 0 text116 dist/default/production\QI_Monitor.X.production.o
 __size_of_OLED_PutChar 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 getSecondsFromOnTime@hours 218 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
@@ -5689,7 +5689,7 @@ __Hrparam 0 0 COMRAM 1 rparam dist/default/production\QI_Monitor.X.production.o
 __size_of_DATAEE_ReadByte 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_of_OLED_Command 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __end_of___xxtofl 1BCC6 0 CODE 0 text125 dist/default/production\QI_Monitor.X.production.o
-__powers_ D793 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__powers_ D755 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 getStringSecondsAsTime@minutes 3FE 0 BANK3 1 cstackBANK3 dist/default/production\QI_Monitor.X.production.o
 __end_of_TMR1_StopTimer 1ECF6 0 CODE 0 text44 dist/default/production\QI_Monitor.X.production.o
 __end_of_terminalClearScreen 1EB5A 0 CODE 0 text6 dist/default/production\QI_Monitor.X.production.o
@@ -5819,7 +5819,7 @@ _PIE1bits EC3 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _PIE3bits EC5 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 LM73TempSensorInitialize@output_data_array 210 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
 _PIE4bits EC6 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
-__end_of__powers_ D7C7 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__end_of__powers_ D789 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 __end_of_EXT_INT_Initialize 1E3CA 0 CODE 0 text65 dist/default/production\QI_Monitor.X.production.o
 _PIE6bits EC8 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __doprnt@ap 258 0 BANK2 1 cstackBANK2 dist/default/production\QI_Monitor.X.production.o
@@ -6043,8 +6043,8 @@ __size_of_ADCC_StartConversion 0 0 ABS 0 - dist/default/production\QI_Monitor.X.
 __end_of_minMaxInitialize 1B8B8 0 CODE 0 text20 dist/default/production\QI_Monitor.X.production.o
 i2___llmod@dividend E 0 COMRAM 1 cstackCOMRAM dist/default/production\QI_Monitor.X.production.o
 I2C2_ISR@i2c_address FD 0 BANK0 1 bssBANK0 dist/default/production\QI_Monitor.X.production.o
-stackhi E87 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
-stacklo 964 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+stackhi E87 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
+stacklo 964 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 __end_ofi1_TMR3_Reload 1EC3E 0 CODE 0 text138 dist/default/production\QI_Monitor.X.production.o
 i2__doprnt@width 9D 0 BANK0 1 cstackBANK0 dist/default/production\QI_Monitor.X.production.o
 _EXT_INT_Initialize 1E392 0 CODE 0 text65 dist/default/production\QI_Monitor.X.production.o
@@ -6351,7 +6351,7 @@ __Ltext97 0 0 ABS 0 text97 dist/default/production\QI_Monitor.X.production.o
 __Ltext98 0 0 ABS 0 text98 dist/default/production\QI_Monitor.X.production.o
 __Ltext99 0 0 ABS 0 text99 dist/default/production\QI_Monitor.X.production.o
 __end_of_CCP2_CaptureISR 1EA66 0 CODE 0 text152 dist/default/production\QI_Monitor.X.production.o
-__ramtop F00 0 RAM 0 ramtop C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+__ramtop F00 0 RAM 0 ramtop C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
 _sprintf 1DDF4 0 CODE 0 text90 dist/default/production\QI_Monitor.X.production.o
 __size_of_updataMinMaxRAMAliases 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _getMinutesFromOnTime 1BA32 0 CODE 0 text79 dist/default/production\QI_Monitor.X.production.o
@@ -6482,7 +6482,7 @@ i1___fladd@grs 11D 0 BANK1 1 cstackBANK1 dist/default/production\QI_Monitor.X.pr
 i2_TMR1_WriteTimer 1E9C6 0 CODE 0 text173 dist/default/production\QI_Monitor.X.production.o
 _T0CON0bits FD5 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __end_of_ADCC_GetConversionResult 1EB3A 0 CODE 0 text226 dist/default/production\QI_Monitor.X.production.o
-__pmediumconst D792 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__pmediumconst D754 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 _SSP2ADD E93 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _SSP2BUF E92 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 __size_ofi2_isdigit 0 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
@@ -6651,7 +6651,7 @@ _ADPCH F5F 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _ADPRE F5E 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _ADREF F58 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
 _ADRPT F66 0 ABS 0 - dist/default/production\QI_Monitor.X.production.o
-__end_of_dpowers DB43 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
+__end_of_dpowers DB05 0 MEDIUMCONST 0 mediumconst dist/default/production\QI_Monitor.X.production.o
 i2__doprnt@c A3 0 BANK0 1 cstackBANK0 dist/default/production\QI_Monitor.X.production.o
 i2__doprnt@f 6E 0 BANK0 1 cstackBANK0 dist/default/production\QI_Monitor.X.production.o
 _I2C2_MasterReadTRBBuild 1DADC 0 CODE 0 text132 dist/default/production\QI_Monitor.X.production.o
@@ -6863,5 +6863,5 @@ bssBANK5 1 500 500 64 1
 intcode 0 8 8 6 1
 text182 0 1E7CC 1E7CC 55D 1
 bssBIGRAM 1 564 564 400 1
-mediumconst 0 D792 D792 286E 1
+mediumconst 0 D754 D754 28AC 1
 config 0 300000 300000 C 1

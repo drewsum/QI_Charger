@@ -17538,7 +17538,7 @@ else if (0 == strcmp(line, "Current Measurements?")) {
 printf("\n\r");
 
 terminalTextAttributes(GREEN, BLACK, BOLD);
-printf("System Measurements at time of command call:\n\r");
+printf("Device Measurements at time of command call:\n\r");
 
 printf("\n\r");
 
@@ -17628,7 +17628,7 @@ printf( "    *IDN?: Prints identification string\n\r"
 printf("\n\rHelp messages and neutral responses appear in yellow\n\r");
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-printf("System parameters and affirmative responses appear in green\n\r");
+printf("Device parameters and affirmative responses appear in green\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("Measurement responses appear in cyan\n\r");
 terminalTextAttributes(RED, BLACK, NORMAL);
@@ -17777,30 +17777,30 @@ printf("    QI wireless power converter is currently %s\033[K\n\r\033[K\n\r", ge
 }
 
 terminalTextAttributes(GREEN, BLACK, NORMAL);
-if (QI_charge_time > 0) printf("    System has been charging a load for %s\033[K\n\r\033[K\n\r", getStringSecondsAsTime(QI_charge_time));
+if (QI_charge_time > 0) printf("    Device has been charging a load for %s\033[K\n\r\033[K\n\r", getStringSecondsAsTime(QI_charge_time));
 else printf("    No load present, searching...\033[K\n\r\n\r");
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Voltages:\n\r");
+printf("    Device Voltages:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        +12V rail measured as %+.3f Volts\033[K\n\r", adc_results.pos12_adc_result);
 printf("        +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", adc_results.pos5_adc_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Currents:\033[K\n\r");
+printf("    Device Currents:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        +12V input current measured as %+.3f Amps\033[K\n\r", adc_results.pos12_isns_adc_result);
 printf("        QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", adc_results.qi_isns_adc_result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Power:\033[K\n\r");
+printf("    Device Power:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Electrical Input Power calculated as %+.3f Watts\033[K\n\r", adc_calculations.input_power);
 if (QI_charge_time > 0) printf("        Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", adc_calculations.output_power);
 else printf("        No load present, no effective wireless output power\033[K\n\r\n\r");
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-if (QI_charge_time > 0) printf("    System Efficiency calculated as %.3f %%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
+if (QI_charge_time > 0) printf("    Device Efficiency calculated as %.3f %%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
 else printf("    No load present, system efficiency is 0.0 %%\033[K\n\r\n\r");
 
 if (QI_charge_time > 0) printf("    Estimated energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_energy));
@@ -17809,7 +17809,7 @@ else printf("    No load present, no energy consumed\033[K\n\r\n\r");
 if (QI_charge_time > 0) printf("    Estimated charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(adc_calculations.output_charge));
 else printf("    No load present, no charge consumed\033[K\n\r\n\r");
 
-printf("    System Switching Frequencies:\033[K\n\r");
+printf("    Device Switching Frequencies:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 if (QI_charge_time == 0) printf("        POS5 Converter is in Burst Mode\033[K\n\r");
 else printf("        Current +5V Switching Frequency measured as %+.1f MHz\033[K\n\r", 2.5);
@@ -17817,7 +17817,7 @@ if (QI_charge_time == 0) printf("        QI Converter is in Burst Mode\033[K\n\r
 else printf("        Current QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", freq_meas_results.QI_Freq_Meas / 1000.0);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    System Temperatures:\033[K\n\r");
+printf("    Device Temperatures:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        QI Converter Temperature measured as %+.3f C\033[K\n\r", LM73_temp_results.QI_temp_result);
 printf("        +5V Converter Temperature measured as %+.3f C\033[K\n\r", LM73_temp_results.POS5_temp_result);
@@ -17839,35 +17839,35 @@ terminalTextAttributesReset();
 void printMaximumMeasurements(void) {
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Maximum System Voltages:\n\r");
+printf("    Maximum Device Voltages:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Maximum +12V rail measured as %+.3f Volts\033[K\n\r", eeprom_ram_aliases.POS12_Max_Result);
 printf("        Maximum +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.POS5_Max_Result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Maximum System Currents:\033[K\n\r");
+printf("    Maximum Device Currents:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Maximum +12V input current measured as %+.3f Amps\033[K\n\r", eeprom_ram_aliases.POS12_Current_Max_Result);
 printf("        Maximum QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_Current_Max_Result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Maximum System Power:\033[K\n\r");
+printf("    Maximum Device Power:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Maximum Electrical Input Power calculated as %+.3f Watts\033[K\n\r", eeprom_ram_aliases.Input_Power_Max_Result);
 printf("        Maximum Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Output_Power_Max_Result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Maximum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Max_Result);
+printf("    Maximum Device Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Max_Result);
 
 printf("    Maximum Estimated Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
 printf("    Maximum Estimated Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
 
-printf("    Maximum System Switching Frequencies:\033[K\n\r");
+printf("    Maximum Device Switching Frequencies:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("       Maximum QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_FSW_Max_Result / 1000.0);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Maximum System Temperatures:\033[K\n\r");
+printf("    Maximum Device Temperatures:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Maximum QI Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.QI_Temp_Max_Result);
 printf("        Maximum +5V Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.POS5_Temp_Max_Result);
@@ -17886,32 +17886,32 @@ terminalTextAttributesReset();
 void printMinimumMeasurements(void) {
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Minimum System Voltages:\n\r");
+printf("    Minimum Device Voltages:\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Minimum +12V rail measured as %+.3f Volts\033[K\n\r", eeprom_ram_aliases.POS12_Min_Result);
 printf("        Minimum +5V rail measured as %+.3f Volts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.POS5_Min_Result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Minimum System Currents:\033[K\n\r");
+printf("    Minimum Device Currents:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Minimum +12V input current measured as %+.3f Amps\033[K\n\r", eeprom_ram_aliases.POS12_Current_Min_Result);
 printf("        Minimum QI converter current measured as %+.3f Amps\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_Current_Min_Result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Minimum System Power:\033[K\n\r");
+printf("    Minimum Device Power:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Minimum Electrical Input Power calculated as %+.3f Watts\033[K\n\r", eeprom_ram_aliases.Input_Power_Min_Result);
 printf("        Minimum Wireless Output Power calculated as %+.3f Watts\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Output_Power_Min_Result);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Minimum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Min_Result);
+printf("    Minimum Device Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Min_Result);
 
-printf("    Minimum System Switching Frequencies:\033[K\n\r");
+printf("    Minimum Device Switching Frequencies:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("       Minimum QI Switching Frequency measured as %+.3f kHz\033[K\n\r\033[K\n\r", eeprom_ram_aliases.QI_FSW_Min_Result / 1000.0);
 
 terminalTextAttributes(CYAN, BLACK, BOLD);
-printf("    Minimum System Temperatures:\033[K\n\r");
+printf("    Minimum Device Temperatures:\033[K\n\r");
 terminalTextAttributes(CYAN, BLACK, NORMAL);
 printf("        Minimum QI Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.QI_Temp_Min_Result);
 printf("        Minimum +5V Converter Temperature measured as %+.3f C\033[K\n\r", eeprom_ram_aliases.POS5_Temp_Min_Result);

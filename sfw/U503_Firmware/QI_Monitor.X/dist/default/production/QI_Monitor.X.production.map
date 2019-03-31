@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\QI_Monitor.X.production.sym \
   --cmf=dist/default/production\QI_Monitor.X.production.cmf -z -Q18F27K40 \
-  -oC:\Users\DREWMA~1\AppData\Local\Temp\s1m0.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\DREWMA~1\AppData\Local\Temp\s8is.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/QI_Monitor.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0964h-0E87h -pstack=STACK -ACODE=00h-01FFFFh \
   -ACONST=00h-01FFFFh -ASMALLCONST=0F00h-0FFFhx497 \
@@ -27,7 +27,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o \
+  C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o \
   dist/default/production\QI_Monitor.X.production.o 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\DREWMA~1\AppData\Local\Temp\s1m0.o
+C:\Users\DREWMA~1\AppData\Local\Temp\s8is.o
                 init                                 A2       A2        4        C       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000       10   200000       0
@@ -49,7 +49,7 @@ dist/default/production\QI_Monitor.X.production.o
                 intcodelo                            18       18       8A        C       0
                 intcode                               8        8        6        4       0
                 temp                                 5F       5F        1        1       1
-                mediumconst                        D792     D792     286E     6BC9       0
+                mediumconst                        D754     D754     28AC     6BAA       0
                 text226                           1EB26    1EB26       14     F3E6       0
                 text225                           1ED12    1ED12        4     F3E6       0
                 text224                           1EB12    1EB12       14     F3E6       0
@@ -541,7 +541,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   SMALLCONST     
 
         CLASS   MEDIUMCONST    
-                mediumconst                        D792     D792     286E         0
+                mediumconst                        D754     D754     28AC         0
 
         CLASS   COMRAM         
                 temp                                 5F       5F        1         1
@@ -627,7 +627,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 bssBANK4                       000400  0000FE  0004FE       400       1  BANK4   
                 bssBANK5                       000500  000064  000564       500       1  BANK5   
                 bssBIGRAM                      000564  000400  000964       564       1  BIGRAM  
-                mediumconst                    00D792  00286E  010000      6BC9       0  MEDIUMCO
+                mediumconst                    00D754  0028AC  010000      6BAA       0  MEDIUMCO
                 text91                         010000  00E7CB  01E7CB      8000       0  CODE    
                 text182                        01E7CC  00055D  01ED29      F3E6       0  CODE    
                 idloc                          200000  000010  200010    200000       0  IDLOC   
@@ -650,23 +650,23 @@ UNUSED ADDRESS RANGES
                          000964-000E87              524
         CODE             000004-000007                4
                          00000E-000017                A
-                         0000A6-00D791             D6EC
+                         0000A6-00D753             D6AE
                          01E7CB-01E7CB                1
                          01ED29-01FFFF             12D7
         CONST            000004-000007                4
                          00000E-000017                A
-                         0000A6-00D791             D6EC
+                         0000A6-00D753             D6AE
                          01E7CB-01E7CB                1
                          01ED29-01FFFF             12D7
         EEDATA           310000-3103FF              400
-        MEDIUMCONST      000F00-00D791             C892
+        MEDIUMCONST      000F00-00D753             C854
                          01E7CB-01E7CB                1
                          01ED29-01FFFF             12D7
         RAM              0001BE-0001FF               42
                          0004FE-0004FF                2
                          000964-000E87              100
         SFR              000E8D-000FFF               73
-        SMALLCONST       000F00-00D791              100
+        SMALLCONST       000F00-00D753              100
                          01E7CB-01E7CB                1
                          01ED29-01FFFF              100
         STACK            000964-000E87              524
@@ -977,7 +977,7 @@ _OSCEN                                         (abs)        000EDC
 _OSCFRQ                                        (abs)        000EDE
 _OSCILLATOR_Initialize                         text61       01EA66
 _OSCTUNE                                       (abs)        000EDD
-_OledFont                                      mediumconst  00D81B
+_OledFont                                      mediumconst  00D7DD
 _PCON0bits                                     (abs)        000FD7
 _PIE0bits                                      (abs)        000EC2
 _PIE1bits                                      (abs)        000EC3
@@ -1539,7 +1539,7 @@ __Lintentry                                    intentry     000000
 __Lintret                                      intret       000000
 __Lintsave_regs                                intsave_regs 000000
 __Lirdata                                      irdata       000000
-__Lmediumconst                                 mediumconst  00D792
+__Lmediumconst                                 mediumconst  00D754
 __LnvBANK2                                     nvBANK2      000000
 __LnvFARRAM                                    nvFARRAM     000000
 __Lnvbit                                       nvbit        000000
@@ -1976,7 +1976,7 @@ __end_of_OLED_WriteString                      text116      01E228
 __end_of_OLED_YX                               text115      01E06C
 __end_of_OLED_updateHandler                    text74       01422C
 __end_of_OSCILLATOR_Initialize                 text61       01EA7E
-__end_of_OledFont                              mediumconst  00DB1B
+__end_of_OledFont                              mediumconst  00DADD
 __end_of_PIN_MANAGER_IOC                       text168      01EAFE
 __end_of_PIN_MANAGER_Initialize                text58       01CF9E
 __end_of_PMD_Initialize                        text57       01E98E
@@ -2035,14 +2035,14 @@ __end_of___xxtofl                              text125      01BCC6
 __end_of__div_to_l_                            text102      01C49C
 __end_of__doprnt                               text91       011724
 __end_of__initialization                       cinit        01D030
-__end_of__npowers_                             mediumconst  00D7FB
-__end_of__powers_                              mediumconst  00D7C7
+__end_of__npowers_                             mediumconst  00D7BD
+__end_of__powers_                              mediumconst  00D789
 __end_of__tdiv_to_l_                           text101      01C2A8
 __end_of_abs                                   text112      01E63E
 __end_of_clearADCErrors                        text28       01EB7A
 __end_of_clearI2CErrors                        text27       01E972
 __end_of_clearUARTErrors                       text26       01EC74
-__end_of_dpowers                               mediumconst  00DB43
+__end_of_dpowers                               mediumconst  00DB05
 __end_of_fabs                                  text218      01E392
 __end_of_floatToEngineeringFormat              text89       0173F8
 __end_of_forceEEPROMSave                       text23       01880C
@@ -2069,7 +2069,7 @@ __end_of_getUARTError                          text30       01ECD8
 __end_of_getUserID                             text21       01E434
 __end_of_getYearsFromOnTime                    text76       01E52E
 __end_of_heartbeatTimerHandler                 text167      01B714
-__end_of_hexpowers                             mediumconst  00D81B
+__end_of_hexpowers                             mediumconst  00D7DD
 __end_of_isdigit                               text97       01E858
 __end_of_leftCapTouchHandler                   text188      01EAD6
 __end_of_main                                  text0        019A28
@@ -2092,7 +2092,7 @@ __end_of_strcmp                                text7        01DBD0
 __end_of_strcpy                                text75       01DDF4
 __end_of_strlen                                text114      01E5BC
 __end_of_strncpy                               text14       01D742
-__end_of_temp_adc_offset                       mediumconst  00DB47
+__end_of_temp_adc_offset                       mediumconst  00DB09
 __end_of_terminalClearScreen                   text6        01EB5A
 __end_of_terminalSetCursorHome                 text5        01EB4A
 __end_of_terminalTextAttributes                text13       017B04
@@ -2141,8 +2141,8 @@ __end_ofi2_printf                              text191      01E356
 __end_ofi2_putch                               text196      01ECCA
 __end_ofi2_scale                               text193      016FE4
 __initialization                               cinit        01CF9E
-__mediumconst                                  mediumconst  00D792
-__npowers_                                     mediumconst  00D7C7
+__mediumconst                                  mediumconst  00D754
+__npowers_                                     mediumconst  00D789
 __pbitbssBANK0                                 bitbssBANK0  0007F8
 __pbssBANK0                                    bssBANK0     0000B9
 __pbssBANK1                                    bssBANK1     000165
@@ -2166,9 +2166,9 @@ __pidataBANK2                                  idataBANK2   01E7A6
 __pintcode                                     intcode      000008
 __pintcode_body                                intcode_body 01C774
 __pintcodelo                                   intcodelo    000018
-__pmediumconst                                 mediumconst  00D792
+__pmediumconst                                 mediumconst  00D754
 __pnvBANK2                                     nvBANK2      0002FF
-__powers_                                      mediumconst  00D793
+__powers_                                      mediumconst  00D755
 __ptext0                                       text0        01973E
 __ptext1                                       text1        014BA0
 __ptext10                                      text10       01B346
@@ -2638,7 +2638,7 @@ _clearADCErrors                                text28       01EB6A
 _clearI2CErrors                                text27       01E956
 _clearUARTErrors                               text26       01EC68
 _device_on_time                                bssBANK0     0000D5
-_dpowers                                       mediumconst  00DB1B
+_dpowers                                       mediumconst  00DADD
 _eeprom_ram_aliases                            bssBANK3     000300
 _error_handler                                 bssBANK0     0000CD
 _eusart2RxBuffer                               bssBANK4     000440
@@ -2681,7 +2681,7 @@ _getUARTError                                  text30       01ECD2
 _getUserID                                     text21       01E400
 _getYearsFromOnTime                            text76       01E4FE
 _heartbeatTimerHandler                         text167      01B53A
-_hexpowers                                     mediumconst  00D7FB
+_hexpowers                                     mediumconst  00D7BD
 _i2c2_object                                   bssBANK1     000165
 _i2c2_state                                    bssBANK0     0000DF
 _i2c2_tr_queue                                 bssBANK1     0001B7
@@ -10986,13 +10986,13 @@ shared
 		i2_printf      		CODE           	1E31A	0000	61
 		i1_TMR3_Reload 		CODE           	1EC30	0000	15
 		i2_TMR3_Reload 		CODE           	1EC5A	0000	15
-		_OledFont      		MEDIUMCONST    	D81B	0000	769
+		_OledFont      		MEDIUMCONST    	D7DD	0000	769
 		i1_TMR3_StopTimer		CODE           	1ECF6	0000	5
 		i2_putch       		CODE           	1ECC0	0000	11
 		i2___fleq      		CODE           	1D286	0000	139
-		__powers_      		MEDIUMCONST    	D793	0000	53
+		__powers_      		MEDIUMCONST    	D755	0000	53
 		i1_TMR3_WriteTimer		CODE           	1E918	0000	33
-		_dpowers       		MEDIUMCONST    	DB1B	0000	41
+		_dpowers       		MEDIUMCONST    	DADD	0000	41
 		i2_TMR3_WriteTimer		CODE           	1E9E2	0000	29
 		i2___lwdiv     		CODE           	1DB2E	0000	83
 		i2_isdigit     		CODE           	1E938	0000	31
@@ -11008,7 +11008,7 @@ shared
 		i1___fldiv     		CODE           	1A4C8	0000	651
 		i2___fldiv     		CODE           	1A752	0000	649
 		i2__div_to_l_  		CODE           	1C590	0000	245
-		__npowers_     		MEDIUMCONST    	D7C7	0000	53
+		__npowers_     		MEDIUMCONST    	D789	0000	53
 		i2___lwmod     		CODE           	1E0AE	0000	67
 		i2___fltol     		CODE           	1CC50	0000	187
 		i2_scale       		CODE           	16BCC	0000	1049
@@ -11021,7 +11021,7 @@ shared
 		i2_EUSART2_Write		CODE           	1DA88	0000	85
 		i1___flmul     		CODE           	17E58	0000	853
 		i2___flmul     		CODE           	181AC	0000	851
-		_hexpowers     		MEDIUMCONST    	D7FB	0000	33
+		_hexpowers     		MEDIUMCONST    	D7BD	0000	33
 		i2___llmod     		CODE           	1D7A8	0000	103
 		i1___xxtofl    		CODE           	1BCC6	0000	325
 		i2___xxtofl    		CODE           	1BE0A	0000	321

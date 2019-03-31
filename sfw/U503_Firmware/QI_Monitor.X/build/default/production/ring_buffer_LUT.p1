@@ -11707,7 +11707,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 158: terminalTextAttributes(GREEN, BLACK, BOLD);
 "158
 [e ( _terminalTextAttributes (3 , , . `E9616 2 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 159: printf("System Measurements at time of command call:\n\r");
+[; ;ring_buffer_LUT.c: 159: printf("Device Measurements at time of command call:\n\r");
 "159
 [e ( _printf :s 34C ]
 [; ;ring_buffer_LUT.c: 161: printf("\n\r");
@@ -11862,7 +11862,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 248: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "248
 [e ( _terminalTextAttributes (3 , , . `E9616 2 . `E9616 0 . `E9608 0 ]
-[; ;ring_buffer_LUT.c: 249: printf("System parameters and affirmative responses appear in green\n\r");
+[; ;ring_buffer_LUT.c: 249: printf("Device parameters and affirmative responses appear in green\n\r");
 "249
 [e ( _printf :s 51C ]
 [; ;ring_buffer_LUT.c: 250: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12232,7 +12232,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 397: terminalTextAttributes(GREEN, BLACK, NORMAL);
 "397
 [e ( _terminalTextAttributes (3 , , . `E9616 2 . `E9616 0 . `E9608 0 ]
-[; ;ring_buffer_LUT.c: 398: if (QI_charge_time > 0) printf("    System has been charging a load for %s\033[K\n\r\033[K\n\r", getStringSecondsAsTime(QI_charge_time));
+[; ;ring_buffer_LUT.c: 398: if (QI_charge_time > 0) printf("    Device has been charging a load for %s\033[K\n\r\033[K\n\r", getStringSecondsAsTime(QI_charge_time));
 "398
 [e $ ! > _QI_charge_time -> -> -> 0 `i `l `ul 1505  ]
 [e ( _printf , (. :s 80C -> ( _getStringSecondsAsTime (1 _QI_charge_time `*Cuc ]
@@ -12245,7 +12245,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 401: terminalTextAttributes(CYAN, BLACK, BOLD);
 "401
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 402: printf("    System Voltages:\n\r");
+[; ;ring_buffer_LUT.c: 402: printf("    Device Voltages:\n\r");
 "402
 [e ( _printf :s 82C ]
 [; ;ring_buffer_LUT.c: 403: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12260,7 +12260,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 407: terminalTextAttributes(CYAN, BLACK, BOLD);
 "407
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 408: printf("    System Currents:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 408: printf("    Device Currents:\033[K\n\r");
 "408
 [e ( _printf :s 85C ]
 [; ;ring_buffer_LUT.c: 409: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12275,7 +12275,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 413: terminalTextAttributes(CYAN, BLACK, BOLD);
 "413
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 414: printf("    System Power:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 414: printf("    Device Power:\033[K\n\r");
 "414
 [e ( _printf :s 88C ]
 [; ;ring_buffer_LUT.c: 415: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12297,7 +12297,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 420: terminalTextAttributes(CYAN, BLACK, BOLD);
 "420
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 421: if (QI_charge_time > 0) printf("    System Efficiency calculated as %.3f %%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
+[; ;ring_buffer_LUT.c: 421: if (QI_charge_time > 0) printf("    Device Efficiency calculated as %.3f %%\033[K\n\r\033[K\n\r", adc_calculations.efficiency);
 "421
 [e $ ! > _QI_charge_time -> -> -> 0 `i `l `ul 1509  ]
 [e ( _printf , (. :s 92C -> . _adc_calculations 2 `d ]
@@ -12327,7 +12327,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 428: else printf("    No load present, no charge consumed\033[K\n\r\n\r");
 [e ( _printf :s 97C ]
 [e :U 1514 ]
-[; ;ring_buffer_LUT.c: 430: printf("    System Switching Frequencies:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 430: printf("    Device Switching Frequencies:\033[K\n\r");
 "430
 [e ( _printf :s 98C ]
 [; ;ring_buffer_LUT.c: 431: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12356,7 +12356,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 437: terminalTextAttributes(CYAN, BLACK, BOLD);
 "437
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 438: printf("    System Temperatures:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 438: printf("    Device Temperatures:\033[K\n\r");
 "438
 [e ( _printf :s 103C ]
 [; ;ring_buffer_LUT.c: 439: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12405,7 +12405,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 459: terminalTextAttributes(CYAN, BLACK, BOLD);
 "459
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 460: printf("    Maximum System Voltages:\n\r");
+[; ;ring_buffer_LUT.c: 460: printf("    Maximum Device Voltages:\n\r");
 "460
 [e ( _printf :s 111C ]
 [; ;ring_buffer_LUT.c: 461: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12420,7 +12420,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 465: terminalTextAttributes(CYAN, BLACK, BOLD);
 "465
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 466: printf("    Maximum System Currents:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 466: printf("    Maximum Device Currents:\033[K\n\r");
 "466
 [e ( _printf :s 114C ]
 [; ;ring_buffer_LUT.c: 467: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12435,7 +12435,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 471: terminalTextAttributes(CYAN, BLACK, BOLD);
 "471
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 472: printf("    Maximum System Power:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 472: printf("    Maximum Device Power:\033[K\n\r");
 "472
 [e ( _printf :s 117C ]
 [; ;ring_buffer_LUT.c: 473: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12450,7 +12450,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 477: terminalTextAttributes(CYAN, BLACK, BOLD);
 "477
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 478: printf("    Maximum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Max_Result);
+[; ;ring_buffer_LUT.c: 478: printf("    Maximum Device Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Max_Result);
 "478
 [e ( _printf , (. :s 120C -> . _eeprom_ram_aliases 12 `d ]
 [; ;ring_buffer_LUT.c: 480: printf("    Maximum Estimated Energy consumed by the load while charging: %sJoules\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Energy_Max_Result));
@@ -12459,7 +12459,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 481: printf("    Maximum Estimated Charge consumed by the load while charging: %sCoulombs\033[K\n\r\033[K\n\r", floatToEngineeringFormat(eeprom_ram_aliases.Load_Charge_Max_Result));
 "481
 [e ( _printf , (. :s 122C -> ( _floatToEngineeringFormat (1 . _eeprom_ram_aliases 15 `*Cuc ]
-[; ;ring_buffer_LUT.c: 483: printf("    Maximum System Switching Frequencies:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 483: printf("    Maximum Device Switching Frequencies:\033[K\n\r");
 "483
 [e ( _printf :s 123C ]
 [; ;ring_buffer_LUT.c: 484: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12471,7 +12471,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 487: terminalTextAttributes(CYAN, BLACK, BOLD);
 "487
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 488: printf("    Maximum System Temperatures:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 488: printf("    Maximum Device Temperatures:\033[K\n\r");
 "488
 [e ( _printf :s 125C ]
 [; ;ring_buffer_LUT.c: 489: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12514,7 +12514,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 506: terminalTextAttributes(CYAN, BLACK, BOLD);
 "506
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 507: printf("    Minimum System Voltages:\n\r");
+[; ;ring_buffer_LUT.c: 507: printf("    Minimum Device Voltages:\n\r");
 "507
 [e ( _printf :s 131C ]
 [; ;ring_buffer_LUT.c: 508: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12529,7 +12529,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 512: terminalTextAttributes(CYAN, BLACK, BOLD);
 "512
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 513: printf("    Minimum System Currents:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 513: printf("    Minimum Device Currents:\033[K\n\r");
 "513
 [e ( _printf :s 134C ]
 [; ;ring_buffer_LUT.c: 514: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12544,7 +12544,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 518: terminalTextAttributes(CYAN, BLACK, BOLD);
 "518
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 519: printf("    Minimum System Power:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 519: printf("    Minimum Device Power:\033[K\n\r");
 "519
 [e ( _printf :s 137C ]
 [; ;ring_buffer_LUT.c: 520: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12559,10 +12559,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 524: terminalTextAttributes(CYAN, BLACK, BOLD);
 "524
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 525: printf("    Minimum System Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Min_Result);
+[; ;ring_buffer_LUT.c: 525: printf("    Minimum Device Efficiency calculated as %.3f%%\033[K\n\r\033[K\n\r", eeprom_ram_aliases.Efficiency_Min_Result);
 "525
 [e ( _printf , (. :s 140C -> . _eeprom_ram_aliases 13 `d ]
-[; ;ring_buffer_LUT.c: 527: printf("    Minimum System Switching Frequencies:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 527: printf("    Minimum Device Switching Frequencies:\033[K\n\r");
 "527
 [e ( _printf :s 141C ]
 [; ;ring_buffer_LUT.c: 528: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12574,7 +12574,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 531: terminalTextAttributes(CYAN, BLACK, BOLD);
 "531
 [e ( _terminalTextAttributes (3 , , . `E9616 6 . `E9616 0 . `E9608 1 ]
-[; ;ring_buffer_LUT.c: 532: printf("    Minimum System Temperatures:\033[K\n\r");
+[; ;ring_buffer_LUT.c: 532: printf("    Minimum Device Temperatures:\033[K\n\r");
 "532
 [e ( _printf :s 143C ]
 [; ;ring_buffer_LUT.c: 533: terminalTextAttributes(CYAN, BLACK, NORMAL);
@@ -12727,7 +12727,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 70C 32 32 32 32 32 32 32 32 73 50 67 32 81 73 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 69C 32 32 32 32 32 32 32 32 73 50 67 32 80 79 83 53 32 84 101 109 112 32 83 101 110 115 111 114 32 69 114 114 111 114 10 13 0 ]
 [a 67C 32 32 32 32 32 32 32 32 73 50 67 32 71 101 110 101 114 97 108 32 69 114 114 111 114 10 13 0 ]
-[a 51C 83 121 115 116 101 109 32 112 97 114 97 109 101 116 101 114 115 32 97 110 100 32 97 102 102 105 114 109 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 103 114 101 101 110 10 13 0 ]
+[a 51C 68 101 118 105 99 101 32 112 97 114 97 109 101 116 101 114 115 32 97 110 100 32 97 102 102 105 114 109 97 116 105 118 101 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 103 114 101 101 110 10 13 0 ]
 [a 52C 77 101 97 115 117 114 101 109 101 110 116 32 114 101 115 112 111 110 115 101 115 32 97 112 112 101 97 114 32 105 110 32 99 121 97 110 10 13 0 ]
 [a 8C 81 73 32 67 104 97 114 103 101 114 32 119 105 116 104 32 68 105 103 105 116 97 108 32 77 111 110 105 116 111 114 105 110 103 44 32 98 121 32 68 114 101 119 32 77 97 97 116 109 97 110 10 13 0 ]
 [a 54C 85 115 101 114 32 105 110 112 117 116 32 97 112 112 101 97 114 115 32 105 110 32 119 104 105 116 101 10 13 0 ]
@@ -12767,21 +12767,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 104C 32 32 32 32 32 32 32 32 81 73 32 67 111 110 118 101 114 116 101 114 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 27 91 75 10 13 0 ]
 [a 130C 32 32 32 32 32 32 32 32 77 97 120 105 109 117 109 32 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 68 105 101 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 27 91 75 10 13 0 ]
 [a 148C 32 32 32 32 32 32 32 32 77 105 110 105 109 117 109 32 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 68 105 101 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 27 91 75 10 13 0 ]
-[a 114C 32 32 32 32 77 97 120 105 109 117 109 32 83 121 115 116 101 109 32 67 117 114 114 101 110 116 115 58 27 91 75 10 13 0 ]
-[a 134C 32 32 32 32 77 105 110 105 109 117 109 32 83 121 115 116 101 109 32 67 117 114 114 101 110 116 115 58 27 91 75 10 13 0 ]
-[a 85C 32 32 32 32 83 121 115 116 101 109 32 67 117 114 114 101 110 116 115 58 27 91 75 10 13 0 ]
+[a 114C 32 32 32 32 77 97 120 105 109 117 109 32 68 101 118 105 99 101 32 67 117 114 114 101 110 116 115 58 27 91 75 10 13 0 ]
+[a 134C 32 32 32 32 77 105 110 105 109 117 109 32 68 101 118 105 99 101 32 67 117 114 114 101 110 116 115 58 27 91 75 10 13 0 ]
+[a 85C 32 32 32 32 68 101 118 105 99 101 32 67 117 114 114 101 110 116 115 58 27 91 75 10 13 0 ]
 [a 129C 32 32 32 32 77 97 120 105 109 117 109 32 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 80 97 114 97 109 101 116 101 114 115 58 27 91 75 10 13 0 ]
 [a 147C 32 32 32 32 77 105 110 105 109 117 109 32 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 80 97 114 97 109 101 116 101 114 115 58 27 91 75 10 13 0 ]
 [a 107C 32 32 32 32 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 80 97 114 97 109 101 116 101 114 115 58 27 91 75 10 13 0 ]
-[a 125C 32 32 32 32 77 97 120 105 109 117 109 32 83 121 115 116 101 109 32 84 101 109 112 101 114 97 116 117 114 101 115 58 27 91 75 10 13 0 ]
-[a 143C 32 32 32 32 77 105 110 105 109 117 109 32 83 121 115 116 101 109 32 84 101 109 112 101 114 97 116 117 114 101 115 58 27 91 75 10 13 0 ]
-[a 103C 32 32 32 32 83 121 115 116 101 109 32 84 101 109 112 101 114 97 116 117 114 101 115 58 27 91 75 10 13 0 ]
-[a 123C 32 32 32 32 77 97 120 105 109 117 109 32 83 121 115 116 101 109 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 105 101 115 58 27 91 75 10 13 0 ]
-[a 141C 32 32 32 32 77 105 110 105 109 117 109 32 83 121 115 116 101 109 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 105 101 115 58 27 91 75 10 13 0 ]
-[a 98C 32 32 32 32 83 121 115 116 101 109 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 105 101 115 58 27 91 75 10 13 0 ]
-[a 117C 32 32 32 32 77 97 120 105 109 117 109 32 83 121 115 116 101 109 32 80 111 119 101 114 58 27 91 75 10 13 0 ]
-[a 137C 32 32 32 32 77 105 110 105 109 117 109 32 83 121 115 116 101 109 32 80 111 119 101 114 58 27 91 75 10 13 0 ]
-[a 88C 32 32 32 32 83 121 115 116 101 109 32 80 111 119 101 114 58 27 91 75 10 13 0 ]
+[a 125C 32 32 32 32 77 97 120 105 109 117 109 32 68 101 118 105 99 101 32 84 101 109 112 101 114 97 116 117 114 101 115 58 27 91 75 10 13 0 ]
+[a 143C 32 32 32 32 77 105 110 105 109 117 109 32 68 101 118 105 99 101 32 84 101 109 112 101 114 97 116 117 114 101 115 58 27 91 75 10 13 0 ]
+[a 103C 32 32 32 32 68 101 118 105 99 101 32 84 101 109 112 101 114 97 116 117 114 101 115 58 27 91 75 10 13 0 ]
+[a 123C 32 32 32 32 77 97 120 105 109 117 109 32 68 101 118 105 99 101 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 105 101 115 58 27 91 75 10 13 0 ]
+[a 141C 32 32 32 32 77 105 110 105 109 117 109 32 68 101 118 105 99 101 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 105 101 115 58 27 91 75 10 13 0 ]
+[a 98C 32 32 32 32 68 101 118 105 99 101 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 105 101 115 58 27 91 75 10 13 0 ]
+[a 117C 32 32 32 32 77 97 120 105 109 117 109 32 68 101 118 105 99 101 32 80 111 119 101 114 58 27 91 75 10 13 0 ]
+[a 137C 32 32 32 32 77 105 110 105 109 117 109 32 68 101 118 105 99 101 32 80 111 119 101 114 58 27 91 75 10 13 0 ]
+[a 88C 32 32 32 32 68 101 118 105 99 101 32 80 111 119 101 114 58 27 91 75 10 13 0 ]
 [a 102C 32 32 32 32 32 32 32 32 67 117 114 114 101 110 116 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 107 72 122 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 124C 32 32 32 32 32 32 32 77 97 120 105 109 117 109 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 107 72 122 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 142C 32 32 32 32 32 32 32 77 105 110 105 109 117 109 32 81 73 32 83 119 105 116 99 104 105 110 103 32 70 114 101 113 117 101 110 99 121 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 107 72 122 27 91 75 10 13 27 91 75 10 13 0 ]
@@ -12800,23 +12800,23 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 96C 32 32 32 32 69 115 116 105 109 97 116 101 100 32 99 104 97 114 103 101 32 99 111 110 115 117 109 101 100 32 98 121 32 116 104 101 32 108 111 97 100 32 119 104 105 108 101 32 99 104 97 114 103 105 110 103 58 32 37 115 67 111 117 108 111 109 98 115 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 122C 32 32 32 32 77 97 120 105 109 117 109 32 69 115 116 105 109 97 116 101 100 32 67 104 97 114 103 101 32 99 111 110 115 117 109 101 100 32 98 121 32 116 104 101 32 108 111 97 100 32 119 104 105 108 101 32 99 104 97 114 103 105 110 103 58 32 37 115 67 111 117 108 111 109 98 115 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 79C 32 32 32 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 105 115 32 99 117 114 114 101 110 116 108 121 32 37 115 27 91 75 10 13 27 91 75 10 13 0 ]
-[a 80C 32 32 32 32 83 121 115 116 101 109 32 104 97 115 32 98 101 101 110 32 99 104 97 114 103 105 110 103 32 97 32 108 111 97 100 32 102 111 114 32 37 115 27 91 75 10 13 27 91 75 10 13 0 ]
+[a 80C 32 32 32 32 68 101 118 105 99 101 32 104 97 115 32 98 101 101 110 32 99 104 97 114 103 105 110 103 32 97 32 108 111 97 100 32 102 111 114 32 37 115 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 77C 32 32 32 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 105 115 32 105 110 32 101 114 114 111 114 32 83 116 97 116 101 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 101C 32 32 32 32 32 32 32 32 81 73 32 67 111 110 118 101 114 116 101 114 32 105 115 32 105 110 32 66 117 114 115 116 32 77 111 100 101 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 78C 32 32 32 32 81 73 32 119 105 114 101 108 101 115 115 32 112 111 119 101 114 32 99 111 110 118 101 114 116 101 114 32 104 97 115 32 102 117 108 108 121 32 99 104 97 114 103 101 100 32 108 111 97 100 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 128C 32 32 32 32 32 32 32 32 77 97 120 105 109 117 109 32 65 109 98 105 101 110 116 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 146C 32 32 32 32 32 32 32 32 77 105 110 105 109 117 109 32 65 109 98 105 101 110 116 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 106C 32 32 32 32 32 32 32 32 65 109 98 105 101 110 116 32 84 101 109 112 101 114 97 116 117 114 101 32 109 101 97 115 117 114 101 100 32 97 115 32 37 43 46 51 102 32 67 27 91 75 10 13 27 91 75 10 13 0 ]
-[a 120C 32 32 32 32 77 97 120 105 109 117 109 32 83 121 115 116 101 109 32 69 102 102 105 99 105 101 110 99 121 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 46 51 102 37 37 27 91 75 10 13 27 91 75 10 13 0 ]
-[a 140C 32 32 32 32 77 105 110 105 109 117 109 32 83 121 115 116 101 109 32 69 102 102 105 99 105 101 110 99 121 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 46 51 102 37 37 27 91 75 10 13 27 91 75 10 13 0 ]
-[a 92C 32 32 32 32 83 121 115 116 101 109 32 69 102 102 105 99 105 101 110 99 121 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 46 51 102 32 37 37 27 91 75 10 13 27 91 75 10 13 0 ]
+[a 120C 32 32 32 32 77 97 120 105 109 117 109 32 68 101 118 105 99 101 32 69 102 102 105 99 105 101 110 99 121 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 46 51 102 37 37 27 91 75 10 13 27 91 75 10 13 0 ]
+[a 140C 32 32 32 32 77 105 110 105 109 117 109 32 68 101 118 105 99 101 32 69 102 102 105 99 105 101 110 99 121 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 46 51 102 37 37 27 91 75 10 13 27 91 75 10 13 0 ]
+[a 92C 32 32 32 32 68 101 118 105 99 101 32 69 102 102 105 99 105 101 110 99 121 32 99 97 108 99 117 108 97 116 101 100 32 97 115 32 37 46 51 102 32 37 37 27 91 75 10 13 27 91 75 10 13 0 ]
 [a 11C 68 105 103 105 116 97 108 32 77 111 110 105 116 111 114 105 110 103 32 77 105 99 114 111 99 111 110 116 114 111 108 108 101 114 32 83 116 97 116 117 115 58 10 13 0 ]
-[a 111C 32 32 32 32 77 97 120 105 109 117 109 32 83 121 115 116 101 109 32 86 111 108 116 97 103 101 115 58 10 13 0 ]
-[a 131C 32 32 32 32 77 105 110 105 109 117 109 32 83 121 115 116 101 109 32 86 111 108 116 97 103 101 115 58 10 13 0 ]
-[a 82C 32 32 32 32 83 121 115 116 101 109 32 86 111 108 116 97 103 101 115 58 10 13 0 ]
+[a 111C 32 32 32 32 77 97 120 105 109 117 109 32 68 101 118 105 99 101 32 86 111 108 116 97 103 101 115 58 10 13 0 ]
+[a 131C 32 32 32 32 77 105 110 105 109 117 109 32 68 101 118 105 99 101 32 86 111 108 116 97 103 101 115 58 10 13 0 ]
+[a 82C 32 32 32 32 68 101 118 105 99 101 32 86 111 108 116 97 103 101 115 58 10 13 0 ]
 [a 48C 65 118 97 105 108 97 98 108 101 32 67 111 109 109 97 110 100 115 58 10 13 0 ]
 [a 61C 32 32 32 32 84 104 101 32 102 111 108 108 111 119 105 110 103 32 99 104 97 110 110 101 108 115 32 99 97 117 115 101 100 32 97 110 32 65 68 67 32 101 114 114 111 114 58 10 13 0 ]
-[a 34C 83 121 115 116 101 109 32 77 101 97 115 117 114 101 109 101 110 116 115 32 97 116 32 116 105 109 101 32 111 102 32 99 111 109 109 97 110 100 32 99 97 108 108 58 10 13 0 ]
+[a 34C 68 101 118 105 99 101 32 77 101 97 115 117 114 101 109 101 110 116 115 32 97 116 32 116 105 109 101 32 111 102 32 99 111 109 109 97 110 100 32 99 97 108 108 58 10 13 0 ]
 [a 17C 32 32 32 32 84 104 101 32 102 111 108 108 111 119 105 110 103 32 85 115 101 114 32 73 68 115 32 104 97 118 101 32 98 101 101 110 32 114 101 116 114 105 101 118 101 100 32 102 114 111 109 32 102 108 97 115 104 58 10 13 0 ]
 [a 66C 32 32 32 32 84 104 101 32 102 111 108 108 111 119 105 110 103 32 73 50 67 32 69 114 114 111 114 115 32 119 101 114 101 32 100 101 116 101 99 116 101 100 58 10 13 0 ]
 [a 75C 32 32 32 32 67 97 108 108 32 39 67 108 101 97 114 32 85 65 82 84 32 69 114 114 111 114 115 39 32 116 111 32 99 108 101 97 114 32 99 111 109 109 117 110 105 99 97 116 105 111 110 115 32 101 114 114 111 114 40 115 41 10 13 0 ]

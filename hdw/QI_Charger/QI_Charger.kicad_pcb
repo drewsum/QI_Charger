@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.2)-1")
+(kicad_pcb (version 20171130) (host pcbnew "(5.1.0)-1")
 
   (general
     (thickness 1.6)
@@ -41,8 +41,6 @@
     (zone_clearance 0.127)
     (zone_45_only yes)
     (trace_min 0.127)
-    (segment_width 0.2)
-    (edge_width 0.15)
     (via_size 0.5588)
     (via_drill 0.199898)
     (via_min_size 0.4)
@@ -52,6 +50,8 @@
     (uvias_allowed no)
     (uvia_min_size 0.2)
     (uvia_min_drill 0.1)
+    (edge_width 0.15)
+    (segment_width 0.2)
     (pcb_text_width 0.3)
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.15)
@@ -62,7 +62,7 @@
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
     (aux_axis_origin 0 0)
-    (visible_elements 7FFFF77F)
+    (visible_elements 7FFFFF7F)
     (pcbplotparams
       (layerselection 0x010f0_ffffffff)
       (usegerberextensions true)
